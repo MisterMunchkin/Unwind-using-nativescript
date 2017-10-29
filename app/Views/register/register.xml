@@ -1,0 +1,10 @@
+<Page loaded="loaded">
+    <StackLayout orientation="vertical">
+
+        <TextField hint="Email Address" keyboardType="email" id="email" autocorrect="false" autocapitalizationType="none" />
+        <TextField hint="Password" id="password" secure="true" />
+
+        <Button text="Sign up" tap="register"/>
+
+    </StackLayout>
+</Page>
