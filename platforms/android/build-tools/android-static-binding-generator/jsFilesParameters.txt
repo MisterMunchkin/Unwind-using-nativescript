@@ -1,6 +1,5 @@
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\app.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\bundle-config.js
-D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\login\login.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\tabs-page.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\tabs-view-model.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\browse\browse-view-model.js
@@ -162,3 +161,5 @@ D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_mo
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\utils.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\xhr\xhr.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\xml\xml.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\Views\login\login.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\Views\register\register.js
