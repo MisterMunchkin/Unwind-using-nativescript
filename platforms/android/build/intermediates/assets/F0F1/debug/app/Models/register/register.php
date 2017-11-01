@@ -8,5 +8,7 @@
         $password = mysqli_real_escape_string($conn, $_POST["password"]);
 
         echo $email.$password;
+    }else{
+        echo "post failed";
     }
 ?>
