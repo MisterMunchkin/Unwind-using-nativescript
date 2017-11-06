@@ -3,8 +3,10 @@
 
         <TextField hint="Email Address" keyboardType="email" id="email" autocorrect="false" autocapitalizationType="none" />
         <TextField hint="Password" id="password" secure="true" />
+        <TextField hint="first name" id="fname" />
+        <TextField hint="last name" id="lname" />
 
-        <Button text="Sign up bitch" tap="AccountCreate"/>
-
+        <Button text="Sign up" tap="AccountCreate"/>
+        <Button text="already have an account?" tap="signin"/>
     </StackLayout>
 </Page>

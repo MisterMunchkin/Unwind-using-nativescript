@@ -1,12 +1,13 @@
 var page;
 var email;
 var password;
-var http = require("http");
+var fname;
+var lname
+var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 
 exports.loaded = function(args){
     page = args.object;
-    console.log("fuck");
 }
 
 exports.AccountCreate = function(){
@@ -22,33 +23,26 @@ exports.AccountCreate = function(){
         method: "POST",
         body: formEncode(requestObject)
     }).then(function(response){
-        alert({title: "POST response", message: JSON.stringify(response), okButtonText: "Close"});
+        //alert({title: "POST response", message: JSON.stringify(response), okButtonText: "Close"});
+        if(JSON.stringify(response) == "user added"){
+            alert({ title: "POST response", message: JSON.stringify(response), okButtonText: "Close" });
+        }else{
+            console.log(JSON.stringify(error));
+        }
     }, function(error){
         console.log(JSON.stringify(error));
     })
 
-    /*Https.request({
-        url: "https://unwindv2.000webhostapp.com/register/register.php",
-        method: "POST",
-        headers: {
-            'Authorization': 'Basic ZWx1c3VhcmlvOnlsYWNsYXZl',
-            'x-uuid': 'aHR0cHdhdGNoOmY',
-            'x-version': '4.2.0',
-            'x-env': 'DEVELOPMENT',
-        },
-        content: JSON.stringify({
-            'email': email,
-            'password': password
-        })
-    }).then(function(response){
-        console.log(response);
-    }).catch(function(error){
-        console.error(error);
-    })*/
+  
 
 }
 
-function formEncode(obj){
+exports.signin = function(){
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/login/login");
+}
+
+function formEncode(obj){ //to convert urlencoded form data to JSON
     var str = [];
     for(var p in obj)
     str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
