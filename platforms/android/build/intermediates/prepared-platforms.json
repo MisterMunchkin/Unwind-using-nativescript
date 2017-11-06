@@ -1,4 +1,5 @@
 {
+    "nativescript-https": true,
     "nativescript-snackbar": true,
     "nativescript-sqlite": true,
     "nativescript-theme-core": true,

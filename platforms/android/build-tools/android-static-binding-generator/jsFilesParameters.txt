@@ -8,6 +8,8 @@ D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tabs\home\home-view
 D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tabs\home\HomeView.js
 D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tabs\search\search-view-model.js
 D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tabs\search\SearchView.js
+D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-https\https.common.js
+D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-https\https.js
 D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-snackbar\snackbar.js
 D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-sqlite\sqlite.js
 D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\bundle-entry-points.js
