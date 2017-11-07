@@ -3,48 +3,39 @@
 
     <item
         is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-v4-25.3.1_4604afc99c4a440d35ff704f145474cd02614a5f.jar" />
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-compat-25.3.1_eccb81d9fb495f067570144ca5727ad82e6be387.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\Unwind\runtime\unspecified\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\Unwind\runtime\unspecified\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="eb6078500d1af5e7b663871706674405c57292a3">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\Unwind-runtime-unspecified_217561aede571d6dafb7e46218406865eb055cd9.jar" />
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\Unwind-runtime-unspecified_ba7e96db22fa84e6e6276a250361675864dc6a7b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\design\25.3.1\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-design-25.3.1_0f9fb7343e00734e7c7ce639c30e8f71d8f6fdc8.jar" />
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-recyclerview-v7-25.3.1_28fa7756f4f192e4967fad44d6d8a8a85670aeca.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-appcompat-v7-25.3.1_2483ff102d599863093f6d02d973014512c5fce2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\widgets-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\intermediates-exploded-aar-widgets-release_9e83a17e1b3459f4f12192a046bb2cd38ce21ccb.jar" />
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-core-ui-25.3.1_9a61a3bc5db8c66ba03ea8c99c39632d0207f036.jar" />
     </item>
     <item
         is-multidex="false"
@@ -53,34 +44,16 @@
         optimize="true"
         revision="26.0.2"
         sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\okio-1.11.0_48f40c751d135c94c549bb1882e3fcbd94c69277.jar" />
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\okio-1.11.0_48f40c751d135c94c549bb1882e3fcbd94c69277.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\design\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-fragment-25.3.1_822144f773b3ea760f019b166494b140912e117d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-transition-25.3.1_5a40987dd3d28189152e581710e7ed68a63a54cb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-vector-drawable-25.3.1_0cbdac1fc5a1cc8d5d56d9ab01770b16df455646.jar" />
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-design-25.3.1_8bb5dd1911bdfd1ee1bbb10a502dc5fb2810f952.jar" />
     </item>
     <item
         is-multidex="false"
@@ -89,16 +62,7 @@
         optimize="true"
         revision="26.0.2"
         sha1="4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\okhttp-3.5.0_937cd7224d3715634472d45d36f2729c64461ee2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-core-utils-25.3.1_bacfa7341bd0b2cb1530966ae27ed7badc71a4b2.jar" />
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\okhttp-3.5.0_937cd7224d3715634472d45d36f2729c64461ee2.jar" />
     </item>
     <item
         is-multidex="false"
@@ -107,61 +71,97 @@
         optimize="true"
         revision="26.0.2"
         sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\support-annotations-25.3.1_ad885d9968531cd248ff7229237af431dbe89fed.jar" />
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\support-annotations-25.3.1_ad885d9968531cd248ff7229237af431dbe89fed.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-recyclerview-v7-25.3.1_86a38a5359f4cba7583c47aa575fff926216480b.jar" />
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-core-utils-25.3.1_a4f05c824b11cdd976bdce45e16b53612becb968.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-animated-vector-drawable-25.3.1_64148cff8a14e91bea5a1c08ef5022848355919a.jar" />
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-fragment-25.3.1_c8ad005a1dee4919a46d7814859f65652755f81c.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-core-ui-25.3.1_7d2a8e48d66cb512e70c41846ed3ff1762a04c00.jar" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-v4-25.3.1_0752bf2369782453b411fe34cb3006fb38a306c5.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-media-compat-25.3.1_016ce4dddd15678c32e843817e951b1b76ab83d6.jar" />
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-media-compat-25.3.1_9b545964e38ac098dbf7536b79727391c360dded.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\Unwind\runtime\unspecified\jars\libs\binding-generator.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-appcompat-v7-25.3.1_c7fee9d616a32b868d6ca1e44a0ac53fe7ce3a17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\widgets-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\intermediates-exploded-aar-widgets-release_b31965a6422dad9ad809445f45c4dc25b3aeb0fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-transition-25.3.1_ea91f74e5784e28ef9a5f2a07e4a28dffc0bd2e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-vector-drawable-25.3.1_c3d94aa4914a8ae234c99783540c3d5f1fa17468.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-animated-vector-drawable-25.3.1_8071aeba7ca1f62dd751e0609dcf4c4a2d7ae73c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\Unwind\runtime\unspecified\jars\libs\binding-generator.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="a3e74f5f1ebe12c7cfa6591158ef298c95a5275f">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\binding-generator_2498dee2d6052a61d5268b84f9a2be5afabeed9c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="D:\xampp\htdocs\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-compat-25.3.1_16be9d41fd633db41300c9c375b2956b827586c7.jar" />
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\binding-generator_980416e98428451e9afc085d5a8c07bc0c01faa1.jar" />
     </item>
 
 </items>

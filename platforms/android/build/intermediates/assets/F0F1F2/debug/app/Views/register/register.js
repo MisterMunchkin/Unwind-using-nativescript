@@ -1,52 +1,57 @@
 var page;
-var email;
-var password;
-var http = require("http");
-import * as Https from 'nativescript-https';
+
+var frameModule = require("ui/frame");
+var fetchModule = require("fetch");
+var loaderModule = require("Loader");
 
 exports.loaded = function(args){
     page = args.object;
-    console.log("fuck");
 }
 
 exports.AccountCreate = function(){
-    email = String(page.getViewById("email"));
-    password = String(page.getViewById("password"));
+    var email;
+    var password;
+    var fname;
+    var lname;
+
+    email = page.getViewById("email").text;
+    password = page.getViewById("password").text;
+    fname = page.getViewById("fname").text;
+    lname = page.getViewById("lname").text;
     console.log(email + " " + password);
 
-    /*http.request({
-        url: "https://unwindv2.000webhostapp.com/register/register.php",
+    var requestObject = {email: email, password: password, 
+                        fname: fname, lname: lname};   
+    
+    loaderModule.loader.show(options);
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/register/register.php", {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
-        content: JSON.stringify({emailAdd: email, password: password})
-    }).then(function(result){
-        //console.log("shit");
-        var data = result.toString();
-        console.log(data);
+        body: formEncode(requestObject)
+    }).then(function(response){
+        //alert({title: "POST response", message: JSON.stringify(response), okButtonText: "Close"});
+        loaderModule.loader.hide();
+        if(JSON.stringify(response) == "user added"){
+            alert({ title: "POST response", message: JSON.stringify(response), okButtonText: "Close" });
+        }else{
+            console.log(JSON.stringify(response));
+        }
     }, function(error){
         console.log(JSON.stringify(error));
-        console.log(error.toString());
-    });*/
-
-    Https.request({
-        url: "https://unwindv2.000webhostapp.com/register/register.php",
-        method: "POST",
-        headers: {
-            'Authorization': 'Basic ZWx1c3VhcmlvOnlsYWNsYXZl',
-            'x-uuid': 'aHR0cHdhdGNoOmY',
-            'x-version': '4.2.0',
-            'x-env': 'DEVELOPMENT',
-        },
-        content: JSON.stringify({
-            'email': email,
-            'password': password
-        })
-    }).then(function(response){
-        console.log(response);
-    }).catch(function(error){
-        console.error(error);
     })
+
+  
 
 }
 
+exports.signin = function(){
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/login/login");
+}
+
+function formEncode(obj){ //to convert urlencoded form data to JSON
+    var str = [];
+    for(var p in obj)
+    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+    return str.join("&");   
+}
 

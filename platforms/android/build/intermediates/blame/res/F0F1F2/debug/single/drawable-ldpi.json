@@ -1,14 +1,14 @@
 [
     {
-        "merged": "D:\\xampp\\htdocs\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\drawable-ldpi\\icon.png",
-        "source": "D:\\xampp\\htdocs\\Unwind\\platforms\\android\\src\\main\\res\\drawable-ldpi\\icon.png"
+        "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\drawable-ldpi\\background.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\src\\main\\res\\drawable-ldpi\\background.png"
     },
     {
-        "merged": "D:\\xampp\\htdocs\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\drawable-ldpi\\background.png",
-        "source": "D:\\xampp\\htdocs\\Unwind\\platforms\\android\\src\\main\\res\\drawable-ldpi\\background.png"
+        "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\drawable-ldpi\\logo.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\src\\main\\res\\drawable-ldpi\\logo.png"
     },
     {
-        "merged": "D:\\xampp\\htdocs\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\drawable-ldpi\\logo.png",
-        "source": "D:\\xampp\\htdocs\\Unwind\\platforms\\android\\src\\main\\res\\drawable-ldpi\\logo.png"
+        "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\drawable-ldpi\\icon.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\src\\main\\res\\drawable-ldpi\\icon.png"
     }
 ]

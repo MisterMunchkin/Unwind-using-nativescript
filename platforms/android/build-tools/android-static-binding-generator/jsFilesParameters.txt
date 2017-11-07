@@ -1,168 +1,173 @@
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\app.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\bundle-config.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tabs\tabs-page.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tabs\tabs-view-model.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tabs\browse\browse-view-model.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tabs\browse\BrowseView.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tabs\home\home-view-model.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tabs\home\HomeView.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tabs\search\search-view-model.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tabs\search\SearchView.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-https\https.common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-https\https.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-snackbar\snackbar.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-sqlite\sqlite.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\bundle-entry-points.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application\application-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application\application.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application-settings\application-settings-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application-settings\application-settings.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\color\color-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\color\color.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\color\known-colors.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\connectivity\connectivity.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\console\console.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\css\index.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\css\lib\parse\index.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\css-value\index.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\debugger\debugger.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\debugger\devtools-elements.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\debugger\dom-node.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\fetch\fetch.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\file-system\file-system-access.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\file-system\file-system.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\fps-meter\fps-meter.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\fps-meter\fps-native.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\globals\decorators.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\globals\globals.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\http\http.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\http\http-request\http-request-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\http\http-request\http-request.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\image-asset\image-asset-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\image-asset\image-asset.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\image-source\image-source.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\matrix\matrix.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\platform\platform.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\profiling\profiling.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\text\formatted-string.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\text\span.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\text\text.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\timer\timer.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\trace\trace.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\action-bar\action-bar-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\action-bar\action-bar.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\activity-indicator\activity-indicator-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\activity-indicator\activity-indicator.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\animation\animation-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\animation\animation.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\animation\keyframe-animation.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\border\border.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\builder\binding-builder.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\builder\builder.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\builder\component-builder\component-builder.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\button\button-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\button\button.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\content-view\content-view.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\bindable\bindable.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\dependency-observable\dependency-observable.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\properties\properties.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\view\view-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\view\view.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\view-base\view-base.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\weak-event-listener\weak-event-listener.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\date-picker\date-picker-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\date-picker\date-picker.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\dialogs\dialogs-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\dialogs\dialogs.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\editable-text-base\editable-text-base-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\editable-text-base\editable-text-base.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\enums\enums.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\frame\activity.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\frame\fragment.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\frame\fragment.transitions.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\frame\frame-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\frame\frame.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\gestures\gestures-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\gestures\gestures.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\html-view\html-view-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\html-view\html-view.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\image\image-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\image\image.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\image-cache\image-cache-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\image-cache\image-cache.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\label\label.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\layout-base-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\layout-base.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\layout.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\absolute-layout\absolute-layout-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\absolute-layout\absolute-layout.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\dock-layout\dock-layout-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\dock-layout\dock-layout.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\flexbox-layout\flexbox-layout-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\flexbox-layout\flexbox-layout.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\grid-layout\grid-layout-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\grid-layout\grid-layout.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\stack-layout\stack-layout-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\stack-layout\stack-layout.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\wrap-layout\wrap-layout-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\wrap-layout\wrap-layout.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\list-picker\list-picker-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\list-picker\list-picker.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\list-view\list-view-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\list-view\list-view.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\page\constants.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\page\page-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\page\page.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\placeholder\placeholder.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\progress\progress-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\progress\progress.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\proxy-view-container\proxy-view-container.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\repeater\repeater.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\scroll-view\scroll-view-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\scroll-view\scroll-view.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\search-bar\search-bar-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\search-bar\search-bar.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\segmented-bar\segmented-bar-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\segmented-bar\segmented-bar.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\slider\slider-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\slider\slider.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\background-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\background.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\converters.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\css-animation-parser.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\css-selector-parser.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\font-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\font.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\style-properties.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\style-scope.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\css-selector\css-selector.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\style\style.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\switch\switch-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\switch\switch.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\tab-view\tab-view-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\tab-view\tab-view.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\text-base\text-base-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\text-base\text-base.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\text-field\text-field-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\text-field\text-field.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\text-view\text-view.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\time-picker\time-picker-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\time-picker\time-picker.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\transition\fade-transition.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\transition\flip-transition.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\transition\slide-transition.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\transition\transition.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\web-view\web-view-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\web-view\web-view.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\debug-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\debug.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\lazy.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\module-merge.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\number-utils.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\types.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\utils-common.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\utils.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\xhr\xhr.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\xml\xml.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\Views\login\login.js
-D:\xampp\htdocs\Unwind\platforms\android\src\main\assets\app\Views\register\register.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\app.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\bundle-config.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\tabs-page.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\tabs-view-model.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\browse\browse-view-model.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\browse\BrowseView.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\home\home-view-model.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\home\HomeView.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\search\search-view-model.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\search\SearchView.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-https\https.common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-https\https.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-loading-indicator\loading-indicator.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-loading-indicator\src\interfaces.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-loading-indicator\src\android\progress-dialog.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-loading-indicator\src\ios\mbprogress-hud.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-snackbar\snackbar.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-sqlite\sqlite.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\bundle-entry-points.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application\application-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application\application.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application-settings\application-settings-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application-settings\application-settings.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\color\color-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\color\color.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\color\known-colors.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\connectivity\connectivity.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\console\console.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\css\index.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\css\lib\parse\index.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\css-value\index.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\debugger\debugger.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\debugger\devtools-elements.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\debugger\dom-node.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\fetch\fetch.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\file-system\file-system-access.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\file-system\file-system.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\fps-meter\fps-meter.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\fps-meter\fps-native.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\globals\decorators.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\globals\globals.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\http\http.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\http\http-request\http-request-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\http\http-request\http-request.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\image-asset\image-asset-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\image-asset\image-asset.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\image-source\image-source.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\matrix\matrix.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\platform\platform.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\profiling\profiling.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\text\formatted-string.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\text\span.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\text\text.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\timer\timer.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\trace\trace.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\action-bar\action-bar-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\action-bar\action-bar.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\activity-indicator\activity-indicator-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\activity-indicator\activity-indicator.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\animation\animation-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\animation\animation.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\animation\keyframe-animation.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\border\border.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\builder\binding-builder.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\builder\builder.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\builder\component-builder\component-builder.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\button\button-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\button\button.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\content-view\content-view.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\bindable\bindable.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\dependency-observable\dependency-observable.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\properties\properties.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\view\view-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\view\view.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\view-base\view-base.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\core\weak-event-listener\weak-event-listener.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\date-picker\date-picker-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\date-picker\date-picker.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\dialogs\dialogs-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\dialogs\dialogs.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\editable-text-base\editable-text-base-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\editable-text-base\editable-text-base.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\enums\enums.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\frame\activity.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\frame\fragment.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\frame\fragment.transitions.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\frame\frame-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\frame\frame.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\gestures\gestures-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\gestures\gestures.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\html-view\html-view-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\html-view\html-view.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\image\image-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\image\image.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\image-cache\image-cache-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\image-cache\image-cache.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\label\label.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\layout-base-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\layout-base.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\layout.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\absolute-layout\absolute-layout-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\absolute-layout\absolute-layout.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\dock-layout\dock-layout-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\dock-layout\dock-layout.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\flexbox-layout\flexbox-layout-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\flexbox-layout\flexbox-layout.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\grid-layout\grid-layout-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\grid-layout\grid-layout.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\stack-layout\stack-layout-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\stack-layout\stack-layout.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\wrap-layout\wrap-layout-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\layouts\wrap-layout\wrap-layout.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\list-picker\list-picker-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\list-picker\list-picker.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\list-view\list-view-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\list-view\list-view.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\page\constants.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\page\page-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\page\page.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\placeholder\placeholder.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\progress\progress-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\progress\progress.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\proxy-view-container\proxy-view-container.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\repeater\repeater.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\scroll-view\scroll-view-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\scroll-view\scroll-view.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\search-bar\search-bar-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\search-bar\search-bar.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\segmented-bar\segmented-bar-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\segmented-bar\segmented-bar.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\slider\slider-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\slider\slider.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\background-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\background.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\converters.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\css-animation-parser.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\css-selector-parser.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\font-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\font.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\style-properties.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\style-scope.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\css-selector\css-selector.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\styling\style\style.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\switch\switch-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\switch\switch.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\tab-view\tab-view-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\tab-view\tab-view.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\text-base\text-base-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\text-base\text-base.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\text-field\text-field-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\text-field\text-field.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\text-view\text-view.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\time-picker\time-picker-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\time-picker\time-picker.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\transition\fade-transition.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\transition\flip-transition.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\transition\slide-transition.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\transition\transition.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\web-view\web-view-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\ui\web-view\web-view.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\debug-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\debug.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\lazy.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\module-merge.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\number-utils.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\types.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\utils-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\utils\utils.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\xhr\xhr.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\xml\xml.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\Views\Loader.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\Views\login\login.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\Views\register\register.js

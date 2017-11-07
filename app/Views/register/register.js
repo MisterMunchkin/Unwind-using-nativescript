@@ -1,33 +1,39 @@
 var page;
-var email;
-var password;
-var fname;
-var lname
+
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
+<script src = "../Loader.js"></script>
 
 exports.loaded = function(args){
     page = args.object;
 }
 
 exports.AccountCreate = function(){
+    var email;
+    var password;
+    var fname;
+    var lname;
+
     email = page.getViewById("email").text;
     password = page.getViewById("password").text;
-    //console.log(email + " " + password);
+    fname = page.getViewById("fname").text;
+    lname = page.getViewById("lname").text;
+    console.log(email + " " + password);
 
-    var requestObject = {email: email, password: password};
-
+    var requestObject = {email: email, password: password, 
+                        fname: fname, lname: lname};   
     
-
+    loader.show(options);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/register/register.php", {
         method: "POST",
         body: formEncode(requestObject)
     }).then(function(response){
         //alert({title: "POST response", message: JSON.stringify(response), okButtonText: "Close"});
+        loader.hide();
         if(JSON.stringify(response) == "user added"){
             alert({ title: "POST response", message: JSON.stringify(response), okButtonText: "Close" });
         }else{
-            console.log(JSON.stringify(error));
+            console.log(JSON.stringify(response));
         }
     }, function(error){
         console.log(JSON.stringify(error));
