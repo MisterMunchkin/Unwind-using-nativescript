@@ -1,4 +1,4 @@
 
 android {
-    flavorDimensions "nativescripthttps", "nativescriptsnackbar", "tnscoremoduleswidgets"
+    flavorDimensions "nativescripthttps", "nativescriptproui", "nativescriptsnackbar", "tnscoremoduleswidgets"
 }

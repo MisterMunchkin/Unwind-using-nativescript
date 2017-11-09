@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-hdpi\\background.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\src\\main\\res\\drawable-hdpi\\background.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-hdpi\\logo.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\src\\main\\res\\drawable-hdpi\\logo.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-hdpi\\icon.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\src\\main\\res\\drawable-hdpi\\icon.png"
+    }
+]

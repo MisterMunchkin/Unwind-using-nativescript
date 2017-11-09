@@ -1,6 +1,7 @@
 {
     "nativescript-https": true,
     "nativescript-loading-indicator": true,
+    "nativescript-pro-ui": true,
     "nativescript-snackbar": true,
     "nativescript-sqlite": true,
     "nativescript-theme-core": true,

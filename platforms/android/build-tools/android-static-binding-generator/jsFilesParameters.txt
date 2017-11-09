@@ -14,6 +14,7 @@ D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_mo
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-loading-indicator\src\interfaces.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-loading-indicator\src\android\progress-dialog.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-loading-indicator\src\ios\mbprogress-hud.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-pro-ui\scripts\eula-prompt.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-snackbar\snackbar.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-sqlite\sqlite.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\bundle-entry-points.js

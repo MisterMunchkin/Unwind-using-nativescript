@@ -3,6 +3,22 @@ This is the component view that represents the 'Home' tab.
 Feel free to customize layouts and components to change how the tab view looks.
 -->
 <GridLayout class="page-content" loaded="onLoaded">
-    <Label class="page-icon fa" text="&#xf015;"></Label>
-    <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
+    <Page xlmns:lv="nativescript-pro-ui/listview">
+
+        <!--<Label class="page-icon fa" text="&#xf015;"></Label>
+        <Label class="page-placeholder" text=" Page content goes here"></Label>-->
+        <lv:RadListView id="listview" class="list-group">
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout scrollDirection="Vertical" />
+            </lv:RadListView.listViewLayout>
+
+            <lv:RadListView.itemTemplate>
+                <StackLayout class="list-group-item">
+                    <Label text="{{ pageName }}" class="list-group-item-heading" />
+                    <Label text="{{ pageDesc }}" textWrap="true" class="list-group-item-text" />
+                </StackLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+    </Page>
+
 </GridLayout>
