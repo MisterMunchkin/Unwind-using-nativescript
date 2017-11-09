@@ -2,23 +2,26 @@
 This is the component view that represents the 'Home' tab.
 Feel free to customize layouts and components to change how the tab view looks.
 -->
-<GridLayout class="page-content" loaded="onLoaded">
-    <Page xlmns:lv="nativescript-pro-ui/listview">
+<GridLayout class="page-content">
+    <Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:lv="nativescript-pro-ui/listview" loaded="onLoaded">
 
-        <!--<Label class="page-icon fa" text="&#xf015;"></Label>
-        <Label class="page-placeholder" text=" Page content goes here"></Label>-->
-        <lv:RadListView id="listview" class="list-group">
+
+        <lv:RadListView id="listview" items="{{ items }}" class="list-group"> 
             <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical" />
+                <lv:ListViewGridLayout scrollDirection="Vertical"  spanCount="2" />
             </lv:RadListView.listViewLayout>
 
             <lv:RadListView.itemTemplate>
-                <StackLayout class="list-group-item">
-                    <Label text="{{ pageName }}" class="list-group-item-heading" />
-                    <Label text="{{ pageDesc }}" textWrap="true" class="list-group-item-text" />
-                </StackLayout>
+                <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                    <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />
+                    <StackLayout row="0" col="1">
+                        <Label text="{{ pageName }}" class="list-group-item-heading" />
+                        <Label text="{{ pageDesc }}" textWrap="true" class="list-group-item-text" />
+                    </StackLayout>
+                </GridLayout>
             </lv:RadListView.itemTemplate>
-        </lv:RadListView>
-    </Page>
 
+        </lv:RadListView>
+
+    </Page>
 </GridLayout>

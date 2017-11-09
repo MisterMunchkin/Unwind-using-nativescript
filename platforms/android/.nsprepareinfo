@@ -1,9 +1,9 @@
 {
-	"time": "Thu Nov 09 2017 21:58:28 GMT+0800 (China Standard Time)",
+	"time": "Fri Nov 10 2017 03:10:35 GMT+0800 (China Standard Time)",
 	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,
-	"changesRequireBuild": true,
+	"changesRequireBuild": false,
 	"projectFileHash": "6a026da5dfcab4498cd193518b5fb25e424aff32ee4cf1234a5795c014074856",
 	"changesRequireBuildTime": "Thu Nov 09 2017 21:58:28 GMT+0800 (China Standard Time)"
 }
