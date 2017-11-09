@@ -17,7 +17,7 @@ exports.signIn = function(){
 
 
     var requestObject = {email: email, password: password};
-
+    console.log("shit");
     fetchModule.fetch("https://unwindv2.000webhostapp.com/login/login.php", {
         method: "POST",
         body: formEncode(requestObject)
@@ -30,16 +30,21 @@ exports.signIn = function(){
 
 function then(response){
     var phpResponse = response._bodyText;
+
+    page.getViewById("email").text = "";
+    page.getViewById("password").text = "";
+    console.log(phpResponse);
+
     if(phpResponse == "user login secured"){
+        console.log("fuck");
         var topmost = frameModule.topmost();
-        topmost.navigate("tabs");
+        topmost.navigate("tabs/tabs-page");
+        
     }else{
         alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
     }
 
-    page.getViewById("email").text = "";
-    page.getViewById("password").text = "";
-    console.log(JSON.stringify(response));
+    
 }
 
 exports.register = function(){//used to navigate to another view
