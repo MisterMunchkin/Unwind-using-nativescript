@@ -39,5 +39,7 @@ exports.onLoaded = function(args) {
 
     pageData.set("items", items);
 }
-
-
+exports.itemSelected = function(){
+    var selectedItem = getSelectedItems();
+    console.log(selectedItem);
+}
