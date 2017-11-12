@@ -1,9 +1,9 @@
 {
-	"time": "Fri Nov 10 2017 03:10:35 GMT+0800 (China Standard Time)",
+	"time": "Sun Nov 12 2017 12:18:20 GMT+0800 (China Standard Time)",
 	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,
 	"changesRequireBuild": false,
-	"projectFileHash": "6a026da5dfcab4498cd193518b5fb25e424aff32ee4cf1234a5795c014074856",
-	"changesRequireBuildTime": "Thu Nov 09 2017 21:58:28 GMT+0800 (China Standard Time)"
+	"projectFileHash": "44258376c89c412ece8fe0a7b03b8c719f26f5b5f933be293048c3352c72895d",
+	"changesRequireBuildTime": "Sat Nov 11 2017 21:14:30 GMT+0800 (China Standard Time)"
 }

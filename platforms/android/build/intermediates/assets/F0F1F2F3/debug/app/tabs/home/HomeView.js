@@ -1,34 +1,43 @@
 const HomeViewModel = require("./home-view-model");
-var view = require("ui/core/view");
+var Observable = require("data/observable").Observable;
+var ObservableArray = require("data/observable-array").ObservableArray;
 
-function onLoaded(args) {
+//var page;
+var items = new ObservableArray([]);
+var pageData = new Observable();
+
+exports.onLoaded = function(args) {
     const component = args.object;
     component.bindingContext = new HomeViewModel();
 
-    var pages = [];
+    //page = args.object;
+    //page.bindingContext = pageData;
+    component.bindingContext = pageData;
 
     items.push(
         {
             pageName: "Services",
-            pageDesc: "list of services"
+            pageDesc: "list of services",
+            itemImage: ""
         },
         {
             pageName: "Menu",
-            pageDesc: "list of food of the menu"
+            pageDesc: "list of food of the menu",
+            itemImage: ""
         },
         {
             pageName: "Bill",
-            pageDesc: "bill"
+            pageDesc: "bill",
+            itemImage: ""
         },
         {
             pageName: "Inquiries",
-            pageDesc: "help center"
+            pageDesc: "help center",
+            itemImage: ""
         }
     )
 
-    var page = args.object;
-    var listview = view.getViewById(page, "listview");
-    listview.items = items;
+    pageData.set("items", items);
 }
 
-exports.onLoaded = onLoaded;
+

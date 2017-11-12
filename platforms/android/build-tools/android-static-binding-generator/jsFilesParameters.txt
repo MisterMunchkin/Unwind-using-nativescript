@@ -8,6 +8,10 @@ D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\h
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\home\HomeView.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\search\search-view-model.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tabs\search\SearchView.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-drop-down\drop-down-common.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-drop-down\drop-down.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-drop-down\uglify-mangle-excludes.js
+D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-drop-down\angular\index.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-https\https.common.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-https\https.js
 D:\Android\Nativescript Apps\Unwind\platforms\android\src\main\assets\app\tns_modules\nativescript-loading-indicator\loading-indicator.js

@@ -1,4 +1,5 @@
 {
+    "nativescript-drop-down": true,
     "nativescript-https": true,
     "nativescript-loading-indicator": true,
     "nativescript-pro-ui": true,
