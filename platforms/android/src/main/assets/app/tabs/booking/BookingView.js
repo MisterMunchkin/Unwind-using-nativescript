@@ -1,4 +1,4 @@
-const BrowseViewModel = require("./browse-view-model");
+const BrowseViewModel = require("./booking-view-model");
 
 function onLoaded(args) {
     const component = args.object;

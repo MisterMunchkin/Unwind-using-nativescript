@@ -1,7 +1,7 @@
 var page;
 var frameModule = require("ui/frame");
 
-const HomeViewModel = require("./home-view-model");
+const HomeViewModel = require("./checkin-view-model");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 
@@ -51,9 +51,7 @@ exports.onItemTap = function(args){
 
     switch(tappedItem.pageName){
         case "Menu": 
-            //goToMenu()
-            var topmost = frameModule.topmost();
-            topmost.navigate("Views/Menu/menu");
+            goToMenu()
             break;
         case "Services": 
             goToServices()
@@ -70,8 +68,8 @@ exports.onItemTap = function(args){
 function goToMenu(){
     console.log("menu");
     
-    var topmost = frameModule.topmost();
-    topmost.navigate("Views/Menu/menu");
+    /*var topmost = frameModule.topmost();
+    topmost.navigate("Views/Menu/menu");*/
 }
 
 function goToServices(){

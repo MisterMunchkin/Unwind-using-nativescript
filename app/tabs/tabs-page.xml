@@ -1,7 +1,11 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page"
+<!--<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page"
   xmlns:home="/tabs/home"
   xmlns:search="/tabs/search"
-  xmlns:browse="/tabs/browse">
+  xmlns:browse="/tabs/browse">-->
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page"
+  xmlns:checkin="/tabs/checkin"
+  xmlns:search="/tabs/search"
+  xmlns:booking="/tabs/booking">
     <Page.actionBar>
         <ActionBar class="action-bar">
           <Label text="{{ title }}" class="action-bar-title" />
@@ -27,13 +31,13 @@
             In this case the view contents and back end logic are separated in custom components.
             You can find these components in their respective folders /home, /browse etc.
             -->
-            <home:HomeView/>
+            <checkin:CheckinView/>
           </TabViewItem.view>
         </TabViewItem>
 
         <TabViewItem title="Booking" ios:iconSource="res://tabIcons/browse">
           <TabViewItem.view>
-             <browse:BrowseView/>
+             <booking:BookingView/>
           </TabViewItem.view>
         </TabViewItem>
 
