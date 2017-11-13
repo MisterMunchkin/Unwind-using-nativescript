@@ -6,7 +6,7 @@ Feel free to customize layouts and components to change how the tab view looks.
     <Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:lv="nativescript-pro-ui/listview" loaded="onLoaded">
 
 
-        <lv:RadListView id="listview" itemSelected="itemSelected" selectionBehavior="Press" items="{{ items }}" class="list-group"> 
+        <lv:RadListView id="listview"  itemTap="onItemTap" selectionBehavior="Press" items="{{ items }}" class="list-group"> 
             <lv:RadListView.listViewLayout>
                 <lv:ListViewGridLayout scrollDirection="Vertical"  spanCount="2" />
             </lv:RadListView.listViewLayout>

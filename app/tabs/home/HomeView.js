@@ -1,6 +1,10 @@
+var page;
+var frameModule = require("ui/frame");
+
 const HomeViewModel = require("./home-view-model");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
+
 
 //var page;
 var items = new ObservableArray([]);
@@ -39,7 +43,43 @@ exports.onLoaded = function(args) {
 
     pageData.set("items", items);
 }
-exports.itemSelected = function(){
-    var selectedItem = getSelectedItems();
-    console.log(selectedItem);
+
+exports.onItemTap = function(args){
+    var tappedView = args.view;
+    var tappedItem = tappedView.bindingContext;
+
+
+    switch(tappedItem.pageName){
+        case "Menu": 
+            //goToMenu()
+            var topmost = frameModule.topmost();
+            topmost.navigate("Views/Menu/menu");
+            break;
+        case "Services": 
+            goToServices()
+            break;
+        case "Inquiries": 
+            goToInquiries()
+            break;
+        case "Bill": 
+            goToBill()
+            break;
+    }
+}
+
+function goToMenu(){
+    console.log("menu");
+    
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Menu/menu");
+}
+
+function goToServices(){
+    console.log("serivces");
+}
+function goToInquiries(){
+    console.log("inquiries");
+}
+function goToBill(){
+    console.log("bill");
 }
