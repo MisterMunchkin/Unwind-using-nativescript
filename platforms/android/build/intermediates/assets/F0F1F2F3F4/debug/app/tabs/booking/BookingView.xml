@@ -1,0 +1,37 @@
+<!--
+This is the component view that represents the 'Browse' tab.
+Feel free to customize layouts and components to change how the tab view looks.
+-->
+<GridLayout class="page-content" loaded="onLoaded">
+    <!--<Label class="page-icon fa" text="&#xf1ea;"></Label>
+    <Label class="page-placeholder" text=""></Label>-->
+
+    <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+            xmlns:lv="nativescript-pro-ui/listview" 
+            xmlns:FAB="nativescript-floatingactionbutton" loaded="onLoaded">
+
+            <ScrollView>
+                <lv:RadListView id="listview"  itemTap="onItemTap" selectionBehavior="Press" items="{{ items }}" class="list-group"> 
+                    <lv:RadListView.listViewLayout>
+                        <lv:ListViewLinearLayout scrollDirection="Vertical" />
+                    </lv:RadListView.listViewLayout>
+
+                    <lv:RadListView.itemTemplate>
+                        <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                            <Image row="0" col="0" src="{{  }}" class="thumb img-rounded" />
+                            <StackLayout row="0" col="1">
+                                <Label text="{{  }}" class="list-group-item-heading" />
+                                <Label text="{{  }}" textWrap="true" class="list-group-item-text" />
+                            </StackLayout>
+                        </GridLayout>
+                    </lv:RadListView.itemTemplate>
+                    
+                    <FAB:fab tap="fabTap"
+                            row="1"
+                            icon="res://ic_add_white"
+                            rippleColor="f1f1f1"
+                            class="fab-button" />
+                </lv:RadListView>
+            </ScrollView>
+        </Page>
+</GridLayout>
