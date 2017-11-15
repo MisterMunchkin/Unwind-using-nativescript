@@ -3,21 +3,21 @@
 
     <item
         is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\nativescript-optimized\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-nativescript-optimized_11c2a037e323bfd41c4dcc026379ebedbd777d48.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
         <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-compat-25.3.1_eccb81d9fb495f067570144ca5727ad82e6be387.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\Unwind\runtime\unspecified\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="eb6078500d1af5e7b663871706674405c57292a3">
-        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\Unwind-runtime-unspecified_ba7e96db22fa84e6e6276a250361675864dc6a7b.jar" />
     </item>
     <item
         is-multidex="false"
@@ -216,15 +216,6 @@
         revision="26.0.2"
         sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
         <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-widgets-release_b31965a6422dad9ad809445f45c4dc25b3aeb0fc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\Unwind\runtime\unspecified\jars\libs\binding-generator.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="a3e74f5f1ebe12c7cfa6591158ef298c95a5275f">
-        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\binding-generator_980416e98428451e9afc085d5a8c07bc0c01faa1.jar" />
     </item>
     <item
         is-multidex="false"

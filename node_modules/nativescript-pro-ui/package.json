@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "nativescript-pro-ui",
+        "raw": "nativescript-pro-ui@^3.2.0",
         "scope": null,
         "escapedName": "nativescript-pro-ui",
         "name": "nativescript-pro-ui",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^3.2.0",
+        "spec": ">=3.2.0 <4.0.0",
+        "type": "range"
       },
       "D:\\Android\\Nativescript Apps\\Unwind"
     ]
   ],
-  "_from": "nativescript-pro-ui@latest",
+  "_from": "nativescript-pro-ui@>=3.2.0 <4.0.0",
   "_id": "nativescript-pro-ui@3.2.0",
   "_inCache": true,
   "_location": "/nativescript-pro-ui",
@@ -29,22 +29,21 @@
   "_npmVersion": "4.6.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-pro-ui",
+    "raw": "nativescript-pro-ui@^3.2.0",
     "scope": null,
     "escapedName": "nativescript-pro-ui",
     "name": "nativescript-pro-ui",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^3.2.0",
+    "spec": ">=3.2.0 <4.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-pro-ui/-/nativescript-pro-ui-3.2.0.tgz",
   "_shasum": "198c6b71952cd742070e6352e870d7fabba1fb93",
   "_shrinkwrap": null,
-  "_spec": "nativescript-pro-ui",
+  "_spec": "nativescript-pro-ui@^3.2.0",
   "_where": "D:\\Android\\Nativescript Apps\\Unwind",
   "author": {
     "name": "Progress"

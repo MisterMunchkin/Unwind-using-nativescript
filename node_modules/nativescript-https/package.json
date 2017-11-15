@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "nativescript-https",
+        "raw": "nativescript-https@^1.0.1",
         "scope": null,
         "escapedName": "nativescript-https",
         "name": "nativescript-https",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^1.0.1",
+        "spec": ">=1.0.1 <2.0.0",
+        "type": "range"
       },
-      "D:\\xampp\\htdocs\\Unwind"
+      "D:\\Android\\Nativescript Apps\\Unwind"
     ]
   ],
-  "_from": "nativescript-https@latest",
+  "_from": "nativescript-https@>=1.0.1 <2.0.0",
   "_id": "nativescript-https@1.0.1",
   "_inCache": true,
   "_location": "/nativescript-https",
@@ -29,23 +29,22 @@
   "_npmVersion": "3.10.8",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-https",
+    "raw": "nativescript-https@^1.0.1",
     "scope": null,
     "escapedName": "nativescript-https",
     "name": "nativescript-https",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^1.0.1",
+    "spec": ">=1.0.1 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-https/-/nativescript-https-1.0.1.tgz",
   "_shasum": "c7a997ac107d450b8917dbfe24819d9aaeffce2f",
   "_shrinkwrap": null,
-  "_spec": "nativescript-https",
-  "_where": "D:\\xampp\\htdocs\\Unwind",
+  "_spec": "nativescript-https@^1.0.1",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwind",
   "author": {
     "name": "Rob Laverty",
     "email": "roblav96@gmail.com"

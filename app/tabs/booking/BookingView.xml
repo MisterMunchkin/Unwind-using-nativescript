@@ -10,7 +10,7 @@ Feel free to customize layouts and components to change how the tab view looks.
             xmlns:lv="nativescript-pro-ui/listview" 
             xmlns:FAB="nativescript-floatingactionbutton" loaded="onLoaded">
 
-            <ScrollView>
+           
                 <lv:RadListView id="listview"  itemTap="onItemTap" selectionBehavior="Press" items="{{ items }}" class="list-group"> 
                     <lv:RadListView.listViewLayout>
                         <lv:ListViewLinearLayout scrollDirection="Vertical" />
@@ -26,12 +26,13 @@ Feel free to customize layouts and components to change how the tab view looks.
                         </GridLayout>
                     </lv:RadListView.itemTemplate>
 
-                    <FAB:fab tap="fabTap"
-                            row="1"
-                            icon="res://ic_add_white"
-                            
-                            class="fab-button" />
                 </lv:RadListView>
-            </ScrollView>
+                
+                <FAB:fab tap="fabTap"
+                        row="1"
+                        
+                        
+                        class="fab-button" />
+            
         </Page>
 </GridLayout>

@@ -10,7 +10,7 @@
         "spec": "1.0.4",
         "type": "version"
       },
-      "D:\\Android\\Nativescript Apps\\Unwind\\node_modules\\tns-template-tab-navigation"
+      "D:\\Android\\Nativescript Apps\\Unwind"
     ]
   ],
   "_from": "nativescript-theme-core@1.0.4",
@@ -38,13 +38,13 @@
     "type": "version"
   },
   "_requiredBy": [
-    "/tns-template-tab-navigation"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-theme-core/-/nativescript-theme-core-1.0.4.tgz",
   "_shasum": "cf2880c7fbf2fe5f43e2235d309750790803efe1",
   "_shrinkwrap": null,
   "_spec": "nativescript-theme-core@1.0.4",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwind\\node_modules\\tns-template-tab-navigation",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwind",
   "author": {
     "name": "Telerik",
     "email": "support@telerik.com"

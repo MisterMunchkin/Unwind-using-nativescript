@@ -1,4 +1,4 @@
-<GridLayout class="page-content" loaded="onloaded">
+<Page class="page-content" loaded="onloaded">
     <Label class="page-icon fa" text="&#xf1ea;"></Label>
-    <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
-</GridLayout>
+    <Label class="page-placeholder" text="menu list"></Label>
+</Page>

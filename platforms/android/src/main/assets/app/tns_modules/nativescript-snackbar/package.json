@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "nativescript-snackbar",
+        "raw": "nativescript-snackbar@^2.0.0",
         "scope": null,
         "escapedName": "nativescript-snackbar",
         "name": "nativescript-snackbar",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^2.0.0",
+        "spec": ">=2.0.0 <3.0.0",
+        "type": "range"
       },
       "D:\\Android\\Nativescript Apps\\Unwind"
     ]
   ],
-  "_from": "nativescript-snackbar@latest",
+  "_from": "nativescript-snackbar@>=2.0.0 <3.0.0",
   "_id": "nativescript-snackbar@2.0.0",
   "_inCache": true,
   "_location": "/nativescript-snackbar",
@@ -29,22 +29,21 @@
   "_npmVersion": "5.4.2",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-snackbar",
+    "raw": "nativescript-snackbar@^2.0.0",
     "scope": null,
     "escapedName": "nativescript-snackbar",
     "name": "nativescript-snackbar",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^2.0.0",
+    "spec": ">=2.0.0 <3.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-snackbar/-/nativescript-snackbar-2.0.0.tgz",
   "_shasum": "67f652a8d39f8d4c78312a3c0374017625636226",
   "_shrinkwrap": null,
-  "_spec": "nativescript-snackbar",
+  "_spec": "nativescript-snackbar@^2.0.0",
   "_where": "D:\\Android\\Nativescript Apps\\Unwind",
   "author": {
     "name": "Brad Martin",

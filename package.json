@@ -6,7 +6,7 @@
   "nativescript": {
     "id": "org.nativescript.Unwind",
     "tns-android": {
-      "version": "3.2.0"
+      "version": "3.3.1"
     }
   },
   "scripts": {
@@ -21,7 +21,7 @@
     "nativescript-snackbar": "^2.0.0",
     "nativescript-sqlite": "^1.1.11",
     "nativescript-theme-core": "1.0.4",
-    "tns-core-modules": "3.2.0"
+    "tns-core-modules": "^3.3.0"
   },
   "devDependencies": {
     "babel-traverse": "6.4.5",
