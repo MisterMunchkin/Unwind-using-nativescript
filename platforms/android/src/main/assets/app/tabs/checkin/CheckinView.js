@@ -5,6 +5,7 @@ const HomeViewModel = require("./checkin-view-model");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 
+
 var cnt = 0;
 //var page;
 var items = new ObservableArray([]);
@@ -77,10 +78,20 @@ function goToMenu(){
 
 function goToServices(){
     console.log("serivces");
+
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Services/services");
+
 }
 function goToInquiries(){
     console.log("inquiries");
+
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Inquiries/inquiries");
 }
 function goToBill(){
     console.log("bill");
+
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Bill/bill");
 }

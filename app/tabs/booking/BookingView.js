@@ -12,5 +12,5 @@ exports.onLoaded = function(args) {
 exports.fabTap = function(){
     console.log("shit");
     var topmost = frameModule.topmost();
-    topmost.navigate("Views/booking page/addbooking");
+    topmost.navigate("Views/AddBooking/addbooking");
 }
