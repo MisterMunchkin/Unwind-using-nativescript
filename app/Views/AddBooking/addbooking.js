@@ -22,13 +22,13 @@ exports.createBooking = function(){
             console.log("valid dates");
 
             var requestObject = {checkIn: checkIn, checkOut: checkOut};
-            fetchModule.fetch("",{
+            fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/addbooking.php",{
                 method: "POST",
                 body: formEncode(requestObject)
             }).then(function(response){
-
+                then(response);
             }, function(error){
-
+                console.log(JSON.stringify(error));
             })
         }else{
             console.log("invalid dates");
@@ -41,6 +41,18 @@ exports.createBooking = function(){
 
 }
 
+function then(response){
+    var phpResponse = response._bodyText;
+
+    alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
+    if(phpResponse == "booking added"){
+        
+        var topmost = frameModule.topmost();
+        topmost.navigate("tabs/booking/BookingView");
+    }
+    
+    console.log(JSON.stringify(respo))
+}
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];
     for (var p in obj)
