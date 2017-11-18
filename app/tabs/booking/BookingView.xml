@@ -18,10 +18,12 @@ Feel free to customize layouts and components to change how the tab view looks.
 
                     <lv:RadListView.itemTemplate>
                         <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                            <Image row="0" col="0" src="{{  }}" class="thumb img-rounded" />
+                           <!--> <Image row="0" col="0" src="{{  }}" class="thumb img-rounded" /> unlocked when we have assets-->
                             <StackLayout row="0" col="1">
-                                <Label text="{{  }}" class="list-group-item-heading" />
-                                <Label text="{{  }}" textWrap="true" class="list-group-item-text" />
+                                <Label text="{{ reservationDate }}" class="list-group-item-heading" />
+                                <Label text="{{ checkinDate }}" textWrap="true" class="list-group-item-text" />
+                                <Label text="{{ checkoutDate }}" textWrap="true" class="list-group-item-text" />
+                                <Label text="{{ reservationStatus }}" textWrap="true" class="list-group-item-text" />
                             </StackLayout>
                         </GridLayout>
                     </lv:RadListView.itemTemplate>
