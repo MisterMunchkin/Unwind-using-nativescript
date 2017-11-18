@@ -26,8 +26,16 @@ function listView(component){
     component.bindingContext = pageData;
 
     var content = loadBookingData();
-    var limit = Object.keys(content).length;
-
+    
+    items.push(
+        {
+            reservationDate: content.reservationDate,
+            checkinDate: content.checkinDate,
+            checkoutDate: content.checkoutDate,
+            reservationStatus: content.reservationStatus
+        }
+    );
+   // var limit = Object.keys(content).length;
     /*for(var x = 0;x < limit;x++){
         items.push(
             {
@@ -48,8 +56,8 @@ function loadBookingData(){
        // body: formEncode(requestObject)
     }).then(function (response) {
 
-        console.log(JSON.parse(response._bodyText));
-        //return JSON.parse(response._bodyText);
+        console.log(response._bodyText);
+        return JSON.parse(response._bodyText);//find a way to make json object valid for use
 
     }, function (error) {
         console.log(JSON.stringify(error));
