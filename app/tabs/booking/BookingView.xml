@@ -2,7 +2,7 @@
 This is the component view that represents the 'Browse' tab.
 Feel free to customize layouts and components to change how the tab view looks.
 -->
-<GridLayout class="page-content" loaded="onLoaded">
+<GridLayout class="page-content">
     <!--<Label class="page-icon fa" text="&#xf1ea;"></Label>
     <Label class="page-placeholder" text=""></Label>-->
 
@@ -10,31 +10,32 @@ Feel free to customize layouts and components to change how the tab view looks.
             xmlns:lv="nativescript-pro-ui/listview" 
             xmlns:FAB="nativescript-floatingactionbutton" loaded="onLoaded">
 
-           
-                <lv:RadListView id="listview"  itemTap="onItemTap" selectionBehavior="Press" items="{{ items }}" class="list-group"> 
-                    <lv:RadListView.listViewLayout>
-                        <lv:ListViewLinearLayout scrollDirection="Vertical" />
-                    </lv:RadListView.listViewLayout>
+        <ScrollView>  
+            <lv:RadListView id="listview"  itemTap="onItemTap" selectionBehavior="Press" items="{{ items }}" class="list-group"> 
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewLinearLayout scrollDirection="Vertical" />
+                </lv:RadListView.listViewLayout>
 
-                    <lv:RadListView.itemTemplate>
-                        <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                           <!--> <Image row="0" col="0" src="{{  }}" class="thumb img-rounded" /> unlocked when we have assets-->
-                            <StackLayout row="0" col="1">
-                                <Label text="{{ reservationDate }}" class="list-group-item-heading" />
-                                <Label text="{{ checkinDate }}" textWrap="true" class="list-group-item-text" />
-                                <Label text="{{ checkoutDate }}" textWrap="true" class="list-group-item-text" />
-                                <Label text="{{ reservationStatus }}" textWrap="true" class="list-group-item-text" />
-                            </StackLayout>
-                        </GridLayout>
-                    </lv:RadListView.itemTemplate>
+                <lv:RadListView.itemTemplate>
+                    
+                    <!--> <Image row="0" col="0" src="{{  }}" class="thumb img-rounded" /> unlocked when we have assets-->
+                    <StackLayout class="list-group-item">
+                        <Label text="{{ reservationDate }}" class="list-group-item-heading" />
+                        <Label text="{{ checkinDate }}" textWrap="true" class="list-group-item-text" />
+                        <!--<Label text="{{ checkoutDate }}" textWrap="true" class="list-group-item-text" />
+                        <Label text="{{ reservationStatus }}" textWrap="true" class="list-group-item-text" />-->
+                    </StackLayout>
+                    
+                </lv:RadListView.itemTemplate>
 
-                </lv:RadListView>
+            </lv:RadListView>
+        </ScrollView>
+        
+        <FAB:fab tap="fabTap"
+                row="1"
                 
-                <FAB:fab tap="fabTap"
-                        row="1"
-                        
-                        
-                        class="fab-button" />
-            
-        </Page>
+                
+                class="fab-button" />
+    
+    </Page>
 </GridLayout>

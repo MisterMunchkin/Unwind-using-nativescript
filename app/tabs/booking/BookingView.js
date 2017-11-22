@@ -11,9 +11,29 @@ exports.onLoaded = function(args) {
     const component = args.object;
     component.bindingContext = new BrowseViewModel();
 
-    listView(component);
+    //listView(component);
 
     //
+    component.bindingContext = pageData;
+
+    //var content = loadBookingData();
+   // console.log(content);
+
+    items.push(
+        {
+            reservationDate: "content.reservationDate",
+            checkinDate: "content.checkinDate"
+            /*checkoutDate: "content.checkoutDate",
+            reservationStatus: "content.reservationStatus"*/
+        },
+        {
+            reservationDate: "shit",
+            checkinDate: "fuck"
+            /*checkoutDate: "content.checkoutDate",
+            reservationStatus: "content.reservationStatus"*/
+        }
+    );
+    pageData.set("items", items);
 }
 
 exports.fabTap = function(){
@@ -22,43 +42,17 @@ exports.fabTap = function(){
     topmost.navigate("Views/AddBooking/addbooking");
 }
 
-function listView(component){
-    component.bindingContext = pageData;
 
-    var content = loadBookingData();
-    
-    items.push(
-        {
-            reservationDate: content.reservationDate,
-            checkinDate: content.checkinDate,
-            checkoutDate: content.checkoutDate,
-            reservationStatus: content.reservationStatus
-        }
-    );
-   // var limit = Object.keys(content).length;
-    /*for(var x = 0;x < limit;x++){
-        items.push(
-            {
-                reservationDate: content["reservationDate"],
-                checkinDate: content["checkinDate"],
-                checkoutDate: content["checkoutDate"],
-                reservationStatus: content["reservationStatus"]
-            }
-        )
-    }
-    
-    pageData.set("items", items);*/
-}
 
 function loadBookingData(){
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/loadBookingData.php", {
-       // method: "POST",
-       // body: formEncode(requestObject)
+
     }).then(function (response) {
-
-        console.log(response._bodyText);
-        return JSON.parse(response._bodyText);//find a way to make json object valid for use
-
+        var obj = response._bodyText;
+        obj = JSON.parse(obj);
+        console.log(obj);
+        return obj;//find a way to make json object valid for use
+       
     }, function (error) {
         console.log(JSON.stringify(error));
     })
