@@ -69,12 +69,13 @@ exports.signin = function(){
 
 function then(response){
     var phpResponse = response._bodyText;
+    alert({ title: "POST response", message: phpResponse, okButtonText: "Close" }); //change this to a snackbar
     if (phpResponse == "user added") {
-        alert({ title: "POST response", message: phpResponse, okButtonText: "Close" }); //change this to a snackbar
-        console.log(JSON.stringify(response));
-    } else {
-        console.log(JSON.stringify(response));
+          
+        var topmost = frameModule.topmost();
+        topmost.navigate("Views/login/login");
     }
+    console.log(JSON.stringify(response));
     page.getViewById("email").text = "";
     page.getViewById("password").text = "";
     page.getViewById("fname").text = "";
@@ -84,8 +85,7 @@ function then(response){
     page.getViewById("gender").text = "";
     page.getViewById("contact_no").text = "";
 
-    var topmost = frameModule.topmost();
-    topmost.navigate("Views/login/login");
+    
 }
 
 

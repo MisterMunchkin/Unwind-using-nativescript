@@ -6,6 +6,7 @@ var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 
 
+var cnt = 0;
 //var page;
 var items = new ObservableArray([]);
 var pageData = new Observable();
@@ -18,30 +19,33 @@ exports.onLoaded = function(args) {
     //page.bindingContext = pageData;
     component.bindingContext = pageData;
 
-    items.push(
-        {
-            pageName: "Services",
-            pageDesc: "list of services",
-            itemImage: ""
-        },
-        {
-            pageName: "Menu",
-            pageDesc: "list of food of the menu",
-            itemImage: ""
-        },
-        {
-            pageName: "Bill",
-            pageDesc: "bill",
-            itemImage: ""
-        },
-        {
-            pageName: "Inquiries",
-            pageDesc: "help center",
-            itemImage: ""
-        }
-    )
+    if(cnt == 0){
+        cnt++;
+        items.push(
+            {
+                pageName: "Services",
+                pageDesc: "list of services",
+                itemImage: ""
+            },
+            {
+                pageName: "Menu",
+                pageDesc: "list of food of the menu",
+                itemImage: ""
+            },
+            {
+                pageName: "Bill",
+                pageDesc: "bill",
+                itemImage: ""
+            },
+            {
+                pageName: "Inquiries",
+                pageDesc: "help center",
+                itemImage: ""
+            }
+        )
 
-    pageData.set("items", items);
+        pageData.set("items", items);
+    }
 }
 
 exports.onItemTap = function(args){
@@ -68,16 +72,26 @@ exports.onItemTap = function(args){
 function goToMenu(){
     console.log("menu");
     
-    /*var topmost = frameModule.topmost();
-    topmost.navigate("Views/Menu/menu");*/
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Menu/menu");
 }
 
 function goToServices(){
     console.log("serivces");
+
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Services/services");
+
 }
 function goToInquiries(){
     console.log("inquiries");
+
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Inquiries/inquiries");
 }
 function goToBill(){
     console.log("bill");
+
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Bill/bill");
 }
