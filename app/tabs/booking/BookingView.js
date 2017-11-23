@@ -16,22 +16,25 @@ exports.onLoaded = function(args) {
     //
     component.bindingContext = pageData;
 
-    //var content = loadBookingData();
-   // console.log(content);
+    var content = loadBookingData();
+    console.log(JSON.stringify(content));
 
     items.push(
         {
-            reservationDate: "content.reservationDate",
-            checkinDate: "content.checkinDate"
+            reservationDate: content,
+            checkinDate: "checkinDate",
+            itemImage: ""
             /*checkoutDate: "content.checkoutDate",
             reservationStatus: "content.reservationStatus"*/
         },
         {
             reservationDate: "shit",
-            checkinDate: "fuck"
+            checkinDate: "fuck",
+            itemImage: ""
             /*checkoutDate: "content.checkoutDate",
             reservationStatus: "content.reservationStatus"*/
         }
+        
     );
     pageData.set("items", items);
 }
@@ -50,7 +53,7 @@ function loadBookingData(){
     }).then(function (response) {
         var obj = response._bodyText;
         obj = JSON.parse(obj);
-        console.log(obj);
+        console.log(response._bodyText);
         return obj;//find a way to make json object valid for use
        
     }, function (error) {
