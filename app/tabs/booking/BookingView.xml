@@ -8,7 +8,7 @@ Feel free to customize layouts and components to change how the tab view looks.
             xmlns:lv="nativescript-pro-ui/listview" 
              loaded="onLoaded">
 
-        <lv:RadListView items="{{ items }}" class="list-group"> 
+        <lv:RadListView items="{{ items }}" itemTap="onItemTap" class="list-group"> 
 
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
@@ -16,12 +16,14 @@ Feel free to customize layouts and components to change how the tab view looks.
 
             <lv:RadListView.itemTemplate>
                 <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                    <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />
+                   <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
                     <StackLayout row="0" col="1" >
                         <Label text="{{ reservationDate }}" class="list-group-item-heading" />
                         <Label text="{{ checkinDate }}" class="list-group-item-text" />
+                        <Label text="{{ checkoutDate }}" class="list-group-item-text" />
+                        <Label text="{{ reservationStatus }}" class="list-group-item-text" />
                     </StackLayout>
-                </GridLayout>
+                 </GridLayout> 
             </lv:RadListView.itemTemplate>
 
         </lv:RadListView>

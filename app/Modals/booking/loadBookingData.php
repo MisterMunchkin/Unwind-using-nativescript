@@ -14,14 +14,15 @@
     if($result){
         if(mysqli_num_rows($result) > 0){    
             $bookingData = array();
-
+            $x = 0;
             while($row = mysqli_fetch_array($result)){
-                $bookingData = array(
+                $bookingData[$x] = array(
                     "reservationDate" => $row["reservation_request_date"],
                     "checkinDate" => $row["checkin_date"],
                     "checkoutDate" => $row["checkout_date"],
                     "reservationStatus" => $row["reservation_request_status"]
                 );
+                $x++;
             }
 
             $json = json_encode($bookingData);
