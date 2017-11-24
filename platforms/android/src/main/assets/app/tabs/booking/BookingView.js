@@ -17,6 +17,7 @@ exports.onLoaded = function(args) {
     component.bindingContext = pageData;
 
     //var content = loadBookingData();
+    items.remove();
 
     var obj;
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/loadBookingData.php", {
