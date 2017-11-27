@@ -22,7 +22,7 @@ exports.cancelButton = function(args){
                          resStatus: pageDataContext.resStatus,
                          resID: pageDataContext.reservationID};
     
-    console.log(pageDataContext.reservationID);
+    console.log(pageDataContext.resDate);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/cancelbooking.php", {
         method: "POST",
         body: formEncode(requestObject)

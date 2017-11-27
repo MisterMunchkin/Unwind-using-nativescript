@@ -17,13 +17,13 @@ exports.onLoaded = function(args) {
   
     var obj;
     items = new ObservableArray([]);
-    
+
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/loadBookingData.php", {
 
     }).then(function (response) {
         obj = response._bodyText;
         obj = JSON.parse(obj);
-        console.log("inside then function: " + obj);
+        //console.log("inside then function: " + obj);
         var limit = obj.length;
 
         for(var x = 0; x < limit;x++){
