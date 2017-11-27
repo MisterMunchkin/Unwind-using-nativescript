@@ -44,14 +44,15 @@ exports.createBooking = function(){
 function then(response){
     var phpResponse = response._bodyText;
 
-    alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
+   // alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
     if(phpResponse == "booking added"){
-        
+        console.log(JSON.stringify(response));
         var topmost = frameModule.topmost();
         topmost.navigate("tabs/booking/BookingView");
+    }else{
+        console.log("fuck");
     }
     
-    console.log(JSON.stringify(respo))
 }
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];

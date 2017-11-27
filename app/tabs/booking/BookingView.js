@@ -54,7 +54,18 @@ exports.onItemTap = function(args){
     var tappedView = args.view;
     var tappedItem = tappedView.bindingContext;
 
-    console.log("tapped: " + tappedItem.reservationDate);
+    var navigationOptions = {
+        moduleName: "Views/BookingPage/bookingpage",
+        context: {resDate: tappedItem.reservationDate,
+                  checkinDate: tappedItem.checkinDate,
+                  checkoutDate: tappedItem.checkoutDate,
+                  resStatus: tappedItem.reservationStatus}
+    }
+
+    var topmost = frameModule.topmost();
+    topmost.navigate(navigationOptions);
+
+    //console.log("tapped: " + tappedItem.reservationDate);
 }
 
 exports.fabTap = function(){

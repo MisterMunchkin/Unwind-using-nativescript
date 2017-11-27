@@ -8,7 +8,8 @@ Feel free to customize layouts and components to change how the tab view looks.
             xmlns:lv="nativescript-pro-ui/listview" 
              loaded="onLoaded">
 
-        <lv:RadListView items="{{ items }}" itemTap="onItemTap" class="list-group"> 
+        <lv:RadListView items="{{ items }}" itemTap="onItemTap" class="list-group"
+            pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" swipeActions="true"> 
 
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
@@ -25,6 +26,8 @@ Feel free to customize layouts and components to change how the tab view looks.
                     </StackLayout>
                  </GridLayout> 
             </lv:RadListView.itemTemplate>
+
+           
 
         </lv:RadListView>
     

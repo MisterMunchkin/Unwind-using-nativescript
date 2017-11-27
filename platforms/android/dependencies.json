@@ -1,5 +1,9 @@
 [
     {
+        "name": "nativescript-dom",
+        "directory": "..\\..\\node_modules\\nativescript-dom"
+    },
+    {
         "name": "nativescript-drop-down",
         "directory": "..\\..\\node_modules\\nativescript-drop-down"
     },

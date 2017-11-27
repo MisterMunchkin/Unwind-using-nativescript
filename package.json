@@ -13,6 +13,7 @@
     "lint": "eslint \"app/**/*.js\""
   },
   "dependencies": {
+    "nativescript-dom": "^2.0.0",
     "nativescript-drop-down": "^3.2.0",
     "nativescript-floatingactionbutton": "^4.1.2",
     "nativescript-https": "^1.0.1",

@@ -3,228 +3,228 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\26.0.0-alpha1\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-fragment-26.0.0-alpha1_f5cbbad2fcbbb54e56f343bfb31d40b97aeedc36.jar" />
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-compat-25.3.1_eccb81d9fb495f067570144ca5727ad82e6be387.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\Chart-2017.1.1030-dev-release\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="67070b6d74d76c40032b857e9fcf25b196fd07f5">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Chart-2017.1.1030-dev-release_46866d4b430b9fd36ecb537463b9bf8046125e7d.jar" />
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-core-utils-25.3.1_a4f05c824b11cdd976bdce45e16b53612becb968.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\nativescript-optimized\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-nativescript-optimized_38721a6caca27ddc5af7a1c36908eea1a5925958.jar" />
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-media-compat-25.3.1_9b545964e38ac098dbf7536b79727391c360dded.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\Data-2017.1.1030-dev-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="31ecd0832f76d83defcff7f8b395008bf3b153bd">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Data-2017.1.1030-dev-release_4200f4953d162bf5c42157538ebda5ef34862f6d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\design\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-design-26.0.0-alpha1_87ae470658f22c402ff2286412ffa7cfaf5e25b4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\Common-2017.1.1030-dev-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="23e24cb11d199bb64e56968563bb6ea219204cec">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Common-2017.1.1030-dev-release_9fefbeb8e0e45f0b823d22bfbe2d019a1cca627c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\widgets-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-widgets-release_e6ebb2c7dc4f50c8e51ea83714d38cf95f5a3f70.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.5.0\4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83\okhttp-3.5.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\okhttp-3.5.0_1eb44d1984bc54247864c617c9d181e757714f1a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\Feedback-2017.1.1030-dev-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="912812cca1fdace3ef9ba9c0a7081db4155767d5">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Feedback-2017.1.1030-dev-release_5c169391090e93293d396e08490658ec4d38a372.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\List-2017.1.1030-dev-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="cd3872a778741ba6ef9d5452e122a54d16b0564f">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-List-2017.1.1030-dev-release_53e61baf223dc29d23be2de7ccbb6259f75074e5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="952944218ecedea1554a513dec0c14d570642843">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-vector-drawable-26.0.0-alpha1_568a384570f7b28f6269372b8db8fa0c23139f3f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="9935891f23923f39d002087085d9696568a9f657">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-media-compat-26.0.0-alpha1_c220997709c5d1e94bb5b383676ca4901ec69e03.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-v4-26.0.0-alpha1_070f8ffaf15394769711e60ea5818c2c589c5c23.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-appcompat-v7-26.0.0-alpha1_957f2c5c736bd398e385d8da01cfeaa5a4c2bfa4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="023ee503b631f69511e335a061ea008f8da60f40">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\support-annotations-26.0.0-alpha1_a8657381b5b4326ac19aa230dfb34ae2b87064a6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-recyclerview-v7-26.0.0-alpha1_462aecdf703084239b01fccc94bc53e3e0e306c4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-core-utils-26.0.0-alpha1_25c60d3cc8ee94af2df534df2421d8059cf26415.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\Gauges-2017.1.1030-dev-release\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\Gauges-2017.1.1030-dev-release\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="bb5e99e8a8b94d66179ccbf5f2fbe41ba084fbe9">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Gauges-2017.1.1030-dev-release_ab22d63dd372c2459492c14e3664c79a93be0249.jar" />
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Gauges-2017.1.1030-dev-release_9ece8fc4772f8a226afabdc8370383244a916f12.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-core-ui-26.0.0-alpha1_af22f22f2395f90296d93c714386800ca04f3220.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\Input-2017.1.1030-dev-release\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\Input-2017.1.1030-dev-release\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="a973d2e002f236d63e4b0b3bb95454b2ed4dc790">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Input-2017.1.1030-dev-release_2e84ee996fd27124a9b478fa15f25caa17eabd43.jar" />
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Input-2017.1.1030-dev-release_d0b96bdf38b55bbc5c372e7ad97cd06beb27e650.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-compat-26.0.0-alpha1_d34b34e40d432bb93b120f0eb421f59b629fdccc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\transition\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-transition-26.0.0-alpha1_fa3cdb9b42f05a5d365a920773e00416dec7a6a8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\Primitives-2017.1.1030-dev-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="9001cb8dbd0c0f46e73929f0b0667c00c2835880">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Primitives-2017.1.1030-dev-release_6a0580abc7dafc596f7bcfb63181774e1e9acef4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\MisterMunchkin\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
+        jar="C:\Users\dalmi\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\okio-1.11.0_07963a8dded89b9b24bd18fefc878efa8346148a.jar" />
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\okio-1.11.0_48f40c751d135c94c549bb1882e3fcbd94c69277.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\26.0.0-alpha1\jars\classes.jar"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
-        <dex dex="C:\Users\MisterMunchkin\Documents\Android\Nativescript\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-animated-vector-drawable-26.0.0-alpha1_55a2a9c37e379dba217ed24a174ed65a0750e00a.jar" />
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-core-ui-25.3.1_9a61a3bc5db8c66ba03ea8c99c39632d0207f036.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\List-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="cd3872a778741ba6ef9d5452e122a54d16b0564f">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-List-2017.1.1030-dev-release_e169e2e1f4dfc8651fd7542900360ee2ebc0e043.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\Common-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="23e24cb11d199bb64e56968563bb6ea219204cec">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Common-2017.1.1030-dev-release_b3dd462cb77c308b644e23a49eee6b294e5dbec6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\design\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-design-25.3.1_8bb5dd1911bdfd1ee1bbb10a502dc5fb2810f952.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\dalmi\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.5.0\4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83\okhttp-3.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\okhttp-3.5.0_937cd7224d3715634472d45d36f2729c64461ee2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\SDK\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\support-annotations-25.3.1_ad885d9968531cd248ff7229237af431dbe89fed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-fragment-25.3.1_c8ad005a1dee4919a46d7814859f65652755f81c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\widgets-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-widgets-release_b31965a6422dad9ad809445f45c4dc25b3aeb0fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\nativescript-optimized\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-nativescript-optimized_11c2a037e323bfd41c4dcc026379ebedbd777d48.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\Data-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="31ecd0832f76d83defcff7f8b395008bf3b153bd">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Data-2017.1.1030-dev-release_4d8bf6e922fa1f7c716ee8d452de0d3083a1e1fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\Feedback-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="912812cca1fdace3ef9ba9c0a7081db4155767d5">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Feedback-2017.1.1030-dev-release_7f8a649b94fe942edc7f454e6b084bc792f56938.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-v4-25.3.1_0752bf2369782453b411fe34cb3006fb38a306c5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-transition-25.3.1_ea91f74e5784e28ef9a5f2a07e4a28dffc0bd2e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-animated-vector-drawable-25.3.1_8071aeba7ca1f62dd751e0609dcf4c4a2d7ae73c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\Chart-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="67070b6d74d76c40032b857e9fcf25b196fd07f5">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Chart-2017.1.1030-dev-release_0b88073c7d194fe30222b4375e5bc2edff85f4e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\Primitives-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9001cb8dbd0c0f46e73929f0b0667c00c2835880">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\intermediates-exploded-aar-Primitives-2017.1.1030-dev-release_82f22392173fb394ae5c1f68b013f08d9a6b3762.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-recyclerview-v7-25.3.1_28fa7756f4f192e4967fad44d6d8a8a85670aeca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-appcompat-v7-25.3.1_c7fee9d616a32b868d6ca1e44a0ac53fe7ce3a17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="D:\Android\Nativescript Apps\Unwind\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.android.support-support-vector-drawable-25.3.1_c3d94aa4914a8ae234c99783540c3d5f1fa17468.jar" />
     </item>
 
 </items>
