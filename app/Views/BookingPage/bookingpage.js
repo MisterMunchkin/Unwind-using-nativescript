@@ -19,8 +19,10 @@ exports.cancelButton = function(args){
     var requestObject = {resDate: pageDataContext.resDate,
                          checkinDate: pageDataContext.checkinDate,
                          checkoutDate: pageDataContext.checkoutDate,
-                         resStatus: pageDataContext.resStatus};
-
+                         resStatus: pageDataContext.resStatus,
+                         resID: pageDataContext.reservationID};
+    
+    console.log(pageDataContext.reservationID);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/cancelbooking.php", {
         method: "POST",
         body: formEncode(requestObject)
@@ -32,7 +34,7 @@ exports.cancelButton = function(args){
 }
 
 function then(response){
-    console.log(response);
+    console.log(JSON.stringify(response));
 }
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];
