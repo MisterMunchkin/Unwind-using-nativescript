@@ -7,9 +7,13 @@ exports.onloaded = function (args) {
     page = args.object
 
     var pageDataContext = page.navigationContext;
-
+/*
     console.log(pageDataContext.resDate);
-
+    console.log(pageDataContext.checkinDate);
+    console.log(pageDataContext.checkoutDate);
+    console.log(pageDataContext.resStatus);
+    console.log(pageDataContext.resID);
+    */
     page.getViewById("resDateLabel").text = pageDataContext.resDate;
 };
 

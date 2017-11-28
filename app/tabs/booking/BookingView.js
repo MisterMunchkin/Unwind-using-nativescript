@@ -3,6 +3,7 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
+//require("nativescript-dom");
 
 var items = new ObservableArray([]);
 var pageData = new Observable();
@@ -29,12 +30,12 @@ exports.onLoaded = function(args) {
         for(var x = 0; x < limit;x++){
             items.push(
                 {
-                    reservationDate: "Reservation Date: " + obj[x].reservationDate,
-                    checkinDate: "check in Date: " + obj[x].checkinDate,
-                    checkoutDate: "check out Date: " + obj[x].checkoutDate,
-                    reservationStatus: "status: " + obj[x].reservationStatus,
+                    reservationDate: "Reservation Date:" + obj[x].reservationDate,
+                    checkinDate: "check in Date:" + obj[x].checkinDate,
+                    checkoutDate: "check out Date:" + obj[x].checkoutDate,
+                    reservationStatus: "status:" + obj[x].reservationStatus,
                     itemImage: "",
-                    reservationID: "Reservation ID" + obj[x].reservationRequestID
+                    reservationID: "Reservation ID:" + obj[x].reservationRequestID
                     /*checkoutDate: "content.checkoutDate",
                     reservationStatus: "content.reservationStatus"*/
                 }
@@ -54,15 +55,27 @@ exports.onLoaded = function(args) {
 exports.onItemTap = function(args){
     var tappedView = args.view;
     var tappedItem = tappedView.bindingContext;
+    
+    var resDate = tappedItem.reservationDate.substring(tappedItem.reservationDate.indexOf(":") + 1);
+    var checkinDate = tappedItem.checkinDate.split(":")[1];
+    var checkoutDate = tappedItem.checkoutDate.split(":")[1];
+    var resStatus = tappedItem.reservationStatus.split(":")[1];
+    var resID = tappedItem.reservationID.split(":")[1];
 
     var navigationOptions = {
         moduleName: "Views/BookingPage/bookingpage",
-        context: {resDate: tappedItem.reservationDate,
-                  checkinDate: tappedItem.checkinDate,
-                  checkoutDate: tappedItem.checkoutDate,
-                  resStatus: tappedItem.reservationStatus,
-                  resID: tappedItem.reservationID}
+        context: {resDate: resDate,
+                  checkinDate: checkinDate,
+                  checkoutDate: checkoutDate,
+                  resStatus: resStatus,
+                  resID: resID}
     }
+    console.log(resDate);
+    console.log(checkinDate);
+    console.log(checkoutDate);
+    console.log(resStatus);
+    console.log(resID);
+   
 
     var topmost = frameModule.topmost();
     topmost.navigate(navigationOptions);
