@@ -24,9 +24,14 @@ exports.cancelButton = function(args){
                          checkinDate: pageDataContext.checkinDate,
                          checkoutDate: pageDataContext.checkoutDate,
                          resStatus: pageDataContext.resStatus,
-                         resID: pageDataContext.reservationID};
+                         resID: pageDataContext.resID};
     
     console.log(pageDataContext.resDate);
+    console.log(pageDataContext.checkinDate);
+    console.log(pageDataContext.checkoutDate);
+    console.log(pageDataContext.resStatus);
+    console.log(pageDataContext.resID);
+
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/cancelbooking.php", {
         method: "POST",
         body: formEncode(requestObject)
