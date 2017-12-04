@@ -6,7 +6,7 @@
 
     $userID = $_SESSION["userID"];
 
-    $sql = "SELECT  `reservation_request_date`, `checkin_date`, `checkout_date`, `reservation_request_status` 
+    $sql = "SELECT `reservation_request_id`, `reservation_request_date`, `checkin_date`, `checkout_date`, `reservation_request_status` 
     FROM `reservation_request` WHERE `user_id` = '$userID' ";
 
     $result = mysqli_query($conn, $sql);
@@ -17,6 +17,7 @@
             $x = 0;
             while($row = mysqli_fetch_array($result)){
                 $bookingData[$x] = array(
+                    "reservationRequestID" => $row["reservation_request_id"],
                     "reservationDate" => $row["reservation_request_date"],
                     "checkinDate" => $row["checkin_date"],
                     "checkoutDate" => $row["checkout_date"],

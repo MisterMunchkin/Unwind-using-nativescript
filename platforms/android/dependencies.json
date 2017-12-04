@@ -20,6 +20,10 @@
         "directory": "..\\..\\node_modules\\nativescript-loading-indicator"
     },
     {
+        "name": "nativescript-loading-indicator-new",
+        "directory": "..\\..\\node_modules\\nativescript-loading-indicator-new"
+    },
+    {
         "name": "nativescript-pro-ui",
         "directory": "..\\..\\node_modules\\nativescript-pro-ui"
     },

@@ -1,8 +1,23 @@
 var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
+var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
+var loader = new LoadingIndicator();
 
+var options = {
+    message: 'Loading...',
+    progress: 0.65,
+    android: {
+        indeterminate: true,
+        cancelable: false,
+        max: 100,
+        progressNumberFormat: "%1d/%2d",
+        progressPercentFormat: 0.53,
+        progressStyle: 1,
+        secondaryProgress: 1
+    }
+};
 
 exports.loaded = function(args){ //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     page = args.object
@@ -15,7 +30,7 @@ exports.signIn = function(){
     email = page.getViewById("email").text;
     password = page.getViewById("password").text;
 
-
+    loader.show(options);
     var requestObject = {email: email, password: password};
     console.log("shit");
     fetchModule.fetch("https://unwindv2.000webhostapp.com/login/login.php", {
@@ -31,12 +46,12 @@ exports.signIn = function(){
 function then(response){
     var phpResponse = response._bodyText;
 
-    page.getViewById("email").text = "";
-    page.getViewById("password").text = "";
+   
     console.log(phpResponse);
 
     if(phpResponse == "user login secured"){
         console.log("fuck");
+        loader.hide();
         var topmost = frameModule.topmost();
         topmost.navigate("tabs/tabs-page");
         
