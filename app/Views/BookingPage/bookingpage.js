@@ -2,11 +2,12 @@ var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 
+var pageDataContext = page.navigationContext;
 
 exports.onloaded = function (args) {
     page = args.object
 
-    var pageDataContext = page.navigationContext;
+    //var pageDataContext = page.navigationContext;
 /*
     console.log(pageDataContext.resDate);
     console.log(pageDataContext.checkinDate);
@@ -18,7 +19,7 @@ exports.onloaded = function (args) {
 };
 
 exports.cancelButton = function(args){
-    var pageDataContext = page.navigationContext;
+   // var pageDataContext = page.navigationContext;
 
     var requestObject = {resDate: pageDataContext.resDate,
                          checkinDate: pageDataContext.checkinDate,

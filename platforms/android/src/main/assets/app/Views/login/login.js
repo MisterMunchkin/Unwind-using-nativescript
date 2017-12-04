@@ -32,7 +32,7 @@ exports.signIn = function(){
 
     loader.show(options);
     var requestObject = {email: email, password: password};
-    console.log("shit");
+    console.log("attempting to connect to php server");
     fetchModule.fetch("https://unwindv2.000webhostapp.com/login/login.php", {
         method: "POST",
         body: formEncode(requestObject)
@@ -50,7 +50,7 @@ function then(response){
     console.log(phpResponse);
 
     if(phpResponse == "user login secured"){
-        console.log("fuck");
+        console.log("inside user login secured");
         loader.hide();
         var topmost = frameModule.topmost();
         topmost.navigate("tabs/tabs-page");
