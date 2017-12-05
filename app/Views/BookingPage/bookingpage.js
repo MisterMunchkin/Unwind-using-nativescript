@@ -9,13 +9,6 @@ exports.onloaded = function (args) {
     page = args.object
 
     var pageDataContext = page.navigationContext;
-/*
-    console.log(pageDataContext.resDate);
-    console.log(pageDataContext.checkinDate);
-    console.log(pageDataContext.checkoutDate);
-    console.log(pageDataContext.resStatus);
-    console.log(pageDataContext.resID);
-    */
     requestObject = {
         resDate: pageDataContext.resDate,
         checkinDate: pageDataContext.checkinDate,
@@ -24,16 +17,38 @@ exports.onloaded = function (args) {
         resID: pageDataContext.resID
     };
 
-    if(requrestObject.resStatus == "Cancelled"){
+    var cancelBookingButton = page.getViewById("cancelBookingID");
+    var checkinButton = page.getViewById("checkinButtonID");
+    //var dateNow = new Date();
+    //var cancelcheckinValidation = dateNow.valueOf() - requestObject.checkinDate.valueOf();
+
+    //console.log(cancelcheckinValidation);
+    if(requestObject.resStatus == "Cancelled"){
         //code for disabling check in button and changing cancel button to an uncancel button
+        //page.getViewById("cancelBookingID").text = "Uncancel Booking"
+       // page.getViewById("cancelBookingID").tap = "uncancelButton";
+        
+        cancelBookingButton.text = "Uncancel Booking";
+        checkinButton.isEnabled = "false";
+    }else{
+        //page.getViewById("cancelBookingID").text = "Cancel Booking";
+       // page.getViewById("cancenBookingID").tap = "cancelButton";
+
+        cancelBookingButton.text = "Cancel Booking";
+        checkinButton.isEnabled = "true";
     }
 
-    //also need code that checks if booking is 24 hours before the check in date, if within the 24 hours then user cannot cancel booking
-
+  
+    /*if(requestObject.checkinDate){
+        //also need code that checks if booking is 24 hours before the check in date, if within the 24 hours then user cannot cancel booking
+    }*/
     
     page.getViewById("resDateLabel").text = pageDataContext.resDate;
 };
 
+exports.uncancelButton = function(args){
+    console.log("uncancel button pressed...");
+}
 exports.cancelButton = function(args){
    // var pageDataContext = page.navigationContext;
 
