@@ -24,18 +24,15 @@ exports.onloaded = function (args) {
 
     //console.log(cancelcheckinValidation);
     if(requestObject.resStatus == "Cancelled"){
-        //code for disabling check in button and changing cancel button to an uncancel button
-        //page.getViewById("cancelBookingID").text = "Uncancel Booking"
-       // page.getViewById("cancelBookingID").tap = "uncancelButton";
-        
         cancelBookingButton.text = "Uncancel Booking";
         checkinButton.isEnabled = "false";
+        //cancelBookingButton.tap = "uncancelButton";
+        cancelBookingButton.set("tap", "uncancelButton")
     }else{
-        //page.getViewById("cancelBookingID").text = "Cancel Booking";
-       // page.getViewById("cancenBookingID").tap = "cancelButton";
-
         cancelBookingButton.text = "Cancel Booking";
         checkinButton.isEnabled = "true";
+        //cancelBookingButton.tap = "cancelButton";
+        cancelBookingButton.set("tap", "cancelButton");
     }
 
   
@@ -50,19 +47,13 @@ exports.uncancelButton = function(args){
     console.log("uncancel button pressed...");
 }
 exports.cancelButton = function(args){
-   // var pageDataContext = page.navigationContext;
-
-    /*var requestObject = {resDate: pageDataContext.resDate,
-                         checkinDate: pageDataContext.checkinDate,
-                         checkoutDate: pageDataContext.checkoutDate,
-                         resStatus: pageDataContext.resStatus,
-                         resID: pageDataContext.resID};*/
-    
-    console.log(pageDataContext.resDate);
-    console.log(pageDataContext.checkinDate);
-    console.log(pageDataContext.checkoutDate);
-    console.log(pageDataContext.resStatus);
-    console.log(pageDataContext.resID);
+  
+    console.log("cancel button pressed...");
+    console.log(requestObject.resDate);
+    console.log(requestObject.checkinDate);
+    console.log(requestObject.checkoutDate);
+    console.log(requestObject.resStatus);
+    console.log(requestObject.resID);
 
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/cancelbooking.php", {
         method: "POST",

@@ -63,7 +63,7 @@ exports.onItemTap = function(args){
     var resID = tappedItem.reservationID.split(":")[1];
 
     var navigationOptions = {
-        moduleName: "Views/BookingPage/bookingpage",
+        moduleName: "Views/BookingDetail/bookingdetail",
         context: {resDate: resDate,
                   checkinDate: checkinDate,
                   checkoutDate: checkoutDate,

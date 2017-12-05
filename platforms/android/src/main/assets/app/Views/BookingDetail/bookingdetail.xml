@@ -4,7 +4,7 @@
         <Label class="page-placeholder" text="booking page"></Label>
 
         <Label text="{{ reservationDate }}" id="resDateLabel"></Label>
-        <Button text="{{ cancelText }}" tap="cancelButton"/>
+        <Button text="{{ cancelText }}" id="cancelBookingID" tap="cancelButton"/>
         <Button text="Check In" tap="checkinButton" id="checkinButtonID" isEnabled = "{{ checkinisEnabled }}"/>
     </StackLayout>
 </Page>
