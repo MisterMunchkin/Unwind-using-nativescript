@@ -36,8 +36,7 @@ exports.onLoaded = function(args) {
                     reservationStatus: "status:" + obj[x].reservationStatus,
                     itemImage: "",
                     reservationID: "Reservation ID:" + obj[x].reservationRequestID
-                    /*checkoutDate: "content.checkoutDate",
-                    reservationStatus: "content.reservationStatus"*/
+    
                 }
 
             );
@@ -91,4 +90,37 @@ exports.fabTap = function(){
 
 exports.pullToRefreshInit = function(){
     //find a way to overwrite listview data and refresh page with new data 
+    var obj;
+    items = new ObservableArray([]);
+
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/loadBookingData.php", {
+
+    }).then(function (response) {
+        obj = response._bodyText;
+        obj = JSON.parse(obj);
+        //console.log("inside then function: " + obj);
+        var limit = obj.length;
+
+        for(var x = 0; x < limit;x++){
+            items.push(
+                {
+                    reservationDate: "Reservation Date:" + obj[x].reservationDate,
+                    checkinDate: "check in Date:" + obj[x].checkinDate,
+                    checkoutDate: "check out Date:" + obj[x].checkoutDate,
+                    reservationStatus: "status:" + obj[x].reservationStatus,
+                    itemImage: "",
+                    reservationID: "Reservation ID:" + obj[x].reservationRequestID
+    
+                }
+
+            );
+        }
+        pageData.set("items", items);
+
+    }, function (error) {
+        console.log(JSON.stringify(error));
+    })
+
+    page.getViewById("listview").notifyPullRefreshFinished();
+    
 }

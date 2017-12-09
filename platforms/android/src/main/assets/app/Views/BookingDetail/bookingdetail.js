@@ -1,9 +1,25 @@
 var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
+var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
 var pageDataContext;
 var requestObject;
+var loader = new LoadingIndicator();
+
+var options = {
+    message: 'Loading...',
+    progress: 0.65,
+    android: {
+        indeterminate: true,
+        cancelable: false,
+        max: 100,
+        progressNumberFormat: "%1d/%2d",
+        progressPercentFormat: 0.53,
+        progressStyle: 1,
+        secondaryProgress: 1
+    }
+};
 
 exports.onloaded = function(args) {
     page = args.object
@@ -27,15 +43,15 @@ exports.onloaded = function(args) {
         console.log("Booking is currently cancelled");
         page.bindingContext = {
             cancelText: "Uncancel Booking",
-            checkinisEnabled: "false",
-            cancelUncancelTap: uncancelBooking()
+            checkinisEnabled: "false"
+           // cancelUncancelTap: uncancelBooking()
         }
     }else{
         console.log("Booking is currently not cancelled");
         page.bindingContext = {
             cancelText: "Cancel Booking",
-            checkinisEnabled: "true",
-            cancelUncancelTap: cancelBooking()
+            checkinisEnabled: "true"
+            //cancelUncancelTap: cancelBooking()
         }
     }
     /*if(requestObject.checkinDate){
@@ -44,7 +60,18 @@ exports.onloaded = function(args) {
     page.getViewById("resDateLabel").text = requestObject.resDate;
 };
 
-
+exports.checkinButton = function(){
+    console.log("check in button clicked");
+    
+}
+exports.cancelUncancelTap = function(){
+    loader.show(options);
+    if(requestObject.resStatus == "Cancelled"){
+        uncancelBooking();
+    }else{
+        cancelBooking();
+    }//add conditions for rejected, and accepted
+}
 
 function uncancelBooking(){
     console.log("uncancel button pressed...");
@@ -89,6 +116,7 @@ function then(response){
     console.log(JSON.stringify(response));
     var topmost = frameModule.topmost();
     topmost.navigate("tabs/tabs-page");
+    loader.hide();
 }
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];
