@@ -39,20 +39,55 @@ exports.onloaded = function(args) {
     //var cancelcheckinValidation = dateNow.valueOf() - requestObject.checkinDate.valueOf();
 
     //console.log(cancelcheckinValidation);
-    if(requestObject.resStatus == "Cancelled"){
+    /*if(requestObject.resStatus == "Accepted"){
         console.log("Booking is currently cancelled");
         page.bindingContext = {
             cancelText: "Uncancel Booking",
             checkinisEnabled: "false"
-           // cancelUncancelTap: uncancelBooking()
+           
         }
     }else{
         console.log("Booking is currently not cancelled");
         page.bindingContext = {
             cancelText: "Cancel Booking",
             checkinisEnabled: "true"
-            //cancelUncancelTap: cancelBooking()
+           
         }
+    }*/
+
+    switch(requestObject.resStatus){
+        case "Accepted": 
+        console.log("Accepted");
+        page.bindingContext = {
+            cancelText: "Cancel Booking",
+            checkinisEnabled: "true",
+            cancelisEnabled: "true"
+        }
+        break;
+        case "Pending": 
+        console.log("Pending");
+        page.bindingContext = {
+            cancelText: "Cancel Booking",
+            checkinisEnabled: "false",
+            cancelisEnabled: "true"
+        }
+        break;
+        case "Cancelled": 
+        console.log("Cancelled");
+        page.bindingContext = {
+            cancelText: "Uncancel Booking",
+            checkinisEnabled: "false",
+            cancelisEnabled: "true"
+        }
+        break;
+        case "Checked In": 
+        console.log("Checked In");
+        page.bindingContext = {
+            cancelisEnabled: "false",
+            checkinisEnabled: "false",
+            cancelText: "Cancel Booking"
+        }
+        break;
     }
     /*if(requestObject.checkinDate){
         //also need code that checks if booking is 24 hours before the check in date, if within the 24 hours then user cannot cancel booking
@@ -62,6 +97,23 @@ exports.onloaded = function(args) {
 
 exports.checkinButton = function(){
     console.log("check in button clicked");
+
+    var CurDate = new Date("YYYY-MM-DD");
+
+    if(requestObject.checkinDate == CurDate){
+        fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/activateCheckin.php", {
+ 
+        }).then(function (response) {
+            //then(response);
+
+        }, function (error) {
+            console.log(JSON.stringify(error));
+        })
+    }else if(requestObject.checkinDate < CurDate){
+        console.log("the user is late");  
+    }else{
+        alert({ title: "Premature ejaculation", message: "You are not at your check in date yet", okButtonText: "Close" });
+    }
     
 }
 exports.cancelUncancelTap = function(){

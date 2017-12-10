@@ -7,11 +7,11 @@ var ObservableArray = require("data/observable-array").ObservableArray;
 
 var items = new ObservableArray([]);
 var pageData = new Observable();
-
+var component;
 
 
 exports.onLoaded = function(args) {
-    const component = args.object;
+    component = args.object;
     component.bindingContext = new BrowseViewModel();
 
     component.bindingContext = pageData;
@@ -121,6 +121,6 @@ exports.pullToRefreshInit = function(){
         console.log(JSON.stringify(error));
     })
 
-    page.getViewById("listview").notifyPullRefreshFinished();
+    component.getViewById("listview").notifyPullToRefreshFinished();
     
 }
