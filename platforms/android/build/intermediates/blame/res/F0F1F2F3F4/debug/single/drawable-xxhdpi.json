@@ -1,11 +1,19 @@
 [
     {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xxhdpi\\background.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-xxhdpi\\background.png"
+    },
+    {
         "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xxhdpi\\icon.png",
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\src\\main\\res\\drawable-xxhdpi\\icon.png"
     },
     {
         "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xxhdpi\\icon.png",
         "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\src\\main\\res\\drawable-xxhdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xxhdpi\\logo.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-xxhdpi\\logo.png"
     },
     {
         "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xxhdpi\\background.png",
@@ -30,6 +38,10 @@
     {
         "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xxhdpi\\logo.png",
         "source": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-xxhdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xxhdpi\\icon.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-xxhdpi\\icon.png"
     },
     {
         "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xxhdpi\\background.png",

@@ -2,6 +2,8 @@ var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
+var application = require('application');
+require("nativescript-master-technology");
 //var connection = require("tns-core-modules/connectivity");
 
 //var connType = connection.getConnectionType();
@@ -23,7 +25,16 @@ var options = {
 
 exports.loaded = function(args){ //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     page = args.object
+
+    if (application.android) {
+        application.android.on(application.AndroidApplication.activityBackPressedEvent, backEvent);
+    }
 };
+
+function backEvent(args) {
+    //if (dontGoBack) { args.cancel = true; }
+    process.exit();
+ }
 
 exports.signIn = function(){
     

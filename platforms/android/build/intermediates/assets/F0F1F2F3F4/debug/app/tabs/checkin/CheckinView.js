@@ -1,5 +1,6 @@
 var page;
 var frameModule = require("ui/frame");
+var fetchModule = require("fetch");
 
 const HomeViewModel = require("./checkin-view-model");
 var Observable = require("data/observable").Observable;
@@ -14,10 +15,40 @@ var pageData = new Observable();
 exports.onLoaded = function(args) {
     const component = args.object;
     component.bindingContext = new HomeViewModel();
-
-    //page = args.object;
-    //page.bindingContext = pageData;
+    //query in loading so that we can see if there is an accepted
+    //also need security to check if theres already an active checkin
+    //use a switch for active and inactive methods
     component.bindingContext = pageData;
+
+
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/checkinSecurity.php", {
+    }).then(function (response) {
+        then(response);
+    }, function (error) {
+        console.log(JSON.stringify(error));
+    })
+
+   
+}
+
+function then(response){
+    var phpResponse = response._bodyText;
+
+   
+    console.log(phpResponse);
+   // console.log(response);
+    if(phpResponse == "no data"){
+        inactive();
+        
+    }else{
+        active();
+    }
+
+    
+}
+
+function active(){
+    console.log("checked in");
 
     if(cnt == 0){
         cnt++;
@@ -47,7 +78,11 @@ exports.onLoaded = function(args) {
         pageData.set("items", items);
     }
 }
+function inactive(){
+    console.log("not checked in");
 
+    //add image for locked tab
+}
 exports.onItemTap = function(args){
     var tappedView = args.view;
     var tappedItem = tappedView.bindingContext;
@@ -95,3 +130,4 @@ function goToBill(){
     var topmost = frameModule.topmost();
     topmost.navigate("Views/Bill/bill");
 }
+

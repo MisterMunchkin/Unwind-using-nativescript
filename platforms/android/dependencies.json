@@ -24,6 +24,10 @@
         "directory": "..\\..\\node_modules\\nativescript-loading-indicator-new"
     },
     {
+        "name": "nativescript-master-technology",
+        "directory": "..\\..\\node_modules\\nativescript-master-technology"
+    },
+    {
         "name": "nativescript-pro-ui",
         "directory": "..\\..\\node_modules\\nativescript-pro-ui"
     },

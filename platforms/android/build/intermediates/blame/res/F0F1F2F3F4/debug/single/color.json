@@ -12,8 +12,20 @@
         "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\color\\abc_primary_text_material_dark.xml"
     },
     {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\list_editor_text_color.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\Input-2017.1.1030-dev-release\\res\\color\\list_editor_text_color.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_hint_foreground_material_dark.xml"
+    },
+    {
         "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_primary_text_material_light.xml",
         "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
         "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_secondary_text_material_light.xml",
@@ -28,12 +40,24 @@
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\color\\abc_tint_switch_track.xml"
     },
     {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_tint_switch_thumb.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_tint_switch_thumb.xml"
+    },
+    {
         "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_tint_spinner.xml",
         "source": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_tint_spinner.xml"
     },
     {
         "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\design_error.xml",
         "source": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\color\\design_error.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_tint_seek_thumb.xml"
     },
     {
         "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_tint_seek_thumb.xml",
@@ -48,12 +72,24 @@
         "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\color\\abc_search_url_text.xml"
     },
     {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
         "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_tint_spinner.xml",
         "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\color\\abc_tint_spinner.xml"
     },
     {
         "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_tint_switch_track.xml",
         "source": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_tint_edittext.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_search_url_text.xml"
     },
     {
         "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_hint_foreground_material_dark.xml",
@@ -84,6 +120,10 @@
         "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\color\\abc_tint_edittext.xml"
     },
     {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
         "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
         "source": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
@@ -104,12 +144,32 @@
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\color\\abc_secondary_text_material_dark.xml"
     },
     {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\design_tint_password_toggle.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\color\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_tint_switch_track.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
         "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_primary_text_material_dark.xml",
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\color\\abc_primary_text_material_dark.xml"
     },
     {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_tint_spinner.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
         "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_tint_spinner.xml",
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\color\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_primary_text_material_dark.xml"
     },
     {
         "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_hint_foreground_material_light.xml",
@@ -146,6 +206,10 @@
     {
         "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
         "source": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_hint_foreground_material_light.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_hint_foreground_material_light.xml"
     },
     {
         "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
@@ -192,6 +256,18 @@
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.3.1\\res\\color\\design_tint_password_toggle.xml"
     },
     {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_btn_colored_text_material.xml"
+    },
+    {
         "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\design_tint_password_toggle.xml",
         "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.3.1\\res\\color\\design_tint_password_toggle.xml"
     },
@@ -206,6 +282,14 @@
     {
         "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_tint_edittext.xml",
         "source": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\design_error.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\color\\design_error.xml"
     },
     {
         "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_primary_text_material_light.xml",
@@ -224,8 +308,16 @@
         "source": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_tint_switch_thumb.xml"
     },
     {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
         "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\design_tint_password_toggle.xml",
         "source": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\color\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\abc_tint_default.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\color\\abc_tint_default.xml"
     },
     {
         "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\color\\switch_thumb_material_light.xml",
