@@ -63,11 +63,13 @@ exports.signIn = function(){
     fetchModule.fetch("https://unwindv2.000webhostapp.com/login/login.php", {
         method: "POST",
         body: formEncode(requestObject)
+
     }).then(function (response) {
         then(response);
     }, function (error) {
         console.log(JSON.stringify(error));
     })
+
 };
 
 /*function signInfetch(){
