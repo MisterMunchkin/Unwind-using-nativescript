@@ -61,7 +61,10 @@ exports.onloaded = function(args) {
         page.bindingContext = {
             cancelText: "Cancel Booking",
             checkinisEnabled: "true",
-            cancelisEnabled: "true"
+            cancelisEnabled: "true",
+            checkoutVisible: "collapse",
+            cancelVisible: "visible",
+            checkinVisible: "visible"
         }
         break;
         case "Pending": 
@@ -69,7 +72,10 @@ exports.onloaded = function(args) {
         page.bindingContext = {
             cancelText: "Cancel Booking",
             checkinisEnabled: "false",
-            cancelisEnabled: "true"
+            cancelisEnabled: "true",
+            checkoutVisible: "collapse",
+            cancelVisible: "visible",
+            checkinVisible: "visible"
         }
         break;
         case "Cancelled": 
@@ -77,7 +83,10 @@ exports.onloaded = function(args) {
         page.bindingContext = {
             cancelText: "Uncancel Booking",
             checkinisEnabled: "false",
-            cancelisEnabled: "true"
+            cancelisEnabled: "true",
+            checkoutVisible: "collapse",
+            cancelVisible: "visible",
+            checkinVisible: "visible"
         }
         break;
         case "Checked In": 
@@ -85,7 +94,10 @@ exports.onloaded = function(args) {
         page.bindingContext = {
             cancelisEnabled: "false",
             checkinisEnabled: "false",
-            cancelText: "Cancel Booking"
+            cancelText: "Cancel Booking",
+            checkoutVisible: "visible",
+            cancelVisible: "collapse",
+            checkinVisible: "collapse"
         }
         break;
         case "Rejected":
@@ -93,7 +105,10 @@ exports.onloaded = function(args) {
         page.bindingContext = {
             cancelisEnabled: "false",
             checkinisEnabled: "false",
-            cancelText: "Cancel Booking"
+            cancelText: "Cancel Booking",
+            checkoutVisible: "collapse",
+            cancelVisible: "visible",
+            checkinVisible: "visible"
         }
     }
     /*if(requestObject.checkinDate){
@@ -132,6 +147,11 @@ exports.checkinButton = function(){
     }
     
 }
+
+exports.checkoutButton = function(){
+    //payments and database updates that guest has checked out
+}
+
 exports.cancelUncancelTap = function(){
     loader.show(options);
     if(requestObject.resStatus == "Cancelled"){

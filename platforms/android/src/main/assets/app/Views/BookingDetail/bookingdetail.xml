@@ -3,8 +3,9 @@
         <Label class="page-icon fa" text="&#xf1ea;"></Label>
         <Label class="page-placeholder" text="booking page"></Label>
 
-        <Label text="{{ reservationDate }}" id="resDateLabel"></Label>
-        <Button text="{{ cancelText }}" id="cancelBookingID" tap="cancelUncancelTap" isEnabled = "{{ cancelisEnabled }}"/>
-        <Button text="Check In" tap="checkinButton" id="checkinButtonID" isEnabled = "{{ checkinisEnabled }}"/>
+        <Label  id="resDateLabel"></Label>
+        <Button text="{{ cancelText }}" id="cancelBookingID" tap="cancelUncancelTap" visibility="{{ cancelVisible }}" isEnabled = "{{ cancelisEnabled }}"/>
+        <Button text="Check In" tap="checkinButton" id="checkinButtonID" visibility="{{ checkinVisible }}" isEnabled = "{{ checkinisEnabled }}"/>
+        <Button id="checkoutButton" text="Check Out" visibility="{{ checkoutVisible }}"/>
     </StackLayout>
 </Page>
