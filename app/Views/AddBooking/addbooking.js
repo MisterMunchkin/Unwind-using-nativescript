@@ -48,7 +48,7 @@ function then(response){
     if(phpResponse == "booking added"){
         console.log(JSON.stringify(response));
         var topmost = frameModule.topmost();
-        topmost.navigate("tabs/booking/BookingView");
+        topmost.navigate("tabs/tabs-page");
     }else{
         console.log("fuck");
     }

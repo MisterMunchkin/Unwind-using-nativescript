@@ -1,7 +1,7 @@
 var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
-
+//var labelModule = require("tns-core-modules/ui/label");
 const HomeViewModel = require("./checkin-view-model");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
@@ -11,6 +11,7 @@ var cnt = 0;
 //var page;
 var items = new ObservableArray([]);
 var pageData = new Observable();
+//const label = new labelModule.Label();
 
 exports.onLoaded = function(args) {
     const component = args.object;
@@ -80,7 +81,11 @@ function active(){
 }
 function inactive(){
     console.log("not checked in");
-
+    
+    //label.text = "Check in Module is locked";
+    page.bindingContext = {
+        checkinLocked: "Check in Module is locked"
+    }
     //add image for locked tab
 }
 exports.onItemTap = function(args){

@@ -26,9 +26,9 @@ var options = {
 exports.loaded = function(args){ //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     page = args.object
 
-    if (application.android) {
+   /* if (application.android) {
         application.android.on(application.AndroidApplication.activityBackPressedEvent, backEvent);
-    }
+    }*/
 };
 
 function backEvent(args) {

@@ -4,8 +4,12 @@ Feel free to customize layouts and components to change how the tab view looks.
 -->
 <GridLayout class="page-content">
     <Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:lv="nativescript-pro-ui/listview" loaded="onLoaded">
+        <!--<Label class="page-placeholder" text="Check in Module is locked"></Label> this part wont show up in app-->
 
         <ScrollView>
+            <!--<Label class="page-icon fa" text="&#xf1ea;"></Label>-->
+            
+
             <lv:RadListView id="listview"  itemTap="onItemTap" selectionBehavior="Press" items="{{ items }}" class="list-group"> 
                 <lv:RadListView.listViewLayout>
                     <lv:ListViewGridLayout scrollDirection="Vertical"  spanCount="2" />

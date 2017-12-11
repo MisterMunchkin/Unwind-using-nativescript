@@ -88,6 +88,13 @@ exports.onloaded = function(args) {
             cancelText: "Cancel Booking"
         }
         break;
+        case "Rejected":
+        console.log("Rejected");
+        page.bindingContext = {
+            cancelisEnabled: "false",
+            checkinisEnabled: "false",
+            cancelText: "Cancel Booking"
+        }
     }
     /*if(requestObject.checkinDate){
         //also need code that checks if booking is 24 hours before the check in date, if within the 24 hours then user cannot cancel booking
@@ -98,14 +105,23 @@ exports.onloaded = function(args) {
 exports.checkinButton = function(){
     console.log("check in button clicked");
 
-    var CurDate = new Date("YYYY-MM-DD");
-
+    var CurDate = new Date();
+    CurDate = convertDate(CurDate);
+    console.log("Current Date: " + CurDate + "Checkin Date: " + requestObject.checkinDate);
+    
     if(requestObject.checkinDate == CurDate){
+        var Obj = {resID: requestObject.resID};
         fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/activateCheckin.php", {
- 
+            method: "POST",
+            body: formEncode(Obj)
         }).then(function (response) {
             //then(response);
-
+            console.log(JSON.stringify(response));
+            if(response._bodyText == "checkin activated"){
+                alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
+            }else{
+                alert({ title: "activation error", message: "please try again :(", okButtonText: "Close" });
+            }
         }, function (error) {
             console.log(JSON.stringify(error));
         })
@@ -144,6 +160,16 @@ function uncancelBooking(){
     })
 }
 
+function convertDate(date) {
+    var yyyy = date.getFullYear().toString();
+    var mm = (date.getMonth()+1).toString();
+    var dd  = date.getDate().toString();
+  
+    var mmChars = mm.split('');
+    var ddChars = dd.split('');
+  
+    return yyyy + '-' + (mmChars[1]?mm:"0"+mmChars[0]) + '-' + (ddChars[1]?dd:"0"+ddChars[0]);
+  }
 
 function cancelBooking(){
     console.log("cancel button pressed...");
