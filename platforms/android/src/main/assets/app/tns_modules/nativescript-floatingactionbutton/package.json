@@ -10,17 +10,17 @@
         "spec": ">=4.1.2 <5.0.0",
         "type": "range"
       },
-      "D:\\Android\\Nativescript Apps\\Unwind"
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
   "_from": "nativescript-floatingactionbutton@>=4.1.2 <5.0.0",
-  "_id": "nativescript-floatingactionbutton@4.1.2",
+  "_id": "nativescript-floatingactionbutton@4.1.3",
   "_inCache": true,
   "_location": "/nativescript-floatingactionbutton",
   "_nodeVersion": "6.11.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/nativescript-floatingactionbutton-4.1.2.tgz_1509742863015_0.18169714813120663"
+    "tmp": "tmp/nativescript-floatingactionbutton-4.1.3.tgz_1511132340704_0.8272650598082691"
   },
   "_npmUser": {
     "name": "bradmartin",
@@ -40,11 +40,11 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nativescript-floatingactionbutton/-/nativescript-floatingactionbutton-4.1.2.tgz",
-  "_shasum": "90d00aa4fe7100bccf352efaeffb537773b7e069",
+  "_resolved": "https://registry.npmjs.org/nativescript-floatingactionbutton/-/nativescript-floatingactionbutton-4.1.3.tgz",
+  "_shasum": "da9237b553c91f47a023110b68cf10a387e49734",
   "_shrinkwrap": null,
   "_spec": "nativescript-floatingactionbutton@^4.1.2",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwind",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Brad Martin",
     "email": "bmartin@nstudio.io",
@@ -97,8 +97,8 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "90d00aa4fe7100bccf352efaeffb537773b7e069",
-    "tarball": "https://registry.npmjs.org/nativescript-floatingactionbutton/-/nativescript-floatingactionbutton-4.1.2.tgz"
+    "shasum": "da9237b553c91f47a023110b68cf10a387e49734",
+    "tarball": "https://registry.npmjs.org/nativescript-floatingactionbutton/-/nativescript-floatingactionbutton-4.1.3.tgz"
   },
   "homepage": "https://github.com/bradmartin/nativescript-floatingactionbutton",
   "keywords": [
@@ -184,5 +184,5 @@
     "tslint.demo": "tslint --config '../tslint.json' '../demo/app/*.ts' --exclude '**/node_modules/**'"
   },
   "typings": "index.d.ts",
-  "version": "4.1.2"
+  "version": "4.1.3"
 }

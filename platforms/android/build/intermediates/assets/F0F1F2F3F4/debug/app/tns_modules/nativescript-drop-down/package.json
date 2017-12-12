@@ -10,7 +10,7 @@
         "spec": ">=3.2.0 <4.0.0",
         "type": "range"
       },
-      "D:\\Android\\Nativescript Apps\\Unwind"
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
   "_from": "nativescript-drop-down@>=3.2.0 <4.0.0",
@@ -44,7 +44,7 @@
   "_shasum": "9c9cb97bfc15974332e8ebe89dc913eadf4562ad",
   "_shrinkwrap": null,
   "_spec": "nativescript-drop-down@^3.2.0",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwind",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Peter Staev",
     "email": "peter@tangrasoft.com"

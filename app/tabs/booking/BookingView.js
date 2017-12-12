@@ -17,7 +17,7 @@ exports.onLoaded = function(args) {
     component.bindingContext = pageData;
   
     var obj;
-    items = new ObservableArray([]);
+   // items = new ObservableArray([]);
 
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/loadBookingData.php", {
 

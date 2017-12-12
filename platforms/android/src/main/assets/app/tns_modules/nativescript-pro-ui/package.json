@@ -10,7 +10,7 @@
         "spec": ">=3.2.0 <4.0.0",
         "type": "range"
       },
-      "D:\\Android\\Nativescript Apps\\Unwind"
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
   "_from": "nativescript-pro-ui@>=3.2.0 <4.0.0",
@@ -44,7 +44,7 @@
   "_shasum": "198c6b71952cd742070e6352e870d7fabba1fb93",
   "_shrinkwrap": null,
   "_spec": "nativescript-pro-ui@^3.2.0",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwind",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Progress"
   },

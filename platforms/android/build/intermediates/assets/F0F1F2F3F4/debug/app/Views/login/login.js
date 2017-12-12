@@ -2,9 +2,7 @@ var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
-var applicationModule = require("application");
-var AndroidApplication = applicationModule.android;
-var activity = AndroidApplication.foregroundActivity;
+var application = require('application');
 require("nativescript-master-technology");
 //var connection = require("tns-core-modules/connectivity");
 
@@ -28,12 +26,15 @@ var options = {
 exports.loaded = function(args){ //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     page = args.object
 
+   /* if (application.android) {
+        application.android.on(application.AndroidApplication.activityBackPressedEvent, backEvent);
+    }*/
 };
 
-activity.onBackPressed = function () {
-    /* Do something */
+function backEvent(args) {
+    //if (dontGoBack) { args.cancel = true; }
     process.exit();
-};
+ }
 
 exports.signIn = function(){
     
@@ -62,11 +63,14 @@ exports.signIn = function(){
     fetchModule.fetch("https://unwindv2.000webhostapp.com/login/login.php", {
         method: "POST",
         body: formEncode(requestObject)
+
     }).then(function (response) {
         then(response);
+        loader.hide();
     }, function (error) {
         console.log(JSON.stringify(error));
     })
+
 };
 
 /*function signInfetch(){
@@ -96,12 +100,14 @@ function then(response){
 
     if(phpResponse == "user login secured"){
         console.log("inside user login secured");
-        loader.hide();
+
         var topmost = frameModule.topmost();
         topmost.navigate("tabs/tabs-page");
         
     }else{
         alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
+        page.getViewById("email").text = "";
+        page.getViewById("password").text = "";
     }
 
     

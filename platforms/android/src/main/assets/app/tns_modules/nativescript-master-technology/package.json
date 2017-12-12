@@ -1,28 +1,50 @@
 {
-  "_from": "nativescript-master-technology",
+  "_args": [
+    [
+      {
+        "raw": "nativescript-master-technology@^1.1.1",
+        "scope": null,
+        "escapedName": "nativescript-master-technology",
+        "name": "nativescript-master-technology",
+        "rawSpec": "^1.1.1",
+        "spec": ">=1.1.1 <2.0.0",
+        "type": "range"
+      },
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
+    ]
+  ],
+  "_from": "nativescript-master-technology@>=1.1.1 <2.0.0",
   "_id": "nativescript-master-technology@1.1.1",
-  "_inBundle": false,
-  "_integrity": "sha1-i0n2uSqBHb52bdP7twwQr42skxE=",
+  "_inCache": true,
   "_location": "/nativescript-master-technology",
+  "_nodeVersion": "6.9.4",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/nativescript-master-technology-1.1.1.tgz_1494092077248_0.15601517423056066"
+  },
+  "_npmUser": {
+    "name": "nathanaela",
+    "email": "nathan@master-technology.com"
+  },
+  "_npmVersion": "4.2.0",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "nativescript-master-technology",
-    "name": "nativescript-master-technology",
+    "raw": "nativescript-master-technology@^1.1.1",
+    "scope": null,
     "escapedName": "nativescript-master-technology",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+    "name": "nativescript-master-technology",
+    "rawSpec": "^1.1.1",
+    "spec": ">=1.1.1 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-master-technology/-/nativescript-master-technology-1.1.1.tgz",
   "_shasum": "8b49f6b92a811dbe766dd3fbb70c10af8dac9311",
-  "_spec": "nativescript-master-technology",
-  "_where": "C:\\Android\\Nativescript\\Unwind",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-master-technology@^1.1.1",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Nathanael Anderson",
     "email": "nathan@master-technology.com"
@@ -30,9 +52,15 @@
   "bugs": {
     "url": "https://github.com/nathanaela/nativescript-master-technology/issues"
   },
-  "bundleDependencies": false,
-  "deprecated": false,
+  "dependencies": {},
   "description": "A Simple NativeScript Utility Library",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "8b49f6b92a811dbe766dd3fbb70c10af8dac9311",
+    "tarball": "https://registry.npmjs.org/nativescript-master-technology/-/nativescript-master-technology-1.1.1.tgz"
+  },
+  "gitHead": "9a857911179ce405ef23da7b5573884ba744b96d",
   "homepage": "https://github.com/nathanaela/nativescript-master-technology",
   "keywords": [
     "NativeScript",
@@ -45,6 +73,12 @@
     "url": "https://github.com/nathanaela/nativescript-master-technology/blob/master/LICENSE"
   },
   "main": "master-technology.js",
+  "maintainers": [
+    {
+      "name": "nathanaela",
+      "email": "nathan@master-technology.com"
+    }
+  ],
   "name": "nativescript-master-technology",
   "nativescript": {
     "platforms": {
@@ -58,9 +92,12 @@
       "category": "Processing"
     }
   },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nathanaela/nativescript-master-technology.git"
   },
+  "scripts": {},
   "version": "1.1.1"
 }

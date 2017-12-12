@@ -10,7 +10,7 @@
         "spec": "1.0.4",
         "type": "version"
       },
-      "D:\\Android\\Nativescript Apps\\Unwind"
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
   "_from": "nativescript-theme-core@1.0.4",
@@ -44,7 +44,7 @@
   "_shasum": "cf2880c7fbf2fe5f43e2235d309750790803efe1",
   "_shrinkwrap": null,
   "_spec": "nativescript-theme-core@1.0.4",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwind",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Telerik",
     "email": "support@telerik.com"

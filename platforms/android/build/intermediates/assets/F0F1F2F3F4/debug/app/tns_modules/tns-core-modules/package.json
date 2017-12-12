@@ -10,7 +10,7 @@
         "spec": "latest",
         "type": "tag"
       },
-      "D:\\Android\\Nativescript Apps\\Unwind"
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
   "_from": "tns-core-modules@latest",
@@ -45,7 +45,7 @@
   "_shasum": "4feb1f31113c554f0bb47984ac496fccdb5af156",
   "_shrinkwrap": null,
   "_spec": "tns-core-modules",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwind",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "dependencies": {
     "tns-core-modules-widgets": "3.3.0"
   },

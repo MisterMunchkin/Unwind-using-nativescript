@@ -10,7 +10,7 @@
         "spec": ">=2.4.0 <3.0.0",
         "type": "range"
       },
-      "D:\\Android\\Nativescript Apps\\Unwind"
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
   "_from": "nativescript-loading-indicator@>=2.4.0 <3.0.0",
@@ -44,7 +44,7 @@
   "_shasum": "615b6d45facdbdb65d0c392359c539d8b974d5f4",
   "_shrinkwrap": null,
   "_spec": "nativescript-loading-indicator@^2.4.0",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwind",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Nathan Walker",
     "email": "walkerrunpdx@gmail.com"

@@ -10,7 +10,7 @@
         "spec": ">=1.0.1 <2.0.0",
         "type": "range"
       },
-      "D:\\Android\\Nativescript Apps\\Unwind"
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
   "_from": "nativescript-https@>=1.0.1 <2.0.0",
@@ -44,7 +44,7 @@
   "_shasum": "c7a997ac107d450b8917dbfe24819d9aaeffce2f",
   "_shrinkwrap": null,
   "_spec": "nativescript-https@^1.0.1",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwind",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Rob Laverty",
     "email": "roblav96@gmail.com"
