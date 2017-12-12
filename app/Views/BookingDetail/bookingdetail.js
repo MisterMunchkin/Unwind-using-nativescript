@@ -6,6 +6,8 @@ var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndi
 var pageDataContext;
 var requestObject;
 var loader = new LoadingIndicator();
+var CurDate = new Date();
+
 
 var options = {
     message: 'Loading...',
@@ -33,6 +35,7 @@ exports.onloaded = function(args) {
         resID: pageDataContext.resID
     };
 
+    CurDate = convertDate(CurDate);
     var cancelBookingButton = page.getViewById("cancelBookingID");
     var checkinButton = page.getViewById("checkinButtonID");
     //var dateNow = new Date();
@@ -120,8 +123,7 @@ exports.onloaded = function(args) {
 exports.checkinButton = function(){
     console.log("check in button clicked");
 
-    var CurDate = new Date();
-    CurDate = convertDate(CurDate);
+    
     console.log("Current Date: " + CurDate + "Checkin Date: " + requestObject.checkinDate);
     
     if(requestObject.checkinDate == CurDate){
@@ -150,6 +152,25 @@ exports.checkinButton = function(){
 
 exports.checkoutButton = function(){
     //payments and database updates that guest has checked out
+    //check out security    
+        
+    checkOutTime(CurDate, requestObject.checkoutDate);
+}
+
+function checkOutTime(CurDate, checkoutDate){
+    var ret;
+
+    if(CurDate == checkoutDate){
+        ret = 0; //checkout on time
+        console.log("check out on time");
+    }else if(CurDate > checkoutDate){
+        ret = 1; //chekout late
+        console.log("check out late");
+    }else{
+        ret = 2 //checkout early
+        console.log("check out early");//ask neil how check in functionality should work
+    }
+    return ret;
 }
 
 exports.cancelUncancelTap = function(){

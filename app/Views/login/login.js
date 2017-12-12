@@ -66,6 +66,7 @@ exports.signIn = function(){
 
     }).then(function (response) {
         then(response);
+        loader.hide();
     }, function (error) {
         console.log(JSON.stringify(error));
     })
@@ -99,12 +100,14 @@ function then(response){
 
     if(phpResponse == "user login secured"){
         console.log("inside user login secured");
-        loader.hide();
+
         var topmost = frameModule.topmost();
         topmost.navigate("tabs/tabs-page");
         
     }else{
         alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
+        page.getViewById("email").text = "";
+        page.getViewById("password").text = "";
     }
 
     
