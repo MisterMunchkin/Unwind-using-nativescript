@@ -5,4 +5,5 @@ var fetchModule = require("fetch");
 
 exports.onloaded = function(args){
     page = args.object
+    
 };
