@@ -5,7 +5,7 @@ var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 
 
-var items = new ObservableArray([]);
+var items;
 var pageData = new Observable();
 var component;
 

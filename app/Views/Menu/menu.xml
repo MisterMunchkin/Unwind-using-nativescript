@@ -7,9 +7,9 @@
 
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
         xmlns:lv="nativescript-pro-ui/listview" 
-            loaded="onLoaded">
+            loaded="onloaded">
 
-    <lv:RadListView id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
+    <lv:RadListView id="menuview" items="{{ items }}" itemTap="onItemTap" class="list-group"
         pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" swipeActions="true"> 
 
         <lv:RadListView.listViewLayout>
@@ -20,11 +20,11 @@
             <GridLayout class="list-group-item" rows="auto" columns="auto, *">
                 <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
                 <StackLayout row="0" col="1" >
-                    <Label text="{{ reservationDate }}" class="list-group-item-heading" />
-                    <Label text="{{ checkinDate }}" class="list-group-item-text" />
-                    <Label text="{{ checkoutDate }}" class="list-group-item-text" />
-                    <Label text="{{ reservationStatus }}" class="list-group-item-text" />
-                    <Label text="{{ reservationID }}" class="list-group-item-text" />
+
+                    <Label text="{{ name }}" class="list-group-item-heading" />
+                    <Label text="{{ description }}" class="list-group-item-text" />
+                    <Label text="{{ price }}" class="list-group-item-text" />
+                    
                 </StackLayout>
                 </GridLayout> 
         </lv:RadListView.itemTemplate>
