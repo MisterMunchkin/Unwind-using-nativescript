@@ -7,14 +7,14 @@ require("nativescript-master-technology");
 //var connection = require("tns-core-modules/connectivity");
 
 //var connType = connection.getConnectionType();
-var loader = new LoadingIndicator();
+var loader;
 
 var options = {
     message: 'Loading...',
     progress: 0.65,
     android: {
         indeterminate: true,
-        cancelable: false,
+        cancelable: true,
         max: 100,
         progressNumberFormat: "%1d/%2d",
         progressPercentFormat: 0.53,
@@ -57,6 +57,8 @@ exports.signIn = function(){
     email = page.getViewById("email").text;
     password = page.getViewById("password").text;
 
+    loader = new LoadingIndicator();
+
     loader.show(options);
     var requestObject = { email: email, password: password };
     console.log("attempting to connect to php server");
@@ -68,6 +70,7 @@ exports.signIn = function(){
         then(response);
         loader.hide();
     }, function (error) {
+        console.log("ERROR");
         console.log(JSON.stringify(error));
     })
 
