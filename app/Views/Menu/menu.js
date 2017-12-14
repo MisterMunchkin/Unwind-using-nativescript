@@ -7,8 +7,12 @@ var ObservableArray = require("data/observable-array").ObservableArray;
 var items;
 var pageData = new Observable();
 
+var items = new ObservableArray([]);
+var pageData = new Observable();
+
 exports.onloaded = function(args){
     page = args.object
+
     page.bindingContext = pageData;
 
     var obj;
@@ -38,4 +42,5 @@ exports.onloaded = function(args){
     }, function (error) {
         console.log(JSON.stringify(error));
     })
+
 };

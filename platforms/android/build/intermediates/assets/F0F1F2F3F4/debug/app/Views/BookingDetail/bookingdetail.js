@@ -6,6 +6,8 @@ var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndi
 var pageDataContext;
 var requestObject;
 var loader = new LoadingIndicator();
+var CurDate = new Date();
+
 
 var options = {
     message: 'Loading...',
@@ -33,6 +35,7 @@ exports.onloaded = function(args) {
         resID: pageDataContext.resID
     };
 
+    CurDate = convertDate(CurDate);
     var cancelBookingButton = page.getViewById("cancelBookingID");
     var checkinButton = page.getViewById("checkinButtonID");
     //var dateNow = new Date();
@@ -61,7 +64,10 @@ exports.onloaded = function(args) {
         page.bindingContext = {
             cancelText: "Cancel Booking",
             checkinisEnabled: "true",
-            cancelisEnabled: "true"
+            cancelisEnabled: "true",
+            checkoutVisible: "collapse",
+            cancelVisible: "visible",
+            checkinVisible: "visible"
         }
         break;
         case "Pending": 
@@ -69,7 +75,10 @@ exports.onloaded = function(args) {
         page.bindingContext = {
             cancelText: "Cancel Booking",
             checkinisEnabled: "false",
-            cancelisEnabled: "true"
+            cancelisEnabled: "true",
+            checkoutVisible: "collapse",
+            cancelVisible: "visible",
+            checkinVisible: "visible"
         }
         break;
         case "Cancelled": 
@@ -77,7 +86,10 @@ exports.onloaded = function(args) {
         page.bindingContext = {
             cancelText: "Uncancel Booking",
             checkinisEnabled: "false",
-            cancelisEnabled: "true"
+            cancelisEnabled: "true",
+            checkoutVisible: "collapse",
+            cancelVisible: "visible",
+            checkinVisible: "visible"
         }
         break;
         case "Checked In": 
@@ -85,9 +97,22 @@ exports.onloaded = function(args) {
         page.bindingContext = {
             cancelisEnabled: "false",
             checkinisEnabled: "false",
-            cancelText: "Cancel Booking"
+            cancelText: "Cancel Booking",
+            checkoutVisible: "visible",
+            cancelVisible: "collapse",
+            checkinVisible: "collapse"
         }
         break;
+        case "Rejected":
+        console.log("Rejected");
+        page.bindingContext = {
+            cancelisEnabled: "false",
+            checkinisEnabled: "false",
+            cancelText: "Cancel Booking",
+            checkoutVisible: "collapse",
+            cancelVisible: "visible",
+            checkinVisible: "visible"
+        }
     }
     /*if(requestObject.checkinDate){
         //also need code that checks if booking is 24 hours before the check in date, if within the 24 hours then user cannot cancel booking
@@ -98,14 +123,22 @@ exports.onloaded = function(args) {
 exports.checkinButton = function(){
     console.log("check in button clicked");
 
-    var CurDate = new Date("YYYY-MM-DD");
-
+    
+    console.log("Current Date: " + CurDate + "Checkin Date: " + requestObject.checkinDate);
+    
     if(requestObject.checkinDate == CurDate){
+        var Obj = {resID: requestObject.resID};
         fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/activateCheckin.php", {
- 
+            method: "POST",
+            body: formEncode(Obj)
         }).then(function (response) {
             //then(response);
-
+            console.log(JSON.stringify(response));
+            if(response._bodyText == "checkin activated"){
+                alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
+            }else{
+                alert({ title: "activation error", message: "please try again :(", okButtonText: "Close" });
+            }
         }, function (error) {
             console.log(JSON.stringify(error));
         })
@@ -116,6 +149,30 @@ exports.checkinButton = function(){
     }
     
 }
+
+exports.checkoutButton = function(){
+    //payments and database updates that guest has checked out
+    //check out security    
+        
+    checkOutTime(CurDate, requestObject.checkoutDate);
+}
+
+function checkOutTime(CurDate, checkoutDate){
+    var ret;
+
+    if(CurDate == checkoutDate){
+        ret = 0; //checkout on time
+        console.log("check out on time");
+    }else if(CurDate > checkoutDate){
+        ret = 1; //chekout late
+        console.log("check out late");
+    }else{
+        ret = 2 //checkout early
+        console.log("check out early");//ask neil how check in functionality should work
+    }
+    return ret;
+}
+
 exports.cancelUncancelTap = function(){
     loader.show(options);
     if(requestObject.resStatus == "Cancelled"){
@@ -144,6 +201,16 @@ function uncancelBooking(){
     })
 }
 
+function convertDate(date) {
+    var yyyy = date.getFullYear().toString();
+    var mm = (date.getMonth()+1).toString();
+    var dd  = date.getDate().toString();
+  
+    var mmChars = mm.split('');
+    var ddChars = dd.split('');
+  
+    return yyyy + '-' + (mmChars[1]?mm:"0"+mmChars[0]) + '-' + (ddChars[1]?dd:"0"+ddChars[0]);
+  }
 
 function cancelBooking(){
     console.log("cancel button pressed...");

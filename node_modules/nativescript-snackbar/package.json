@@ -10,7 +10,7 @@
         "spec": ">=2.0.0 <3.0.0",
         "type": "range"
       },
-      "D:\\Android\\Nativescript Apps\\Unwind"
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
   "_from": "nativescript-snackbar@>=2.0.0 <3.0.0",
@@ -44,7 +44,7 @@
   "_shasum": "67f652a8d39f8d4c78312a3c0374017625636226",
   "_shrinkwrap": null,
   "_spec": "nativescript-snackbar@^2.0.0",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwind",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Brad Martin",
     "email": "bmartin@nstudio.io",

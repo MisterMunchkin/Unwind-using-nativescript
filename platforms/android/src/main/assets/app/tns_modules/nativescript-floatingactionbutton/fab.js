@@ -17,7 +17,6 @@ var Fab = (function (_super) {
         configurable: true
     });
     Fab.prototype.createNativeView = function () {
-        console.log("createNativeView android ***");
         this._android = new android.support.design.widget.FloatingActionButton(this._context);
         var that = new WeakRef(this);
         this._android.setOnClickListener(new android.view.View.OnClickListener({
@@ -51,7 +50,7 @@ var Fab = (function (_super) {
             this.nativeView.setBackgroundTintList(newValue);
         }
         catch (err) {
-            console.log("err: ", err);
+            console.log("Error setNative backgroundColorProperty: ", err);
         }
     };
     Fab.prototype[view_1.backgroundInternalProperty.setNative] = function (value) {

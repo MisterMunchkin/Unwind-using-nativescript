@@ -1,50 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi\\icon.png",
-        "source": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-hdpi\\icon.png"
-    },
-    {
-        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi\\icon.png",
-        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-hdpi\\icon.png"
-    },
-    {
-        "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi\\background.png",
-        "source": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-hdpi\\background.png"
-    },
-    {
         "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi\\logo.png",
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\src\\main\\res\\drawable-hdpi\\logo.png"
-    },
-    {
-        "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi\\logo.png",
-        "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\src\\main\\res\\drawable-hdpi\\logo.png"
-    },
-    {
-        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi\\background.png",
-        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-hdpi\\background.png"
-    },
-    {
-        "merged": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi\\logo.png",
-        "source": "C:\\Users\\MisterMunchkin\\Documents\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-hdpi\\logo.png"
     },
     {
         "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi\\icon.png",
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\src\\main\\res\\drawable-hdpi\\icon.png"
     },
     {
-        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi\\logo.png",
-        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-hdpi\\logo.png"
-    },
-    {
-        "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi\\icon.png",
-        "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\src\\main\\res\\drawable-hdpi\\icon.png"
-    },
-    {
         "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi\\background.png",
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\src\\main\\res\\drawable-hdpi\\background.png"
-    },
-    {
-        "merged": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi\\background.png",
-        "source": "D:\\Android\\Nativescript Apps\\Unwind\\platforms\\android\\src\\main\\res\\drawable-hdpi\\background.png"
     }
 ]

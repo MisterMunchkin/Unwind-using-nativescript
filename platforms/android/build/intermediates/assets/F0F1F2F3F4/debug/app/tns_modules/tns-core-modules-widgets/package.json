@@ -10,7 +10,7 @@
         "spec": "3.3.0",
         "type": "version"
       },
-      "D:\\Android\\Nativescript Apps\\Unwind\\node_modules\\tns-core-modules"
+      "D:\\Android\\Nativescript Apps\\Unwindv2\\node_modules\\tns-core-modules"
     ]
   ],
   "_from": "tns-core-modules-widgets@3.3.0",
@@ -44,7 +44,7 @@
   "_shasum": "d2aa7bb26ad21248c9f5c1f75fea513718666226",
   "_shrinkwrap": null,
   "_spec": "tns-core-modules-widgets@3.3.0",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwind\\node_modules\\tns-core-modules",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2\\node_modules\\tns-core-modules",
   "author": {
     "name": "NativeScript team"
   },

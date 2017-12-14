@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "nativescript-dom",
+        "raw": "nativescript-dom@^2.0.0",
         "scope": null,
         "escapedName": "nativescript-dom",
         "name": "nativescript-dom",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^2.0.0",
+        "spec": ">=2.0.0 <3.0.0",
+        "type": "range"
       },
-      "D:\\Android\\Nativescript Apps\\Unwind"
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
-  "_from": "nativescript-dom@latest",
+  "_from": "nativescript-dom@>=2.0.0 <3.0.0",
   "_id": "nativescript-dom@2.0.0",
   "_inCache": true,
   "_location": "/nativescript-dom",
@@ -29,23 +29,22 @@
   "_npmVersion": "4.2.0",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-dom",
+    "raw": "nativescript-dom@^2.0.0",
     "scope": null,
     "escapedName": "nativescript-dom",
     "name": "nativescript-dom",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^2.0.0",
+    "spec": ">=2.0.0 <3.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-dom/-/nativescript-dom-2.0.0.tgz",
   "_shasum": "2c25c3645db2b3aabe64ba86b51d7db6565b8e70",
   "_shrinkwrap": null,
-  "_spec": "nativescript-dom",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwind",
+  "_spec": "nativescript-dom@^2.0.0",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Nathanael Anderson",
     "email": "nathan@master-technology.com"

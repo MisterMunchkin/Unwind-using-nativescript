@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "nativescript-loading-indicator-new",
+        "raw": "nativescript-loading-indicator-new@^2.1.0",
         "scope": null,
         "escapedName": "nativescript-loading-indicator-new",
         "name": "nativescript-loading-indicator-new",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^2.1.0",
+        "spec": ">=2.1.0 <3.0.0",
+        "type": "range"
       },
       "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
-  "_from": "nativescript-loading-indicator-new@latest",
+  "_from": "nativescript-loading-indicator-new@>=2.1.0 <3.0.0",
   "_id": "nativescript-loading-indicator-new@2.1.0",
   "_inCache": true,
   "_location": "/nativescript-loading-indicator-new",
@@ -29,22 +29,21 @@
   "_npmVersion": "2.15.5",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-loading-indicator-new",
+    "raw": "nativescript-loading-indicator-new@^2.1.0",
     "scope": null,
     "escapedName": "nativescript-loading-indicator-new",
     "name": "nativescript-loading-indicator-new",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^2.1.0",
+    "spec": ">=2.1.0 <3.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-loading-indicator-new/-/nativescript-loading-indicator-new-2.1.0.tgz",
   "_shasum": "8c15b69461f687627d846d430322ae987b4ecbe2",
   "_shrinkwrap": null,
-  "_spec": "nativescript-loading-indicator-new",
+  "_spec": "nativescript-loading-indicator-new@^2.1.0",
   "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "PocketSmith"
