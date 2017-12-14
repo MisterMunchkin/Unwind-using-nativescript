@@ -1,5 +1,4 @@
 <!--<Page class="page-content" loaded="onloaded">
-<<<<<<< HEAD
 
     <Label class="page-icon fa" text="&#xf1ea;"></Label>
     <Label class="page-placeholder" text="menu list"></Label>
@@ -33,41 +32,3 @@
 
 </Page>
 
-=======
-    <Label class="page-icon fa" text="&#xf1ea;"></Label>
-    <Label class="page-placeholder" text="menu list"></Label>
-</Page>-->
-
-<GridLayout class="page-content" >
-
-    <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
-            xmlns:lv="nativescript-pro-ui/listview" 
-             loaded="onloaded">
-
-        <lv:RadListView id="menuview" items="{{ items }}" itemTap="onItemTap" class="list-group"
-            pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" swipeActions="true"> 
-
-            <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
-            </lv:RadListView.listViewLayout>
-
-            <lv:RadListView.itemTemplate>
-                <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                   <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
-                    <StackLayout row="0" col="1" >
-                        <Label text="{{ name }}" class="list-group-item-heading" />
-                        <Label text="{{ description }}" class="list-group-item-text" />
-                        <Label text="{{ price }}" class="list-group-item-text" />
-                       
-                    </StackLayout>
-                 </GridLayout> 
-            </lv:RadListView.itemTemplate>
-
-           
-
-        </lv:RadListView>
-    
-    </Page>
-
-</GridLayout>
->>>>>>> 38c679777d9367f2047440af4f25aede63cdfcfa

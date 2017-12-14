@@ -7,6 +7,10 @@ var viewModule = require("ui/core/view");
 //var observableArray = require("data/observable-array");
 //var pageData = new observable.Observable();
 
+var GenderData = new observable.Observable({
+    genderList: ["Male", "Female"]
+});
+
 exports.loaded = function(args){
     page = args.object;
     //pageData.set("showPicker", true);
@@ -23,13 +27,18 @@ exports.AccountCreate = function(){
     var gender;
     var contact_no;
 
+    var GenderPicker = page.getViewById("genderPicker");
+
+    GenderPicker.addEventListener(observable.Observable.propertyChangeEvent, function(e){
+        gender = e.value;
+    })
     email = page.getViewById("email").text;
     password = page.getViewById("password").text;
     fname = page.getViewById("fname").text;
     lname = page.getViewById("lname").text;
     MI = page.getViewById("MI").text;
     birthdate = BirthdateFormat();
-    gender = page.getViewById("gender").text;
+   
     contact_no = page.getViewById("contact_no").text;
 
     MI = MI.charAt(0);

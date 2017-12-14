@@ -3,9 +3,9 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
-//require("nativescript-dom");
 
-var items = new ObservableArray([]);
+
+var items;
 var pageData = new Observable();
 var component;
 

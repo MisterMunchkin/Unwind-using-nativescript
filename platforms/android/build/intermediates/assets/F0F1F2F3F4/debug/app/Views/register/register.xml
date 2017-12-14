@@ -12,7 +12,8 @@
             <DatePicker id="birthdate" hint="birthday" day="15" month="5" year="2015" verticalAlignment="center" 
             horizontalAlignment="center" />
 
-            <TextField hint="gender: Male or Female" id="gender" />
+            <!--<TextField hint="gender: Male or Female" id="gender" />-->
+            <ListPicker id="genderPicker" items="genderList">
             <!--<ListPicker  items="Male | Female"
                     selectedIndexChanged="onchange($event)" opened="onopen()"
                     row="0" colSpan="2">

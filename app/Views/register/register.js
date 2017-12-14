@@ -7,38 +7,63 @@ var viewModule = require("ui/core/view");
 //var observableArray = require("data/observable-array");
 //var pageData = new observable.Observable();
 
+var genderData = new observable.Observable({
+    genderList: ["Male", "Female"]
+});
+
+var guest = {
+    email: "",
+    password: "",
+    fname: "",
+    lname: "",
+    MI: "",
+    birthdate: "",
+    contact_no: "",
+    gender: ""
+}
+
 exports.loaded = function(args){
     page = args.object;
+    page.bindingContext = genderData;
+
+    var genderPicker = page.getViewById("genderPicker");
+
+    genderPicker.addEventListener(observable.Observable.propertyChangeEvent, function(e){
+        guest.gender = e.value;
+    });
     //pageData.set("showPicker", true);
     //args.object.bindingContext = pageData;
+  
 }
 
 exports.AccountCreate = function(){
-    var email;
+
+   /* var email;
     var password;
     var fname;
     var lname;
     var MI;
     var birthdate;
-    var gender;
-    var contact_no;
 
-    email = page.getViewById("email").text;
-    password = page.getViewById("password").text;
-    fname = page.getViewById("fname").text;
-    lname = page.getViewById("lname").text;
-    MI = page.getViewById("MI").text;
-    birthdate = BirthdateFormat();
-    gender = page.getViewById("gender").text;
-    contact_no = page.getViewById("contact_no").text;
+    var contact_no; */
 
-    MI = MI.charAt(0);
-    console.log(email + " " + password + " " + MI + " " + birthdate + " " + 
-    gender + " " + contact_no);
+    
+    guest.email = page.getViewById("email").text;
+    guest.password = page.getViewById("password").text;
+    guest.fname = page.getViewById("fname").text;
+    guest.lname = page.getViewById("lname").text;
+    guest.MI = page.getViewById("MI").text;
+    guest.birthdate = BirthdateFormat();
+    guest.gender = page.getViewById("gender").text;
+    guest.contact_no = page.getViewById("contact_no").text;
 
-    var requestObject = {email: email, password: password, 
-                        fname: fname, lname: lname, MI: MI, birthdate: birthdate,
-                    gender: gender, contact_no: contact_no};   
+    guest.MI = guest.MI.charAt(0);
+    console.log(guest.email + " " + guest.password + " " + guest.MI + " " + guest.birthdate + " " + 
+    guest.gender + " " + guest.contact_no);
+
+    var requestObject = {email: guest.email, password: guest.password, 
+                        fname: guest.fname, lname: guest.lname, MI: guest.MI, birthdate: guest.birthdate,
+                    gender: guest.gender, contact_no: guest.contact_no};   
     
     //loader.show(options); var of Loader.js, find a way to include it in this script
     fetchModule.fetch("https://unwindv2.000webhostapp.com/register/register.php", {
