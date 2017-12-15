@@ -9,7 +9,7 @@ Feel free to customize layouts and components to change how the tab view looks.
              loaded="onLoaded">
 
         <lv:RadListView id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
-            pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" swipeActions="true"> 
+            pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" > 
 
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>

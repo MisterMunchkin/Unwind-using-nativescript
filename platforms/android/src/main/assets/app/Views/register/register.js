@@ -8,7 +8,7 @@ var viewModule = require("ui/core/view");
 //var pageData = new observable.Observable();
 
 var genderData = new observable.Observable({
-    genderList: "Male"
+    genderList: ["Male", "Female"]
 });
 
 var guest = {
