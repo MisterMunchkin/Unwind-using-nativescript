@@ -53,11 +53,19 @@ exports.onloaded = function(args){
 function isData(obj){
     return (obj == "no data")? 0: 1;
 }
-exports.checkoutTap = function(){
-    var array = getSelectedItems();
-    console.log(array);
+
+var foodArray = new Array();
+exports.selectedItems = function(args){
+    var tappedView = args.view,
+    tappedItem = tappedView.bindingContext;
+    console.log(tappedItem);
+    foodArray.push(
+        tappedItem
+    );
 }
-/*exports.fabTap = function(){
-    var array = getSelectedItems();
-    //console.log()
-}*/
+
+exports.fabTap = function(args){
+    var listview = args.object;
+    //var array = listview.getSelectedItems();
+    console.log(foodArray);
+}
