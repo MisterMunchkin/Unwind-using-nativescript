@@ -7,8 +7,6 @@ var ObservableArray = require("data/observable-array").ObservableArray;
 var items;
 var pageData = new Observable();
 
-var items = new ObservableArray([]);
-var pageData = new Observable();
 
 exports.onloaded = function(args){
     page = args.object
@@ -22,25 +20,44 @@ exports.onloaded = function(args){
         
     }).then(function (response) {
         obj = response._bodyText;
-        obj = JSON.parse(obj);
-        //console.log("inside then function: " + obj);
-        var limit = obj.length;
         console.log(obj);
-        for(var x = 0; x < limit;x++){
-            items.push(
-                {
-                    name: obj[x].name,
-                    description: obj[x].description,
-                    price: obj[x].price
-                   
-                }
 
-            );
+        if(isData(obj) > 0){
+
+            items = new ObservableArray([]);
+            obj = JSON.parse(obj);
+            //console.log("inside then function: " + obj);
+            var limit = obj.length;
+            console.log(obj);
+            for(var x = 0; x < limit;x++){
+                items.push(
+                    {
+                        name: obj[x].name,
+                        description: obj[x].description,
+                        price: obj[x].price
+                    
+                    }
+
+                );
+                console.log(obj[x].name);
+            }
+            pageData.set("items", items);
+        }else{
+            console.log("put viible no data confirmation here");
         }
-        pageData.set("items", items);
-
     }, function (error) {
         console.log(JSON.stringify(error));
     })
 
 };
+function isData(obj){
+    return (obj == "no data")? 0: 1;
+}
+exports.checkoutTap = function(){
+    var array = getSelectedItems();
+    console.log(array);
+}
+/*exports.fabTap = function(){
+    var array = getSelectedItems();
+    //console.log()
+}*/
