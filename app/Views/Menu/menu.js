@@ -34,7 +34,8 @@ exports.onloaded = function(args){
                     {
                         name: obj[x].name,
                         description: obj[x].description,
-                        price: obj[x].price
+                        price: obj[x].price,
+                        tapped: 0
                     
                     }
 
@@ -55,7 +56,7 @@ function isData(obj){
 }
 
 var foodArray = new Array();
-exports.selectedItems = function(args){
+/*exports.selectedItems = function(args){
     var tappedView = args.view,
     tappedItem = tappedView.bindingContext;
     console.log(tappedItem);
@@ -63,9 +64,28 @@ exports.selectedItems = function(args){
         tappedItem
     );
 }
+*/
+exports.itemTap = function(args){
+    var tappedView = args.view;
+    var tappedItem = tappedView.bindingContext;
 
+    if(tappedItem.tapped == 0){
+        console.log("tapped");
+        tappedItem.tapped = 1;
+        foodArray.push(tappedItem);
+        console.log(JSON.stringify(foodArray));
+    }else{
+        console.log("untapped");
+        tappedItem.tapped = 0;
+        var limit = foodArray.length;
+        for(var x = 0;x < limit && tappedItem.name != foodArray[x].name;x++){}
+        if(tappedItem.name == foodArray[x].name){
+            foodArray.splice(x, 1);
+        }
+    }
+}
 exports.fabTap = function(args){
-    var listview = args.object;
+  
     //var array = listview.getSelectedItems();
     console.log(foodArray);
 }
