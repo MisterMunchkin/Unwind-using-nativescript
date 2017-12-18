@@ -6,7 +6,7 @@ var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndi
 var pageDataContext;
 var requestObject;
 var loader = new LoadingIndicator();
-var CurDate = new Date();
+var CurDate;
 
 
 var options = {
@@ -35,7 +35,7 @@ exports.onloaded = function(args) {
         resID: pageDataContext.resID
     };
 
-    CurDate = convertDate(CurDate);
+    CurDate = convertDateNow();
     var cancelBookingButton = page.getViewById("cancelBookingID");
     var checkinButton = page.getViewById("checkinButtonID");
     //var dateNow = new Date();
@@ -136,6 +136,8 @@ exports.checkinButton = function(){
             console.log(JSON.stringify(response));
             if(response._bodyText == "checkin activated"){
                 alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
+                var topmost = frameModule.topmost();
+                topmost.navigate("tabs/tabs-page");
             }else{
                 alert({ title: "activation error", message: "please try again :(", okButtonText: "Close" });
             }
@@ -201,15 +203,18 @@ function uncancelBooking(){
     })
 }
 
-function convertDate(date) {
-    var yyyy = date.getFullYear().toString();
+function convertDateNow() {
+    /*var yyyy = date.getFullYear().toString();
     var mm = (date.getMonth()+1).toString();
     var dd  = date.getDate().toString();
   
     var mmChars = mm.split('');
     var ddChars = dd.split('');
   
-    return yyyy + '-' + (mmChars[1]?mm:"0"+mmChars[0]) + '-' + (ddChars[1]?dd:"0"+ddChars[0]);
+    return yyyy + '-' + (mmChars[1]?mm:"0"+mmChars[0]) + '-' + (ddChars[1]?dd:"0"+ddChars[0]);*/
+    var d = new Date().toISOString().slice(0,10);
+
+    return d;
   }
 
 function cancelBooking(){

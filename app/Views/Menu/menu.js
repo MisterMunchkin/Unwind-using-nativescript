@@ -87,5 +87,5 @@ exports.itemTap = function(args){
 exports.fabTap = function(args){
   
     //var array = listview.getSelectedItems();
-    console.log(foodArray);
+    console.log(JSON.stringify(foodArray));
 }
