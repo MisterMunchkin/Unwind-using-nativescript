@@ -20,7 +20,7 @@ exports.onloaded = function(args){
         
     }).then(function (response) {
         obj = response._bodyText;
-        console.log(obj);
+       
 
         if(isData(obj) > 0){
 
@@ -28,7 +28,7 @@ exports.onloaded = function(args){
             obj = JSON.parse(obj);
             //console.log("inside then function: " + obj);
             var limit = obj.length;
-            console.log(obj);
+           
             for(var x = 0; x < limit;x++){
                 items.push(
                     {
@@ -49,6 +49,7 @@ exports.onloaded = function(args){
     }, function (error) {
         console.log(JSON.stringify(error));
     })
+    console.log("total food:" + JSON.stringify(global.foodArray));
 
 };
 function isData(obj){
@@ -69,7 +70,19 @@ exports.itemTap = function(args){
     var tappedView = args.view;
     var tappedItem = tappedView.bindingContext;
 
-    if(tappedItem.tapped == 0){
+    var navigationOptions = {
+        moduleName: "Views/Menu/MenuDetail/menu_detail",
+        context: {
+            name: tappedItem.name,
+            description: tappedItem.description,
+            price: tappedItem.price
+        }
+    }
+    console.log("Tapped item: " + JSON.stringify(tappedItem));
+    
+    var topmost = frameModule.topmost();
+    topmost.navigate(navigationOptions);
+    /*if(tappedItem.tapped == 0){
         console.log("tapped");
         tappedItem.tapped = 1;
         foodArray.push(tappedItem);
@@ -82,24 +95,21 @@ exports.itemTap = function(args){
         if(tappedItem.name == foodArray[x].name){
             foodArray.splice(x, 1);
         }
-    }
+    }*/
 }
-exports.fabTap = function(args){
-    var modalPageModule = "Modals/menu/checkout_menu";
-    var context = "some custome context";
-    var fullscreen = false;
-    //var array = listview.getSelectedItems();
-    console.log(JSON.stringify(foodArray));
+exports.fabTap = function(args){//cart button
+   
+   
 
-    var navigationOptions = {
+   /* var navigationOptions = {
         moduleName: "Views/checkout/checkout_menu",
         context: {
             foodArray: foodArray
         }
-    }
+    }*/
     console.log("Starting checkout menu activity...")
     var topmost = frameModule.topmost();
-    topmost.navigate(navigationOptions);
+    topmost.navigate("Views/checkout/checkout_menu");
     /*page.showModal(modalPageModule, context, function closeCallback(grandTotal){
         //
         console.log(grandTotal);

@@ -5,7 +5,7 @@
     <GridLayout rows="*, *">
         <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
             <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
-            row="1" selectionBehavior="Press" multipleSelection="true" itemTap="itemTap"> 
+            row="1" itemTap="itemTap"> 
 
                 <lv:RadListView.listViewLayout>
                     <lv:ListViewLinearLayout scrollDirection="Vertical"/>

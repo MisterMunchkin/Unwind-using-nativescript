@@ -13,6 +13,7 @@ function backEvent(args) {
     }
 }
 
+global.foodArray = new Array();
 //application.start({ moduleName: "./tabs/tabs-page" });
 application.start({ moduleName: "Views/login/login" });
 /*

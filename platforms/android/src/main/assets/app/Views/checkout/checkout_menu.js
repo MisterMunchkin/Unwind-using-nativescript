@@ -10,12 +10,32 @@ var pageData = new Observable();
 
 exports.onLoaded = function(args){
     page = args.object;
-
-
-    var pageDataContext = page.navigationContext;
-    page.bindingContext = pageData;
     
-    foodArray = pageDataContext.foodArray;
+    page.bindingContext = pageData;
+
+    var obj;
+    items = new ObservableArray([]);
+
+    obj = global.foodArray;
+
+    if(obj.length > 0){
+        var limit = obj.length;
+
+        for(var x = 0;x < limit;x++){
+            items.push(
+                {
+                    name: obj[x].name,
+                    description: obj[x].description,
+                    price: obj[x].price
+                }
+            )
+            console.log(obj[x].name);
+        }
+        pageData.set("items",items);
+    }
+
+
+    foodArray = global.foodArray;
     console.log(JSON.stringify(foodArray));
     var grandTotal = 0;
     var limit = foodArray.length;
@@ -24,6 +44,10 @@ exports.onLoaded = function(args){
         grandTotal += parseInt(foodArray[x].price);
     }
     console.log(grandTotal);
+
+    /*page.bindingContext = {
+        grandTotal: grandTotal
+    }*/
 }
 
 exports.backEvent = function(args){
