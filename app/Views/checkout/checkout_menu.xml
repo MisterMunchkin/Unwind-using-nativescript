@@ -1,7 +1,25 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onLoaded">
-  <StackLayout>
-    
-    <TextField hint="grand total" id="grandTotal" text="grand total" />
-    
-  </StackLayout>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+    loaded="onLoaded"
+    xmlns:lv="nativescript-pro-ui/listview" >
+  <lv:RadListView id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
+            pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" > 
+
+    <lv:RadListView.listViewLayout>
+        <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+    </lv:RadListView.listViewLayout>
+
+    <lv:RadListView.itemTemplate>
+        <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+            <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
+            <StackLayout row="0" col="1" >
+                <!--<Label text="{{ reservationDate }}" class="list-group-item-heading" />-->
+                
+            </StackLayout>
+          </GridLayout> 
+    </lv:RadListView.itemTemplate>
+
+           
+
+  </lv:RadListView>
+  <TextField hint="grand total" id="grandTotal" text="grand total" />
 </Page>
