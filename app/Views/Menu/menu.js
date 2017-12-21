@@ -85,7 +85,23 @@ exports.itemTap = function(args){
     }
 }
 exports.fabTap = function(args){
-  
+    var modalPageModule = "Modals/menu/checkout_menu";
+    var context = "some custome context";
+    var fullscreen = false;
     //var array = listview.getSelectedItems();
     console.log(JSON.stringify(foodArray));
+
+    var navigationOptions = {
+        moduleName: "Views/checkout/checkout_menu",
+        context: {
+            foodArray: foodArray
+        }
+    }
+    console.log("Starting checkout menu activity...")
+    var topmost = frameModule.topmost();
+    topmost.navigate(navigationOptions);
+    /*page.showModal(modalPageModule, context, function closeCallback(grandTotal){
+        //
+        console.log(grandTotal);
+    }, fullscreen)*/
 }
