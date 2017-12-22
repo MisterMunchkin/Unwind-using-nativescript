@@ -33,3 +33,8 @@ function onSelectedIndexChanged(args) {
 
 exports.onSelectedIndexChanged = onSelectedIndexChanged;
 exports.onNavigatingTo = onNavigatingTo;
+exports.backEvent = function(args){
+
+    args.cancel = true;
+
+}

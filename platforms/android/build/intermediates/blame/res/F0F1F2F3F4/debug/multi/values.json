@@ -6705,9 +6705,9 @@
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 55,
+                        "startOffset": 57,
                         "endColumn": 45,
-                        "endOffset": 96
+                        "endOffset": 98
                     }
                 }
             },
@@ -7560,9 +7560,9 @@
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 101,
+                        "startOffset": 104,
                         "endColumn": 58,
-                        "endOffset": 155
+                        "endOffset": 158
                     }
                 }
             },

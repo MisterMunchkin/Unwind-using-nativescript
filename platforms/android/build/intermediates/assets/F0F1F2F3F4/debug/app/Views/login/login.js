@@ -31,10 +31,11 @@ exports.loaded = function(args){ //exports is standard for both nativescript and
     }*/
 };
 
-function backEvent(args) {
-    //if (dontGoBack) { args.cancel = true; }
-    process.exit();
- }
+exports.backEvent = function (args) {
+
+    args.cancel = true;
+
+}
 
 exports.signIn = function(){
     

@@ -4,7 +4,7 @@
     
     <StackLayout>
         <lv:RadListView id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
-                pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" > 
+                height="500"> 
 
             <lv:RadListView.listViewLayout>
                 <lv:ListViewLinearLayout scrollDirection="Vertical"/>
@@ -18,13 +18,14 @@
                         <Label text="{{ name }}" class="list-group-item-heading" />
                         <Label text="{{ description }}" class="list-group-item-text" />
                         <Label text="{{ price }}" class="list-group-item-text" />
+                        <button text="remove" tap="remove" />
                     </StackLayout>
                 </GridLayout> 
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
     </StackLayout>
     <!-- find a layout for the grand total label -->
-    <DockLayout><!-- proceed to check out button should be placed in this -->
-    </DockLayout>
+    <!--<DockLayout><!-- proceed to check out button should be placed in this -->
+    <!--</DockLayout>
   <!--<Label hint="grand total" id="grandTotal" text="{{ grandTotal }}" />-->
 </Page>
