@@ -9,7 +9,7 @@ Feel free to customize layouts and components to change how the tab view looks.
              loaded="onLoaded" unloaded="unLoaded">
 
         <GridLayout rows="*, 60">
-            <ScrollView row="0">
+            <StackLayout row="0">
                 <lv:RadListView id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
                     pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" > 
 
@@ -30,8 +30,21 @@ Feel free to customize layouts and components to change how the tab view looks.
                         </GridLayout> 
                     </lv:RadListView.itemTemplate>     
                 </lv:RadListView>
-            </ScrollView>
-
+            </StackLayout>
+            <StackLayout row="1" orientation="horizontal">
+                <Button textWrap="true" width="35%" >
+                  <FormattedString>
+                        <Span text="&#xf015;" fontFamily="FontAwesome"></Span>
+                        <Span text="Reservations"></Span>
+                    </FormattedString>
+                </Button>
+                <Button textWrap="true" width="35%" >
+                  <FormattedString>
+                        <Span text="&#xf015;" fontFamily="FontAwesome"></Span>
+                        <Span text="Request"></Span>
+                    </FormattedString>
+                </Button>
+            </StackLayout>
             <!--<StackLayout row="1" orientation="horizontal">
                 <Button textWrap="true" width="25%" textAlignment="text">
                     <!--<FormattedString>
