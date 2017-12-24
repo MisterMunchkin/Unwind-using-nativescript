@@ -8,30 +8,39 @@ Feel free to customize layouts and components to change how the tab view looks.
             xmlns:lv="nativescript-pro-ui/listview" 
              loaded="onLoaded" unloaded="unLoaded">
 
-        <lv:RadListView id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
-            pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" > 
+        <GridLayout rows="*, 60">
+            <ScrollView row="0">
+                <lv:RadListView id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
+                    pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" > 
 
-            <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
-            </lv:RadListView.listViewLayout>
+                    <lv:RadListView.listViewLayout>
+                        <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                    </lv:RadListView.listViewLayout>
 
-            <lv:RadListView.itemTemplate>
-                <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                   <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
-                    <StackLayout row="0" col="1" >
-                        <Label text="{{ reservationDate }}" class="list-group-item-heading" />
-                        <Label text="{{ checkinDate }}" class="list-group-item-text" />
-                        <Label text="{{ checkoutDate }}" class="list-group-item-text" />
-                        <Label text="{{ reservationStatus }}" class="list-group-item-text" />
-                        <Label text="{{ reservationID }}" class="list-group-item-text" />
-                    </StackLayout>
-                 </GridLayout> 
-            </lv:RadListView.itemTemplate>
+                    <lv:RadListView.itemTemplate>
+                        <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                        <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
+                            <StackLayout row="0" col="1" >
+                                <Label text="{{ reservationDate }}" class="list-group-item-heading" />
+                                <Label text="{{ checkinDate }}" class="list-group-item-text" />
+                                <Label text="{{ checkoutDate }}" class="list-group-item-text" />
+                                <Label text="{{ reservationStatus }}" class="list-group-item-text" />
+                                <Label text="{{ reservationID }}" class="list-group-item-text" />
+                            </StackLayout>
+                        </GridLayout> 
+                    </lv:RadListView.itemTemplate>     
+                </lv:RadListView>
+            </ScrollView>
 
-           
-
-        </lv:RadListView>
-    
+            <!--<StackLayout row="1" orientation="horizontal">
+                <Button textWrap="true" width="25%" textAlignment="text">
+                    <!--<FormattedString>
+                        <Span text="&#xf015;\n" fontFamily="FontAwesome"></Span>
+                        <Span text="Home"></Span>
+                    </FormattedString>
+                </Button>
+            </StackLayout>-->
+        </GridLayout>
     </Page>
     <FAB:fab tap="fabTap"
                 row="1"

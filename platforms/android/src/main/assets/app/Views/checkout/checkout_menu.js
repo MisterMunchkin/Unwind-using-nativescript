@@ -66,8 +66,8 @@ exports.remove = function(args){
  
     }
     console.log("after remove (global): " + JSON.stringify(global.foodArray));
-    console.log("after remove (checkout items): " + items);
-    console.log("successfully removed " + food.name);
+    //console.log("after remove (checkout items): " + items);
+    //console.log("successfully removed " + food.name);
     grandTotal -= parseInt(food.price);
     console.log(grandTotal);
 

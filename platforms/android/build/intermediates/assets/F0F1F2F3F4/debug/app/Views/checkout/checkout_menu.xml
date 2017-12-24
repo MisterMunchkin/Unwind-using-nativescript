@@ -18,7 +18,7 @@
                         <Label text="{{ name }}" class="list-group-item-heading" />
                         <Label text="{{ description }}" class="list-group-item-text" />
                         <Label text="{{ price }}" class="list-group-item-text" />
-                        <button text="remove" tap="{{ remove }}" />
+                        <button text="remove" tap="remove" />
                     </StackLayout>
                 </GridLayout> 
             </lv:RadListView.itemTemplate>

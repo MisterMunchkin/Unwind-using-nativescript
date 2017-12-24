@@ -4,12 +4,12 @@
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_slide_in_top.xml"
-    },
-    {
         "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\anim\\abc_slide_out_bottom.xml",
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_slide_in_top.xml"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\anim\\design_snackbar_out.xml",

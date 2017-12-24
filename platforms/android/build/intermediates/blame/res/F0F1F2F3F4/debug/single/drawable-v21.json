@@ -48,12 +48,12 @@
         "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\drawable-v21\\avd_hide_password.xml"
     },
     {
-        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_bg_active.xml",
-        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\Input-2017.1.1030-dev-release\\res\\drawable-v21\\autocomplete_bg_active.xml"
-    },
-    {
         "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_bg_normal.xml",
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\exploded-aar\\Input-2017.1.1030-dev-release\\res\\drawable-v21\\autocomplete_bg_normal.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_bg_active.xml",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\exploded-aar\\Input-2017.1.1030-dev-release\\res\\drawable-v21\\autocomplete_bg_active.xml"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_focusable_bg.xml",
