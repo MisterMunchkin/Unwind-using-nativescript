@@ -58,6 +58,8 @@ exports.signIn = function(){
     email = page.getViewById("email").text;
     password = page.getViewById("password").text;
 
+    console.log("email: " + email);
+    console.log("password: " + password);
     loader = new LoadingIndicator();
 
     loader.show(options);

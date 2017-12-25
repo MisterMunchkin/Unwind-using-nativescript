@@ -8,17 +8,21 @@ Feel free to customize layouts and components to change how the tab view looks.
 
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
          loaded="onLoaded">
-
+  
         <StackLayout orientation="vertical">
-            <Label text="enter check In"/>
+            <!--<Label text="enter check In"/>
             <DatePicker id="checkin" hint="check in" day="15" month="5" year="2015" verticalAlignment="center" 
-            horizontalAlignment="center" />
-
-            <Label text="enter check Out"/>
+            horizontalAlignment="center" />-->
+            <TextField autocorrect="false" fontFamily="FontAwesome" hint="check in date" id="checkinDate"
+                tap="checkinTap" ></TextField>
+            <!--<Label text="enter check Out"/>
             <DatePicker id="checkout" hint="check out" day="15" month="5" year="2015" verticalAlignment="center" 
-            horizontalAlignment="center" />
+            horizontalAlignment="center" />-->
 
-            <button text="create booking" tap="createBooking"/>
+            <TextField autocorrect="false" fontFamily="FontAwesome" hint="check out date" id="checkoutDate"
+                tap="checkoutTap" ></TextField>
+
+            <button text="next" tap="nextTap"/>
         
         </StackLayout>
         
