@@ -3,55 +3,116 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
-
+var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
 var items;
 var pageData = new Observable();
 var component;
+var page;
+var phpContext;
 
+var loader;
+
+var cancelable = {
+    message: 'Loading...',
+    progress: 0.65,
+    android: {
+        indeterminate: true,
+        cancelable: true,
+        max: 100,
+        progressNumberFormat: "%1d/%2d",
+        progressPercentFormat: 0.53,
+        progressStyle: 1,
+        secondaryProgress: 1
+    }
+};
+
+var uncancelable = {
+    message: 'Loading...',
+    progress: 0.65,
+    android: {
+        indeterminate: true,
+        cancelable: false,
+        max: 100,
+        progressNumberFormat: "%1d/%2d",
+        progressPercentFormat: 0.53,
+        progressStyle: 1,
+        secondaryProgress: 1
+    }
+};
 
 exports.onLoaded = function(args) {
     component = args.object;
     component.bindingContext = new BrowseViewModel();
 
+    page = args.object;
     component.bindingContext = pageData;
-  
+    loader = new LoadingIndicator();
+
+    loader.show(uncancelable);
+    loadData("loadRequestData.php");
+    loader.hide();
+    
+}
+exports.requestNav = function (args) {
+    console.log("request nav clicked");
+    loader = new LoadingIndicator();
+
+    loader.show(cancelable);
+    loadData("loadRequestData.php");
+    loader.hide();
+}
+exports.reservationNav = function (args) {
+    console.log("reservation tab clicked");
+    loader = new LoadingIndicator();
+
+    loader.show(cancelable)
+    loadData("loadReservationData.php");
+    loader.hide();
+}
+
+function loadData(phpContext){
     var obj;
     items = new ObservableArray([]);
 
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/loadBookingData.php", {
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/" + phpContext, {
 
     }).then(function (response) {
         obj = response._bodyText;
         console.log(obj);
-        obj = JSON.parse(obj);
-        //console.log("inside then function: " + obj);
-        var limit = obj.length;
+        
+        if(obj != "no data"){
+            obj = JSON.parse(obj);
+            //console.log("inside then function: " + obj);
+            var limit = obj.length;
 
-        for(var x = 0; x < limit;x++){
-            
-            items.push(
-                {
-                    reservationDate: "Reservation Date:" + obj[x].reservationDate,
-                    checkinDate: "check in Date:" + obj[x].checkinDate,
-                    checkoutDate: "check out Date:" + obj[x].checkoutDate,
-                    reservationStatus: "status:" + obj[x].reservationStatus,
-                    itemImage: "",
-                    reservationID: "Reservation ID:" + obj[x].reservationRequestID
-    
-                }
+            console.log("num of items: " + limit);
+            for (var x = 0; x < limit; x++) {
 
-            );
-           
+                items.push(
+                    {
+                        reservationDate: "Reservation Date:" + obj[x].reservationDate,
+                        checkinDate: "check in Date:" + obj[x].checkinDate,
+                        checkoutDate: "check out Date:" + obj[x].checkoutDate,
+                        reservationStatus: "status:" + obj[x].reservationStatus,
+                        itemImage: "",
+                        reservationID: "Reservation ID:" + obj[x].reservationRequestID,
+                        adult_qty: "adult qty." + obj[x].adult_qty,
+                        child_qty: "child qty." + obj[x].child_qty
+
+                    }
+
+                );
+
+            }
+        }else{
+            //label no data
         }
         pageData.set("items", items);
 
     }, function (error) {
         console.log(JSON.stringify(error));
     })
-    
-
-    
 }
 
 exports.onItemTap = function(args){
@@ -84,6 +145,7 @@ exports.onItemTap = function(args){
 
     //console.log("tapped: " + tappedItem.reservationDate);
 }
+
 
 exports.fabTap = function(){
     console.log("shit");

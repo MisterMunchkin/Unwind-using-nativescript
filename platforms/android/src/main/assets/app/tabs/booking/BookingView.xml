@@ -26,33 +26,28 @@ Feel free to customize layouts and components to change how the tab view looks.
                                 <Label text="{{ checkoutDate }}" class="list-group-item-text" />
                                 <Label text="{{ reservationStatus }}" class="list-group-item-text" />
                                 <Label text="{{ reservationID }}" class="list-group-item-text" />
+                                <Label text="{{ adult_qty }}" class="list-group-item-text" />
+                                <Label text="{{ child_qty }}" class="list-group-item-text" />
                             </StackLayout>
                         </GridLayout> 
                     </lv:RadListView.itemTemplate>     
                 </lv:RadListView>
             </StackLayout>
+            
             <StackLayout row="1" orientation="horizontal">
-                <Button textWrap="true" width="35%" >
+                <Button textWrap="true" tap="reservationNav" width="35%" >
                   <FormattedString>
                         <Span text="&#xf015;" fontFamily="FontAwesome"></Span>
                         <Span text="Reservations"></Span>
                     </FormattedString>
                 </Button>
-                <Button textWrap="true" width="35%" >
+                <Button textWrap="true" tap="requestNav" width="35%"  >
                   <FormattedString>
                         <Span text="&#xf015;" fontFamily="FontAwesome"></Span>
                         <Span text="Request"></Span>
                     </FormattedString>
                 </Button>
-            </StackLayout>
-            <!--<StackLayout row="1" orientation="horizontal">
-                <Button textWrap="true" width="25%" textAlignment="text">
-                    <!--<FormattedString>
-                        <Span text="&#xf015;\n" fontFamily="FontAwesome"></Span>
-                        <Span text="Home"></Span>
-                    </FormattedString>
-                </Button>
-            </StackLayout>-->
+            </StackLayout> <!--just reuse the labels you already have, you just need to change some variables so it could be used for both reservation and request -->
         </GridLayout>
     </Page>
     <FAB:fab tap="fabTap"
