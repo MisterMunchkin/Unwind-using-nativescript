@@ -20,6 +20,7 @@
     "nativescript-loading-indicator": "^2.4.0",
     "nativescript-loading-indicator-new": "^2.1.0",
     "nativescript-master-technology": "^1.1.1",
+    "nativescript-modal-datetimepicker": "^1.0.3",
     "nativescript-pro-ui": "^3.2.0",
     "nativescript-snackbar": "^2.0.0",
     "nativescript-sqlite": "^1.1.11",

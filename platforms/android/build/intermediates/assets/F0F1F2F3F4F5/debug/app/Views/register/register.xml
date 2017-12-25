@@ -1,0 +1,23 @@
+<Page loaded="loaded" xmlns:dd="nativescript-drop-down">
+    <ScrollView orientation="vertical">
+        <StackLayout orientation="vertical">
+
+            <TextField hint="Email Address" keyboardType="email" id="email" autocorrect="false" autocapitalizationType="none" />
+            <TextField hint="Password" id="password" secure="true" />
+            <TextField hint="first name" id="fname" />
+            <TextField hint="last name" id="lname" />
+            <TextField hint="middle initial" id="MI" />
+            <TextField hint="contact number" id="contact_no" keyboardType = "number"/>
+            <Label text="enter birthday"/>
+            <DatePicker id="birthdate" hint="birthday" day="15" month="5" year="2015" verticalAlignment="center" 
+            horizontalAlignment="center" />
+
+           
+            <ListPicker id="genderPicker" items=" {{ genderList }}" />
+
+
+            <Button text="Sign up" tap="AccountCreate"/>
+            <Button text="already have an account?" tap="signin"/>
+        </StackLayout>
+    </ScrollView>
+</Page>

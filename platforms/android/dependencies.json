@@ -28,6 +28,10 @@
         "directory": "..\\..\\node_modules\\nativescript-master-technology"
     },
     {
+        "name": "nativescript-modal-datetimepicker",
+        "directory": "..\\..\\node_modules\\nativescript-modal-datetimepicker"
+    },
+    {
         "name": "nativescript-pro-ui",
         "directory": "..\\..\\node_modules\\nativescript-pro-ui"
     },

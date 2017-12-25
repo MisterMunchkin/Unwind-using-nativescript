@@ -3,7 +3,9 @@ D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\bund
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tabs\tabs-page.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tabs\tabs-view-model.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tabs\booking\booking-view-model.js
+D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tabs\booking\BookingView.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tabs\checkin\checkin-view-model.js
+D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tabs\checkin\CheckinView.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tabs\settings\settings-view-model.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tabs\settings\SettingsView.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tns_modules\nativescript-dom\dom.js
@@ -24,6 +26,7 @@ D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tns_
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tns_modules\nativescript-loading-indicator-new\src\android\progress-dialog.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tns_modules\nativescript-loading-indicator-new\src\ios\mbprogress-hud.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tns_modules\nativescript-master-technology\master-technology.js
+D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tns_modules\nativescript-modal-datetimepicker\modal-datetimepicker.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tns_modules\nativescript-pro-ui\scripts\eula-prompt.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tns_modules\nativescript-snackbar\snackbar.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tns_modules\nativescript-sqlite\sqlite.js
@@ -182,7 +185,11 @@ D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\tns_
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\Views\Loader.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\Views\AddBooking\addbooking.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\Views\Bill\bill.js
+D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\Views\BookingDetail\bookingdetail.js
+D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\Views\checkout\checkout_menu.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\Views\Inquiries\inquiries.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\Views\login\login.js
+D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\Views\Menu\menu.js
+D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\Views\Menu\MenuDetail\menu_detail.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\Views\register\register.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\src\main\assets\app\Views\Services\services.js
