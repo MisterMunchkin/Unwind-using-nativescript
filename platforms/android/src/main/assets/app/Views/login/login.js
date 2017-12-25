@@ -111,9 +111,9 @@ function then(response){
         topmost.navigate("tabs/tabs-page");
         
     }else{
-        alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
         page.getViewById("email").text = "";
         page.getViewById("password").text = "";
+        alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });     
     }
 
     

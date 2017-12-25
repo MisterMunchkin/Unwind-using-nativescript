@@ -26,7 +26,7 @@ exports.nextTap = function(){
     console.log("adultVal: " + adultVal);
     console.log("childVal: " + childVal);
 
-    if(adultVal != undefined || childVal != undefined){
+    if(adultQty != "" || childQty != ""){
         if(adultQty != "0"){
             var navigationOptions = {
                 moduleName: "Views/AddBooking/AddRooms/addrooms",

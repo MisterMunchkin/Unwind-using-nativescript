@@ -19,20 +19,21 @@ exports.submit = function () {
                             checkOut: pageDataContext.checkout_date,
                                 adultQty: pageDataContext.adultQty,
                                     childQty: pageDataContext.childQty};
-    /*fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/addbooking.php", {
+    console.log("checkin: " + requestObject.checkIn +
+        "\n checkout: " + requestObject.checkOut +
+        "\n adult quantity: " + requestObject.adultQty +
+        "\n child quantity: " + requestObject.childQty);
+
+
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/addbooking.php", {
         method: "POST",
         body: formEncode(requestObject)
     }).then(function (response) {
         then(response);
     }, function (error) {
         console.log(JSON.stringify(error));
-    })*/
-    console.log("checkin: " + requestObject.checkIn + 
-    "\n checkout: " + requestObject.checkOut +
-    "\n adult quantity: " + requestObject.adultQty +
-    "\n child quantity: " + requestObject.childQty);
+    })
 
-    then("booking added");
 }
 
 function then(phpResponse) {
@@ -44,7 +45,7 @@ function then(phpResponse) {
         var topmost = frameModule.topmost();
         topmost.navigate("tabs/tabs-page");
     } else {
-        console.log("fuck");
+        console.log(phpResponse);
     }
 
 }

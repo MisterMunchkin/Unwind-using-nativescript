@@ -12,8 +12,7 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
     page = args.object;
 
     pageDataContext = page.navigationContext;
-    view.getViewById(page, "adultQty").text = 0;
-    view.getViewById(page, "childQty").text = 0;
+
 };
 
 exports.nextTap = function(){
@@ -27,7 +26,7 @@ exports.nextTap = function(){
     console.log("adultVal: " + adultVal);
     console.log("childVal: " + childVal);
 
-    if(adultVal != undefined || childVal != undefined){
+    if(adultQty != "" || childQty != ""){
         if(adultQty != "0"){
             var navigationOptions = {
                 moduleName: "Views/AddBooking/AddRooms/addrooms",
