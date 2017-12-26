@@ -9,12 +9,35 @@ Feel free to customize layouts and components to change how the tab view looks.
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
          loaded="onLoaded">
         <Label text="shibal" />
-        <StackLayout orientation="vertical">
+        <!--<StackLayout orientation="vertical">
             <Label text="this is where we will display the rooms available based on check in and
             check out dates, and the quantity of adults and children" />
 
             <button text="submit" tap="submit"/>
         
+        </StackLayout>-->
+        <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
+            <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
+            row="1" itemTap="itemTap"> 
+
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                </lv:RadListView.listViewLayout>
+
+                <lv:RadListView.itemTemplate>
+                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                        <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />
+                        <StackLayout row="0" col="1" orientation="vertical">
+
+                            <Label text="{{ name }}" class="list-group-item-heading" />
+                            <Label text="{{ description }}" class="list-group-item-text" />
+                            <Label text="{{ price }}" class="list-group-item-text" />
+                            
+                        </StackLayout>
+                        </GridLayout> 
+                </lv:RadListView.itemTemplate>
+            </lv:RadListView>
         </StackLayout>
+      
         
 </Page>

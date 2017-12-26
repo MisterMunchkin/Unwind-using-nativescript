@@ -52,6 +52,11 @@ function loadItems(page){
     console.log(grandTotal);
 
 }
+
+exports.checkoutTap = function(){
+    console.log("food Array: " + JSON.stringify(global.foodArray));
+    console.log("grand total: " + grandTotal);
+}
 exports.remove = function(args){
     var btn = args.object;
     var food = btn.bindingContext;

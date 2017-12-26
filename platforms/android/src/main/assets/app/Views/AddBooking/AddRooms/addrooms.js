@@ -5,20 +5,23 @@ const ModalPicker = require("nativescript-modal-datetimepicker").ModalDatetimepi
 var view = require("ui/core/view");
 
 var pageDataContext;
+var requestObject;
 
 exports.onLoaded = function (args) { //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     page = args.object;
 
     pageDataContext = page.navigationContext;
 
+    requestObject = {
+        checkIn: pageDataContext.checkin_date,
+        checkOut: pageDataContext.checkout_date,
+        adultQty: pageDataContext.adultQty,
+        childQty: pageDataContext.childQty
+    };
+
 };
 
 exports.submit = function () {
-
-    var requestObject = { checkIn: pageDataContext.checkin_date, 
-                            checkOut: pageDataContext.checkout_date,
-                                adultQty: pageDataContext.adultQty,
-                                    childQty: pageDataContext.childQty};
     console.log("checkin: " + requestObject.checkIn +
         "\n checkout: " + requestObject.checkOut +
         "\n adult quantity: " + requestObject.adultQty +
