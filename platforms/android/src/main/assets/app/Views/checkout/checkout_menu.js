@@ -49,13 +49,18 @@ function loadItems(page){
 
         grandTotal += parseInt(global.foodArray[x].price);
     }
+    page.bindingContext = {
+        grandTotal: grandTotal
+    }
     console.log(grandTotal);
 
 }
 
 exports.checkoutTap = function(){
-    console.log(JSON.stringify("food Array: " + global.foodArray));
+    console.log("food Array: " + JSON.stringify(global.foodArray));
     console.log("grand total: " + grandTotal);
+
+
 }
 exports.remove = function(args){
     var btn = args.object;

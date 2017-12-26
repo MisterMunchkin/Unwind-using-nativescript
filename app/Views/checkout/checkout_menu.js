@@ -49,6 +49,9 @@ function loadItems(page){
 
         grandTotal += parseInt(global.foodArray[x].price);
     }
+    page.bindingContext = {
+        grandTotal: grandTotal
+    }
     console.log(grandTotal);
 
 }
@@ -56,6 +59,8 @@ function loadItems(page){
 exports.checkoutTap = function(){
     console.log("food Array: " + JSON.stringify(global.foodArray));
     console.log("grand total: " + grandTotal);
+
+
 }
 exports.remove = function(args){
     var btn = args.object;

@@ -4,7 +4,11 @@
         <Label class="page-placeholder" text="menu detail"></Label>
 
         <Label  id="foodName" text="{{ name }}"></Label>
-        
+
+        <TextField autocorrect="false" fontFamily="FontAwesome" 
+                hint="food quantity" id="foodQty"
+                keyboardType="number" maxLength="2"></TextField>
+        <TextView  />
         <Button text="ADD TO CART" id="addToCart" tap="addToCartTap" />
     </StackLayout>
 </Page>
