@@ -3,6 +3,7 @@ var foodArray;
 var frameModule = require("ui/frame");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
+var view = require("ui/core/view");
 
 var items;
 var pageData;
@@ -32,7 +33,9 @@ function loadItems(page){
                 {
                     name: obj[x].name,
                     description: obj[x].description,
-                    price: obj[x].price
+                    price: obj[x].price,
+                    qty: obj[x].qty,
+                    remarks: obj[x].remarks
                 }
             )
             console.log(obj[x].name);
@@ -46,14 +49,14 @@ function loadItems(page){
     grandTotal = 0;
     var limit = global.foodArray.length;
     for (var x = 0; x < limit; x++) {
-
-        grandTotal += parseInt(global.foodArray[x].price);
+        console.log("inside for loop");
+        grandTotal += (global.foodArray[x].price * global.foodArray[x].qty);
     }
-    page.bindingContext = {
+    /*page.bindingContext = {
         grandTotal: grandTotal
-    }
+    }*/
     console.log(grandTotal);
-
+    view.getViewById(page, "grandTotal").text = grandTotal;
 }
 
 exports.checkoutTap = function(){
@@ -71,15 +74,15 @@ exports.remove = function(args){
 
     for(var x = 0;x < limit && food.name != global.foodArray[x].name;x++){}
     if(food.name == global.foodArray[x].name){
+        grandTotal -= (global.foodArray[x].price * global.foodArray[x].qty);
+        console.log(grandTotal);
+
         items.splice(x, 1);
         global.foodArray.splice(x, 1);
- 
     }
     console.log("after remove (global): " + JSON.stringify(global.foodArray));
     //console.log("after remove (checkout items): " + items);
     //console.log("successfully removed " + food.name);
-    grandTotal -= parseInt(food.price);
-    console.log(grandTotal);
 
 }
 
