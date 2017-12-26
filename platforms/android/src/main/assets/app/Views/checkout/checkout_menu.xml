@@ -12,7 +12,7 @@
                 </lv:RadListView.listViewLayout>
 
                 <lv:RadListView.itemTemplate>
-                    <GridLayout class="list-group-item" rows="auto" columns="60, *">
+                    <GridLayout class="list-group-item" rows="auto" columns="*, 60">
                         <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
                         <StackLayout row="0" col="0" >
                             
@@ -21,9 +21,9 @@
                             <Label text="{{ price }}" class="list-group-item-text" />
                             <Label text="{{ qty }}" class="list-group-item-text" />
                             <Label text="{{ remarks }}" class="list-group-item-text" />
-                            <StackLayout col="1">
+                        </StackLayout>
+                        <StackLayout col="1">
                                 <button text="remove" tap="remove" />
-                            </StackLayout>
                         </StackLayout>
                     </GridLayout> 
                 </lv:RadListView.itemTemplate>

@@ -26,17 +26,21 @@ exports.addToCartTap = function(){
 
     var itemQty = view.getViewById(page, "foodQty").text;
     var remarks = view.getViewById(page, "remarks").text;
-    console.log(itemQty + " " + remarks)
-    ;
-    foodItem = {
-        name: foodContext.name,
-        description: foodContext.description,
-        price: parseInt(foodContext.price),
-        qty: parseInt(itemQty),
-        remarks: remarks
-    }
-    global.foodArray.push(foodItem);
 
-    var topmost = frameModule.topmost();
-    topmost.navigate("Views/Menu/menu");
+    if(itemQty != "" && remarks != ""){
+        console.log(itemQty + " " + remarks);
+        foodItem = {
+            name: foodContext.name,
+            description: foodContext.description,
+            price: parseInt(foodContext.price),
+            qty: parseInt(itemQty),
+            remarks: remarks
+        }
+        global.foodArray.push(foodItem);
+
+        var topmost = frameModule.topmost();
+        topmost.navigate("Views/Menu/menu");
+    }else{
+        console.log("please enter item quantity and remarks!");
+    }
 }

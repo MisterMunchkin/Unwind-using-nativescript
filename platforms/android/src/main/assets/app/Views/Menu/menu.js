@@ -3,10 +3,26 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
+var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
 var items;
 var pageData = new Observable();
 
+var loader;
+
+var options = {
+    message: 'Loading...',
+    progress: 0.65,
+    android: {
+        indeterminate: true,
+        cancelable: false,
+        max: 100,
+        progressNumberFormat: "%1d/%2d",
+        progressPercentFormat: 0.53,
+        progressStyle: 1,
+        secondaryProgress: 1
+    }
+};
 
 exports.onloaded = function(args){
     page = args.object
@@ -16,6 +32,8 @@ exports.onloaded = function(args){
     var obj;
     items = new ObservableArray([]);
     
+    loader = new LoadingIndicator();
+    loader.show(options);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/food/loadMenuData.php", {
         
     }).then(function (response) {
@@ -51,6 +69,7 @@ exports.onloaded = function(args){
     })
     console.log("total food:" + JSON.stringify(global.foodArray));
 
+    loader.hide();
 };
 function isData(obj){
     return (obj == "no data")? 0: 1;

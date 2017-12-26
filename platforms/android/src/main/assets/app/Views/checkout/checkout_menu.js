@@ -18,7 +18,7 @@ exports.onLoaded = function(args){
     loadItems();
 }
 
-function loadItems(page){
+function loadItems(){
     var obj;
 
     items = new ObservableArray([]);

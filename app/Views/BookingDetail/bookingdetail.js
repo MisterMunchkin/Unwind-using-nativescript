@@ -152,6 +152,8 @@ exports.checkinButton = function(){
             //then(response);
             console.log(JSON.stringify(response));
             if(response._bodyText == "checkin activated"){
+                insertCheckin();
+
                 alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
                 var topmost = frameModule.topmost();
                 topmost.navigate("tabs/tabs-page");
@@ -169,6 +171,26 @@ exports.checkinButton = function(){
     
 }
 
+function insertCheckin(){
+    checkinDate
+    checkoutDate
+    resID
+
+    var requestObject = {check_in_start: pageDataContext.checkinDate,
+                         check_in_end: pageDataContext.checkoutDate,
+                         reservation_id: pageDataContext.resID};
+
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/insertCheckin.php", {
+        method: "POST",
+        body: formEncode(requestObject)
+    }).then(function (response) {
+        obj = response._bodyText;
+        
+        console.log(obj);
+    }, function (error) {
+        console.log(JSON.stringify(error));
+    })
+}
 exports.checkoutButton = function(){
     //payments and database updates that guest has checked out
     //check out security    
