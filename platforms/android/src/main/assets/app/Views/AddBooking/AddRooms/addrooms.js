@@ -36,8 +36,8 @@ exports.submit = function () {
 
 }
 
-function then(phpResponse) {
-   // var phpResponse = response._bodyText;
+function then(response) {
+    var phpResponse = response._bodyText;
 
     // alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
     if (phpResponse == "booking added") {
