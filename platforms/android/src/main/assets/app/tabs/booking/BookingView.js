@@ -48,6 +48,7 @@ exports.onLoaded = function(args) {
     component = args.object;
     component.bindingContext = new BrowseViewModel();
 
+    console.log("<<<<< booking view page >>>>>");
     component.bindingContext = pageData;
     loader = new LoadingIndicator();
 

@@ -13,6 +13,7 @@ var grandTotal;
 exports.onLoaded = function(args){
     page = args.object;
 
+    console.log("<<<<<< checkout_menu page >>>>>>");
     pageData = new Observable();
     page.bindingContext = pageData;
 

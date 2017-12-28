@@ -3,21 +3,67 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 const ModalPicker = require("nativescript-modal-datetimepicker").ModalDatetimepicker;
 var view = require("ui/core/view");
+var Observable = require("data/observable").Observable;
+var ObservableArray = require("data/observable-array").ObservableArray;
 
 var pageDataContext;
 var requestObject;
 
+var items;
+var pageData = new Observable();
+
 exports.onLoaded = function (args) { //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
+    console.log("<<<<<add room page >>>>>>");
     page = args.object;
 
     pageDataContext = page.navigationContext;
 
     requestObject = {
-        checkIn: pageDataContext.checkin_date,
-        checkOut: pageDataContext.checkout_date,
-        adultQty: pageDataContext.adultQty,
-        childQty: pageDataContext.childQty
+        check_in_date: pageDataContext.checkin_date,
+        check_out_date: pageDataContext.checkout_date,
+        numAdult: pageDataContext.adultQty,
+        numChild: pageDataContext.childQty
     };
+
+    page.bindingContext = pageData;
+
+    var obj;
+    items = new ObservableArray([]);
+
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/getCountFilterRoomType.php", {
+        method: "POST",
+        body: formEncode(requestObject)
+    }).then(function (response) {
+        obj = response._bodyText;
+       
+
+        if(isData(obj) > 0){
+
+            items = new ObservableArray([]);
+            obj = JSON.parse(obj);
+            //console.log("inside then function: " + obj);
+            var limit = obj.length;
+           
+            for(var x = 0; x < limit;x++){
+                items.push(
+                    {
+                        roomTypeID: obj[x].roomTypeID,
+                        roomTypeName: obj[x].roomTypeName,
+                        roomTypePrice: obj[x].roomTypePrice,
+                        roomTypeDescription: obj[x].roomTypeDescription,
+                        roomTypeCount: obj[x].roomTypeCount
+                    }
+
+                );
+                console.log(obj[x].roomTypeName);
+            }
+            pageData.set("items", items);
+        }else{
+            console.log("put viible no data confirmation here");
+        }
+    }, function (error) {
+        console.log(JSON.stringify(error));
+    })
 
 };
 

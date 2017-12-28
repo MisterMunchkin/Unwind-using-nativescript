@@ -9,6 +9,7 @@ var foodItem;
 exports.onloaded = function (args) {
     page = args.object
 
+    console.log("<<<<<< menu_detail page >>>>>>")
     var pageDataContext = page.navigationContext;
     foodContext = {
         name: pageDataContext.name,

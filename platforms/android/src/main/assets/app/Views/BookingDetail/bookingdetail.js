@@ -152,6 +152,8 @@ exports.checkinButton = function(){
             //then(response);
             console.log(JSON.stringify(response));
             if(response._bodyText == "checkin activated"){
+                
+
                 alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
                 var topmost = frameModule.topmost();
                 topmost.navigate("tabs/tabs-page");

@@ -7,16 +7,18 @@ Feel free to customize layouts and components to change how the tab view looks.
     <Label class="page-placeholder" text=""></Label>-->
 
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+ xmlns:lv="nativescript-pro-ui/listview"
          loaded="onLoaded">
-        <Label text="shibal" />
-        <!--<StackLayout orientation="vertical">
-            <Label text="this is where we will display the rooms available based on check in and
-            check out dates, and the quantity of adults and children" />
 
-            <button text="submit" tap="submit"/>
-        
-        </StackLayout>-->
-        <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
+    <!--<StackLayout orientation="vertical">
+        <Label text="this is where we will display the rooms available based on check in and
+        check out dates, and the quantity of adults and children" />
+
+        <button text="submit" tap="submit"/>
+    
+    </StackLayout>-->
+    <GridLayout rows="*,60">
+        <StackLayout orientation="vertical" row="0">
             <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
             row="1" itemTap="itemTap"> 
 
@@ -29,15 +31,19 @@ Feel free to customize layouts and components to change how the tab view looks.
                         <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />
                         <StackLayout row="0" col="1" orientation="vertical">
 
-                            <Label text="{{ name }}" class="list-group-item-heading" />
-                            <Label text="{{ description }}" class="list-group-item-text" />
-                            <Label text="{{ price }}" class="list-group-item-text" />
+                            <Label text="{{ roomTypeName }}" class="list-group-item-heading" />
+                            <Label text="{{ roomTypePrice }}" class="list-group-item-text" />
+                            <Label text="{{ roomTypeCount }}" class="list-group-item-text" />
                             
                         </StackLayout>
                         </GridLayout> 
                 </lv:RadListView.itemTemplate>
             </lv:RadListView>
         </StackLayout>
-      
+        <StackLayout row="2">
+            <Button text="submit" tap="submit"/>
+        </StackLayout>
+    </GridLayout>
+    
         
 </Page>

@@ -10,6 +10,7 @@ var childQty;
 
 exports.onLoaded = function (args) { //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     page = args.object;
+    console.log("<<<<<< add quantity page >>>>>>");
 
     pageDataContext = page.navigationContext;
 
@@ -26,7 +27,7 @@ exports.nextTap = function(){
     console.log("adultVal: " + adultVal);
     console.log("childVal: " + childVal);
 
-    if(adultQty != "" || childQty != ""){
+    if(adultQty != "" && childQty != ""){
         if(adultQty != "0"){
             var navigationOptions = {
                 moduleName: "Views/AddBooking/AddRooms/addrooms",

@@ -26,7 +26,7 @@ var options = {
 
 exports.onloaded = function(args){
     page = args.object
-
+    console.log("<<<<<<menu page>>>>>>")
     page.bindingContext = pageData;
 
     var obj;

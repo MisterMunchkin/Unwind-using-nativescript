@@ -4,6 +4,7 @@ var frameModule = require("ui/frame");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 var view = require("ui/core/view");
+var fetchModule = require("fetch");
 
 var items;
 var pageData;
@@ -12,6 +13,7 @@ var grandTotal;
 exports.onLoaded = function(args){
     page = args.object;
 
+    console.log("<<<<<< checkout_menu page >>>>>>");
     pageData = new Observable();
     page.bindingContext = pageData;
 
@@ -63,6 +65,22 @@ exports.checkoutTap = function(){
     console.log("food Array: " + JSON.stringify(global.foodArray));
     console.log("grand total: " + grandTotal);
 
+    /*var date = new Date();
+
+    requestObject = {timestamp_ordered: date,
+                     grandTotal: grandTotal,
+                     foodArray: foodArray};
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/food/insertFoodOrder.php", {
+        method: "POST",
+        body: formEncode(requestObject)
+
+    }).then(function (response) {
+        var phpResponse = response._bodyText;
+        console.log(phpResponse);
+    }, function (error) {
+        console.log("ERROR");
+        console.log(JSON.stringify(error));
+    })*/
 
 }
 exports.remove = function(args){
@@ -91,3 +109,11 @@ exports.backEvent = function(args){
     
     console.log("back pressed");
 }
+
+function formEncode(obj) { //to convert urlencoded form data to JSON
+    var str = [];
+    for (var p in obj)
+        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+    return str.join("&");
+}
+
