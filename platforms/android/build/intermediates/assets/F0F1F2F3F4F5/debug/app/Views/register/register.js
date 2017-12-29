@@ -25,6 +25,7 @@ var guest = {
 exports.loaded = function(args){
     page = args.object;
     page.bindingContext = genderData;
+    console.log("<<<<<register page>>>>>");
 
     var genderPicker = page.getViewById("genderPicker");
 

@@ -1,12 +1,15 @@
 var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
+var view = require("ui/core/view");
 
 var foodContext;
+var foodItem;
 
 exports.onloaded = function (args) {
     page = args.object
 
+    console.log("<<<<<< menu_detail page >>>>>>")
     var pageDataContext = page.navigationContext;
     foodContext = {
         name: pageDataContext.name,
@@ -21,8 +24,24 @@ exports.onloaded = function (args) {
 }
 
 exports.addToCartTap = function(){
-    global.foodArray.push(foodContext);
 
-    var topmost = frameModule.topmost();
-    topmost.navigate("Views/Menu/menu");
+    var itemQty = view.getViewById(page, "foodQty").text;
+    var remarks = view.getViewById(page, "remarks").text;
+
+    if(itemQty != "" && remarks != ""){
+        console.log(itemQty + " " + remarks);
+        foodItem = {
+            name: foodContext.name,
+            description: foodContext.description,
+            price: parseInt(foodContext.price),
+            qty: parseInt(itemQty),
+            remarks: remarks
+        }
+        global.foodArray.push(foodItem);
+
+        var topmost = frameModule.topmost();
+        topmost.navigate("Views/Menu/menu");
+    }else{
+        console.log("please enter item quantity and remarks!");
+    }
 }

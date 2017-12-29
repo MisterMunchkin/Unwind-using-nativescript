@@ -25,7 +25,7 @@ var options = {
 
 exports.loaded = function(args){ //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     page = args.object
-
+    console.log("<<<<<login page>>>>>");
    /* if (application.android) {
         application.android.on(application.AndroidApplication.activityBackPressedEvent, backEvent);
     }*/
@@ -58,6 +58,8 @@ exports.signIn = function(){
     email = page.getViewById("email").text;
     password = page.getViewById("password").text;
 
+    console.log("email: " + email);
+    console.log("password: " + password);
     loader = new LoadingIndicator();
 
     loader.show(options);
@@ -109,9 +111,9 @@ function then(response){
         topmost.navigate("tabs/tabs-page");
         
     }else{
-        alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
         page.getViewById("email").text = "";
         page.getViewById("password").text = "";
+        alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });     
     }
 
     

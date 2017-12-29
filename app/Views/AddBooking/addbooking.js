@@ -42,8 +42,15 @@ exports.checkinTap = function(){
         theme: "light",
         
     }).then((result) => {
-        console.log("Date is: " + result.year + "/" + result.month + "/" + result.day);
-        checkin_date = result.year + "/" + result.month + "/" + result.day;
+        console.log("Date is: " + result.year + "-" + result.month + "-" + result.day);
+        
+        var formattedMonth;
+        var formattedDay;
+
+        (parseInt(result.month) < 10)? formattedMonth = "0" + result.month: formattedMonth = result.month;
+        (parseInt(result.day) < 10)? formattedDay = "0" + result.day: formattedDay = result.day;
+        checkin_date = result.year + "-" + formattedMonth + "-" + formattedDay;
+        console.log("checkin_date: " + checkin_date);
         view.getViewById(page, "checkinDate").text = checkin_date;
     }).catch((error) => {
         console.log("Error: " + error);
@@ -57,13 +64,16 @@ exports.checkoutTap = function(){
         theme: "light",
 
     }).then((result) => {
-        console.log("Date is: " + result.year + "/" + result.month + "/" + result.day);
-        checkout_date = result.year + "/" + result.month + "/" + result.day;
+        console.log("Date is: " + result.year + "-" + result.month + "-" + result.day);
+        (parseInt(result.month) < 10)? formattedMonth = "0" + result.month: formattedMonth = result.month;
+        (parseInt(result.day) < 10)? formattedDay = "0" + result.day: formattedDay = result.day;
+        checkout_date = result.year + "-" + formattedMonth + "-" + formattedDay;
         view.getViewById(page, "checkoutDate").text = checkout_date;
     }).catch((error) => {
         console.log("Error: " + error);
     })
 }
+/*
 exports.createBooking = function(){
 
     var checkIn = page.getViewById("checkin").year + "-" + page.getViewById("checkin").month
@@ -109,7 +119,7 @@ function then(response){
         console.log("fuck");
     }
     
-}
+}*/
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];
     for (var p in obj)

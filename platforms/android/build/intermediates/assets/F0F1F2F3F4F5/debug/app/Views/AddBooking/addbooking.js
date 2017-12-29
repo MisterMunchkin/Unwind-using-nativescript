@@ -1,13 +1,79 @@
 var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
+const ModalPicker = require("nativescript-modal-datetimepicker").ModalDatetimepicker;
+var view = require("ui/core/view");
 
-
+const picker = new ModalPicker();
+var checkin_date;
+var checkout_date;
 
 exports.onLoaded = function (args) { //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     page = args.object
+    console.log("<<<<< add booking page >>>>>>")
+
 };
 
+
+exports.nextTap = function(){
+    if (new Date(checkin_date) >= new Date()) {//bug it returns false if check in is same as current date
+        if (new Date(checkin_date) < new Date(checkout_date)) {
+            var navigationOptions = {
+                moduleName: "Views/AddBooking/AddQuantity/addquantity",
+                context: {
+                    checkin_date: checkin_date,
+                    checkout_date: checkout_date
+                }
+            }
+
+            var topmost = frameModule.topmost();
+            topmost.navigate(navigationOptions);
+        }else{
+            console.log("enter valid dates");
+        }
+    }else{
+        console.log("enter valid dates");
+    }
+}
+
+exports.checkinTap = function(){
+    picker.pickDate({
+        title: "Check in Date",
+        theme: "light",
+        
+    }).then((result) => {
+        console.log("Date is: " + result.year + "-" + result.month + "-" + result.day);
+        
+        var formattedMonth;
+        var formattedDay;
+
+        (parseInt(result.month) < 10)? formattedMonth = "0" + result.month: formattedMonth = result.month;
+        (parseInt(result.day) < 10)? formattedDay = "0" + result.day: formattedDay = result.day;
+        checkin_date = result.year + "-" + formattedMonth + "-" + formattedDay;
+        console.log("checkin_date: " + checkin_date);
+        view.getViewById(page, "checkinDate").text = checkin_date;
+    }).catch((error) => {
+        console.log("Error: " + error);
+    })
+
+}
+
+exports.checkoutTap = function(){
+    picker.pickDate({
+        title: "Check out Date",
+        theme: "light",
+
+    }).then((result) => {
+        console.log("Date is: " + result.year + "-" + result.month + "-" + result.day);
+        (parseInt(result.month) < 10)? formattedMonth = "0" + result.month: formattedMonth = result.month;
+        (parseInt(result.day) < 10)? formattedDay = "0" + result.day: formattedDay = result.day;
+        checkout_date = result.year + "-" + formattedMonth + "-" + formattedDay;
+        view.getViewById(page, "checkoutDate").text = checkout_date;
+    }).catch((error) => {
+        console.log("Error: " + error);
+    })
+}
+/*
 exports.createBooking = function(){
 
     var checkIn = page.getViewById("checkin").year + "-" + page.getViewById("checkin").month
@@ -53,7 +119,7 @@ function then(response){
         console.log("fuck");
     }
     
-}
+}*/
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];
     for (var p in obj)

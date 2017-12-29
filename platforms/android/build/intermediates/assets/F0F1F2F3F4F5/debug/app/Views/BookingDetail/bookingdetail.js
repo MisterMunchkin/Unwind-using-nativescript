@@ -63,11 +63,12 @@ exports.onloaded = function(args) {
         console.log("Accepted");
         page.bindingContext = {
             cancelText: "Cancel Booking",
-            checkinisEnabled: "true",
-            cancelisEnabled: "true",
+            checkinisEnabled: "false",
+            cancelisEnabled: "false",
             checkoutVisible: "collapse",
-            cancelVisible: "visible",
-            checkinVisible: "visible"
+            cancelVisible: "collapse",
+            checkinVisible: "collapse",
+            message: "please proceed to the reservation tab to check in on the day"
         }
         break;
         case "Pending": 
@@ -78,7 +79,8 @@ exports.onloaded = function(args) {
             cancelisEnabled: "true",
             checkoutVisible: "collapse",
             cancelVisible: "visible",
-            checkinVisible: "visible"
+            checkinVisible: "visible",
+            message: "you have created a request! please wait for admin to manage your requests!"
         }
         break;
         case "Cancelled": 
@@ -89,7 +91,8 @@ exports.onloaded = function(args) {
             cancelisEnabled: "true",
             checkoutVisible: "collapse",
             cancelVisible: "visible",
-            checkinVisible: "visible"
+            checkinVisible: "visible",
+            message: "you have cancelled your reservations"
         }
         break;
         case "Checked In": 
@@ -100,7 +103,8 @@ exports.onloaded = function(args) {
             cancelText: "Cancel Booking",
             checkoutVisible: "visible",
             cancelVisible: "collapse",
-            checkinVisible: "collapse"
+            checkinVisible: "collapse",
+            message: "you have checked in! enjoy your stay!"
         }
         break;
         case "Rejected":
@@ -111,7 +115,20 @@ exports.onloaded = function(args) {
             cancelText: "Cancel Booking",
             checkoutVisible: "collapse",
             cancelVisible: "visible",
-            checkinVisible: "visible"
+            checkinVisible: "visible",
+            message: "your request has been rejected, please contact our concierge"
+        }
+        break;
+        case "Waiting":
+        console.log("Waiting");
+        page.bindingContext = {
+            cancelisEnabled: "true",
+            checkinisEnabled: "true",
+            cancelText: "Cancel Booking",
+            checkoutVisible: "collapse",
+            cancelVisible: "visible",
+            checkinVisible: "visible",
+            message: "you've made it! now you just have to wait\n for your check in date to check in the hotel!"
         }
     }
     /*if(requestObject.checkinDate){
@@ -135,6 +152,8 @@ exports.checkinButton = function(){
             //then(response);
             console.log(JSON.stringify(response));
             if(response._bodyText == "checkin activated"){
+                
+
                 alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
                 var topmost = frameModule.topmost();
                 topmost.navigate("tabs/tabs-page");

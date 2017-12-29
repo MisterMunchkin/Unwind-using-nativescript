@@ -4,12 +4,15 @@ var fetchModule = require("fetch");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
+var view = require("ui/core/view");
 
 var items;
 var pageData = new Observable();
 var component;
-var page;
+
 var phpContext;
+var requestLabel;
+var reservationLabel;
 
 var loader;
 
@@ -45,15 +48,23 @@ exports.onLoaded = function(args) {
     component = args.object;
     component.bindingContext = new BrowseViewModel();
 
-    page = args.object;
+    console.log("<<<<< booking view page >>>>>");
     component.bindingContext = pageData;
     loader = new LoadingIndicator();
 
+    requestLabel = view.getViewById(component, "reqNavLabel");
+    reservationLabel = view.getViewById(component, "resNavLabel");
+
+    //requestLabel.className = "ActiveNav";
+   // reservationLabel.className ="inActiveNav";
+
     loader.show(uncancelable);
-    loadData("loadRequestData.php");
+    loadData("loadReservationData.php");
     loader.hide();
     
 }
+
+
 exports.requestNav = function (args) {
     console.log("request nav clicked");
     loader = new LoadingIndicator();
@@ -63,7 +74,7 @@ exports.requestNav = function (args) {
     loader.hide();
 }
 exports.reservationNav = function (args) {
-    console.log("reservation tab clicked");
+    console.log("reservation nav clicked");
     loader = new LoadingIndicator();
 
     loader.show(cancelable)

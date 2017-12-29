@@ -28,7 +28,7 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
     console.log("check out date: " + requestObject.check_out_date);
     console.log("numAdult: " + pageDataContext.adultQty);
     console.log("numChild: " + pageDataContext.childQty);
-  /*  page.bindingContext = pageData;
+    page.bindingContext = pageData;
 
     var obj;
     items = new ObservableArray([]);
@@ -67,7 +67,7 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
         }
     }, function (error) {
         console.log(JSON.stringify(error));
-    })*/
+    })
     console.log("exiting room query");
 };
 

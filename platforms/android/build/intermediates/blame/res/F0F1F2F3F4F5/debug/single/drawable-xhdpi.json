@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-xhdpi\\background.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\background.png"
+    },
+    {
         "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-xhdpi\\icon.png",
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\icon.png"
     },
@@ -8,7 +12,19 @@
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\background.png"
     },
     {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-xhdpi\\icon.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-xhdpi\\ic_plus_white_48dp.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\ic_plus_white_48dp.png"
+    },
+    {
         "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-xhdpi\\logo.png",
         "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-xhdpi\\logo.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\logo.png"
     }
 ]

@@ -35,24 +35,27 @@ Feel free to customize layouts and components to change how the tab view looks.
             </StackLayout>
             
             <StackLayout row="1" orientation="horizontal">
-                <Button textWrap="true" tap="reservationNav" width="35%" >
+                <!--<Label textWrap="true"  id="resNavLabel" tap="reservationNav" width="35%" >
                   <FormattedString>
                         <Span text="&#xf015;" fontFamily="FontAwesome"></Span>
-                        <Span text="Reservations"></Span>
+                        <Span class="inActiveNav" text="Reservations"></Span>
                     </FormattedString>
-                </Button>
-                <Button textWrap="true" tap="requestNav" width="35%"  >
+                </Label>
+                <Label textWrap="true" id="reqNavLabel" tap="requestNav" width="35%"  >
                   <FormattedString>
                         <Span text="&#xf015;" fontFamily="FontAwesome"></Span>
-                        <Span text="Request"></Span>
+                        <Span class="ActiveNav" text="Request"></Span>
                     </FormattedString>
-                </Button>
+                </Label>-->
+                <Label textWrap="true" class="ActiveNav" text="Reservations" id="resNavLabel" tap="reservationNav" width="35%" >
+                </Label>
+                <Label textWrap="true" class="inActiveNav" text="Request" id="reqNavLabel" tap="requestNav" width="35%"  >
+                </Label>
             </StackLayout> <!--just reuse the labels you already have, you just need to change some variables so it could be used for both reservation and request -->
         </GridLayout>
     </Page>
     <FAB:fab tap="fabTap"
-                row="1"
-                
-                
+                row="1"         
+                icon="res://ic_plus_white_48dp"
                 class="fab-button" />
 </GridLayout>
