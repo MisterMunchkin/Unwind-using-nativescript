@@ -59,7 +59,7 @@ exports.onLoaded = function(args) {
    // reservationLabel.className ="inActiveNav";
 
     loader.show(uncancelable);
-    loadData("loadRequestData.php");
+    loadData("loadReservationData.php");
     loader.hide();
     
 }

@@ -24,9 +24,7 @@ exports.nextTap = function(){
     var childVal = view.getViewById(page, "childQty").value;
     console.log("adultQty: " + adultQty);
     console.log("childQty: " + childQty);
-    console.log("adultVal: " + adultVal);
-    console.log("childVal: " + childVal);
-
+    
     if(adultQty != "" && childQty != ""){
         if(adultQty != "0"){
             var navigationOptions = {
@@ -38,6 +36,8 @@ exports.nextTap = function(){
                     childQty: parseInt(childQty)
                 }
             }
+            console.log("check_in_date: " + pageDataContext.checkin_date);
+            console.log("check_out_date: "+ pageDataContext.checkout_date);
 
             var topmost = frameModule.topmost();
             topmost.navigate(navigationOptions);

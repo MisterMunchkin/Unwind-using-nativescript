@@ -24,24 +24,28 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
         numAdult: pageDataContext.adultQty,
         numChild: pageDataContext.childQty
     };
-
-    page.bindingContext = pageData;
+    console.log("check in date: " + requestObject.check_in_date);
+    console.log("check out date: " + requestObject.check_out_date);
+    console.log("numAdult: " + pageDataContext.adultQty);
+    console.log("numChild: " + pageDataContext.childQty);
+  /*  page.bindingContext = pageData;
 
     var obj;
     items = new ObservableArray([]);
-
+    console.log("entering room query");
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/getCountFilterRoomType.php", {
         method: "POST",
         body: formEncode(requestObject)
     }).then(function (response) {
         obj = response._bodyText;
-       
-
-        if(isData(obj) > 0){
+        console.log("full response: " + JSON.stringify(response));
+        console.log("BODY: " + obj);
+        if(obj != "no data"){
 
             items = new ObservableArray([]);
             obj = JSON.parse(obj);
             //console.log("inside then function: " + obj);
+            console.log("inside if condition");
             var limit = obj.length;
            
             for(var x = 0; x < limit;x++){
@@ -59,12 +63,12 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
             }
             pageData.set("items", items);
         }else{
-            console.log("put viible no data confirmation here");
+            console.log("put viSible no data confirmation here");
         }
     }, function (error) {
         console.log(JSON.stringify(error));
-    })
-
+    })*/
+    console.log("exiting room query");
 };
 
 exports.submit = function () {
