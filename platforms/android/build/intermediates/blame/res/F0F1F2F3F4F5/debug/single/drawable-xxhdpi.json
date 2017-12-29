@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-xxhdpi\\ic_cart_outline_white_48dp.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-xxhdpi\\ic_cart_outline_white_48dp.png"
+    },
+    {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\drawable-xxhdpi\\ic_plus_white_48dp.png",
         "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\src\\main\\res\\drawable-xxhdpi\\ic_plus_white_48dp.png"
     },

@@ -463,10 +463,10 @@ public final class R {
 		public static final int comment_indicator = 0x7f02005a;
 		public static final int done_button = 0x7f02006a;
 		public static final int feedback_prompt_background = 0x7f02006c;
-		public static final int ic_done = 0x7f020073;
-		public static final int ic_feedback_sync = 0x7f020076;
-		public static final int ic_send = 0x7f020078;
-		public static final int notification_template_icon_bg = 0x7f020093;
+		public static final int ic_done = 0x7f020074;
+		public static final int ic_feedback_sync = 0x7f020077;
+		public static final int ic_send = 0x7f020079;
+		public static final int notification_template_icon_bg = 0x7f020094;
 	}
 	public static final class id {
 		public static final int action0 = 0x7f0d0106;

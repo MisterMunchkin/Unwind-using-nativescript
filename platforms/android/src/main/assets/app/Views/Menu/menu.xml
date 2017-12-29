@@ -32,6 +32,7 @@
       
             <FAB:fab tap="fabTap"
             row="1"
+            icon="res://ic_cart_outline_white_48dp"
             class="fab-button" />
         
     </GridLayout>
