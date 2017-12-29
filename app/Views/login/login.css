@@ -1,0 +1,30 @@
+.signIn{
+    background-color:#00a2ff;
+    color:antiquewhite;
+    height: 60;
+    width: 200;
+    font-family: "Lato";
+}
+.register{
+    background-color: #00a2ff;
+    color: antiquewhite;
+    outline-color: antiquewhite;
+    height: 60;
+    width: 200;
+    font-family: "Lato";
+}
+.page{
+    background-color:#3ba9e9;
+}
+.input{
+    color: antiquewhite;
+   border-bottom-color: antiquewhite;
+   font-family: "Lato";
+}
+.label{
+    color: antiquewhite;
+    font-family: "Lato";
+}
+.inputForm{
+    width: 250;
+}

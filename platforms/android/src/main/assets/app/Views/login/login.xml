@@ -1,12 +1,18 @@
-<Page loaded="loaded">
-    <StackLayout orientation="vertical">
+<Page class="page" loaded="loaded">
+    <GridLayout row="*, 60">
+        <StackLayout row="0">
+            <Label text="Image here" />
+        </StackLayout>
+        <StackLayout row="1" class="inputForm" orientation="vertical">
+            <Label text="Email Address" class="label" />
+            <TextField class="input" keyboardType="email" 
+            id="email" autocorrect="false" autocapitalizationType="none"  />
+            
+            <Label text="Password" class="label" />
+            <TextField class="input" id="password" secure="true"  />
 
-        <TextField hint="Email Address" keyboardType="email" 
-        id="email" autocorrect="false" autocapitalizationType="none"  />
-        <TextField hint="Password" id="password" secure="true"  />
-
-        <Button text="Sign in" tap="signIn"/>
-        <Button text="don't have an account?" tap="register"/>
-
-    </StackLayout>
+            <Button class="signIn" text="Sign in" tap="signIn"/>
+            <Button class="register" text="don't have an account?" tap="register"/>
+        </StackLayout>
+    </GridLayout>
 </Page>

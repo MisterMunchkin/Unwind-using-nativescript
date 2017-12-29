@@ -47,10 +47,10 @@ Feel free to customize layouts and components to change how the tab view looks.
                         <Span class="ActiveNav" text="Request"></Span>
                     </FormattedString>
                 </Label>-->
-                <Label class="ActiveNav" text="Reservations" id="resNavLabel" tap="reservationNav" width="35%" >
-                </Label>
-                <Label class="inActiveNav" text="Request" id="reqNavLabel" tap="requestNav" width="35%"  >
-                </Label>
+                <Button class="ActiveNav" text="Reservations" id="resNavLabel" tap="reservationNav" width="35%" />
+  
+                <Button class="inActiveNav" text="Request" id="reqNavLabel" tap="requestNav" width="35%"  />
+ 
             </StackLayout> <!--just reuse the labels you already have, you just need to change some variables so it could be used for both reservation and request -->
         </GridLayout>
     </Page>
