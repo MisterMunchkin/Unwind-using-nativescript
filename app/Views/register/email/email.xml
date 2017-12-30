@@ -1,0 +1,11 @@
+<Page loaded="onLoaded" xmlns:dd="nativescript-drop-down">
+    <ScrollView orientation="vertical">
+        <StackLayout orientation="vertical">
+
+            <TextField hint="Email Address" keyboardType="email" id="email" autocorrect="false" autocapitalizationType="none" />
+
+            <Button class="blue-btn" text="submit" tap="nextTap"/>
+            <!--<Button class="w-outline-btn" text="already have an account?" tap="signin"/>-->
+        </StackLayout>
+    </ScrollView>
+</Page>

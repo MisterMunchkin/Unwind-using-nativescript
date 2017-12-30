@@ -1,5 +1,5 @@
 <Page class="page" loaded="loaded">
-    <GridLayout row="*, 60">
+    <GridLayout row="60, *">
         <StackLayout row="0">
             <Label text="Image here" />
         </StackLayout>
@@ -12,8 +12,8 @@
             <Label text="Password" class="label" />
             <TextField class="input" id="password" secure="true"  />
 
-            <Button class="signIn" text="Sign in" tap="signIn"/>
-            <Button class="register" text="don't have an account?" tap="register"/>
+            <Button class="blue-btn" text="Sign in" tap="signIn"/>
+            <Button class="w-outline-btn" text="don't have an account?" tap="register"/>
         </StackLayout>
     </GridLayout>
 </Page>

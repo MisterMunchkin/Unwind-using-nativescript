@@ -7,9 +7,6 @@ var viewModule = require("ui/core/view");
 //var observableArray = require("data/observable-array");
 //var pageData = new observable.Observable();
 
-var genderData = new observable.Observable({
-    genderList: ["Male", "Female"]
-});
 
 var guest = {
     email: "",
@@ -24,29 +21,27 @@ var guest = {
 
 exports.loaded = function(args){
     page = args.object;
-    page.bindingContext = genderData;
+    
     console.log("<<<<<register page>>>>>");
 
-    var genderPicker = page.getViewById("genderPicker");
-
-    genderPicker.addEventListener(observable.Observable.propertyChangeEvent, function(e){
-        guest.gender = e.value;
-    });
-    //pageData.set("showPicker", true);
-    //args.object.bindingContext = pageData;
-  
 }
+exports.nextTap = function(){
+    var navigationOptions = {
+        moduleName: "Views/register/birthday/birthday",
+        context: {
+            firstName: page.getViewById("fname").text,
+            lastName: page.getViewById("lname").text,
+            MI: page.getViewById("MI").text.charAt(0)
+        }
+    }
+    console.log("first name: " + page.getViewById("fname").text);
+    console.log("last name: " + page.getViewById("lname").text);
+    console.log("middle initial: " + page.getViewById("MI").text);
 
+    var topmost = frameModule.topmost();
+    topmost.navigate(navigationOptions);
+}
 exports.AccountCreate = function(){
-
-   /* var email;
-    var password;
-    var fname;
-    var lname;
-    var MI;
-    var birthdate;
-
-    var contact_no; */
 
     
     guest.email = page.getViewById("email").text;
@@ -79,6 +74,7 @@ exports.AccountCreate = function(){
     })
 
 }
+
 
 function BirthdateFormat(){
     return page.getViewById("birthdate").year + "-" + page.getViewById("birthdate").month
