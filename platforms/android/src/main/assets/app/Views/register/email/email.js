@@ -22,6 +22,7 @@ exports.nextTap = function(){
     console.log("middle initial: " + pageDataContext.MI);
     console.log("birthdate: " + pageDataContext.birthday);
     console.log("contact number: " + pageDataContext.contact_no);
+    console.log("gender: " + pageDataContext.gender);
     console.log("password: " + pageDataContext.password);
     console.log("email: " + email);
 

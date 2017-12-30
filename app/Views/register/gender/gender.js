@@ -8,34 +8,30 @@ var pageDataContext;
 
 exports.onLoaded = function (args) { //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     page = args.object;
-    console.log("<<<<<< add quantity page >>>>>>");
+    console.log("<<<<<< gender page >>>>>>");
 
     pageDataContext = page.navigationContext;
 
 };
 
 exports.nextTap = function(){
-   var password = page.getViewById("password").text;
+   var gender = "gender";
 
     console.log("first name: " + pageDataContext.firstName);
     console.log("last name: " + pageDataContext.lastName);
     console.log("middle initial: " + pageDataContext.MI);
-    console.log("birthdate: " + pageDataContext.birthday);
+    console.log("birthdate: " + pageDataContext.birthdate);
     console.log("contact number: " + pageDataContext.contact_no);
-    console.log("gender: " + pageDataContext.gender);
-    console.log("password: " + password);
-
-
+    console.log("gender: " + gender);
     var navigationOptions = {
-        moduleName: "Views/register/email/email",
+        moduleName: "Views/register/password/password",
         context: {
             firstName: pageDataContext.firstName,
             lastName: pageDataContext.lastName,
             MI: pageDataContext.MI,
-            birthdate: pageDataContext.birthday,
+            birthdate: pageDataContext.birthdate,
             contact_no: pageDataContext.contact_no,
-            gender: pageDataContext.gender,
-            password: password
+            gender: gender
         }
     }
 

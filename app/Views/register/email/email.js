@@ -8,7 +8,7 @@ var pageDataContext;
 
 exports.onLoaded = function (args) { //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     page = args.object;
-    console.log("<<<<<< add quantity page >>>>>>");
+    console.log("<<<<<< email address page >>>>>>");
 
     pageDataContext = page.navigationContext;
 
@@ -22,6 +22,7 @@ exports.nextTap = function(){
     console.log("middle initial: " + pageDataContext.MI);
     console.log("birthdate: " + pageDataContext.birthday);
     console.log("contact number: " + pageDataContext.contact_no);
+    console.log("gender: " + pageDataContext.gender);
     console.log("password: " + pageDataContext.password);
     console.log("email: " + email);
 

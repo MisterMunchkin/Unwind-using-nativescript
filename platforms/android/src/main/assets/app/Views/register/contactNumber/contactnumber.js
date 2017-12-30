@@ -24,7 +24,7 @@ exports.nextTap = function(){
     console.log("contact number: " + contact_no);
 
     var navigationOptions = {
-        moduleName: "Views/register/password/password",
+        moduleName: "Views/register/gender/gender",
         context: {
             firstName: pageDataContext.firstName,
             lastName: pageDataContext.lastName,
