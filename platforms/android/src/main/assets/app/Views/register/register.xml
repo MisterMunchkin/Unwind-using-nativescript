@@ -1,25 +1,24 @@
-<Page loaded="loaded" xmlns:dd="nativescript-drop-down">
-    <ScrollView orientation="vertical">
-        <StackLayout orientation="vertical">
-         
-            <TextField hint="first name" id="fname" />
-            <TextField hint="last name" id="lname" />
-            <TextField hint="middle initial" id="MI" />
+<Page class="page" loaded="loaded" xmlns:dd="nativescript-drop-down">
+    <Page.actionBar>
+        <ActionBar title="Register">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
 
-            
-          
-           <!-- <TextField id="birthday" tap="birthdayTap" visibility="{{ bdayTextFieldVis }}" />
-            <DatePicker id="birthdate" hint="birthday" day="15" month="5" year="2015" verticalAlignment="center" 
-            horizontalAlignment="center" visibility="{{ bdayDatePickVis }}" />
+    <StackLayout orientation="vertical" class="inputForm" >
+        <Label text="Enter Name Information" class="label pageLabel" />
 
-            <TextField hint="contact number" id="contact_no" keyboardType = "number"/>
-            <Label text="enter birthday"/>
+        <Label text="First Name" class="label" />
+        <TextField class="input" id="fname" />
+        
+        <Label text="Last Name" class="label" />
+        <TextField class="input" id="lname" />
+        
+        <Label text="Middle Initial" class="label" />
+        <TextField class="input" id="MI" />
 
-            <TextField hint="Email Address" keyboardType="email" id="email" autocorrect="false" autocapitalizationType="none" />
-            <TextField hint="Password" id="password" secure="true" />-->
+        <Button class="blue-btn" text="next" tap="nextTap"/>
+        <!--<Button class="w-outline-btn" text="already have an account?" tap="signin"/>-->
+    </StackLayout>
 
-            <Button class="blue-btn" text="next" tap="nextTap"/>
-            <!--<Button class="w-outline-btn" text="already have an account?" tap="signin"/>-->
-        </StackLayout>
-    </ScrollView>
 </Page>

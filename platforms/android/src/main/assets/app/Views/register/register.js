@@ -25,21 +25,30 @@ exports.loaded = function(args){
     console.log("<<<<<register page>>>>>");
 
 }
+exports.onNavBtnTap = function(){
+   // frameModule.topmost().goBack();
+   var topmost = frameModule.topmost();
+   topmost.navigate("Views/login/login");
+}
 exports.nextTap = function(){
-    var navigationOptions = {
-        moduleName: "Views/register/birthday/birthday",
-        context: {
-            firstName: page.getViewById("fname").text,
-            lastName: page.getViewById("lname").text,
-            MI: page.getViewById("MI").text.charAt(0)
+    if(page.getViewById("fname").text != "" && page.getViewById("lname").text != "" && page.getViewById("MI").text){
+        var navigationOptions = {
+            moduleName: "Views/register/birthday/birthday",
+            context: {
+                firstName: page.getViewById("fname").text,
+                lastName: page.getViewById("lname").text,
+                MI: page.getViewById("MI").text.charAt(0)
+            }
         }
-    }
-    console.log("first name: " + page.getViewById("fname").text);
-    console.log("last name: " + page.getViewById("lname").text);
-    console.log("middle initial: " + page.getViewById("MI").text);
+        console.log("first name: " + page.getViewById("fname").text);
+        console.log("last name: " + page.getViewById("lname").text);
+        console.log("middle initial: " + page.getViewById("MI").text);
 
-    var topmost = frameModule.topmost();
-    topmost.navigate(navigationOptions);
+        var topmost = frameModule.topmost();
+        topmost.navigate(navigationOptions);
+    }else{
+        console.log("enter credentials");
+    }
 }
 exports.AccountCreate = function(){
 
