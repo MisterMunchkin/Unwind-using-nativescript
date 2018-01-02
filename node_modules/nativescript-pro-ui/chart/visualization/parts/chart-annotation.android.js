@@ -13,6 +13,8 @@ var getFloatType = function () {
     floatType = java.lang.Float.class.getField("TYPE").get(null);
     return floatType;
 };
+var ɵ0 = getFloatType;
+exports.ɵ0 = ɵ0;
 var ChartGridLineAnnotation = (function (_super) {
     __extends(ChartGridLineAnnotation, _super);
     function ChartGridLineAnnotation() {
@@ -70,7 +72,8 @@ var ChartGridLineAnnotation = (function (_super) {
                 case chart_public_enum_1.ChartAnnotationZPosition.AboveSeries.toLowerCase():
                     this._android.setZIndex(com.telerik.widget.chart.visualization.common.ChartSeries.SERIES_Z_INDEX + 100);
                     break;
-                default:// ChartAnnotationZPosition.BelowSeries:
+                default:
+                    // ChartAnnotationZPosition.BelowSeries:
                     this._android.setZIndex(com.telerik.widget.chart.visualization.common.ChartSeries.SERIES_Z_INDEX - 100);
             }
         }
@@ -129,7 +132,8 @@ var ChartGridLineAnnotation = (function (_super) {
                 case chart_public_enum_1.ChartAnnotationZPosition.AboveSeries.toLowerCase():
                     this._android.setZIndex(com.telerik.widget.chart.visualization.common.ChartSeries.SERIES_Z_INDEX + 100);
                     break;
-                default:// ChartAnnotationZPosition.BelowSeries:
+                default:
+                    // ChartAnnotationZPosition.BelowSeries:
                     this._android.setZIndex(com.telerik.widget.chart.visualization.common.ChartSeries.SERIES_Z_INDEX - 100);
             }
             this._android.requestLayout();
@@ -242,7 +246,8 @@ var ChartPlotBandAnnotation = (function (_super) {
                 case chart_public_enum_1.ChartAnnotationZPosition.AboveSeries.toLowerCase():
                     this._android.setZIndex(com.telerik.widget.chart.visualization.common.ChartSeries.SERIES_Z_INDEX + 100);
                     break;
-                default:// ChartAnnotationZPosition.BelowSeries:
+                default:
+                    // ChartAnnotationZPosition.BelowSeries:
                     this._android.setZIndex(com.telerik.widget.chart.visualization.common.ChartSeries.SERIES_Z_INDEX - 100);
             }
         }
@@ -327,7 +332,8 @@ var ChartPlotBandAnnotation = (function (_super) {
                 case chart_public_enum_1.ChartAnnotationZPosition.AboveSeries.toLowerCase():
                     this._android.setZIndex(com.telerik.widget.chart.visualization.common.ChartSeries.SERIES_Z_INDEX + 100);
                     break;
-                default:// ChartAnnotationZPosition.BelowSeries:
+                default:
+                    // ChartAnnotationZPosition.BelowSeries:
                     this._android.setZIndex(com.telerik.widget.chart.visualization.common.ChartSeries.SERIES_Z_INDEX - 100);
             }
             this._android.requestLayout();

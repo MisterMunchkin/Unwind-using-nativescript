@@ -884,9 +884,10 @@ var EntityProperty = (function (_super) {
     return EntityProperty;
 }(commonModule.EntityProperty));
 exports.EntityProperty = EntityProperty;
-//////////////////////////////////////////////////////////////////////////////////////////////
 // Editors
-var PropertyEditor = (function (_super) {
+var 
+// Editors
+PropertyEditor = (function (_super) {
     __extends(PropertyEditor, _super);
     function PropertyEditor() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -1367,9 +1368,10 @@ var PropertyEditorHelper = (function () {
     return PropertyEditorHelper;
 }());
 exports.PropertyEditorHelper = PropertyEditorHelper;
-//////////////////////////////////////////////////////////////////////////////////////////////
 // Validators
-var PropertyValidator = (function (_super) {
+var 
+// Validators
+PropertyValidator = (function (_super) {
     __extends(PropertyValidator, _super);
     function PropertyValidator() {
         var _this = _super.call(this) || this;

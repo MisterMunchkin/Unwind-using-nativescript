@@ -18,7 +18,15 @@ var CartesianAxis = (function (_super) {
     * Called when the lineColor property changes.
     * @param data an object containing information about the change event.
     */
-    CartesianAxis.prototype.onLineColorChanged = function (oldValue, newValue) {
+    /*
+        * Called when the lineColor property changes.
+        * @param data an object containing information about the change event.
+        */
+    CartesianAxis.prototype.onLineColorChanged = /*
+        * Called when the lineColor property changes.
+        * @param data an object containing information about the change event.
+        */
+    function (oldValue, newValue) {
         this.initializer.onLineColorChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onLineThicknessPropertyChanged = function (oldValue, newValue) {
@@ -28,7 +36,15 @@ var CartesianAxis = (function (_super) {
     * Called when the lineThickness property changes.
     * @param data an object containing information about the change event.
     */
-    CartesianAxis.prototype.onLineThicknessChanged = function (oldValue, newValue) {
+    /*
+        * Called when the lineThickness property changes.
+        * @param data an object containing information about the change event.
+        */
+    CartesianAxis.prototype.onLineThicknessChanged = /*
+        * Called when the lineThickness property changes.
+        * @param data an object containing information about the change event.
+        */
+    function (oldValue, newValue) {
         this.initializer.onLineThicknessChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onLineHiddenPropertyChanged = function (oldValue, newValue) {
@@ -38,7 +54,15 @@ var CartesianAxis = (function (_super) {
     * Called when the lineHidden property changes.
     * @param data an object containing information about the change event.
     */
-    CartesianAxis.prototype.onLineHiddenChanged = function (oldValue, newValue) {
+    /*
+        * Called when the lineHidden property changes.
+        * @param data an object containing information about the change event.
+        */
+    CartesianAxis.prototype.onLineHiddenChanged = /*
+        * Called when the lineHidden property changes.
+        * @param data an object containing information about the change event.
+        */
+    function (oldValue, newValue) {
         this.initializer.onLineHiddenChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onLabelTextColorPropertyChanged = function (oldValue, newValue) {
@@ -48,7 +72,15 @@ var CartesianAxis = (function (_super) {
     * Called when the labelTextColor property changes.
     * @param data an object containing information about the change event.
     */
-    CartesianAxis.prototype.onLabelTextColorChanged = function (oldValue, newValue) {
+    /*
+        * Called when the labelTextColor property changes.
+        * @param data an object containing information about the change event.
+        */
+    CartesianAxis.prototype.onLabelTextColorChanged = /*
+        * Called when the labelTextColor property changes.
+        * @param data an object containing information about the change event.
+        */
+    function (oldValue, newValue) {
         this.initializer.onLabelTextColorChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onLabelSizePropertyChanged = function (oldValue, newValue) {
@@ -58,7 +90,15 @@ var CartesianAxis = (function (_super) {
     * Called when the labelSize property changes.
     * @param data an object containing information about the change event.
     */
-    CartesianAxis.prototype.onLabelSizeChanged = function (oldValue, newValue) {
+    /**
+        * Called when the labelSize property changes.
+        * @param data an object containing information about the change event.
+        */
+    CartesianAxis.prototype.onLabelSizeChanged = /**
+        * Called when the labelSize property changes.
+        * @param data an object containing information about the change event.
+        */
+    function (oldValue, newValue) {
         this.initializer.onLabelSizeChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onLabelFormatPropertyChanged = function (oldValue, newValue) {
@@ -68,7 +108,15 @@ var CartesianAxis = (function (_super) {
     * Called when the labelFormat property changes.
     * @param data an object containing information about the change event.
     */
-    CartesianAxis.prototype.onLabelFormatChanged = function (oldValue, newValue) {
+    /**
+        * Called when the labelFormat property changes.
+        * @param data an object containing information about the change event.
+        */
+    CartesianAxis.prototype.onLabelFormatChanged = /**
+        * Called when the labelFormat property changes.
+        * @param data an object containing information about the change event.
+        */
+    function (oldValue, newValue) {
         this.initializer.onLabelFormatChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onLabelMarginPropertyChanged = function (oldValue, newValue) {
@@ -78,7 +126,15 @@ var CartesianAxis = (function (_super) {
     * Called when the labelMargin property changes.
     * @param data an object containing information about the change event.
     */
-    CartesianAxis.prototype.onLabelMarginChanged = function (oldValue, newValue) {
+    /**
+        * Called when the labelMargin property changes.
+        * @param data an object containing information about the change event.
+        */
+    CartesianAxis.prototype.onLabelMarginChanged = /**
+        * Called when the labelMargin property changes.
+        * @param data an object containing information about the change event.
+        */
+    function (oldValue, newValue) {
         this.initializer.onLabelMarginChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onLabelRotationAnglePropertyChanged = function (oldValue, newValue) {
@@ -88,7 +144,15 @@ var CartesianAxis = (function (_super) {
     * Called when the labelRotationAngle property changes.
     * @param data an object containing information about the change event.
     */
-    CartesianAxis.prototype.onLabelRotationAngleChanged = function (oldValue, newValue) {
+    /**
+        * Called when the labelRotationAngle property changes.
+        * @param data an object containing information about the change event.
+        */
+    CartesianAxis.prototype.onLabelRotationAngleChanged = /**
+        * Called when the labelRotationAngle property changes.
+        * @param data an object containing information about the change event.
+        */
+    function (oldValue, newValue) {
         this.initializer.onLabelRotationAngleChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onLabelFitModePropertyChanged = function (oldValue, newValue) {
@@ -98,7 +162,15 @@ var CartesianAxis = (function (_super) {
     * Called when the labelFitMode property changes.
     * @param data an object containing information about the change event.
     */
-    CartesianAxis.prototype.onLabelFitModeChanged = function (oldValue, newValue) {
+    /**
+        * Called when the labelFitMode property changes.
+        * @param data an object containing information about the change event.
+        */
+    CartesianAxis.prototype.onLabelFitModeChanged = /**
+        * Called when the labelFitMode property changes.
+        * @param data an object containing information about the change event.
+        */
+    function (oldValue, newValue) {
         this.initializer.onLabelFitModeChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onLabelLayoutModePropertyChanged = function (oldValue, newValue) {
@@ -108,7 +180,15 @@ var CartesianAxis = (function (_super) {
     * Called when the labelLayoutMode property changes.
     * @param data an object containing information about the change event.
     */
-    CartesianAxis.prototype.onLabelLayoutModeChanged = function (oldValue, newValue) {
+    /**
+        * Called when the labelLayoutMode property changes.
+        * @param data an object containing information about the change event.
+        */
+    CartesianAxis.prototype.onLabelLayoutModeChanged = /**
+        * Called when the labelLayoutMode property changes.
+        * @param data an object containing information about the change event.
+        */
+    function (oldValue, newValue) {
         this.initializer.onLabelLayoutModeChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onHorizontalLocationPropertyChanged = function (oldValue, newValue) {
@@ -118,7 +198,15 @@ var CartesianAxis = (function (_super) {
     * Called when the horizontalLocation property changes.
     * @param data an object containing information about the change event.
     */
-    CartesianAxis.prototype.onHorizontalLocationChanged = function (oldValue, newValue) {
+    /**
+        * Called when the horizontalLocation property changes.
+        * @param data an object containing information about the change event.
+        */
+    CartesianAxis.prototype.onHorizontalLocationChanged = /**
+        * Called when the horizontalLocation property changes.
+        * @param data an object containing information about the change event.
+        */
+    function (oldValue, newValue) {
         this.initializer.onHorizontalLocationChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onVerticalLocationPropertyChanged = function (oldValue, newValue) {
@@ -127,7 +215,13 @@ var CartesianAxis = (function (_super) {
     /**
     * Called when the verticalLocation property changes.
     */
-    CartesianAxis.prototype.onVerticalLocationChanged = function (oldValue, newValue) {
+    /**
+        * Called when the verticalLocation property changes.
+        */
+    CartesianAxis.prototype.onVerticalLocationChanged = /**
+        * Called when the verticalLocation property changes.
+        */
+    function (oldValue, newValue) {
         this.initializer.onVerticalLocationChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onAllowPanPropertyChanged = function (oldValue, newValue) {
@@ -136,7 +230,13 @@ var CartesianAxis = (function (_super) {
     /**
     * Called when the allowPan property changes.
     */
-    CartesianAxis.prototype.onAllowPanChanged = function (oldValue, newValue) {
+    /**
+        * Called when the allowPan property changes.
+        */
+    CartesianAxis.prototype.onAllowPanChanged = /**
+        * Called when the allowPan property changes.
+        */
+    function (oldValue, newValue) {
         this.initializer.onAllowPanChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onAllowZoomPropertyChanged = function (oldValue, newValue) {
@@ -145,7 +245,13 @@ var CartesianAxis = (function (_super) {
     /**
     * Called when the allowZoom property changes.
     */
-    CartesianAxis.prototype.onAllowZoomChanged = function (oldValue, newValue) {
+    /**
+        * Called when the allowZoom property changes.
+        */
+    CartesianAxis.prototype.onAllowZoomChanged = /**
+        * Called when the allowZoom property changes.
+        */
+    function (oldValue, newValue) {
         this.initializer.onAllowZoomChanged(oldValue, newValue, this);
     };
     CartesianAxis.prototype.onHiddenPropertyChanged = function (oldValue, newValue) {
@@ -154,7 +260,13 @@ var CartesianAxis = (function (_super) {
     /**
     * Called when the hidden property changes.
     */
-    CartesianAxis.prototype.onHiddenChanged = function (oldValue, newValue) {
+    /**
+        * Called when the hidden property changes.
+        */
+    CartesianAxis.prototype.onHiddenChanged = /**
+        * Called when the hidden property changes.
+        */
+    function (oldValue, newValue) {
         this.initializer.onHiddenChanged(oldValue, newValue, this);
     };
     Object.defineProperty(CartesianAxis.prototype, "initializer", {
@@ -200,8 +312,8 @@ var CartesianAxis = (function (_super) {
         }
     };
     /*
-    * Identifies the lineColor dependency property.
-    */
+        * Identifies the lineColor dependency property.
+        */
     CartesianAxis.idProperty = new view_1.Property({
         name: "id",
         defaultValue: undefined,
@@ -209,8 +321,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /*
-    * Identifies the lineColor dependency property.
-    */
+        * Identifies the lineColor dependency property.
+        */
     CartesianAxis.lineColorProperty = new view_1.Property({
         name: "lineColor",
         defaultValue: undefined,
@@ -219,8 +331,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /*
-    * Identifies the lineThickness dependency property.
-    */
+        * Identifies the lineThickness dependency property.
+        */
     CartesianAxis.lineThicknessProperty = new view_1.Property({
         name: "lineThickness",
         defaultValue: undefined,
@@ -230,8 +342,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /*
-    * Identifies the lineHidden dependency property.
-    */
+        * Identifies the lineHidden dependency property.
+        */
     CartesianAxis.lineHiddenProperty = new view_1.Property({
         name: "lineHidden",
         defaultValue: undefined,
@@ -241,8 +353,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /*
-    * Identifies the labelTextColor dependency property.
-    */
+        * Identifies the labelTextColor dependency property.
+        */
     CartesianAxis.labelTextColorProperty = new view_1.Property({
         name: "labelTextColor",
         defaultValue: undefined,
@@ -251,8 +363,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /**
-    * Identifies the labelSize dependency property.
-    */
+        * Identifies the labelSize dependency property.
+        */
     CartesianAxis.labelSizeProperty = new view_1.Property({
         name: "labelSize",
         defaultValue: undefined,
@@ -262,8 +374,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /**
-    * Identifies labelFormat dependency property.
-    */
+        * Identifies labelFormat dependency property.
+        */
     CartesianAxis.labelFormatProperty = new view_1.Property({
         name: "labelFormat",
         defaultValue: undefined,
@@ -272,8 +384,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /**
-    * Identifies the labelMargin dependency property.
-    */
+        * Identifies the labelMargin dependency property.
+        */
     CartesianAxis.labelMarginProperty = new view_1.Property({
         name: "labelMargin",
         defaultValue: undefined,
@@ -283,8 +395,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /**
-    * Identifies the labelRotationAngle dependency property.
-    */
+        * Identifies the labelRotationAngle dependency property.
+        */
     CartesianAxis.labelRotationAngleProperty = new view_1.Property({
         name: "labelRotationAngle",
         defaultValue: undefined,
@@ -294,8 +406,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /**
-    * Identifies the labelFitMode dependency property.
-    */
+        * Identifies the labelFitMode dependency property.
+        */
     CartesianAxis.labelFitModeProperty = new view_1.Property({
         name: "labelFitMode",
         defaultValue: undefined,
@@ -304,8 +416,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /**
-    * Identifies the labelLayoutMode dependency property.
-    */
+        * Identifies the labelLayoutMode dependency property.
+        */
     CartesianAxis.labelLayoutModeProperty = new view_1.Property({
         name: "labelLayoutMode",
         defaultValue: undefined,
@@ -314,8 +426,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /**
-    * Identifies the horizontalLocation dependency property.
-    */
+        * Identifies the horizontalLocation dependency property.
+        */
     CartesianAxis.horizontalLocationProperty = new view_1.Property({
         name: "horizontalLocation",
         defaultValue: undefined,
@@ -324,8 +436,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /**
-    * Identifies the verticalLocation dependency property.
-    */
+        * Identifies the verticalLocation dependency property.
+        */
     CartesianAxis.verticalLocationProperty = new view_1.Property({
         name: "verticalLocation",
         defaultValue: undefined,
@@ -334,8 +446,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /**
-    * Identifies the allowPan dependency property.
-    */
+        * Identifies the allowPan dependency property.
+        */
     CartesianAxis.allowPanProperty = new view_1.Property({
         name: "allowPan",
         defaultValue: false,
@@ -345,8 +457,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /**
-    * Identifies the allowZoom dependency property.
-    */
+        * Identifies the allowZoom dependency property.
+        */
     CartesianAxis.allowZoomProperty = new view_1.Property({
         name: "allowZoom",
         defaultValue: false,
@@ -356,8 +468,8 @@ var CartesianAxis = (function (_super) {
         },
     });
     /**
-    * Identifies the hidden dependency property.
-    */
+        * Identifies the hidden dependency property.
+        */
     CartesianAxis.hiddenProperty = new view_1.Property({
         name: "hidden",
         defaultValue: undefined,

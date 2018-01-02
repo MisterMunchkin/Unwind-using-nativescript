@@ -2,7 +2,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var view_1 = require("tns-core-modules/ui/core/view");
 var builder = require("tns-core-modules/ui/builder");
 //Enums
+//Enums
 var DisplayMode;
+//Enums
 (function (DisplayMode) {
     DisplayMode.Tokens = "Tokens";
     DisplayMode.Plain = "Plain";
@@ -35,7 +37,9 @@ var SuggestionView = (function (_super) {
     }
     Object.defineProperty(SuggestionView.prototype, "android", {
         //properties
-        get: function () {
+        get: 
+        //properties
+        function () {
             return undefined;
         },
         enumerable: true,
@@ -96,7 +100,9 @@ exports.SuggestionView = SuggestionView;
 SuggestionView.suggestionViewHeightProperty.register(SuggestionView);
 SuggestionView.suggestionItemTemplateProperty.register(SuggestionView);
 //TokenModel
-var TokenModel = (function () {
+var 
+//TokenModel
+TokenModel = (function () {
     function TokenModel(text, image) {
         this.text = text;
         this.image = image;
@@ -119,7 +125,9 @@ var TokenModel = (function () {
 }());
 exports.TokenModel = TokenModel;
 // Event object
-var AutoCompleteEventData = (function () {
+var 
+// Event object
+AutoCompleteEventData = (function () {
     function AutoCompleteEventData(object, eventName, text, token) {
         this._object = object;
         this._eventName = eventName;
@@ -177,7 +185,9 @@ var RadAutoCompleteTextView = (function (_super) {
     }
     Object.defineProperty(RadAutoCompleteTextView.prototype, "itemViewLoader", {
         //properties
-        get: function () {
+        get: 
+        //properties
+        function () {
             return this._itemViewLoader;
         },
         set: function (value) {
@@ -273,7 +283,10 @@ var RadAutoCompleteTextView = (function (_super) {
     RadAutoCompleteTextView.prototype.onReadOnlyChanged = function (oldValue, newValue) {
     };
     //Methods
-    RadAutoCompleteTextView.prototype.resetAutocomplete = function () {
+    //Methods
+    RadAutoCompleteTextView.prototype.resetAutocomplete = 
+    //Methods
+    function () {
     };
     RadAutoCompleteTextView.prototype.addToken = function (token) {
     };

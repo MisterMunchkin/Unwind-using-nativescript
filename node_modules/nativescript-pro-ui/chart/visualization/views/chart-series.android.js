@@ -16,6 +16,9 @@ var PieSeries = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    PieSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
+        this.initializer.onLegendTitleChanged(newValue, this);
+    };
     return PieSeries;
 }(seriesCommonModule.PieSeries));
 exports.PieSeries = PieSeries;
@@ -34,6 +37,9 @@ var DonutSeries = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    DonutSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
+        this.initializer.onLegendTitleChanged(newValue, this);
+    };
     return DonutSeries;
 }(seriesCommonModule.DonutSeries));
 exports.DonutSeries = DonutSeries;
@@ -52,6 +58,9 @@ var LineSeries = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    LineSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
+        this.initializer.onLegendTitleChanged(newValue, this);
+    };
     return LineSeries;
 }(seriesCommonModule.CategoricalSeries));
 exports.LineSeries = LineSeries;
@@ -70,7 +79,23 @@ var OhlcSeries = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    OhlcSeries.prototype.onValuePropertyChanged = function (oldValue, newValue) {
+    OhlcSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
+        this.initializer.onLegendTitleChanged(newValue, this);
+    };
+    // TODO: 'setNative' currently is not raised on Android
+    // [seriesCommonModule.OhlcSeries.legendTitleProperty.setNative](newValue: string): void {
+    //     this.initializer.onLegendTitleChanged(newValue, this);
+    // }
+    // TODO: 'setNative' currently is not raised on Android
+    // [seriesCommonModule.OhlcSeries.legendTitleProperty.setNative](newValue: string): void {
+    //     this.initializer.onLegendTitleChanged(newValue, this);
+    // }
+    OhlcSeries.prototype.onValuePropertyChanged = 
+    // TODO: 'setNative' currently is not raised on Android
+    // [seriesCommonModule.OhlcSeries.legendTitleProperty.setNative](newValue: string): void {
+    //     this.initializer.onLegendTitleChanged(newValue, this);
+    // }
+    function (oldValue, newValue) {
     };
     OhlcSeries.prototype.onHighPropertyNameChanged = function (oldValue, newValue) {
         if (!newValue) {
@@ -133,6 +158,9 @@ var CandlestickSeries = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    CandlestickSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
+        this.initializer.onLegendTitleChanged(newValue, this);
+    };
     return CandlestickSeries;
 }(OhlcSeries));
 exports.CandlestickSeries = CandlestickSeries;
@@ -151,6 +179,9 @@ var SplineSeries = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    SplineSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
+        this.initializer.onLegendTitleChanged(newValue, this);
+    };
     return SplineSeries;
 }(LineSeries));
 exports.SplineSeries = SplineSeries;
@@ -169,6 +200,9 @@ var AreaSeries = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    AreaSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
+        this.initializer.onLegendTitleChanged(newValue, this);
+    };
     return AreaSeries;
 }(seriesCommonModule.CategoricalSeries));
 exports.AreaSeries = AreaSeries;
@@ -187,6 +221,9 @@ var SplineAreaSeries = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    SplineAreaSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
+        this.initializer.onLegendTitleChanged(newValue, this);
+    };
     return SplineAreaSeries;
 }(AreaSeries));
 exports.SplineAreaSeries = SplineAreaSeries;
@@ -205,6 +242,9 @@ var ScatterBubbleSeries = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    ScatterBubbleSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
+        this.initializer.onLegendTitleChanged(newValue, this);
+    };
     return ScatterBubbleSeries;
 }(seriesCommonModule.ScatterBubbleSeries));
 exports.ScatterBubbleSeries = ScatterBubbleSeries;
@@ -242,6 +282,9 @@ var BubbleSeries = (function (_super) {
         }));
         this.android.setBubbleSizeBinding(binding);
     };
+    BubbleSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
+        this.initializer.onLegendTitleChanged(newValue, this);
+    };
     return BubbleSeries;
 }(seriesCommonModule.BubbleSeries));
 exports.BubbleSeries = BubbleSeries;
@@ -260,6 +303,9 @@ var ScatterSeries = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    ScatterSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
+        this.initializer.onLegendTitleChanged(newValue, this);
+    };
     return ScatterSeries;
 }(seriesCommonModule.ScatterSeries));
 exports.ScatterSeries = ScatterSeries;
@@ -291,6 +337,9 @@ var BarSeries = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    BarSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
+        this.initializer.onLegendTitleChanged(newValue, this);
+    };
     return BarSeries;
 }(seriesCommonModule.BarSeries));
 exports.BarSeries = BarSeries;
@@ -334,6 +383,9 @@ var RangeBarSeries = (function (_super) {
             }
         }));
         this.android.setLowBinding(binding);
+    };
+    RangeBarSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
+        this.initializer.onLegendTitleChanged(newValue, this);
     };
     return RangeBarSeries;
 }(seriesCommonModule.RangeBarSeries));

@@ -8838,9 +8838,8 @@ declare class TKLinearGradientFill extends TKGradientFill {
 	initWithColorsStartPointEndPoint(colors: NSArray<any>, startPoint: CGPoint, endPoint: CGPoint): this;
 }
 
-declare class TKCollectionView implements UICollectionView {
+declare class TKCollectionView extends UICollectionView {
 	ownerListView: TKListView;
-
 	skipTouch: boolean;
 }
 

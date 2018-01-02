@@ -118,6 +118,12 @@ var RadPieChart = (function (_super) {
     };
     RadPieChart.prototype.onSelectionModeChanged = function (oldValue, newValue) {
     };
+    RadPieChart.prototype.onLegendChanged = function (oldValue, newValue) {
+        if (this.legend) {
+            this.legend.updateLegendView(this);
+        }
+        this.initializer.onLegendChanged(oldValue, newValue, this);
+    };
     return RadPieChart;
 }(commonModule.RadPieChart));
 exports.RadPieChart = RadPieChart;
@@ -217,7 +223,10 @@ var RadCartesianChart = (function (_super) {
         this.initializer.onLegendChanged(oldValue, newValue, this);
     };
     //todo: consider this method to be moved in common module
-    RadCartesianChart.prototype.getAxixByID = function (axisID) {
+    //todo: consider this method to be moved in common module
+    RadCartesianChart.prototype.getAxixByID = 
+    //todo: consider this method to be moved in common module
+    function (axisID) {
         return this.getAxisByID(axisID);
     };
     RadCartesianChart.prototype.getAxisByID = function (axisID) {
@@ -269,7 +278,10 @@ var RadCartesianChart = (function (_super) {
         }
     };
     //get allowZoom/allowPan from axes and init the chart behavior
-    RadCartesianChart.prototype.updatePanZoomBehavior = function () {
+    //get allowZoom/allowPan from axes and init the chart behavior
+    RadCartesianChart.prototype.updatePanZoomBehavior = 
+    //get allowZoom/allowPan from axes and init the chart behavior
+    function () {
         if (!this._android) {
             return;
         }

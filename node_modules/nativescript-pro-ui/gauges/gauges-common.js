@@ -21,16 +21,23 @@ var BarIndicatorCapMode;
 /*
 * Defines the known properties that are collections. This is used by the XML parser.
 */
+/*
+* Defines the known properties that are collections. This is used by the XML parser.
+*/
 var knownCollections;
+/*
+* Defines the known properties that are collections. This is used by the XML parser.
+*/
 (function (knownCollections) {
     knownCollections.scales = "scales";
     knownCollections.indicators = "indicators";
 })(knownCollections = exports.knownCollections || (exports.knownCollections = {}));
-///////////////////////////////////////////////////
 var RadGauge = (function (_super) {
     __extends(RadGauge, _super);
     function RadGauge() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super.call(this) || this;
+        _this.on("bindingContextChange", _this.bindingContextChanged, _this);
+        return _this;
     }
     RadGauge.prototype.onScalesPropertyChanged = function (oldValue, newValue) {
         this._onScalesPropertyChanged(oldValue, newValue);
@@ -43,6 +50,20 @@ var RadGauge = (function (_super) {
     };
     RadGauge.prototype.onFillColorPropertyChanged = function (oldValue, newValue) {
         this._onFillColorPropertyChanged(oldValue, newValue);
+    };
+    RadGauge.prototype.bindingContextChanged = function (data) {
+        if (this.scales) {
+            for (var i = 0; i < this.scales.length; i++) {
+                var scale = this.scales.getItem(i);
+                scale.bindingContext = data.value;
+                if (scale.indicators) {
+                    for (var j = 0; j < scale.indicators.length; j++) {
+                        var indicator = scale.indicators.getItem(j);
+                        indicator.bindingContext = data.value;
+                    }
+                }
+            }
+        }
     };
     RadGauge.prototype._onScalesPropertyChanged = function (oldValue, newValue) {
         if (!this.nativeObject) {
@@ -170,7 +191,6 @@ RadGauge.subtitleProperty.register(RadGauge);
 RadGauge.fillColorProperty.register(RadGauge);
 RadGauge.titleStyleProperty.register(RadGauge);
 RadGauge.subtitleStyleProperty.register(RadGauge);
-////////////////////////////////////////////////////
 var RadRadialGauge = (function (_super) {
     __extends(RadRadialGauge, _super);
     function RadRadialGauge() {
@@ -179,7 +199,6 @@ var RadRadialGauge = (function (_super) {
     return RadRadialGauge;
 }(RadGauge));
 exports.RadRadialGauge = RadRadialGauge;
-///////////////////////////////////////////////////
 var GaugeScale = (function (_super) {
     __extends(GaugeScale, _super);
     function GaugeScale() {
@@ -295,7 +314,6 @@ GaugeScale.indicatorsProperty.register(GaugeScale);
 GaugeScale.minimumProperty.register(GaugeScale);
 GaugeScale.maximumProperty.register(GaugeScale);
 GaugeScale.scaleStyleProperty.register(GaugeScale);
-//////////////////////////////////////////////////////////
 var RadialScale = (function (_super) {
     __extends(RadialScale, _super);
     function RadialScale() {
@@ -343,7 +361,6 @@ exports.RadialScale = RadialScale;
 RadialScale.startAngleProperty.register(RadialScale);
 RadialScale.sweepAngleProperty.register(RadialScale);
 RadialScale.radiusProperty.register(RadialScale);
-/////////////////////////////////////////////////////////////
 var GaugeIndicator = (function (_super) {
     __extends(GaugeIndicator, _super);
     function GaugeIndicator() {
@@ -417,7 +434,6 @@ var GaugeIndicator = (function (_super) {
 exports.GaugeIndicator = GaugeIndicator;
 GaugeIndicator.isAnimatedProperty.register(GaugeIndicator);
 GaugeIndicator.animationDurationProperty.register(GaugeIndicator);
-///////////////////////////////////////////////////////////////
 var RadialNeedle = (function (_super) {
     __extends(RadialNeedle, _super);
     function RadialNeedle() {
@@ -463,7 +479,6 @@ var RadialNeedle = (function (_super) {
 exports.RadialNeedle = RadialNeedle;
 RadialNeedle.needleStyleProperty.register(RadialNeedle);
 RadialNeedle.valueProperty.register(RadialNeedle);
-/////////////////////////////////////////////////////////////
 var BarIndicator = (function (_super) {
     __extends(BarIndicator, _super);
     function BarIndicator() {
@@ -554,7 +569,6 @@ BarIndicator.minimumProperty.register(BarIndicator);
 BarIndicator.maximumProperty.register(BarIndicator);
 BarIndicator.locationProperty.register(BarIndicator);
 BarIndicator.animationStartValueProperty.register(BarIndicator);
-/////////////////////////////////////////////////////////////////
 var RadialBarIndicator = (function (_super) {
     __extends(RadialBarIndicator, _super);
     function RadialBarIndicator() {
@@ -563,7 +577,6 @@ var RadialBarIndicator = (function (_super) {
     return RadialBarIndicator;
 }(BarIndicator));
 exports.RadialBarIndicator = RadialBarIndicator;
-//////////////////////////STYLES
 var GaugeStyleBase = (function (_super) {
     __extends(GaugeStyleBase, _super);
     function GaugeStyleBase() {
@@ -579,7 +592,10 @@ var GaugeStyleBase = (function (_super) {
         this._onStrokeWidthPropertyChanged(oldValue, newValue);
     };
     // TODO implement common setting of stroke and fill because of repetitive code;
-    GaugeStyleBase.prototype._onFillColorPropertyChanged = function (oldValue, newValue) { };
+    // TODO implement common setting of stroke and fill because of repetitive code;
+    GaugeStyleBase.prototype._onFillColorPropertyChanged = 
+    // TODO implement common setting of stroke and fill because of repetitive code;
+    function (oldValue, newValue) { };
     GaugeStyleBase.prototype._onStrokeColorPropertyChanged = function (oldValue, newValue) { };
     GaugeStyleBase.prototype._onStrokeWidthPropertyChanged = function (oldValue, newValue) { };
     Object.defineProperty(GaugeStyleBase.prototype, "owner", {
@@ -626,7 +642,6 @@ exports.GaugeStyleBase = GaugeStyleBase;
 GaugeStyleBase.fillColorProperty.register(GaugeStyleBase);
 GaugeStyleBase.strokeColorProperty.register(GaugeStyleBase);
 GaugeStyleBase.strokeWidthProperty.register(GaugeStyleBase);
-//////////////////////////////////////////////////////////////////
 var TitleStyle = (function (_super) {
     __extends(TitleStyle, _super);
     function TitleStyle() {
@@ -686,7 +701,6 @@ TitleStyle.textSizeProperty.register(TitleStyle);
 TitleStyle.textColorProperty.register(TitleStyle);
 TitleStyle.horizontalOffsetProperty.register(TitleStyle);
 TitleStyle.verticalOffsetProperty.register(TitleStyle);
-/////////////////////////////////////////////////////////////////////
 var SubtitleStyle = (function (_super) {
     __extends(SubtitleStyle, _super);
     function SubtitleStyle() {
@@ -846,7 +860,6 @@ var ScaleStyle = (function (_super) {
             target.onTicksLayoutModePropertyChanged(oldValue, newValue);
         },
     });
-    ///////
     ScaleStyle.majorTicksWidthProperty = new view_1.Property({
         name: "majorTicksWidth",
         defaultValue: undefined,
@@ -855,7 +868,6 @@ var ScaleStyle = (function (_super) {
             target.onMajorTicksWidthPropertyChanged(oldValue, newValue);
         },
     });
-    ///////
     ScaleStyle.minorTicksWidthProperty = new view_1.Property({
         name: "minorTicksWidth",
         defaultValue: undefined,
@@ -864,7 +876,6 @@ var ScaleStyle = (function (_super) {
             target.onMinorTicksWidthPropertyChanged(oldValue, newValue);
         },
     });
-    /////////
     ScaleStyle.majorTicksLengthProperty = new view_1.Property({
         name: "majorTicksLength",
         defaultValue: undefined,
@@ -873,7 +884,6 @@ var ScaleStyle = (function (_super) {
             target.onMajorTicksLengthPropertyChanged(oldValue, newValue);
         },
     });
-    ///////////   
     ScaleStyle.minorTicksLengthProperty = new view_1.Property({
         name: "minorTicksLength",
         defaultValue: undefined,
@@ -882,7 +892,6 @@ var ScaleStyle = (function (_super) {
             target.onMinorTicksLengthPropertyChanged(oldValue, newValue);
         },
     });
-    ////////    
     ScaleStyle.majorTicksStrokeColorProperty = new view_1.Property({
         name: "majorTicksStrokeColor",
         defaultValue: undefined,
@@ -890,7 +899,6 @@ var ScaleStyle = (function (_super) {
             target.onMajorTicksStrokeColorPropertyChanged(oldValue, newValue);
         },
     });
-    ////////    
     ScaleStyle.minorTicksStrokeColorProperty = new view_1.Property({
         name: "minorTicksStrokeColor",
         defaultValue: undefined,
@@ -898,7 +906,6 @@ var ScaleStyle = (function (_super) {
             target.onМinorTicksStrokeColorPropertyChanged(oldValue, newValue);
         },
     });
-    ///////////    
     ScaleStyle.majorTicksFillColorProperty = new view_1.Property({
         name: "majorTicksFillColor",
         defaultValue: undefined,
@@ -906,7 +913,6 @@ var ScaleStyle = (function (_super) {
             target.onMajorTicksFillColorPropertyChanged(oldValue, newValue);
         },
     });
-    ///////////    
     ScaleStyle.minorTicksFillColorProperty = new view_1.Property({
         name: "minorTicksFillColor",
         defaultValue: undefined,
@@ -914,7 +920,6 @@ var ScaleStyle = (function (_super) {
             target.onMinorTicksFillColorPropertyChanged(oldValue, newValue);
         },
     });
-    ///////    
     ScaleStyle.majorTicksStrokeWidthProperty = new view_1.Property({
         name: "majorTicksStrokeWidth",
         defaultValue: undefined,
@@ -923,7 +928,6 @@ var ScaleStyle = (function (_super) {
             target.onМajorTicksStrokeWidthPropertyChanged(oldValue, newValue);
         },
     });
-    ///////    
     ScaleStyle.minorTicksStrokeWidthProperty = new view_1.Property({
         name: "minorTicksStrokeWidth",
         defaultValue: undefined,
@@ -963,7 +967,6 @@ var ScaleStyle = (function (_super) {
             target.onLabelsOffsetPropertyChanged(oldValue, newValue);
         },
     });
-    ///////////    
     ScaleStyle.labelsSizeProperty = new view_1.Property({
         name: "labelsSize",
         defaultValue: undefined,
@@ -972,7 +975,6 @@ var ScaleStyle = (function (_super) {
             target.onLabelsSizePropertyChanged(oldValue, newValue);
         },
     });
-    /////////    
     ScaleStyle.labelsColorProperty = new view_1.Property({
         name: "labelsColor",
         defaultValue: undefined,
@@ -1006,7 +1008,6 @@ ScaleStyle.labelsLayoutModeProperty.register(ScaleStyle);
 ScaleStyle.labelsOffsetProperty.register(ScaleStyle);
 ScaleStyle.labelsSizeProperty.register(ScaleStyle);
 ScaleStyle.labelsColorProperty.register(ScaleStyle);
-//////////////////////////////////////////////////////
 var IndicatorStyle = (function (_super) {
     __extends(IndicatorStyle, _super);
     function IndicatorStyle() {
@@ -1015,7 +1016,6 @@ var IndicatorStyle = (function (_super) {
     return IndicatorStyle;
 }(GaugeStyleBase));
 exports.IndicatorStyle = IndicatorStyle;
-//////////////////////////////////////////////////
 var NeedleStyle = (function (_super) {
     __extends(NeedleStyle, _super);
     function NeedleStyle() {
@@ -1139,7 +1139,6 @@ NeedleStyle.offsetProperty.register(NeedleStyle);
 NeedleStyle.circleFillColorProperty.register(NeedleStyle);
 NeedleStyle.circleStrokeColorProperty.register(NeedleStyle);
 NeedleStyle.circleStrokeWidthProperty.register(NeedleStyle);
-//////////////////////////////////////////////////////////////
 var BarIndicatorStyle = (function (_super) {
     __extends(BarIndicatorStyle, _super);
     function BarIndicatorStyle() {

@@ -2,6 +2,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var element_registry_1 = require("nativescript-angular/element-registry");
 var _1 = require("./../");
+var listview_1 = require("./../../listview");
 var ListItemContext = (function (_super) {
     __extends(ListItemContext, _super);
     function ListItemContext($implicit, item, index, even, odd) {
@@ -96,8 +97,8 @@ var RadAutoCompleteTextViewComponent = (function () {
         { type: core_1.ViewContainerRef, decorators: [{ type: core_1.Inject, args: [core_1.ViewContainerRef,] },] },
     ]; };
     RadAutoCompleteTextViewComponent.propDecorators = {
-        'setupItemView': [{ type: core_1.Output },],
-        'onItemLoading': [{ type: core_1.HostListener, args: ["itemLoading", ['$event'],] },],
+        "setupItemView": [{ type: core_1.Output },],
+        "onItemLoading": [{ type: core_1.HostListener, args: ["itemLoading", ['$event'],] },],
     };
     return RadAutoCompleteTextViewComponent;
 }());

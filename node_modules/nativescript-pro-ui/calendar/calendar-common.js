@@ -10,8 +10,6 @@ var CalendarViewMode;
     CalendarViewMode.MonthNames = "MonthNames";
     CalendarViewMode.Year = "Year";
     CalendarViewMode.Day = "Day";
-    //    export var YearNumbers = "YearNumbers";
-    //    export var Flow = "Flow";
 })(CalendarViewMode = exports.CalendarViewMode || (exports.CalendarViewMode = {}));
 var SelectionShape;
 (function (SelectionShape) {
@@ -49,53 +47,35 @@ var CalendarTransitionMode;
 /**
  * Font styles
  */
+/**
+ * Font styles
+ */
 var FontStyles;
+/**
+ * Font styles
+ */
 (function (FontStyles) {
-    /**
-    * Regular font style
-    */
     FontStyles.Normal = "Normal";
-    /**
-    * Bold font style
-    */
     FontStyles.Bold = "Bold";
-    /**
-     * Italic font style
-     */
     FontStyles.Italic = "Italic";
-    /**
-     * Combine Bold and Italic styles
-     */
     FontStyles.BoldItalic = "BoldItalic";
 })(FontStyles = exports.FontStyles || (exports.FontStyles = {}));
 /**
 * Defines the alignment options for cells in Calendar component.
 */
+/**
+* Defines the alignment options for cells in Calendar component.
+*/
 var CalendarCellAlignment;
+/**
+* Defines the alignment options for cells in Calendar component.
+*/
 (function (CalendarCellAlignment) {
-    /**
-     The cell content is aligned to left.
-     */
     CalendarCellAlignment.Left = "Left";
-    /**
-     The cell content is aligned to right.
-     */
     CalendarCellAlignment.Right = "Right";
-    /**
-     The cell content is aligned to top.
-     */
     CalendarCellAlignment.Top = "Top";
-    /**
-     The cell content is aligned to bottom.
-     */
     CalendarCellAlignment.Bottom = "Bottom";
-    /**
-     The cell content is aligned horizontally.
-     */
     CalendarCellAlignment.HorizontalCenter = "HorizontalCenter";
-    /**
-     The cell content is aligned vertically.
-     */
     CalendarCellAlignment.VerticalCenter = "VerticalCenter";
 })(CalendarCellAlignment = exports.CalendarCellAlignment || (exports.CalendarCellAlignment = {}));
 ;
@@ -243,9 +223,10 @@ var CalendarEvent = (function () {
     return CalendarEvent;
 }());
 exports.CalendarEvent = CalendarEvent;
-//////////////////////////////////////////////////////////////////////////////////////////
 // <EventDataDefinitions>
-var CalendarViewModeChangedEventData = (function () {
+var 
+// <EventDataDefinitions>
+CalendarViewModeChangedEventData = (function () {
     function CalendarViewModeChangedEventData() {
     }
     return CalendarViewModeChangedEventData;
@@ -483,11 +464,13 @@ CalendarMonthViewStyle.weekNumberCellStyleProperty.register(CalendarMonthViewSty
 CalendarMonthViewStyle.weekendCellStyleProperty.register(CalendarMonthViewStyle);
 CalendarMonthViewStyle.titleCellStyleProperty.register(CalendarMonthViewStyle);
 CalendarMonthViewStyle.inlineEventCellStyleProperty.register(CalendarMonthViewStyle);
-//////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * Style class for Week view mode
  */
-var CalendarWeekViewStyle = (function (_super) {
+var /**
+ * Style class for Week view mode
+ */
+CalendarWeekViewStyle = (function (_super) {
     __extends(CalendarWeekViewStyle, _super);
     function CalendarWeekViewStyle() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -495,7 +478,6 @@ var CalendarWeekViewStyle = (function (_super) {
     return CalendarWeekViewStyle;
 }(CalendarMonthViewStyle));
 exports.CalendarWeekViewStyle = CalendarWeekViewStyle;
-//////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * Style class for Day view mode
  */
@@ -533,7 +515,6 @@ var CalendarDayViewStyle = (function (_super) {
 exports.CalendarDayViewStyle = CalendarDayViewStyle;
 CalendarDayViewStyle.dayEventsViewStyleProperty.register(CalendarDayViewStyle);
 CalendarDayViewStyle.allDayEventsViewStyleProperty.register(CalendarDayViewStyle);
-//////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * Style class for Year view mode
  */
@@ -573,7 +554,6 @@ var CalendarYearViewStyle = (function (_super) {
 exports.CalendarYearViewStyle = CalendarYearViewStyle;
 CalendarYearViewStyle.titleCellStyleProperty.register(CalendarYearViewStyle);
 CalendarYearViewStyle.monthCellStyleProperty.register(CalendarYearViewStyle);
-//////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * Style class for year view with month names only view mode
  */
@@ -734,7 +714,7 @@ var MonthCellStyle = (function (_super) {
             target.onDayTextSizePropertyChanged(oldValue, newValue);
         },
     });
-    // Day name properties    
+    // Day name properties
     MonthCellStyle.dayNameTextColorProperty = new view_1.Property({
         name: "dayNameTextColor",
         defaultValue: undefined,
@@ -763,7 +743,6 @@ var MonthCellStyle = (function (_super) {
             target.onDayNameTextSizePropertyChanged(oldValue, newValue);
         },
     });
-    /// Month name properties    
     MonthCellStyle.monthNameTextColorProperty = new view_1.Property({
         name: "monthNameTextColor",
         defaultValue: undefined,
@@ -810,9 +789,7 @@ MonthCellStyle.monthNameTextColorProperty.register(MonthCellStyle);
 MonthCellStyle.monthNameFontNameProperty.register(MonthCellStyle);
 MonthCellStyle.monthNameFontStyleProperty.register(MonthCellStyle);
 MonthCellStyle.monthNameTextSizeProperty.register(MonthCellStyle);
-//////////////////////////////////////////////// 
-/// Cell styles
-// properties left to implement but available only in iOS :  shapeStroke , shapeFill, shape 
+// properties left to implement but available only in iOS :  shapeStroke , shapeFill, shape
 var CellStyle = (function (_super) {
     __extends(CellStyle, _super);
     function CellStyle() {
@@ -965,8 +942,6 @@ CellStyle.cellTextFontStyleProperty.register(CellStyle);
 CellStyle.cellTextSizeProperty.register(CellStyle);
 CellStyle.cellPaddingHorizontalProperty.register(CellStyle);
 CellStyle.cellPaddingVerticalProperty.register(CellStyle);
-//////////////////////////////////////////////// 
-/// Day Events View style
 var DayEventsViewStyle = (function (_super) {
     __extends(DayEventsViewStyle, _super);
     function DayEventsViewStyle() {
@@ -1095,8 +1070,6 @@ DayEventsViewStyle.timeLabelFontStyleProperty.register(DayEventsViewStyle);
 DayEventsViewStyle.timeLabelTextSizeProperty.register(DayEventsViewStyle);
 DayEventsViewStyle.timeLinesWidthProperty.register(DayEventsViewStyle);
 DayEventsViewStyle.timeLinesColorProperty.register(DayEventsViewStyle);
-//////////////////////////////////////////////// 
-/// All Day View style
 var AllDayEventsViewStyle = (function (_super) {
     __extends(AllDayEventsViewStyle, _super);
     function AllDayEventsViewStyle() {
@@ -1160,9 +1133,7 @@ exports.AllDayEventsViewStyle = AllDayEventsViewStyle;
 AllDayEventsViewStyle.backgroundColorProperty.register(AllDayEventsViewStyle);
 AllDayEventsViewStyle.allDayTextProperty.register(AllDayEventsViewStyle);
 AllDayEventsViewStyle.allDayTextIsVisibleProperty.register(AllDayEventsViewStyle);
-////////////////////////////////////////////////////////////////////////////////////////////////////
 //  DayCellStyle
-////////////////////////////////////////////////////////////////////////////////////////////////////
 // properties available in ios only: allDayEventTextColor, eventAlignment, eventSpacing, eventShape, eventOrientation, stretchEvents, maxEventsCount, wrapEventText
 var DayCellStyle = (function (_super) {
     __extends(DayCellStyle, _super);
@@ -1358,7 +1329,6 @@ InlineEventCellStyle.timeTextColorProperty.register(InlineEventCellStyle);
 InlineEventCellStyle.timeFontNameProperty.register(InlineEventCellStyle);
 InlineEventCellStyle.timeFontStyleProperty.register(InlineEventCellStyle);
 InlineEventCellStyle.timeTextSizeProperty.register(InlineEventCellStyle);
-////////////////////////////////////////////////////////////////////////////////////////////////////
 var RadCalendar = (function (_super) {
     __extends(RadCalendar, _super);
     function RadCalendar() {

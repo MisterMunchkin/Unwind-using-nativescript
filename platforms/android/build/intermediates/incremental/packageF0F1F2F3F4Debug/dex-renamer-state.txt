@@ -1,4 +1,0 @@
-#Sun Dec 24 15:26:20 CST 2017
-base.0=D\:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\transforms\\dex\\F0F1F2F3F4\\debug\\folders\\1000\\1f\\main
-renamed.0=classes.dex
-file.0=D\:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\build\\intermediates\\transforms\\dex\\F0F1F2F3F4\\debug\\folders\\1000\\1f\\main\\classes.dex

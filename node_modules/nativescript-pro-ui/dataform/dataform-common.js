@@ -12,7 +12,13 @@ var knownCollections;
 /*
 * Lists the possible commit modes.
 */
+/*
+* Lists the possible commit modes.
+*/
 var CommitMode;
+/*
+* Lists the possible commit modes.
+*/
 (function (CommitMode) {
     CommitMode.Immediate = "Immediate";
     CommitMode.OnLostFocus = "OnLostFocus";
@@ -21,7 +27,13 @@ var CommitMode;
 /*
 * Lists the possible AutoCompleteInline editor display modes.
 */
+/*
+* Lists the possible AutoCompleteInline editor display modes.
+*/
 var AutoCompleteDisplayMode;
+/*
+* Lists the possible AutoCompleteInline editor display modes.
+*/
 (function (AutoCompleteDisplayMode) {
     AutoCompleteDisplayMode.Plain = "Plain";
     AutoCompleteDisplayMode.Tokens = "Tokens";
@@ -29,7 +41,13 @@ var AutoCompleteDisplayMode;
 /*
 * Lists the possible validation modes.
 */
+/*
+* Lists the possible validation modes.
+*/
 var ValidationMode;
+/*
+* Lists the possible validation modes.
+*/
 (function (ValidationMode) {
     ValidationMode.Immediate = "Immediate";
     ValidationMode.OnLostFocus = "OnLostFocus";
@@ -38,7 +56,13 @@ var ValidationMode;
 /*
 * Lists the possible data form label position modes.
 */
+/*
+* Lists the possible data form label position modes.
+*/
 var DataFormLabelPosition;
+/*
+* Lists the possible data form label position modes.
+*/
 (function (DataFormLabelPosition) {
     DataFormLabelPosition.Left = "Left";
     DataFormLabelPosition.Top = "Top";
@@ -46,7 +70,13 @@ var DataFormLabelPosition;
 /*
 * Lists the possible editors.
 */
+/*
+* Lists the possible editors.
+*/
 var EditorType;
+/*
+* Lists the possible editors.
+*/
 (function (EditorType) {
     EditorType.Text = "Text";
     EditorType.MultilineText = "MultilineText";
@@ -69,7 +99,13 @@ var EditorType;
 /**
  * Font styles
  */
+/**
+ * Font styles
+ */
 var FontStyles;
+/**
+ * Font styles
+ */
 (function (FontStyles) {
     FontStyles.Normal = "Normal";
     FontStyles.Bold = "Bold";
@@ -79,7 +115,10 @@ var FontStyles;
 /**
  * A class that provides common arguments of {@link RadDataForm} events.
  */
-var DataFormEventData = (function () {
+var /**
+ * A class that provides common arguments of {@link RadDataForm} events.
+ */
+DataFormEventData = (function () {
     function DataFormEventData() {
     }
     return DataFormEventData;
@@ -88,13 +127,15 @@ exports.DataFormEventData = DataFormEventData;
 /**
  * A class that provides common arguments of {@link CustomPropertyEditor} events.
  */
-var DataFormCustomPropertyEditorEventData = (function () {
+var /**
+ * A class that provides common arguments of {@link CustomPropertyEditor} events.
+ */
+DataFormCustomPropertyEditorEventData = (function () {
     function DataFormCustomPropertyEditorEventData() {
     }
     return DataFormCustomPropertyEditorEventData;
 }());
 exports.DataFormCustomPropertyEditorEventData = DataFormCustomPropertyEditorEventData;
-///////////////////////////////////////////////////////////////////////////////
 var RadDataForm = (function (_super) {
     __extends(RadDataForm, _super);
     function RadDataForm() {
@@ -354,7 +395,6 @@ RadDataForm.sourceProperty.register(RadDataForm);
 RadDataForm.metadataProperty.register(RadDataForm);
 RadDataForm.groupsProperty.register(RadDataForm);
 RadDataForm.propertiesProperty.register(RadDataForm);
-///////////////////////////////////////////////////////////////////////////////
 var PropertyGroup = (function (_super) {
     __extends(PropertyGroup, _super);
     function PropertyGroup() {
@@ -476,7 +516,6 @@ PropertyGroup.collapsedProperty.register(PropertyGroup);
 PropertyGroup.titleStyleProperty.register(PropertyGroup);
 PropertyGroup.propertiesProperty.register(PropertyGroup);
 PropertyGroup.layoutProperty.register(PropertyGroup);
-///////////////////////////////////////////////////////////////////////////////
 var PropertyEditorParams = (function (_super) {
     __extends(PropertyEditorParams, _super);
     function PropertyEditorParams() {
@@ -527,7 +566,6 @@ exports.PropertyEditorParams = PropertyEditorParams;
 PropertyEditorParams.minimumProperty.register(PropertyEditorParams);
 PropertyEditorParams.maximumProperty.register(PropertyEditorParams);
 PropertyEditorParams.stepProperty.register(PropertyEditorParams);
-///////////////////////////////////////////////////////////////////////////////
 var DataFormStyleBase = (function (_super) {
     __extends(DataFormStyleBase, _super);
     function DataFormStyleBase() {
@@ -643,7 +681,9 @@ DataFormStyleBase.labelTextSizeProperty.register(DataFormStyleBase);
 DataFormStyleBase.labelFontNameProperty.register(DataFormStyleBase);
 DataFormStyleBase.labelFontStyleProperty.register(DataFormStyleBase);
 //todo: add properties for separator Leading/Trailing Space , insets
-var GroupTitleStyle = (function (_super) {
+var 
+//todo: add properties for separator Leading/Trailing Space , insets
+GroupTitleStyle = (function (_super) {
     __extends(GroupTitleStyle, _super);
     function GroupTitleStyle() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -775,19 +815,17 @@ PropertyEditorStyle.labelVerticalOffsetProperty.register(PropertyEditorStyle);
 PropertyEditorStyle.labelHiddenProperty.register(PropertyEditorStyle);
 PropertyEditorStyle.labelPositionProperty.register(PropertyEditorStyle);
 PropertyEditorStyle.labelWidthProperty.register(PropertyEditorStyle);
-////////////////////////////////////////////////////////////////////
-// name : the name of bound entity property  
-// displayName  : the label to be shown for editor  
-// index : the index in group 
-// hidden : boolean for show/hide of editor 
-// readOnly : boolean , read only state 
-// required : boolean , if the value is required. Note: consider to move this to validator 
-// hintText : string, the gray text shown as hint in empty editor 
+// name : the name of bound entity property
+// displayName  : the label to be shown for editor
+// index : the index in group
+// hidden : boolean for show/hide of editor
+// readOnly : boolean , read only state
+// required : boolean , if the value is required. Note: consider to move this to validator
+// hintText : string, the gray text shown as hint in empty editor
 // editor : PropertyEditor derived instance with specific properties for editors
 // valuesProvider : an array or comma separated string with values used by some editors
 // converter : PropertyConverter derived instance with specific properties for data conversion
-// validator : PropertyValidator  
-///////////////////////////////////////////////////////////////////////////////
+// validator : PropertyValidator
 var EntityProperty = (function (_super) {
     __extends(EntityProperty, _super);
     function EntityProperty() {
@@ -1180,10 +1218,9 @@ EntityProperty.readOnlyProperty.register(EntityProperty);
 EntityProperty.requiredProperty.register(EntityProperty);
 EntityProperty.hintTextProperty.register(EntityProperty);
 EntityProperty.imageResourceProperty.register(EntityProperty);
-//////////////////////////////////////////////////////
 // type : tye type of the editor to be used for this property
 // style : EditorStyle instance
-// todo: extend with common editor properties 
+// todo: extend with common editor properties
 var PropertyEditor = (function (_super) {
     __extends(PropertyEditor, _super);
     function PropertyEditor() {
@@ -1328,7 +1365,6 @@ var CustomPropertyEditor = (function (_super) {
     return CustomPropertyEditor;
 }(PropertyEditor));
 exports.CustomPropertyEditor = CustomPropertyEditor;
-//////////////////////////////////////////////////////
 // errorMessage : message on error
 // successMessage : message on success
 var PropertyValidator = (function (_super) {
@@ -1358,6 +1394,7 @@ var PropertyValidator = (function (_super) {
     };
     PropertyValidator.prototype.onErrorMessageChanged = function (oldValue, newValue) {
         if (newValue) {
+            //note: not wise but don't want to overwrite this method in all subclasses
             if (this.ios) {
                 this.ios.errorMessage = newValue;
             }
@@ -1368,6 +1405,7 @@ var PropertyValidator = (function (_super) {
     };
     PropertyValidator.prototype.onSuccessMessageChanged = function (oldValue, newValue) {
         if (newValue) {
+            //note: not wise but don't want to overwrite this method in all subclasses
             if (this.ios) {
                 this.ios.positiveMessage = newValue;
             }
@@ -1598,7 +1636,6 @@ var ValuesProviderMapConverter = (function () {
     return ValuesProviderMapConverter;
 }());
 exports.ValuesProviderMapConverter = ValuesProviderMapConverter;
-///////////////////////////////////////////////////////////////////////////////
 var DataFormLayout = (function (_super) {
     __extends(DataFormLayout, _super);
     function DataFormLayout() {

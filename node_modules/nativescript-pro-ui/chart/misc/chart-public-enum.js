@@ -2,7 +2,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Font styles
  */
+/**
+ * Font styles
+ */
 var FontStyles;
+/**
+ * Font styles
+ */
 (function (FontStyles) {
     FontStyles.Normal = "Normal";
     FontStyles.Bold = "Bold";
@@ -13,7 +19,15 @@ var FontStyles;
 * Lists the possible ways a DateTime value can be interpreted
 * in the context of an axis.
 */
+/*
+* Lists the possible ways a DateTime value can be interpreted
+* in the context of an axis.
+*/
 var DateTimeComponent;
+/*
+* Lists the possible ways a DateTime value can be interpreted
+* in the context of an axis.
+*/
 (function (DateTimeComponent) {
     DateTimeComponent.Second = "Second";
     DateTimeComponent.Minute = "Minute";
@@ -26,62 +40,53 @@ var DateTimeComponent;
 /**
  * Defines whether a single or multiple items (series or points) can be selected in chart.
  */
+/**
+ * Defines whether a single or multiple items (series or points) can be selected in chart.
+ */
 var ChartSelectionMode;
+/**
+ * Defines whether a single or multiple items (series or points) can be selected in chart.
+ */
 (function (ChartSelectionMode) {
-    /**
-     *  Only a single item (series or point) can be selected at a time.
-     */
     ChartSelectionMode.Single = "Single";
-    /**
-     * Multiple series/points can be selected.
-     */
     ChartSelectionMode.Multiple = "Multiple";
-    /**
-     * Selection disabled.
-     */
     ChartSelectionMode.None = "None";
 })(ChartSelectionMode = exports.ChartSelectionMode || (exports.ChartSelectionMode = {}));
 ;
 var ChartAnnotationZPosition;
 (function (ChartAnnotationZPosition) {
-    /**
-    * The annotation is rendered below the series (default).
-    */
     ChartAnnotationZPosition.BelowSeries = "BelowSeries";
-    /**
-    * The annotation is rendered above the series.
-    */
     ChartAnnotationZPosition.AboveSeries = "AboveSeries";
 })(ChartAnnotationZPosition = exports.ChartAnnotationZPosition || (exports.ChartAnnotationZPosition = {}));
 /*
 * Lists the possible use cases for palette entries.
 */
+/*
+* Lists the possible use cases for palette entries.
+*/
 var PaletteEntryUseState;
+/*
+* Lists the possible use cases for palette entries.
+*/
 (function (PaletteEntryUseState) {
-    /**
-     * The palette entry will be used when the series is not selected
-     */
     PaletteEntryUseState.Normal = "Normal";
-    /**
-     * The palette entry will be used when the series is selected
-     */
     PaletteEntryUseState.Selected = "Selected";
 })(PaletteEntryUseState = exports.PaletteEntryUseState || (exports.PaletteEntryUseState = {}));
 var TrackballSnapMode;
 (function (TrackballSnapMode) {
-    /**
-     Only the closest point is selected.
-     */
     TrackballSnapMode.ClosestPoint = "ClosestPoint";
-    /**
-     All points within the specified range are selected.
-     */
     TrackballSnapMode.AllClosestPoints = "AllClosestPoints";
 })(TrackballSnapMode = exports.TrackballSnapMode || (exports.TrackballSnapMode = {}));
 /*
 * Lists the possible values for label fit modes
 */
+/*
+* Lists the possible values for label fit modes
+*/
 var AxisLabelFitMode;
+/*
+* Lists the possible values for label fit modes
+*/
 (function (AxisLabelFitMode) {
     AxisLabelFitMode.None = "None";
     AxisLabelFitMode.Multiline = "Multiline";
@@ -90,7 +95,13 @@ var AxisLabelFitMode;
 /*
 * Lists the possible axis label layout  modes.
 */
+/*
+* Lists the possible axis label layout  modes.
+*/
 var AxisLabelLayoutMode;
+/*
+* Lists the possible axis label layout  modes.
+*/
 (function (AxisLabelLayoutMode) {
     AxisLabelLayoutMode.Outer = "Outer";
     AxisLabelLayoutMode.Inner = "Inner";
@@ -98,7 +109,13 @@ var AxisLabelLayoutMode;
 /*
 * Lists the possible location for a horizontal axis.
 */
+/*
+* Lists the possible location for a horizontal axis.
+*/
 var AxisHorizontalLocation;
+/*
+* Lists the possible location for a horizontal axis.
+*/
 (function (AxisHorizontalLocation) {
     AxisHorizontalLocation.Left = "Left";
     AxisHorizontalLocation.Right = "Right";
@@ -106,7 +123,13 @@ var AxisHorizontalLocation;
 /*
 * Lists the possible locations for a vertical axis.
 */
+/*
+* Lists the possible locations for a vertical axis.
+*/
 var AxisVerticalLocation;
+/*
+* Lists the possible locations for a vertical axis.
+*/
 (function (AxisVerticalLocation) {
     AxisVerticalLocation.Top = "Top";
     AxisVerticalLocation.Bottom = "Bottom";
@@ -114,37 +137,60 @@ var AxisVerticalLocation;
 /*
 * Lists the possible axis plot modes.
 */
+/*
+* Lists the possible axis plot modes.
+*/
 var AxisPlotMode;
+/*
+* Lists the possible axis plot modes.
+*/
 (function (AxisPlotMode) {
     AxisPlotMode.BetweenTicks = "BetweenTicks";
     AxisPlotMode.OnTicks = "OnTicks";
-    //  OnTicksPadded //NOTE: not supported in iOS
 })(AxisPlotMode = exports.AxisPlotMode || (exports.AxisPlotMode = {}));
 /*
 * Defines the different places where the legend can be positioned.
 */
+/*
+* Defines the different places where the legend can be positioned.
+*/
 var ChartLegendPosition;
+/*
+* Defines the different places where the legend can be positioned.
+*/
 (function (ChartLegendPosition) {
-    ChartLegendPosition.Left = "Left"; // The legend is positioned at the left side of the chart.
-    ChartLegendPosition.Right = "Right"; // The legend is positioned at the right side of the chart.
-    ChartLegendPosition.Top = "Top"; // The legend is positioned at the top side of the chart.
-    ChartLegendPosition.Bottom = "Bottom"; // The legend is positioned at the bottom side of the chart.
-    ChartLegendPosition.Floating = "Floating"; // The legend is floating.
+    ChartLegendPosition.Left = "Left";
+    ChartLegendPosition.Right = "Right";
+    ChartLegendPosition.Top = "Top";
+    ChartLegendPosition.Bottom = "Bottom";
+    ChartLegendPosition.Floating = "Floating";
 })(ChartLegendPosition = exports.ChartLegendPosition || (exports.ChartLegendPosition = {}));
 /*
 * Defines the offset origin in case of Floating legend position.
 */
+/*
+* Defines the offset origin in case of Floating legend position.
+*/
 var ChartLegendOffsetOrigin;
+/*
+* Defines the offset origin in case of Floating legend position.
+*/
 (function (ChartLegendOffsetOrigin) {
-    ChartLegendOffsetOrigin.TopLeft = "TopLeft"; // The offset is relative to the top left corner.
-    ChartLegendOffsetOrigin.TopRight = "TopRight"; // The offset is relative to the top right corner.
-    ChartLegendOffsetOrigin.BottomLeft = "BottomLeft"; // The offset is relative to the bottom left corner.
-    ChartLegendOffsetOrigin.BottomRight = "BottomRight"; // The offset is relative to the bottom right corner.
+    ChartLegendOffsetOrigin.TopLeft = "TopLeft";
+    ChartLegendOffsetOrigin.TopRight = "TopRight";
+    ChartLegendOffsetOrigin.BottomLeft = "BottomLeft";
+    ChartLegendOffsetOrigin.BottomRight = "BottomRight";
 })(ChartLegendOffsetOrigin = exports.ChartLegendOffsetOrigin || (exports.ChartLegendOffsetOrigin = {}));
 /*
 * Defines the known properties that are collections. This is used by the XML parser.
 */
+/*
+* Defines the known properties that are collections. This is used by the XML parser.
+*/
 var knownCollections;
+/*
+* Defines the known properties that are collections. This is used by the XML parser.
+*/
 (function (knownCollections) {
     knownCollections.series = "series";
     knownCollections.entries = "entries";
@@ -155,7 +201,13 @@ exports.seriesName = "seriesName";
 /*
 * Lists the possible last label visibility options.
 */
+/*
+* Lists the possible last label visibility options.
+*/
 var AxisLabelVisibility;
+/*
+* Lists the possible last label visibility options.
+*/
 (function (AxisLabelVisibility) {
     AxisLabelVisibility.Visible = "Visible";
     AxisLabelVisibility.Hidden = "Hidden";

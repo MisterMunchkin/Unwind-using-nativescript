@@ -127,6 +127,7 @@ var ChartBaseValueMapper = (function () {
             var entry = newNativeEntries.get(index % newNativeEntries.size());
             var i = currentEntryCollection.size();
             while (i < series.android.getCollectionIndex()) {
+                //ensure that we have at least as many palette entries as number of series we have
                 currentEntryCollection.add(i, entry);
                 ++i;
             }
@@ -416,7 +417,7 @@ var CartesianAxisValueMapper = (function () {
             axis.owner['updatePanZoomBehavior']();
             return;
         }
-        //if owner is series we call its owner 
+        //if owner is series we call its owner
         if (axis.owner.owner instanceof chartCommonModule.RadCartesianChart) {
             axis.owner.owner.updatePanZoomBehavior();
             return;
@@ -489,7 +490,7 @@ var ChartSeriesValueMapper = (function () {
         }
         series.android.setShowLabels(newValue);
     };
-    ChartSeriesValueMapper.prototype.onLegendTitleChanged = function (oldValue, newValue, series) {
+    ChartSeriesValueMapper.prototype.onLegendTitleChanged = function (newValue, series) {
         series.android.setLegendTitle(newValue);
     };
     ChartSeriesValueMapper.prototype.onItemsChanged = function (oldValue, newValue, series) {
@@ -762,7 +763,7 @@ var PieSeriesValueMapper = (function (_super) {
             }
         })));
     };
-    PieSeriesValueMapper.prototype.onLegendTitleChanged = function (oldValue, newValue, series) {
+    PieSeriesValueMapper.prototype.onLegendTitleChanged = function (newValue, series) {
     };
     PieSeriesValueMapper.prototype.onExpandRadiusChanged = function (oldValue, newValue, series) {
         if (isNaN(+newValue) || newValue < 0.0 || newValue > 1.0) {

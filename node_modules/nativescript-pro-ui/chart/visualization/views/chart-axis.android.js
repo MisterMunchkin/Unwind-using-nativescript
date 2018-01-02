@@ -197,10 +197,10 @@ var DateTimeCategoricalAxis = (function (_super) {
     return DateTimeCategoricalAxis;
 }(axisCommonModule.DateTimeCategoricalAxis));
 exports.DateTimeCategoricalAxis = DateTimeCategoricalAxis;
-////////////////////////////////////////////////////////////////////////
 // LogarithmicAxis
-////////////////////////////////////////////////////////////////////////
-var LogarithmicAxis = (function (_super) {
+var 
+// LogarithmicAxis
+LogarithmicAxis = (function (_super) {
     __extends(LogarithmicAxis, _super);
     function LogarithmicAxis() {
         return _super !== null && _super.apply(this, arguments) || this;

@@ -8,7 +8,9 @@ var Trackball = (function (_super) {
     }
     Object.defineProperty(Trackball.prototype, "android", {
         //private _android: com.telerik.widget.chart.visualization.behaviors.ChartTrackBallBehavior;
-        get: function () {
+        get: 
+        //private _android: com.telerik.widget.chart.visualization.behaviors.ChartTrackBallBehavior;
+        function () {
             return this._android;
         },
         set: function (value) {

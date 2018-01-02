@@ -55,7 +55,10 @@ exports.CalendarEvent = CalendarEvent;
 /**
  * Helper methods
  */
-var Tool = (function () {
+var /**
+ * Helper methods
+ */
+Tool = (function () {
     function Tool() {
     }
     Tool.createTypeface = function (name, style) {
@@ -88,7 +91,15 @@ var Tool = (function () {
 /**
  * Enum values identify to what type of cells is related the style object
  */
+//                                          STYLES FOR DIFFERENT CELL TYPES
+/**
+ * Enum values identify to what type of cells is related the style object
+ */
 var CellStyleType;
+//                                          STYLES FOR DIFFERENT CELL TYPES
+/**
+ * Enum values identify to what type of cells is related the style object
+ */
 (function (CellStyleType) {
     CellStyleType[CellStyleType["RegularDayStyle"] = 0] = "RegularDayStyle";
     CellStyleType[CellStyleType["SelectedDayStyle"] = 1] = "SelectedDayStyle";
@@ -296,7 +307,6 @@ var CellStyleInitializer = (function () {
     return CellStyleInitializer;
 }());
 exports.CellStyleInitializer = CellStyleInitializer;
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var CellStyle = (function (_super) {
     __extends(CellStyle, _super);
     function CellStyle() {
@@ -352,12 +362,12 @@ var CellStyle = (function (_super) {
             return;
         }
         if (this._nativeIsYear) {
-            var filter_1 = this.initializer.makeMonthCellFilter();
-            this.android.setFilter(filter_1);
+            var filter = this.initializer.makeMonthCellFilter();
+            this.android.setFilter(filter);
         }
         else {
-            var filter_2 = this.initializer.makeDayCellFilter(cellStyleType, displayMode);
-            this.android.setFilter(filter_2);
+            var filter = this.initializer.makeDayCellFilter(cellStyleType, displayMode);
+            this.android.setFilter(filter);
         }
     };
     CellStyle.prototype.onStyleChanged = function () {
@@ -553,7 +563,6 @@ var AllDayEventsViewStyle = (function (_super) {
     return AllDayEventsViewStyle;
 }(commonModule.AllDayEventsViewStyle));
 exports.AllDayEventsViewStyle = AllDayEventsViewStyle;
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var DayCellStyle = (function (_super) {
     __extends(DayCellStyle, _super);
     function DayCellStyle() {
@@ -636,7 +645,10 @@ var DayCellStyle = (function (_super) {
         }
     };
     //day cell specific properties
-    DayCellStyle.prototype.onShowEventsTextChanged = function (oldValue, newValue) {
+    //day cell specific properties
+    DayCellStyle.prototype.onShowEventsTextChanged = 
+    //day cell specific properties
+    function (oldValue, newValue) {
         if (newValue == undefined || newValue == null || !this.eventAdapter) {
             return;
         }
@@ -672,7 +684,10 @@ exports.DayCellStyle = DayCellStyle;
 /**
  * Cell style class for months in year view mode
  */
-var MonthCellStyle = (function (_super) {
+var /**
+ * Cell style class for months in year view mode
+ */
+MonthCellStyle = (function (_super) {
     __extends(MonthCellStyle, _super);
     function MonthCellStyle() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -874,7 +889,10 @@ exports.MonthCellStyle = MonthCellStyle;
 /**
  * Cell style class for inline events cells in month view
  */
-var InlineEventCellStyle = (function (_super) {
+var /**
+ * Cell style class for inline events cells in month view
+ */
+InlineEventCellStyle = (function (_super) {
     __extends(InlineEventCellStyle, _super);
     function InlineEventCellStyle() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -963,10 +981,10 @@ var InlineEventCellStyle = (function (_super) {
     return InlineEventCellStyle;
 }(commonModule.InlineEventCellStyle));
 exports.InlineEventCellStyle = InlineEventCellStyle;
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                          STYLES FOR DIFFERENT VIEW MODES
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var CalendarStyleInitializer = (function () {
+var 
+//                                          STYLES FOR DIFFERENT VIEW MODES
+CalendarStyleInitializer = (function () {
     function CalendarStyleInitializer() {
     }
     CalendarStyleInitializer.prototype.updateNativeStyles = function (style) {
@@ -1169,7 +1187,10 @@ exports.CalendarStyleInitializer = CalendarStyleInitializer;
 /**
  * Class for month view style
  */
-var CalendarMonthViewStyle = (function (_super) {
+var /**
+ * Class for month view style
+ */
+CalendarMonthViewStyle = (function (_super) {
     __extends(CalendarMonthViewStyle, _super);
     function CalendarMonthViewStyle() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -1214,7 +1235,10 @@ var CalendarMonthViewStyle = (function (_super) {
         style.updateNativeStyleFilters(cellType, com.telerik.widget.calendar.CalendarDisplayMode.Month);
     };
     //properties
-    CalendarMonthViewStyle.prototype.onShowWeekNumbersChanged = function (oldValue, newValue) {
+    //properties
+    CalendarMonthViewStyle.prototype.onShowWeekNumbersChanged = 
+    //properties
+    function (oldValue, newValue) {
         this.initializer.onShowWeekNumbersChanged(oldValue, newValue, this);
     };
     CalendarMonthViewStyle.prototype.onSelectionShapeChanged = function (oldValue, newValue) {
@@ -1266,7 +1290,11 @@ exports.CalendarMonthViewStyle = CalendarMonthViewStyle;
  * The style class for week mode.
  * NOTE: we should consider if we need an explicit class that is the same as the base one
  */
-var CalendarWeekViewStyle = (function (_super) {
+var /**
+ * The style class for week mode.
+ * NOTE: we should consider if we need an explicit class that is the same as the base one
+ */
+CalendarWeekViewStyle = (function (_super) {
     __extends(CalendarWeekViewStyle, _super);
     function CalendarWeekViewStyle() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -1280,7 +1308,10 @@ exports.CalendarWeekViewStyle = CalendarWeekViewStyle;
 /**
  * The style class for day mode.
  */
-var CalendarDayViewStyle = (function (_super) {
+var /**
+ * The style class for day mode.
+ */
+CalendarDayViewStyle = (function (_super) {
     __extends(CalendarDayViewStyle, _super);
     function CalendarDayViewStyle() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -1334,7 +1365,10 @@ var CalendarDayViewStyle = (function (_super) {
         style.updateNativeStyleFilters(cellType, com.telerik.widget.calendar.CalendarDisplayMode.Day);
     };
     //properties
-    CalendarDayViewStyle.prototype.onShowWeekNumbersChanged = function (oldValue, newValue) {
+    //properties
+    CalendarDayViewStyle.prototype.onShowWeekNumbersChanged = 
+    //properties
+    function (oldValue, newValue) {
         this.initializer.onShowWeekNumbersChanged(oldValue, newValue, this);
     };
     CalendarDayViewStyle.prototype.onSelectionShapeChanged = function (oldValue, newValue) {
@@ -1407,7 +1441,10 @@ exports.CalendarDayViewStyle = CalendarDayViewStyle;
 /**
  * The year mode style class
  */
-var CalendarYearViewStyle = (function (_super) {
+var /**
+ * The year mode style class
+ */
+CalendarYearViewStyle = (function (_super) {
     __extends(CalendarYearViewStyle, _super);
     function CalendarYearViewStyle() {
         return _super.call(this) || this;
@@ -1479,7 +1516,10 @@ exports.CalendarYearViewStyle = CalendarYearViewStyle;
 /**
  * The year view mode in compact view
  */
-var CalendarMonthNamesViewStyle = (function (_super) {
+var /**
+ * The year view mode in compact view
+ */
+CalendarMonthNamesViewStyle = (function (_super) {
     __extends(CalendarMonthNamesViewStyle, _super);
     function CalendarMonthNamesViewStyle() {
         return _super.call(this) || this;
@@ -1545,10 +1585,10 @@ var CalendarMonthNamesViewStyle = (function (_super) {
     return CalendarMonthNamesViewStyle;
 }(commonModule.CalendarMonthNamesViewStyle));
 exports.CalendarMonthNamesViewStyle = CalendarMonthNamesViewStyle;
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                              RadCalendar
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var RadCalendar = (function (_super) {
+var 
+//                                              RadCalendar
+RadCalendar = (function (_super) {
     __extends(RadCalendar, _super);
     function RadCalendar() {
         var _this = _super.call(this) || this;
@@ -1686,7 +1726,12 @@ var RadCalendar = (function (_super) {
     };
     //calendarDidNavigateToDate
     //calendarWillNavigateToDate
-    RadCalendar.prototype.addOnDisplayDateChangedListener = function () {
+    //calendarDidNavigateToDate
+    //calendarWillNavigateToDate
+    RadCalendar.prototype.addOnDisplayDateChangedListener = 
+    //calendarDidNavigateToDate
+    //calendarWillNavigateToDate
+    function () {
         var that = new WeakRef(this);
         this._nativeView.setOnDisplayDateChangedListener(new com.telerik.widget.calendar.RadCalendarView.OnDisplayDateChangedListener({
             onDisplayDateChanged: function (oldDate, newDate) {
@@ -1711,7 +1756,10 @@ var RadCalendar = (function (_super) {
         }));
     };
     // calendarDidChangedViewModeFromTo
-    RadCalendar.prototype.addOnDisplayModeChangedListener = function () {
+    // calendarDidChangedViewModeFromTo
+    RadCalendar.prototype.addOnDisplayModeChangedListener = 
+    // calendarDidChangedViewModeFromTo
+    function () {
         var that = new WeakRef(this);
         this._nativeView.setOnDisplayModeChangedListener(new com.telerik.widget.calendar.RadCalendarView.OnDisplayModeChangedListener({
             onDisplayModeChanged: function (oldMode, newMode) {
@@ -1748,7 +1796,14 @@ var RadCalendar = (function (_super) {
     //calendarDidDeselectedDate
     //calendarDidSelectDate
     //calendarShoudlSelectDate
-    RadCalendar.prototype.addOnSelectedDatesChangedListener = function () {
+    //calendarDidDeselectedDate
+    //calendarDidSelectDate
+    //calendarShoudlSelectDate
+    RadCalendar.prototype.addOnSelectedDatesChangedListener = 
+    //calendarDidDeselectedDate
+    //calendarDidSelectDate
+    //calendarShoudlSelectDate
+    function () {
         var that = new WeakRef(this);
         this._nativeView.setOnSelectedDatesChangedListener(new com.telerik.widget.calendar.RadCalendarView.OnSelectedDatesChangedListener({
             onSelectedDatesChanged: function (context) {
@@ -1809,23 +1864,12 @@ var RadCalendar = (function (_super) {
         if (!this.selectedDate || this.parseDate(this.selectedDate).getTime() !== lastSelected.getTime()) {
             this.selectedDate = lastSelected;
         }
-        var selectionAlreadyStarted = false;
-        // range selection starts one day after the first date
-        if (this.selectedDateRange && this.parseDate(this.selectedDateRange.endDate).getTime() === (firstSelected.getTime() - 1000 * 60 * 60 * 24)) {
-            selectionAlreadyStarted = true;
-        }
-        if (!this.selectedDateRange || this.parseDate(this.selectedDateRange.endDate).getTime() !== lastSelected.getTime()) {
+        if (!this.selectedDateRange ||
+            this.parseDate(this.selectedDateRange.endDate).getTime() !== lastSelected.getTime() ||
+            this.parseDate(this.selectedDateRange.startDate).getTime() !== firstSelected.getTime()) {
             this.selectedDateRange = new commonModule.DateRange(firstSelected, lastSelected);
         }
         this._forbidNativeSelection = false;
-        if (firstSelected.getTime() !== lastSelected.getTime() && !selectionAlreadyStarted) {
-            var firstSelectedArgs = {
-                eventName: commonModule.RadCalendar.dateSelectedEvent,
-                object: calendar,
-                date: firstSelected
-            };
-            calendar.notify(firstSelectedArgs);
-        }
         var lastSelectedArgs = {
             eventName: commonModule.RadCalendar.dateSelectedEvent,
             object: calendar,
@@ -1837,7 +1881,12 @@ var RadCalendar = (function (_super) {
     //NOTE: Since calendar is not created during xml parsing, we have setters for properties and call them from createUI & property changed handlers.
     ///////////////////////////////////////////////////////////////////////////////////////////
     //Native setters - it's assumed that this.android is initialized, so call these methods after createUI is already called
-    RadCalendar.prototype.setNativeViewMode = function (mode) {
+    //NOTE: Since calendar is not created during xml parsing, we have setters for properties and call them from createUI & property changed handlers.
+    //Native setters - it's assumed that this.android is initialized, so call these methods after createUI is already called
+    RadCalendar.prototype.setNativeViewMode = 
+    //NOTE: Since calendar is not created during xml parsing, we have setters for properties and call them from createUI & property changed handlers.
+    //Native setters - it's assumed that this.android is initialized, so call these methods after createUI is already called
+    function (mode) {
         if (mode) {
             var bSetYearMode = false;
             var nativeMode = null;
@@ -1994,7 +2043,10 @@ var RadCalendar = (function (_super) {
     };
     ///////////////////////////////////////////////////////////////////////////////////////////
     //Property changed handlers
-    RadCalendar.prototype.onViewModeChanged = function (oldValue, newValue) {
+    //Property changed handlers
+    RadCalendar.prototype.onViewModeChanged = 
+    //Property changed handlers
+    function (oldValue, newValue) {
         if (this._nativeView) {
             this.setNativeViewMode(newValue);
         }
@@ -2082,7 +2134,10 @@ var RadCalendar = (function (_super) {
     };
     ///////////////////////////////////////////////////////////////////////////////////////////
     //Helper methods
-    RadCalendar.prototype.reload = function () {
+    //Helper methods
+    RadCalendar.prototype.reload = 
+    //Helper methods
+    function () {
         if (this._nativeView) {
             this._nativeView.invalidate();
         }

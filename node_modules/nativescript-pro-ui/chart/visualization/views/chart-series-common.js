@@ -7,18 +7,30 @@ var view_1 = require("tns-core-modules/ui/core/view");
 /**
  * Defines the selection modes of series.
  */
+/**
+ * Defines the selection modes of series.
+ */
 var SeriesSelectionMode;
+/**
+ * Defines the selection modes of series.
+ */
 (function (SeriesSelectionMode) {
-    SeriesSelectionMode.None = "None"; // Series selection disabled.
-    SeriesSelectionMode.NotSet = "NotSet"; // Series selection not set. Use the chart selection.
-    SeriesSelectionMode.Series = "Series"; // Select the whole series.
-    SeriesSelectionMode.DataPoint = "DataPoint"; // Select a single data point.
-    SeriesSelectionMode.DataPointMultiple = "DataPointMultiple"; // Select multiple points.
+    SeriesSelectionMode.None = "None";
+    SeriesSelectionMode.NotSet = "NotSet";
+    SeriesSelectionMode.Series = "Series";
+    SeriesSelectionMode.DataPoint = "DataPoint";
+    SeriesSelectionMode.DataPointMultiple = "DataPointMultiple";
 })(SeriesSelectionMode = exports.SeriesSelectionMode || (exports.SeriesSelectionMode = {}));
 /*
 * Lists the possible categorical series combination modes.
 */
+/*
+* Lists the possible categorical series combination modes.
+*/
 var SeriesStackMode;
+/*
+* Lists the possible categorical series combination modes.
+*/
 (function (SeriesStackMode) {
     SeriesStackMode.None = "None";
     SeriesStackMode.Stack = "Stack";
@@ -98,7 +110,6 @@ var ChartSeries = (function (_super) {
         this.initializer.onShowLabelsChanged(oldValue, newValue, this);
     };
     ChartSeries.prototype.onLegendTitleChanged = function (oldValue, newValue) {
-        this.initializer.onLegendTitleChanged(oldValue, newValue, this);
     };
     ChartSeries.prototype.onItemsChanged = function (oldValue, newValue) {
         this.initializer.onItemsChanged(oldValue, newValue, this);

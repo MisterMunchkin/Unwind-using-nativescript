@@ -293,7 +293,6 @@ var SubtitleStyle = (function (_super) {
     return SubtitleStyle;
 }(commonModule.SubtitleStyle));
 exports.SubtitleStyle = SubtitleStyle;
-/////////////////////////// INDICATORS
 var RadialNeedle = (function (_super) {
     __extends(RadialNeedle, _super);
     function RadialNeedle() {

@@ -2,7 +2,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Represents the main
  */
-var RadFeedback = (function () {
+var /**
+ * Represents the main
+ */
+RadFeedback = (function () {
     function RadFeedback() {
     }
     RadFeedback.init = function (apiKey, serviceUri, uid) {

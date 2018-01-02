@@ -4,10 +4,9 @@ var _1 = require("./../");
 var element_registry_1 = require("nativescript-angular/element-registry");
 var observable_array_1 = require("tns-core-modules/data/observable-array");
 var RadCalendarComponent = (function () {
-    function RadCalendarComponent(_elementRef, _iterableDiffers, _cdr) {
+    function RadCalendarComponent(_elementRef, _iterableDiffers) {
         this._elementRef = _elementRef;
         this._iterableDiffers = _iterableDiffers;
-        this._cdr = _cdr;
         this.doCheckDelay = 5;
         this._calendar = _elementRef.nativeElement;
     }
@@ -19,7 +18,7 @@ var RadCalendarComponent = (function () {
                 needDiffer = false;
             }
             if (needDiffer && !this._differ && CollectionUtils.isListLikeIterable(value)) {
-                this._differ = this._iterableDiffers.find(this._eventSource).create(this._cdr, function (index, item) { return item; });
+                this._differ = this._iterableDiffers.find(this._eventSource).create(function (index, item) { return item; });
             }
             this._calendar.eventSource = this._eventSource;
         },
@@ -58,17 +57,18 @@ var RadCalendarComponent = (function () {
     RadCalendarComponent.ctorParameters = function () { return [
         { type: core_1.ElementRef, decorators: [{ type: core_1.Inject, args: [core_1.ElementRef,] },] },
         { type: core_1.IterableDiffers, decorators: [{ type: core_1.Inject, args: [core_1.IterableDiffers,] },] },
-        { type: core_1.ChangeDetectorRef, decorators: [{ type: core_1.Inject, args: [core_1.ChangeDetectorRef,] },] },
     ]; };
     RadCalendarComponent.propDecorators = {
-        'eventSource': [{ type: core_1.Input },],
+        "eventSource": [{ type: core_1.Input },],
     };
     return RadCalendarComponent;
 }());
 exports.RadCalendarComponent = RadCalendarComponent;
 ////////////////////
 // Copied from angular 2 @angular/common/src/facade/collection
+// Copied from angular 2 @angular/common/src/facade/collection
 var CollectionUtils;
+// Copied from angular 2 @angular/common/src/facade/collection
 (function (CollectionUtils) {
     function isPresent(obj) {
         return obj !== undefined && obj !== null;
@@ -108,11 +108,11 @@ var CollectionUtils;
             return false;
         return isArray(obj) ||
             (!(obj instanceof Map) &&
+                // JS Map are iterables but return entries as [k, v]
                 getSymbolIterator() in obj); // JS Iterable have a Symbol.iterator prop
     }
     CollectionUtils.isListLikeIterable = isListLikeIterable;
 })(CollectionUtils || (CollectionUtils = {}));
-////////////////////
 exports.CALENDAR_DIRECTIVES = [RadCalendarComponent];
 element_registry_1.registerElement("RadCalendar", function () { return _1.RadCalendar; });
 var NativeScriptUICalendarModule = (function () {

@@ -3,6 +3,7 @@ var core_1 = require("@angular/core");
 var __1 = require("./..");
 var page_1 = require("tns-core-modules/ui/page");
 var element_registry_1 = require("nativescript-angular/element-registry");
+var sideDrawerModule = require("./..");
 var TKDRAWERCONTENT = "TKDrawerContent";
 var TKMAINCONTENT = "TKMainContent";
 var RadSideDrawerComponent = (function () {
@@ -99,11 +100,11 @@ var RadSideDrawerComponent = (function () {
         { type: core_1.ViewContainerRef, decorators: [{ type: core_1.Inject, args: [core_1.ViewContainerRef,] },] },
     ]; };
     RadSideDrawerComponent.propDecorators = {
-        'drawerOpening': [{ type: core_1.Output },],
-        'drawerOpen': [{ type: core_1.Output },],
-        'drawerClosing': [{ type: core_1.Output },],
-        'drawerClosed': [{ type: core_1.Output },],
-        'transition': [{ type: core_1.Input },],
+        "drawerOpening": [{ type: core_1.Output },],
+        "drawerOpen": [{ type: core_1.Output },],
+        "drawerClosing": [{ type: core_1.Output },],
+        "drawerClosed": [{ type: core_1.Output },],
+        "transition": [{ type: core_1.Input },],
     };
     return RadSideDrawerComponent;
 }());
@@ -142,27 +143,30 @@ var TKMainContentDirective = (function () {
     return TKMainContentDirective;
 }());
 exports.TKMainContentDirective = TKMainContentDirective;
+var ɵ0 = function (parent, child) {
+    var drawer = parent;
+    var childView = child;
+    if (childView.id == TKMAINCONTENT) {
+        drawer.mainContent = childView;
+    }
+    if (childView.id == TKDRAWERCONTENT) {
+        drawer.drawerContent = childView;
+    }
+}, ɵ1 = function (parent, child) {
+    var drawer = parent;
+    var childView = child;
+    if (childView.id == TKMAINCONTENT) {
+        drawer.mainContent = null;
+    }
+    if (childView.id == TKDRAWERCONTENT) {
+        drawer.drawerContent = null;
+    }
+};
+exports.ɵ0 = ɵ0;
+exports.ɵ1 = ɵ1;
 var sideDrawerMeta = {
-    insertChild: function (parent, child) {
-        var drawer = parent;
-        var childView = child;
-        if (childView.id == TKMAINCONTENT) {
-            drawer.mainContent = childView;
-        }
-        if (childView.id == TKDRAWERCONTENT) {
-            drawer.drawerContent = childView;
-        }
-    },
-    removeChild: function (parent, child) {
-        var drawer = parent;
-        var childView = child;
-        if (childView.id == TKMAINCONTENT) {
-            drawer.mainContent = null;
-        }
-        if (childView.id == TKDRAWERCONTENT) {
-            drawer.drawerContent = null;
-        }
-    },
+    insertChild: ɵ0,
+    removeChild: ɵ1,
 };
 exports.SIDEDRAWER_DIRECTIVES = [RadSideDrawerComponent, TKDrawerContentDirective, TKMainContentDirective];
 element_registry_1.registerElement("RadSideDrawer", function () { return __1.RadSideDrawer; }, sideDrawerMeta);

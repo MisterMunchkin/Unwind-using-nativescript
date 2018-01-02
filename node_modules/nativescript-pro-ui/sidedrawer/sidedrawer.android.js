@@ -101,7 +101,7 @@ var RadSideDrawer = (function (_super) {
     };
     RadSideDrawer.prototype.initDrawer = function () {
         this._android = new com.telerik.android.primitives.widget.sidedrawer.RadSideDrawer(this._context);
-        if (this.getSdkVersion() >= 21) {
+        if (this.getSdkVersion() >= 21 && this.showOverNavigation) {
             this._android.setZ(1100);
         }
         var that = new WeakRef(this);
