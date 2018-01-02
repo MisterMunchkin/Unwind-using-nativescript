@@ -1,0 +1,4 @@
+<Page class="page-content" loaded="onloaded">
+    <Label class="page-icon fa" text="&#xf1ea;"></Label>
+    <Label class="page-placeholder" text="services list"></Label>
+</Page>

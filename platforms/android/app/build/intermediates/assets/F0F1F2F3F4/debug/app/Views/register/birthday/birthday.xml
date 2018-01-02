@@ -1,0 +1,11 @@
+<Page class="page" loaded="onLoaded" xmlns:dd="nativescript-drop-down">
+
+    <StackLayout orientation="vertical" class="inputForm">
+        <Label class="pageLabel" text="Enter Your Birthday" />
+        <DatePicker id="birthdate" class="datePicker" hint="birthday" day="15" month="5" year="1992" verticalAlignment="center" 
+        horizontalAlignment="center" />
+
+        <Button class="blue-btn" text="next" tap="nextTap"/>
+        <!--<Button class="w-outline-btn" text="already have an account?" tap="signin"/>-->
+    </StackLayout>
+</Page>

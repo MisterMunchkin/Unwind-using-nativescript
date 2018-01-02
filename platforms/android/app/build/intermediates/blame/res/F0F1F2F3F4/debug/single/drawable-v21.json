@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\pressable_item_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\d3fb7ad24eed4cd43a357601529bd2ce9e44fc8b\\output\\res\\drawable-v21\\pressable_item_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\drawable-v21\\avd_show_password.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_bg_normal.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\7349bc8ca9adc0372829559c7b737593a13ad758\\output\\res\\drawable-v21\\autocomplete_bg_normal.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_focusable_bg.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\7349bc8ca9adc0372829559c7b737593a13ad758\\output\\res\\drawable-v21\\autocomplete_focusable_bg.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\drawable-v21\\avd_hide_password.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_bg_active.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\7349bc8ca9adc0372829559c7b737593a13ad758\\output\\res\\drawable-v21\\autocomplete_bg_active.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\drawable-v21\\design_password_eye.xml"
+    }
+]

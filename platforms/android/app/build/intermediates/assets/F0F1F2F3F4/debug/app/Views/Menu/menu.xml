@@ -1,0 +1,41 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"   
+        loaded="onloaded" xmlns:FAB="nativescript-floatingactionbutton"
+    xmlns:lv="nativescript-pro-ui/listview">
+    <GridLayout rows="*, *">
+        <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
+            <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
+            row="1" itemTap="itemTap"> 
+
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                </lv:RadListView.listViewLayout>
+
+                <lv:RadListView.itemTemplate>
+                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                        <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
+                        <StackLayout row="0" col="1" >
+
+                            <Label text="{{ name }}" class="list-group-item-heading" />
+                            <Label text="{{ description }}" class="list-group-item-text" />
+                            <Label text="{{ price }}" class="list-group-item-text" />
+                            
+                        </StackLayout>
+                        </GridLayout> 
+                </lv:RadListView.itemTemplate>
+            </lv:RadListView>
+            <!--<FAB:fab tap="fabTap"
+                row="1"           
+                
+                class="fab-button" />-->
+        </StackLayout>
+      
+            <FAB:fab tap="fabTap"
+            row="1"
+            icon="res://ic_cart_outline_white_48dp"
+            class="fab-button" />
+        
+    </GridLayout>
+ 
+</Page>
+

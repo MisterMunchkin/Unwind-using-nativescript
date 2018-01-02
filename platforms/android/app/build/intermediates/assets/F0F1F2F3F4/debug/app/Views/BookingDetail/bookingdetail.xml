@@ -1,0 +1,11 @@
+<Page class="page-content" loaded="onloaded">
+    <StackLayout orientation="vertical">
+        <Label class="page-icon fa" text="&#xf1ea;"></Label>
+        <Label class="page-placeholder" text="{{ message }}"></Label>
+
+        <Label  id="resDateLabel"></Label>
+        <Button text="{{ cancelText }}" id="cancelBookingID" tap="66cancelUncancelTap" visibility="{{ cancelVisible }}" isEnabled = "{{ cancelisEnabled }}"/>
+        <Button text="Check In" tap="checkinButton" id="checkinButtonID" visibility="{{ checkinVisible }}" isEnabled = "{{ checkinisEnabled }}"/>
+        <Button tap="checkoutButton" text="Check Out" visibility="{{ checkoutVisible }}"/>
+    </StackLayout>
+</Page>
