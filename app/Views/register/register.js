@@ -3,7 +3,7 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var observable = require("data/observable");
 var viewModule = require("ui/core/view");
-
+var wrapLayoutModule = require("tns-core-modules/ui/layouts/wrap-layout");
 //var observableArray = require("data/observable-array");
 //var pageData = new observable.Observable();
 
@@ -21,6 +21,10 @@ var guest = {
 
 exports.loaded = function(args){
     page = args.object;
+
+    page.bindingContext = {
+        requiredNotif: "collapse"
+    }
     
     console.log("<<<<<register page>>>>>");
 
@@ -51,11 +55,13 @@ exports.nextTap = function(){
         page.getViewById("fname").class = "requiredFields";
         page.getViewById("lname").class = "requiredFields";
         page.getViewById("MI").class = "requiredFields";
+
+        page.bindingContext = {
+            requiredNotif: "visible"
+        }
     }
 }
 exports.AccountCreate = function(){
-
-    
     guest.email = page.getViewById("email").text;
     guest.password = page.getViewById("password").text;
     guest.fname = page.getViewById("fname").text;

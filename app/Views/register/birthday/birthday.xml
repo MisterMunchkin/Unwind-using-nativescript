@@ -1,18 +1,11 @@
-<Page loaded="onLoaded" xmlns:dd="nativescript-drop-down">
-    <ScrollView orientation="vertical">
-        <StackLayout orientation="vertical">
-            <Label text="Enter Your Birthday" />
-            <DatePicker id="birthdate" hint="birthday" day="15" month="5" year="1992" verticalAlignment="center" 
-            horizontalAlignment="center" />
+<Page class="page" loaded="onLoaded" xmlns:dd="nativescript-drop-down">
 
-           <!-- <TextField hint="contact number" id="contact_no" keyboardType = "number"/>
-            <Label text="enter birthday"/>
+    <StackLayout orientation="vertical" class="inputForm">
+        <Label class="pageLabel" text="Enter Your Birthday" />
+        <DatePicker id="birthdate" class="datePicker" hint="birthday" day="15" month="5" year="1992" verticalAlignment="center" 
+        horizontalAlignment="center" />
 
-            <TextField hint="Email Address" keyboardType="email" id="email" autocorrect="false" autocapitalizationType="none" />
-            <TextField hint="Password" id="password" secure="true" />-->
-
-            <Button class="blue-btn" text="next" tap="nextTap"/>
-            <!--<Button class="w-outline-btn" text="already have an account?" tap="signin"/>-->
-        </StackLayout>
-    </ScrollView>
+        <Button class="blue-btn" text="next" tap="nextTap"/>
+        <!--<Button class="w-outline-btn" text="already have an account?" tap="signin"/>-->
+    </StackLayout>
 </Page>

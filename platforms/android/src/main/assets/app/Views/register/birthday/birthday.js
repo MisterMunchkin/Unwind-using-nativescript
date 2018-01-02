@@ -12,6 +12,15 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
 
     pageDataContext = page.navigationContext;
 
+    var curDate = new Date();
+
+    var datePicker = page.getViewById("birthdate");
+
+    var yearLimit = parseInt(curDate.getFullYear()) - 10;
+    console.log("current date year: " + curDate.getFullYear());
+    console.log("year limit: " + yearLimit);
+    datePicker.minDate = new Date(1920, 11, 31);
+    datePicker.maxDate = new Date(yearLimit, 11, 31);
 };
 
 exports.nextTap = function(){

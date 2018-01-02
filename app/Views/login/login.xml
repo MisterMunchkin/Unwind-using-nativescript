@@ -1,6 +1,9 @@
 <Page class="page" loaded="loaded">
 
-    
+    <Page.actionBar>
+        <ActionBar class="page" title="Login">
+        </ActionBar>
+    </Page.actionBar>
     <StackLayout class="inputForm" orientation="vertical">
         <Label text="Image here" />
 

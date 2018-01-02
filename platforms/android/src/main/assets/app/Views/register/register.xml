@@ -1,13 +1,15 @@
 <Page class="page" loaded="loaded" xmlns:dd="nativescript-drop-down">
     <Page.actionBar>
-        <ActionBar title="Register">
+        <ActionBar class="page" title="Register">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
 
     <StackLayout orientation="vertical" class="inputForm" >
         <Label text="Enter Name Information" class="label pageLabel" />
-
+        <WrapLayout>
+            <Label text="enter first name, last name, and middle initial" style="color: red" visibility="{{ requiredNotif }}" />
+        </WrapLayout>
         <Label text="First Name" class="label" />
         <TextField class="input" id="fname" />
         

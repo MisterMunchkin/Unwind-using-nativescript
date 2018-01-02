@@ -12,36 +12,51 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
 
     pageDataContext = page.navigationContext;
 
+    page.bindingContext = {
+        ValidEmail: "collapse"
+    }
+
 };
 
 exports.nextTap = function(){
-   var email = page.getViewById("email").text;
+   var email = page.getViewById("email");
+    console.log("email: " + page.getViewById("email").text);
 
-    console.log("first name: " + pageDataContext.firstName);
-    console.log("last name: " + pageDataContext.lastName);
-    console.log("middle initial: " + pageDataContext.MI);
-    console.log("birthdate: " + pageDataContext.birthday);
-    console.log("contact number: " + pageDataContext.contact_no);
-    console.log("gender: " + pageDataContext.gender);
-    console.log("password: " + pageDataContext.password);
-    console.log("email: " + email);
+    if(email.text != ""){
+        if(emailValid(email.text) == "true"){
+            console.log("first name: " + pageDataContext.firstName);
+            console.log("last name: " + pageDataContext.lastName);
+            console.log("middle initial: " + pageDataContext.MI);
+            console.log("birthdate: " + pageDataContext.birthday);
+            console.log("contact number: " + pageDataContext.contact_no);
+            console.log("gender: " + pageDataContext.gender);
+            console.log("password: " + pageDataContext.password);
+            console.log("email: " + email.text);
 
-    /*var requestObject = {email: email, password: password, 
-        fname: guest.fname, lname: guest.lname, MI: guest.MI, birthdate: guest.birthdate,
-    gender: guest.gender, contact_no: guest.contact_no};   
+            /*var requestObject = {email: email, password: password, 
+                fname: guest.fname, lname: guest.lname, MI: guest.MI, birthdate: guest.birthdate,
+            gender: guest.gender, contact_no: guest.contact_no};   
 
-    //loader.show(options); var of Loader.js, find a way to include it in this script
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/register/register.php", {
-    method: "POST",
-    body: formEncode(requestObject)
-    }).then(function(response){
+            //loader.show(options); var of Loader.js, find a way to include it in this script
+            fetchModule.fetch("https://unwindv2.000webhostapp.com/register/register.php", {
+            method: "POST",
+            body: formEncode(requestObject)
+            }).then(function(response){
 
-    then(response);
+            then(response);
 
-    }, function(error){
-    console.log(JSON.stringify(error));
-    })*/
+            }, function(error){
+            console.log(JSON.stringify(error));
+            })*/
+        }else{
+            page.bindingContext = {
+                ValidEmail: "visible"
+            }
+        }
+    }else{
+        email.class = "requiredFields";
 
+    }
 }
 
 function then(response){
@@ -62,6 +77,9 @@ function then(response){
     page.getViewById("gender").text = "";
     page.getViewById("contact_no").text = "";
     
+}
+function emailValid(email){
+    //regex for email here
 }
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];
