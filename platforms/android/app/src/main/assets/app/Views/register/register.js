@@ -35,7 +35,7 @@ exports.onNavBtnTap = function(){
    topmost.navigate("Views/login/login");
 }
 exports.nextTap = function(){
-    if(page.getViewById("fname").text != "" && page.getViewById("lname").text != "" && page.getViewById("MI").text){
+    if(page.getViewById("fname").text != "" && page.getViewById("lname").text != ""){
         var navigationOptions = {
             moduleName: "Views/register/birthday/birthday",
             context: {
@@ -54,7 +54,7 @@ exports.nextTap = function(){
         console.log("enter credentials");
         page.getViewById("fname").class = "requiredFields";
         page.getViewById("lname").class = "requiredFields";
-        page.getViewById("MI").class = "requiredFields";
+     
 
         page.bindingContext = {
             requiredNotif: "visible"

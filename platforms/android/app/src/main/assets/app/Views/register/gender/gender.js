@@ -31,13 +31,11 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
 
     pageData.set("items", items);
 };
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
+   topmost.navigate("Views/login/login");
+}
 
-/*exports.onItemTap = function(args){
-    var tappedView = args.view;
-    var tappedItem = tappedView.bindingContext;
-
-    gender = tappedItem.GenderName;
-}*/
 exports.itemSelected = function(args){
     var tappedView = args.view;
     var tappedItem = tappedView.bindingContext;

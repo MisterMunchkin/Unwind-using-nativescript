@@ -1,6 +1,6 @@
 <Page class="page" loaded="loaded" xmlns:dd="nativescript-drop-down">
     <Page.actionBar>
-        <ActionBar class="page" title="Register">
+        <ActionBar class="label page" title="Register">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>

@@ -1,6 +1,12 @@
 <Page class="page" loaded="onLoaded" 
     xmlns:lv="nativescript-pro-ui/listview">
 
+    <Page.actionBar>
+        <ActionBar class="page" title="Gender">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
+    
     <StackLayout class="inputForm" orientation="vertical">
         <!-- should add a list picker here of countries 
         

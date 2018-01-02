@@ -23,6 +23,10 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
     datePicker.maxDate = new Date(yearLimit, 11, 31);
 };
 
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
+   topmost.navigate("Views/login/login");
+}
 exports.nextTap = function(){
     var birthday = BirthdateFormat();
   

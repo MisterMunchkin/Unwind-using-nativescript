@@ -1,5 +1,9 @@
 <Page class="page" loaded="onLoaded" xmlns:dd="nativescript-drop-down">
-
+    <Page.actionBar>
+        <ActionBar class="label page" title="Contact Number">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
     <StackLayout orientation="vertical" class="inputForm">
         <!-- should add a list picker here of countries -->
         <Label class="label pageLabel" text="Enter Your Mobile Number" />
