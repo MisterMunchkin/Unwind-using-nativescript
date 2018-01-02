@@ -7,8 +7,9 @@
         
         <Label class="label" text="Gender" />-->
         <Label class="label pageLabel" text="Enter Your Gender" />
+
         <!--<TextField class="input" id="gender" keyboardType = "number"/>-->
-        <lv:RadListView id="listview"  itemTap="onItemTap" 
+        <lv:RadListView id="listview"  itemSelected="itemSelected" itemDeselected="itemDeselected" 
             selectionBehavior="Press" items="{{ items }}" class="listviewPadding list-group"> 
                 <lv:RadListView.listViewLayout>
                     <lv:ListViewGridLayout scrollDirection="Vertical" />

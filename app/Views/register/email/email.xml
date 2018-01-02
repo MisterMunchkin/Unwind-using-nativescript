@@ -1,8 +1,9 @@
 <Page class="page" loaded="onLoaded" xmlns:dd="nativescript-drop-down">
 
     <StackLayout class="inputForm" orientation="vertical">
-        <Label class="EnterValidEmail" text="Enter valid email" visibility="{{ ValidEmail }}" />
+        
         <Label class="label pageLabel" text="Enter Email" />
+        <Label class="EnterValidEmail" text="Enter valid email" visibility="{{ ValidEmail }}" />
         <TextField class="input" keyboardType="email" id="email" autocorrect="false" autocapitalizationType="none" />
 
         <Button class="blue-btn" text="submit" tap="nextTap"/>

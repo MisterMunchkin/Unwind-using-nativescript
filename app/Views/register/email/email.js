@@ -23,7 +23,7 @@ exports.nextTap = function(){
     console.log("email: " + page.getViewById("email").text);
 
     if(email.text != ""){
-        if(emailValid(email.text) == "true"){
+        if(validateEmail(email.text) == true){
             console.log("first name: " + pageDataContext.firstName);
             console.log("last name: " + pageDataContext.lastName);
             console.log("middle initial: " + pageDataContext.MI);
@@ -78,8 +78,11 @@ function then(response){
     page.getViewById("contact_no").text = "";
     
 }
-function emailValid(email){
-    //regex for email here
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    console.log("email validation return: " + re.test(email.toLowerCase()));
+
+    return re.test(email.toLowerCase());
 }
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];
