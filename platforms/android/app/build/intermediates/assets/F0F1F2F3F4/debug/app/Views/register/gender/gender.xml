@@ -1,17 +1,39 @@
-<Page class="page" loaded="onLoaded" xmlns:dd="nativescript-drop-down">
+<Page class="page" loaded="onLoaded" 
+    xmlns:lv="nativescript-pro-ui/listview">
 
+    <Page.actionBar>
+        <ActionBar class="label page" title="Gender">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
+    
     <StackLayout class="inputForm" orientation="vertical">
-        <!-- should add a list picker here of countries -->
-        <Label class="label pageLabel" text="Enter Your Gender" />
+        <!-- should add a list picker here of countries 
         
-        <Label class="label" text="Gender" />
-        <TextField class="input" id="gender" keyboardType = "number"/>
+        
+        <Label class="label" text="Gender" />-->
+        <Label class="label pageLabel" text="Enter Your Gender" />
 
-        <!-- <TextField hint="Email Address" keyboardType="email" id="email" autocorrect="false" autocapitalizationType="none" />
-        <TextField hint="Password" id="password" secure="true" />-->
+        <!--<TextField class="input" id="gender" keyboardType = "number"/>-->
+        <lv:RadListView id="listview"  itemSelected="itemSelected" itemDeselected="itemDeselected" 
+            selectionBehavior="Press" items="{{ items }}" class="listviewPadding list-group"> 
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewGridLayout scrollDirection="Vertical" />
+                </lv:RadListView.listViewLayout>
+
+                <lv:RadListView.itemTemplate>
+                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                        <StackLayout row="0" col="1">
+                            <Label text="{{ GenderName }}" class="label list-group-item-heading" />
+                            
+                        </StackLayout>
+                    </GridLayout>
+                </lv:RadListView.itemTemplate>
+
+        </lv:RadListView>
 
         <Button class="blue-btn" text="next" tap="nextTap"/>
-        <!--<Button class="w-outline-btn" text="already have an account?" tap="signin"/>-->
+        
     </StackLayout>
 
 </Page>

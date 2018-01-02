@@ -1,6 +1,6 @@
 <Page class="page" loaded="onLoaded" xmlns:dd="nativescript-drop-down">
     <Page.actionBar>
-        <ActionBar class="page" title="Contact Number">
+        <ActionBar class="label page" title="Contact Number">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>

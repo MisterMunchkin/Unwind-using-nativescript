@@ -12,13 +12,15 @@ Feel free to customize layouts and components to change how the tab view looks.
 
             <lv:RadListView id="listview"  itemTap="onItemTap" selectionBehavior="Press" items="{{ items }}" class="list-group"> 
                 <lv:RadListView.listViewLayout>
-                    <lv:ListViewGridLayout scrollDirection="Vertical"  spanCount="2" />
+                    <lv:ListViewLinearLayout scrollDirection="Vertical"  />
                 </lv:RadListView.listViewLayout>
 
                 <lv:RadListView.itemTemplate>
-                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                        <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />
-                        <StackLayout row="0" col="1">
+                    <GridLayout class="list-group-item" rows="48, *" >
+                        <StackLayout row="0">
+                            <Image  src="{{ itemImage }}" stretch="fit" />
+                        </StackLayout>
+                        <StackLayout row="1">
                             <Label text="{{ pageName }}" class="list-group-item-heading" />
                             <Label text="{{ pageDesc }}" textWrap="true" class="list-group-item-text" />
                         </StackLayout>

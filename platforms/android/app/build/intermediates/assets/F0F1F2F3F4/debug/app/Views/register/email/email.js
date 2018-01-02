@@ -17,13 +17,18 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
     }
 
 };
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
+   topmost.navigate("Views/login/login");
+}
+
 
 exports.nextTap = function(){
    var email = page.getViewById("email");
     console.log("email: " + page.getViewById("email").text);
 
     if(email.text != ""){
-        if(emailValid(email.text) == "true"){
+        if(validateEmail(email.text) == true){
             console.log("first name: " + pageDataContext.firstName);
             console.log("last name: " + pageDataContext.lastName);
             console.log("middle initial: " + pageDataContext.MI);
@@ -32,10 +37,11 @@ exports.nextTap = function(){
             console.log("gender: " + pageDataContext.gender);
             console.log("password: " + pageDataContext.password);
             console.log("email: " + email.text);
-
-            /*var requestObject = {email: email, password: password, 
-                fname: guest.fname, lname: guest.lname, MI: guest.MI, birthdate: guest.birthdate,
-            gender: guest.gender, contact_no: guest.contact_no};   
+/*
+            var requestObject = {email: email.text, password: pageDataContext.password, 
+                fname: pageDataContext.firstname, lname: pageDataContext.lastname, 
+                MI: pageDataContext.MI, birthdate: pageDataContext.birthday,
+                gender: pageDataContext.gender, contact_no: pageDataContext.contact_no};   
 
             //loader.show(options); var of Loader.js, find a way to include it in this script
             fetchModule.fetch("https://unwindv2.000webhostapp.com/register/register.php", {
@@ -78,8 +84,11 @@ function then(response){
     page.getViewById("contact_no").text = "";
     
 }
-function emailValid(email){
-    //regex for email here
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    console.log("email validation return: " + re.test(email.toLowerCase()));
+
+    return re.test(email.toLowerCase());
 }
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];

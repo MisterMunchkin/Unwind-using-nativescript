@@ -17,7 +17,7 @@ Feel free to customize layouts and components to change how the tab view looks.
 
                 <lv:RadListView.itemTemplate>
                     <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                        <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />
+                        <Image row="0" col="0" src="~/images/CheckIn/services.jpg" class="thumb img-rounded" />
                         <StackLayout row="0" col="1">
                             <Label text="{{ pageName }}" class="list-group-item-heading" />
                             <Label text="{{ pageDesc }}" textWrap="true" class="list-group-item-text" />

@@ -64,10 +64,16 @@ exports.onLoaded = function(args) {
     
 }
 
-
+var request;
+var reserve;
 exports.requestNav = function (args) {
     console.log("request nav clicked");
     loader = new LoadingIndicator();
+    request = component.getViewById("reqNavLabel");
+    reserve = component.getViewById("resNavLabel");
+
+    request.class = "ActiveNav";
+    reserve.class= "inActiveNav";
 
     loader.show(cancelable);
     loadData("loadRequestData.php");
@@ -76,6 +82,12 @@ exports.requestNav = function (args) {
 exports.reservationNav = function (args) {
     console.log("reservation nav clicked");
     loader = new LoadingIndicator();
+
+    request = component.getViewById("reqNavLabel");
+    reserve = component.getViewById("resNavLabel");
+
+    request.class = "inActiveNav";
+    reserve.class= "ActiveNav";
 
     loader.show(cancelable)
     loadData("loadReservationData.php");

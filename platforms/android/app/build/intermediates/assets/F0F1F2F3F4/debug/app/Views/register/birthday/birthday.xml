@@ -1,4 +1,9 @@
 <Page class="page" loaded="onLoaded" xmlns:dd="nativescript-drop-down">
+    <Page.actionBar>
+        <ActionBar class="label page" title="Birthday">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
 
     <StackLayout orientation="vertical" class="inputForm">
         <Label class="pageLabel" text="Enter Your Birthday" />

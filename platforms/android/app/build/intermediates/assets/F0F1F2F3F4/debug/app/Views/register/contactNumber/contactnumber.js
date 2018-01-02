@@ -14,6 +14,10 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
 
 };
 
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
+   topmost.navigate("Views/login/login");
+}
 exports.nextTap = function(){
    var contact_no = page.getViewById("contact_no");
 

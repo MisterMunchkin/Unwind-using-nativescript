@@ -57,22 +57,22 @@ function active(){
             {
                 pageName: "Services",
                 pageDesc: "list of services",
-                itemImage: ""
+                itemImage: "~/images/CheckIn/services.jpg"
             },
             {
                 pageName: "Menu",
-                pageDesc: "list of food of the menu",
-                itemImage: ""
+                pageDesc: "list of food in the menu",
+                itemImage: "~/images/CheckIn/menu.jpg"
             },
             {
                 pageName: "Bill",
                 pageDesc: "bill",
-                itemImage: ""
+                itemImage: "~/images/CheckIn/bill.jpg"
             },
             {
                 pageName: "Inquiries",
                 pageDesc: "help center",
-                itemImage: ""
+                itemImage: "~/images/CheckIn/inquiries.png"
             }
         )
 

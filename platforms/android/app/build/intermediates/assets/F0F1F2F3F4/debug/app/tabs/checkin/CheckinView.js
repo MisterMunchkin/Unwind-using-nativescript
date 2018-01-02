@@ -57,7 +57,7 @@ function active(){
             {
                 pageName: "Services",
                 pageDesc: "list of services",
-                itemImage: ""
+                itemImage: "~/App-Resources/Android/CheckIn/services.jpg"
             },
             {
                 pageName: "Menu",

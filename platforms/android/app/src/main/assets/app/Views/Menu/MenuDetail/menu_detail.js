@@ -28,7 +28,7 @@ exports.addToCartTap = function(){
     var itemQty = view.getViewById(page, "foodQty").text;
     var remarks = view.getViewById(page, "remarks").text;
 
-    if(itemQty != "" && remarks != ""){
+    if(itemQty != ""){
         console.log(itemQty + " " + remarks);
         foodItem = {
             name: foodContext.name,
@@ -43,5 +43,6 @@ exports.addToCartTap = function(){
         topmost.navigate("Views/Menu/menu");
     }else{
         console.log("please enter item quantity and remarks!");
+        //add UI for this soon
     }
 }
