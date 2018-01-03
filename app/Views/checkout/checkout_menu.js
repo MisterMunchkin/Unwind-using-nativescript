@@ -5,7 +5,7 @@ var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 var view = require("ui/core/view");
 var fetchModule = require("fetch");
-var PayPal = require("nativescript-paypal");
+
 
 var items;
 var pageData;
@@ -20,19 +20,6 @@ exports.onLoaded = function(args){
 
     loadItems();
 
-    var vm = new Observable();
-
-    vm.init = function(){
-        PayPal.addLogger(function(msg){
-            console.log('[nativescript-paypal] ' + msg);
-        })
-
-        //initialize paypal environment
-        PayPal.init({
-            clienId: 1,
-            environment: 0
-        })
-    }
 }
 exports.onNavBtnTap = function(){
     // the top back button will lead back to the main page
@@ -84,7 +71,7 @@ exports.checkoutTap = function(){
     console.log("food Array: " + JSON.stringify(global.foodArray));
     console.log("grand total: " + grandTotal);
 
-    vm
+    global.checkOutGrandTotal += grandTotal;
     /*var date = new Date();
 
     requestObject = {timestamp_ordered: date,
