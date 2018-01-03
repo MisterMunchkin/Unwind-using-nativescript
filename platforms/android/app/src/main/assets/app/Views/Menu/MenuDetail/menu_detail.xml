@@ -1,7 +1,7 @@
 <Page class="page-content" loaded="onloaded">
     <StackLayout orientation="vertical">
         <Label class="page-icon fa" text="&#xf1ea;"></Label>
-        <Label class="page-placeholder" text="menu detail"></Label>
+        <Label class="page-placeholder" text="image here"></Label>
 
         <Label  id="foodName" text="{{ name }}"></Label>
 

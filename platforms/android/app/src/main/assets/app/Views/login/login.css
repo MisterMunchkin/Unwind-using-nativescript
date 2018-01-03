@@ -6,11 +6,17 @@
     font-family:"Lato";
 }
 .w-outline-btn{
-    background-color:#00a2ff;
-    color:antiquewhite;
-    outline-color:antiquewhite;
+    background-color: antiquewhite;
+    color:#00a2ff;
+    outline-color:#00a2ff;
     height:60;
     width:200;
+    font-family:"Lato";
+}
+.requiredFields{
+    color:antiquewhite;
+    border-width:0 0 1 0;
+    border-bottom-color:red;
     font-family:"Lato";
 }
 .page{

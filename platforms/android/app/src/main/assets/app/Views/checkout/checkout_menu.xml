@@ -1,7 +1,11 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
     loaded="onLoaded"
     xmlns:lv="nativescript-pro-ui/listview" >
-    
+    <Page.actionBar>
+        <ActionBar class="label page" title="Check Out Menu">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
     <GridLayout rows="*,40,60">
         <StackLayout row="0">
             <lv:RadListView id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
@@ -19,19 +23,21 @@
                             <Label text="{{ name }}" class="list-group-item-heading" />
                             <Label text="{{ description }}" class="list-group-item-text" />
                             <Label text="{{ price }}" class="list-group-item-text" />
-                            <Label text="{{ qty }}" class="list-group-item-text" />
+                          
                             <Label text="{{ remarks }}" class="list-group-item-text" />
                         </StackLayout>
                         <StackLayout col="1">
                                 <button text="remove" tap="remove" />
+                                <Label text="{{ qty }}" class="list-group-item-text" />
                         </StackLayout>
                     </GridLayout> 
                 </lv:RadListView.itemTemplate>
             </lv:RadListView>
         </StackLayout>
 
-        <StackLayout row="1">
-            <Label id="grandTotal" class="list-group-item-heading" />
+        <StackLayout row="1" orientation="horizontal">
+            <Label class="label-big" text= "Grand Total: " />
+            <Label id="grandTotal" class="label-big" />
         </StackLayout>
         <StackLayout row="2">
             <Button text="Check Out" tap="checkoutTap" />

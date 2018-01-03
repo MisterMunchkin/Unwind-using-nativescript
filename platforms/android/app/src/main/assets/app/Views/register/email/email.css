@@ -1,10 +1,19 @@
-.page{
+.page-blue{
     background-color:#3ba9e9;
 }
-.input{
+.page-white{
+    background-color:antiquewhite;
+}
+.input-white{
     color:antiquewhite;
     border-width:0 0 1 0;
     border-bottom-color:antiquewhite;
+    font-family:"Lato";
+}
+.input-blue{
+    color:#00a2ff;
+    border-width:0 0 1 0;
+    border-bottom-color:#00a2ff;
     font-family:"Lato";
 }
 .blue-btn{
@@ -24,6 +33,10 @@
     color:antiquewhite;
     font-family:"Lato";
 }
+.label-blue{
+    color: #00a2ff;
+    font-family:"Lato";
+}
 .inputForm{
     width:250;
 }
@@ -35,4 +48,12 @@
     color: red;
     font-size: 12px;
     font-family: "Lato";
+}
+.w-outline-btn{
+    background-color: antiquewhite;
+    color:#00a2ff;
+    outline-color:#00a2ff;
+    height:60;
+    width:200;
+    font-family:"Lato";
 }

@@ -1,12 +1,12 @@
-<Page class="page" loaded="onLoaded" xmlns:dd="nativescript-drop-down">
+<Page class="page-white" loaded="onLoaded" xmlns:dd="nativescript-drop-down">
     <Page.actionBar>
-        <ActionBar class="label page" title="Birthday">
+        <ActionBar class="label-white page-blue" title="Birthday">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
 
     <StackLayout orientation="vertical" class="inputForm">
-        <Label class="pageLabel" text="Enter Your Birthday" />
+        <Label class="label-blue pageLabel" text="Enter Your Birthday" />
         <DatePicker id="birthdate" class="datePicker" hint="birthday" day="15" month="5" year="1992" verticalAlignment="center" 
         horizontalAlignment="center" />
 

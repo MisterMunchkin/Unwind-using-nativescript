@@ -2,10 +2,20 @@
     font-size:20px;
     padding-bottom:20
 }
-.label{color:antiquewhite;
+.label{
+    
+    color:antiquewhite;
     font-family:"Lato"
 }
-.inputForm{width:250
+.label-blue{
+    color: #00a2ff;
+    font-family:"Lato";
+}
+.page-blue{
+    background-color: #3ba9e9;
+}
+.inputForm{
+    width:250
 }
 .blue-btn{background-color:#00a2ff;
     color:antiquewhite;
@@ -13,7 +23,11 @@
     width:200;
     font-family:"Lato"
 }
-.page{background-color:#3ba9e9
+.page{
+    background-color:#3ba9e9
+}
+.page-white{
+    background-color:antiquewhite
 }
 .input{
     color:antiquewhite;
@@ -24,4 +38,12 @@
 .listviewPadding{
     padding-bottom:40;
     padding-top: 40;
+}
+.w-outline-btn{
+    background-color: antiquewhite;
+    color:#00a2ff;
+    outline-color:#00a2ff;
+    height:60;
+    width:200;
+    font-family:"Lato";
 }

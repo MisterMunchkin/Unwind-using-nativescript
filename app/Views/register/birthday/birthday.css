@@ -11,8 +11,27 @@
     width:200;
     font-family:"Lato";
 }
-.page{
+.label-blue{
+    color: #00a2ff;
+    font-family:"Lato";
+}
+.label-white{
+    color:antiquewhite;
+    font-family:"Lato";
+}
+.w-outline-btn{
+    background-color: antiquewhite;
+    color:#00a2ff;
+    outline-color:#00a2ff;
+    height:60;
+    width:200;
+    font-family:"Lato";
+}
+.page-blue{
     background-color:#3ba9e9;
+}
+.page-white{
+    background-color:antiquewhite;
 }
 .datePicker{
     color: antiquewhite;

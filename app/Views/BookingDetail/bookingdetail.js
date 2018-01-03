@@ -39,24 +39,7 @@ exports.onloaded = function(args) {
     var cancelBookingButton = page.getViewById("cancelBookingID");
     var checkinButton = page.getViewById("checkinButtonID");
     //var dateNow = new Date();
-    //var cancelcheckinValidation = dateNow.valueOf() - requestObject.checkinDate.valueOf();
-
-    //console.log(cancelcheckinValidation);
-    /*if(requestObject.resStatus == "Accepted"){
-        console.log("Booking is currently cancelled");
-        page.bindingContext = {
-            cancelText: "Uncancel Booking",
-            checkinisEnabled: "false"
-           
-        }
-    }else{
-        console.log("Booking is currently not cancelled");
-        page.bindingContext = {
-            cancelText: "Cancel Booking",
-            checkinisEnabled: "true"
-           
-        }
-    }*/
+    //var cancelcheckinValidation = dateNow.valueOf() - requestObject.checkinDate.valueOf();/
 
     switch(requestObject.resStatus){
         case "Accepted": 
@@ -75,11 +58,9 @@ exports.onloaded = function(args) {
         console.log("Pending");
         page.bindingContext = {
             cancelText: "Cancel Booking",
-            checkinisEnabled: "false",
-            cancelisEnabled: "true",
             checkoutVisible: "collapse",
             cancelVisible: "visible",
-            checkinVisible: "visible",
+            checkinVisible: "collapse",
             message: "you have created a request! please wait for admin to manage your requests!"
         }
         break;
@@ -87,20 +68,15 @@ exports.onloaded = function(args) {
         console.log("Cancelled");
         page.bindingContext = {
             cancelText: "Uncancel Booking",
-            checkinisEnabled: "false",
-            cancelisEnabled: "true",
             checkoutVisible: "collapse",
             cancelVisible: "visible",
-            checkinVisible: "visible",
+            checkinVisible: "collapse",
             message: "you have cancelled your reservations"
         }
         break;
-        case "Checked In": 
+        case "Checked-in": 
         console.log("Checked In");
         page.bindingContext = {
-            cancelisEnabled: "false",
-            checkinisEnabled: "false",
-            cancelText: "Cancel Booking",
             checkoutVisible: "visible",
             cancelVisible: "collapse",
             checkinVisible: "collapse",
@@ -110,20 +86,16 @@ exports.onloaded = function(args) {
         case "Rejected":
         console.log("Rejected");
         page.bindingContext = {
-            cancelisEnabled: "false",
-            checkinisEnabled: "false",
             cancelText: "Cancel Booking",
             checkoutVisible: "collapse",
-            cancelVisible: "visible",
-            checkinVisible: "visible",
+            cancelVisible: "collapse",
+            checkinVisible: "collapse",
             message: "your request has been rejected, please contact our concierge"
         }
         break;
         case "Waiting":
         console.log("Waiting");
         page.bindingContext = {
-            cancelisEnabled: "true",
-            checkinisEnabled: "true",
             cancelText: "Cancel Booking",
             checkoutVisible: "collapse",
             cancelVisible: "visible",

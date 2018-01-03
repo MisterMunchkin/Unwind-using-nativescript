@@ -19,7 +19,11 @@ exports.onLoaded = function(args){
 
     loadItems();
 }
-
+exports.onNavBtnTap = function(){
+    // the top back button will lead back to the main page
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
 function loadItems(){
     var obj;
 

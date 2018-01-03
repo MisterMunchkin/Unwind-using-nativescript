@@ -1,8 +1,8 @@
-<Page class="page" loaded="onLoaded" 
+<Page class="page-white" loaded="onLoaded" 
     xmlns:lv="nativescript-pro-ui/listview">
 
     <Page.actionBar>
-        <ActionBar class="label page" title="Gender">
+        <ActionBar class="label page-blue" title="Gender">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
@@ -12,7 +12,7 @@
         
         
         <Label class="label" text="Gender" />-->
-        <Label class="label pageLabel" text="Enter Your Gender" />
+        <Label class="label-blue pageLabel" text="Enter Your Gender" />
 
         <!--<TextField class="input" id="gender" keyboardType = "number"/>-->
         <lv:RadListView id="listview"  itemSelected="itemSelected" itemDeselected="itemDeselected" 
@@ -24,7 +24,7 @@
                 <lv:RadListView.itemTemplate>
                     <GridLayout class="list-group-item" rows="auto" columns="auto, *">
                         <StackLayout row="0" col="1">
-                            <Label text="{{ GenderName }}" class="label list-group-item-heading" />
+                            <Label text="{{ GenderName }}" class="label-blue list-group-item-heading" />
                             
                         </StackLayout>
                     </GridLayout>

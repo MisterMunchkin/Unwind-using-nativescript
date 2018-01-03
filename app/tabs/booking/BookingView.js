@@ -14,6 +14,8 @@ var phpContext;
 var requestLabel;
 var reservationLabel;
 
+var request;
+var reserve;
 var loader;
 
 var cancelable = {
@@ -55,17 +57,22 @@ exports.onLoaded = function(args) {
     requestLabel = view.getViewById(component, "reqNavLabel");
     reservationLabel = view.getViewById(component, "resNavLabel");
 
+    request = component.getViewById("reqNavLabel");
+    reserve = component.getViewById("resNavLabel");
     //requestLabel.className = "ActiveNav";
    // reservationLabel.className ="inActiveNav";
-
+    request.class = "inActiveNav";
+    reserve.class = "ActiveNav";
     loader.show(uncancelable);
     loadData("loadReservationData.php");
+
+    
     loader.hide();
+
     
 }
 
-var request;
-var reserve;
+
 exports.requestNav = function (args) {
     console.log("request nav clicked");
     loader = new LoadingIndicator();
