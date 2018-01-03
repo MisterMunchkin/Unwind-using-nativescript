@@ -1,4 +1,9 @@
 <Page class="page-content" loaded="onloaded">
+    <Page.actionBar>
+        <ActionBar class="label page-blue" title="Menu">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
     <StackLayout orientation="vertical">
         <Label class="page-icon fa" text="&#xf1ea;"></Label>
         <Label class="page-placeholder" text="image here"></Label>

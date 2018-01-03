@@ -22,6 +22,16 @@ exports.onloaded = function (args) {
     }
     
 }
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
+   topmost.navigate("Views/Menu/menu");
+}
+exports.backEvent = function (args) {
+
+    args.cancel = true;
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Menu/menu");
+}
 
 exports.addToCartTap = function(){
 

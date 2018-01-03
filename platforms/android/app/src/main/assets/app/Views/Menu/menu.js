@@ -71,6 +71,17 @@ exports.onloaded = function(args){
 
     loader.hide();
 };
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
+   topmost.navigate("tabs/tabs-page");
+}
+exports.backEvent = function (args) {
+
+    args.cancel = true;
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
+
 function isData(obj){
     return (obj == "no data")? 0: 1;
 }

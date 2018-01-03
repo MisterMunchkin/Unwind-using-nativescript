@@ -2,6 +2,11 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"   
         loaded="onloaded" xmlns:FAB="nativescript-floatingactionbutton"
     xmlns:lv="nativescript-pro-ui/listview">
+    <Page.actionBar>
+        <ActionBar class="label page-blue" title="Menu">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
     <GridLayout rows="*, *">
         <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
             <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
