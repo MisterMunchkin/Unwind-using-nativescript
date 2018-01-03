@@ -7,6 +7,7 @@
     "nativescript-loading-indicator-new": true,
     "nativescript-master-technology": true,
     "nativescript-modal-datetimepicker": true,
+    "nativescript-paypal": true,
     "nativescript-pro-ui": true,
     "nativescript-snackbar": true,
     "nativescript-sqlite": true,
