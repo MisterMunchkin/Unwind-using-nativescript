@@ -22,6 +22,8 @@ exports.nextTap = function(){
 
     var adultVal = view.getViewById(page, "adultQty").value;
     var childVal = view.getViewById(page, "childQty").value;
+    console.log("check in date: " + pageDataContext.checkin_date);
+    console.log("check out date: " + pageDataContext.checkout_date);
     console.log("adultQty: " + adultQty);
     console.log("childQty: " + childQty);
     

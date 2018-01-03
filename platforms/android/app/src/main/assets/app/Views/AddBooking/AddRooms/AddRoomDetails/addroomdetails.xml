@@ -10,11 +10,11 @@
 
         <Label  id="foodName" text="{{ name }}"></Label>
 
-        <TextField autocorrect="false" fontFamily="FontAwesome" 
-                hint="food quantity" id="foodQty"
+        <TextField autocorrect="false" 
+                hint="Room Quantity" id="roomQty"
                 keyboardType="number" maxLength="2"></TextField>
-        <TextView autocorrect="true" hint="comments for your food" 
-                    id="remarks" fontFamily="FontAwesome" />
+        <TextView autocorrect="true" hint="Room Request" 
+                    id="remarks"  />
 
         <Button text="ADD TO CART" id="addToCart" tap="addToCartTap" />
     </StackLayout>

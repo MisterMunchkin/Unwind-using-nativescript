@@ -37,7 +37,7 @@ exports.nextTap = function(){
             console.log("gender: " + pageDataContext.gender);
             console.log("password: " + pageDataContext.password);
             console.log("email: " + email.text);
-/*
+
             var requestObject = {email: email.text, password: pageDataContext.password, 
                 fname: pageDataContext.firstname, lname: pageDataContext.lastname, 
                 MI: pageDataContext.MI, birthdate: pageDataContext.birthday,
@@ -53,7 +53,7 @@ exports.nextTap = function(){
 
             }, function(error){
             console.log(JSON.stringify(error));
-            })*/
+            })
         }else{
             page.bindingContext = {
                 ValidEmail: "visible"

@@ -26,8 +26,8 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
     };
     console.log("check in date: " + requestObject.check_in_date);
     console.log("check out date: " + requestObject.check_out_date);
-    console.log("numAdult: " + pageDataContext.adultQty);
-    console.log("numChild: " + pageDataContext.childQty);
+    console.log("numAdult: " + requestObject.numAdult);
+    console.log("numChild: " + requestObject.numChild);
     page.bindingContext = pageData;
 
     var obj;
@@ -38,7 +38,7 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
         body: formEncode(requestObject)
     }).then(function (response) {
         obj = response._bodyText;
-        console.log("full response: " + JSON.stringify(response));
+        
         console.log("BODY: " + obj);
         if(obj != "no data"){
 
@@ -55,7 +55,8 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
                         roomTypeName: obj[x].roomTypeName,
                         roomTypePrice: obj[x].roomTypePrice,
                         roomTypeDescription: obj[x].roomTypeDescription,
-                        roomTypeCount: obj[x].roomTypeCount
+                        roomTypeCount: obj[x].roomTypeCount,
+                        itemImage: ""
                     }
 
                 );
@@ -71,11 +72,25 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
     console.log("exiting room query");
 };
 
+exports.itemSelected = function(args){
+    console.log("<<<<<<item selected>>>>>>>");
+    var tappedView = args.view;
+    var tappedItem = tappedView.bindingContext;
+
+    console.log("Room name: " + tappedItem.roomTypeName);
+    var bookingObject = {
+        checkIn: requestObject.check_in_date,
+        checkOut: requestObject.check_out_date,
+        adultQty: requestObject.numAdult,
+        childQty: requestObject.numChild
+
+    }
+}
 exports.submit = function () {
-    console.log("checkin: " + requestObject.checkIn +
-        "\n checkout: " + requestObject.checkOut +
-        "\n adult quantity: " + requestObject.adultQty +
-        "\n child quantity: " + requestObject.childQty);
+    console.log("checkin: " + requestObject.check_in_date +
+        "\n checkout: " + requestObject.check_out_date +
+        "\n adult quantity: " + requestObject.numAdult +
+        "\n child quantity: " + requestObject.numChild);
 
 
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/addbooking.php", {
@@ -95,9 +110,11 @@ function then(response) {
     // alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
     if (phpResponse == "booking added") {
         //console.log(JSON.stringify(response));
+        alert({ title: "Success!", message: phpResponse, okButtonText: "Close" });
         var topmost = frameModule.topmost();
         topmost.navigate("tabs/tabs-page");
     } else {
+        alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
         console.log(phpResponse);
     }
 

@@ -69,7 +69,7 @@ exports.checkoutTap = function(){
     console.log("food Array: " + JSON.stringify(global.foodArray));
     console.log("grand total: " + grandTotal);
 
-    /*var date = new Date();
+    var date = new Date();
 
     requestObject = {timestamp_ordered: date,
                      grandTotal: grandTotal,
@@ -84,7 +84,7 @@ exports.checkoutTap = function(){
     }, function (error) {
         console.log("ERROR");
         console.log(JSON.stringify(error));
-    })*/
+    })
 
 }
 exports.remove = function(args){
