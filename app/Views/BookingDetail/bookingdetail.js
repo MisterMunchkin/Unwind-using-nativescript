@@ -289,7 +289,7 @@ function then(response){
     console.log(JSON.stringify(response));
     var topmost = frameModule.topmost();
     topmost.navigate("tabs/tabs-page");
-    loader.hide();
+   
 }
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];

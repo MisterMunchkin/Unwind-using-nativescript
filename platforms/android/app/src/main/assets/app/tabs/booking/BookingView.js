@@ -63,11 +63,8 @@ exports.onLoaded = function(args) {
    // reservationLabel.className ="inActiveNav";
     request.class = "inActiveNav";
     reserve.class = "ActiveNav";
-    loader.show(uncancelable);
+  
     loadData("loadReservationData.php");
-
-    
-    loader.hide();
 
     
 }
@@ -82,9 +79,9 @@ exports.requestNav = function (args) {
     request.class = "ActiveNav";
     reserve.class= "inActiveNav";
 
-    loader.show(cancelable);
+ 
     loadData("loadRequestData.php");
-    loader.hide();
+    
 }
 exports.reservationNav = function (args) {
     console.log("reservation nav clicked");
@@ -96,15 +93,15 @@ exports.reservationNav = function (args) {
     request.class = "inActiveNav";
     reserve.class= "ActiveNav";
 
-    loader.show(cancelable)
+   
     loadData("loadReservationData.php");
-    loader.hide();
+ 
 }
 
 function loadData(phpContext){
     var obj;
     items = new ObservableArray([]);
-
+    loader.show(uncancelable);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/" + phpContext, {
 
     }).then(function (response) {
@@ -138,6 +135,7 @@ function loadData(phpContext){
         }else{
             //label no data
         }
+        loader.hide();
         pageData.set("items", items);
 
     }, function (error) {
