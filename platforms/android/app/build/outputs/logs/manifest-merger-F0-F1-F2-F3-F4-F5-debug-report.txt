@@ -1,0 +1,263 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:2:1-19:12
+	package
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:3:64-97
+		INJECTED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F2\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:3:122-147
+		INJECTED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:3:122-147
+		INJECTED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F2\AndroidManifest.xml
+	android:versionCode
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:3:98-121
+		INJECTED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:3:98-121
+		INJECTED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F2\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:3:5-63
+supports-screens
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:4:5-139
+	android:largeScreens
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:4:80-107
+	android:smallScreens
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:4:23-50
+	android:normalScreens
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:4:51-79
+	android:xlargeScreens
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:4:108-136
+uses-sdk
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:5:5-74
+MERGED from [com.android.support:design:25.3.1] C:\Users\dalmi\.android\build-cache\de7072d0f474bd31287b314f5db47125461644e7\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:transition:25.3.1] C:\Users\dalmi\.android\build-cache\b1e712cf574d66e47d63e73880b985cdb93aec89\output\AndroidManifest.xml:20:5-44
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:5:5-7:41
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\dalmi\.android\build-cache\eab8993fc4d6940bac7f8299c61064f1f42e110f\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\dalmi\.android\build-cache\6b8fabde772821e315403e786863b161697a876a\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\dalmi\.android\build-cache\1bd649a27284313bd67a0869a060ca2638ccd52f\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\dalmi\.android\build-cache\7419b1c13425a36bc054311592d9ea1e4bd47383\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\dalmi\.android\build-cache\d4af35486d72902a3ce6a414761441b93576764c\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\dalmi\.android\build-cache\5087ac4abf8cc0046a8d829dbe06d80e291b4e55\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\dalmi\.android\build-cache\e87b0aa0a632dd45b18bfa6a0da28c1435725780\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\dalmi\.android\build-cache\3a28113431598656a33d42eeb6404af20f09ac8e\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\dalmi\.android\build-cache\fbd9aeb3719fb90728a8abbfe46da7f53374d189\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\dalmi\.android\build-cache\eef1f5ded84871e475ae1e3e8e26bbbebfdae23a\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\dalmi\.android\build-cache\26917f7155e7359c1bcaf3035052aa9d96a933d1\output\AndroidManifest.xml:21:5-23:58
+MERGED from [:nativescript-optimized:] C:\Users\dalmi\.android\build-cache\f7e767f46cb100dc4bf3079dd105457fa7b655a7\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Chart-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\00c8c22820b4666bea84a5b8917733842c5731bf\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Common-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\378540dcdbeadee87e5d03278f73b2d5b8cd5791\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Data-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\5834d897730bccd79ee06bd03e3e9a21cc15050a\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Gauges-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\4ad3cd1f9bd92c3a2d9df3ea47939a4ba73c7531\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Input-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\007d3d43034df75ba902f1044669d2d10c322ab8\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:List-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\cc73ab38d7d1b4aeacfcb2418ff84d0dcce6ef8d\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Primitives-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\d16ffddf704a60bc285952681b6f51857de91c31\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:widgets-release:] C:\Users\dalmi\.android\build-cache\3b5eadc3c0dfbec09d3ef117094817020030635c\output\AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] C:\Users\dalmi\.android\build-cache\de7072d0f474bd31287b314f5db47125461644e7\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:5:42-71
+		INJECTED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F2\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:5:15-41
+		INJECTED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F2\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:6:5-67
+MERGED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:6:5-67
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:10:5-67
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:7:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:8:22-78
+application
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:9:5-18:19
+MERGED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:9:5-18:19
+MERGED from [com.android.support:design:25.3.1] C:\Users\dalmi\.android\build-cache\de7072d0f474bd31287b314f5db47125461644e7\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\dalmi\.android\build-cache\b1e712cf574d66e47d63e73880b985cdb93aec89\output\AndroidManifest.xml:26:5-20
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:12:5-26:19
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\dalmi\.android\build-cache\eab8993fc4d6940bac7f8299c61064f1f42e110f\output\AndroidManifest.xml:21:5-26:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\dalmi\.android\build-cache\6b8fabde772821e315403e786863b161697a876a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\dalmi\.android\build-cache\1bd649a27284313bd67a0869a060ca2638ccd52f\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\dalmi\.android\build-cache\7419b1c13425a36bc054311592d9ea1e4bd47383\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\dalmi\.android\build-cache\5087ac4abf8cc0046a8d829dbe06d80e291b4e55\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\dalmi\.android\build-cache\e87b0aa0a632dd45b18bfa6a0da28c1435725780\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\dalmi\.android\build-cache\3a28113431598656a33d42eeb6404af20f09ac8e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\dalmi\.android\build-cache\fbd9aeb3719fb90728a8abbfe46da7f53374d189\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\dalmi\.android\build-cache\eef1f5ded84871e475ae1e3e8e26bbbebfdae23a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\dalmi\.android\build-cache\26917f7155e7359c1bcaf3035052aa9d96a933d1\output\AndroidManifest.xml:29:5-20
+MERGED from [:Chart-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\00c8c22820b4666bea84a5b8917733842c5731bf\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:Common-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\378540dcdbeadee87e5d03278f73b2d5b8cd5791\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:Data-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\5834d897730bccd79ee06bd03e3e9a21cc15050a\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:11:5-32:19
+MERGED from [:Gauges-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\4ad3cd1f9bd92c3a2d9df3ea47939a4ba73c7531\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:Input-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\007d3d43034df75ba902f1044669d2d10c322ab8\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:List-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\cc73ab38d7d1b4aeacfcb2418ff84d0dcce6ef8d\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:Primitives-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\d16ffddf704a60bc285952681b6f51857de91c31\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:widgets-release:] C:\Users\dalmi\.android\build-cache\3b5eadc3c0dfbec09d3ef117094817020030635c\output\AndroidManifest.xml:11:5-12:19
+	android:label
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:9:122-154
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:9:122-154
+	android:allowBackup
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:9:65-91
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:9:65-91
+	android:icon
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:9:92-121
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:9:92-121
+	android:theme
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:9:155-186
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:9:155-186
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:9:18-64
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:9:18-64
+activity#com.tns.NativeScriptActivity
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:10:9-16:20
+	android:label
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:10:63-108
+	android:configChanges
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:10:109-170
+	android:theme
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:10:171-211
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:10:19-62
+meta-data#SET_THEME_ON_LAUNCH
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:11:13-96
+	android:resource
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:11:59-93
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:11:24-58
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:12:13-15:29
+action#android.intent.action.MAIN
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:13:17-69
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:13:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:14:17-77
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:14:27-74
+activity#com.tns.ErrorReportActivity
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:17:9-64
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\AndroidManifest.xml:17:19-61
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:5:5-76
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:5:22-73
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:6:5-79
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.CAMERA
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:7:5-65
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\dalmi\.android\build-cache\eab8993fc4d6940bac7f8299c61064f1f42e110f\output\AndroidManifest.xml:11:5-65
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:7:22-62
+uses-permission#android.permission.VIBRATE
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:8:5-66
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\dalmi\.android\build-cache\eab8993fc4d6940bac7f8299c61064f1f42e110f\output\AndroidManifest.xml:12:5-66
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:8:22-63
+uses-feature#android.hardware.camera
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:14:5-15:46
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\dalmi\.android\build-cache\eab8993fc4d6940bac7f8299c61064f1f42e110f\output\AndroidManifest.xml:14:5-16:36
+	android:required
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:15:19-43
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:14:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:16:5-17:46
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\dalmi\.android\build-cache\eab8993fc4d6940bac7f8299c61064f1f42e110f\output\AndroidManifest.xml:17:5-19:36
+	android:required
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:17:19-43
+	android:name
+		ADDED from D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\F3\AndroidManifest.xml:16:19-67
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] C:\Users\dalmi\.android\build-cache\de7072d0f474bd31287b314f5db47125461644e7\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\dalmi\.android\build-cache\b1e712cf574d66e47d63e73880b985cdb93aec89\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\dalmi\.android\build-cache\6b8fabde772821e315403e786863b161697a876a\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\dalmi\.android\build-cache\1bd649a27284313bd67a0869a060ca2638ccd52f\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\dalmi\.android\build-cache\7419b1c13425a36bc054311592d9ea1e4bd47383\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\dalmi\.android\build-cache\d4af35486d72902a3ce6a414761441b93576764c\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\dalmi\.android\build-cache\5087ac4abf8cc0046a8d829dbe06d80e291b4e55\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\dalmi\.android\build-cache\e87b0aa0a632dd45b18bfa6a0da28c1435725780\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\dalmi\.android\build-cache\3a28113431598656a33d42eeb6404af20f09ac8e\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\dalmi\.android\build-cache\fbd9aeb3719fb90728a8abbfe46da7f53374d189\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\dalmi\.android\build-cache\eef1f5ded84871e475ae1e3e8e26bbbebfdae23a\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\dalmi\.android\build-cache\26917f7155e7359c1bcaf3035052aa9d96a933d1\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] C:\Users\dalmi\.android\build-cache\de7072d0f474bd31287b314f5db47125461644e7\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] C:\Users\dalmi\.android\build-cache\de7072d0f474bd31287b314f5db47125461644e7\output\AndroidManifest.xml:26:9-47
+activity#com.paypal.android.sdk.payments.PaymentActivity
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:13:9-84
+activity#com.paypal.android.sdk.payments.PaymentMethodActivity
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:14:9-90
+activity#com.paypal.android.sdk.payments.PaymentConfirmActivity
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:15:9-91
+activity#com.paypal.android.sdk.payments.LoginActivity
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:16:9-82
+activity#com.paypal.android.sdk.payments.PayPalFuturePaymentActivity
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:17:9-96
+activity#com.paypal.android.sdk.payments.FuturePaymentConsentActivity
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:18:9-97
+activity#com.paypal.android.sdk.payments.FuturePaymentInfoActivity
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:19:9-94
+activity#com.paypal.android.sdk.payments.PayPalProfileSharingActivity
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:20:9-97
+	android:name
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:20:19-94
+activity#com.paypal.android.sdk.payments.ProfileSharingConsentActivity
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:21:9-98
+	android:name
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:21:19-95
+service#com.paypal.android.sdk.payments.PayPalService
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\AndroidManifest.xml:23:9-25:40
+activity#io.card.payment.CardIOActivity
+ADDED from [io.card:android-sdk:5.3.4] C:\Users\dalmi\.android\build-cache\eab8993fc4d6940bac7f8299c61064f1f42e110f\output\AndroidManifest.xml:22:9-24:66
+	android:configChanges
+		ADDED from [io.card:android-sdk:5.3.4] C:\Users\dalmi\.android\build-cache\eab8993fc4d6940bac7f8299c61064f1f42e110f\output\AndroidManifest.xml:24:13-63
+	android:name
+		ADDED from [io.card:android-sdk:5.3.4] C:\Users\dalmi\.android\build-cache\eab8993fc4d6940bac7f8299c61064f1f42e110f\output\AndroidManifest.xml:23:13-58
+activity#io.card.payment.DataEntryActivity
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\dalmi\.android\build-cache\eab8993fc4d6940bac7f8299c61064f1f42e110f\output\AndroidManifest.xml:25:9-70
+activity#com.telerik.widget.feedback.SendFeedbackActivity
+ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:12:9-16:20
+	android:label
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:14:13-65
+	android:theme
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:15:13-50
+	android:name
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:13:13-76
+activity#com.telerik.widget.feedback.ViewFeedbackActivity
+ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:17:9-21:20
+	android:label
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:19:13-65
+	android:theme
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:20:13-50
+	android:name
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:18:13-76
+activity#com.telerik.widget.feedback.ViewFeedbackItemActivity
+ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:22:9-26:20
+	android:label
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:24:13-65
+	android:theme
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:25:13-50
+	android:name
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:23:13-80
+activity#com.telerik.widget.feedback.EditDetailsActivity
+ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:27:9-31:20
+	android:label
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:29:13-64
+	android:theme
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:30:13-50
+	android:name
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\AndroidManifest.xml:28:13-75

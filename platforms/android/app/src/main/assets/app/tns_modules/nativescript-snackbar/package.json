@@ -1,27 +1,50 @@
 {
-  "_from": "nativescript-snackbar@^2.0.0",
+  "_args": [
+    [
+      {
+        "raw": "nativescript-snackbar@^2.0.0",
+        "scope": null,
+        "escapedName": "nativescript-snackbar",
+        "name": "nativescript-snackbar",
+        "rawSpec": "^2.0.0",
+        "spec": ">=2.0.0 <3.0.0",
+        "type": "range"
+      },
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
+    ]
+  ],
+  "_from": "nativescript-snackbar@>=2.0.0 <3.0.0",
   "_id": "nativescript-snackbar@2.0.0",
-  "_inBundle": false,
-  "_integrity": "sha512-vgFpXCIAEtEmtPcX78Au0qaOpuLzSaAIcXxebda+EcsKFASqrLata2oKdf0BfwXptylc3fVdy9fyRM22wKKZLw==",
+  "_inCache": true,
   "_location": "/nativescript-snackbar",
+  "_nodeVersion": "6.11.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/nativescript-snackbar-2.0.0.tgz_1506876140960_0.6060549239628017"
+  },
+  "_npmUser": {
+    "name": "bradmartin",
+    "email": "bradwaynemartin@gmail.com"
+  },
+  "_npmVersion": "5.4.2",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
-    "registry": true,
     "raw": "nativescript-snackbar@^2.0.0",
-    "name": "nativescript-snackbar",
+    "scope": null,
     "escapedName": "nativescript-snackbar",
+    "name": "nativescript-snackbar",
     "rawSpec": "^2.0.0",
-    "saveSpec": null,
-    "fetchSpec": "^2.0.0"
+    "spec": ">=2.0.0 <3.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-snackbar/-/nativescript-snackbar-2.0.0.tgz",
   "_shasum": "67f652a8d39f8d4c78312a3c0374017625636226",
+  "_shrinkwrap": null,
   "_spec": "nativescript-snackbar@^2.0.0",
-  "_where": "C:\\Android\\Nativescript\\Unwind",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Brad Martin",
     "email": "bmartin@nstudio.io",
@@ -30,7 +53,6 @@
   "bugs": {
     "url": "https://github.com/bradmartin/nativescript-snackbar/issues"
   },
-  "bundleDependencies": false,
   "contributors": [
     {
       "name": "Steve McNiven-Scott",
@@ -61,7 +83,7 @@
       "url": "https://github.com/eddyverbruggen"
     }
   ],
-  "deprecated": false,
+  "dependencies": {},
   "description": "A NativeScript plugin providing the Material Design SnackBar.",
   "devDependencies": {
     "husky": "^0.13.4",
@@ -71,6 +93,13 @@
     "tns-platform-declarations": ">=3.0.0",
     "typescript": "^2.3.0"
   },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-vgFpXCIAEtEmtPcX78Au0qaOpuLzSaAIcXxebda+EcsKFASqrLata2oKdf0BfwXptylc3fVdy9fyRM22wKKZLw==",
+    "shasum": "67f652a8d39f8d4c78312a3c0374017625636226",
+    "tarball": "https://registry.npmjs.org/nativescript-snackbar/-/nativescript-snackbar-2.0.0.tgz"
+  },
+  "gitHead": "27157d28efa9950752a7d0be5e61dcdbf9791bf3",
   "homepage": "https://github.com/bradmartin/nativescript-snackbar",
   "keywords": [
     "NativeScript",
@@ -93,6 +122,24 @@
     ]
   },
   "main": "snackbar",
+  "maintainers": [
+    {
+      "name": "bradmartin",
+      "email": "bradmartin0905@gmail.com"
+    },
+    {
+      "name": "marcbuils",
+      "email": "marc.buils@marcbuils.fr"
+    },
+    {
+      "name": "nathanaela",
+      "email": "nathan@master-technology.com"
+    },
+    {
+      "name": "sitefinitysteve",
+      "email": "steve@sitefinitysteve.com"
+    }
+  ],
   "name": "nativescript-snackbar",
   "nativescript": {
     "platforms": {
@@ -100,6 +147,8 @@
       "android": "1.5.0"
     }
   },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bradmartin/nativescript-snackbar.git"

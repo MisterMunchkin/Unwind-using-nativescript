@@ -1,0 +1,21 @@
+<Page class="page-white" loaded="onLoaded" xmlns:dd="nativescript-drop-down">
+    <Page.actionBar>
+        <ActionBar class="label page-blue" title="Contact Number">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
+    <StackLayout orientation="vertical" class="inputForm">
+        <!-- should add a list picker here of countries -->
+        <Label class="label-blue pageLabel" text="Enter Your Mobile Number" />
+        
+        <Label class="label-blue" text="Contact Number" />
+        <TextField class="input-blue" id="contact_no" keyboardType = "number"/>
+
+        <!-- <TextField hint="Email Address" keyboardType="email" id="email" autocorrect="false" autocapitalizationType="none" />
+        <TextField hint="Password" id="password" secure="true" />-->
+
+        <Button class="blue-btn" text="next" tap="nextTap"/>
+        <!--<Button class="w-outline-btn" text="already have an account?" tap="signin"/>-->
+    </StackLayout>
+
+</Page>

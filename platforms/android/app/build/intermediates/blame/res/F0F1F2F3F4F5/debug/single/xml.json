@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\xml\\chart_palettes_default_light.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\00c8c22820b4666bea84a5b8917733842c5731bf\\output\\res\\xml\\chart_palettes_default_light.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\xml\\chart_palettes_dark_selected.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\00c8c22820b4666bea84a5b8917733842c5731bf\\output\\res\\xml\\chart_palettes_dark_selected.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\xml\\chart_palettes_default_dark.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\00c8c22820b4666bea84a5b8917733842c5731bf\\output\\res\\xml\\chart_palettes_default_dark.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\xml\\chart_palettes_light_selected.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\00c8c22820b4666bea84a5b8917733842c5731bf\\output\\res\\xml\\chart_palettes_light_selected.xml"
+    }
+]

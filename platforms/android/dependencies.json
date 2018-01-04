@@ -32,6 +32,10 @@
         "directory": "..\\..\\node_modules\\nativescript-modal-datetimepicker"
     },
     {
+        "name": "nativescript-paypal",
+        "directory": "..\\..\\node_modules\\nativescript-paypal"
+    },
+    {
         "name": "nativescript-pro-ui",
         "directory": "..\\..\\node_modules\\nativescript-pro-ui"
     },

@@ -6,6 +6,7 @@ var ObservableArray = require("data/observable-array").ObservableArray;
 var view = require("ui/core/view");
 var fetchModule = require("fetch");
 
+
 var items;
 var pageData;
 var grandTotal;
@@ -18,6 +19,7 @@ exports.onLoaded = function(args){
     page.bindingContext = pageData;
 
     loadItems();
+
 }
 exports.onNavBtnTap = function(){
     // the top back button will lead back to the main page
@@ -71,8 +73,14 @@ exports.checkoutTap = function(){
 
     console.log("food Array: " + JSON.stringify(global.foodArray));
     console.log("grand total: " + grandTotal);
+<<<<<<< HEAD
     console.log("timestamp: " + date);
     
+=======
+
+    global.checkOutGrandTotal += grandTotal;
+    /*var date = new Date();
+>>>>>>> 73ebc904e3b39a285f03544776e15dc5c32e1528
 
     requestObject = {timestamp_ordered: date,
                      grandTotal: grandTotal,

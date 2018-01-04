@@ -7,6 +7,9 @@
     "id": "org.nativescript.Unwind",
     "tns-android": {
       "version": "3.4.0"
+    },
+    "tns-ios": {
+      "version": "3.4.0"
     }
   },
   "scripts": {
@@ -21,6 +24,7 @@
     "nativescript-loading-indicator-new": "^2.1.0",
     "nativescript-master-technology": "^1.1.1",
     "nativescript-modal-datetimepicker": "^1.0.3",
+    "nativescript-paypal": "^2.6.9",
     "nativescript-pro-ui": "^3.2.0",
     "nativescript-snackbar": "^2.0.0",
     "nativescript-sqlite": "^1.1.11",
