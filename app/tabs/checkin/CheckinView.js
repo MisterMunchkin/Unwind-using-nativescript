@@ -21,6 +21,7 @@ exports.onLoaded = function(args) {
     //use a switch for active and inactive methods
     component.bindingContext = pageData;
 
+   
 
     fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/checkinSecurity.php", {
     }).then(function (response) {
@@ -39,6 +40,8 @@ function then(response){
     console.log(phpResponse);
    // console.log(response);
     if(phpResponse == "no data"){
+        items = new ObservableArray([]);
+
         inactive();
         
     }else{
@@ -83,6 +86,7 @@ function inactive(){
     console.log("not checked in");
     
     //label.text = "Check in Module is locked";
+    pageData.set("items", items);
     page.bindingContext = {
         checkinLocked: "Check in Module is locked"
     }

@@ -6,22 +6,23 @@ const HomeViewModel = require("./checkin-view-model");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 
-const component
+
 var cnt = 0;
 //var page;
-var items;
+var items = new ObservableArray([]);
 var pageData = new Observable();
 //const label = new labelModule.Label();
 
 exports.onLoaded = function(args) {
-    component = args.object;
+    const component = args.object;
     component.bindingContext = new HomeViewModel();
     //query in loading so that we can see if there is an accepted
     //also need security to check if theres already an active checkin
     //use a switch for active and inactive methods
     component.bindingContext = pageData;
 
-    
+   
+
     fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/checkinSecurity.php", {
     }).then(function (response) {
         then(response);
@@ -38,8 +39,9 @@ function then(response){
    
     console.log(phpResponse);
    // console.log(response);
-    items = new ObservableArray([]);
     if(phpResponse == "no data"){
+        items = new ObservableArray([]);
+
         inactive();
         
     }else{
@@ -52,40 +54,42 @@ function then(response){
 function active(){
     console.log("checked in");
 
-    items.push(
-        {
-            pageName: "Services",
-            pageDesc: "list of services",
-            itemImage: "~/images/CheckIn/services.jpg"
-        },
-        {
-            pageName: "Menu",
-            pageDesc: "list of food in the menu",
-            itemImage: "~/images/CheckIn/menu.jpg"
-        },
-        {
-            pageName: "Bill",
-            pageDesc: "bill",
-            itemImage: "~/images/CheckIn/bill.jpg"
-        },
-        {
-            pageName: "Inquiries",
-            pageDesc: "help center",
-            itemImage: "~/images/CheckIn/inquiries.png"
-        }
-    )
+    if(cnt == 0){
+        cnt++;
+        items.push(
+            {
+                pageName: "Services",
+                pageDesc: "list of services",
+                itemImage: "~/images/CheckIn/services.jpg"
+            },
+            {
+                pageName: "Menu",
+                pageDesc: "list of food in the menu",
+                itemImage: "~/images/CheckIn/menu.jpg"
+            },
+            {
+                pageName: "Bill",
+                pageDesc: "bill",
+                itemImage: "~/images/CheckIn/bill.jpg"
+            },
+            {
+                pageName: "Inquiries",
+                pageDesc: "help center",
+                itemImage: "~/images/CheckIn/inquiries.png"
+            }
+        )
 
-    pageData.set("items", items);
-    
+        pageData.set("items", items);
+    }
 }
 function inactive(){
     console.log("not checked in");
-   // var listview = component.getViewById("listview");
-  //  var label = component.getViewById("lockNotifier");
-
-  //  listview.class = "hiddenLayout";
-  //  label.class = "page-placeholder";
-
+    
+    //label.text = "Check in Module is locked";
+    pageData.set("items", items);
+    page.bindingContext = {
+        checkinLocked: "Check in Module is locked"
+    }
     //add image for locked tab
 }
 exports.onItemTap = function(args){
