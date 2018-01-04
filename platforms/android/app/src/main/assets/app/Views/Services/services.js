@@ -26,7 +26,7 @@ var options = {
 
 exports.onloaded = function(args){
     page = args.object
-    console.log("<<<<<<menu page>>>>>>")
+    console.log("<<<<<<service page>>>>>>")
     page.bindingContext = pageData;
 
     var obj;
@@ -55,7 +55,7 @@ exports.onloaded = function(args){
                     }
 
                 );
-                console.log(obj[x].name);
+      
             }
             pageData.set("items", items);
         }else{

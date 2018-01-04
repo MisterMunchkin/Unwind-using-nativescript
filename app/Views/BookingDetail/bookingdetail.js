@@ -122,50 +122,37 @@ exports.onloaded = function(args) {
 
 exports.checkoutTap = function(){
     console.log("<<<<<<<<<<<<check out tapped>>>>>>>>>");
-    var vm = new Observable();
 
-    vm.init = function(){
-        PayPal.addLogger(function(msg){
-            console.log('[nativescript-paypal] ' + msg);
-        });
+    PayPal.init({
+        clientId: '1',
+        environment: 0
+    });
 
-        //init paypal
-        PayPal.init({
-            clientId: '1',
-            environment: 0
-        });
-    }
-
-    vm.startPayPalCheckout = function(){
-        var payment = PayPal.newPayment()
-                .setDescription("check out of hotel")
-                .setAmount(global.checkOutGrandTotal)
-                .setCurrency('PHP');
-
-        payment.start(function(result){
-            var logPrefix = '[payment result] ';
-            console.log(logPrefix + 'code: ' + result.code);
-
-            switch(result.code){
-                case 0:
-                    console.log(logPrefix + 'Success: ' + result.key);
-                    break;
-                case 1: 
-                    console.log(logPrefix + 'Operation was cancelled.');
-                    break;
-                case -1:
-                    console.log(logPrefix + 'Checkout failed!');
-                    break;
-                case -2:
-                    console.log(logPrefix + 'Unhandled exception!');
-                    break;
-
-                default:
-                    console.log(logPrefix + 'UNKNOWN: ' + result.code);
-                    break;
-            }
-        })
-    }
+    payment.start(function(cbResult){
+        switch (cbResult.code) {
+            case 0:
+                // SUCCESS
+                // pay key is stored in 'cbResult.key'
+                console.log("Success");
+                break;
+                
+            case 1:
+                // operation was CANCELLED
+                console.log("Cancelled");
+                break;
+                
+            case -1:
+                // checkout FAILED
+                console.log("Failed");
+                break;
+                
+            case -2:
+                // "unhandled exception"
+                console.log("Unhandled Exception");
+                break;
+        }
+    });
+   
 }
 exports.checkinButton = function(){
     console.log("check in button clicked");
