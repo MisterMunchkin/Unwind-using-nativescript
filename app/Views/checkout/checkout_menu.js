@@ -76,7 +76,7 @@ exports.checkoutTap = function(){
     console.log("timestamp: " + date);
     
 
-    global.checkOutGrandTotal += grandTotal;
+    global.checkOutGrandTotal += grandTotal;//adds to the total hotel check out
 
 
     requestObject = {timestamp_ordered: date,

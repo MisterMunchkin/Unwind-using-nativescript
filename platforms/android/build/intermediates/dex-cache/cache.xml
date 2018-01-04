@@ -3,246 +3,30 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\007d3d43034df75ba902f1044669d2d10c322ab8\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="ce22401852bd9e460265a9a1567f7cedb6fc91b9">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_a92a08722a7e03b18b242e03454c70ed8c13cebc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\3b5eadc3c0dfbec09d3ef117094817020030635c\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_059d5512c74e053a270ccdeae1f5936ae71147cd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\fbd9aeb3719fb90728a8abbfe46da7f53374d189\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_a24eb97cb8054c1390bb7e343a25d1ff1ad18921.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\eef1f5ded84871e475ae1e3e8e26bbbebfdae23a\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_477e528ad018d2157038ebfa5bca0ecba21713bf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\00c8c22820b4666bea84a5b8917733842c5731bf\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="21ece50b870a8bea45608a6748ad60112d5d9ed1">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_2e2a3bc6a1e0860b48bdbaa9e2b1e49b0f058e13.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\e87b0aa0a632dd45b18bfa6a0da28c1435725780\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_5dd4a55d3bcb33d4f5d7c9f9726a6299d184fc6c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\b1e712cf574d66e47d63e73880b985cdb93aec89\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_cdb93f53eb28d0fba5161dfac12e685355f76cb7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\4ad3cd1f9bd92c3a2d9df3ea47939a4ba73c7531\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="556dc4e7734c7445d7310a625fad89c5be6728b2">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_917dbe127500275485eaedf4b4de72f037ffe9e3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\7419b1c13425a36bc054311592d9ea1e4bd47383\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_7d92a8c94aef70d3487366295086745baa74a4e7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\015b829b577503e1b9d61a6fcebea5b3f45b3a14\output\jars\classes.jar"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\532f9792acb22c41b62a29b09d4e249db818497e\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="da47b5635353ca55aabc9e1ad6aaaa5626fedcb4">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_46bc4557d782be0ca835273e54e27ecb895199fd.jar" />
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_d5bbd6110a753aa63a63e47ef8f993d8a4c2295b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\d16ffddf704a60bc285952681b6f51857de91c31\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="16dfa5cc51cd9a9e2809e48ceb26724a29861fdd">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_1d0b75e9190ec76e50a8cb95b8784ee65d668c27.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\5834d897730bccd79ee06bd03e3e9a21cc15050a\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="4df8aad66215f497722e05820383f9ff04796fea">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_618793347c7ba067fd1bd08f4f45a308c7172e7d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\okio-1.11.0_48f40c751d135c94c549bb1882e3fcbd94c69277.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\1bd649a27284313bd67a0869a060ca2638ccd52f\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_4338afadb93f9445ba94f2baf9dc15aae55dfd85.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\5087ac4abf8cc0046a8d829dbe06d80e291b4e55\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_db150705a115f5b19f227a9c41141313dc5fc35c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.5.0\4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83\okhttp-3.5.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\okhttp-3.5.0_937cd7224d3715634472d45d36f2729c64461ee2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Android\SDK\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\support-annotations-25.3.1_ad885d9968531cd248ff7229237af431dbe89fed.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\eab8993fc4d6940bac7f8299c61064f1f42e110f\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="28bc7007cc5fb935b0737a42f05b8286936228b0">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_fcdee348692ab6cccd0ac1fbfcdb8cbb8c7d985f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\de7072d0f474bd31287b314f5db47125461644e7\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_5490d76194a72c54ce007df5512bd2e25c2853a8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\3a28113431598656a33d42eeb6404af20f09ac8e\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_f8a03d41a7c77e6caf6de551df4b0cb97978436d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\26917f7155e7359c1bcaf3035052aa9d96a933d1\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_47f870cf91f6aa975e8bbc729c9a586af810f541.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\378540dcdbeadee87e5d03278f73b2d5b8cd5791\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="9ffa5b2e37c626bd25cfbff4df099cdf068595f9">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_7020fbacf02800d894988da4cecba37450f51fcd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\d4af35486d72902a3ce6a414761441b93576764c\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_00079bed5f15fe4978b73448606ddd06b2123fbd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\cc73ab38d7d1b4aeacfcb2418ff84d0dcce6ef8d\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="ae411cd0dd58ad905486a0bc7931ec5adf3a2d13">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_e52fcdc255897e6f12afe017c9285758021965fc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="0eed9e468431f447bf63f3a0cee23418e8994411">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_ea9d085f84d060e029b36ca1c406521ee39389cb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\f7e767f46cb100dc4bf3079dd105457fa7b655a7\output\jars\classes.jar"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\89f5cdb8ac5b8f99d3d051855c53443315d11fc0\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="746274223beb11b1cda7854d7eec3038695c2c93">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_b2559acbb83aa70fff7484f6fd0db5079ebc8fc9.jar" />
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_5613fdc0a98d96a9e6181e3201b566b9e3a7bfd7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\dalmi\.android\build-cache\6b8fabde772821e315403e786863b161697a876a\output\jars\classes.jar"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\4e2ccba16280129ce63d26c06f004fa6fdae4772\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_b0343ef31e8a82bddfbca6b91e328c0c184ae344.jar" />
+        sha1="28bc7007cc5fb935b0737a42f05b8286936228b0">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_e4ff25ccf1b4df24522aeb423a63307e6e60f3ee.jar" />
     </item>
 
 </items>

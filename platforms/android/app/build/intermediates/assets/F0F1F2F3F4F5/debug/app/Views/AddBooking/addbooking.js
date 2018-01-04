@@ -14,25 +14,37 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
 
 };
 
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
+   topmost.navigate("tabs/tabs-page");//find a way to navigate to a specific tab
+}
 
 exports.nextTap = function(){
-    if (new Date(checkin_date) >= new Date()) {//bug it returns false if check in is same as current date
-        if (new Date(checkin_date) < new Date(checkout_date)) {
-            var navigationOptions = {
-                moduleName: "Views/AddBooking/AddQuantity/addquantity",
-                context: {
-                    checkin_date: checkin_date,
-                    checkout_date: checkout_date
-                }
-            }
 
-            var topmost = frameModule.topmost();
-            topmost.navigate(navigationOptions);
+    var checkinTextView = page.getViewById("checkinDate");
+    var checkoutTextView = page.getViewById("checkoutDate");
+    
+    if(checkinTextView.text != "" && checkoutTextView.text != ""){
+        if (new Date(checkin_date) >= new Date()) {//bug it returns false if check in is same as current date
+            if (new Date(checkin_date) < new Date(checkout_date)) {
+                var navigationOptions = {
+                    moduleName: "Views/AddBooking/AddQuantity/addquantity",
+                    context: {
+                        checkin_date: checkin_date,
+                        checkout_date: checkout_date
+                    }
+                }
+
+                var topmost = frameModule.topmost();
+                topmost.navigate(navigationOptions);
+            }else{
+                console.log("enter valid dates");
+            }
         }else{
             console.log("enter valid dates");
         }
     }else{
-        console.log("enter valid dates");
+        checkoutTextView.class = checkinTextView.class = "requiredFields";
     }
 }
 

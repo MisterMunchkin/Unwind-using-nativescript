@@ -6,6 +6,7 @@ var ObservableArray = require("data/observable-array").ObservableArray;
 var view = require("ui/core/view");
 var fetchModule = require("fetch");
 
+
 var items;
 var pageData;
 var grandTotal;
@@ -18,12 +19,14 @@ exports.onLoaded = function(args){
     page.bindingContext = pageData;
 
     loadItems();
+
 }
 exports.onNavBtnTap = function(){
     // the top back button will lead back to the main page
     var topmost = frameModule.topmost();
-    topmost.navigate("tabs/tabs-page");
+    topmost.navigate("Views/Menu/menu");
 }
+
 function loadItems(){
     var obj;
 
@@ -66,10 +69,15 @@ function loadItems(){
 }
 
 exports.checkoutTap = function(){
+    var date = new Date().toMysqlFormat();
+
     console.log("food Array: " + JSON.stringify(global.foodArray));
     console.log("grand total: " + grandTotal);
+    console.log("timestamp: " + date);
+    
 
-    /*var date = new Date();
+    global.checkOutGrandTotal += grandTotal;//adds to the total hotel check out
+
 
     requestObject = {timestamp_ordered: date,
                      grandTotal: grandTotal,
@@ -80,11 +88,16 @@ exports.checkoutTap = function(){
 
     }).then(function (response) {
         var phpResponse = response._bodyText;
-        console.log(phpResponse);
+
+            alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
+            console.log("Full response: " + JSON.stringify(response))
+            console.log(phpResponse);
+            var topmost = frameModule.topmost();
+            topmost.navigate("Views/Menu/menu");
     }, function (error) {
         console.log("ERROR");
         console.log(JSON.stringify(error));
-    })*/
+    })
 
 }
 exports.remove = function(args){
@@ -120,4 +133,20 @@ function formEncode(obj) { //to convert urlencoded form data to JSON
         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
     return str.join("&");
 }
-
+/**
+ * You first need to create a formatting function to pad numbers to two digits…
+ **/
+function twoDigits(d) {
+    if(0 <= d && d < 10) return "0" + d.toString();
+    if(-10 < d && d < 0) return "-0" + (-1*d).toString();
+    return d.toString();
+}
+/**
+ * …and then create the method to output the date string as desired.
+ * Some people hate using prototypes this way, but if you are going
+ * to apply this to more than one Date object, having it as a prototype
+ * makes sense.
+ **/
+Date.prototype.toMysqlFormat = function() {
+    return this.getUTCFullYear() + "-" + twoDigits(1 + this.getUTCMonth()) + "-" + twoDigits(this.getUTCDate()) + " " + twoDigits(this.getUTCHours()) + ":" + twoDigits(this.getUTCMinutes()) + ":" + twoDigits(this.getUTCSeconds());
+};

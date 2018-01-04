@@ -1,14 +1,14 @@
 [
     {
-        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\menu\\send_feedback_activity_menu.xml",
-        "source": "C:\\Users\\dalmi\\.android\\build-cache\\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\\output\\res\\menu\\send_feedback_activity_menu.xml"
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\menu\\edit_details.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\\output\\res\\menu\\edit_details.xml"
     },
     {
-        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\menu\\edit_details.xml",
-        "source": "C:\\Users\\dalmi\\.android\\build-cache\\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\\output\\res\\menu\\edit_details.xml"
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\menu\\send_feedback_activity_menu.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\\output\\res\\menu\\send_feedback_activity_menu.xml"
     },
     {
-        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\menu\\view_feedback_items_activity_menu.xml",
-        "source": "C:\\Users\\dalmi\\.android\\build-cache\\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\\output\\res\\menu\\view_feedback_items_activity_menu.xml"
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\menu\\view_feedback_items_activity_menu.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\\output\\res\\menu\\view_feedback_items_activity_menu.xml"
     }
 ]

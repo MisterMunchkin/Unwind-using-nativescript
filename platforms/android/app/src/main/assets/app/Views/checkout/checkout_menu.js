@@ -73,14 +73,11 @@ exports.checkoutTap = function(){
 
     console.log("food Array: " + JSON.stringify(global.foodArray));
     console.log("grand total: " + grandTotal);
-<<<<<<< HEAD
     console.log("timestamp: " + date);
     
-=======
 
-    global.checkOutGrandTotal += grandTotal;
-    /*var date = new Date();
->>>>>>> 73ebc904e3b39a285f03544776e15dc5c32e1528
+    global.checkOutGrandTotal += grandTotal;//adds to the total hotel check out
+
 
     requestObject = {timestamp_ordered: date,
                      grandTotal: grandTotal,

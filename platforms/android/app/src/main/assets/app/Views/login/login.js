@@ -117,9 +117,10 @@ function then(response){
    
     console.log(phpResponse);
 
-    if(phpResponse == "user login secured"){
+    if(phpResponse != "user wrong password" && phpResponse != "user does not exist"
+                            && phpResponse != "post failed"){
         console.log("inside user login secured");
-
+        global.loginCred = JSON.parse(phpResponse);
         var topmost = frameModule.topmost();
         topmost.navigate("tabs/tabs-page");
         

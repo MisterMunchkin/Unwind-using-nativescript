@@ -15,6 +15,7 @@ function backEvent(args) {
 
 global.foodArray = new Array();
 global.checkOutGrandTotal = 0;
+global.loginCred;
 //application.start({ moduleName: "./tabs/tabs-page" });
 application.start({ moduleName: "Views/login/login" });
 /*

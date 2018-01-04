@@ -22,6 +22,10 @@ var options = {
 function onLoaded(args) {
     const component = args.object;
     component.bindingContext = new SearchViewModel();
+
+    component.bindingContext = {
+        loginCred: global.loginCred[0]
+    }
 }
 
 exports.onLoaded = onLoaded;

@@ -9,6 +9,7 @@ Feel free to customize layouts and components to change how the tab view looks.
         <ScrollView>
             <!--<Label class="page-icon fa" text="&#xf1ea;"></Label>-->
             
+            <Label id="lockNotifier" class="page-placeholder hiddenLayout" text="Check in Module is locked"></Label>
 
             <lv:RadListView id="listview"  itemTap="onItemTap" selectionBehavior="Press" items="{{ items }}" class="list-group"> 
                 <lv:RadListView.listViewLayout>

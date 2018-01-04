@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeF0F1F2F3F4F5DebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+        "outputFile": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeF0F1F2F3F4F5DebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\dalmi\\.android\\build-cache\\9a2ea97cf7b6e7a5a138ffb4c1dc2722e6532780\\output\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
+                    "file": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\\output\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

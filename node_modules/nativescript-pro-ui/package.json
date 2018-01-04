@@ -1,57 +1,38 @@
 {
   "_args": [
     [
-      {
-        "raw": "nativescript-pro-ui@^3.2.0",
-        "scope": null,
-        "escapedName": "nativescript-pro-ui",
-        "name": "nativescript-pro-ui",
-        "rawSpec": "^3.2.0",
-        "spec": ">=3.2.0 <4.0.0",
-        "type": "range"
-      },
-      "D:\\Android\\Nativescript Apps\\Unwindv2"
+      "nativescript-pro-ui@3.3.0",
+      "C:\\Android\\Nativescript\\Unwind"
     ]
   ],
-  "_from": "nativescript-pro-ui@>=3.2.0 <4.0.0",
+  "_from": "nativescript-pro-ui@3.3.0",
   "_id": "nativescript-pro-ui@3.3.0",
-  "_inCache": true,
+  "_inBundle": false,
+  "_integrity": "sha1-VPfCNZxvfajfYesXLkI781L9i3M=",
   "_location": "/nativescript-pro-ui",
-  "_nodeVersion": "6.12.2",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/nativescript-pro-ui-3.3.0.tgz_1513864943773_0.6025739498436451"
-  },
-  "_npmUser": {
-    "name": "tns-bot",
-    "email": "nativescript@telerik.com"
-  },
-  "_npmVersion": "4.6.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-pro-ui@^3.2.0",
-    "scope": null,
-    "escapedName": "nativescript-pro-ui",
+    "type": "version",
+    "registry": true,
+    "raw": "nativescript-pro-ui@3.3.0",
     "name": "nativescript-pro-ui",
-    "rawSpec": "^3.2.0",
-    "spec": ">=3.2.0 <4.0.0",
-    "type": "range"
+    "escapedName": "nativescript-pro-ui",
+    "rawSpec": "3.3.0",
+    "saveSpec": null,
+    "fetchSpec": "3.3.0"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-pro-ui/-/nativescript-pro-ui-3.3.0.tgz",
-  "_shasum": "54f7c2359c6f7da8df61eb172e423bf352fd8b73",
-  "_shrinkwrap": null,
-  "_spec": "nativescript-pro-ui@^3.2.0",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
+  "_spec": "3.3.0",
+  "_where": "C:\\Android\\Nativescript\\Unwind",
   "author": {
     "name": "Progress"
   },
   "bugs": {
     "url": "https://github.com/telerik/nativescript-ui-feedback/issues"
   },
-  "dependencies": {},
   "description": "Progress NativeScript Pro UI is a suite of rich user interface components based on the native iOS and Android implementations.",
   "devDependencies": {
     "@angular/common": "~5.0.0",
@@ -78,11 +59,6 @@
     "url": "0.10.3",
     "zone.js": "~0.8.2"
   },
-  "directories": {},
-  "dist": {
-    "shasum": "54f7c2359c6f7da8df61eb172e423bf352fd8b73",
-    "tarball": "https://registry.npmjs.org/nativescript-pro-ui/-/nativescript-pro-ui-3.3.0.tgz"
-  },
   "files": [
     "**/*.js",
     "**/*.metadata.json",
@@ -102,19 +78,11 @@
     "autocomplete"
   ],
   "license": "SEE LICENSE IN LICENSE.md",
-  "maintainers": [
-    {
-      "name": "tns-bot",
-      "email": "nativescript@telerik.com"
-    }
-  ],
   "name": "nativescript-pro-ui",
   "nativescript": {
     "ios": "3.1.0",
     "android": "3.1.0"
   },
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "http://www.github.com/telerik/nativescript-ui-feedback.git"

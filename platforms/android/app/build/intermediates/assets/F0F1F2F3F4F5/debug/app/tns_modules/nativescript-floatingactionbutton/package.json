@@ -1,50 +1,32 @@
 {
   "_args": [
     [
-      {
-        "raw": "nativescript-floatingactionbutton@^4.1.2",
-        "scope": null,
-        "escapedName": "nativescript-floatingactionbutton",
-        "name": "nativescript-floatingactionbutton",
-        "rawSpec": "^4.1.2",
-        "spec": ">=4.1.2 <5.0.0",
-        "type": "range"
-      },
-      "D:\\Android\\Nativescript Apps\\Unwindv2"
+      "nativescript-floatingactionbutton@4.1.3",
+      "C:\\Android\\Nativescript\\Unwind"
     ]
   ],
-  "_from": "nativescript-floatingactionbutton@>=4.1.2 <5.0.0",
+  "_from": "nativescript-floatingactionbutton@4.1.3",
   "_id": "nativescript-floatingactionbutton@4.1.3",
-  "_inCache": true,
+  "_inBundle": false,
+  "_integrity": "sha1-2pI3tVPJH0egIxELaM8Qo4fklzQ=",
   "_location": "/nativescript-floatingactionbutton",
-  "_nodeVersion": "6.11.0",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/nativescript-floatingactionbutton-4.1.3.tgz_1511132340704_0.8272650598082691"
-  },
-  "_npmUser": {
-    "name": "bradmartin",
-    "email": "bradwaynemartin@gmail.com"
-  },
-  "_npmVersion": "4.6.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-floatingactionbutton@^4.1.2",
-    "scope": null,
-    "escapedName": "nativescript-floatingactionbutton",
+    "type": "version",
+    "registry": true,
+    "raw": "nativescript-floatingactionbutton@4.1.3",
     "name": "nativescript-floatingactionbutton",
-    "rawSpec": "^4.1.2",
-    "spec": ">=4.1.2 <5.0.0",
-    "type": "range"
+    "escapedName": "nativescript-floatingactionbutton",
+    "rawSpec": "4.1.3",
+    "saveSpec": null,
+    "fetchSpec": "4.1.3"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-floatingactionbutton/-/nativescript-floatingactionbutton-4.1.3.tgz",
-  "_shasum": "da9237b553c91f47a023110b68cf10a387e49734",
-  "_shrinkwrap": null,
-  "_spec": "nativescript-floatingactionbutton@^4.1.2",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
+  "_spec": "4.1.3",
+  "_where": "C:\\Android\\Nativescript\\Unwind",
   "author": {
     "name": "Brad Martin",
     "email": "bmartin@nstudio.io",
@@ -83,7 +65,6 @@
       "url": "https://github.com/sis0k0"
     }
   ],
-  "dependencies": {},
   "description": "A NativeScript plugin for Material Design Floating Action Button.",
   "devDependencies": {
     "husky": "^0.13.4",
@@ -94,11 +75,6 @@
     "tns-platform-declarations": "^3.1.0",
     "tslint": "~5.4.3",
     "typescript": "~2.3.0"
-  },
-  "directories": {},
-  "dist": {
-    "shasum": "da9237b553c91f47a023110b68cf10a387e49734",
-    "tarball": "https://registry.npmjs.org/nativescript-floatingactionbutton/-/nativescript-floatingactionbutton-4.1.3.tgz"
   },
   "homepage": "https://github.com/bradmartin/nativescript-floatingactionbutton",
   "keywords": [
@@ -122,28 +98,6 @@
     ]
   },
   "main": "fab",
-  "maintainers": [
-    {
-      "name": "bradmartin",
-      "email": "bradmartin0905@gmail.com"
-    },
-    {
-      "name": "gabrielbiga",
-      "email": "gabrielbiga@me.com"
-    },
-    {
-      "name": "lazaromenezes",
-      "email": "lazarodm@gmail.com"
-    },
-    {
-      "name": "nathanaela",
-      "email": "nathan@master-technology.com"
-    },
-    {
-      "name": "sitefinitysteve",
-      "email": "steve@sitefinitysteve.com"
-    }
-  ],
   "name": "nativescript-floatingactionbutton",
   "nativescript": {
     "platforms": {
@@ -157,8 +111,6 @@
       "category": "Interface"
     }
   },
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bradmartin/nativescript-floatingactionbutton.git"

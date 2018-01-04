@@ -1,50 +1,32 @@
 {
   "_args": [
     [
-      {
-        "raw": "nativescript-https@^1.0.1",
-        "scope": null,
-        "escapedName": "nativescript-https",
-        "name": "nativescript-https",
-        "rawSpec": "^1.0.1",
-        "spec": ">=1.0.1 <2.0.0",
-        "type": "range"
-      },
-      "D:\\Android\\Nativescript Apps\\Unwindv2"
+      "nativescript-https@1.0.1",
+      "C:\\Android\\Nativescript\\Unwind"
     ]
   ],
-  "_from": "nativescript-https@>=1.0.1 <2.0.0",
+  "_from": "nativescript-https@1.0.1",
   "_id": "nativescript-https@1.0.1",
-  "_inCache": true,
+  "_inBundle": false,
+  "_integrity": "sha1-x6mXrBB9RQuJF9v+JIGdmq7/zi8=",
   "_location": "/nativescript-https",
-  "_nodeVersion": "6.9.1",
-  "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/nativescript-https-1.0.1.tgz_1482966378575_0.2924490566365421"
-  },
-  "_npmUser": {
-    "name": "roblav96",
-    "email": "roblav96@gmail.com"
-  },
-  "_npmVersion": "3.10.8",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-https@^1.0.1",
-    "scope": null,
-    "escapedName": "nativescript-https",
+    "type": "version",
+    "registry": true,
+    "raw": "nativescript-https@1.0.1",
     "name": "nativescript-https",
-    "rawSpec": "^1.0.1",
-    "spec": ">=1.0.1 <2.0.0",
-    "type": "range"
+    "escapedName": "nativescript-https",
+    "rawSpec": "1.0.1",
+    "saveSpec": null,
+    "fetchSpec": "1.0.1"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-https/-/nativescript-https-1.0.1.tgz",
-  "_shasum": "c7a997ac107d450b8917dbfe24819d9aaeffce2f",
-  "_shrinkwrap": null,
-  "_spec": "nativescript-https@^1.0.1",
-  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
+  "_spec": "1.0.1",
+  "_where": "C:\\Android\\Nativescript\\Unwind",
   "author": {
     "name": "Rob Laverty",
     "email": "roblav96@gmail.com"
@@ -52,19 +34,12 @@
   "bugs": {
     "url": "https://github.com/gethuman/nativescript-https/issues"
   },
-  "dependencies": {},
   "description": "Secure HTTP client with SSL pinning for Nativescript - iOS/Android.",
   "devDependencies": {
     "tns-core-modules": "latest",
     "tns-platform-declarations": "latest",
     "typescript": "latest"
   },
-  "directories": {},
-  "dist": {
-    "shasum": "c7a997ac107d450b8917dbfe24819d9aaeffce2f",
-    "tarball": "https://registry.npmjs.org/nativescript-https/-/nativescript-https-1.0.1.tgz"
-  },
-  "gitHead": "f7d4e29b9ab85dac6dd17303e3e10400e28d4e05",
   "homepage": "https://github.com/gethuman/nativescript-https",
   "keywords": [
     "secure",
@@ -83,12 +58,6 @@
   ],
   "license": "MIT",
   "main": "https",
-  "maintainers": [
-    {
-      "name": "roblav96",
-      "email": "roblav96@gmail.com"
-    }
-  ],
   "name": "nativescript-https",
   "nativescript": {
     "platforms": {
@@ -96,8 +65,6 @@
       "ios": "2.3.0"
     }
   },
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gethuman/nativescript-https.git"

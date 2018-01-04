@@ -1,8 +1,8 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+<Page class="page-white" xmlns="http://schemas.nativescript.org/tns.xsd" 
     loaded="onLoaded"
     xmlns:lv="nativescript-pro-ui/listview" >
     <Page.actionBar>
-        <ActionBar class="label page" title="Check Out Menu">
+        <ActionBar class="label page-blue" title="Check Out Menu">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
@@ -36,11 +36,11 @@
         </StackLayout>
 
         <StackLayout row="1" orientation="horizontal">
-            <Label class="label-big" text= "Grand Total: " />
-            <Label id="grandTotal" class="label-big" />
+            <Label class="label-blue label-big" text= "Grand Total: " />
+            <Label id="grandTotal" class=" label-blue label-big" />
         </StackLayout>
         <StackLayout row="2">
-            <Button text="Check Out" tap="checkoutTap" />
+            <Button class="blue-btn" text="Check Out" tap="checkoutTap" />
         </StackLayout>
     </GridLayout>
     <!-- find a layout for the grand total label -->

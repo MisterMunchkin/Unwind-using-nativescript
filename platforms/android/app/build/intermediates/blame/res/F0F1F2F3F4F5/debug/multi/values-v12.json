@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeF0F1F2F3F4F5DebugResources\\merged.dir\\values-v12\\values-v12.xml",
+        "outputFile": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeF0F1F2F3F4F5DebugResources\\merged.dir\\values-v12\\values-v12.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 274
                 },
                 "from": {
-                    "file": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\values-v12\\values-v12.xml",
+                    "file": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\values-v12\\values-v12.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -33,7 +33,7 @@
                     "endOffset": 474
                 },
                 "from": {
-                    "file": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\values-v12\\values-v12.xml",
+                    "file": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\values-v12\\values-v12.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -53,7 +53,7 @@
                     "endOffset": 593
                 },
                 "from": {
-                    "file": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\values-v12\\values-v12.xml",
+                    "file": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\values-v12\\values-v12.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -72,7 +72,7 @@
                     "endOffset": 688
                 },
                 "from": {
-                    "file": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\values-v12\\values-v12.xml",
+                    "file": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\values-v12\\values-v12.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
