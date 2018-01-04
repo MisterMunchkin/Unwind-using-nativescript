@@ -22,8 +22,9 @@ exports.onLoaded = function(args){
 exports.onNavBtnTap = function(){
     // the top back button will lead back to the main page
     var topmost = frameModule.topmost();
-    topmost.navigate("tabs/tabs-page");
+    topmost.navigate("Views/Menu/menu");
 }
+
 function loadItems(){
     var obj;
 
@@ -82,8 +83,12 @@ exports.checkoutTap = function(){
 
     }).then(function (response) {
         var phpResponse = response._bodyText;
-        console.log("Full response: " + JSON.stringify(response))
-        console.log(phpResponse);
+
+            alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
+            console.log("Full response: " + JSON.stringify(response))
+            console.log(phpResponse);
+            var topmost = frameModule.topmost();
+            topmost.navigate("Views/Menu/menu");
     }, function (error) {
         console.log("ERROR");
         console.log(JSON.stringify(error));

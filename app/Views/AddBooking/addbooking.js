@@ -14,6 +14,10 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
 
 };
 
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
+   topmost.navigate("tabs/tabs-page");//find a way to navigate to a specific tab
+}
 
 exports.nextTap = function(){
 
