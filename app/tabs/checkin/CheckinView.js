@@ -14,7 +14,7 @@ var pageData = new Observable();
 //const label = new labelModule.Label();
 
 exports.onLoaded = function(args) {
-    const component = args.object;
+    const component = page = args.object;
     component.bindingContext = new HomeViewModel();
     //query in loading so that we can see if there is an accepted
     //also need security to check if theres already an active checkin
@@ -87,9 +87,9 @@ function inactive(){
     
     //label.text = "Check in Module is locked";
     pageData.set("items", items);
-    page.bindingContext = {
-        checkinLocked: "Check in Module is locked"
-    }
+    
+    var label = page.getViewById("checkinNotif");
+    label.class = "page-placeholder";
     //add image for locked tab
 }
 exports.onItemTap = function(args){
