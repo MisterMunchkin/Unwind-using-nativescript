@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
 	"time": "Fri Jan 05 2018 21:23:40 GMT+0800 (Taipei Standard Time)",
+=======
+	"time": "Fri Jan 05 2018 16:55:35 GMT+0800 (Taipei Standard Time)",
+>>>>>>> parent of fd6026f4... Login And Booking View fixes
 	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,

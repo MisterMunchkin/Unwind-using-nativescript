@@ -61,7 +61,7 @@ exports.signIn = function(){
     if(email.text != "" && password.text != ""){
         if(validateEmail(email.text) == true){    
             console.log("email: " + email.text);
-            //console.log("password: " + password.text);
+            console.log("password: " + password.text);
             loader = new LoadingIndicator();
 
             loader.show(options);
@@ -86,6 +86,25 @@ exports.signIn = function(){
     }
 };
 
+/*function signInfetch(){
+    var email;
+    var password;
+
+    email = page.getViewById("email").text;
+    password = page.getViewById("password").text;
+
+    loader.show(options);
+    var requestObject = { email: email, password: password };
+    console.log("attempting to connect to php server");
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/login/login.php", {
+        method: "POST",
+        body: formEncode(requestObject)
+    }).then(function (response) {
+        then(response);
+    }, function (error) {
+        console.log(JSON.stringify(error));
+    })
+}*/
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     console.log("email validation return: " + re.test(email.toLowerCase()));
@@ -97,9 +116,9 @@ function then(response){
 
    
     console.log(phpResponse);
-    //phpResponse != "user wrong password" && phpResponse != "user does not exist"
-    //&& phpResponse != "post failed"
-    if(phpResponse.indexOf('true') > -1){
+
+    if(phpResponse != "user wrong password" && phpResponse != "user does not exist"
+                            && phpResponse != "post failed"){
         console.log("inside user login secured");
         global.loginCred = JSON.parse(phpResponse);
         var topmost = frameModule.topmost();

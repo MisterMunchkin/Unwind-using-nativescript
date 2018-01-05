@@ -124,13 +124,13 @@ exports.checkoutTap = function(){
     console.log("<<<<<<<<<<<<check out tapped>>>>>>>>>");
 
     PayPal.init({
-        clientId: 'AXKeQd5lPUMau5NpLA7gcCbNXaCaCn8m-DdyLxD607PU3cjcA-5BpIkMShDaG4w-ABiFVDosVeZlvnaE',
+        clientId: '1',
         environment: 0
     });
     var payment = PayPal.newPayment()
                     .setDescription('Grand Check Out')
                     .setAmount(50);
-
+                    
     payment.start(function(cbResult){
         switch (cbResult.code) {
             case 0:

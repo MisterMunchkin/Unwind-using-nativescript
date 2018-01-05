@@ -140,7 +140,7 @@ exports.checkoutTap = function(){
     var payment = PayPal.newPayment()
                     .setDescription('Grand Check Out')
                     .setAmount(50);
-
+                    
     payment.start(function(cbResult){
         switch (cbResult.code) {
             case 0:

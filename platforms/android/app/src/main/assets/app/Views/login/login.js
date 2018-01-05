@@ -61,7 +61,7 @@ exports.signIn = function(){
     if(email.text != "" && password.text != ""){
         if(validateEmail(email.text) == true){    
             console.log("email: " + email.text);
-            //console.log("password: " + password.text);
+            console.log("password: " + password.text);
             loader = new LoadingIndicator();
 
             loader.show(options);
@@ -97,9 +97,9 @@ function then(response){
 
    
     console.log(phpResponse);
-    //phpResponse != "user wrong password" && phpResponse != "user does not exist"
-    //&& phpResponse != "post failed"
-    if(phpResponse.indexOf('true') > -1){
+
+    if(phpResponse != "user wrong password" && phpResponse != "user does not exist"
+                            && phpResponse != "post failed"){
         console.log("inside user login secured");
         global.loginCred = JSON.parse(phpResponse);
         var topmost = frameModule.topmost();
