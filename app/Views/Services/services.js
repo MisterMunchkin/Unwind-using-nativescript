@@ -85,6 +85,13 @@ exports.itemTap = function(args){
     var tappedItem = tappedView.bindingContext;
 
     console.log("tapped Item: " + tappedItem.service_name);
+
+    global.servicesOrdered.push(
+        {
+            service_name: tappedItem.service_name,
+            service_type: tappedItem.service_type
+        }
+    );
     /*var navigationOptions = {
         moduleName: "Views/Menu/MenuDetail/menu_detail",
         context: {
