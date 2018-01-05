@@ -1,14 +1,15 @@
 .inActiveNav{
-    background-color: white;
+    background-color: #00a2ff;
     color: gray;
 }
 .ActiveNav{
-    background-color: white;
-    color: #16a1f1;
+    background-color: #00a2ff;
+    color: white;
 }
-.test{
-    color: #16a1f1;
+.page-blue{
+    background-color:#3ba9e9
 }
+
 .fab-button{
     height:60;
     width:60;
@@ -16,4 +17,5 @@
     background-color:#16a1f1;
     horizontal-align:right;
     vertical-align:bottom;
+    padding-bottom: 10cm;
 }

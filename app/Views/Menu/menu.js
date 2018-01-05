@@ -8,7 +8,7 @@ var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndi
 var items;
 var pageData = new Observable();
 
-var loader;
+var loader = new LoadingIndicator();
 
 var options = {
     message: 'Loading...',
@@ -31,8 +31,7 @@ exports.onloaded = function(args){
 
     var obj;
     items = new ObservableArray([]);
-    
-    loader = new LoadingIndicator();
+
     loader.show(options);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/food/loadMenuData.php", {
         
@@ -67,9 +66,8 @@ exports.onloaded = function(args){
     }, function (error) {
         console.log(JSON.stringify(error));
     })
-    console.log("total food:" + JSON.stringify(global.foodArray));
-
     loader.hide();
+    console.log("total food:" + JSON.stringify(global.foodArray));
 };
 exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();

@@ -8,9 +8,9 @@ Feel free to customize layouts and components to change how the tab view looks.
              loaded="onLoaded" unloaded="unLoaded">
 
 
-    <GridLayout rows="*, 60">
-        <StackLayout row="0">
-            <lv:RadListView id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
+    <GridLayout rows="*, 45">
+        <StackLayout>
+            <lv:RadListView row="0" id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
                 pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" > 
 
                 <lv:RadListView.listViewLayout>
@@ -34,7 +34,7 @@ Feel free to customize layouts and components to change how the tab view looks.
             </lv:RadListView>
         </StackLayout>
         
-        <StackLayout row="1" orientation="horizontal">
+        <StackLayout class="page-blue" row="1" orientation="horizontal">
         
             <Button class="ActiveNav" text="Reservations" id="resNavLabel" tap="reservationNav" width="35%" />
 
@@ -42,9 +42,9 @@ Feel free to customize layouts and components to change how the tab view looks.
 
         </StackLayout> <!--just reuse the labels you already have, you just need to change some variables so it could be used for both reservation and request -->
     </GridLayout>
-
     <FAB:fab tap="fabTap"
-                row="1"         
+         
                 icon="res://ic_plus_white_48dp"
                 class="fab-button" />
+    
 </GridLayout>
