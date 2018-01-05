@@ -86,25 +86,6 @@ exports.signIn = function(){
     }
 };
 
-/*function signInfetch(){
-    var email;
-    var password;
-
-    email = page.getViewById("email").text;
-    password = page.getViewById("password").text;
-
-    loader.show(options);
-    var requestObject = { email: email, password: password };
-    console.log("attempting to connect to php server");
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/login/login.php", {
-        method: "POST",
-        body: formEncode(requestObject)
-    }).then(function (response) {
-        then(response);
-    }, function (error) {
-        console.log(JSON.stringify(error));
-    })
-}*/
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     console.log("email validation return: " + re.test(email.toLowerCase()));

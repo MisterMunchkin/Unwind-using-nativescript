@@ -122,9 +122,19 @@ exports.onloaded = function(args) {
 
 exports.checkoutTap = function(){
     console.log("<<<<<<<<<<<<check out tapped>>>>>>>>>");
+    var clientID;
+
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/PayPal/checkoutSecurity.php", {
+           
+    }).then(function (response) {
+
+        clientID = response._bodyText;
+    }, function (error) {
+        console.log(JSON.stringify(error));
+    })
 
     PayPal.init({
-        clientId: 'AXKeQd5lPUMau5NpLA7gcCbNXaCaCn8m-DdyLxD607PU3cjcA-5BpIkMShDaG4w-ABiFVDosVeZlvnaE',
+        clientId: clientID,
         environment: 0
     });
     var payment = PayPal.newPayment()
