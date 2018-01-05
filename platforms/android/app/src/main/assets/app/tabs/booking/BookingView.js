@@ -52,7 +52,7 @@ exports.onLoaded = function(args) {
 
     console.log("<<<<< booking view page >>>>>");
     component.bindingContext = pageData;
-    loader = new LoadingIndicator();
+
 
     requestLabel = view.getViewById(component, "reqNavLabel");
     reservationLabel = view.getViewById(component, "resNavLabel");
@@ -72,7 +72,7 @@ exports.onLoaded = function(args) {
 
 exports.requestNav = function (args) {
     console.log("request nav clicked");
-    loader = new LoadingIndicator();
+   // loader = new LoadingIndicator();
     request = component.getViewById("reqNavLabel");
     reserve = component.getViewById("resNavLabel");
 
@@ -85,7 +85,7 @@ exports.requestNav = function (args) {
 }
 exports.reservationNav = function (args) {
     console.log("reservation nav clicked");
-    loader = new LoadingIndicator();
+   // loader = new LoadingIndicator();
 
     request = component.getViewById("reqNavLabel");
     reserve = component.getViewById("resNavLabel");
@@ -101,7 +101,7 @@ exports.reservationNav = function (args) {
 function loadData(phpContext){
     var obj;
     items = new ObservableArray([]);
-    loader.show(uncancelable);
+    //loader.show(uncancelable);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/" + phpContext, {
 
     }).then(function (response) {
@@ -135,7 +135,7 @@ function loadData(phpContext){
         }else{
             //label no data
         }
-        loader.hide();
+        //loader.hide();
         pageData.set("items", items);
 
     }, function (error) {
