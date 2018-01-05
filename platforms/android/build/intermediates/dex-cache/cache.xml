@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\4e2ccba16280129ce63d26c06f004fa6fdae4772\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="28bc7007cc5fb935b0737a42f05b8286936228b0">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_e4ff25ccf1b4df24522aeb423a63307e6e60f3ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\MisterMunchkin\.android\build-cache\89f5cdb8ac5b8f99d3d051855c53443315d11fc0\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -21,12 +30,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\MisterMunchkin\.android\build-cache\4e2ccba16280129ce63d26c06f004fa6fdae4772\output\jars\classes.jar"
+        jar="C:\Users\MisterMunchkin\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="28bc7007cc5fb935b0737a42f05b8286936228b0">
-        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5\debug\classes_e4ff25ccf1b4df24522aeb423a63307e6e60f3ee.jar" />
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6\debug\library-2.4.0_fa46f3267204fd1ee96b0884fb9806e048731cec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\29fb33714378f4eb06c5fc450ed8a2ccce390563\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="49696447df6357151c3d4f17b73a1e5ed24324aa">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6\debug\classes_9bad8c1cbf31ce9c53942480e637b2c47bdc53c0.jar" />
     </item>
 
 </items>

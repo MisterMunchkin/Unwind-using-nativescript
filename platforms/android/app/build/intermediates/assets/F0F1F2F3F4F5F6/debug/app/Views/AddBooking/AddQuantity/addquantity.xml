@@ -1,0 +1,34 @@
+<!--
+This is the component view that represents the 'Browse' tab.
+Feel free to customize layouts and components to change how the tab view looks.
+-->
+
+    <!--<Label class="page-icon fa" text="&#xf1ea;"></Label>
+    <Label class="page-placeholder" text=""></Label>-->
+
+<Page class="page-white" xmlns="http://schemas.nativescript.org/tns.xsd" 
+         loaded="onLoaded">
+        <Page.actionBar>
+            <ActionBar class="label page-blue" title="Register">
+                <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+            </ActionBar>
+        </Page.actionBar>
+        <StackLayout class="inputForm" orientation="vertical">
+            <!--<Label text="enter check In"/>
+            <DatePicker id="checkin" hint="check in" day="15" month="5" year="2015" verticalAlignment="center" 
+            horizontalAlignment="center" />-->
+            <Label text="Adult Quantity" class="label-blue" />
+            <TextField autocorrect="false" class="input-blue" id="adultQty"
+                keyboardType="number" maxLength="2"></TextField>
+            <!--<Label text="enter check Out"/>
+            <DatePicker id="checkout" hint="check out" day="15" month="5" year="2015" verticalAlignment="center" 
+            horizontalAlignment="center" />-->
+            <Label text="Child Quantity" class="label-blue" />
+            <TextField  autocorrect="false" class="input-blue"  id="childQty"
+               keyboardType="number" maxLength="2"></TextField>
+
+            <button text="next" tap="nextTap" class="blue-btn" />
+        
+        </StackLayout>
+        
+</Page>

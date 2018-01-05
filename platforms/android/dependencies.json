@@ -1,5 +1,9 @@
 [
     {
+        "name": "nativescript-awesome-loaders",
+        "directory": "..\\..\\node_modules\\nativescript-awesome-loaders"
+    },
+    {
         "name": "nativescript-dom",
         "directory": "..\\..\\node_modules\\nativescript-dom"
     },

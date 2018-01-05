@@ -9,7 +9,12 @@
 .page-blue{
     background-color:#3ba9e9
 }
-
+.loaderShow{
+    visibility: visible;
+}
+.loaderHide{
+    visibility: collapse;
+}
 .fab-button{
     height:60;
     width:60;

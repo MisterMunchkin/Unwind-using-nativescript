@@ -1,13 +1,9 @@
 {
-<<<<<<< HEAD
-	"time": "Fri Jan 05 2018 21:23:40 GMT+0800 (Taipei Standard Time)",
-=======
-	"time": "Fri Jan 05 2018 16:55:35 GMT+0800 (Taipei Standard Time)",
->>>>>>> parent of fd6026f4... Login And Booking View fixes
+	"time": "Fri Jan 05 2018 22:02:15 GMT+0800 (Taipei Standard Time)",
 	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,
-	"changesRequireBuild": false,
-	"projectFileHash": "8694712ff7b77498b51bd3bed58b7fd268d306fd759424e351432be68e78f355",
-	"changesRequireBuildTime": "Thu Jan 04 2018 14:44:39 GMT+0800 (Taipei Standard Time)"
+	"changesRequireBuild": true,
+	"projectFileHash": "9969393052a92d66cb0823bc7b8e2050918931604eef3fc6717dcd380d901b3d",
+	"changesRequireBuildTime": "Fri Jan 05 2018 22:02:15 GMT+0800 (Taipei Standard Time)"
 }

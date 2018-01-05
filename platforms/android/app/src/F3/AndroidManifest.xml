@@ -1,33 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />    
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    
-    <action android:name="android.intent.action.MAIN" />
- 
-    <category android:name="android.intent.category.LAUNCHER" />
+	<!--Describe the permissions, features or other configurations required by your plugin for Android. 
+		To read more about android permissions go to https://developer.android.com/guide/topics/permissions/index.html -->
+	<!--EXAMPLE: uses-permission android:name="android.permission.INTERNET"/> -->
 
-    <uses-feature android:name="android.hardware.camera"
-                  android:required="false" />
-    <uses-feature android:name="android.hardware.camera.autofocus"
-                  android:required="false" />
-
-    <application>
-        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
-        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
-        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
-        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
-        <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
-        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
-        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
-        <activity android:name="io.card.payment.DataEntryActivity" />
-		
-	<service android:name="com.paypal.android.sdk.payments.PayPalService"
-             android:exported="false" />
-    </application>
-    
 </manifest>

@@ -5,7 +5,9 @@ var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 var view = require("ui/core/view");
+var AwesomeLoaders = require('nativescript-awesome-loaders').AwesomeLoaders;
 
+var li = new AwesomeLoaders();
 var items;
 var pageData = new Observable();
 var component;
@@ -49,6 +51,11 @@ var uncancelable = {
 exports.onLoaded = function(args) {
     component = args.object;
     component.bindingContext = new BrowseViewModel();
+
+    li.width = 60;
+    li.height = 60;
+    li.indicator = "SemiCircleSpin";
+    li.indicatorColor = "black";
 
     console.log("<<<<< booking view page >>>>>");
     component.bindingContext = pageData;

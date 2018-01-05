@@ -1,3 +1,7 @@
+com.nineoldandroids.animation.Animator.AnimatorListener
+com.nineoldandroids.animation.TimeAnimator.TimeListener
+com.nineoldandroids.animation.TypeEvaluator
+com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener
 okhttp3.Authenticator
 okhttp3.Call.Factory
 okhttp3.Call

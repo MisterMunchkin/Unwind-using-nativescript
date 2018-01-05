@@ -1,4 +1,5 @@
 {
+    "nativescript-awesome-loaders": true,
     "nativescript-dom": true,
     "nativescript-drop-down": true,
     "nativescript-floatingactionbutton": true,

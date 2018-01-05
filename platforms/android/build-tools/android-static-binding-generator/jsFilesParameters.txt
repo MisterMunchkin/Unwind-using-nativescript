@@ -8,6 +8,8 @@ C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tabs\ch
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tabs\checkin\CheckinView.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tabs\settings\settings-view-model.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tabs\settings\SettingsView.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-awesome-loaders\awesome-loaders.common.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-awesome-loaders\awesome-loaders.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-dom\dom.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-drop-down\drop-down-common.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-drop-down\drop-down.js
@@ -190,6 +192,7 @@ C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\A
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\AddBooking\AddRooms\AddRoomDetails\addroomdetails.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Bill\bill.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\BookingDetail\bookingdetail.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\BookingDetail\paypal.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\checkout\checkout_menu.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Inquiries\inquiries.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\login\login.js
