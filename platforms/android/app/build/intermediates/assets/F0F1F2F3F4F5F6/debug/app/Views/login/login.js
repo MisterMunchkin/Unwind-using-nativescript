@@ -117,8 +117,9 @@ function then(response){
    
     console.log(phpResponse);
 
-    if(phpResponse != "user wrong password" && phpResponse != "user does not exist"
-                            && phpResponse != "post failed"){
+    /*phpResponse != "user wrong password" && phpResponse != "user does not exist"
+                            && phpResponse != "post failed"*/
+    if(phpResponse.indexOf("true") > -1){
         console.log("inside user login secured");
         global.loginCred = JSON.parse(phpResponse);
         var topmost = frameModule.topmost();

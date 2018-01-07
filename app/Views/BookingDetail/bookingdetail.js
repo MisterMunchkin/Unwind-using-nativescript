@@ -120,6 +120,15 @@ exports.onloaded = function(args) {
     page.getViewById("resDateLabel").text = requestObject.resDate;
 };
 
+function twoDigits(d){
+    if(0 <= d && d < 10) return "0" + d.toString();
+    if(-10 < d && d < 0) return "-0" + (-1 * d).toString();
+    return d.toString();
+}
+Date.prototype.toMysqlFormat = function(){
+    return this.getUTCFullYear() + "-" + twoDigits(1 + this.getUTCMonth()) + "-" + twoDigits(this.getUTCDate()) + " " + twoDigits(this.getUTCHours()) + ":" + twoDigits(this.getUTCMinutes()) + ":" + twoDigits(this.getUTCSeconds());
+}
+
 exports.checkoutTap = function(){
     console.log("<<<<<<<<<<<<check out tapped>>>>>>>>>");
     var clientID;
@@ -186,9 +195,15 @@ exports.checkinButton = function(){
     
     console.log("Current Date: " + CurDate + "Checkin Date: " + requestObject.checkinDate);
     
-    if(requestObject.checkinDate == CurDate){
-        var Obj = {resID: requestObject.resID};
-        fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/activateCheckin.php", {
+    if(requestObject.checkinDate == CurDate || requestObject.checkinDate < CurDate){
+
+        var dateTime = new Date().toMysqlFormat();
+
+        var Obj = {resID: requestObject.resID, check_in_start: dateTime};
+
+        console.log("dateTime: " + Obj.check_in_start);
+        console.log("resID: " + Obj.resID);
+        /*fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/activateCheckin.php", {
             method: "POST",
             body: formEncode(Obj)
         }).then(function (response) {
@@ -205,10 +220,8 @@ exports.checkinButton = function(){
             }
         }, function (error) {
             console.log(JSON.stringify(error));
-        })
-    }else if(requestObject.checkinDate < CurDate){
-        console.log("the user is late");  
-    }else{
+        }) <<<still fixing back end>>>*/
+    }else {
         alert({ title: "Premature ejaculation", message: "You are not at your check in date yet", okButtonText: "Close" });
     }
     

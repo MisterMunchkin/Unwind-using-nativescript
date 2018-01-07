@@ -81,19 +81,22 @@ exports.checkoutTap = function(){
 
     requestObject = {timestamp_ordered: date,
                      grandTotal: grandTotal,
-                     foodArray: foodArray};
+                     check_in_id: global.loginCred[2]};
     fetchModule.fetch("https://unwindv2.000webhostapp.com/food/insertFoodOrder.php", {
         method: "POST",
         body: formEncode(requestObject)
 
     }).then(function (response) {
         var phpResponse = response._bodyText;
-
+        console.log("Full response: " + JSON.stringify(response));
+        
+        if(phpResponse == "order sent!"){
             alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
-            console.log("Full response: " + JSON.stringify(response))
+            
             console.log(phpResponse);
             var topmost = frameModule.topmost();
             topmost.navigate("Views/Menu/menu");
+        }
     }, function (error) {
         console.log("ERROR");
         console.log(JSON.stringify(error));

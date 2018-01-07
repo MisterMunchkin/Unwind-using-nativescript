@@ -1,16 +1,18 @@
 <!--
 This is the component view that represents the 'Browse' tab.
 Feel free to customize layouts and components to change how the tab view looks.
+
+xmlns:al="nativescript-awesome-loaders"
 -->
 <GridLayout class="page-content" xmlns:FAB="nativescript-floatingactionbutton"
     xmlns="http://schemas.nativescript.org/tns.xsd" 
             xmlns:lv="nativescript-pro-ui/listview"
-              xmlns:al="nativescript-awesome-loaders"
-             loaded="onLoaded" unloaded="unLoaded">
+           
+             loaded="onLoaded" unloaded="unLoaded" >
 
 
     <GridLayout rows="*, 45">
-         <al:AwesomeLoaders class="loaderShow" width="60" height="60" indicator="BallPulse" indicatorColor="#F44336" />
+
         <StackLayout>
             <lv:RadListView row="0" id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
                 pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" > 

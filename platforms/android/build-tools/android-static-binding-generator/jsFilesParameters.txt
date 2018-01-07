@@ -8,6 +8,11 @@ C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tabs\ch
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tabs\checkin\CheckinView.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tabs\settings\settings-view-model.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tabs\settings\SettingsView.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-accordion\accordion.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-accordion\hooks\before-livesync\nativescript-angular-sync.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-accordion\src\accordion.common.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-accordion\src\android\accordion.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-accordion\src\ios\accordion.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-awesome-loaders\awesome-loaders.common.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-awesome-loaders\awesome-loaders.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-dom\dom.js

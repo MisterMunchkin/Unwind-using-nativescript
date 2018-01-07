@@ -1,4 +1,4 @@
-#Fri Jan 05 22:06:31 CST 2018
+#Sat Jan 06 23:23:23 CST 2018
 base.0=C\:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\F0F1F2F3F4F5F6\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=C\:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\F0F1F2F3F4F5F6\\debug\\folders\\1000\\1f\\main\\classes.dex

@@ -14,7 +14,7 @@ function backEvent(args) {
 }
 
 global.foodArray = new Array();
-global.checkOutGrandTotal = 1250; //1250 generalizing pricing for the rooms
+global.checkOutGrandTotal = 1250.00; //1250 generalizing pricing for the rooms
 global.servicesOrdered = new Array();
 global.roomOrdered = new Array();
 global.loginCred;

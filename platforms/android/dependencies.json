@@ -1,5 +1,9 @@
 [
     {
+        "name": "nativescript-accordion",
+        "directory": "..\\..\\node_modules\\nativescript-accordion"
+    },
+    {
         "name": "nativescript-awesome-loaders",
         "directory": "..\\..\\node_modules\\nativescript-awesome-loaders"
     },

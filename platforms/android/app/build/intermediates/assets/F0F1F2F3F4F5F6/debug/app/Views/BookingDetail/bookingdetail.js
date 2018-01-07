@@ -123,52 +123,60 @@ exports.onloaded = function(args) {
 exports.checkoutTap = function(){
     console.log("<<<<<<<<<<<<check out tapped>>>>>>>>>");
     var clientID;
-
+    //loader.show(options);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/PayPal/checkoutSecurity.php", {
            
     }).then(function (response) {
-
+        console.log(JSON.stringify(response));
         clientID = response._bodyText;
+        //loader.hide();
+        console.log("<<<<<PayPal Initialization>>>>>>");
+        PayPal.init({
+            clientId: clientID,
+            environment: 0
+        });
+        console.log("total check out: " + global.checkOutGrandTotal);
+
+        var payment = PayPal.newPayment()
+                        .setDescription('Grand Check Out')
+                        .setAmount(global.checkOutGrandTotal)
+                        .setCurrency('PHP');
+                        
+        payment.start(function(cbResult){
+            switch (cbResult.code) {
+                case 0:
+                    // SUCCESS
+                    // pay key is stored in 'cbResult.key'
+                    
+                    console.log("Success");
+                    break;
+                    
+                case 1:
+                    // operation was CANCELLED
+                    console.log("Cancelled");
+                    break;
+                    
+                case -1:
+                    // checkout FAILED
+                    alert({ title: "PayPal", message: "Request Failed", okButtonText: "Close" });
+                    console.log("Failed");
+                    break;
+                    
+                case -2:
+                    // "unhandled exception"
+                    alert({ title: "PayPal", message: "Request Failed", okButtonText: "Close" });
+                    console.log("Unhandled Exception");
+                    break;
+            }
+        });
     }, function (error) {
         console.log(JSON.stringify(error));
     })
-
-    PayPal.init({
-        clientId: clientID,
-        environment: 0
-    });
-    var payment = PayPal.newPayment()
-                    .setDescription('Grand Check Out')
-                    .setAmount(50);
-                    
-    payment.start(function(cbResult){
-        switch (cbResult.code) {
-            case 0:
-                // SUCCESS
-                // pay key is stored in 'cbResult.key'
-                console.log("Success");
-                break;
-                
-            case 1:
-                // operation was CANCELLED
-                console.log("Cancelled");
-                break;
-                
-            case -1:
-                // checkout FAILED
-                console.log("Failed");
-                break;
-                
-            case -2:
-                // "unhandled exception"
-                console.log("Unhandled Exception");
-                break;
-        }
-    });
+    
    
 }
 exports.checkinButton = function(){
-    console.log("check in button clicked");
+    console.log("check in button clicked");//add pricing of room to the grandtotal check out in global
 
     
     console.log("Current Date: " + CurDate + "Checkin Date: " + requestObject.checkinDate);
