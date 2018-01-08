@@ -8,6 +8,7 @@ var ObservableArray = require("data/observable-array").ObservableArray;
 
 var pageDataContext;
 var requestObject;
+var bookingObject;
 
 var items;
 var pageData = new Observable();
@@ -78,12 +79,20 @@ exports.itemSelected = function(args){
     var tappedItem = tappedView.bindingContext;
 
     console.log("Room name: " + tappedItem.roomTypeName);
-    var bookingObject = {
-        checkIn: requestObject.check_in_date,
-        checkOut: requestObject.check_out_date,
-        adultQty: requestObject.numAdult,
-        childQty: requestObject.numChild
 
+   // global.roomOrdered = tappedItem;
+
+    console.log("roomTypeID: " + tappedItem.roomTypeID);
+    
+    console.log("roomTypePrice: " + tappedItem.roomTypePrice);
+    console.log("roomTypeDescription: " + tappedItem.roomTypeDescription);//add the price of the room to grand total during check in!
+
+
+    bookingObject = {
+        checkin_date: requestObject.check_in_date,
+        checkout_date: requestObject.check_out_date,
+        room_type_id: tappedItem.roomTypeID,
+        quantity: tappedItem.roomTypeCount
     }
 }
 exports.submit = function () {
@@ -92,7 +101,7 @@ exports.submit = function () {
         "\n adult quantity: " + requestObject.numAdult +
         "\n child quantity: " + requestObject.numChild);
 
-
+    console.log("<<<<<<<<Entering addbooking.php>>>>>>>>>>>");
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/addbooking.php", {
         method: "POST",
         body: formEncode(requestObject)
@@ -108,11 +117,48 @@ function then(response) {
     var phpResponse = response._bodyText;
 
     // alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
-    if (phpResponse == "booking added") {
+    if (phpResponse.indexOf("error") <= -1) {
+        var reservation_request_id = phpResponse;
+        console.log("<<<<<<<<Entering getAvailableRoomsByType>>>>>>>>>>>>");
+        fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/getAvailableRoomsByType.php", {
+            method: "POST",
+            body: formEncode(bookingObject)
+        }).then(function (response) {
+            var AvailRoomResult = JSON.parse(response._bodyText);
+            var count = 0, x, limit = AvailRoomResult.length;
+            console.log("limit: " + limit);
+            for(x = 0;x < limit;x++){
+                console.log("Room Ids: " + AvailRoomResult[x].roomID);
+                console.log("reservation_request_id: " + reservation_request_id);
+                var insRoomObject = {
+                    reservationRequestId: reservation_request_id,
+                    roomId: AvailRoomResult[x].RoomID
+                }
+                console.log("<<<<<Entering insertRoomReserved>>>>>>>>>>");
+                fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/insertRoomReserved.php", {
+                    method: "POST",
+                    body: formEncode(insRoomObject)
+                }).then(function (response) {
+                    
+                    if(response._bodyText == "Room reserved"){
+                        count++;
+                    }else{
+                        console.log("failed: " + JSON.stringify(response));
+                    }
+                }, function (error) {
+                    console.log(JSON.stringify(error));
+                })
+            }
+            if(count == x){
+                alert({ title: "Success!", message: phpResponse, okButtonText: "Close" });
+                var topmost = frameModule.topmost();
+                topmost.navigate("tabs/tabs-page");
+            }
+        }, function (error) {
+            console.log(JSON.stringify(error));
+        })
+
         //console.log(JSON.stringify(response));
-        alert({ title: "Success!", message: phpResponse, okButtonText: "Close" });
-        var topmost = frameModule.topmost();
-        topmost.navigate("tabs/tabs-page");
     } else {
         alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
         console.log(phpResponse);

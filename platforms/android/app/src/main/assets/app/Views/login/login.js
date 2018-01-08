@@ -127,6 +127,7 @@ function then(response){
         console.log("isActive: " + global.loginCred[1]);
         console.log("checkInID: " + global.loginCred[2]);
         
+        console.log("grandTotalCheckOut: " + global.checkOutGrandTotal);
 
         var topmost = frameModule.topmost();
         topmost.navigate("tabs/tabs-page");

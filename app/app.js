@@ -16,7 +16,7 @@ function backEvent(args) {
 global.foodArray = new Array();
 global.checkOutGrandTotal = 1250.00; //1250 generalizing pricing for the rooms
 global.servicesOrdered = new Array();
-global.roomOrdered = new Array();
+global.roomOrdered;//will be filled during check in 
 global.loginCred;
 //when room is ready add it as a global to get the pricing
 

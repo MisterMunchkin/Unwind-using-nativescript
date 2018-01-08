@@ -51,7 +51,8 @@ exports.onloaded = function(args){
                 items.push(
                     {
                         service_name: obj[x].service_name,
-                        service_type: obj[x].service_type
+                        service_type: obj[x].service_type,
+                        service_id: obj[x].service_id
                     }
 
                 );
@@ -86,36 +87,44 @@ exports.itemTap = function(args){
 
     console.log("tapped Item: " + tappedItem.service_name);
 
+    var date = new Date().toMysqlFormat();
+
     global.servicesOrdered.push(
         {
             service_name: tappedItem.service_name,
-            service_type: tappedItem.service_type
+            service_type: tappedItem.service_type,
+            service_id: tappedItem.service_id
         }
     );
-    /*var navigationOptions = {
-        moduleName: "Views/Menu/MenuDetail/menu_detail",
-        context: {
-            name: tappedItem.name,
-            description: tappedItem.description,
-            price: tappedItem.price
+    var requestedObject = {service_id: tappedItem.service_id, service_request_date: date, 
+                            check_in_id: global.loginCred[2]};
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/services/insertServiceRequest.php", {
+        method: "POST",
+        body: formEncode(requestedObject)
+    }).then(function (response) {
+        
+        if(response._bodyText == "service requested"){
+            alert({ title: "POST response", message: "service requested!", okButtonText: "Close" }); 
+        }else{
+            alert({ title: "POST response", message: response._bodyText , okButtonText: "Close" }); 
+            console.log("failed: " + JSON.stringify(response));
         }
-    }
-    console.log("Tapped item: " + JSON.stringify(tappedItem));
-    
-    var topmost = frameModule.topmost();
-    topmost.navigate(navigationOptions);
-    if(tappedItem.tapped == 0){
-        console.log("tapped");
-        tappedItem.tapped = 1;
-        foodArray.push(tappedItem);
-        console.log(JSON.stringify(foodArray));
-    }else{
-        console.log("untapped");
-        tappedItem.tapped = 0;
-        var limit = foodArray.length;
-        for(var x = 0;x < limit && tappedItem.name != foodArray[x].name;x++){}
-        if(tappedItem.name == foodArray[x].name){
-            foodArray.splice(x, 1);
-        }
-    }*/
+    }, function (error) {
+        console.log(JSON.stringify(error));
+    })
+}
+function twoDigits(d){
+    if(0 <= d && d < 10) return "0" + d.toString();
+    if(-10 < d && d < 0) return "-0" + (-1 * d).toString();
+    return d.toString();
+}
+Date.prototype.toMysqlFormat = function(){
+    return this.getUTCFullYear() + "-" + twoDigits(1 + this.getUTCMonth()) + "-" + twoDigits(this.getUTCDate()) + " " + twoDigits(this.getUTCHours()) + ":" + twoDigits(this.getUTCMinutes()) + ":" + twoDigits(this.getUTCSeconds());
+}
+
+function formEncode(obj) { //to convert urlencoded form data to JSON
+    var str = [];
+    for (var p in obj)
+        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+    return str.join("&");
 }
