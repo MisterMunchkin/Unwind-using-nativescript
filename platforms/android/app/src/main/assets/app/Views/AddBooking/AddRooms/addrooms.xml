@@ -39,7 +39,9 @@ Feel free to customize layouts and components to change how the tab view looks.
                 </lv:RadListView.itemTemplate>
             </lv:RadListView>
         </StackLayout>
-        <StackLayout row="2">
+
+        <StackLayout row="2" orientation="horizontal">
+            <Button class="w-outline-btn" text="in-Cart" tap="inCart" />
             <Button class="blue-btn" text="submit" tap="submit"/>
         </StackLayout>
     </GridLayout>

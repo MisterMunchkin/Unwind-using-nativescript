@@ -26,6 +26,39 @@ exports.onloaded = function (args) {
     }
     
 }
+exports.addToCartTap = function(){
+
+    var roomQty = view.getViewById(page, "roomQty").text;
+   
+
+    if(roomQty != ""){
+        console.log(roomQty);
+        roomItem = {
+            roomTypeID: roomContext.roomTypeID,
+            quantity: parseInt(roomQty),
+            roomTypeName: roomContext.roomTypeName,
+            itemImage: roomContext.itemImage,
+            roomTypePrice: roomContext.roomTypePrice
+        }
+        global.roomOrdered.push(roomItem);
+
+        var navigationOptions = {
+            moduleName: "Views/AddBooking/AddRooms/addrooms",
+            context: {
+                check_in_date: roomContext.bookingDetails.check_in_date,
+                check_out_date: roomContext.bookingDetails.check_out_date,
+                numAdult: roomContext.bookingDetails.numAdult,
+                numChild: roomContext.bookingDetails.numChild
+            }
+        }
+
+        var topmost = frameModule.topmost();
+        topmost.navigate(navigationOptions);
+    }else{
+        console.log("please enter item quantity and remarks!");
+        //add UI for this soon
+    }
+}
 exports.onNavBtnTap = function(){
 
     var navigationOptions = {
@@ -59,33 +92,3 @@ exports.backEvent = function (args) {
    topmost.navigate(navigationOptions);
 }
 
-exports.addToCartTap = function(){
-
-    var roomQty = view.getViewById(page, "roomQty").text;
-   
-
-    if(roomQty != ""){
-        console.log(roomQty);
-        roomItem = {
-            roomTypeID: roomContext.roomTypeID,
-            quantity: parseInt(roomQty)
-        }
-        global.roomOrdered.push(roomItem);
-
-        var navigationOptions = {
-            moduleName: "Views/AddBooking/AddRooms/addrooms",
-            context: {
-                check_in_date: roomContext.bookingDetails.check_in_date,
-                check_out_date: roomContext.bookingDetails.check_out_date,
-                numAdult: roomContext.bookingDetails.numAdult,
-                numChild: roomContext.bookingDetails.numChild
-            }
-        }
-
-        var topmost = frameModule.topmost();
-        topmost.navigate(navigationOptions);
-    }else{
-        console.log("please enter item quantity and remarks!");
-        //add UI for this soon
-    }
-}
