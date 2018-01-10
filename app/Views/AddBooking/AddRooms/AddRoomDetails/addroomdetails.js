@@ -3,54 +3,87 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var view = require("ui/core/view");
 
-var foodContext;
-var foodItem;
+var roomContext;
+
 
 exports.onloaded = function (args) {
     page = args.object
 
     console.log("<<<<<< menu_detail page >>>>>>")
     var pageDataContext = page.navigationContext;
-    foodContext = {
-        name: pageDataContext.name,
-        description: pageDataContext.description,
-        price: pageDataContext.price 
+    roomContext = {
+        roomTypeID: pageDataContext.roomTypeID,
+        roomTypeName: pageDataContext.roomTypeName,
+        roomTypePrice: pageDataContext.roomTypePrice,
+        roomTypeDescription: pageDataContext.roomTypeDescription,
+        roomTypeCount: pageDataContext.roomTypeCount,
+        itemImage: "",
+        bookingDetails: pageDataContext.bookingDetails
     };
-    console.log(foodContext.name);
+    console.log(roomContext.roomTypeName);
     page.bindingContext = {
-        name: foodContext.name
+        roomTypeName: roomContext.roomTypeName
     }
     
 }
 exports.onNavBtnTap = function(){
+
+    var navigationOptions = {
+        moduleName: "Views/AddBooking/AddRooms/addrooms",
+        context: {
+            check_in_date: roomContext.bookingDetails.check_in_date,
+            check_out_date: roomContext.bookingDetails.check_out_date,
+            numAdult: roomContext.bookingDetails.numAdult,
+            numChild: roomContext.bookingDetails.numChild
+        }
+    }
+
     var topmost = frameModule.topmost();
-   topmost.navigate("Views/Menu/menu");
+   topmost.navigate(navigationOptions);
 }
 exports.backEvent = function (args) {
 
     args.cancel = true;
+
+    var navigationOptions = {
+        moduleName: "Views/AddBooking/AddRooms/addrooms",
+        context: {
+            check_in_date: roomContext.bookingDetails.check_in_date,
+            check_out_date: roomContext.bookingDetails.check_out_date,
+            numAdult: roomContext.bookingDetails.numAdult,
+            numChild: roomContext.bookingDetails.numChild
+        }
+    }
+
     var topmost = frameModule.topmost();
-    topmost.navigate("Views/Menu/menu");
+   topmost.navigate(navigationOptions);
 }
 
 exports.addToCartTap = function(){
 
-    var itemQty = view.getViewById(page, "foodQty").text;
-    var remarks = view.getViewById(page, "remarks").text;
+    var roomQty = view.getViewById(page, "roomQty").text;
+   
 
-    if(itemQty != ""){
-        console.log(itemQty + " " + remarks);
-        foodItem = {
-            name: foodContext.name,
-            description: foodContext.description,
-            price: parseInt(foodContext.price),
-            qty: parseInt(itemQty),
-            remarks: remarks
+    if(roomQty != ""){
+        console.log(roomQty);
+        roomItem = {
+            roomTypeID: roomContext.roomTypeID,
+            quantity: parseInt(roomQty)
         }
-        global.foodArray.push(foodItem);
+        global.roomOrdered.push(roomItem);
+
+        var navigationOptions = {
+            moduleName: "Views/AddBooking/AddRooms/addrooms",
+            context: {
+                check_in_date: roomContext.bookingDetails.check_in_date,
+                check_out_date: roomContext.bookingDetails.check_out_date,
+                numAdult: roomContext.bookingDetails.numAdult,
+                numChild: roomContext.bookingDetails.numChild
+            }
+        }
 
         var topmost = frameModule.topmost();
-        topmost.navigate("Views/Menu/menu");
+        topmost.navigate(navigationOptions);
     }else{
         console.log("please enter item quantity and remarks!");
         //add UI for this soon

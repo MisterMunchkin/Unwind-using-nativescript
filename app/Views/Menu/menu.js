@@ -51,7 +51,7 @@ exports.onloaded = function(args){
                     {
                         name: obj[x].name,
                         description: obj[x].description,
-                        price: obj[x].price,
+                        price: "PHP " +  obj[x].price + ".00",
                         tapped: 0
                     
                     }

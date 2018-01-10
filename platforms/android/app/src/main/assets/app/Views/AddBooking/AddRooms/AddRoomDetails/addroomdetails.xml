@@ -8,13 +8,12 @@
         <Label class="page-icon fa" text="&#xf1ea;"></Label>
         <Label class="page-placeholder" text="image here"></Label>
 
-        <Label  id="foodName" text="{{ name }}"></Label>
+        <Label  id="roomName" text="{{ roomTypeName }}"></Label>
 
+        
         <TextField autocorrect="false" 
                 hint="Room Quantity" id="roomQty"
                 keyboardType="number" maxLength="2"></TextField>
-        <TextView autocorrect="true" hint="Room Request" 
-                    id="remarks"  />
 
         <Button text="ADD TO CART" id="addToCart" tap="addToCartTap" />
     </StackLayout>

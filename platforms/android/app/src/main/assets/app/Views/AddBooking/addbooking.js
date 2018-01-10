@@ -30,8 +30,8 @@ exports.nextTap = function(){
                 var navigationOptions = {
                     moduleName: "Views/AddBooking/AddQuantity/addquantity",
                     context: {
-                        checkin_date: checkin_date,
-                        checkout_date: checkout_date
+                        check_in_date: checkin_date,
+                        check_out_date: checkout_date
                     }
                 }
 

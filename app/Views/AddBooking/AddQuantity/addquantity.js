@@ -22,8 +22,8 @@ exports.nextTap = function(){
 
     var adultVal = view.getViewById(page, "adultQty").value;
     var childVal = view.getViewById(page, "childQty").value;
-    console.log("check in date: " + pageDataContext.checkin_date);
-    console.log("check out date: " + pageDataContext.checkout_date);
+    console.log("check in date: " + pageDataContext.check_in_date);
+    console.log("check out date: " + pageDataContext.check_out_date);
     console.log("adultQty: " + adultQty);
     console.log("childQty: " + childQty);
     
@@ -32,14 +32,14 @@ exports.nextTap = function(){
             var navigationOptions = {
                 moduleName: "Views/AddBooking/AddRooms/addrooms",
                 context: {
-                    checkin_date: pageDataContext.checkin_date,
-                    checkout_date: pageDataContext.checkout_date,
-                    adultQty: parseInt(adultQty),
-                    childQty: parseInt(childQty)
+                    check_in_date: pageDataContext.check_in_date,
+                    check_out_date: pageDataContext.check_out_date,
+                    numAdult: parseInt(adultQty),
+                    numChild: parseInt(childQty)
                 }
             }
-            console.log("check_in_date: " + pageDataContext.checkin_date);
-            console.log("check_out_date: "+ pageDataContext.checkout_date);
+            console.log("check_in_date: " + pageDataContext.check_in_date);
+            console.log("check_out_date: "+ pageDataContext.check_out_date);
 
             var topmost = frameModule.topmost();
             topmost.navigate(navigationOptions);

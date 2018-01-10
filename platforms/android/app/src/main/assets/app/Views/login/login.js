@@ -133,7 +133,7 @@ function then(response){
         topmost.navigate("tabs/tabs-page");
         
     }else{
-        page.getViewById("email").text = "";
+       // page.getViewById("email").text = "";
         page.getViewById("password").text = "";
         alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });     
     }

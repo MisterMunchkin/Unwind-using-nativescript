@@ -18,11 +18,12 @@ Feel free to customize layouts and components to change how the tab view looks.
             </lv:RadListView.listViewLayout>
 
             <lv:RadListView.itemTemplate>
-                <GridLayout class="list-group-item" rows="60, *" >
+                <GridLayout   class="list-group-item" rows="60, 80" >
                     <StackLayout row="0">
                         <Image  src="{{ itemImage }}" stretch="fit" />
                     </StackLayout>
                     <StackLayout row="1">
+                        <!--<Image  src="{{ itemImage }}" stretch="fit" />-->
                         <Label text="{{ pageName }}" class="list-group-item-heading" />
                         <Label text="{{ pageDesc }}" textWrap="true" class="list-group-item-text" />
                     </StackLayout>
