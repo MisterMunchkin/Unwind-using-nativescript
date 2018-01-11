@@ -18,6 +18,7 @@ global.checkOutGrandTotal = 1250.00; //1250 generalizing pricing for the rooms
 global.servicesOrdered = new Array();
 global.roomOrdered = new Array();//will be filled during check in 
 global.loginCred;
+global.activeTab;
 //when room is ready add it as a global to get the pricing
 
 //application.start({ moduleName: "./tabs/tabs-page" });

@@ -79,7 +79,7 @@ exports.inCart = function(){
     console.log("<<<<<<<<in cart pressed>>>>>>>");
 
     var navigationOptions = {
-        moduleName: "Views/AddBooking/AddRooms/inCart/incart",
+        moduleName: "Views/login/login",
         context: {
             check_in_date: pageDataContext.check_in_date,
             check_out_date: pageDataContext.check_out_date,

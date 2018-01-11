@@ -11,7 +11,7 @@ Feel free to customize layouts and components to change how the tab view looks.
          loaded="onLoaded">
 
     <Page.actionBar>
-        <ActionBar class="label page-blue" title="Register">
+        <ActionBar class="label page-blue" title="In Cart">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>

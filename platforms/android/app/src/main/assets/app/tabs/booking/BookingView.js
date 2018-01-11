@@ -71,11 +71,27 @@ exports.onLoaded = function(args) {
     request.class = "inActiveNav";
     reserve.class = "ActiveNav";
   
-    loadData("loadReservationData.php");
+  
 
+    loadData("loadReservationData.php");
+  
     
 }
 
+exports.pullToRefreshInit = function(){
+    //find a way to overwrite listview data and refresh page with new data 
+    console.log("request class" + request.class);
+    var dataRet;
+    if(request.class == "ActiveNav"){
+       dataRet = loadData("loadRequestData.php");
+    }else{
+        dataRet = loadData("loadReservationData.php");
+    }
+
+    if(dataRet == "loading done"){
+        component.getViewById("listview").notifyPullToRefreshFinished();
+    }
+}
 
 exports.requestNav = function (args) {
     console.log("request nav clicked");
@@ -108,7 +124,7 @@ exports.reservationNav = function (args) {
 function loadData(phpContext){
     var obj;
     items = new ObservableArray([]);
-    loader.show(uncancelable);
+   // loader.show(uncancelable);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/" + phpContext, {
 
     }).then(function (response) {
@@ -142,12 +158,13 @@ function loadData(phpContext){
         }else{
             //label no data
         }
-        loader.hide();
+       // loader.hide();
         pageData.set("items", items);
 
     }, function (error) {
         console.log(JSON.stringify(error));
     })
+    return "loading done";
 }
 
 exports.onItemTap = function(args){
@@ -188,39 +205,3 @@ exports.fabTap = function(){
     topmost.navigate("Views/AddBooking/addbooking");
 }
 
-exports.pullToRefreshInit = function(){
-    //find a way to overwrite listview data and refresh page with new data 
-    var obj;
-    items = new ObservableArray([]);
-
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/loadBookingData.php", {
-
-    }).then(function (response) {
-        obj = response._bodyText;
-        obj = JSON.parse(obj);
-        //console.log("inside then function: " + obj);
-        var limit = obj.length;
-
-        for(var x = 0; x < limit;x++){
-            items.push(
-                {
-                    reservationDate: "Reservation Date:" + obj[x].reservationDate,
-                    checkinDate: "check in Date:" + obj[x].checkinDate,
-                    checkoutDate: "check out Date:" + obj[x].checkoutDate,
-                    reservationStatus: "status:" + obj[x].reservationStatus,
-                    itemImage: "",
-                    reservationID: "Reservation ID:" + obj[x].reservationRequestID
-    
-                }
-
-            );
-        }
-        pageData.set("items", items);
-
-    }, function (error) {
-        console.log(JSON.stringify(error));
-    })
-
-    component.getViewById("listview").notifyPullToRefreshFinished();
-    
-}

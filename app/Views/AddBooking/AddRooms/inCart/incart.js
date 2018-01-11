@@ -41,6 +41,7 @@ exports.onloaded = function (args) {
                 itemImage: global.roomOrdered[x].itemImage
             }
         )
+        console.log("room Types: " + global.roomOrdered[x].roomTypeName);
     }
     pageData.set("items", items);
 }
