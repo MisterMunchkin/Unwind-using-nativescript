@@ -8,7 +8,7 @@ Feel free to customize layouts and components to change how the tab view looks.
 
 <Page class="page-white" xmlns="http://schemas.nativescript.org/tns.xsd" 
  xmlns:lv="nativescript-pro-ui/listview"
-         loaded="onLoaded">
+         loaded="onloaded">
 
     <Page.actionBar>
         <ActionBar class="label page-blue" title="In Cart">

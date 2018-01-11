@@ -80,7 +80,7 @@ exports.onLoaded = function(args) {
 
 exports.pullToRefreshInit = function(){
     //find a way to overwrite listview data and refresh page with new data 
-    console.log("request class" + request.class);
+    console.log("request class: " + request.class);
     var dataRet;
     if(request.class == "ActiveNav"){
        dataRet = loadData("loadRequestData.php");
