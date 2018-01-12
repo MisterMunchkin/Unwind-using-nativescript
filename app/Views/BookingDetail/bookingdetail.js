@@ -196,31 +196,88 @@ exports.checkinButton = function(){
     console.log("Current Date: " + CurDate + "Checkin Date: " + requestObject.checkinDate);
     
     if(requestObject.checkinDate == CurDate || requestObject.checkinDate < CurDate){
+        console.log("userID: " + global.loginCred[0]);
+        console.log("checkin is Active: " + global.loginCred[1]);
+        console.log("checkin ID: " + global.loginCred[2]);
+        if(global.loginCred[2] == undefined){
+            var dateTime = new Date().toMysqlFormat();
 
-        var dateTime = new Date().toMysqlFormat();
+            var Obj = {resID: requestObject.resID, check_in_start: dateTime};
 
-        var Obj = {resID: requestObject.resID, check_in_start: dateTime};
+            console.log("dateTime: " + Obj.check_in_start);
+            console.log("resID: " + Obj.resID);
 
-        console.log("dateTime: " + Obj.check_in_start);
-        console.log("resID: " + Obj.resID);
-        /*fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/activateCheckin.php", {
-            method: "POST",
-            body: formEncode(Obj)
-        }).then(function (response) {
-            //then(response);
-            console.log(JSON.stringify(response));
-            if(response._bodyText == "checkin activated"){
-                
 
-                alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
-                var topmost = frameModule.topmost();
-                topmost.navigate("tabs/tabs-page");
-            }else{
-                alert({ title: "activation error", message: "please try again :(", okButtonText: "Close" });
-            }
-        }, function (error) {
-            console.log(JSON.stringify(error));
-        }) <<<still fixing back end>>>*/
+            fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/activateCheckin.php", {
+                method: "POST",
+                body: formEncode(Obj)
+            }).then(function (response) {
+                //then(response);
+               // console.log(JSON.stringify(response));
+                phpResponse = response._bodyText;
+                if(phpResponse.indexOf("error") <= -1){
+                    console.log("checkIn ID: " + phpResponse);
+                    global.loginCred[2] = phpResponse;
+                    
+                    var getRoomsObj = {check_in_id: global.loginCred[2]};
+                    fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/getRoomsPerCheckIn.php", {
+                        method: "POST",
+                        body: formEncode(getRoomsObj)
+                    }).then(function (response) {
+                        //then(response);
+                    // console.log(JSON.stringify(response));
+                        phpResponse = response._bodyText;
+                        if(phpResponse.indexOf("error") <= -1){
+                            var roomIDArray = JSON.parse(phpResponse);
+
+                            var limit = roomIDArray.length, count = 0;
+
+                            for(var x = 0;x < limit;x++){
+
+                                var updateOccObj = {room_id: roomIDArray[x]};
+
+                                fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/updateRoomOccupied.php", {
+                                    method: "POST",
+                                    body: formEncode(updateOccObj)
+                                }).then(function (response) {
+                                    phpResponse = response._bodyText;
+                                    if(phpResponse.indexOf("error") > -1){
+                                        
+                                        alert({ title: "update error", message: phpResponse, okButtonText: "Close" });
+                                    }else{
+                                        count++;
+                                    }
+
+                                    
+                                }, function (error) {
+                                    console.log(JSON.stringify(error));
+                                })
+                            }
+                            console.log("x = " + x);
+                            console.log("count = " + count);
+                            if(x == count){
+                                alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
+                                var topmost = frameModule.topmost();
+                                topmost.navigate("tabs/tabs-page");
+                            }
+                        }else{
+                            alert({ title: "activation error", message: phpResponse, okButtonText: "Close" });
+                        }
+                    }, function (error) {
+                        console.log(JSON.stringify(error));
+                    })
+                }else{
+                    alert({ title: "activation error", message: "please try again :(", okButtonText: "Close" });
+                }
+            }, function (error) {
+                console.log(JSON.stringify(error));
+            })
+            /* alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
+                    var topmost = frameModule.topmost();
+                    topmost.navigate("tabs/tabs-page"); <<<still fixing back end>>>*/
+        }else{
+            console.log("cannot check in if you are still currently checked in");
+        }
     }else {
         alert({ title: "Premature ejaculation", message: "You are not at your check in date yet", okButtonText: "Close" });
     }
