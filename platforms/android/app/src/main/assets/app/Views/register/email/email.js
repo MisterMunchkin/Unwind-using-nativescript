@@ -39,8 +39,8 @@ exports.nextTap = function(){
             console.log("email: " + email.text);
 
             var requestObject = {email: email.text, password: pageDataContext.password, 
-                fname: pageDataContext.firstname, lname: pageDataContext.lastname, 
-                MI: pageDataContext.MI, birthdate: pageDataContext.birthday,
+                fname: pageDataContext.firstName, lname: pageDataContext.lastName, 
+                MI: pageDataContext.MI, birthdate: pageDataContext.birthdate,
                 gender: pageDataContext.gender, contact_no: pageDataContext.contact_no};   
 
             //loader.show(options); var of Loader.js, find a way to include it in this script
