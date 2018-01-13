@@ -24,3 +24,6 @@ exports.onloaded = function (args) {
 exports.longpressed = function(){
     alert({ title: "Inquries", message: "long pressed", okButtonText: "Close" });
 }
+exports.userTap = function(){
+    alert({ title: "Inquries", message: "tapped", okButtonText: "Close" });
+}

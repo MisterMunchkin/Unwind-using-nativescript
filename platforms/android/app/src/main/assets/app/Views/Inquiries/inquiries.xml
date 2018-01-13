@@ -1,7 +1,15 @@
 <Page class="page-content" loaded="onloaded"
         xmlns:UI="nativescript-reviews">
-    <Label class="page-icon fa" text="&#xf1ea;"></Label>
-    <Label class="page-placeholder" text="inquiries list"></Label>
+    <GridLayout rows="*, 60">
+        <ScrollView>    
+            <StackLayout row="0">
+                <UI:Reviews user="userTap" long="longpressed" reviews="{{ reviews }}" />
+            </StackLayout>
+        </ScrollView>
 
-    <UI:Reviews user="{{ userTap }}" long="longpressed" reviews="{{ reviews }}" />
+        <StackLayout row="1" orientation="horizontal">
+            <TextField class="input" hint="write your own review here" id="userReview" />
+            <Button text="done" />
+        </StackLayout>
+    </GridLayout>
 </Page>
