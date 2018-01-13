@@ -48,6 +48,10 @@
         "directory": "..\\..\\node_modules\\nativescript-pro-ui"
     },
     {
+        "name": "nativescript-reviews",
+        "directory": "..\\..\\node_modules\\nativescript-reviews"
+    },
+    {
         "name": "nativescript-snackbar",
         "directory": "..\\..\\node_modules\\nativescript-snackbar"
     },
@@ -64,7 +68,15 @@
         "directory": "..\\..\\node_modules\\tns-core-modules"
     },
     {
+        "name": "nativescript-fontawesome",
+        "directory": "..\\..\\node_modules\\nativescript-fontawesome"
+    },
+    {
         "name": "tns-core-modules-widgets",
         "directory": "..\\..\\node_modules\\tns-core-modules-widgets"
+    },
+    {
+        "name": "nativescript-fonticon",
+        "directory": "..\\..\\node_modules\\nativescript-fonticon"
     }
 ]

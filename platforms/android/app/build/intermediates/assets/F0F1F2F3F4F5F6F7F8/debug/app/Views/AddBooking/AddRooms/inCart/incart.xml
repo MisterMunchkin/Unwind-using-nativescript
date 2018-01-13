@@ -1,0 +1,46 @@
+<!--
+This is the component view that represents the 'Browse' tab.
+Feel free to customize layouts and components to change how the tab view looks.
+-->
+
+    <!--<Label class="page-icon fa" text="&#xf1ea;"></Label>
+    <Label class="page-placeholder" text=""></Label>-->
+
+<Page class="page-white" xmlns="http://schemas.nativescript.org/tns.xsd" 
+ xmlns:lv="nativescript-pro-ui/listview"
+         loaded="onloaded">
+
+    <Page.actionBar>
+        <ActionBar class="label page-blue" title="In Cart">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
+
+    <GridLayout rows="*,60">
+        <StackLayout orientation="vertical" row="0">
+            <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
+            row="1" selectionBehavior="Press" itemSelected="itemSelected" itemDeselected="itemDeselected" > 
+
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                </lv:RadListView.listViewLayout>
+
+                <lv:RadListView.itemTemplate>
+                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                        <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />
+                        <StackLayout row="0" col="1" orientation="vertical">
+
+                            <Label text="{{ roomTypeName }}" class="list-group-item-heading" />
+                            <Label text="{{ roomTypePrice }}" class="list-group-item-text" />
+                            <Label text="{{ quantity }}" class="list-group-item-text" />
+                            
+                        </StackLayout>
+                        </GridLayout> 
+                </lv:RadListView.itemTemplate>
+            </lv:RadListView>
+        </StackLayout>
+
+    </GridLayout>
+    
+        
+</Page>

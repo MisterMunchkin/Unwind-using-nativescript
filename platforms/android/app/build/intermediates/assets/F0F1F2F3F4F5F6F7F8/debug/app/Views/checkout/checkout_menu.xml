@@ -1,0 +1,50 @@
+<Page class="page-white" xmlns="http://schemas.nativescript.org/tns.xsd" 
+    loaded="onLoaded"
+    xmlns:lv="nativescript-pro-ui/listview" >
+    <Page.actionBar>
+        <ActionBar class="label page-blue" title="Check Out Menu">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout rows="*,40,60">
+        <StackLayout row="0">
+            <lv:RadListView id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
+                    height="500"> 
+
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                </lv:RadListView.listViewLayout>
+
+                <lv:RadListView.itemTemplate>
+                    <GridLayout class="list-group-item" rows="auto" columns="*, 60">
+                        <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
+                        <StackLayout row="0" col="0" >
+                            
+                            <Label text="{{ name }}" class="list-group-item-heading" />
+                            <Label text="{{ description }}" class="list-group-item-text" />
+                            <Label text="{{ price }}" class="list-group-item-text" />
+                          
+                            <Label text="{{ remarks }}" class="list-group-item-text" />
+                        </StackLayout>
+                        <StackLayout col="1">
+                                <button text="remove" tap="remove" />
+                                <Label text="{{ qty }}" class="list-group-item-text" />
+                        </StackLayout>
+                    </GridLayout> 
+                </lv:RadListView.itemTemplate>
+            </lv:RadListView>
+        </StackLayout>
+
+        <StackLayout row="1" orientation="horizontal">
+            <Label class="label-blue label-big" text= "Grand Total: " />
+            <Label id="grandTotal" class=" label-blue label-big" />
+        </StackLayout>
+        <StackLayout row="2">
+            <Button class="blue-btn" text="Check Out" tap="checkoutTap" />
+        </StackLayout>
+    </GridLayout>
+    <!-- find a layout for the grand total label -->
+    <!--<DockLayout><!-- proceed to check out button should be placed in this -->
+    <!--</DockLayout>
+  <!--<Label hint="grand total" id="grandTotal" text="{{ grandTotal }}" />-->
+</Page>

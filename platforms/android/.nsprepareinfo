@@ -1,9 +1,9 @@
 {
-	"time": "Fri Jan 12 2018 14:40:40 GMT+0800 (Taipei Standard Time)",
+	"time": "Sat Jan 13 2018 18:47:30 GMT+0800 (Taipei Standard Time)",
 	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,
 	"changesRequireBuild": false,
-	"projectFileHash": "ae9787e6c2ea5e5aa281e61de0b2325433f55924416030ccd154c506694e5772",
-	"changesRequireBuildTime": "Sat Jan 06 2018 23:21:42 GMT+0800 (Taipei Standard Time)"
+	"projectFileHash": "22c3961c0ea28bf5c181e94e882cb2da67b869ab716b2968f0b8d6798816f12a",
+	"changesRequireBuildTime": "Sat Jan 13 2018 18:41:25 GMT+0800 (Taipei Standard Time)"
 }
