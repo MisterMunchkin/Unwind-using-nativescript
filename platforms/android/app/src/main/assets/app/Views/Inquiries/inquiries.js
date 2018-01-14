@@ -19,6 +19,7 @@ exports.onloaded = function (args) {
     page.bindingContext = {
         reviews: review
     }
+
 };
 
 exports.longpressed = function(){

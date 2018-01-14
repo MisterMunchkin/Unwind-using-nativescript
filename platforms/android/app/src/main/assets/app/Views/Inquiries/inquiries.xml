@@ -1,12 +1,13 @@
 <Page class="page-content" loaded="onloaded"
-        xmlns:UI="nativescript-reviews">
+        xmlns:UI="nativescript-reviews"
+        xmlns:lv="nativescript-pro-ui/listview" >
     <GridLayout rows="*, 60">
         <ScrollView>    
             <StackLayout row="0">
                 <UI:Reviews user="userTap" long="longpressed" reviews="{{ reviews }}" />
             </StackLayout>
         </ScrollView>
-
+      
         <StackLayout row="1" orientation="horizontal">
             <TextField class="input" hint="write your own review here" id="userReview" />
             <Button text="done" />
