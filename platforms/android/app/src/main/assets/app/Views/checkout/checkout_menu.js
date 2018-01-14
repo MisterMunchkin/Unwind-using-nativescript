@@ -92,7 +92,7 @@ exports.checkoutTap = function(){
         
         if(phpResponse == "order sent!"){
             alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
-            
+            global.foodArray = new Array();
             console.log(phpResponse);
             var topmost = frameModule.topmost();
             topmost.navigate("Views/Menu/menu");
