@@ -5,9 +5,10 @@
         </ActionBar>
     </Page.actionBar>
     <StackLayout orientation="vertical">
-        <Label class="page-icon fa" text="&#xf1ea;"></Label>
-        <Label class="page-placeholder" text="image here"></Label>
 
+
+        <Label text="Review" />
+        <TextField id="textReview" hint="Write your review for the hotel" />
       
     </StackLayout>
 </Page>
