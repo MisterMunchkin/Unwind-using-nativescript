@@ -1,0 +1,35 @@
+.fab-button{
+    height:60;
+    width:60;
+    margin:15;
+    background-color:#16a1f1;
+    horizontal-align:right;
+    vertical-align:bottom;
+    padding-bottom: 3cm;
+}
+.starempty{
+    width: 120px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    overflow: hidden;
+    background-image: "~/images/inquiries/Star_empty.png"
+}
+.staryellow{
+    width: 120px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    overflow: hidden;
+    background-image: "~/images/inquiries/star.png"
+}
+.done{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    horizontal-align: right;
+    overflow: hidden
+}
+.input{
+    width:80%
+}
