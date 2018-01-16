@@ -27,6 +27,9 @@ exports.nextTap = function(){
     if(checkinTextView.text != "" && checkoutTextView.text != ""){
         if (new Date(checkin_date) >= new Date()) {//bug it returns false if check in is same as current date
             if (new Date(checkin_date) < new Date(checkout_date)) {
+                //adding security to check if user has existing booking with the same interval
+
+                
                 var navigationOptions = {
                     moduleName: "Views/AddBooking/AddQuantity/addquantity",
                     context: {

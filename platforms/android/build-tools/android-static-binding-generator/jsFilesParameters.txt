@@ -206,6 +206,7 @@ C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\B
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\BookingDetail\paypal.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\checkout\checkout_menu.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Inquiries\inquiries.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Inquiries\addInquiries\addinquiries.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\login\login.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Menu\menu.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Menu\MenuDetail\menu_detail.js

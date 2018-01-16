@@ -1,0 +1,31 @@
+<Page class="page-content" loaded="onloaded"
+    xmlns:lv="nativescript-pro-ui/listview">
+    <Page.actionBar>
+        <ActionBar class="label page-blue" title="Add Inquiries">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
+    <StackLayout orientation="vertical">
+
+        <lv:RadListView id="listview"  itemSelected="itemSelected" itemDeselected="itemDeselected" 
+            selectionBehavior="Press" items="{{ items }}" class="listviewPadding list-group"> 
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewGridLayout scrollDirection="Vertical" />
+                </lv:RadListView.listViewLayout>
+
+                <lv:RadListView.itemTemplate>
+                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                        <StackLayout row="0" col="1">
+                           <!-- <Label text="{{ Star }}" class="label-blue list-group-item-heading" /> -->
+                            <Image src="{{ starImage }}" tap="starTap" />
+                        </StackLayout>
+                    </GridLayout>
+                </lv:RadListView.itemTemplate>
+
+        </lv:RadListView>
+
+        <Label text="Review" />
+        <TextField id="textReview" hint="Write your review for the hotel" />
+        <Button text="submit review" tap="submit" />
+    </StackLayout>
+</Page>

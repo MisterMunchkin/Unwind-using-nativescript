@@ -529,17 +529,17 @@ public final class R {
         public static final int ic_expand_dataform_group = 0x7f020076;
         public static final int ic_token_remove = 0x7f02007a;
         public static final int ic_token_remove_pressed = 0x7f02007b;
-        public static final int notification_template_icon_bg = 0x7f020094;
-        public static final int pressable_item_background = 0x7f020089;
-        public static final int selectable_item_background = 0x7f02008a;
-        public static final int shade_bottom = 0x7f02008b;
-        public static final int shade_corner = 0x7f02008c;
-        public static final int shade_right = 0x7f02008d;
-        public static final int tab_view_popup_background = 0x7f02008f;
-        public static final int token_bg = 0x7f020090;
-        public static final int token_default = 0x7f020091;
-        public static final int token_selected = 0x7f020092;
-        public static final int token_text_color = 0x7f020093;
+        public static final int notification_template_icon_bg = 0x7f020095;
+        public static final int pressable_item_background = 0x7f02008a;
+        public static final int selectable_item_background = 0x7f02008b;
+        public static final int shade_bottom = 0x7f02008c;
+        public static final int shade_corner = 0x7f02008d;
+        public static final int shade_right = 0x7f02008e;
+        public static final int tab_view_popup_background = 0x7f020090;
+        public static final int token_bg = 0x7f020091;
+        public static final int token_default = 0x7f020092;
+        public static final int token_selected = 0x7f020093;
+        public static final int token_text_color = 0x7f020094;
     }
     public static final class id {
         public static final int Block = 0x7f0d0080;

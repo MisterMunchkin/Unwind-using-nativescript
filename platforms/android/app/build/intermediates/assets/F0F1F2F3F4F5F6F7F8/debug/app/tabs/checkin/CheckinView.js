@@ -30,7 +30,7 @@ exports.onLoaded = function(args) {
         console.log(JSON.stringify(error));
     })
 
-   
+    
 }
 
 function then(response){
@@ -90,6 +90,8 @@ function inactive(){
     
     var label = page.getViewById("checkinNotif");
     label.class = "page-placeholder";
+    var icon = page.getViewById("checkinNotifIcon");
+    icon.class = "page-icon fa";
     //add image for locked tab
 }
 exports.onItemTap = function(args){

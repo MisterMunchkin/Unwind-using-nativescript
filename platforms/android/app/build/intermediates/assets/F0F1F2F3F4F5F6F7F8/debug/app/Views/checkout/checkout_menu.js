@@ -44,6 +44,7 @@ function loadItems(){
                     description: obj[x].description,
                     price: obj[x].price,
                     qty: obj[x].qty,
+                    currency: "PHP",
                     remarks: obj[x].remarks
                 }
             )
@@ -65,7 +66,7 @@ function loadItems(){
         grandTotal: grandTotal
     }*/
     console.log(grandTotal);
-    view.getViewById(page, "grandTotal").text = grandTotal;
+    view.getViewById(page, "grandTotal").text = "PHP " + grandTotal;
 }
 
 exports.checkoutTap = function(){
@@ -92,7 +93,7 @@ exports.checkoutTap = function(){
         
         if(phpResponse == "order sent!"){
             alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
-            
+            global.foodArray = new Array();
             console.log(phpResponse);
             var topmost = frameModule.topmost();
             topmost.navigate("Views/Menu/menu");

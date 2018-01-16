@@ -23,7 +23,8 @@
 
                             <Label text="{{ name }}" class="list-group-item-heading" />
                             <Label text="{{ description }}" class="list-group-item-text" />
-                            <Label text="{{ price }}" class="list-group-item-text" />
+                            
+                            <Label text="{{ currency + ' ' + price }}" class="list-group-item-text" />
                             
                         </StackLayout>
                         </GridLayout> 
