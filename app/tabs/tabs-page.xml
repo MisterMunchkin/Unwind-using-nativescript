@@ -7,7 +7,7 @@
   xmlns:settings="/tabs/settings"
   xmlns:booking="/tabs/booking">
     <Page.actionBar>
-        <ActionBar class="action-bar">
+        <ActionBar class="action-bar-unwind action-item">
           <Label text="{{ title }}" class="action-bar-title" />
         </ActionBar>
     </Page.actionBar>
