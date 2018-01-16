@@ -14,6 +14,7 @@ xmlns:al="nativescript-awesome-loaders"
     <GridLayout rows="*, 45">
 
         <StackLayout>
+
             <lv:RadListView row="0" id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
                 pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" > 
 

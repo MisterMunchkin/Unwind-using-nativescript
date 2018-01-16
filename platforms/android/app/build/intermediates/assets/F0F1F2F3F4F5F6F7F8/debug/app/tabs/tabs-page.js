@@ -27,7 +27,7 @@ function onSelectedIndexChanged(args) {
     const tabView = args.object;
     const bindingContext = tabView.bindingContext;
     const selectedTabViewItem = tabView.items[args.newIndex];
-
+    //const selectedTabViewItem = tabView.items[2];
     bindingContext.set("title", selectedTabViewItem.title);
    // console.log("TAB INDEX: " + args.newIndex);
     global.activeTab = args.newIndex;

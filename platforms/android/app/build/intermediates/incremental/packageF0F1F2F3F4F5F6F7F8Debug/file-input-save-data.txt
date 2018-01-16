@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jan 16 18:24:24 CST 2018
+#Tue Jan 16 20:29:39 CST 2018
 1073.file=C\:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\assets\\F0F1F2F3F4F5F6F7F8\\debug\\app\\tns_modules\\nativescript-theme-core\\css\\sky.css
 1090.base=C\:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\assets\\F0F1F2F3F4F5F6F7F8\\debug
 1007.base=C\:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\resources-F0-F1-F2-F3-F4-F5-F6-F7-F8-debug.ap_

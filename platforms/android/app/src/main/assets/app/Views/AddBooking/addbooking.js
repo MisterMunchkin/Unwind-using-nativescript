@@ -14,15 +14,12 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
 
 };
 
-exports.onNavBtnTap = function(){
+/*exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
    topmost.navigate("tabs/tabs-page");//find a way to navigate to a specific tab
-}
-exports.backEvent = function (args) {
-
-    args.cancel = true;
-    var topmost = frameModule.topmost();
-    topmost.navigate("tabs/tabs-page");
+}*/
+exports.backEvent = function(){
+    console.log("Should have an are you sure? data you input will be lost.");
 }
 
 exports.nextTap = function(){
