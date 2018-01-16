@@ -135,20 +135,34 @@ function loadData(phpContext){
             obj = JSON.parse(obj);
             //console.log("inside then function: " + obj);
             var limit = obj.length;
+            var checkinMonthIndex;
+            var checkoutMonthIndex;
+            var newCheckin;
+            var newCheckout;
+            var MonthNames = ["January", "February", "March", "April", "May",
+            "June", "July", "August", "September", "October", "November", "December"];
 
             console.log("num of items: " + limit);
             for (var x = 0; x < limit; x++) {
+                
+                checkinMonthIndex = new Date(obj[x].checkinDate)
+                checkoutMonthIndex = new Date(obj[x].checkoutDate);
 
+                newCheckin = MonthNames[checkinMonthIndex.getMonth()] + " " + checkinMonthIndex.getDate() + ", " + checkinMonthIndex.getFullYear();
+                newCheckout = MonthNames[checkoutMonthIndex.getMonth()] + " " + checkoutMonthIndex.getDate() + ", " + checkoutMonthIndex.getFullYear(); 
+                console.log("newCheckin: " + newCheckin);
                 items.push(
                     {
-                        reservationDate: "Reservation Date:" + obj[x].reservationDate,
-                        checkinDate: "check in Date:" + obj[x].checkinDate,
-                        checkoutDate: "check out Date:" + obj[x].checkoutDate,
-                        reservationStatus: "status:" + obj[x].reservationStatus,
+                        reservationDate: obj[x].reservationDate,
+                        checkinDateFormatted:  newCheckin,
+                        checkoutDateFormatted:  newCheckout,
+                        checkoutDate: obj[x].checkoutDate,
+                        checkinDate: obj[x].checkinDate,
+                        reservationStatus: obj[x].reservationStatus,
                         itemImage: "",
-                        reservationID: "Reservation ID:" + obj[x].reservationRequestID,
-                        adult_qty: "adult qty." + obj[x].adult_qty,
-                        child_qty: "child qty." + obj[x].child_qty
+                        reservationID:  obj[x].reservationRequestID,
+                        adult_qty: obj[x].adult_qty,
+                        child_qty: obj[x].child_qty
 
                     }
 
@@ -171,11 +185,11 @@ exports.onItemTap = function(args){
     var tappedView = args.view;
     var tappedItem = tappedView.bindingContext;
     
-    var resDate = tappedItem.reservationDate.substring(tappedItem.reservationDate.indexOf(":") + 1);
-    var checkinDate = tappedItem.checkinDate.split(":")[1];
-    var checkoutDate = tappedItem.checkoutDate.split(":")[1];
-    var resStatus = tappedItem.reservationStatus.split(":")[1];
-    var resID = tappedItem.reservationID.split(":")[1];
+    var resDate = tappedItem.reservationDate;
+    var checkinDate = tappedItem.checkinDate;
+    var checkoutDate = tappedItem.checkoutDate;
+    var resStatus = tappedItem.reservationStatus;
+    var resID = tappedItem.reservationID;
 
     var navigationOptions = {
         moduleName: "Views/BookingDetail/bookingdetail",
