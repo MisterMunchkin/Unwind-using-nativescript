@@ -127,9 +127,10 @@ function then(response){
         console.log("isActive: " + global.loginCred[1]);
         console.log("checkInID: " + global.loginCred[2]);
         console.log("total food price: " + global.loginCred[3]);
+        console.log("total room price: " + global.loginCred[4]);
         console.log("grandTotalCheckOut: " + global.checkOutGrandTotal);
 
-        global.checkOutGrandTotal += global.loginCred[3];
+        global.checkOutGrandTotal += global.loginCred[3] + global.loginCred[4];
         console.log("after adding food grandTotalCheckOut:" + global.checkOutGrandTotal);
         var topmost = frameModule.topmost();
         topmost.navigate("tabs/tabs-page");

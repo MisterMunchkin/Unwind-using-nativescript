@@ -243,7 +243,7 @@ exports.checkinButton = function(){
                             var limit = roomIDArray.length, count = 0;
 
                             for(var x = 0;x < limit;x++){
-
+                                console.log("roomID: " + roomIDArray[x]);
                                 var updateOccObj = {room_id: roomIDArray[x]};
 
                                 fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/updateRoomOccupied.php", {

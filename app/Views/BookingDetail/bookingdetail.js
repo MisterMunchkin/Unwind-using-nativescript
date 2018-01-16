@@ -234,16 +234,25 @@ exports.checkinButton = function(){
                         method: "POST",
                         body: formEncode(getRoomsObj)
                     }).then(function (response) {
+                        var phpResponse = response._bodyText;
+
+                        if(phpResponse.indexOf("error") > -1){
+                            alert({ title: "activation error", message: phpResponse, okButtonText: "Close" });
+                        }else{
+                            alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
+                            var topmost = frameModule.topmost();
+                            topmost.navigate("tabs/tabs-page");
+                        }
                         //then(response);
                     // console.log(JSON.stringify(response));
-                        phpResponse = response._bodyText;
+                        /*phpResponse = response._bodyText;
                         if(phpResponse.indexOf("error") <= -1){
                             var roomIDArray = JSON.parse(phpResponse);
 
                             var limit = roomIDArray.length, count = 0;
 
                             for(var x = 0;x < limit;x++){
-
+                                console.log("roomID: " + roomIDArray[x]);
                                 var updateOccObj = {room_id: roomIDArray[x]};
 
                                 fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/updateRoomOccupied.php", {
@@ -272,7 +281,7 @@ exports.checkinButton = function(){
                             }
                         }else{
                             alert({ title: "activation error", message: phpResponse, okButtonText: "Close" });
-                        }
+                        }*/
                     }, function (error) {
                         console.log(JSON.stringify(error));
                     })
