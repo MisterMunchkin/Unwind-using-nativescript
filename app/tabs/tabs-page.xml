@@ -31,7 +31,8 @@
             In this case the view contents and back end logic are separated in custom components.
             You can find these components in their respective folders /home, /browse etc.
             -->
-            <checkin:CheckinView/>
+            <checkin:CheckinView />
+
           </TabViewItem.view>
         </TabViewItem>
 
