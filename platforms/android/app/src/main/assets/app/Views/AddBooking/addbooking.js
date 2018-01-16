@@ -18,6 +18,12 @@ exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
    topmost.navigate("tabs/tabs-page");//find a way to navigate to a specific tab
 }
+exports.backEvent = function (args) {
+
+    args.cancel = true;
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
 
 exports.nextTap = function(){
 
