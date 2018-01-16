@@ -22,7 +22,7 @@ exports.onLoaded = function(args) {
     component.bindingContext = pageData;
 
    
-
+    console.log("<<<<querying checkin Security>>>>");
     fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/checkinSecurity.php", {
     }).then(function (response) {
         then(response);
@@ -47,7 +47,7 @@ function then(response){
     }else{
         active();
     }
-
+    console.log("<<<<ending checkin security>>>>");
     
 }
 

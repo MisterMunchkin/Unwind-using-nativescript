@@ -26,6 +26,18 @@ exports.onloaded = function (args) {
         {
             starnum: 2,
             starImage: "~/images/inquiries/Star_empty.png"
+        },
+        {
+            starnum: 3,
+            starImage: "~/images/inquiries/Star_empty.png"
+        },
+        {
+            starnum: 4,
+            starImage: "~/images/inquiries/Star_empty.png"
+        },
+        {
+            starnum: 5,
+            starImage: "~/images/inquiries/Star_empty.png"
         }
     )
 
@@ -38,14 +50,18 @@ exports.starTap = function(args){
 
     var starnum = tappedItem.starnum;
 
-    if(tappedItem.starImage.indexOf("empty") > -1){
-        console.log("<<<<turning to full>>>>");
-        tappedItem.starImage = "~/images/inquiries/star.png";
-    }else{
-        console.log("<<<<turning to empty>>>>");
-        tappedItem.starImage = "~/images/inquiries/Star_empty.png";
+    for(var x = 0; x < 5;x++){
+
+        if(x < starnum){
+           // console.log("filled");
+            items.getItem(x).starImage = "~/images/inquiries/star.png";
+        }else{
+           // console.log("unfilled");
+            items.getItem(x).starImage = "~/images/inquiries/Star_empty.png";
+        }
     }
-    listview.refresh();   
+    listview.refresh();
+  
 }
 exports.submit = function(){
     console.log("submit pressed");

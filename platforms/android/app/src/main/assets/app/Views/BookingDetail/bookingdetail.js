@@ -234,9 +234,18 @@ exports.checkinButton = function(){
                         method: "POST",
                         body: formEncode(getRoomsObj)
                     }).then(function (response) {
+                        var phpResponse = response._bodyText;
+
+                        if(phpResponse.indexOf("error") > -1){
+                            alert({ title: "activation error", message: phpResponse, okButtonText: "Close" });
+                        }else{
+                            alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
+                            var topmost = frameModule.topmost();
+                            topmost.navigate("tabs/tabs-page");
+                        }
                         //then(response);
                     // console.log(JSON.stringify(response));
-                        phpResponse = response._bodyText;
+                        /*phpResponse = response._bodyText;
                         if(phpResponse.indexOf("error") <= -1){
                             var roomIDArray = JSON.parse(phpResponse);
 
@@ -272,7 +281,7 @@ exports.checkinButton = function(){
                             }
                         }else{
                             alert({ title: "activation error", message: phpResponse, okButtonText: "Close" });
-                        }
+                        }*/
                     }, function (error) {
                         console.log(JSON.stringify(error));
                     })
