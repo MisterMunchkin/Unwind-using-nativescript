@@ -19,6 +19,7 @@ global.servicesOrdered = new Array();
 global.roomOrdered = new Array();//will be filled during check in 
 global.loginCred = new Array();
 global.activeTab;
+global.activeTabBooking = 0;
 //when room is ready add it as a global to get the pricing
 
 //application.start({ moduleName: "./tabs/tabs-page" });

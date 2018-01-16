@@ -113,6 +113,16 @@ exports.onloaded = function(args) {
             checkinVisible: "visible",
             message: "you've made it! now you just have to wait\n for your check in date to check in the hotel!"
         }
+        break;
+        case "Checked-out":
+        console.log("Checked-out");
+        page.bindingContext = {
+            cancelText: "Cancel Booking",
+            checkoutVisible: "collapse",
+            cancelVisible: "collapse",
+            checkinVisible: "collapse",
+            message: "You have succesfully checked out, hope to see you again soon!"
+        }
     }
     /*if(requestObject.checkinDate){
         //also need code that checks if booking is 24 hours before the check in date, if within the 24 hours then user cannot cancel booking

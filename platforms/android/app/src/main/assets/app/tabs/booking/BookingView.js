@@ -68,13 +68,21 @@ exports.onLoaded = function(args) {
     reserve = component.getViewById("resNavLabel");
     //requestLabel.className = "ActiveNav";
    // reservationLabel.className ="inActiveNav";
-    request.class = "inActiveNav";
-    reserve.class = "ActiveNav";
+    
   
-  
-
-    loadData("loadReservationData.php");
-  
+    switch(global.activeTabBooking){
+        case 0:
+        request.class = "inActiveNav";
+        reserve.class = "ActiveNav";
+    
+        loadData("loadReservationData.php");
+        break;
+        case 1:
+        request.class = "ActiveNav";
+        reserve.class = "inActiveNav";
+    
+        loadData("loadRequestData.php");
+    }
     
 }
 
@@ -102,6 +110,7 @@ exports.requestNav = function (args) {
     request.class = "ActiveNav";
     reserve.class= "inActiveNav";
 
+    global.activeTabBooking = 1;
  
     loadData("loadRequestData.php");
     
@@ -112,6 +121,8 @@ exports.reservationNav = function (args) {
 
     request = component.getViewById("reqNavLabel");
     reserve = component.getViewById("resNavLabel");
+
+    global.activeTabBooking = 0;
 
     request.class = "inActiveNav";
     reserve.class= "ActiveNav";
@@ -154,8 +165,10 @@ function loadData(phpContext){
                 items.push(
                     {
                         reservationDate: obj[x].reservationDate,
-                        checkinDate:  newCheckin,
-                        checkoutDate:  newCheckout,
+                        checkinDateFormatted:  newCheckin,
+                        checkoutDateFormatted:  newCheckout,
+                        checkoutDate: obj[x].checkoutDate,
+                        checkinDate: obj[x].checkinDate,
                         reservationStatus: obj[x].reservationStatus,
                         itemImage: "",
                         reservationID:  obj[x].reservationRequestID,
