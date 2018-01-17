@@ -1,0 +1,21 @@
+<Page class="page-content" loaded="onloaded"
+        xmlns:UI="nativescript-reviews"
+        xmlns:lv="nativescript-pro-ui/listview" 
+        xmlns:FAB="nativescript-floatingactionbutton" >
+    <GridLayout rows="*, 60">
+        <ScrollView>    
+            <StackLayout row="0">
+                <UI:Reviews user="userTap" long="longpressed" reviews="{{ reviews }}" />
+            </StackLayout>
+        </ScrollView>
+        
+        <FAB:fab tap="fabTap"
+            row="1"
+            icon="res://ic_plus_white_48dp"
+            class="fab-button" />
+       <!-- <StackLayout row="2" orientation="horizontal">
+            <TextField class="input" id="reviewText" hint="write your own review here..." />
+            <Button class="done" text="done" tap="done" />
+        </StackLayout> -->
+    </GridLayout>
+</Page>

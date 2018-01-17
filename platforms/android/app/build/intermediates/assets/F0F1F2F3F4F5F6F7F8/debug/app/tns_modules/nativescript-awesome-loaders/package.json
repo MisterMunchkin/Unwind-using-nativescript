@@ -1,0 +1,67 @@
+{
+  "_args": [
+    [
+      "nativescript-awesome-loaders@1.2.1",
+      "C:\\Android\\Nativescript\\Unwind"
+    ]
+  ],
+  "_from": "nativescript-awesome-loaders@1.2.1",
+  "_id": "nativescript-awesome-loaders@1.2.1",
+  "_inBundle": false,
+  "_integrity": "sha1-dIn+ArPAY9iee0IuuLGR0B4kSQI=",
+  "_location": "/nativescript-awesome-loaders",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "nativescript-awesome-loaders@1.2.1",
+    "name": "nativescript-awesome-loaders",
+    "escapedName": "nativescript-awesome-loaders",
+    "rawSpec": "1.2.1",
+    "saveSpec": null,
+    "fetchSpec": "1.2.1"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-awesome-loaders/-/nativescript-awesome-loaders-1.2.1.tgz",
+  "_spec": "1.2.1",
+  "_where": "C:\\Android\\Nativescript\\Unwind",
+  "author": {
+    "name": "Osei Fortune",
+    "email": "fortune.osei@yahoo.com"
+  },
+  "bugs": {
+    "url": "https://github.com/triniwiz/nativescript-awesome-loaders/issues"
+  },
+  "description": "NativeScript plugin to add custom loading indicators",
+  "devDependencies": {
+    "typescript": "^1.8.10"
+  },
+  "homepage": "https://github.com/triniwiz/nativescript-awesome-loaders",
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "Android"
+  ],
+  "license": "MIT",
+  "main": "awesome-loaders.js",
+  "name": "nativescript-awesome-loaders",
+  "nativescript": {
+    "platforms": {
+      "android": "1.5.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/triniwiz/nativescript-awesome-loaders.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "demo.android": "npm run preparedemo ;cd demo ;tns run android",
+    "demo.ios": "npm run preparedemo ;cd demo ;tns emulate ios",
+    "preparedemo": "npm run build ;cd demo ;tns plugin remove nativescript-awesome-loaders ;tns plugin add .. ;tns install",
+    "setup": "cd demo ;npm install ;cd .. ;npm run build ;cd demo ;tns plugin add .. ;cd .."
+  },
+  "version": "1.2.1"
+}
