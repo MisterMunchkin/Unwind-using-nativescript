@@ -24,7 +24,7 @@ exports.fabTap = function(){
     console.log("<<<<<redirecting to write feedback module >>>>>");
 
     var topmost = frameModule.topmost();
-    topmost.navigate("Views/Inquiries/addInquiries/addinquiries");
+    topmost.navigate("Views/Reviews/addReviews/addreviews");
 }
 /*
 exports.done = function(){

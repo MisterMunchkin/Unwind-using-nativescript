@@ -4,9 +4,9 @@ var fetchModule = require("fetch");
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 var application = require('application');
 require("nativescript-master-technology");
-//var connection = require("tns-core-modules/connectivity");
+var connectivity = require("tns-core-modules/connectivity");
 
-//var connType = connection.getConnectionType();
+var connectionType = connectivity.getConnectionType();
 var loader;
 
 var options = {
@@ -29,6 +29,21 @@ exports.loaded = function(args){ //exports is standard for both nativescript and
    /* if (application.android) {
         application.android.on(application.AndroidApplication.activityBackPressedEvent, backEvent);
     }*/
+
+    connectivity.startMonitoring(function onConnectionTypeChanged(newConnectionType){
+        switch(newConnectionType){
+            case connectivity.connectionType.none:
+            console.log("no interet");
+            break;
+            case connectivity.connectionType.wifi:
+            console.log("wifi");
+            break;
+            case connectivity.connectionType.mobile:
+            console.log("mobile");
+            break;
+        }
+    })
+        
 };
 
 exports.backEvent = function (args) {

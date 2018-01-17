@@ -73,7 +73,7 @@ function active(){
                 itemImage: "~/images/CheckIn/bill.jpg"
             },
             {
-                pageName: "Inquiries",
+                pageName: "Reviews",
                 pageDesc: "help center",
                 itemImage: "~/images/CheckIn/inquiries.png"
             }
@@ -106,8 +106,8 @@ exports.onItemTap = function(args){
         case "Services": 
             goToServices()
             break;
-        case "Inquiries": 
-            goToInquiries()
+        case "Reviews": 
+            goToReviews()
             break;
         case "Bill": 
             goToBill()
@@ -129,11 +129,11 @@ function goToServices(){
     topmost.navigate("Views/Services/services");
 
 }
-function goToInquiries(){
-    console.log("inquiries");
+function goToReviews(){
+    console.log("Reviews");
 
     var topmost = frameModule.topmost();
-    topmost.navigate("Views/Inquiries/inquiries");
+    topmost.navigate("Views/Reviews/reviews");
 }
 function goToBill(){
     console.log("bill");
