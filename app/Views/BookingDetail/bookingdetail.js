@@ -235,7 +235,7 @@ exports.checkinButton = function(){
                         body: formEncode(getRoomsObj)
                     }).then(function (response) {
                         var phpResponse = response._bodyText;
-
+                        console.log("response: " + phpResponse);
                         if(phpResponse.indexOf("error") > -1){
                             alert({ title: "activation error", message: phpResponse, okButtonText: "Close" });
                         }else{

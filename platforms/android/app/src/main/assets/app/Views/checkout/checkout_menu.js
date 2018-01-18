@@ -5,7 +5,23 @@ var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 var view = require("ui/core/view");
 var fetchModule = require("fetch");
+var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
+var loader;
+
+var options = {
+    message: 'Loading...',
+    progress: 0.65,
+    android: {
+        indeterminate: true,
+        cancelable: false,
+        max: 100,
+        progressNumberFormat: "%1d/%2d",
+        progressPercentFormat: 0.53,
+        progressStyle: 1,
+        secondaryProgress: 1
+    }
+}
 
 var items;
 var pageData;
@@ -40,6 +56,7 @@ function loadItems(){
         for (var x = 0; x < limit; x++) {
             items.push(
                 {
+                    food_id: obj[x].food_id,
                     name: obj[x].name,
                     description: obj[x].description,
                     price: obj[x].price,
@@ -78,26 +95,76 @@ exports.checkoutTap = function(){
     
 
     global.checkOutGrandTotal += grandTotal;//adds to the total hotel check out
-
+    console.log("Grand Hotel Total: " + global.checkOutGrandTotal);
 
     requestObject = {timestamp_ordered: date,
                      grandTotal: grandTotal,
-                     check_in_id: global.loginCred[2]};
+                     check_in_id: global.loginCred[2]};//send global.foodArray and process insertFoodItem in the back end, 
+
+    loader = new LoadingIndicator();
+
+    loader.show(options);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/food/insertFoodOrder.php", {
         method: "POST",
         body: formEncode(requestObject)
 
     }).then(function (response) {
         var phpResponse = response._bodyText;
-        console.log("Full response: " + JSON.stringify(response));
+    // console.log("Full response: " + JSON.stringify(response));
         
-        if(phpResponse == "order sent!"){
-            alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
+        if(phpResponse.indexOf("error") <= -1){
+            console.log("food_order_id: " + phpResponse);
+            var limit = global.foodArray.length;
+            var count = 0;
+
+            for(var x = 0;x < limit;x++){
+
+                var requestFoodItem = {qty: global.foodArray[x].qty, 
+                                    food_id: global.foodArray[x].food_id,
+                                    food_order_id: phpResponse,
+                                    check_in_id: global.loginCred[2]};
+                fetchModule.fetch("https://unwindv2.000webhostapp.com/food/insertFoodItem.php",{
+                    method: "POST",
+                    body: formEncode(requestFoodItem)
+                }).then(function(response){
+                    var phpResponse = reponse._bodyText;
+                    console.log("<<<<<<response>>>>>>>>" + JSON.stringify(response));
+                    console.log("reply from insertFoodItem.php: " + phpResponse);
+                    if(phpResponse.indexOf("error") <= -1){
+                        count++;
+                    }
+
+                    if(count == limit){
+                        alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
+                        global.foodArray = new Array();
+                        console.log(phpResponse);
+                        var topmost = frameModule.topmost();
+                        topmost.navigate("Views/Menu/menu");
+                    }else{
+                        alert({ title: "POST response", message: "Fatal Error", okButtonText: "Close" });
+                        global.foodArray = new Array();
+                        console.log(phpResponse);
+                        var topmost = frameModule.topmost();
+                        topmost.navigate("Views/Menu/menu");
+                    }
+                }, function(error){
+                    console.log("ERROR");
+                    console.log(JSON.stringify(error));
+                });
+            }
+            /*alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
             global.foodArray = new Array();
             console.log(phpResponse);
             var topmost = frameModule.topmost();
-            topmost.navigate("Views/Menu/menu");
+            topmost.navigate("Views/Menu/menu");*/
+        }else{
+            alert({ title: "POST response", message: "error: please try again", okButtonText: "Close" });
+            //global.foodArray = new Array();
+            console.log(phpResponse);
+           // var topmost = frameModule.topmost();
+            //topmost.navigate("Views/Menu/menu");
         }
+        loader.hide();
     }, function (error) {
         console.log("ERROR");
         console.log(JSON.stringify(error));

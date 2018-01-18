@@ -49,6 +49,7 @@ exports.onloaded = function(args){
             for(var x = 0; x < limit;x++){
                 items.push(
                     {
+                        food_id: obj[x].food_id,
                         name: obj[x].name,
                         description: obj[x].description,
                         price: obj[x].price,
@@ -102,6 +103,7 @@ exports.itemTap = function(args){
     var navigationOptions = {
         moduleName: "Views/Menu/MenuDetail/menu_detail",
         context: {
+            food_id: tappedItem.food_id,
             name: tappedItem.name,
             description: tappedItem.description,
             price: tappedItem.price

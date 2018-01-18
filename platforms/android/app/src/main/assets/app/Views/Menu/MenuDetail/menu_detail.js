@@ -12,6 +12,7 @@ exports.onloaded = function (args) {
     console.log("<<<<<< menu_detail page >>>>>>")
     var pageDataContext = page.navigationContext;
     foodContext = {
+        food_id: pageDataContext.food_id,
         name: pageDataContext.name,
         description: pageDataContext.description,
         price: pageDataContext.price 
@@ -41,6 +42,7 @@ exports.addToCartTap = function(){
     if(itemQty != ""){
         console.log(itemQty + " " + remarks);
         foodItem = {
+            food_id: foodContext.food_id,
             name: foodContext.name,
             description: foodContext.description,
             price: parseInt(foodContext.price),
