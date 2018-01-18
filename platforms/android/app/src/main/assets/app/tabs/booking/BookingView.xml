@@ -39,6 +39,11 @@ xmlns:al="nativescript-awesome-loaders"
             </lv:RadListView>
         </StackLayout>
         
+        <FAB:fab tap="fabTap"
+         
+                icon="res://ic_plus_white_48dp"
+                class="fab-button" />
+                
         <StackLayout class="page-blue" row="1" orientation="horizontal">
         
             <Button class="ActiveNav" text="Reservations" id="resNavLabel" tap="reservationNav" width="35%" />
@@ -47,9 +52,6 @@ xmlns:al="nativescript-awesome-loaders"
 
         </StackLayout> <!--just reuse the labels you already have, you just need to change some variables so it could be used for both reservation and request -->
     </GridLayout>
-    <FAB:fab tap="fabTap"
-         
-                icon="res://ic_plus_white_48dp"
-                class="fab-button" />
+    
     
 </GridLayout>

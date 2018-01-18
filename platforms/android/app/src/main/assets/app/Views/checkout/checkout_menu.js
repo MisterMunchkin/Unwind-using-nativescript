@@ -26,14 +26,14 @@ var options = {
 var items;
 var pageData;
 var grandTotal;
-
+var listview;
 exports.onLoaded = function(args){
     page = args.object;
 
     console.log("<<<<<< checkout_menu page >>>>>>");
     pageData = new Observable();
     page.bindingContext = pageData;
-
+    listview = page.getViewById("listview");
     loadItems();
 
 }
@@ -94,7 +94,7 @@ exports.checkoutTap = function(){
     console.log("timestamp: " + date);
     
 
-    global.checkOutGrandTotal += grandTotal;//adds to the total hotel check out
+    
     console.log("Grand Hotel Total: " + global.checkOutGrandTotal);
 
     requestObject = {timestamp_ordered: date,
@@ -116,6 +116,8 @@ exports.checkoutTap = function(){
         if(phpResponse.indexOf("error") <= -1){
             console.log("<<<<<<<response: " + phpResponse);
             alert({ title: "POST response", message: "Food Order sent!", okButtonText: "Close" });
+            global.checkOutGrandTotal += grandTotal;//adds to the total hotel check out
+            global.foodArray = new Array();
             var topmost = frameModule.topmost();
             topmost.navigate("Views/Menu/menu");
            /* var limit = global.foodArray.length;
@@ -184,11 +186,21 @@ exports.remove = function(args){
 
     for(var x = 0;x < limit && food.name != global.foodArray[x].name;x++){}
     if(food.name == global.foodArray[x].name){
-        grandTotal -= (global.foodArray[x].price * global.foodArray[x].qty);
-        console.log(grandTotal);
-
-        items.splice(x, 1);
-        global.foodArray.splice(x, 1);
+        if(global.foodArray[x].qty != 1){
+            global.foodArray[x].qty--;
+            items.getItem(x).qty--;
+            
+            grandTotal -= global.foodArray[x].price; //redundant because the else condition deletes the foodItem so I can no longer use the price outside
+            listview.refresh();
+        }else{
+            //grandTotal -= (global.foodArray[x].price * global.foodArray[x].qty);
+            grandTotal -= global.foodArray[x].price;
+            console.log(grandTotal);
+           
+            items.splice(x, 1);
+            global.foodArray.splice(x, 1);
+        }
+        page.getViewById("grandTotal").text = "PHP " + grandTotal;//updates grandTotal 
     }
     console.log("after remove (global): " + JSON.stringify(global.foodArray));
     //console.log("after remove (checkout items): " + items);
