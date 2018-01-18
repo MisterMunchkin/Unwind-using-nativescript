@@ -32,8 +32,8 @@ exports.onloaded = function(args){
     var obj;
    
     
-    loader = new LoadingIndicator();
-    loader.show(options);
+    //loader = new LoadingIndicator();
+    //loader.show(options);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/services/loadServiceData.php", {
         
     }).then(function (response) {
@@ -66,7 +66,7 @@ exports.onloaded = function(args){
         console.log(JSON.stringify(error));
     })
 
-    loader.hide();
+   // loader.hide();
 };
 exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
@@ -98,6 +98,10 @@ exports.itemTap = function(args){
     );
     var requestedObject = {service_id: tappedItem.service_id, service_request_date: date, 
                             check_in_id: global.loginCred[2]};
+    
+    loader = new LoadingIndicator();
+
+    loader.show(options);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/services/insertServiceRequest.php", {
         method: "POST",
         body: formEncode(requestedObject)
@@ -109,6 +113,7 @@ exports.itemTap = function(args){
             alert({ title: "POST response", message: response._bodyText , okButtonText: "Close" }); 
             console.log("failed: " + JSON.stringify(response));
         }
+        loader.hide();
     }, function (error) {
         console.log(JSON.stringify(error));
     })

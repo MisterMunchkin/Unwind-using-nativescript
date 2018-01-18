@@ -15,6 +15,7 @@ xmlns:al="nativescript-awesome-loaders"
 
         <StackLayout>
 
+            <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
             <lv:RadListView row="0" id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
                 pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" > 
 
@@ -39,17 +40,19 @@ xmlns:al="nativescript-awesome-loaders"
             </lv:RadListView>
         </StackLayout>
         
-        <StackLayout class="page-blue" row="1" orientation="horizontal">
-        
-            <Button class="ActiveNav" text="Reservations" id="resNavLabel" tap="reservationNav" width="35%" />
-
-            <Button class="inActiveNav" text="Request" id="reqNavLabel" tap="requestNav" width="35%"  />
-
-        </StackLayout> <!--just reuse the labels you already have, you just need to change some variables so it could be used for both reservation and request -->
-    </GridLayout>
-    <FAB:fab tap="fabTap"
+        <FAB:fab tap="fabTap"
          
                 icon="res://ic_plus_white_48dp"
                 class="fab-button" />
+                
+        <StackLayout class="page-blue" row="1" orientation="horizontal">
+        
+            <Button class="ActiveNav" text="Reservations" id="resNavLabel" tap="reservationNav" width="35%" isEnabled="true" />
+
+            <Button class="inActiveNav" text="Request" id="reqNavLabel" tap="requestNav" width="35%" isEnabled="true" />
+
+        </StackLayout> <!--just reuse the labels you already have, you just need to change some variables so it could be used for both reservation and request -->
+    </GridLayout>
+    
     
 </GridLayout>

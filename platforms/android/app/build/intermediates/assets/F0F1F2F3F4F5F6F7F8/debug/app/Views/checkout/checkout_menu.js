@@ -5,19 +5,35 @@ var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 var view = require("ui/core/view");
 var fetchModule = require("fetch");
+var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
+var loader;
+
+var options = {
+    message: 'Loading...',
+    progress: 0.65,
+    android: {
+        indeterminate: true,
+        cancelable: false,
+        max: 100,
+        progressNumberFormat: "%1d/%2d",
+        progressPercentFormat: 0.53,
+        progressStyle: 1,
+        secondaryProgress: 1
+    }
+}
 
 var items;
 var pageData;
 var grandTotal;
-
+var listview;
 exports.onLoaded = function(args){
     page = args.object;
 
     console.log("<<<<<< checkout_menu page >>>>>>");
     pageData = new Observable();
     page.bindingContext = pageData;
-
+    listview = page.getViewById("listview");
     loadItems();
 
 }
@@ -40,6 +56,7 @@ function loadItems(){
         for (var x = 0; x < limit; x++) {
             items.push(
                 {
+                    food_id: obj[x].food_id,
                     name: obj[x].name,
                     description: obj[x].description,
                     price: obj[x].price,
@@ -77,27 +94,83 @@ exports.checkoutTap = function(){
     console.log("timestamp: " + date);
     
 
-    global.checkOutGrandTotal += grandTotal;//adds to the total hotel check out
-
+    
+    console.log("Grand Hotel Total: " + global.checkOutGrandTotal);
 
     requestObject = {timestamp_ordered: date,
                      grandTotal: grandTotal,
-                     check_in_id: global.loginCred[2]};
+                     check_in_id: global.loginCred[2],
+                     foodArray: JSON.stringify(global.foodArray)};//send global.foodArray and process insertFoodItem in the back end, 
+
+    loader = new LoadingIndicator();
+
+    loader.show(options);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/food/insertFoodOrder.php", {
         method: "POST",
         body: formEncode(requestObject)
 
     }).then(function (response) {
         var phpResponse = response._bodyText;
-        console.log("Full response: " + JSON.stringify(response));
+    // console.log("Full response: " + JSON.stringify(response));
         
-        if(phpResponse == "order sent!"){
-            alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
+        if(phpResponse.indexOf("error") <= -1){
+            console.log("<<<<<<<response: " + phpResponse);
+            alert({ title: "POST response", message: "Food Order sent!", okButtonText: "Close" });
+            global.checkOutGrandTotal += grandTotal;//adds to the total hotel check out
+            global.foodArray = new Array();
+            var topmost = frameModule.topmost();
+            topmost.navigate("Views/Menu/menu");
+           /* var limit = global.foodArray.length;
+            var count = 0;
+
+            for(var x = 0;x < limit;x++){
+
+                var requestFoodItem = {qty: global.foodArray[x].qty, 
+                                    food_id: global.foodArray[x].food_id,
+                                    food_order_id: phpResponse,
+                                    check_in_id: global.loginCred[2]};
+                fetchModule.fetch("https://unwindv2.000webhostapp.com/food/insertFoodItem.php",{
+                    method: "POST",
+                    body: formEncode(requestFoodItem)
+                }).then(function(response){
+                    var phpResponse = reponse._bodyText;
+                    console.log("<<<<<<response>>>>>>>>" + JSON.stringify(response));
+                    console.log("reply from insertFoodItem.php: " + phpResponse);
+                    if(phpResponse.indexOf("error") <= -1){
+                        count++;
+                    }
+
+                    if(count == limit){
+                        alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
+                        global.foodArray = new Array();
+                        console.log(phpResponse);
+                        var topmost = frameModule.topmost();
+                        topmost.navigate("Views/Menu/menu");
+                    }else{
+                        alert({ title: "POST response", message: "Fatal Error", okButtonText: "Close" });
+                        global.foodArray = new Array();
+                        console.log(phpResponse);
+                        var topmost = frameModule.topmost();
+                        topmost.navigate("Views/Menu/menu");
+                    }
+                }, function(error){
+                    console.log("ERROR");
+                    console.log(JSON.stringify(error));
+                });
+            }*/
+            /*alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
             global.foodArray = new Array();
             console.log(phpResponse);
             var topmost = frameModule.topmost();
-            topmost.navigate("Views/Menu/menu");
+            topmost.navigate("Views/Menu/menu");*/
+        }else{
+            alert({ title: "POST response", message: "error: please try again", okButtonText: "Close" });
+            //global.foodArray = new Array();
+            console.log(phpResponse);
+           // var topmost = frameModule.topmost();
+            //topmost.navigate("Views/Menu/menu");
         }
+        loader.hide();
     }, function (error) {
         console.log("ERROR");
         console.log(JSON.stringify(error));
@@ -113,11 +186,21 @@ exports.remove = function(args){
 
     for(var x = 0;x < limit && food.name != global.foodArray[x].name;x++){}
     if(food.name == global.foodArray[x].name){
-        grandTotal -= (global.foodArray[x].price * global.foodArray[x].qty);
-        console.log(grandTotal);
-
-        items.splice(x, 1);
-        global.foodArray.splice(x, 1);
+        if(global.foodArray[x].qty != 1){
+            global.foodArray[x].qty--;
+            items.getItem(x).qty--;
+            
+            grandTotal -= global.foodArray[x].price; //redundant because the else condition deletes the foodItem so I can no longer use the price outside
+            listview.refresh();
+        }else{
+            //grandTotal -= (global.foodArray[x].price * global.foodArray[x].qty);
+            grandTotal -= global.foodArray[x].price;
+            console.log(grandTotal);
+           
+            items.splice(x, 1);
+            global.foodArray.splice(x, 1);
+        }
+        page.getViewById("grandTotal").text = "PHP " + grandTotal;//updates grandTotal 
     }
     console.log("after remove (global): " + JSON.stringify(global.foodArray));
     //console.log("after remove (checkout items): " + items);

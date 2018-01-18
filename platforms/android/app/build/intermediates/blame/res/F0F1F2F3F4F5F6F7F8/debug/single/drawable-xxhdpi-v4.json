@@ -9,15 +9,15 @@
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\ic_feedback_sync.png",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\\output\\res\\drawable-xxhdpi-v4\\ic_feedback_sync.png"
-    },
-    {
-        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png"
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\60c79e6f76c985216e466705fe366018edd9d501\\output\\res\\drawable-xxhdpi-v4\\ic_feedback_sync.png"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
         "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
@@ -25,15 +25,15 @@
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\ic_clear.png",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\7349bc8ca9adc0372829559c7b737593a13ad758\\output\\res\\drawable-xxhdpi-v4\\ic_clear.png"
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\352cff638bd75f08813616e334f3c8089b1d62e7\\output\\res\\drawable-xxhdpi-v4\\ic_clear.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\ic_token_remove_pressed.png",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\352cff638bd75f08813616e334f3c8089b1d62e7\\output\\res\\drawable-xxhdpi-v4\\ic_token_remove_pressed.png"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
         "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\ic_token_remove_pressed.png",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\7349bc8ca9adc0372829559c7b737593a13ad758\\output\\res\\drawable-xxhdpi-v4\\ic_token_remove_pressed.png"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
@@ -89,7 +89,7 @@
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\ic_token_remove.png",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\7349bc8ca9adc0372829559c7b737593a13ad758\\output\\res\\drawable-xxhdpi-v4\\ic_token_remove.png"
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\352cff638bd75f08813616e334f3c8089b1d62e7\\output\\res\\drawable-xxhdpi-v4\\ic_token_remove.png"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png",
@@ -117,7 +117,7 @@
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\ic_send.png",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\\output\\res\\drawable-xxhdpi-v4\\ic_send.png"
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\60c79e6f76c985216e466705fe366018edd9d501\\output\\res\\drawable-xxhdpi-v4\\ic_send.png"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
@@ -157,7 +157,7 @@
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\hmb.png",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\5b6d2d95dd4701445f00abc0d4dda6c07b2be47f\\output\\res\\drawable-xxhdpi-v4\\hmb.png"
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\90e49006df20a87f4d58e85f60f844fd1623391b\\output\\res\\drawable-xxhdpi-v4\\hmb.png"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
@@ -181,7 +181,7 @@
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\ic_collapse_dataform_group.png",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\7349bc8ca9adc0372829559c7b737593a13ad758\\output\\res\\drawable-xxhdpi-v4\\ic_collapse_dataform_group.png"
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\352cff638bd75f08813616e334f3c8089b1d62e7\\output\\res\\drawable-xxhdpi-v4\\ic_collapse_dataform_group.png"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
@@ -217,15 +217,15 @@
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\ic_done.png",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\\output\\res\\drawable-xxhdpi-v4\\ic_done.png"
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\60c79e6f76c985216e466705fe366018edd9d501\\output\\res\\drawable-xxhdpi-v4\\ic_done.png"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\ic_expand_dataform_group.png",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\7349bc8ca9adc0372829559c7b737593a13ad758\\output\\res\\drawable-xxhdpi-v4\\ic_expand_dataform_group.png"
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\352cff638bd75f08813616e334f3c8089b1d62e7\\output\\res\\drawable-xxhdpi-v4\\ic_expand_dataform_group.png"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\ic_collapse.png",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\d3fb7ad24eed4cd43a357601529bd2ce9e44fc8b\\output\\res\\drawable-xxhdpi-v4\\ic_collapse.png"
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\2e5b77e230c611099178f584e9fd0d8d46f6b1a7\\output\\res\\drawable-xxhdpi-v4\\ic_collapse.png"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
@@ -237,6 +237,6 @@
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-xxhdpi-v4\\ic_expand.png",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\d3fb7ad24eed4cd43a357601529bd2ce9e44fc8b\\output\\res\\drawable-xxhdpi-v4\\ic_expand.png"
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\2e5b77e230c611099178f584e9fd0d8d46f6b1a7\\output\\res\\drawable-xxhdpi-v4\\ic_expand.png"
     }
 ]
