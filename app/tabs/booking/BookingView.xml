@@ -46,9 +46,9 @@ xmlns:al="nativescript-awesome-loaders"
                 
         <StackLayout class="page-blue" row="1" orientation="horizontal">
         
-            <Button class="ActiveNav" text="Reservations" id="resNavLabel" tap="reservationNav" width="35%" />
+            <Button class="ActiveNav" text="Reservations" id="resNavLabel" tap="reservationNav" width="35%" isEnabled="true" />
 
-            <Button class="inActiveNav" text="Request" id="reqNavLabel" tap="requestNav" width="35%"  />
+            <Button class="inActiveNav" text="Request" id="reqNavLabel" tap="requestNav" width="35%" isEnabled="true" />
 
         </StackLayout> <!--just reuse the labels you already have, you just need to change some variables so it could be used for both reservation and request -->
     </GridLayout>

@@ -31,7 +31,7 @@ exports.onloaded = function (args) {
                     review: data[x].review
                 }
             )
-            console.log("id: " + data[x].id);
+            //console.log("id: " + data[x].id);
         }
         pageData.set("items", items);
       

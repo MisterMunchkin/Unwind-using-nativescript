@@ -47,6 +47,7 @@ var uncancelable = {
         secondaryProgress: 1
     }
 };
+var listview;
 
 exports.onLoaded = function(args) {
     component = args.object;
@@ -63,7 +64,7 @@ exports.onLoaded = function(args) {
 
     requestLabel = view.getViewById(component, "reqNavLabel");
     reservationLabel = view.getViewById(component, "resNavLabel");
-
+    listview = view.getViewById(component, "listview");
     request = component.getViewById("reqNavLabel");
     reserve = component.getViewById("resNavLabel");
     //requestLabel.className = "ActiveNav";
@@ -74,13 +75,17 @@ exports.onLoaded = function(args) {
         case 0:
         request.class = "inActiveNav";
         reserve.class = "ActiveNav";
-    
+
+        reserve.isEnabled = "false";
+        request.isEnabled = "true";
         loadData("loadReservationData.php");
         break;
         case 1:
         request.class = "ActiveNav";
         reserve.class = "inActiveNav";
-    
+        
+        request.isEnabled = "false";
+        reserve.isEnabled = "true";
         loadData("loadRequestData.php");
     }
     
@@ -104,12 +109,14 @@ exports.pullToRefreshInit = function(){
 exports.requestNav = function (args) {
     console.log("request nav clicked");
     loader = new LoadingIndicator();
-    request = component.getViewById("reqNavLabel");
-    reserve = component.getViewById("resNavLabel");
+   // request = component.getViewById("reqNavLabel");
+    //reserve = component.getViewById("resNavLabel");
 
     request.class = "ActiveNav";
     reserve.class= "inActiveNav";
 
+    request.isEnabled = "false";
+    reserve.isEnabled = "true";
     global.activeTabBooking = 1;
  
     loadData("loadRequestData.php");
@@ -119,15 +126,16 @@ exports.reservationNav = function (args) {
     console.log("reservation nav clicked");
     loader = new LoadingIndicator();
 
-    request = component.getViewById("reqNavLabel");
-    reserve = component.getViewById("resNavLabel");
+   // request = component.getViewById("reqNavLabel");
+    //reserve = component.getViewById("resNavLabel");
 
     global.activeTabBooking = 0;
 
     request.class = "inActiveNav";
     reserve.class= "ActiveNav";
 
-   
+    request.isEnabled = "true";
+    reserve.isEnabled = "false";
     loadData("loadReservationData.php");
  
 }
@@ -185,7 +193,7 @@ function loadData(phpContext){
         }
        // loader.hide();
         pageData.set("items", items);
-
+        //listview.refresh();
     }, function (error) {
         console.log(JSON.stringify(error));
     })
