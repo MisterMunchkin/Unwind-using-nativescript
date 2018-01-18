@@ -239,6 +239,10 @@ exports.checkinButton = function(){
                         if(phpResponse.indexOf("error") > -1){
                             alert({ title: "activation error", message: phpResponse, okButtonText: "Close" });
                         }else{
+                            phpResponse = JSON.parse(phpResponse);
+                            global.loginCred = phpResponse;
+                            global.checkOutGrandTotal += global.loginCred[4];
+                            console.log("grand total is now at: " + global.checkOutGrandTotal);
                             alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
                             var topmost = frameModule.topmost();
                             topmost.navigate("tabs/tabs-page");
