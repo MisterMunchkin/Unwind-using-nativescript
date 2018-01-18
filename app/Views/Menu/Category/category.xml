@@ -3,7 +3,7 @@
         loaded="onloaded" xmlns:FAB="nativescript-floatingactionbutton"
     xmlns:lv="nativescript-pro-ui/listview">
     <Page.actionBar>
-        <ActionBar class="label page-blue" id="actionBar" title="Menu">
+        <ActionBar class="label page-blue" title="Category">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
@@ -24,7 +24,6 @@
                             <Label text="{{ name }}" class="list-group-item-heading" />
                             <Label text="{{ description }}" class="list-group-item-text" />
                             
-                            <Label text="{{ currency + ' ' + price }}" class="list-group-item-text" />
                             
                         </StackLayout>
                     </GridLayout> 

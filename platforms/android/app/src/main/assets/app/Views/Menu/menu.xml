@@ -3,7 +3,7 @@
         loaded="onloaded" xmlns:FAB="nativescript-floatingactionbutton"
     xmlns:lv="nativescript-pro-ui/listview">
     <Page.actionBar>
-        <ActionBar class="label page-blue" title="Menu">
+        <ActionBar class="label page-blue" id="actionBar" title="Menu">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>

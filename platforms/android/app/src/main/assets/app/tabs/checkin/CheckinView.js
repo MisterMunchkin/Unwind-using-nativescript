@@ -119,7 +119,7 @@ function goToMenu(){
     console.log("menu");
     
     var topmost = frameModule.topmost();
-    topmost.navigate("Views/Menu/menu");
+    topmost.navigate("Views/Menu/Category/category");
 }
 
 function goToServices(){

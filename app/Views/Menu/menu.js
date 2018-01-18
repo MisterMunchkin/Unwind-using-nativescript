@@ -24,24 +24,34 @@ var options = {
     }
 };
 
+var listview;
+var actionBar;
+var pageDataContext;
+
 exports.onloaded = function(args){
     page = args.object
-    console.log("<<<<<<menu page>>>>>>")
-    page.bindingContext = pageData;
+    console.log("<<<<<<menu page>>>>>>");
+    pageDataContext = page.navigationContext;
 
+    page.bindingContext = pageData;
+    listview = page.getViewById("listview");
+    actionBar = page.getViewById("actionBar");
     var obj;
     items = new ObservableArray([]);
 
+    actionBar.title = pageDataContext.category;
+    var requestedObject = {category: pageDataContext.category}
     loader.show(options);
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/food/loadMenuData.php", {
-        
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/food/loadMenuDataByCategory.php", {
+        method: "POST",
+        body: formEncode(requestedObject)
     }).then(function (response) {
         obj = response._bodyText;
        
 
         if(isData(obj) > 0){
 
-            items = new ObservableArray([]);
+           // items = new ObservableArray([]);
             obj = JSON.parse(obj);
             //console.log("inside then function: " + obj);
             var limit = obj.length;
@@ -54,16 +64,19 @@ exports.onloaded = function(args){
                         description: obj[x].description,
                         price: obj[x].price,
                         currency: "PHP",
-                        tapped: 0
+                        tapped: 0,
+                        category: obj[x].category
                     
                     }
 
                 );
-                console.log(obj[x].name);
+                console.log("food in category: " + obj[x].name);
             }
             pageData.set("items", items);
         }else{
-            console.log("put viible no data confirmation here");
+            pageData.set("items", items);
+           
+            console.log("put visible no data confirmation here");
         }
     }, function (error) {
         console.log(JSON.stringify(error));
@@ -73,13 +86,13 @@ exports.onloaded = function(args){
 };
 exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
-   topmost.navigate("tabs/tabs-page");
+   topmost.navigate("Views/Menu/Category/category");
 }
 exports.backEvent = function (args) {
 
     args.cancel = true;
     var topmost = frameModule.topmost();
-    topmost.navigate("tabs/tabs-page");
+    topmost.navigate("Views/Menu/Category/category");
 }
 
 function isData(obj){
@@ -106,7 +119,8 @@ exports.itemTap = function(args){
             food_id: tappedItem.food_id,
             name: tappedItem.name,
             description: tappedItem.description,
-            price: tappedItem.price
+            price: tappedItem.price,
+            category: tappedItem.category
         }
     }
     console.log("Tapped item: " + JSON.stringify(tappedItem));
@@ -132,17 +146,27 @@ exports.fabTap = function(args){//cart button
    
    
 
-   /* var navigationOptions = {
+    var navigationOptions = {
         moduleName: "Views/checkout/checkout_menu",
         context: {
-            foodArray: foodArray
+            category: pageDataContext.category
         }
-    }*/
-    console.log("Starting checkout menu activity...")
+    }
+   // console.log("Tapped item: " + JSON.stringify(tappedItem));
+    
     var topmost = frameModule.topmost();
-    topmost.navigate("Views/checkout/checkout_menu");
+    topmost.navigate(navigationOptions);
+    console.log("Starting checkout menu activity...")
+  
     /*page.showModal(modalPageModule, context, function closeCallback(grandTotal){
         //
         console.log(grandTotal);
     }, fullscreen)*/
+}
+
+function formEncode(obj) { //to convert urlencoded form data to JSON
+    var str = [];
+    for (var p in obj)
+        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+    return str.join("&");
 }
