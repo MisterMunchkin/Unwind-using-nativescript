@@ -47,6 +47,8 @@ var uncancelable = {
         secondaryProgress: 1
     }
 };
+var listview;
+var noData;
 
 exports.onLoaded = function(args) {
     component = args.object;
@@ -56,14 +58,14 @@ exports.onLoaded = function(args) {
     li.height = 60;
     li.indicator = "SemiCircleSpin";
     li.indicatorColor = "black";*/
-
+    noData = component.getViewById("noData");
     console.log("<<<<< booking view page >>>>>");
     component.bindingContext = pageData;
     loader = new LoadingIndicator();
 
     requestLabel = view.getViewById(component, "reqNavLabel");
     reservationLabel = view.getViewById(component, "resNavLabel");
-
+    listview = view.getViewById(component, "listview");
     request = component.getViewById("reqNavLabel");
     reserve = component.getViewById("resNavLabel");
     //requestLabel.className = "ActiveNav";
@@ -74,13 +76,17 @@ exports.onLoaded = function(args) {
         case 0:
         request.class = "inActiveNav";
         reserve.class = "ActiveNav";
-    
+
+        reserve.isEnabled = "false";
+        request.isEnabled = "true";
         loadData("loadReservationData.php");
         break;
         case 1:
         request.class = "ActiveNav";
         reserve.class = "inActiveNav";
-    
+        
+        request.isEnabled = "false";
+        reserve.isEnabled = "true";
         loadData("loadRequestData.php");
     }
     
@@ -90,26 +96,36 @@ exports.pullToRefreshInit = function(){
     //find a way to overwrite listview data and refresh page with new data 
     console.log("request class: " + request.class);
     var dataRet;
+    request.isEnabled = "false";
+    reserve.isEnabled = "false";
+
     if(request.class == "ActiveNav"){
        dataRet = loadData("loadRequestData.php");
+      // reserve.isEnabled = "true";
     }else{
         dataRet = loadData("loadReservationData.php");
+       // request.isEnabled = "true";
     }
 
-    if(dataRet == "loading done"){
-        component.getViewById("listview").notifyPullToRefreshFinished();
+    if(dataRet.indexOf("Reservation") > -1){
+       request.isEnabled = "true";
+    }else{
+        reserve.isEnabled = "true";
     }
+    component.getViewById("listview").notifyPullToRefreshFinished();
 }
 
 exports.requestNav = function (args) {
     console.log("request nav clicked");
     loader = new LoadingIndicator();
-    request = component.getViewById("reqNavLabel");
-    reserve = component.getViewById("resNavLabel");
+   // request = component.getViewById("reqNavLabel");
+    //reserve = component.getViewById("resNavLabel");
 
     request.class = "ActiveNav";
     reserve.class= "inActiveNav";
 
+    request.isEnabled = "false";
+    reserve.isEnabled = "true";
     global.activeTabBooking = 1;
  
     loadData("loadRequestData.php");
@@ -119,15 +135,16 @@ exports.reservationNav = function (args) {
     console.log("reservation nav clicked");
     loader = new LoadingIndicator();
 
-    request = component.getViewById("reqNavLabel");
-    reserve = component.getViewById("resNavLabel");
+   // request = component.getViewById("reqNavLabel");
+    //reserve = component.getViewById("resNavLabel");
 
     global.activeTabBooking = 0;
 
     request.class = "inActiveNav";
     reserve.class= "ActiveNav";
 
-   
+    request.isEnabled = "true";
+    reserve.isEnabled = "false";
     loadData("loadReservationData.php");
  
 }
@@ -136,6 +153,7 @@ function loadData(phpContext){
     var obj;
     items = new ObservableArray([]);
    // loader.show(uncancelable);
+   noData.class="hiddenLayout page-placeholder"
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/" + phpContext, {
 
     }).then(function (response) {
@@ -182,14 +200,16 @@ function loadData(phpContext){
             }
         }else{
             //label no data
+            
+            noData.class="page-placeholder"
         }
        // loader.hide();
         pageData.set("items", items);
-
+        //listview.refresh();
     }, function (error) {
         console.log(JSON.stringify(error));
     })
-    return "loading done";
+    return "loading done" + phpContext;
 }
 
 exports.onItemTap = function(args){

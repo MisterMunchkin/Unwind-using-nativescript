@@ -1,61 +1,60 @@
 var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
+var Observable = require("data/observable").Observable;
+var ObservableArray = require("data/observable-array").ObservableArray;
 
-var starReview = 0;
-var reviewNew = [];
-var review;
+var pageData = new Observable();
+var items;
+
 exports.onloaded = function (args) {
     page = args.object
-    
-    review = [
-        {
-            id: 1,
-            username: "Shibal",
-            review: "this is the first review",
-            rate: 5,
-            datetime: new Date(Date.now() - 24 * 60 * 60 * 1000)
-        }
-    ]
 
-
-    page.bindingContext = {
-        reviews: review
-    }
+    page.bindingContext = pageData;
+    items = new ObservableArray([]);
 //error HERE>>>>>>>>>>>>>>>>>>>>>>
-   /* fetchModule.fetch("https://unwindv2.000webhostapp.com/reviews/loadReviews.php", {
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/reviews/loadReviews.php", {
 
     }).then(function (response) {
         var phpResponse = response._bodyText;
         console.log("feedback: " + phpResponse);
-       // phpResponse = JSON.parse(phpResponse);
-        review = [
-            {
-                id: 1,
-                username: "Shibal",
-                review: "this is the first review",
-                rate: 5,
-                datetime: new Date(Date.now() - 24 * 60 * 60 * 1000)
-            }
-        ]
-
-
-        page.bindingContext = {
-            reviews: review
+        
+        var data = JSON.parse(phpResponse);
+        var limit = data.length;
+        console.log("limit: " + limit);
+        for(var x = 0;x < limit;x++){
+            items.push(
+                {
+                    id: data[x].id,
+                    username: data[x].username,
+                    rate: data[x].rate,
+                    review: data[x].review,
+                    user_Id: data[x].user_id
+                }
+            )
+            //console.log("id: " + data[x].id);
         }
+        pageData.set("items", items);
+      
 
     }, function (error) {
         console.log(JSON.stringify(error));
-    })*/
+    })
 
 };
+
 exports.fabTap = function(){
     console.log("<<<<<redirecting to write feedback module >>>>>");
 
     var topmost = frameModule.topmost();
     topmost.navigate("Views/Reviews/addReviews/addreviews");
 }
+exports.onNavBtnTap = function(){
+    console.log("<<<<<redirecting to tabs module >>>>>");
 
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
 exports.longpressed = function(){
     alert({ title: "Inquries", message: "long pressed", okButtonText: "Close" });
 }

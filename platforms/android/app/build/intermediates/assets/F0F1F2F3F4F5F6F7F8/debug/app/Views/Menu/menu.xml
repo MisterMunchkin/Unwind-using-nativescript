@@ -7,8 +7,8 @@
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
-    <GridLayout rows="*, 60, 45">
-        <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
+    <GridLayout rows="*, 45">
+        <StackLayout orientation="vertical">
             <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
             row="0" itemTap="itemTap"> 
 
@@ -27,21 +27,21 @@
                             <Label text="{{ currency + ' ' + price }}" class="list-group-item-text" />
                             
                         </StackLayout>
-                        </GridLayout> 
+                    </GridLayout> 
                 </lv:RadListView.itemTemplate>
             </lv:RadListView>
         </StackLayout>
+    
         
-        <FAB:fab tap="fabTap"
-        row="1"
-        icon="res://ic_cart_outline_white_48dp"
-        class="fab-button" />
-      
+            <FAB:fab tap="fabTap"
 
-        <StackLayout row = "2" class="page-blue" orientation="horizontal">
+            icon="res://ic_cart_outline_white_48dp"
+            class="fab-button" />
+
+        <StackLayout row ="1" class="page-blue" orientation="horizontal">
             <Button class="blue-btn" text="in-Cart" />
         </StackLayout>
-        
+    
     </GridLayout>
  
 </Page>

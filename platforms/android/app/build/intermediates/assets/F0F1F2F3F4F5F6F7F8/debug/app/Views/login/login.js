@@ -146,7 +146,7 @@ function then(response){
         console.log("grandTotalCheckOut: " + global.checkOutGrandTotal);
 
         global.checkOutGrandTotal += global.loginCred[3] + global.loginCred[4];
-        console.log("after adding food grandTotalCheckOut:" + global.checkOutGrandTotal);
+        console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
         var topmost = frameModule.topmost();
         topmost.navigate("tabs/tabs-page");
         

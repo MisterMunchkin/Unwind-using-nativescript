@@ -43,17 +43,17 @@ MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Mister
 MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\MisterMunchkin\.android\build-cache\cfc0a672a029f63dcb25d0426f6b7098273055fc\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\MisterMunchkin\.android\build-cache\43dd299e28036bd29a77a39ab6919b52e43de2df\output\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\MisterMunchkin\.android\build-cache\859cb926ee82cf38b664f2660dbd9851e284d56c\output\AndroidManifest.xml:21:5-23:58
-MERGED from [:nativescript-optimized:] C:\Users\MisterMunchkin\.android\build-cache\d54b0abd3b789943f5a8cda7d30212bbf3076c62\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:AVLoadingIndicatorView-release:] C:\Users\MisterMunchkin\.android\build-cache\29fb33714378f4eb06c5fc450ed8a2ccce390563\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:Chart-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\f743eb39adcc118f9265af9089c24faf7071a858\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:Common-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\f9dd859cd2ae60171fa926c510cd6ebfa970eaac\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:Data-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\2f7d02f55f21c36bfdc89e05289965d87342453f\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:Gauges-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\9d45ae89ea4e674b7a7f61bb1d666ebb5f7b392e\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:Input-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\7349bc8ca9adc0372829559c7b737593a13ad758\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:List-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\d3fb7ad24eed4cd43a357601529bd2ce9e44fc8b\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:Primitives-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\5b6d2d95dd4701445f00abc0d4dda6c07b2be47f\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:widgets-release:] C:\Users\MisterMunchkin\.android\build-cache\718a20e0b2040108255545cd38af8ba825ed5489\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:nativescript-optimized:] C:\Users\MisterMunchkin\.android\build-cache\4c4e49572db35cfd44e5d07b88ece47f67e11635\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:AVLoadingIndicatorView-release:] C:\Users\MisterMunchkin\.android\build-cache\a4adb923953f7d488731ff2ac1fa0505d09292bc\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Chart-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\58ca4a74cd18b6e8d6ec7851debf8d37ac3e43c9\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Common-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\941ba5773ae2bb87f48fc7c3a4e742ac00445396\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Data-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\9a3ad1d4d5dd02b612d05cedd9be0e50874cea09\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Gauges-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\d89c361fa634a91f8c232657e4d13b64a535d002\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Input-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\352cff638bd75f08813616e334f3c8089b1d62e7\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:List-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\2e5b77e230c611099178f584e9fd0d8d46f6b1a7\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Primitives-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\90e49006df20a87f4d58e85f60f844fd1623391b\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:widgets-release:] C:\Users\MisterMunchkin\.android\build-cache\1bf4bde3509e0fc5c1f11fb676bbdd409fce534c\output\AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\MisterMunchkin\.android\build-cache\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
@@ -94,15 +94,15 @@ MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Mister
 MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\MisterMunchkin\.android\build-cache\cfc0a672a029f63dcb25d0426f6b7098273055fc\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\MisterMunchkin\.android\build-cache\43dd299e28036bd29a77a39ab6919b52e43de2df\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\MisterMunchkin\.android\build-cache\859cb926ee82cf38b664f2660dbd9851e284d56c\output\AndroidManifest.xml:29:5-20
-MERGED from [:Chart-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\f743eb39adcc118f9265af9089c24faf7071a858\output\AndroidManifest.xml:11:5-12:19
-MERGED from [:Common-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\f9dd859cd2ae60171fa926c510cd6ebfa970eaac\output\AndroidManifest.xml:11:5-12:19
-MERGED from [:Data-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\2f7d02f55f21c36bfdc89e05289965d87342453f\output\AndroidManifest.xml:11:5-12:19
-MERGED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:11:5-32:19
-MERGED from [:Gauges-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\9d45ae89ea4e674b7a7f61bb1d666ebb5f7b392e\output\AndroidManifest.xml:11:5-12:19
-MERGED from [:Input-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\7349bc8ca9adc0372829559c7b737593a13ad758\output\AndroidManifest.xml:11:5-12:19
-MERGED from [:List-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\d3fb7ad24eed4cd43a357601529bd2ce9e44fc8b\output\AndroidManifest.xml:11:5-12:19
-MERGED from [:Primitives-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\5b6d2d95dd4701445f00abc0d4dda6c07b2be47f\output\AndroidManifest.xml:11:5-12:19
-MERGED from [:widgets-release:] C:\Users\MisterMunchkin\.android\build-cache\718a20e0b2040108255545cd38af8ba825ed5489\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:Chart-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\58ca4a74cd18b6e8d6ec7851debf8d37ac3e43c9\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:Common-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\941ba5773ae2bb87f48fc7c3a4e742ac00445396\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:Data-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\9a3ad1d4d5dd02b612d05cedd9be0e50874cea09\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:11:5-32:19
+MERGED from [:Gauges-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\d89c361fa634a91f8c232657e4d13b64a535d002\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:Input-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\352cff638bd75f08813616e334f3c8089b1d62e7\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:List-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\2e5b77e230c611099178f584e9fd0d8d46f6b1a7\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:Primitives-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\90e49006df20a87f4d58e85f60f844fd1623391b\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:widgets-release:] C:\Users\MisterMunchkin\.android\build-cache\1bf4bde3509e0fc5c1f11fb676bbdd409fce534c\output\AndroidManifest.xml:11:5-12:19
 	android:label
 		ADDED from C:\Android\Nativescript\Unwind\platforms\android\app\src\main\AndroidManifest.xml:9:122-154
 		ADDED from C:\Android\Nativescript\Unwind\platforms\android\app\src\main\AndroidManifest.xml:9:122-154
@@ -231,34 +231,34 @@ ADDED from [io.card:android-sdk:5.3.4] C:\Users\MisterMunchkin\.android\build-ca
 activity#io.card.payment.DataEntryActivity
 MERGED from [io.card:android-sdk:5.3.4] C:\Users\MisterMunchkin\.android\build-cache\4e2ccba16280129ce63d26c06f004fa6fdae4772\output\AndroidManifest.xml:25:9-70
 activity#com.telerik.widget.feedback.SendFeedbackActivity
-ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:12:9-16:20
+ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:12:9-16:20
 	android:label
-		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:14:13-65
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:14:13-65
 	android:theme
-		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:15:13-50
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:15:13-50
 	android:name
-		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:13:13-76
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:13:13-76
 activity#com.telerik.widget.feedback.ViewFeedbackActivity
-ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:17:9-21:20
+ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:17:9-21:20
 	android:label
-		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:19:13-65
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:19:13-65
 	android:theme
-		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:20:13-50
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:20:13-50
 	android:name
-		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:18:13-76
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:18:13-76
 activity#com.telerik.widget.feedback.ViewFeedbackItemActivity
-ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:22:9-26:20
+ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:22:9-26:20
 	android:label
-		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:24:13-65
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:24:13-65
 	android:theme
-		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:25:13-50
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:25:13-50
 	android:name
-		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:23:13-80
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:23:13-80
 activity#com.telerik.widget.feedback.EditDetailsActivity
-ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:27:9-31:20
+ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:27:9-31:20
 	android:label
-		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:29:13-64
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:29:13-64
 	android:theme
-		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:30:13-50
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:30:13-50
 	android:name
-		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\3c939ec13caf1b5992e1c54f97d6547b4d03bc6b\output\AndroidManifest.xml:28:13-75
+		ADDED from [:Feedback-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\AndroidManifest.xml:28:13-75
