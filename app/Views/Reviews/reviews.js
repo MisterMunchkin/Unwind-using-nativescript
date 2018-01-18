@@ -28,7 +28,8 @@ exports.onloaded = function (args) {
                     id: data[x].id,
                     username: data[x].username,
                     rate: data[x].rate,
-                    review: data[x].review
+                    review: data[x].review,
+                    user_Id: data[x].user_id
                 }
             )
             //console.log("id: " + data[x].id);
