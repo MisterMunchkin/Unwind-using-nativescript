@@ -15,6 +15,7 @@ xmlns:al="nativescript-awesome-loaders"
 
         <StackLayout>
 
+            <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
             <lv:RadListView row="0" id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"
                 pullToRefresh="true" pullToRefreshInitiated="pullToRefreshInit" > 
 

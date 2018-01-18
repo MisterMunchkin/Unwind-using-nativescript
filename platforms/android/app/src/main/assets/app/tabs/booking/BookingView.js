@@ -48,6 +48,7 @@ var uncancelable = {
     }
 };
 var listview;
+var noData;
 
 exports.onLoaded = function(args) {
     component = args.object;
@@ -57,7 +58,7 @@ exports.onLoaded = function(args) {
     li.height = 60;
     li.indicator = "SemiCircleSpin";
     li.indicatorColor = "black";*/
-
+    noData = component.getViewById("noData");
     console.log("<<<<< booking view page >>>>>");
     component.bindingContext = pageData;
     loader = new LoadingIndicator();
@@ -95,15 +96,23 @@ exports.pullToRefreshInit = function(){
     //find a way to overwrite listview data and refresh page with new data 
     console.log("request class: " + request.class);
     var dataRet;
+    request.isEnabled = "false";
+    reserve.isEnabled = "false";
+
     if(request.class == "ActiveNav"){
        dataRet = loadData("loadRequestData.php");
+      // reserve.isEnabled = "true";
     }else{
         dataRet = loadData("loadReservationData.php");
+       // request.isEnabled = "true";
     }
 
-    if(dataRet == "loading done"){
-        component.getViewById("listview").notifyPullToRefreshFinished();
+    if(dataRet.indexOf("Reservation") > -1){
+       request.isEnabled = "true";
+    }else{
+        reserve.isEnabled = "true";
     }
+    component.getViewById("listview").notifyPullToRefreshFinished();
 }
 
 exports.requestNav = function (args) {
@@ -144,6 +153,7 @@ function loadData(phpContext){
     var obj;
     items = new ObservableArray([]);
    // loader.show(uncancelable);
+   noData.class="hiddenLayout page-placeholder"
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/" + phpContext, {
 
     }).then(function (response) {
@@ -190,6 +200,8 @@ function loadData(phpContext){
             }
         }else{
             //label no data
+            
+            noData.class="page-placeholder"
         }
        // loader.hide();
         pageData.set("items", items);
@@ -197,7 +209,7 @@ function loadData(phpContext){
     }, function (error) {
         console.log(JSON.stringify(error));
     })
-    return "loading done";
+    return "loading done" + phpContext;
 }
 
 exports.onItemTap = function(args){

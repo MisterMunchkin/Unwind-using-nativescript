@@ -4,6 +4,22 @@ var fetchModule = require("fetch");
 var view = require("ui/core/view");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
+var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
+
+var options = {
+    message: 'Loading...',
+    progress: 0.65,
+    android: {
+        indeterminate: true,
+        cancelable: true,
+        max: 100,
+        progressNumberFormat: "%1d/%2d",
+        progressPercentFormat: 0.53,
+        progressStyle: 1,
+        secondaryProgress: 1
+    }
+};
+var loader;
 
 var items;
 var pageData = new Observable();
@@ -77,6 +93,9 @@ exports.submit = function(){
     console.log("starReview: " + count);
     console.log("textReview: " + review.text);
     var requestedObj = {textReview: review.text, starReview: count};
+
+    loader = new LoadingIndicator();
+    loader.show(options);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/reviews/insertReviews.php", {
         method: "POST",
         body: formEncode(requestedObj)
@@ -86,12 +105,17 @@ exports.submit = function(){
         if(phpResponse.indexOf("error") <= -1){
             console.log("success");
             alert({ title: "Success", message: "successfully made an inquiry", okButtonText: "Close" });
+            review.text = "";
+            loader.hide();
             var topmost = frameModule.topmost();
-            topmost.navigate("Views/Inquiries/inquiries"); 
+            topmost.navigate("Views/Reviews/reviews"); 
         }else{
+            
+            loader.hide();
             console.log("failed");
             alert({ title: "Failed", message: "please try again :(", okButtonText: "Close" });
         }
+        
     }, function (error) {
         console.log(JSON.stringify(error));
     })

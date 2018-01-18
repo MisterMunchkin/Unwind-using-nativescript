@@ -28,7 +28,8 @@ exports.onloaded = function (args) {
                     id: data[x].id,
                     username: data[x].username,
                     rate: data[x].rate,
-                    review: data[x].review
+                    review: data[x].review,
+                    user_Id: data[x].user_id
                 }
             )
             //console.log("id: " + data[x].id);
@@ -48,7 +49,12 @@ exports.fabTap = function(){
     var topmost = frameModule.topmost();
     topmost.navigate("Views/Reviews/addReviews/addreviews");
 }
+exports.onNavBtnTap = function(){
+    console.log("<<<<<redirecting to tabs module >>>>>");
 
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
 exports.longpressed = function(){
     alert({ title: "Inquries", message: "long pressed", okButtonText: "Close" });
 }

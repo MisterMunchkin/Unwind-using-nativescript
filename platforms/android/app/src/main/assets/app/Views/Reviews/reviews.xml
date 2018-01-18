@@ -23,7 +23,7 @@
                         <StackLayout row="0" col="1" >
                             <StackLayout orientation="horizontal">    
                                 <Label text="{{ username }}" class="list-group-item-heading" />
-                                <Label text="{{ rate }}" class="list-group-item-text" />
+                                <Label text="{{' ' + rate }}" class="list-group-item-text" />
                             </StackLayout>
                             <Label text="{{ review }}" class="list-group-item-text" />
                             
