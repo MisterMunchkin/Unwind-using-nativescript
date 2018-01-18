@@ -99,7 +99,8 @@ exports.checkoutTap = function(){
 
     requestObject = {timestamp_ordered: date,
                      grandTotal: grandTotal,
-                     check_in_id: global.loginCred[2]};//send global.foodArray and process insertFoodItem in the back end, 
+                     check_in_id: global.loginCred[2],
+                     foodArray: JSON.stringify(global.foodArray)};//send global.foodArray and process insertFoodItem in the back end, 
 
     loader = new LoadingIndicator();
 
@@ -113,8 +114,11 @@ exports.checkoutTap = function(){
     // console.log("Full response: " + JSON.stringify(response));
         
         if(phpResponse.indexOf("error") <= -1){
-            console.log("food_order_id: " + phpResponse);
-            var limit = global.foodArray.length;
+            console.log("<<<<<<<response: " + phpResponse);
+            alert({ title: "POST response", message: "Food Order sent!", okButtonText: "Close" });
+            var topmost = frameModule.topmost();
+            topmost.navigate("Views/Menu/menu");
+           /* var limit = global.foodArray.length;
             var count = 0;
 
             for(var x = 0;x < limit;x++){
@@ -151,7 +155,7 @@ exports.checkoutTap = function(){
                     console.log("ERROR");
                     console.log(JSON.stringify(error));
                 });
-            }
+            }*/
             /*alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
             global.foodArray = new Array();
             console.log(phpResponse);
