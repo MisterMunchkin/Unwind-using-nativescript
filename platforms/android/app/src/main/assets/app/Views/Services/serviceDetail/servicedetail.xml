@@ -1,0 +1,36 @@
+<Page class="page-content" loaded="onloaded"
+         xmlns:lv="nativescript-pro-ui/listview">
+    <Page.actionBar>
+        <ActionBar id="actionBar" class="label page-blue" title="">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
+
+    <GridLayout rows="*, 45">
+        <StackLayout orientation="vertical">
+            <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
+            row="0" itemSelected="itemSelected"> 
+
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                </lv:RadListView.listViewLayout>
+
+                <lv:RadListView.itemTemplate>
+                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                        <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
+                        <StackLayout row="0" col="1" >
+
+                            <Label text="{{ roomNumber }}" class="list-group-item-heading" />
+                            <Label text="{{ roomType }}" class="list-group-item-text" />
+                            
+                            
+                        </StackLayout>
+                    </GridLayout> 
+                </lv:RadListView.itemTemplate>
+            </lv:RadListView>
+        </StackLayout>
+        
+
+        <Button row="1" class="blue-btn" text="ADD TO CART" id="addToCart" tap="addToCartTap" />
+    </GridLayout>
+</Page>

@@ -76,7 +76,7 @@ exports.signIn = function(){
     if(email.text != "" && password.text != ""){
         if(validateEmail(email.text) == true){    
             console.log("email: " + email.text);
-            console.log("password: " + password.text);
+          //  console.log("password: " + password.text);
             loader = new LoadingIndicator();
 
             loader.show(options);
