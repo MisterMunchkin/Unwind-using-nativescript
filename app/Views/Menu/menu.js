@@ -27,6 +27,7 @@ var options = {
 var listview;
 var actionBar;
 var pageDataContext;
+var noData;
 
 exports.onloaded = function(args){
     page = args.object
@@ -36,6 +37,7 @@ exports.onloaded = function(args){
     page.bindingContext = pageData;
     listview = page.getViewById("listview");
     actionBar = page.getViewById("actionBar");
+    noData = page.getViewById("noData");
     var obj;
     items = new ObservableArray([]);
 
@@ -75,7 +77,7 @@ exports.onloaded = function(args){
             pageData.set("items", items);
         }else{
             pageData.set("items", items);
-           
+            noData.class = "page-placeholder";
             console.log("put visible no data confirmation here");
         }
     }, function (error) {
