@@ -89,6 +89,10 @@ exports.addToCartTap = function(){
         console.log("rooms that will be serviced: " + phpResponse);
         if(phpResponse.indexOf("error") <= -1){
             alert({ message: "Service request sent!", okButtonText: "Close" });
+            var topmost = frameModule.topmost();
+            topmost.navigate("Views/Services/services");
+        }else{
+            alert({ message: phpResponse , okButtonText: "Close" });
         }
     }, function (error) {
         console.log("ERROR");
