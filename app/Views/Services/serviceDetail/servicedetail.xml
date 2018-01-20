@@ -9,7 +9,7 @@
     <GridLayout rows="*, 45">
         <StackLayout orientation="vertical">
             <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
-            row="0" itemSelected="itemSelected"> 
+            row="0" multipleSelection="true" selectionBehavior="Press" > 
 
                 <lv:RadListView.listViewLayout>
                     <lv:ListViewLinearLayout scrollDirection="Vertical"/>
@@ -31,6 +31,6 @@
         </StackLayout>
         
 
-        <Button row="1" class="blue-btn" text="ADD TO CART" id="addToCart" tap="addToCartTap" />
+        <Button row="1" class="blue-btn" text="Submit requests" id="addToCart" tap="addToCartTap" />
     </GridLayout>
 </Page>

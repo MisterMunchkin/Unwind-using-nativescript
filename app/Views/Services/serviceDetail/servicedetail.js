@@ -10,6 +10,7 @@ var actionBar;
 
 var pageData = new Observable();
 var items;
+var listview;
 
 exports.onloaded = function (args) {
     page = args.object
@@ -17,6 +18,7 @@ exports.onloaded = function (args) {
     console.log("<<<<<< menu_detail page >>>>>>");
     page.bindingContext = pageData;
     actionBar = page.getViewById("actionBar");
+    listview = page.getViewById("listview");
 
     var pageDataContext = page.navigationContext;
     serviceContext = {
@@ -42,7 +44,8 @@ exports.onloaded = function (args) {
             items.push(
                 {
                     roomNumber: phpResponse[x].roomNumber,
-                    roomType: phpResponse[x].RoomName
+                    roomType: phpResponse[x].RoomName,
+                    roomID: phpResponse[x].roomId
                 }
             )
         }
@@ -67,8 +70,41 @@ exports.backEvent = function (args) {
 }
 
 exports.addToCartTap = function(){
+    console.log("selected rooms: " + JSON.stringify(listview.getSelectedItems()));
 
+    var roomArray = listview.getSelectedItems();
+
+    var limit = roomArray.length;
+
+    var date = new Date().toMysqlFormat();
+
+    var requestObject = {roomArray: JSON.stringify(roomArray), service_id: serviceContext.service_id,
+                        service_request_date: date, check_in_id: global.loginCred[2]};
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/services/insertServiceRequest.php", {
+        method: "POST",
+        body: formEncode(requestObject)
+
+    }).then(function (response) {
+        var phpResponse = response._bodyText;
+        console.log("rooms that will be serviced: " + phpResponse);
+        if(phpResponse.indexOf("error") <= -1){
+            alert({ message: "Service request sent!", okButtonText: "Close" });
+        }
+    }, function (error) {
+        console.log("ERROR");
+        console.log(JSON.stringify(error));
+    })
+    
 }
+function twoDigits(d){
+    if(0 <= d && d < 10) return "0" + d.toString();
+    if(-10 < d && d < 0) return "-0" + (-1 * d).toString();
+    return d.toString();
+}
+Date.prototype.toMysqlFormat = function(){
+    return this.getUTCFullYear() + "-" + twoDigits(1 + this.getUTCMonth()) + "-" + twoDigits(this.getUTCDate()) + " " + twoDigits(this.getUTCHours()) + ":" + twoDigits(this.getUTCMinutes()) + ":" + twoDigits(this.getUTCSeconds());
+}
+
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];
     for (var p in obj)

@@ -137,7 +137,7 @@ function then(response){
     if(phpResponse.indexOf("true") > -1){
         console.log("inside user login secured");
         global.loginCred = JSON.parse(phpResponse);
-        console.log("RESPONSE: " + JSON.stringify(response));
+      //  console.log("RESPONSE: " + JSON.stringify(response));
         console.log("userID: " + global.loginCred[0]);
         console.log("isActive: " + global.loginCred[1]);
         console.log("checkInID: " + global.loginCred[2]);
