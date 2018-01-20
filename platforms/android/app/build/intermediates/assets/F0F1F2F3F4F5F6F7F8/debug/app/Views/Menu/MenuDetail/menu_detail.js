@@ -15,7 +15,8 @@ exports.onloaded = function (args) {
         food_id: pageDataContext.food_id,
         name: pageDataContext.name,
         description: pageDataContext.description,
-        price: pageDataContext.price 
+        price: pageDataContext.price ,
+        category: pageDataContext.category
     };
     console.log(foodContext.name);
     page.bindingContext = {
@@ -24,14 +25,26 @@ exports.onloaded = function (args) {
     
 }
 exports.onNavBtnTap = function(){
+    var navigationOptions = {
+        moduleName: "Views/Menu/menu",
+        context: { 
+            category: tappedItem.category
+        }
+    }
     var topmost = frameModule.topmost();
-   topmost.navigate("Views/Menu/menu");
+   topmost.navigate(navigationOptions);
 }
 exports.backEvent = function (args) {
 
     args.cancel = true;
+    var navigationOptions = {
+        moduleName: "Views/Menu/menu",
+        context: { 
+            category: tappedItem.category
+        }
+    }
     var topmost = frameModule.topmost();
-    topmost.navigate("Views/Menu/menu");
+    topmost.navigate(navigationOptions);
 }
 
 exports.addToCartTap = function(){
@@ -47,12 +60,20 @@ exports.addToCartTap = function(){
             description: foodContext.description,
             price: parseInt(foodContext.price),
             qty: parseInt(itemQty),
-            remarks: remarks
+            remarks: remarks,
+            category: foodContext.category
         }
         global.foodArray.push(foodItem);
 
+
+        var navigationOptions = {
+        moduleName: "Views/Menu/menu",
+        context: { 
+            category: foodContext.category
+            }
+        }
         var topmost = frameModule.topmost();
-        topmost.navigate("Views/Menu/menu");
+        topmost.navigate(navigationOptions);
     }else{
         console.log("please enter item quantity and remarks!");
         //add UI for this soon

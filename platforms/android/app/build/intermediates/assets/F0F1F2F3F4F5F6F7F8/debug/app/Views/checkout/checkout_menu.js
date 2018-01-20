@@ -27,11 +27,15 @@ var items;
 var pageData;
 var grandTotal;
 var listview;
+var pageDataContext;
+
 exports.onLoaded = function(args){
     page = args.object;
 
     console.log("<<<<<< checkout_menu page >>>>>>");
     pageData = new Observable();
+    pageDataContext = page.navigationContext;
+
     page.bindingContext = pageData;
     listview = page.getViewById("listview");
     loadItems();
@@ -39,8 +43,21 @@ exports.onLoaded = function(args){
 }
 exports.onNavBtnTap = function(){
     // the top back button will lead back to the main page
-    var topmost = frameModule.topmost();
-    topmost.navigate("Views/Menu/menu");
+    if(pageDataContext.category == 0){
+        var topmost = frameModule.topmost();
+        topmost.navigate("Views/Menu/Category/category");
+    }else{
+        var navigationOptions = {
+            moduleName: "Views/Menu/menu",
+            context: {
+                category: pageDataContext.category
+            }
+        }
+    
+        var topmost = frameModule.topmost();
+        topmost.navigate(navigationOptions);
+    }
+    
 }
 
 function loadItems(){
@@ -119,7 +136,7 @@ exports.checkoutTap = function(){
             global.checkOutGrandTotal += grandTotal;//adds to the total hotel check out
             global.foodArray = new Array();
             var topmost = frameModule.topmost();
-            topmost.navigate("Views/Menu/menu");
+            topmost.navigate("tabs/tabs-page");
            /* var limit = global.foodArray.length;
             var count = 0;
 
@@ -209,7 +226,7 @@ exports.remove = function(args){
 }
 
 exports.backEvent = function(args){
-    grandTotal = 0;
+   // grandTotal = 0;
     
     console.log("back pressed");
 }
