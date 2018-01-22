@@ -9,17 +9,17 @@ var ObservableArray = require("data/observable-array").ObservableArray;
 
 var cnt = 0;
 //var page;
-var items = new ObservableArray([]);
-var pageData = new Observable();
+//var items = new ObservableArray([]);
+//var pageData = new Observable();
 //const label = new labelModule.Label();
-
+var items;
 exports.onLoaded = function(args) {
     const component = page = args.object;
     component.bindingContext = new HomeViewModel();
     //query in loading so that we can see if there is an accepted
     //also need security to check if theres already an active checkin
     //use a switch for active and inactive methods
-    component.bindingContext = pageData;
+    //component.bindingContext = pageData;
 
    
     console.log("<<<<querying checkin Security>>>>");
@@ -38,9 +38,10 @@ function then(response){
 
    
     console.log(phpResponse);
+    items = [];
    // console.log(response);
     if(phpResponse == "no data"){
-        items = new ObservableArray([]);
+       // items = new ObservableArray([]);
 
         inactive();
         
@@ -78,15 +79,20 @@ function active(){
                 itemImage: "~/images/CheckIn/inquiries.png"
             }
         )
-
-        pageData.set("items", items);
+        var label = page.getViewById("checkinNotif");
+        label.class = "hiddenLayout page-placeholder";
+        var icon = page.getViewById("checkinNotifIcon");
+        icon.class = "hiddenLayout page-icon fa";
+       // pageData.set("items", items);
+       var listview = page.getViewById("listview");
+       listview.items = items;
     }
 }
 function inactive(){
     console.log("not checked in");
     
     //label.text = "Check in Module is locked";
-    pageData.set("items", items);
+   // pageData.set("items", items);
     
     var label = page.getViewById("checkinNotif");
     label.class = "page-placeholder";
