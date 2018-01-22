@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\7c6d8cf2a486f3c27922e9c703e1f2994b6dc32a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_3319672b64116cd0de0b82e6c254917f8099c88b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\df164f46824452db841ce1f50742ed6781becdd8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_b6c9e26937fc823db710b4081dab385e97685706.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\2e5b77e230c611099178f584e9fd0d8d46f6b1a7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="ae411cd0dd58ad905486a0bc7931ec5adf3a2d13">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_378736f278058ef44906c7ddef94fcb0f5ccaaad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\352cff638bd75f08813616e334f3c8089b1d62e7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="ce22401852bd9e460265a9a1567f7cedb6fc91b9">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_cd25658ffb4727715a2af1e4f7d50e140c3af789.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\okio-1.11.0_07963a8dded89b9b24bd18fefc878efa8346148a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.5.0\4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83\okhttp-3.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\okhttp-3.5.0_1eb44d1984bc54247864c617c9d181e757714f1a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\library-2.4.0_fa46f3267204fd1ee96b0884fb9806e048731cec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\e530ac526e376888c924ce7896b2b3b0fcf08c02\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_47eff0b509a459ab5bb9d355a7d4d2a008f6e447.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\4e2ccba16280129ce63d26c06f004fa6fdae4772\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="28bc7007cc5fb935b0737a42f05b8286936228b0">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_e4ff25ccf1b4df24522aeb423a63307e6e60f3ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\510d8dcfc7c23561c9237e0d4f5325c8997d7dbb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_f520646f063ff50fb80fdde1aefd282744f822c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\532f9792acb22c41b62a29b09d4e249db818497e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="da47b5635353ca55aabc9e1ad6aaaa5626fedcb4">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_d5bbd6110a753aa63a63e47ef8f993d8a4c2295b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\90e49006df20a87f4d58e85f60f844fd1623391b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="16dfa5cc51cd9a9e2809e48ceb26724a29861fdd">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_eb9b9c11ebd974592ba70271ca74e6092f6076f8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\60c79e6f76c985216e466705fe366018edd9d501\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="0eed9e468431f447bf63f3a0cee23418e8994411">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_980123e3d921fc87f9025eaec86fe6a7e28b7717.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\1bf4bde3509e0fc5c1f11fb676bbdd409fce534c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_a318fb3b6a51603727fbd469f122a3f1abdd7c5d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\941ba5773ae2bb87f48fc7c3a4e742ac00445396\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="9ffa5b2e37c626bd25cfbff4df099cdf068595f9">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_0d8816672098712304898b34b8b0876d46993758.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\4140d9e3e5662bca5bb95c25601defbc29c2c3df\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_624c27c970c0e4c18420948336130f1bab90d3b9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\support-annotations-26.0.0-alpha1_a8657381b5b4326ac19aa230dfb34ae2b87064a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_f6c7f335d8d6a809fa86ce0968eedb75f9ce4311.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\a4adb923953f7d488731ff2ac1fa0505d09292bc\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="49696447df6357151c3d4f17b73a1e5ed24324aa">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_bee75a1d886591161a3f034319d7073eddd10170.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\9a3ad1d4d5dd02b612d05cedd9be0e50874cea09\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="4df8aad66215f497722e05820383f9ff04796fea">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_67cdc2a8b959d2e3ccbb7958e3f1cb7b76f53192.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\39a4f2a05a992287a6b51d1b9befebe5c93f7af6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_d4f4459eb6c1171778d5c4caf90fb8e1f7c179b8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\4c4e49572db35cfd44e5d07b88ece47f67e11635\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_dccf46cc03056ac22ee704da3d7dd0f71649fc38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\58ca4a74cd18b6e8d6ec7851debf8d37ac3e43c9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="21ece50b870a8bea45608a6748ad60112d5d9ed1">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_c056c5cd0cbd61193bdc618080cb8e5b255ed2ae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_27b6734f7c355aa05c00997b170d18031e782b18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\43dd299e28036bd29a77a39ab6919b52e43de2df\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_3fa5e1398b78445b1722f64331979e3827bbffb0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\cdc55253548d99d6ca0cac9e7cfd1ae6874defca\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_15bf918dccd53566e2007669b503c7106bba9324.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\859cb926ee82cf38b664f2660dbd9851e284d56c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_5c8b648b679ebe6b650dada6b6a4a63049ff0a28.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\cfc0a672a029f63dcb25d0426f6b7098273055fc\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_b8fa8af1df02825603c4799ea1b89aaeed894c00.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\d89c361fa634a91f8c232657e4d13b64a535d002\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="556dc4e7734c7445d7310a625fad89c5be6728b2">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8\debug\classes_b7bc7e640e013b61458a9f3b777f67e20aeaf665.jar" />
+    </item>
+
+</items>
