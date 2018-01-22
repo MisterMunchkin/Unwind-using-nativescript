@@ -1,0 +1,46 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"   
+        loaded="onloaded" xmlns:FAB="nativescript-floatingactionbutton"
+    xmlns:lv="nativescript-pro-ui/listview">
+    <Page.actionBar>
+        <ActionBar class="label page-blue" title="Category">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout rows="*">
+        <StackLayout orientation="vertical">
+            <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
+            row="0" itemTap="itemTap"> 
+
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                </lv:RadListView.listViewLayout>
+
+                <lv:RadListView.itemTemplate>
+                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                        <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
+                        <StackLayout row="0" col="1" >
+
+                            <Label text="{{ name }}" class="list-group-item-heading" />
+                            <Label text="{{ description }}" class="list-group-item-text" />
+                            
+                            
+                        </StackLayout>
+                    </GridLayout> 
+                </lv:RadListView.itemTemplate>
+            </lv:RadListView>
+        </StackLayout>
+    
+        <FAB:fab tap="fabTap"
+            
+            icon="res://ic_cart_outline_white_48dp"
+            class="fab-button" />
+<!--
+        <StackLayout row ="1" class="page-blue" orientation="horizontal">
+            <Button class="blue-btn" text="in-Cart" />
+        </StackLayout>-->
+    
+    </GridLayout>
+
+</Page>
+
