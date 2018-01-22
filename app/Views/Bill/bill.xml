@@ -4,7 +4,7 @@
     <Label class="page-placeholder" text="bills"></Label>-->
 
      <Page.actionBar>
-        <ActionBar class="label page-blue" title="Category">
+        <ActionBar class="label page-blue" title="Bill">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
@@ -12,7 +12,7 @@
 
         <StackLayout orientation="vertical">
             <Label text="Rooms" />
-            <lv:RadListView id="roomlistview" items="{{ roomItems }}"  class="list-group"
+            <lv:RadListView id="roomlistview"  class="list-group"
             row="0" > 
 
                 <lv:RadListView.listViewLayout>
@@ -30,13 +30,60 @@
                             
                             <Label text="{{ roomDescription }}" class="list-group-item-text" />
                             
-                            <Label text="{{ roomPrice }}" class="list-group-item-text" />
+                            <Label text="{{currency + ' ' + roomPrice }}" class="list-group-item-text" />
 
                             
                         </StackLayout>
                     </GridLayout> 
                 </lv:RadListView.itemTemplate>
             </lv:RadListView>
+
+            <Label text="Food Ordered" />
+            <lv:RadListView id="foodlistview"  class="list-group"
+            row="0" > 
+
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                </lv:RadListView.listViewLayout>
+
+                <lv:RadListView.itemTemplate>
+                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                        <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
+                        <StackLayout row="0" col="1" >
+
+                            <Label text="{{ dateFoodOrdered }}" class="list-group-item-heading" />
+
+                            <Label text="{{currency + ' ' + foodTotal }}" class="list-group-item-text" />
+                    
+                            
+                        </StackLayout>
+                    </GridLayout> 
+                </lv:RadListView.itemTemplate>
+            </lv:RadListView>
+
+            <Label text="Services Ordered" />
+            <lv:RadListView id="servicelistview"  class="list-group"
+            row="0" > 
+
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                </lv:RadListView.listViewLayout>
+
+                <lv:RadListView.itemTemplate>
+                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                        <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
+                        <StackLayout row="0" col="1" >
+
+                            <Label text="{{ service_request_date }}" class="list-group-item-heading" />
+
+                            <Label text="{{ service_name }}" class="list-group-item-text" />
+                    
+                            
+                        </StackLayout>
+                    </GridLayout> 
+                </lv:RadListView.itemTemplate>
+            </lv:RadListView>
+
         </StackLayout>
 
         <StackLayout row="1" orientation="horizontal">

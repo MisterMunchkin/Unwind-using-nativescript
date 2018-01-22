@@ -45,9 +45,11 @@ exports.nextTap = function(){
                 topmost.navigate(navigationOptions);
             }else{
                 console.log("enter valid dates");
+                alert({ message: "please enter valid dates", okButtonText: "Close" });
             }
         }else{
             console.log("enter valid dates");
+            alert({ message: "please enter valid dates", okButtonText: "Close" });
         }
     }else{
         checkoutTextView.class = checkinTextView.class = "requiredFields";

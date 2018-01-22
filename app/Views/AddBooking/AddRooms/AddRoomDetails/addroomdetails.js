@@ -56,6 +56,7 @@ exports.addToCartTap = function(){
         topmost.navigate(navigationOptions);
     }else{
         console.log("please enter item quantity and remarks!");
+        alert({message: "please enter item quanity", okButtonText: "Close"})
         //add UI for this soon
     }
 }
@@ -91,4 +92,3 @@ exports.backEvent = function (args) {
     var topmost = frameModule.topmost();
    topmost.navigate(navigationOptions);
 }
-

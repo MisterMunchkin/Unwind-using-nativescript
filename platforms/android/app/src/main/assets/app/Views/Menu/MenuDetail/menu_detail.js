@@ -28,7 +28,7 @@ exports.onNavBtnTap = function(){
     var navigationOptions = {
         moduleName: "Views/Menu/menu",
         context: { 
-            category: tappedItem.category
+            category: foodContext.category
         }
     }
     var topmost = frameModule.topmost();
@@ -40,7 +40,7 @@ exports.backEvent = function (args) {
     var navigationOptions = {
         moduleName: "Views/Menu/menu",
         context: { 
-            category: tappedItem.category
+            category: foodContext.category
         }
     }
     var topmost = frameModule.topmost();

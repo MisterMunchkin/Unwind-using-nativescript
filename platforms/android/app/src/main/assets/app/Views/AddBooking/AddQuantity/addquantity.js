@@ -15,7 +15,10 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
     pageDataContext = page.navigationContext;
 
 };
-
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
 exports.nextTap = function(){
     adultQty = view.getViewById(page, "adultQty").text;
     childQty = view.getViewById(page, "childQty").text;
@@ -45,8 +48,10 @@ exports.nextTap = function(){
             topmost.navigate(navigationOptions);
         }else{
             console.log("need atleast (1) adult");
+            alert({ message: "You need atleast 1 adult", okButtonText: "Close" });
         }
     }else{
         console.log("do not leave any blank");
+        alert({ message: "do not leave any blank", okButtonText: "Close" });
     }
 }

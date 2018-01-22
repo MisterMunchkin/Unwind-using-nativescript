@@ -92,6 +92,10 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
     })
     console.log("exiting room query");
 };
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
 exports.inCart = function(){
     console.log("<<<<<<<<in cart pressed>>>>>>>");
 
@@ -141,7 +145,7 @@ exports.submit = function () {
 
 
 
-    if(global.roomOrdered[0].roomTypeID != undefined){
+    if(global.roomOrdered[0] != undefined){
         console.log("<<<<<<<<Entering addbooking.php>>>>>>>>>>>");
         
         
@@ -242,6 +246,7 @@ exports.submit = function () {
         
     }else{
         console.log("please select a room");
+        alert({ message: "please select a room", okButtonText: "Close" });
     }
 
 }
