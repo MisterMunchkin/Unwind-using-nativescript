@@ -3,12 +3,15 @@
         loaded="onloaded" xmlns:FAB="nativescript-floatingactionbutton"
     xmlns:lv="nativescript-pro-ui/listview">
     <Page.actionBar>
-        <ActionBar class="label page-blue" title="Menu">
+        <ActionBar class="label page-blue" id="actionBar" title="Menu">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
     <GridLayout rows="*, 45">
         <StackLayout orientation="vertical">
+            <!--<Image id="checkinNotifIcon" class="hiddenLayout page-icon fa" stretch="none" src="res://lock_outline_grey" />-->
+            <Label id="noData" class="hiddenLayout page-placeholder" text="no food available here"></Label>
+
             <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
             row="0" itemTap="itemTap"> 
 

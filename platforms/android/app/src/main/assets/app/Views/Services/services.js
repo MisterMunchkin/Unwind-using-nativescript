@@ -87,7 +87,20 @@ exports.itemTap = function(args){
 
     console.log("tapped Item: " + tappedItem.service_name);
 
-    var date = new Date().toMysqlFormat();
+    var navigationOptions = {
+        moduleName: "Views/Services/serviceDetail/servicedetail",
+        context: {
+            service_name: tappedItem.service_name,
+            service_type: tappedItem.service_type,
+            service_id: tappedItem.service_id
+        }
+    }
+    console.log("Tapped item: " + JSON.stringify(tappedItem));
+    
+    var topmost = frameModule.topmost();
+    topmost.navigate(navigationOptions);
+
+    /*var date = new Date().toMysqlFormat();
 
     global.servicesOrdered.push(
         {
@@ -116,7 +129,7 @@ exports.itemTap = function(args){
         loader.hide();
     }, function (error) {
         console.log(JSON.stringify(error));
-    })
+    })*/
 }
 function twoDigits(d){
     if(0 <= d && d < 10) return "0" + d.toString();
