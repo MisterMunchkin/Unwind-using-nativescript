@@ -219,6 +219,7 @@ exports.submit = function () {
                                         alert({ title: "Success!", message: "booking request added", okButtonText: "Close" });
                                         var topmost = frameModule.topmost();
                                         topmost.navigate("tabs/tabs-page");
+                                        global.roomOrdered = [];
                                     }
                                 }else{
                                     console.log("failed: " + JSON.stringify(response));

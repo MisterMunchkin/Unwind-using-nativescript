@@ -5,6 +5,7 @@ var view = require("ui/core/view");
 
 var roomContext;
 
+var actionBar;
 
 exports.onloaded = function (args) {
     page = args.object
@@ -24,7 +25,8 @@ exports.onloaded = function (args) {
     page.bindingContext = {
         roomTypeName: roomContext.roomTypeName
     }
-    
+    actionBar = page.getViewById("actionBar");
+    actionBar.title = roomContext.roomTypeName;
 }
 exports.addToCartTap = function(){
 
