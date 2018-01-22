@@ -22,7 +22,7 @@ global.roomOrdered = new Array();//will be filled during check in
 global.loginCred;
 global.activeTab;
 global.activeTabBooking = 0;
-
+global.checkinSec = 0;
 
 
 //when room is ready add it as a global to get the pricing

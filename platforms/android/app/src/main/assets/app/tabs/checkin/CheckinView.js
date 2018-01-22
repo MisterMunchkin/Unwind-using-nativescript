@@ -7,7 +7,7 @@ var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 
 
-var cnt = 0;
+//var cnt = 0;
 //var page;
 //var items = new ObservableArray([]);
 //var pageData = new Observable();
@@ -20,17 +20,20 @@ exports.onLoaded = function(args) {
     //also need security to check if theres already an active checkin
     //use a switch for active and inactive methods
     //component.bindingContext = pageData;
-
-   
-    console.log("<<<<querying checkin Security>>>>");
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/checkinSecurity.php", {
-    }).then(function (response) {
-        then(response);
-    }, function (error) {
-        console.log(JSON.stringify(error));
-    })
-
-    
+    items = [];
+    if(global.checkinSec == 0){
+        console.log("<<<<querying checkin Security>>>>");
+        fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/checkinSecurity.php", {
+        }).then(function (response) {
+            then(response);
+        }, function (error) {
+            console.log(JSON.stringify(error));
+        })
+    }else if(global.checkinSec == 1){
+        inactive();
+    }else{
+        active();
+    }
 }
 
 function then(response){
@@ -38,14 +41,15 @@ function then(response){
 
    
     console.log(phpResponse);
-    items = [];
+    
    // console.log(response);
     if(phpResponse == "no data"){
        // items = new ObservableArray([]);
-
+        cnt = 1;
         inactive();
         
     }else{
+        cnt = 2;
         active();
     }
     console.log("<<<<ending checkin security>>>>");
@@ -55,38 +59,36 @@ function then(response){
 function active(){
     console.log("checked in");
 
-    if(cnt == 0){
-        cnt++;
-        items.push(
-            {
-                pageName: "Services",
-                pageDesc: "list of services",
-                itemImage: "~/images/CheckIn/services.jpg"
-            },
-            {
-                pageName: "Menu",
-                pageDesc: "list of food in the menu",
-                itemImage: "~/images/CheckIn/menu.jpg"
-            },
-            {
-                pageName: "Bill",
-                pageDesc: "bill",
-                itemImage: "~/images/CheckIn/bill.jpg"
-            },
-            {
-                pageName: "Reviews",
-                pageDesc: "help center",
-                itemImage: "~/images/CheckIn/inquiries.png"
-            }
-        )
-        var label = page.getViewById("checkinNotif");
-        label.class = "hiddenLayout page-placeholder";
-        var icon = page.getViewById("checkinNotifIcon");
-        icon.class = "hiddenLayout page-icon fa";
-       // pageData.set("items", items);
-       var listview = page.getViewById("listview");
-       listview.items = items;
-    }
+    items.push(
+        {
+            pageName: "Services",
+            pageDesc: "list of services",
+            itemImage: "~/images/CheckIn/services.jpg"
+        },
+        {
+            pageName: "Menu",
+            pageDesc: "list of food in the menu",
+            itemImage: "~/images/CheckIn/menu.jpg"
+        },
+        {
+            pageName: "Bill",
+            pageDesc: "bill",
+            itemImage: "~/images/CheckIn/bill.jpg"
+        },
+        {
+            pageName: "Reviews",
+            pageDesc: "help center",
+            itemImage: "~/images/CheckIn/inquiries.png"
+        }
+    )
+    var label = page.getViewById("checkinNotif");
+    label.class = "hiddenLayout page-placeholder";
+    var icon = page.getViewById("checkinNotifIcon");
+    icon.class = "hiddenLayout page-icon fa";
+    // pageData.set("items", items);
+    var listview = page.getViewById("listview");
+    listview.items = items;
+    
 }
 function inactive(){
     console.log("not checked in");

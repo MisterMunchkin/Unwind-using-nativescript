@@ -35,6 +35,7 @@ var options = {
     }
 };
 
+
 exports.onloaded = function(args) {
     page = args.object
 
@@ -106,11 +107,12 @@ exports.onloaded = function(args) {
         break;
         case "Waiting":
         console.log("Waiting");
+
         page.bindingContext = {
             cancelText: "Cancel Booking",
             checkoutVisible: "collapse",
             cancelVisible: "visible",
-            checkinVisible: "visible",
+            checkinVisible: checkinSec,
             message: "you've made it! now you just have to wait\n for your check in date to check in the hotel!"
         }
         break;
