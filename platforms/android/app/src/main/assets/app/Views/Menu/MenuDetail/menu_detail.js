@@ -5,10 +5,13 @@ var view = require("ui/core/view");
 
 var foodContext;
 var foodItem;
+var actionBar;
 
 exports.onloaded = function (args) {
     page = args.object
 
+    actionBar = page.getViewById("actionBar");
+    
     console.log("<<<<<< menu_detail page >>>>>>")
     var pageDataContext = page.navigationContext;
     foodContext = {
@@ -22,6 +25,7 @@ exports.onloaded = function (args) {
     page.bindingContext = {
         name: foodContext.name
     }
+    actionBar.title = foodContext.name;
     
 }
 exports.onNavBtnTap = function(){

@@ -7,7 +7,7 @@
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
-    <GridLayout rows="*, 45">
+    <GridLayout rows="*">
         <StackLayout orientation="vertical">
             <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
             row="0" itemTap="itemTap"> 
@@ -31,17 +31,16 @@
             </lv:RadListView>
         </StackLayout>
     
-        
-            <FAB:fab tap="fabTap"
-
+        <FAB:fab tap="fabTap"
+            
             icon="res://ic_cart_outline_white_48dp"
             class="fab-button" />
-
+<!--
         <StackLayout row ="1" class="page-blue" orientation="horizontal">
             <Button class="blue-btn" text="in-Cart" />
-        </StackLayout>
+        </StackLayout>-->
     
     </GridLayout>
- 
+
 </Page>
 

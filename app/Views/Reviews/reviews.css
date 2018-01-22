@@ -7,29 +7,9 @@
     vertical-align:bottom;
     padding-bottom: 3cm;
 }
-.starempty{
-    width: 120px;
-    border: none;
-    background-color: transparent;
-    outline: none;
-    overflow: hidden;
-    background-image: "~/images/inquiries/Star_empty.png"
-}
-.staryellow{
-    width: 120px;
-    border: none;
-    background-color: transparent;
-    outline: none;
-    overflow: hidden;
-    background-image: "~/images/inquiries/star.png"
-}
-.done{
-    border: none;
-    background-color: transparent;
-    outline: none;
-    horizontal-align: right;
-    overflow: hidden
-}
+
 .input{
     width:80%
 }
+.page-blue{background-color:#3ba9e9}
+.label{color:aliceblue;font-family:"Lato"}

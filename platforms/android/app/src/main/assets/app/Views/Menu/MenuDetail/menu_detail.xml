@@ -1,6 +1,6 @@
 <Page class="page-content" loaded="onloaded">
     <Page.actionBar>
-        <ActionBar class="label page-blue" title="Menu">
+        <ActionBar id="actionBar" class="label page-blue" title="Menu">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
