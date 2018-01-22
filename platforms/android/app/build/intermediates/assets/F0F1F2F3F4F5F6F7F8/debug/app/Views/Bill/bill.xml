@@ -1,4 +1,5 @@
-<Page class="page-content" loaded="onloaded" xmlns:accordion="nativescript-accordion">
+<Page class="page-content" loaded="onloaded" 
+            xmlns:lv="nativescript-pro-ui/listview" >
     <!--<Label class="page-icon fa" text="&#xf1ea;"></Label>
     <Label class="page-placeholder" text="bills"></Label>-->
 

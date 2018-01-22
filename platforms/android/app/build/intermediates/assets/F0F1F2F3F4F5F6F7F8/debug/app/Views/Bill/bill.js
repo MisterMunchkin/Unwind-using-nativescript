@@ -15,14 +15,14 @@ exports.onloaded = function (args) {
 
     roomItems = new ObservableArray([]);
 
-    
+    var requestObject = {check_in_id: global.loginCred[2]};
     fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getRoomsFromCheckIn.php", {
         method: "POST",
-        body: global.loginCred[2]
+        body: formEncode(requestObject)
 
     }).then(function (response) {
         var phpResponse = response._bodyText;
-        
+        console.log("rooms: " + phpResponse);
         phpResponse = JSON.parse(phpResponse);
         var limit = phpResponse.length;
 
@@ -45,3 +45,9 @@ exports.onloaded = function (args) {
 
     
 };
+function formEncode(obj) { //to convert urlencoded form data to JSON
+    var str = [];
+    for (var p in obj)
+        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+    return str.join("&");
+}

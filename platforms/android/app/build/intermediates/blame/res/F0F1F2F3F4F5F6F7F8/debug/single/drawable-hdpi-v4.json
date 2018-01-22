@@ -44,12 +44,12 @@
         "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
-    },
-    {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png",
         "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8\\debug\\drawable-hdpi-v4\\ic_expand.png",
