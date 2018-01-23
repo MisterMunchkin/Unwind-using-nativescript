@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\release\\menu\\edit_details.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\60c79e6f76c985216e466705fe366018edd9d501\\output\\res\\menu\\edit_details.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\release\\menu\\send_feedback_activity_menu.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\60c79e6f76c985216e466705fe366018edd9d501\\output\\res\\menu\\send_feedback_activity_menu.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\release\\menu\\view_feedback_items_activity_menu.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\60c79e6f76c985216e466705fe366018edd9d501\\output\\res\\menu\\view_feedback_items_activity_menu.xml"
+    }
+]
