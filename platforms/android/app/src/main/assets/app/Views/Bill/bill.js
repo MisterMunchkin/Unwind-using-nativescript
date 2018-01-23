@@ -62,13 +62,15 @@ exports.onloaded = function (args) {
         console.log("food orders: " + phpResponse);
         phpResponse = JSON.parse(phpResponse);
         var limit = phpResponse.length;
-
+        
         for(var x = 0;x < limit;x++){
+            var niceDateFoodOrdered = niceDates(phpResponse[x].timestamp_ordered);
+
             foodItems.push(
                 {
                     food_order_id: phpResponse[x].food_order_id,
                     foodTotal: phpResponse[x].price,
-                    dateFoodOrdered: phpResponse[x].timestamp_ordered,
+                    dateFoodOrdered: niceDateFoodOrdered,
                     currency: "PHP"
 
                 }
@@ -83,8 +85,23 @@ exports.onloaded = function (args) {
         console.log(JSON.stringify(error));
     })
 
-    
+    var GrandTotal = page.getViewById("grandTotal");
+    GrandTotal.text = "PHP " + global.checkOutGrandTotal;
 };
+function niceDates(date){
+    var MonthNames = ["January", "February", "March", "April", "May",
+            "June", "July", "August", "September", "October", "November", "December"];
+
+    var newDateIndex = new Date(date);
+
+    var newDate = MonthNames[newDateIndex.getMonth()] + " " + newDateIndex.getDate() + ", " + newDateIndex.getFullYear();
+
+    return newDate;
+}
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];
     for (var p in obj)
