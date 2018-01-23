@@ -2,7 +2,7 @@
 
 android {
 	productFlavors {
-		"F4" {
+		"F5" {
 			dimension "nativescriptmodaldatetimepicker"
 		}
 	}

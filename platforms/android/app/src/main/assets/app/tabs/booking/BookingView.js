@@ -3,7 +3,7 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
-var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
+
 var view = require("ui/core/view");
 //var AwesomeLoaders = require('nativescript-awesome-loaders').AwesomeLoaders;
 
@@ -18,37 +18,12 @@ var reservationLabel;
 
 var request;
 var reserve;
-var loader;
 
-var cancelable = {
-    message: 'Loading...',
-    progress: 0.65,
-    android: {
-        indeterminate: true,
-        cancelable: true,
-        max: 100,
-        progressNumberFormat: "%1d/%2d",
-        progressPercentFormat: 0.53,
-        progressStyle: 1,
-        secondaryProgress: 1
-    }
-};
+var loadingBar;
 
-var uncancelable = {
-    message: 'Loading...',
-    progress: 0.65,
-    android: {
-        indeterminate: true,
-        cancelable: false,
-        max: 100,
-        progressNumberFormat: "%1d/%2d",
-        progressPercentFormat: 0.53,
-        progressStyle: 1,
-        secondaryProgress: 1
-    }
-};
 var listview;
 var noData;
+var loadingBarDiv;
 
 exports.onLoaded = function(args) {
     component = args.object;
@@ -61,8 +36,10 @@ exports.onLoaded = function(args) {
     noData = component.getViewById("noData");
     console.log("<<<<< booking view page >>>>>");
     component.bindingContext = pageData;
-    loader = new LoadingIndicator();
 
+
+    loadingBarDiv = view.getViewById(component, "loadingBarDiv");
+    loadingBar = view.getViewById(component, "loadingBar");
     requestLabel = view.getViewById(component, "reqNavLabel");
     reservationLabel = view.getViewById(component, "resNavLabel");
     listview = view.getViewById(component, "listview");
@@ -79,6 +56,7 @@ exports.onLoaded = function(args) {
 
         reserve.isEnabled = "false";
         request.isEnabled = "true";
+        
         loadData("loadReservationData.php");
         break;
         case 1:
@@ -117,7 +95,7 @@ exports.pullToRefreshInit = function(){
 
 exports.requestNav = function (args) {
     console.log("request nav clicked");
-    loader = new LoadingIndicator();
+
    // request = component.getViewById("reqNavLabel");
     //reserve = component.getViewById("resNavLabel");
 
@@ -133,7 +111,7 @@ exports.requestNav = function (args) {
 }
 exports.reservationNav = function (args) {
     console.log("reservation nav clicked");
-    loader = new LoadingIndicator();
+    
 
    // request = component.getViewById("reqNavLabel");
     //reserve = component.getViewById("resNavLabel");
@@ -153,7 +131,10 @@ function loadData(phpContext){
     var obj;
     items = new ObservableArray([]);
    // loader.show(uncancelable);
-   noData.class="hiddenLayout page-placeholder"
+    noData.class="hiddenLayout page-placeholder"
+    loadingBar.start();
+    loadingBarDiv.visibility = "visible";
+    listview.visibility = "collapse";
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/" + phpContext, {
 
     }).then(function (response) {
@@ -203,8 +184,11 @@ function loadData(phpContext){
             
             noData.class="page-placeholder"
         }
-       // loader.hide();
+      
+       loadingBar.stop();
+        loadingBarDiv.visibility = "collapse";
         pageData.set("items", items);
+        listview.visibility = "visible";
         //listview.refresh();
     }, function (error) {
         console.log(JSON.stringify(error));

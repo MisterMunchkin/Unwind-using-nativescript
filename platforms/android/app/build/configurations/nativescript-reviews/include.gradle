@@ -2,7 +2,7 @@
 
 android {
 	productFlavors {
-		"F7" {
+		"F8" {
 			dimension "nativescriptreviews"
 		}
 	}

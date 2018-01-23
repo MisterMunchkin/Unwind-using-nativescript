@@ -27,6 +27,8 @@ C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_mod
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-fontawesome\fontawesome.common.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-fontawesome\fontawesome.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-fonticon\nativescript-fonticon.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-gif\gif.common.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-gif\gif.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-https\https.common.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-https\https.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-loading-indicator\loading-indicator.js

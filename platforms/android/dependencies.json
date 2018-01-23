@@ -24,6 +24,10 @@
         "directory": "..\\..\\node_modules\\nativescript-floatingactionbutton"
     },
     {
+        "name": "nativescript-gif",
+        "directory": "..\\..\\node_modules\\nativescript-gif"
+    },
+    {
         "name": "nativescript-https",
         "directory": "..\\..\\node_modules\\nativescript-https"
     },

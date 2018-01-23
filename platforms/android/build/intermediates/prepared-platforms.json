@@ -5,6 +5,7 @@
     "nativescript-dom": true,
     "nativescript-drop-down": true,
     "nativescript-floatingactionbutton": true,
+    "nativescript-gif": true,
     "nativescript-https": true,
     "nativescript-loading-indicator": true,
     "nativescript-loading-indicator-new": true,
