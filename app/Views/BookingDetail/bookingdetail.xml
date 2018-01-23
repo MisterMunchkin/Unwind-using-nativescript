@@ -1,4 +1,10 @@
 <Page class="page-content" loaded="onloaded">
+    <Page.actionBar>
+        <ActionBar class="label page-blue" title="Booking Detail">
+           
+        </ActionBar>
+    </Page.actionBar>
+
     <StackLayout orientation="vertical">
         <Label class="page-icon fa" text="&#xf1ea;"></Label>
         <Label class="page-placeholder" text="{{ message }}"></Label>

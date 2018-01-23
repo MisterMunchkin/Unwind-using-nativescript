@@ -140,7 +140,12 @@ function twoDigits(d){
 Date.prototype.toMysqlFormat = function(){
     return this.getUTCFullYear() + "-" + twoDigits(1 + this.getUTCMonth()) + "-" + twoDigits(this.getUTCDate()) + " " + twoDigits(this.getUTCHours()) + ":" + twoDigits(this.getUTCMinutes()) + ":" + twoDigits(this.getUTCSeconds());
 }
+/*
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
 
+}
+*/
 exports.checkoutTap = function(){
     console.log("<<<<<<<<<<<<check out tapped>>>>>>>>>");
     var clientID;
