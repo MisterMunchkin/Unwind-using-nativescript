@@ -112,7 +112,7 @@ exports.onloaded = function(args) {
             cancelText: "Cancel Booking",
             checkoutVisible: "collapse",
             cancelVisible: "visible",
-            checkinVisible: checkinSec,
+            checkinVisible: "visible",
             message: "you've made it! now you just have to wait\n for your check in date to check in the hotel!"
         }
         break;
@@ -255,7 +255,7 @@ exports.checkinButton = function(){
             console.log("dateTime: " + Obj.check_in_start);
             console.log("resID: " + Obj.resID);
 
-
+            loader.show(options);
             fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/activateCheckin.php", {
                 method: "POST",
                 body: formEncode(Obj)
@@ -275,55 +275,20 @@ exports.checkinButton = function(){
                         var phpResponse = response._bodyText;
                         console.log("response: " + phpResponse);
                         if(phpResponse.indexOf("error") > -1){
+                            loader.hide();
                             alert({ title: "activation error", message: phpResponse, okButtonText: "Close" });
                         }else{
                             phpResponse = JSON.parse(phpResponse);
                             global.loginCred = phpResponse;
                             global.checkOutGrandTotal += global.loginCred[4];
+                            loader.hide();
                             console.log("grand total is now at: " + global.checkOutGrandTotal);
                             alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
+                            global.checkinSec = 2
                             var topmost = frameModule.topmost();
                             topmost.navigate("tabs/tabs-page");
                         }
-                        //then(response);
-                    // console.log(JSON.stringify(response));
-                        /*phpResponse = response._bodyText;
-                        if(phpResponse.indexOf("error") <= -1){
-                            var roomIDArray = JSON.parse(phpResponse);
 
-                            var limit = roomIDArray.length, count = 0;
-
-                            for(var x = 0;x < limit;x++){
-                                console.log("roomID: " + roomIDArray[x]);
-                                var updateOccObj = {room_id: roomIDArray[x]};
-
-                                fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/updateRoomOccupied.php", {
-                                    method: "POST",
-                                    body: formEncode(updateOccObj)
-                                }).then(function (response) {
-                                    phpResponse = response._bodyText;
-                                    if(phpResponse.indexOf("error") > -1){
-                                        
-                                        alert({ title: "update error", message: phpResponse, okButtonText: "Close" });
-                                    }else{
-                                        count++;
-                                    }
-
-                                    
-                                }, function (error) {
-                                    console.log(JSON.stringify(error));
-                                })
-                            }
-                            console.log("x = " + x);
-                            console.log("count = " + count);
-                            if(x == count){
-                                alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
-                                var topmost = frameModule.topmost();
-                                topmost.navigate("tabs/tabs-page");
-                            }
-                        }else{
-                            alert({ title: "activation error", message: phpResponse, okButtonText: "Close" });
-                        }*/
                     }, function (error) {
                         console.log(JSON.stringify(error));
                     })
