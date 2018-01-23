@@ -1,6 +1,7 @@
 {
     "nativescript-accordion": true,
     "nativescript-awesome-loaders": true,
+    "nativescript-carousel": true,
     "nativescript-dom": true,
     "nativescript-drop-down": true,
     "nativescript-floatingactionbutton": true,

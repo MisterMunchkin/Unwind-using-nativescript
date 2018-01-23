@@ -8,6 +8,10 @@
         "directory": "..\\..\\node_modules\\nativescript-awesome-loaders"
     },
     {
+        "name": "nativescript-carousel",
+        "directory": "..\\..\\node_modules\\nativescript-carousel"
+    },
+    {
         "name": "nativescript-dom",
         "directory": "..\\..\\node_modules\\nativescript-dom"
     },

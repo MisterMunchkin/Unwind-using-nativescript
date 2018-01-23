@@ -1,0 +1,23 @@
+<Page class="page-content" loaded="onloaded"
+        xmlns:ns="nativescript-carousel">
+    <Page.actionBar>
+        <ActionBar class="label page-blue" title="Booking Detail">
+           
+        </ActionBar>
+    </Page.actionBar>
+
+    <StackLayout orientation="vertical">
+        <ns:Carousel items="{{ carouselArray }}" height="250" pageChanged="CarouselChangeEvent" pageScrolling="CarouselScrollingEvent">
+            <ns:Carousel.itemTemplate>
+                <ns:CarouselItem verticalAlignment="center" tap="carouselTap">
+                    <Image src="{{ image }}" height="100" />
+                </ns:CarouselItem>
+            </ns:Carousel.itemTemplate>
+        </ns:Carousel>
+
+        <Label  id="resDateLabel"></Label>
+        <Button text="{{ cancelText }}" id="cancelBookingID" tap="cancelUncancelTap" visibility="{{ cancelVisible }}" />
+        <Button text="Check In" tap="checkinButton" id="checkinButtonID" visibility="{{ checkinVisible }}" />
+        <Button tap="checkoutButton" text="Check Out" tap="checkoutTap" visibility="{{ checkoutVisible }}"/>
+    </StackLayout>
+</Page>

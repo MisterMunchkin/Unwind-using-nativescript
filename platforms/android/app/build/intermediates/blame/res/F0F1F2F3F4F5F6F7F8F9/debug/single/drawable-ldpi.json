@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9\\debug\\drawable-ldpi\\background.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\src\\main\\res\\drawable-ldpi\\background.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9\\debug\\drawable-ldpi\\logo.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\src\\main\\res\\drawable-ldpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9\\debug\\drawable-ldpi\\icon.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\src\\main\\res\\drawable-ldpi\\icon.png"
+    }
+]

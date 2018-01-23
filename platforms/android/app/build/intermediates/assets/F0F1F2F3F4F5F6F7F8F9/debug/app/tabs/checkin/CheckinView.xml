@@ -1,0 +1,39 @@
+<!--
+This is the component view that represents the 'Home' tab.
+Feel free to customize layouts and components to change how the tab view looks.
+-->
+<GridLayout class="page-content"
+        xmlns="http://schemas.nativescript.org/tns.xsd"
+         xmlns:lv="nativescript-pro-ui/listview" 
+         loaded="onLoaded">
+    <!--<Label class="page-placeholder" text="Check in Module is locked"></Label> this part wont show up in app-->
+
+
+    <!--<Label class="page-icon fa" text="&#xf1ea;"></Label>-->
+    <StackLayout>
+        
+        <Image id="checkinNotifIcon" class="hiddenLayout page-icon fa" stretch="none" src="res://lock_outline_grey" />
+        <Label id="checkinNotif" class="hiddenLayout page-placeholder" text="Check in Module is locked"></Label>
+        <lv:RadListView  id="listview"  itemTap="onItemTap" selectionBehavior="Press" > 
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="300" spanCount="2" />
+            </lv:RadListView.listViewLayout>
+
+            <lv:RadListView.itemTemplate>
+                <GridLayout   class="list-group-item" rows="180, auto" >
+                    <StackLayout row="0">
+                        <Image  src="{{ itemImage }}" stretch="aspectFill" />
+                    </StackLayout>
+                    <StackLayout row="1">
+                        <!--<Image  src="{{ itemImage }}" stretch="fit" />-->
+                        <Label text="{{ pageName }}" class="list-group-item-heading" />
+                        <Label text="{{ pageDesc }}" textWrap="true" class="list-group-item-text" />
+                    </StackLayout>
+                </GridLayout>
+            </lv:RadListView.itemTemplate>
+
+        </lv:RadListView>
+    </StackLayout>
+
+
+</GridLayout>

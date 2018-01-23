@@ -18,6 +18,7 @@
   "dependencies": {
     "nativescript-accordion": "^5.0.3",
     "nativescript-awesome-loaders": "^1.2.1",
+    "nativescript-carousel": "^3.1.1",
     "nativescript-dom": "^2.0.0",
     "nativescript-drop-down": "^3.2.0",
     "nativescript-floatingactionbutton": "^4.1.2",
