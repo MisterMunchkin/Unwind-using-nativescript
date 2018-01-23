@@ -16,8 +16,8 @@
         </ns:Carousel>
 
         <Label  id="resDateLabel"></Label>
-        <Button text="{{ cancelText }}" id="cancelBookingID" tap="cancelUncancelTap" visibility="{{ cancelVisible }}" />
-        <Button text="Check In" tap="checkinButton" id="checkinButtonID" visibility="{{ checkinVisible }}" />
-        <Button tap="checkoutButton" text="Check Out" tap="checkoutTap" visibility="{{ checkoutVisible }}"/>
+        <Button text="{{ cancelText }}" class="blue-btn"  id="cancelBookingID" tap="cancelUncancelTap" visibility="{{ cancelVisible }}" />
+        <Button text="Check In" class="w-outline-btn" tap="checkinButton" id="checkinButtonID" visibility="{{ checkinVisible }}" />
+        <Button tap="checkoutButton" class="w-outline-btn" text="Check Out" tap="checkoutTap" visibility="{{ checkoutVisible }}"/>
     </StackLayout>
 </Page>
