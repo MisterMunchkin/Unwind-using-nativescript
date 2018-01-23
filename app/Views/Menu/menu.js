@@ -3,31 +3,19 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
-var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
+
 
 var items;
 var pageData = new Observable();
 
-var loader = new LoadingIndicator();
 
-var options = {
-    message: 'Loading...',
-    progress: 0.65,
-    android: {
-        indeterminate: true,
-        cancelable: false,
-        max: 100,
-        progressNumberFormat: "%1d/%2d",
-        progressPercentFormat: 0.53,
-        progressStyle: 1,
-        secondaryProgress: 1
-    }
-};
+
 
 var listview;
 var actionBar;
 var pageDataContext;
 var noData;
+var loadingBar;
 
 exports.onloaded = function(args){
     page = args.object
@@ -38,12 +26,16 @@ exports.onloaded = function(args){
     listview = page.getViewById("listview");
     actionBar = page.getViewById("actionBar");
     noData = page.getViewById("noData");
+    loadingBar = page.getViewById("loadingBar");
     var obj;
     items = new ObservableArray([]);
 
     actionBar.title = pageDataContext.category;
     var requestedObject = {category: pageDataContext.category}
-    loader.show(options);
+    
+    listview.visibility = "collapse";
+    loadingBar.start();
+    loadingBar.visibility = "visible";
     fetchModule.fetch("https://unwindv2.000webhostapp.com/food/loadMenuDataByCategory.php", {
         method: "POST",
         body: formEncode(requestedObject)
@@ -80,10 +72,13 @@ exports.onloaded = function(args){
             noData.class = "page-placeholder";
             console.log("put visible no data confirmation here");
         }
+        listview.visibility = "visible";
+        loadingBar.visibility = "collapse";
+        loadingBar.stop();
     }, function (error) {
         console.log(JSON.stringify(error));
     })
-    loader.hide();
+    
     console.log("total food:" + JSON.stringify(global.foodArray));
 };
 exports.onNavBtnTap = function(){
@@ -129,20 +124,7 @@ exports.itemTap = function(args){
     
     var topmost = frameModule.topmost();
     topmost.navigate(navigationOptions);
-    /*if(tappedItem.tapped == 0){
-        console.log("tapped");
-        tappedItem.tapped = 1;
-        foodArray.push(tappedItem);
-        console.log(JSON.stringify(foodArray));
-    }else{
-        console.log("untapped");
-        tappedItem.tapped = 0;
-        var limit = foodArray.length;
-        for(var x = 0;x < limit && tappedItem.name != foodArray[x].name;x++){}
-        if(tappedItem.name == foodArray[x].name){
-            foodArray.splice(x, 1);
-        }
-    }*/
+
 }
 exports.fabTap = function(args){//cart button
    

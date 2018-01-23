@@ -6,13 +6,19 @@ var ObservableArray = require("data/observable-array").ObservableArray;
 
 var pageData = new Observable();
 var items;
+var loadingBar;
 
 exports.onloaded = function (args) {
     page = args.object
 
     page.bindingContext = pageData;
     items = new ObservableArray([]);
+    loadingBar = page.getViewById("loadingBar");
+    
 //error HERE>>>>>>>>>>>>>>>>>>>>>>
+    loadingBar.start();
+    loadingBar.visibility = "visible";
+    
     fetchModule.fetch("https://unwindv2.000webhostapp.com/reviews/loadReviews.php", {
 
     }).then(function (response) {
@@ -34,8 +40,10 @@ exports.onloaded = function (args) {
             )
             //console.log("id: " + data[x].id);
         }
+        loadingBar.visibility = "collapse";
+        loadingBar.stop();
         pageData.set("items", items);
-      
+        
 
     }, function (error) {
         console.log(JSON.stringify(error));

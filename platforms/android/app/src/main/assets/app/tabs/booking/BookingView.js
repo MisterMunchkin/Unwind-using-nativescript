@@ -185,8 +185,9 @@ function loadData(phpContext){
             noData.class="page-placeholder"
         }
       
-       loadingBar.stop();
+       
         loadingBarDiv.visibility = "collapse";
+        loadingBar.stop();
         pageData.set("items", items);
         listview.visibility = "visible";
         //listview.refresh();
