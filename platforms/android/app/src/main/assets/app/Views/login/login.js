@@ -139,6 +139,7 @@ function then(response){
     /*phpResponse != "user wrong password" && phpResponse != "user does not exist"
                             && phpResponse != "post failed"*/
     if(phpResponse.indexOf("true") > -1){
+        
         console.log("inside user login secured");
         global.loginCred = JSON.parse(phpResponse);
       //  console.log("RESPONSE: " + JSON.stringify(response));

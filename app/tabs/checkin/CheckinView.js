@@ -45,11 +45,11 @@ function then(response){
    // console.log(response);
     if(phpResponse == "no data"){
        // items = new ObservableArray([]);
-        cnt = 1;
+        global.checkinSec = 1;
         inactive();
         
     }else{
-        cnt = 2;
+        global.checkinSec = 2;
         active();
     }
     console.log("<<<<ending checkin security>>>>");
