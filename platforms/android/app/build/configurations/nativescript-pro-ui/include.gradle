@@ -1,6 +1,6 @@
 android {
 	productFlavors {
-		"F5" {
+		"F7" {
 			dimension "nativescriptproui"
 		}
 	}

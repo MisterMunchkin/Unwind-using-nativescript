@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\MisterMunchkin\.android\build-cache\f8b0d0f56dc5026a74a7f54804bc3307a1e137e4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
+        <dex dex="C:\Android\Nativescript\Unwind\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3F4F5F6F7F8F9F10\debug\classes_fd6e3a3e3e0c60372912c58a1dcac49e2c309b71.jar" />
+    </item>
+
+</items>

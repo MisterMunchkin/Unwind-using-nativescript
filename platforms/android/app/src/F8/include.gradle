@@ -2,8 +2,8 @@
 
 android {
 	productFlavors {
-		"nativescript-fontawesome" {
-			dimension "nativescript-fontawesome"
+		"nativescript-reviews" {
+			dimension "nativescript-reviews"
 		}
 	}
 }

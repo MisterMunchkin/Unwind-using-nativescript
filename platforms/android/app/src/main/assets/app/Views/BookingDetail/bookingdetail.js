@@ -126,6 +126,27 @@ exports.onloaded = function(args) {
             message: "You have succesfully checked out, hope to see you again soon!"
         }
     }
+    var carouselArray = [];
+
+    carouselArray.push(
+        {
+            image: "res://logo"
+        },
+        {
+            image: "res://logo"
+        },
+        {
+            image: "res://logo"
+        },
+        {
+            image: "res://logo"
+        }
+    );
+    /*page.bindingContext = {
+        carouselArray: carouselArray
+    };*/
+    var carousel = page.getViewById("carousel");
+    carousel.items = carouselArray;
     /*if(requestObject.checkinDate){
         //also need code that checks if booking is 24 hours before the check in date, if within the 24 hours then user cannot cancel booking
     }*/
@@ -140,7 +161,19 @@ function twoDigits(d){
 Date.prototype.toMysqlFormat = function(){
     return this.getUTCFullYear() + "-" + twoDigits(1 + this.getUTCMonth()) + "-" + twoDigits(this.getUTCDate()) + " " + twoDigits(this.getUTCHours()) + ":" + twoDigits(this.getUTCMinutes()) + ":" + twoDigits(this.getUTCSeconds());
 }
+exports.CarouselChangeEvent = function(args){
+    var changeEventText = "Page changed to index: " + args.index;
+    console.log(changeEventText);
+}
+exports.CarouselScrollingEvent = function(args){
+   // console.log("Scrolling: " + args.state.offset);
+}
+/*
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
 
+}
+*/
 exports.checkoutTap = function(){
     console.log("<<<<<<<<<<<<check out tapped>>>>>>>>>");
     var clientID;
@@ -201,6 +234,9 @@ exports.checkoutTap = function(){
     
    
 }
+
+
+
 exports.checkinButton = function(){
     console.log("check in button clicked");//add pricing of room to the grandtotal check out in global
 

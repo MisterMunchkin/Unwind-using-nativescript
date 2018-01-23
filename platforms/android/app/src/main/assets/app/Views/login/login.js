@@ -92,6 +92,7 @@ exports.signIn = function(){
             }, function (error) {
                 console.log("ERROR");
                 console.log(JSON.stringify(error));
+                alert({message: "an error has occured, please make sure you're connected to the internet and try again", okButtonText: "Okay"});
             })
         }else{
             //email validation notif
@@ -129,6 +130,9 @@ function validateEmail(email) {
 function then(response){
     var phpResponse = response._bodyText;
 
+    if(!response.ok){
+        alert({message: "an error has occured, please make sure you're connected to the internet and try again", okButtonText: "Okay"});
+    }
    
     console.log(phpResponse);
 

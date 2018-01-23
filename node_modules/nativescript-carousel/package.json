@@ -1,0 +1,70 @@
+{
+  "_from": "nativescript-carousel@^3.1.1",
+  "_id": "nativescript-carousel@3.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-+x4DILDn7Apk8bLDy5gYGlfuqeNX3Wy0PXM8qogN0M4feI/Bgve3JAShVGNauEQdGQYhcgRZ3uika1xtQJa7gw==",
+  "_location": "/nativescript-carousel",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "nativescript-carousel@^3.1.1",
+    "name": "nativescript-carousel",
+    "escapedName": "nativescript-carousel",
+    "rawSpec": "^3.1.1",
+    "saveSpec": null,
+    "fetchSpec": "^3.1.1"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-carousel/-/nativescript-carousel-3.1.1.tgz",
+  "_shasum": "0dffb8f46a952f34d9e998d865a2c5cbd1be6038",
+  "_spec": "nativescript-carousel@^3.1.1",
+  "_where": "C:\\Android\\Nativescript\\Unwind",
+  "author": {
+    "name": "Nedim Erkocevic",
+    "email": "nedim@fkzeljo.com",
+    "url": "https://github.com/manijak"
+  },
+  "bugs": {
+    "url": "https://github.com/manijak/nativescript-carousel/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Carousel component for NativeScript (iOS & Android).",
+  "homepage": "https://github.com/manijak/nativescript-carousel",
+  "keywords": [
+    "NativeScript",
+    "Carousel",
+    "Slider",
+    "Pager",
+    "ViewPager",
+    "DKCarouselView",
+    "iOS",
+    "Android",
+    "manijak"
+  ],
+  "license": "MIT",
+  "main": "index",
+  "name": "nativescript-carousel",
+  "nativescript": {
+    "platforms": {
+      "ios": "3.0.0",
+      "android": "3.0.0"
+    },
+    "plugin": {
+      "nan": "true",
+      "core3": "false",
+      "pan": "true",
+      "wrapper": "false",
+      "category": "Interface"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manijak/nativescript-carousel.git"
+  },
+  "version": "3.1.1"
+}

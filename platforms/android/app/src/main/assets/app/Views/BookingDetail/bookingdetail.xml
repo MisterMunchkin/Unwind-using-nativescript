@@ -1,11 +1,23 @@
-<Page class="page-content" loaded="onloaded">
+<Page class="page-content" loaded="onloaded"
+        xmlns:ns="nativescript-carousel">
+    <Page.actionBar>
+        <ActionBar class="label page-blue" title="Booking Detail">
+           
+        </ActionBar>
+    </Page.actionBar>
+
     <StackLayout orientation="vertical">
-        <Label class="page-icon fa" text="&#xf1ea;"></Label>
-        <Label class="page-placeholder" text="{{ message }}"></Label>
+        <ns:Carousel id="carousel"  height="250" pageChanged="CarouselChangeEvent" pageScrolling="CarouselScrollingEvent">
+            <ns:Carousel.itemTemplate>
+                <ns:CarouselItem verticalAlignment="center" tap="carouselTap">
+                    <Image src="{{ image }}" height="250" stretch="fill" />
+                </ns:CarouselItem>
+            </ns:Carousel.itemTemplate>
+        </ns:Carousel>
 
         <Label  id="resDateLabel"></Label>
-        <Button text="{{ cancelText }}" id="cancelBookingID" tap="cancelUncancelTap" visibility="{{ cancelVisible }}" />
-        <Button text="Check In" tap="checkinButton" id="checkinButtonID" visibility="{{ checkinVisible }}" />
-        <Button tap="checkoutButton" text="Check Out" tap="checkoutTap" visibility="{{ checkoutVisible }}"/>
+        <Button text="{{ cancelText }}" class="blue-btn"  id="cancelBookingID" tap="cancelUncancelTap" visibility="{{ cancelVisible }}" />
+        <Button text="Check In" class="w-outline-btn" tap="checkinButton" id="checkinButtonID" visibility="{{ checkinVisible }}" />
+        <Button tap="checkoutButton" class="w-outline-btn" text="Check Out" tap="checkoutTap" visibility="{{ checkoutVisible }}"/>
     </StackLayout>
 </Page>

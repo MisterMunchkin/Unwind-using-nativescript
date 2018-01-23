@@ -1,0 +1,53 @@
+<!--<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page"
+  xmlns:home="/tabs/home"
+  xmlns:search="/tabs/search"
+  xmlns:browse="/tabs/browse">-->
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page"
+  xmlns:checkin="/tabs/checkin"
+  xmlns:settings="/tabs/settings"
+  xmlns:booking="/tabs/booking">
+    <Page.actionBar>
+        <ActionBar class="action-bar-unwind action-item">
+          <Label text="{{ title }}" class="action-bar-title" />
+        </ActionBar>
+    </Page.actionBar>
+
+    <!--
+    The TabView component provides a simple way to navigate between different views by
+    tapping on some of the tabs or by swiping between the views.
+    Learn more about the TabView component in this documentation article:
+    http://docs.nativescript.org/cookbook/ui/tab-view
+    -->
+    <TabView selectedIndexChanged="onSelectedIndexChanged">
+      <TabView.items>
+        <!--
+        To add a new TabView item, simply add a new <TabViewItem> component to the <TabView.items> collection.
+        Assign the <TabViewItem> component a "title" that will be displayed as the text of the tab item button.
+        -->
+        <TabViewItem title="Check In" ios:iconSource="res://tabIcons/home">
+          <TabViewItem.view>
+            <!--
+            You can declare the layout and components of each view inside the <TabViewItem.view> directly.
+            In this case the view contents and back end logic are separated in custom components.
+            You can find these components in their respective folders /home, /browse etc.
+            -->
+            <checkin:CheckinView />
+
+          </TabViewItem.view>
+        </TabViewItem>
+
+        <TabViewItem title="Booking" ios:iconSource="res://tabIcons/browse">
+          <TabViewItem.view>
+             <booking:BookingView/>
+          </TabViewItem.view>
+        </TabViewItem>
+
+        <TabViewItem title="Settings" ios:iconSource="res://tabIcons/search">
+          <TabViewItem.view>
+             <settings:SettingsView/>
+          </TabViewItem.view>
+        </TabViewItem>
+
+      </TabView.items>
+    </TabView> 
+</Page>
