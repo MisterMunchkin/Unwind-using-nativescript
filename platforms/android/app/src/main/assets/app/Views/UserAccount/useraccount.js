@@ -46,7 +46,7 @@ exports.onloaded = function(args){
     })
 };
 
-exports.backEvent = function(){
+exports.backEvent = function(args){
     args.cancel = true;
 
     var topmost = frameModule.topmost();
