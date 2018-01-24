@@ -2,11 +2,28 @@
 This is the component view that represents the 'Search' tab.
 Feel free to customize layouts and components to change how the tab view looks.
 -->
-<GridLayout class="page-content" loaded="onLoaded">
-    <Label class="page-icon fa" text="&#xf002;"></Label>
+<GridLayout class="page-content" loaded="onLoaded"
+    xmlns:lv="nativescript-pro-ui/listview">
+   <!-- <Label class="page-icon fa" text="&#xf002;"></Label>
     <Label class="page-placeholder" text="{{ loginCred }}"></Label>
-
+-->
     <StackLayout orientation="vertical">
-        <Button text="Log Out" tap="logOut"/>
+        <lv:RadListView id="listview" itemTap="onItemTap" class="list-group" >
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout scrollDirection="vertical" />
+            </lv:RadListView.listViewLayout>
+
+            <lv:RadListView.itemTemplate>
+                <GridLayout   class="list-group-item" rows="auto" columns="auto, *" >
+                    <StackLayout row="0">
+                        <!--<Image  src="{{ itemImage }}" stretch="fit" />-->
+                        <Label text="{{ listName }}" class="list-group-item-heading" />
+                        
+                    </StackLayout>
+                </GridLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+
+        <Button text="Log Out" class="logout" tap="logOut"/>
     </StackLayout>
 </GridLayout>

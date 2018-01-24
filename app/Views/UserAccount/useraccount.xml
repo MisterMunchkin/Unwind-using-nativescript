@@ -1,0 +1,15 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"   
+        xmlns:Gif="nativescript-gif"
+        loaded="onloaded" xmlns:FAB="nativescript-floatingactionbutton"
+    xmlns:lv="nativescript-pro-ui/listview">
+
+    <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
+        <Label id="accountName" />
+        <Label id="accountEmail" />
+        <Label id="accountBirthdate" />
+        <Label id="accountContact_no" />
+    </StackLayout>
+ 
+</Page>
+
