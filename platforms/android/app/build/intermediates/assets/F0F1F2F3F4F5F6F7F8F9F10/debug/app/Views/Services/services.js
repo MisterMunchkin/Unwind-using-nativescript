@@ -3,12 +3,13 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
-var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
+
 
 var items;
 var pageData = new Observable();
 
-var loader;
+
+var loadingBar;
 
 var options = {
     message: 'Loading...',
@@ -30,10 +31,13 @@ exports.onloaded = function(args){
     page.bindingContext = pageData;
 
     var obj;
-   
+    loadingBar = page.getViewById("loadingBar");
+
     
     //loader = new LoadingIndicator();
     //loader.show(options);
+    loadingBar.start();
+    loadingBar.visibility = "visible";
     fetchModule.fetch("https://unwindv2.000webhostapp.com/services/loadServiceData.php", {
         
     }).then(function (response) {
@@ -62,6 +66,8 @@ exports.onloaded = function(args){
         }else{
             alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });  
         }
+        loadingBar.visibility = "collapse";
+        loadingBar.stop();
     }, function (error) {
         console.log(JSON.stringify(error));
     })
@@ -100,36 +106,6 @@ exports.itemTap = function(args){
     var topmost = frameModule.topmost();
     topmost.navigate(navigationOptions);
 
-    /*var date = new Date().toMysqlFormat();
-
-    global.servicesOrdered.push(
-        {
-            service_name: tappedItem.service_name,
-            service_type: tappedItem.service_type,
-            service_id: tappedItem.service_id
-        }
-    );
-    var requestedObject = {service_id: tappedItem.service_id, service_request_date: date, 
-                            check_in_id: global.loginCred[2]};
-    
-    loader = new LoadingIndicator();
-
-    loader.show(options);
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/services/insertServiceRequest.php", {
-        method: "POST",
-        body: formEncode(requestedObject)
-    }).then(function (response) {
-        
-        if(response._bodyText == "service requested"){
-            alert({ title: "POST response", message: "service requested!", okButtonText: "Close" }); 
-        }else{
-            alert({ title: "POST response", message: response._bodyText , okButtonText: "Close" }); 
-            console.log("failed: " + JSON.stringify(response));
-        }
-        loader.hide();
-    }, function (error) {
-        console.log(JSON.stringify(error));
-    })*/
 }
 function twoDigits(d){
     if(0 <= d && d < 10) return "0" + d.toString();

@@ -5,7 +5,9 @@ var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndi
 var application = require('application');
 require("nativescript-master-technology");
 var connectivity = require("tns-core-modules/connectivity");
+var SnackBar = require("nativescript-snackbar");
 
+var snackBar = new SnackBar();
 var connectionType = connectivity.getConnectionType();
 var loader;
 
@@ -34,6 +36,9 @@ exports.loaded = function(args){ //exports is standard for both nativescript and
         switch(newConnectionType){
             case connectivity.connectionType.none:
             console.log("no interet");
+            snackBar.simple('Snackbar', 'red', '#fff').then((args) => {
+                this.set('jsonResult', JSON.stringify(args));
+            })
             break;
             case connectivity.connectionType.wifi:
             console.log("wifi");
@@ -139,6 +144,7 @@ function then(response){
     /*phpResponse != "user wrong password" && phpResponse != "user does not exist"
                             && phpResponse != "post failed"*/
     if(phpResponse.indexOf("true") > -1){
+        
         console.log("inside user login secured");
         global.loginCred = JSON.parse(phpResponse);
       //  console.log("RESPONSE: " + JSON.stringify(response));

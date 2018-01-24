@@ -45,7 +45,7 @@ MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Mister
 MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\MisterMunchkin\.android\build-cache\cfc0a672a029f63dcb25d0426f6b7098273055fc\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\MisterMunchkin\.android\build-cache\43dd299e28036bd29a77a39ab6919b52e43de2df\output\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\MisterMunchkin\.android\build-cache\859cb926ee82cf38b664f2660dbd9851e284d56c\output\AndroidManifest.xml:21:5-23:58
-MERGED from [:nativescript-optimized:] C:\Users\MisterMunchkin\.android\build-cache\f8b0d0f56dc5026a74a7f54804bc3307a1e137e4\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:nativescript-optimized:] C:\Users\MisterMunchkin\.android\build-cache\73493e835a60172f5a7ca7c988bfe0373512974d\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:AVLoadingIndicatorView-release:] C:\Users\MisterMunchkin\.android\build-cache\a4adb923953f7d488731ff2ac1fa0505d09292bc\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:Chart-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\58ca4a74cd18b6e8d6ec7851debf8d37ac3e43c9\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:Common-2017.1.1221-dev-release:] C:\Users\MisterMunchkin\.android\build-cache\941ba5773ae2bb87f48fc7c3a4e742ac00445396\output\AndroidManifest.xml:7:5-9:41

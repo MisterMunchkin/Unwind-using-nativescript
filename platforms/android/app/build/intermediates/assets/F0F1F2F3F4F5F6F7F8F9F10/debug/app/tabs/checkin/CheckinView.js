@@ -7,11 +7,7 @@ var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 
 
-//var cnt = 0;
-//var page;
-//var items = new ObservableArray([]);
-//var pageData = new Observable();
-//const label = new labelModule.Label();
+var loadingBar;
 var items;
 exports.onLoaded = function(args) {
     const component = page = args.object;
@@ -20,6 +16,10 @@ exports.onLoaded = function(args) {
     //also need security to check if theres already an active checkin
     //use a switch for active and inactive methods
     //component.bindingContext = pageData;
+    loadingBar = page.getViewById("loadingBar");
+
+    loadingBar.start();
+    loadingBar.visibility = "visible";
     items = [];
     if(global.checkinSec == 0){
         console.log("<<<<querying checkin Security>>>>");
@@ -45,11 +45,11 @@ function then(response){
    // console.log(response);
     if(phpResponse == "no data"){
        // items = new ObservableArray([]);
-        cnt = 1;
+        global.checkinSec = 1;
         inactive();
         
     }else{
-        cnt = 2;
+        global.checkinSec = 2;
         active();
     }
     console.log("<<<<ending checkin security>>>>");
@@ -86,6 +86,9 @@ function active(){
     var icon = page.getViewById("checkinNotifIcon");
     icon.class = "hiddenLayout page-icon fa";
     // pageData.set("items", items);
+
+    loadingBar.visibility = "collapse";
+    loadingBar.stop();
     var listview = page.getViewById("listview");
     listview.items = items;
     
@@ -95,7 +98,9 @@ function inactive(){
     
     //label.text = "Check in Module is locked";
    // pageData.set("items", items);
-    
+        
+    loadingBar.visibility = "collapse";
+    loadingBar.stop();
     var label = page.getViewById("checkinNotif");
     label.class = "page-placeholder";
     var icon = page.getViewById("checkinNotifIcon");

@@ -5,7 +5,9 @@ var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndi
 var application = require('application');
 require("nativescript-master-technology");
 var connectivity = require("tns-core-modules/connectivity");
+var SnackBar = require("nativescript-snackbar").SnackBar;
 
+var snackBar = new SnackBar();
 var connectionType = connectivity.getConnectionType();
 var loader;
 
@@ -30,10 +32,13 @@ exports.loaded = function(args){ //exports is standard for both nativescript and
         application.android.on(application.AndroidApplication.activityBackPressedEvent, backEvent);
     }*/
 
-    connectivity.startMonitoring(function onConnectionTypeChanged(newConnectionType){
+   /* connectivity.startMonitoring(function onConnectionTypeChanged(newConnectionType){
         switch(newConnectionType){
             case connectivity.connectionType.none:
             console.log("no interet");
+            snackBar.simple('You not connected to the internet alot of the functionalities will not work', '#fff', 'grey').then((args) => {
+                this.set('jsonResult', JSON.stringify(args));
+            })
             break;
             case connectivity.connectionType.wifi:
             console.log("wifi");
@@ -42,7 +47,7 @@ exports.loaded = function(args){ //exports is standard for both nativescript and
             console.log("mobile");
             break;
         }
-    })
+    })*/
         
 };
 
