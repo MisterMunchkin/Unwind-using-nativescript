@@ -1,0 +1,14 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"   
+        loaded="onloaded" 
+>
+
+    <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
+        <Label id="accountName" />
+        <Label id="accountEmail" />
+        <Label id="accountBirthdate" />
+        <Label id="accountContact_no" />
+    </StackLayout>
+ 
+</Page>
+

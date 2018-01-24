@@ -2,11 +2,22 @@ var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 
-
+var userObject;
+var pageUserObject;
 
 exports.onloaded = function(args){
     page = args.object
     console.log("<<<<<<user account page>>>>>>");
+
+    pageUserObject = {
+        accountLName: page.getViewById("accountLName"),
+        accountFName: page.getViewById("accountFName"),
+        accountMName: page.getViewById("accountMName"),
+        accountEmail: page.getViewById("accountEmail"),
+        accountBirthdate: page.getViewById("accountBirthdate"),
+        accountContact_no: page.getViewById("accountContact_no")
+    }
+
 
     var requestObject = {user_id: global.loginCred[0]};
     fetchModule.fetch("https://unwindv2.000webhostapp.com/useraccount/getUserData.php", {
@@ -17,8 +28,15 @@ exports.onloaded = function(args){
         
         console.log("body: " + response._bodyText);
         if(phpResponse.indexOf("error") <= -1){
-            obj = JSON.parse(phpResponse);
-            console.log("user first name: " + obj.first_name);
+            userObject = JSON.parse(phpResponse);
+            
+            pageUserObject.accountLName.text = userObject.last_name;
+            pageUserObject.accountFName.text = userObject.first_name;
+            pageUserObject.accountMName.text = userObject.middle_initial;
+            pageUserObject.accountEmail.text = userObject.email;
+            pageUserObject.accountBirthdate.text = userObject.birthdate;
+            pageUserObject.accountContact_no.text = userObject.contact_no;
+
         }else{
             alert({ message: "could not retrieve user info at this time, try again later", okButtonText: "Okay" });
         }
@@ -28,6 +46,12 @@ exports.onloaded = function(args){
     })
 };
 
+exports.backEvent = function(){
+    args.cancel = true;
+
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
 function twoDigits(d){
     if(0 <= d && d < 10) return "0" + d.toString();
     if(-10 < d && d < 0) return "-0" + (-1 * d).toString();
