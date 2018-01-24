@@ -1,8 +1,7 @@
 
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"   
-        xmlns:Gif="nativescript-gif"
-        loaded="onloaded"
-    xmlns:lv="nativescript-pro-ui/listview">
+        loaded="onloaded" 
+>
 
     <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
         <Label id="accountName" />
