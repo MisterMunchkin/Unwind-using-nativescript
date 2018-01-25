@@ -13,7 +13,7 @@ var items;
 var listview;
 var loadingBar;
 var submitButton;
-var cache = 0;
+var cache;
 
 exports.onloaded = function (args) {
     page = args.object
@@ -35,7 +35,7 @@ exports.onloaded = function (args) {
         service_id: pageDataContext.service_id
     };
     actionBar.title = serviceContext.service_name;
-    if(cache == 0){
+    if(cache == undefined){
         console.log("       <<<<<<<<<<<<Check in id: " + global.loginCred[2]);
         var requestObject = {check_in_id: global.loginCred[2]};
         items = new ObservableArray([]);
