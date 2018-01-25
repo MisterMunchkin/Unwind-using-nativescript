@@ -66,7 +66,7 @@ exports.signIn = function(){
                 console.log("ERROR");
                 console.log(JSON.stringify(error));
                 loader.hide();
-                alert({message: "an error has occured, please make sure you're connected to the internet and try again", okButtonText: "Okay"});
+                alert({message: "please make sure you're connected to the internet and try again", okButtonText: "Okay"});
             })
             
         }else{

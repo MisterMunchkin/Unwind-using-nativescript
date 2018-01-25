@@ -33,6 +33,9 @@ function onLoaded(args) {
             listName: "User Account"
         },
         {
+            listName: "Reservation History"
+        },
+        {
             listName: "Inquiries"
         },
         {
