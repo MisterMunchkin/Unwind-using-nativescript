@@ -106,6 +106,9 @@ function then(response){
         console.log("total food price: " + global.loginCred[3]);
         console.log("total room price: " + global.loginCred[4]);
         console.log("grandTotalCheckOut: " + global.checkOutGrandTotal);
+        console.log("food Array: " + JSON.stringify(global.foodArray));
+        console.log("serviceOrdered: " + JSON.stringify(global.servicesOrdered));
+        console.log("roomOdered: " + JSON.stringify(global.roomOrdered));
 
         global.checkOutGrandTotal += global.loginCred[3] + global.loginCred[4];
         console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);

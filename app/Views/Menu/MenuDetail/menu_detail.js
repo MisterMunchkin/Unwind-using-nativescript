@@ -101,5 +101,6 @@ exports.addToCartTap = function(){
     }else{
         console.log("please enter item quantity and remarks!");
         //add UI for this soon
+        alert({ message: "Please enter food quantity", okButtonText: "Close" });
     }
 }

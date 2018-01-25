@@ -87,6 +87,7 @@ exports.logOut = function(){
         console.log(JSON.stringify(response));
         if(phpResponse == "logged out"){
             global.checkinSec = 0;
+            global.checkOutGrandTotal = 0;
             var topmost = frameModule.topmost();
             topmost.navigate("Views/login/login");
         }else{

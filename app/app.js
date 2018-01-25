@@ -67,6 +67,7 @@ global.roomOrdered = new Array();//used for storing rooms in add booking
 global.activeTab;
 global.activeTabBooking = 0;
 global.checkinSec = 0;
+global.roomsCheckedIn;
 
 
 //when room is ready add it as a global to get the pricing
