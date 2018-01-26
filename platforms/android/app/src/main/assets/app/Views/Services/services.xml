@@ -9,29 +9,36 @@
         </ActionBar>
     </Page.actionBar>
 
-    <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
-        <Gif:Gif id="loadingBar" src="http://giflat.dceven.fr/wp-content/uploads/2017/04/loader-white.gif" />
-        <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
-        row="1" itemTap="itemTap"> 
+    <GridLayout rows="*,45">
+        <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
+            <Gif:Gif id="loadingBar" src="http://giflat.dceven.fr/wp-content/uploads/2017/04/loader-white.gif" />
+            <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
+            row="0" itemTap="itemTap"> 
 
-            <lv:RadListView.listViewLayout>
-                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
-            </lv:RadListView.listViewLayout>
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                </lv:RadListView.listViewLayout>
 
-            <lv:RadListView.itemTemplate>
-                <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                    <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
-                    <StackLayout row="0" col="1" >
+                <lv:RadListView.itemTemplate>
+                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                        <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
+                        <StackLayout row="0" col="1" >
 
-                        <Label text="{{ service_name }}" class="list-group-item-heading" />
-                        <Label text="{{ service_type }}" class="list-group-item-text" />
-                        
-                        
-                    </StackLayout>
-                    </GridLayout> 
-            </lv:RadListView.itemTemplate>
-        </lv:RadListView>
-    </StackLayout>
- 
+                            <Label text="{{ service_name }}" class="list-group-item-heading" />
+                            <Label text="{{ service_type }}" class="list-group-item-text" />
+                            
+                            
+                        </StackLayout>
+                        </GridLayout> 
+                </lv:RadListView.itemTemplate>
+            </lv:RadListView>
+        </StackLayout>
+
+        <StackLayout class="page-blue" row="1" orientation="horizontal">
+        
+            <Button class="bottomNavButton" text="Services History" id="serviceHistory" tap="serviceHistoryTap" width="50%"  />
+
+        </StackLayout>
+    </GridLayout>
 </Page>
 

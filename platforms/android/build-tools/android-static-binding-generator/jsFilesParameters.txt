@@ -209,6 +209,7 @@ C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\B
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\BookingDetail\bookingdetail.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\BookingDetail\paypal.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\checkout\checkout_menu.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Inquiries\inquiries.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\login\login.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Menu\menu.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Menu\Category\category.js
@@ -223,3 +224,5 @@ C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\R
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Reviews\addReviews\addreviews.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Services\services.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Services\serviceDetail\servicedetail.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Services\serviceHistory\servicehistory.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\UserAccount\useraccount.js

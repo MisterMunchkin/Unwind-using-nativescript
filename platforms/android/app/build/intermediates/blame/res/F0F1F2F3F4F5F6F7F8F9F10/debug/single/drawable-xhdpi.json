@@ -22,5 +22,9 @@
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\drawable-xhdpi\\background.png",
         "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\background.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\drawable-xhdpi\\logo_transparent_background.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\logo_transparent_background.png"
     }
 ]

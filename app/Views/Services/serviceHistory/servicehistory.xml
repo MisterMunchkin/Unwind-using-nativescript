@@ -1,0 +1,37 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"   
+        xmlns:Gif="nativescript-gif"
+        loaded="onloaded" xmlns:FAB="nativescript-floatingactionbutton"
+    xmlns:lv="nativescript-pro-ui/listview">
+    <Page.actionBar>
+        <ActionBar class="label page-blue" title="Services">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
+
+
+    <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
+        <Gif:Gif id="loadingBar" src="http://giflat.dceven.fr/wp-content/uploads/2017/04/loader-white.gif" />
+        <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
+        row="0" itemTap="itemTap"> 
+
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+            </lv:RadListView.listViewLayout>
+
+            <lv:RadListView.itemTemplate>
+                <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                    <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
+                    <StackLayout row="0" col="1" >
+
+                        <Label text="{{ service_name }}" class="list-group-item-heading" />
+                        <Label text="{{ service_type }}" class="list-group-item-text" />
+                        
+                        
+                    </StackLayout>
+                    </GridLayout> 
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+    </StackLayout>
+</Page>
+

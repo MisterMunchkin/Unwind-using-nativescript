@@ -11,6 +11,9 @@ var actionBar;
 var pageData = new Observable();
 var items;
 var listview;
+var loadingBar;
+var submitButton;
+var cache;
 
 exports.onloaded = function (args) {
     page = args.object
@@ -19,6 +22,11 @@ exports.onloaded = function (args) {
     page.bindingContext = pageData;
     actionBar = page.getViewById("actionBar");
     listview = page.getViewById("listview");
+    loadingBar = page.getViewById("loadingBar");
+    submitButton = page.getViewById("addToCart");
+    
+    submitButton.isEnabled = "false";
+    submitButton.class = "disabled-btn"
 
     var pageDataContext = page.navigationContext;
     serviceContext = {
@@ -27,34 +35,41 @@ exports.onloaded = function (args) {
         service_id: pageDataContext.service_id
     };
     actionBar.title = serviceContext.service_name;
-    console.log("       <<<<<<<<<<<<Check in id: " + global.loginCred[2]);
-    var requestObject = {check_in_id: global.loginCred[2]};
-    items = new ObservableArray([]);
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getRoomsFromCheckIn.php", {
-        method: "POST",
-        body: formEncode(requestObject)
+    if(cache == undefined){
+        console.log("       <<<<<<<<<<<<Check in id: " + global.loginCred[2]);
+        var requestObject = {check_in_id: global.loginCred[2]};
+        items = new ObservableArray([]);
+        
+        loadingBar.start();
+        loadingBar.visibility = "visible";
+        fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getRoomsFromCheckIn.php", {
+            method: "POST",
+            body: formEncode(requestObject)
 
-    }).then(function (response) {
-        var phpResponse = response._bodyText;
-        console.log("QUERY RESPONSE: " + phpResponse);
-        phpResponse = JSON.parse(phpResponse);
+        }).then(function (response) {
+            var phpResponse = response._bodyText;
+            console.log("QUERY RESPONSE: " + phpResponse);
+            phpResponse = JSON.parse(phpResponse);
 
-        var limit = phpResponse.length;
-        for(var x = 0;x < limit;x++){
-            items.push(
-                {
-                    roomNumber: phpResponse[x].roomNumber,
-                    roomType: phpResponse[x].RoomName,
-                    roomID: phpResponse[x].roomId
-                }
-            )
-        }
-
-        pageData.set("items", items);
-    }, function (error) {
-        console.log("ERROR");
-        console.log(JSON.stringify(error));
-    })
+            var limit = phpResponse.length;
+            for(var x = 0;x < limit;x++){
+                items.push(
+                    {
+                        roomNumber: phpResponse[x].roomNumber,
+                        roomType: phpResponse[x].RoomName,
+                        roomID: phpResponse[x].roomId
+                    }
+                )
+            }
+            cache = 1;
+            loadingBar.stop();
+            loadingBar.visibility = "collapse";
+            pageData.set("items", items);
+        }, function (error) {
+            console.log("ERROR");
+            console.log(JSON.stringify(error));
+        })
+    }
     
 }
 
@@ -99,6 +114,21 @@ exports.addToCartTap = function(){
         console.log(JSON.stringify(error));
     })
     
+}
+exports.itemSelected = function(){
+    var itemArray = listview.getSelectedItems();
+    if(itemArray.length >= 1){
+        submitButton.isEnabled = "true";
+        submitButton.class = "blue-btn";
+    }
+}
+exports.itemDeselected = function(){
+    var itemArray = listview.getSelectedItems();
+
+    if(itemArray.length < 1){
+        submitButton.isEnabled = "false";
+        submitButton.class = "disabled-btn";
+    }
 }
 function twoDigits(d){
     if(0 <= d && d < 10) return "0" + d.toString();

@@ -112,10 +112,31 @@ function then(response){
 
         if(global.loginCred[3] == undefined && global.loginCred[4] == undefined){
             global.checkOutGrandTotal = 0;
+
+            console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
+            var topmost = frameModule.topmost();
+            topmost.navigate("tabs/tabs-page");
         }else{
             global.checkOutGrandTotal += global.loginCred[3] + global.loginCred[4];
+            
+            /*var requestObject = {check_in_id: global.loginCred[2]};
+            fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getRoomsFromCheckin.php", {
+                method: "POST",
+                body: formEncode(requestObject)
+            }).then(function (response) {
+                var phpResponse = response._bodyText;
+                var obj = JSON.parse(phpResponse);
+
+                console.log("rooms checked in : " + phpResponse);
+                global.roomsCheckedIn = obj;
+
+                console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
+                var topmost = frameModule.topmost();
+                topmost.navigate("tabs/tabs-page");
+            }, function (error) {
+                console.log(JSON.stringify(error));
+            })*/
         }
-        
         console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
         var topmost = frameModule.topmost();
         topmost.navigate("tabs/tabs-page");

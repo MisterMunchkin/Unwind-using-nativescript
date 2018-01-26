@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\layout\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\layout\\notification_action_tombstone.xml"
-    },
-    {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\layout\\design_layout_tab_icon.xml",
         "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\layout\\design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\layout\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\layout\\notification_action_tombstone.xml"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\layout\\data_form_editor_header_layout_1.xml",
@@ -36,12 +36,12 @@
         "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\layout\\abc_screen_simple.xml",
         "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\layout\\design_layout_snackbar_include.xml",

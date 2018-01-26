@@ -28,6 +28,7 @@ var pageData;
 var grandTotal;
 var listview;
 var pageDataContext;
+var submitButton;
 
 exports.onLoaded = function(args){
     page = args.object;
@@ -38,6 +39,16 @@ exports.onLoaded = function(args){
 
     page.bindingContext = pageData;
     listview = page.getViewById("listview");
+    submitButton = page.getViewById("submitButton");
+
+    if(global.foodArray.length < 1){
+        submitButton.class = "disabled-btn";
+        submitButton.isEnabled = "false";
+    }else{
+        submitButton.class = "blue-btn";
+        submitButton.isEnabled = "true";
+    }
+
     loadItems();
 
 }

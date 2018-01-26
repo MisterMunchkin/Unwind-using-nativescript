@@ -36,6 +36,6 @@ Feel free to customize layouts and components to change how the tab view looks.
 
         </lv:RadListView>
     </StackLayout>
-
+    
 
 </GridLayout>

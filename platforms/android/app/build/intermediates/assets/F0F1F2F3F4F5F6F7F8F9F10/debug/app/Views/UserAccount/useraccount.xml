@@ -1,0 +1,37 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"   
+        xmlns:Gif="nativescript-gif"
+        loaded="onloaded"
+    xmlns:lv="nativescript-pro-ui/listview">
+
+    <GridLayout rows="*,60" >
+        <ScrollView>    
+            <StackLayout row="0" orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
+                
+                <!--<AbsoluteLayout>
+                    <Button text="edit account" left="220" top="10" />
+                </AbsoluteLayout>-->
+
+                <Label text="Last Name" />
+                <TextField id="accountLname"  />
+        
+                <Label text="First Name" />
+                <TextField id="accountFname" class="userInfo" />
+
+
+                <Label text="Middle Initial" />
+                <TextField id="accountMname" class="userInfo" />
+
+                <Label text="Email Address" />
+                <TextField id="accountEmail" class="userInfo sub" />
+
+
+                <Label text="Contact Number" />
+                <TextField id="accountContact_no" class="userInfo sub" />
+
+            </StackLayout>
+        </ScrollView>
+  
+    </GridLayout>
+</Page>
+

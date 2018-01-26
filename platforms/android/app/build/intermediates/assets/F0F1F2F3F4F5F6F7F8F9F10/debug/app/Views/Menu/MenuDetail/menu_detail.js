@@ -6,6 +6,7 @@ var view = require("ui/core/view");
 var foodContext;
 var foodItem;
 var actionBar;
+var carouselArray;
 
 exports.onloaded = function (args) {
     page = args.object
@@ -23,10 +24,29 @@ exports.onloaded = function (args) {
     };
     console.log(foodContext.name);
     page.bindingContext = {
-        name: foodContext.name
+        desc: foodContext.description,
+        currency: "PHP",
+        price: foodContext.price + ".00"
     }
     actionBar.title = foodContext.name;
-    
+    var carouselArray = [];
+
+    carouselArray.push(
+        {
+            image: "~/images/default-placeholder-300x300.png"
+        },
+        {
+            image: "~/images/default-placeholder-300x300.png"
+        },
+        {
+            image: "~/images/default-placeholder-300x300.png"
+        },
+        {
+            image: "~/images/default-placeholder-300x300.png"
+        }
+    );
+    var carousel = page.getViewById("carousel");
+    carousel.items = carouselArray;
 }
 exports.onNavBtnTap = function(){
     var navigationOptions = {
@@ -81,5 +101,6 @@ exports.addToCartTap = function(){
     }else{
         console.log("please enter item quantity and remarks!");
         //add UI for this soon
+        alert({ message: "Please enter food quantity", okButtonText: "Close" });
     }
 }

@@ -1,6 +1,51 @@
 require("./bundle-config");
 const application = require("application");
+var connectivity = require("tns-core-modules/connectivity");
+var SnackBar = require("nativescript-snackbar").SnackBar;
+var SnackBarOptions = require("nativescript-snackbar").SnackBarOptions;
 
+var snackBar = new SnackBar();
+var connectionType = connectivity.getConnectionType();
+
+var snackBarOptions =  SnackBarOptions = {
+    actionText: 'Okay',
+    actionTextColor: "white",
+    snackText: "You're not connected to the internet alot of the functionalities will not work",
+    hideDelay: 5500,
+    textColor: "white",
+    backgroundColor: "#00a2ff"
+}
+
+
+connectivity.startMonitoring(function onConnectionTypeChanged(newConnectionType){
+    switch(newConnectionType){
+        case connectivity.connectionType.none:
+        console.log("no interet");
+
+        snackBar.action(snackBarOptions).then((args) => {
+            if(args.command === "Action"){
+                this.set('jsonResult', JSON.stringify(args));
+                console.log("okay");
+            }else{
+                this.set('jsonResult', JSON.stringify(args));
+                console.log("not okay");
+            }
+        })
+        break;
+        case connectivity.connectionType.wifi:
+        snackBar.simple('Successfully connected to the internet', 'white', '#00a2ff').then((args) => {
+            this.set('jsonResult', JSON.stringify(args));
+        });
+        console.log("wifi");
+        break;
+        case connectivity.connectionType.mobile:
+        snackBar.simple('Successfully connected to the internet', 'white', '#00a2ff').then((args) => {
+            this.set('jsonResult', JSON.stringify(args));
+        });
+        console.log("mobile");
+        break;
+    }
+})
 
 var frame = require('ui/frame');
 if (application.android) {
@@ -22,6 +67,7 @@ global.roomOrdered = new Array();//used for storing rooms in add booking
 global.activeTab;
 global.activeTabBooking = 0;
 global.checkinSec = 0;
+global.roomsCheckedIn; //USE THIS TO CACHE ROOMS GET ROOMS FROM LOGIN
 
 
 //when room is ready add it as a global to get the pricing

@@ -39,6 +39,7 @@ var options = {
 exports.onloaded = function(args) {
     page = args.object
 
+    console.log("<<<<<<<<<Booking Details>>>>>>>>>>>>>>>");
     var pageDataContext = page.navigationContext;
     requestObject = {
         resDate: pageDataContext.resDate,
@@ -174,10 +175,28 @@ exports.onNavBtnTap = function(){
 
 }
 */
+function checkOutTime(CurDate, checkoutDate){
+    var ret;
+
+    if(CurDate == checkoutDate){
+        ret = 0; //checkout on time
+        console.log("check out on time");
+    }else if(CurDate > checkoutDate){
+        ret = 1; //chekout late
+        console.log("check out late");
+    }else{
+        ret = 2 //checkout early
+        console.log("check out early");//ask neil how check in functionality should work
+    }
+    return ret;
+}
+
 exports.checkoutTap = function(){
     console.log("<<<<<<<<<<<<check out tapped>>>>>>>>>");
     var clientID;
     //loader.show(options);
+    var checkoutOnTime = checkOutTime(CurDate, requestObject.checkoutDate);
+
     fetchModule.fetch("https://unwindv2.000webhostapp.com/PayPal/checkoutSecurity.php", {
            
     }).then(function (response) {
@@ -187,7 +206,7 @@ exports.checkoutTap = function(){
         console.log("<<<<<PayPal Initialization>>>>>>");
         PayPal.init({
             clientId: clientID,
-            environment: 0
+            environment: 1
         });
         console.log("total check out: " + global.checkOutGrandTotal);
 
@@ -201,8 +220,46 @@ exports.checkoutTap = function(){
                 case 0:
                     // SUCCESS
                     // pay key is stored in 'cbResult.key'
-                    
                     console.log("Success");
+                    var checkoutReqObject = {resID: requestObject.resID};
+                    fetchModule.fetch("https://unwindv2.000webhostapp.com/checkout/activateCheckout.php", {
+                        method: "POST",
+                        body: formEncode(checkoutReqObject)
+
+                    }).then(function (response) {
+                        
+                        console.log("response>>>>>" + JSON.stringify(response));
+                        if(response._bodyText == "checkout activated"){
+                            var updateCheckoutObj = {check_in_id: global.loginCred[2]};
+                            fetchModule.fetch("https://unwindv2.000webhostapp.com/checkout/updateCheckInEnd.php", {
+                                method: "POST",
+                                body: formEncode(updateCheckoutObj)
+
+                            }).then(function (response) {
+                                
+                                console.log("response>>>>>" + JSON.stringify(response));
+
+                                if(response._bodyText == "checkInEnd Updated"){
+                                    alert({ message: "successfully checked out!", okButtonText: "Okay"});
+                                    global.checkinSec = 1;
+                                    var topmost = frameModule.topmost();
+                                    topmost.navigate("tabs/tabs-page");
+                                }
+                            }, function (error) {
+                                console.log("ERROR");
+                                console.log(JSON.stringify(error));
+                                loader.hide();
+                                alert({message: "please make sure you're connected to the internet and try again", okButtonText: "Okay"});
+                            })
+                    console.log("Success");
+                        }
+                    }, function (error) {
+                        console.log("ERROR");
+                        console.log(JSON.stringify(error));
+                        loader.hide();
+                        alert({message: "please make sure you're connected to the internet and try again", okButtonText: "Okay"});
+                    })
+                    
                     break;
                     
                 case 1:
@@ -241,9 +298,9 @@ exports.checkinButton = function(){
     console.log("check in button clicked");//add pricing of room to the grandtotal check out in global
 
     
-    console.log("Current Date: " + CurDate + "Checkin Date: " + requestObject.checkinDate);
+    console.log("Current Date: " + CurDate + " Checkin Date: " + requestObject.checkinDate);
     
-    if(requestObject.checkinDate == CurDate || requestObject.checkinDate < CurDate){
+    if(requestObject.checkinDate <= CurDate){
         console.log("userID: " + global.loginCred[0]);
         console.log("checkin is Active: " + global.loginCred[1]);
         console.log("checkin ID: " + global.loginCred[2]);
@@ -310,29 +367,6 @@ exports.checkinButton = function(){
     
 }
 
-exports.checkoutButton = function(){
-    //payments and database updates that guest has checked out
-    //check out security    
-        
-    checkOutTime(CurDate, requestObject.checkoutDate);
-}
-
-function checkOutTime(CurDate, checkoutDate){
-    var ret;
-
-    if(CurDate == checkoutDate){
-        ret = 0; //checkout on time
-        console.log("check out on time");
-    }else if(CurDate > checkoutDate){
-        ret = 1; //chekout late
-        console.log("check out late");
-    }else{
-        ret = 2 //checkout early
-        console.log("check out early");//ask neil how check in functionality should work
-    }
-    return ret;
-}
-
 exports.cancelUncancelTap = function(){
     loader.show(options);
     if(requestObject.resStatus == "Cancelled"){
@@ -362,14 +396,7 @@ function uncancelBooking(){
 }
 
 function convertDateNow() {
-    /*var yyyy = date.getFullYear().toString();
-    var mm = (date.getMonth()+1).toString();
-    var dd  = date.getDate().toString();
   
-    var mmChars = mm.split('');
-    var ddChars = dd.split('');
-  
-    return yyyy + '-' + (mmChars[1]?mm:"0"+mmChars[0]) + '-' + (ddChars[1]?dd:"0"+ddChars[0]);*/
     var d = new Date().toISOString().slice(0,10);
 
     return d;
