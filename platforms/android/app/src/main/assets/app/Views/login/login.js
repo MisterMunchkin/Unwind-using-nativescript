@@ -110,7 +110,12 @@ function then(response){
         console.log("serviceOrdered: " + JSON.stringify(global.servicesOrdered));
         console.log("roomOdered: " + JSON.stringify(global.roomOrdered));
 
-        global.checkOutGrandTotal += global.loginCred[3] + global.loginCred[4];
+        if(global.loginCred[3] == undefined && global.loginCred[4] == undefined){
+            global.checkOutGrandTotal = 0;
+        }else{
+            global.checkOutGrandTotal += global.loginCred[3] + global.loginCred[4];
+        }
+        
         console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
         var topmost = frameModule.topmost();
         topmost.navigate("tabs/tabs-page");

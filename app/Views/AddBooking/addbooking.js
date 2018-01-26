@@ -49,7 +49,7 @@ exports.nextTap = function(){
             }
         }else{
             console.log("enter valid dates");
-            alert({ message: "please enter valid dates", okButtonText: "Close" });
+            alert({ message: "Sorry but walk in guest are handled by the receptionist", okButtonText: "Okay" });
         }
     }else{
         checkoutTextView.class = checkinTextView.class = "requiredFields";

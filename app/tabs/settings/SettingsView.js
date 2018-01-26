@@ -72,6 +72,8 @@ function goToUserAccount(){
 }
 function goToInquiries(){
     console.log("not yet made");
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Inquiries/inquiries");
 }
 function goToAboutUs(){
     console.log("not yet made");

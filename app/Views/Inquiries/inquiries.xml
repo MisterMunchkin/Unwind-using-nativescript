@@ -1,14 +1,36 @@
 
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"   
-        loaded="onloaded" 
->
+        xmlns:Gif="nativescript-gif" 
+        xmlns:FAB="nativescript-floatingactionbutton"
+        loaded="onloaded" >
 
     <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
-        <Label id="accountName" />
+        <!--<Label id="accountName" />
         <Label id="accountEmail" />
         <Label id="accountBirthdate" />
-        <Label id="accountContact_no" />
+        <Label id="accountContact_no" />-->
+        <Gif:Gif id="loadingBar" src="http://giflat.dceven.fr/wp-content/uploads/2017/04/loader-white.gif" />
+        <lv:RadListView id="listview"  class="list-group" >
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout scrollDirection="vertical" />
+            </lv:RadListView.listViewLayout>
+
+            <lv:RadListView.itemTemplate>
+                <GridLayout   class="list-group-item" rows="auto" columns="auto, *" >
+                    <StackLayout row="0">
+                        <!--<Image  src="{{ itemImage }}" stretch="fit" />-->
+                        <Label text="{{ listName }}" class="list-group-item-heading" />
+                        <TextView text="{{ listMessage }}" class="list-group-item-text" />
+                    </StackLayout>
+                </GridLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+
     </StackLayout>
+    <FAB:fab tap="fabTap"
+         
+                icon="res://ic_plus_white_48dp"
+                class="fab-button" />
  
 </Page>
 

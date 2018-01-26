@@ -39,6 +39,7 @@ var options = {
 exports.onloaded = function(args) {
     page = args.object
 
+    console.log("<<<<<<<<<Booking Details>>>>>>>>>>>>>>>");
     var pageDataContext = page.navigationContext;
     requestObject = {
         resDate: pageDataContext.resDate,
@@ -297,9 +298,9 @@ exports.checkinButton = function(){
     console.log("check in button clicked");//add pricing of room to the grandtotal check out in global
 
     
-    console.log("Current Date: " + CurDate + "Checkin Date: " + requestObject.checkinDate);
+    console.log("Current Date: " + CurDate + " Checkin Date: " + requestObject.checkinDate);
     
-    if(requestObject.checkinDate == CurDate || requestObject.checkinDate < CurDate){
+    if(requestObject.checkinDate <= CurDate){
         console.log("userID: " + global.loginCred[0]);
         console.log("checkin is Active: " + global.loginCred[1]);
         console.log("checkin ID: " + global.loginCred[2]);
@@ -395,14 +396,7 @@ function uncancelBooking(){
 }
 
 function convertDateNow() {
-    /*var yyyy = date.getFullYear().toString();
-    var mm = (date.getMonth()+1).toString();
-    var dd  = date.getDate().toString();
   
-    var mmChars = mm.split('');
-    var ddChars = dd.split('');
-  
-    return yyyy + '-' + (mmChars[1]?mm:"0"+mmChars[0]) + '-' + (ddChars[1]?dd:"0"+ddChars[0]);*/
     var d = new Date().toISOString().slice(0,10);
 
     return d;
