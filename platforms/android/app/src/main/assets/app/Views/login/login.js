@@ -131,6 +131,7 @@ function then(response){
 
                 console.log("rooms checked in : " + phpResponse);
                 global.roomsCheckedIn = obj;
+                
                 loader.hide();
                 console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
                 var topmost = frameModule.topmost();

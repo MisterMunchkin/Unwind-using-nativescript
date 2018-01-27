@@ -18,7 +18,7 @@ var cache;
 exports.onloaded = function (args) {
     page = args.object
 
-    console.log("<<<<<< menu_detail page >>>>>>");
+    console.log("<<<<<< service detail page >>>>>>");
     page.bindingContext = pageData;
     actionBar = page.getViewById("actionBar");
     listview = page.getViewById("listview");
@@ -35,41 +35,21 @@ exports.onloaded = function (args) {
         service_id: pageDataContext.service_id
     };
     actionBar.title = serviceContext.service_name;
-    if(cache == undefined){
-        console.log("       <<<<<<<<<<<<Check in id: " + global.loginCred[2]);
-        var requestObject = {check_in_id: global.loginCred[2]};
-        items = new ObservableArray([]);
-        
-        loadingBar.start();
-        loadingBar.visibility = "visible";
-        fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getRoomsFromCheckIn.php", {
-            method: "POST",
-            body: formEncode(requestObject)
 
-        }).then(function (response) {
-            var phpResponse = response._bodyText;
-            console.log("QUERY RESPONSE: " + phpResponse);
-            phpResponse = JSON.parse(phpResponse);
+    items = new ObservableArray([]);
+    
 
-            var limit = phpResponse.length;
-            for(var x = 0;x < limit;x++){
-                items.push(
-                    {
-                        roomNumber: phpResponse[x].roomNumber,
-                        roomType: phpResponse[x].RoomName,
-                        roomID: phpResponse[x].roomId
-                    }
-                )
+    var limit = global.roomsCheckedIn.length;
+    for(var x = 0;x < limit;x++){
+        items.push(
+            {
+                roomNumber: global.roomsCheckedIn[x].roomNumber,
+                roomType: global.roomsCheckedIn[x].RoomName,
+                roomID: global.roomsCheckedIn[x].roomId
             }
-            cache = 1;
-            loadingBar.stop();
-            loadingBar.visibility = "collapse";
-            pageData.set("items", items);
-        }, function (error) {
-            console.log("ERROR");
-            console.log(JSON.stringify(error));
-        })
+        )
     }
+    pageData.set("items", items);
     
 }
 
