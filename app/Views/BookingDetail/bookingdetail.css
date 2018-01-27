@@ -3,8 +3,14 @@
     font-family:"Lato";
 }
 .label{
-    color:aliceblue;
+    color: black;
+    font-size: 15px;
     font-family:"Lato";
+    padding-bottom: 8px;
+}
+.label-white{
+    color: white;
+    font-family: "Lato";
 }
 
 .pageLabel{

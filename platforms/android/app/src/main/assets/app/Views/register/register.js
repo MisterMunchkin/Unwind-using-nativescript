@@ -82,73 +82,7 @@ exports.nextTap = function(){
         }
     }
 }
-/*
-exports.AccountCreate = function(){
-    guest.email = page.getViewById("email").text;
-    guest.password = page.getViewById("password").text;
-    guest.fname = page.getViewById("fname").text;
-    guest.lname = page.getViewById("lname").text;
-    guest.MI = page.getViewById("MI").text;
-    guest.birthdate = BirthdateFormat();
-    guest.gender = page.getViewById("gender").text;
-    guest.contact_no = page.getViewById("contact_no").text;
 
-    guest.MI = guest.MI.charAt(0);
-    console.log(guest.email + " " + guest.password + " " + guest.MI + " " + guest.birthdate + " " + 
-    guest.gender + " " + guest.contact_no);
-
-    var requestObject = {email: guest.email, password: guest.password, 
-                        fname: guest.fname, lname: guest.lname, MI: guest.MI, birthdate: guest.birthdate,
-                    gender: guest.gender, contact_no: guest.contact_no};   
-    
-    //loader.show(options); var of Loader.js, find a way to include it in this script
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/register/register.php", {
-        method: "POST",
-        body: formEncode(requestObject)
-    }).then(function(response){
-
-        then(response);
-
-    }, function(error){
-        console.log(JSON.stringify(error));
-    })
-
-}
-
-
-function BirthdateFormat(){
-    return page.getViewById("birthdate").year + "-" + page.getViewById("birthdate").month
-     + "-" + page.getViewById("birthdate").day;
-}*/
-/*exports.birthdateTap = function(){
-    pageData.set("showPicker", !pageData.get("showPicker"));
-}*/
-/*
-exports.signin = function(){
-    var topmost = frameModule.topmost();
-    topmost.navigate("Views/login/login");
-}
-
-function then(response){
-    var phpResponse = response._bodyText;
-    alert({ title: "POST response", message: phpResponse, okButtonText: "Close" }); //change this to a snackbar
-    if (phpResponse == "user added") {
-          
-        var topmost = frameModule.topmost();
-        topmost.navigate("Views/login/login");
-    }
-    console.log(JSON.stringify(response));
-    page.getViewById("email").text = "";
-    page.getViewById("password").text = "";
-    page.getViewById("fname").text = "";
-    page.getViewById("lname").text = "";
-    page.getViewById("MI").text = "";
-  
-    page.getViewById("gender").text = "";
-    page.getViewById("contact_no").text = "";
-
-    
-}*/
 
 
 function formEncode(obj) { //to convert urlencoded form data to JSON

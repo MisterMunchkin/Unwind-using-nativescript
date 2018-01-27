@@ -19,7 +19,7 @@ var pageDataContext;
 var requestObject;
 var loader = new LoadingIndicator();
 var CurDate;
-
+var roomArray;
 
 var options = {
     message: 'Loading...',
@@ -36,6 +36,7 @@ var options = {
 };
 
 
+
 exports.onloaded = function(args) {
     page = args.object
 
@@ -48,6 +49,69 @@ exports.onloaded = function(args) {
         resStatus: pageDataContext.resStatus,
         resID: pageDataContext.resID
     };
+
+    var resStatusUI = page.getViewById("resStatus");
+    var checkinDateUI = page.getViewById("checkinDate");
+    var checkoutDateUI = page.getViewById("checkoutDate");
+
+    var MonthNames = ["January", "February", "March", "April", "May",
+            "June", "July", "August", "September", "October", "November", "December"];
+
+    var checkinMonthIndex = new Date(requestObject.checkinDate);
+    var checkoutMonthIndex = new Date(requestObject.checkoutDate);
+
+    var newCheckin = MonthNames[checkinMonthIndex.getMonth()] + " " + checkinMonthIndex.getDate() + ", " + checkinMonthIndex.getFullYear();
+    var newCheckout = MonthNames[checkoutMonthIndex.getMonth()] + " " + checkoutMonthIndex.getDate() + ", " + checkoutMonthIndex.getFullYear(); 
+    
+    resStatusUI.text = "Reservation Status " + requestObject.resStatus;
+    checkinDateUI.text = "Check In Date " + newCheckin;
+    checkoutDateUI.text = "Check Out Date " + newCheckout;
+
+    var roomDataRequest = {reservation_request_id: requestObject.resID};
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/getRoomDataFromRequest.php", {
+        method: "POST",
+        body: formEncode(roomDataRequest)
+
+    }).then(function (response) {
+        console.log("response: " + response._bodyText);
+        
+        roomArray = JSON.parse(response._bodyText);
+
+        var items = [];
+        var limit = roomArray.length;
+
+        for(var x = 0;x < limit;x++){
+
+
+            items.push(
+                {
+                    roomNumber: roomArray[x].roomNumber,
+                    roomName: roomArray[x].name,
+                    price: roomArray[x].price,
+                    currency: "PHP"
+                }
+            )
+            var carouselArray = [];
+
+            carouselArray.push(
+                {
+                    image: roomArray[x].roomTypePicture
+                }
+            );
+
+            
+        }
+        
+        var carousel = page.getViewById("carousel");
+        carousel.items = carouselArray;
+        var listview = page.getViewById("listview");
+        listview.items = items;
+    }, function (error) {
+        console.log("ERROR");
+        console.log(JSON.stringify(error));
+        loader.hide();
+        alert({message: "please make sure you're connected to the internet and try again", okButtonText: "Okay"});
+    })
 
     CurDate = convertDateNow();
     var cancelBookingButton = page.getViewById("cancelBookingID");
@@ -127,31 +191,11 @@ exports.onloaded = function(args) {
             message: "You have succesfully checked out, hope to see you again soon!"
         }
     }
-    var carouselArray = [];
-
-    carouselArray.push(
-        {
-            image: "res://logo"
-        },
-        {
-            image: "res://logo"
-        },
-        {
-            image: "res://logo"
-        },
-        {
-            image: "res://logo"
-        }
-    );
-    /*page.bindingContext = {
-        carouselArray: carouselArray
-    };*/
-    var carousel = page.getViewById("carousel");
-    carousel.items = carouselArray;
+    
     /*if(requestObject.checkinDate){
         //also need code that checks if booking is 24 hours before the check in date, if within the 24 hours then user cannot cancel booking
     }*/
-    page.getViewById("resDateLabel").text = requestObject.resDate;
+   // page.getViewById("resDateLabel").text = requestObject.resDate;
 };
 
 function twoDigits(d){
