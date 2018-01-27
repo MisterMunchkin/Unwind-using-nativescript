@@ -101,8 +101,8 @@ exports.onloaded = function(args) {
 
             
         }
-        
-        var carousel = page.getViewById("carousel");
+
+        var carousel = page.getViewById("carousel"); //NOT WORKING 
         carousel.items = carouselArray;
         var listview = page.getViewById("listview");
         listview.items = items;

@@ -66,6 +66,12 @@ exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
     topmost.navigate("tabs/tabs-page");
 }
+exports.backEvent = function(){
+    console.log("<<<<<< redirecting to tabs module >>>>>>");
+
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
 exports.longpressed = function(){
     alert({ title: "Inquries", message: "long pressed", okButtonText: "Close" });
 }
