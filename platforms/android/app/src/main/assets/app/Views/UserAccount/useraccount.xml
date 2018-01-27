@@ -3,7 +3,11 @@
         xmlns:Gif="nativescript-gif"
         loaded="onloaded"
     xmlns:lv="nativescript-pro-ui/listview">
-
+    <Page.actionBar>
+        <ActionBar class="label page-blue" title="User Account">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
     <GridLayout rows="*,60" >
         <ScrollView>    
             <StackLayout row="0" orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">

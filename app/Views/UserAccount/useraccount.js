@@ -46,11 +46,12 @@ exports.onloaded = function(args){
     })
 };
 
+exports.onNavBtnTap = function(){
+    frameModule.topmost().goBack();
+}
 exports.backEvent = function(args){
     args.cancel = true;
-
-    var topmost = frameModule.topmost();
-    topmost.navigate("tabs/tabs-page");
+    frameModule.topmost().goBack();
 }
 function twoDigits(d){
     if(0 <= d && d < 10) return "0" + d.toString();

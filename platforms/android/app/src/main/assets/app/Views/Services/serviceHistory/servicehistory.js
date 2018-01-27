@@ -78,13 +78,13 @@ exports.onloaded = function(args){
 }; 
 exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
-   topmost.navigate("Views/Services/services");
+   topmost.goBack();
 }
 exports.backEvent = function (args) {
 
     args.cancel = true;
     var topmost = frameModule.topmost();
-    topmost.navigate("Views/Services/services");
+    topmost.goBack();
 }
 
 
