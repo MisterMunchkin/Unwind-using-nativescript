@@ -4,9 +4,16 @@ var fetchModule = require("fetch");
 var view = require("ui/core/view");
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 var pageDataContext;
-
+var dialogs = require("tns-core-modules/ui/dialogs");
 
 var loader = new LoadingIndicator();
+
+var options = {
+    title: "Are you sure you want to do this?",
+    message: "this will go back to the login page, and clear your progress",
+    cancelButtonText: "Cancel",
+    okButtonText: "Yes, I'm sure"
+};
 
 var options = {
     message: 'Loading...',
@@ -34,8 +41,14 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
 
 };
 exports.onNavBtnTap = function(){
-    var topmost = frameModule.topmost();
-   topmost.navigate("Views/login/login");
+    dialogs.confirm(options).then((result) =>{
+        if(result == true){
+            var topmost = frameModule.topmost();
+            topmost.navigate("Views/login/login");
+        }else{
+            console.log(result);
+        }
+   })
 }
 
 

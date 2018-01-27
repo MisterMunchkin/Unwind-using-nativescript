@@ -3,10 +3,17 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var observable = require("data/observable");
 var viewModule = require("ui/core/view");
+var dialogs = require("tns-core-modules/ui/dialogs");
 var wrapLayoutModule = require("tns-core-modules/ui/layouts/wrap-layout");
 //var observableArray = require("data/observable-array");
 //var pageData = new observable.Observable();
 
+var options = {
+    title: "Are you sure you want to do this?",
+    message: "this will go back to the login page, and clear your progress",
+    cancelButtonText: "Cancel",
+    okButtonText: "Yes, I'm sure"
+};
 
 var guest = {
     email: "",
@@ -31,11 +38,25 @@ exports.loaded = function(args){
 }
 exports.onNavBtnTap = function(){
    // frameModule.topmost().goBack();
-   var topmost = frameModule.topmost();
-   topmost.navigate("Views/login/login");
+    
+   dialogs.confirm(options).then((result) =>{
+        if(result == true){
+            var topmost = frameModule.topmost();
+            topmost.navigate("Views/login/login");
+        }else{
+            console.log(result);
+        }
+   })
+}
+
+function validateName(name){
+    var regex = /^[a-zA-Z]{2,30}$/;
+    console.log("value: " + name.text);
+    return regex.test(name.text);
 }
 exports.nextTap = function(){
-    if(page.getViewById("fname").text != "" && page.getViewById("lname").text != ""){
+    
+    if(validateName(page.getViewById("fname")) == true && validateName(page.getViewById("lname")) == true){
         var navigationOptions = {
             moduleName: "Views/register/birthday/birthday",
             context: {
@@ -61,6 +82,7 @@ exports.nextTap = function(){
         }
     }
 }
+/*
 exports.AccountCreate = function(){
     guest.email = page.getViewById("email").text;
     guest.password = page.getViewById("password").text;
@@ -97,11 +119,11 @@ exports.AccountCreate = function(){
 function BirthdateFormat(){
     return page.getViewById("birthdate").year + "-" + page.getViewById("birthdate").month
      + "-" + page.getViewById("birthdate").day;
-}
+}*/
 /*exports.birthdateTap = function(){
     pageData.set("showPicker", !pageData.get("showPicker"));
 }*/
-
+/*
 exports.signin = function(){
     var topmost = frameModule.topmost();
     topmost.navigate("Views/login/login");
@@ -126,7 +148,7 @@ function then(response){
     page.getViewById("contact_no").text = "";
 
     
-}
+}*/
 
 
 function formEncode(obj) { //to convert urlencoded form data to JSON

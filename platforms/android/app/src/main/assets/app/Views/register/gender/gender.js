@@ -4,11 +4,19 @@ var fetchModule = require("fetch");
 var view = require("ui/core/view");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
+var dialogs = require("tns-core-modules/ui/dialogs");
 
 var pageDataContext;
 var items;
 var pageData = new Observable();
 var gender = "";
+
+var options = {
+    title: "Are you sure you want to do this?",
+    message: "this will go back to the login page, and clear your progress",
+    cancelButtonText: "Cancel",
+    okButtonText: "Yes, I'm sure"
+};
 
 
 exports.onLoaded = function (args) { //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
@@ -32,8 +40,15 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
     pageData.set("items", items);
 };
 exports.onNavBtnTap = function(){
-    var topmost = frameModule.topmost();
-   topmost.navigate("Views/login/login");
+
+    dialogs.confirm(options).then((result) =>{
+        if(result == true){
+            var topmost = frameModule.topmost();
+            topmost.navigate("Views/login/login");
+        }else{
+            console.log(result);
+        }
+   })
 }
 
 exports.itemSelected = function(args){
@@ -78,5 +93,6 @@ exports.nextTap = function(){
         topmost.navigate(navigationOptions);
     }else{
         console.log("Enter a gender");
+        alert({message: "Pick a gender", okButtonText: "Okay"});
     }
 }

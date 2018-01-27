@@ -10,10 +10,10 @@ var connectionType = connectivity.getConnectionType();
 var snackBarOptions =  SnackBarOptions = {
     actionText: 'Okay',
     actionTextColor: "white",
-    snackText: "You're not connected to the internet alot of the functionalities will not work",
+    snackText: "You're not connected to the internet, alot of the functionalities will not work",
     hideDelay: 5500,
     textColor: "white",
-    backgroundColor: "#00a2ff"
+    backgroundColor: "#323232"
 }
 
 
@@ -33,13 +33,13 @@ connectivity.startMonitoring(function onConnectionTypeChanged(newConnectionType)
         })
         break;
         case connectivity.connectionType.wifi:
-        snackBar.simple('Successfully connected to the internet', 'white', '#00a2ff').then((args) => {
+        snackBar.simple('Successfully connected to the internet', 'white', '#323232').then((args) => {
             this.set('jsonResult', JSON.stringify(args));
         });
         console.log("wifi");
         break;
         case connectivity.connectionType.mobile:
-        snackBar.simple('Successfully connected to the internet', 'white', '#00a2ff').then((args) => {
+        snackBar.simple('Successfully connected to the internet', 'white', '#323232').then((args) => {
             this.set('jsonResult', JSON.stringify(args));
         });
         console.log("mobile");
