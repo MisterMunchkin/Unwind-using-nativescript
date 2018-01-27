@@ -11,19 +11,7 @@ var pageData = new Observable();
 
 var loadingBar;
 
-var options = {
-    message: 'Loading...',
-    progress: 0.65,
-    android: {
-        indeterminate: true,
-        cancelable: false,
-        max: 100,
-        progressNumberFormat: "%1d/%2d",
-        progressPercentFormat: 0.53,
-        progressStyle: 1,
-        secondaryProgress: 1
-    }
-};
+
 
 exports.onloaded = function(args){
     page = args.object
@@ -40,36 +28,43 @@ exports.onloaded = function(args){
     console.log("new data fishing...");
     loadingBar.start();
     loadingBar.visibility = "visible";
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/services/loadServiceData.php", {
-        
+    var requestedObject = {userID: global.loginCred[0]};
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/loadReservationDataHistory.php", {
+        method: "POST",
+        body: formEncode(requestedObject)
     }).then(function (response) {
         obj = response._bodyText;
-    
+        console.log("done fishing...: " + obj);
 
-        if(obj != "no data" && obj != "query error"){
+        if(obj != "no data error" && obj != "query error"){
 
             items = new ObservableArray([]);
             obj = JSON.parse(obj);
+            console.log("object: " + JSON.stringify(obj));
             //console.log("inside then function: " + obj);
             var limit = obj.length;
         
             for(var x = 0; x < limit;x++){
                 items.push(
                     {
-                        service_name: obj[x].service_name,
-                        service_type: obj[x].service_type,
-                        service_id: obj[x].service_id
+                        check_in_date: obj[x].checkinDate,
+                        check_out_date: obj[x].checkoutDate,
+                        ResStatus: obj[x].reservationStatus
                     }
 
                 );
     
             }
+          
+            loadingBar.visibility = "collapse";
+            loadingBar.stop();  
             pageData.set("items", items);
         }else{
+            loadingBar.visibility = "collapse";
+            loadingBar.stop();
             alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });  
         }
-        loadingBar.visibility = "collapse";
-        loadingBar.stop();
+        
     }, function (error) {
         console.log(JSON.stringify(error));
     })
@@ -78,13 +73,13 @@ exports.onloaded = function(args){
 }; 
 exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
-   topmost.navigate("Views/Services/services");
+   topmost.goBack();
 }
 exports.backEvent = function (args) {
 
     args.cancel = true;
     var topmost = frameModule.topmost();
-    topmost.navigate("Views/Services/services");
+    topmost.goBack();
 }
 
 

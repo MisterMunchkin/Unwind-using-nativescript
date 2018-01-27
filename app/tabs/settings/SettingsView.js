@@ -36,6 +36,9 @@ function onLoaded(args) {
             listName: "Reservation History"
         },
         {
+            listName: "Service History"
+        },
+        {
             listName: "Inquiries"
         },
         {
@@ -63,9 +66,23 @@ exports.onItemTap = function(args){
         case "About Us":
         goToAboutUs();
         break;
+        case "Service History":
+        goToServiceHistory();
+        break;
+        case "Reservation History":
+        goToReservationHistory();
+        break;
     }
 }
-
+function goToReservationHistory(){
+   
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/ReservationHistory/reservationhistory");
+}
+function goToServiceHistory(){
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Services/serviceHistory/servicehistory");
+}
 function goToUserAccount(){
     var topmost = frameModule.topmost();
     topmost.navigate("Views/UserAccount/useraccount");

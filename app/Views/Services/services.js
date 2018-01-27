@@ -79,10 +79,7 @@ exports.onloaded = function(args){
     }
    // loader.hide();
 };
-exports.serviceHistoryTap = function(){
-    var topmost = frameModule.topmost();
-    topmost.navigate("Views/Services/serviceHistory/servicehistory");
-}
+
 exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
    topmost.navigate("tabs/tabs-page");
