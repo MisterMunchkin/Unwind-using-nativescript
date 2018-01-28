@@ -1,5 +1,5 @@
 <Page class="page-content" loaded="onloaded"
-        xmlns:Gif="nativescript-gif"
+  
          xmlns:lv="nativescript-pro-ui/listview">
     <Page.actionBar>
         <ActionBar id="actionBar" class="label page-blue" title="">

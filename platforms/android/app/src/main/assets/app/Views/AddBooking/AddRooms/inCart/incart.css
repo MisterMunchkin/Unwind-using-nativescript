@@ -54,3 +54,6 @@
     padding-bottom: 20;
 }
 
+.hiddenLayout{
+    visibility: collapse
+}

@@ -14,7 +14,7 @@ var bookingObject;
 
 var loader;
 
-var items;
+var items = new ObservableArray([]);
 var pageData = new Observable();
 
 var Dialogoptions = {
@@ -39,6 +39,8 @@ var options = {
     }
 }
 
+var loadingBar;
+
 exports.onLoaded = function (args) { //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     console.log("<<<<<add room page >>>>>>");
     page = args.object;
@@ -52,7 +54,7 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
         numAdult: pageDataContext.numAdult,
         numChild: pageDataContext.numChild
     };
-   
+    loadingBar = page.getViewById("loadingBar");
     console.log("check in date: " + requestObject.check_in_date);
     console.log("check out date: " + requestObject.check_out_date);
     console.log("numAdult: " + requestObject.numAdult);
@@ -60,48 +62,65 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
     page.bindingContext = pageData;
 
     var obj;
-    items = new ObservableArray([]);
-    console.log("entering room query");
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/getCountFilterRoomType.php", {
-        method: "POST",
-        body: formEncode(requestObject)
-    }).then(function (response) {
-        obj = response._bodyText;
-        
-       // console.log("BODY: " + obj);
-        if(obj != "no data"){
+   // items = new ObservableArray([]);
+    loadingBar.stop();
+    loadingBar.visibility = "collapse";
+    if(items.length < 1){
+        console.log("entering room query");
 
-            items = new ObservableArray([]);
-            obj = JSON.parse(obj);
-            //console.log("inside then function: " + obj);
-           // console.log("inside if condition");
-            var limit = obj.length;
-           
-            for(var x = 0; x < limit;x++){
-                items.push(
-                    {
-                        roomTypeID: obj[x].roomTypeID,
-                        roomTypeName: obj[x].roomTypeName,
-                        roomTypePrice: obj[x].roomTypePrice,
-                        roomTypeDescription: obj[x].roomTypeDescription,
-                        roomTypeCount: obj[x].roomTypeCount,
-                        itemImage: ""
-                    }
+        loadingBar.start();
+        loadingBar.visibility = "visible";
 
-                );
-               // console.log(obj[x].roomTypeName);
+        fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/getCountFilterRoomType.php", {
+            method: "POST",
+            body: formEncode(requestObject)
+        }).then(function (response) {
+            obj = response._bodyText;
+            
+        // console.log("BODY: " + obj);
+            if(obj != "no data"){
+
+                items = new ObservableArray([]);
+                obj = JSON.parse(obj);
+                //console.log("inside then function: " + obj);
+            // console.log("inside if condition");
+                var limit = obj.length;
+            
+                for(var x = 0; x < limit;x++){
+                    items.push(
+                        {
+                            roomTypeID: obj[x].roomTypeID,
+                            roomTypeName: obj[x].roomTypeName,
+                            roomTypePrice: obj[x].roomTypePrice,
+                            roomTypeDescription: obj[x].roomTypeDescription,
+                            roomTypeCount: obj[x].roomTypeCount,
+                            itemImage: ""
+                        }
+
+                    );
+                // console.log(obj[x].roomTypeName);
+                }
+                loadingBar.visibility = "collapse";
+                loadingBar.stop();
+                pageData.set("items", items);
+            }else{
+                console.log("put viSible no data confirmation here");
+                loadingBar.visibility = "collapse";
+                loadingBar.stop();
+                var noData = page.getViewById("noData");
+                noData.class = "page-placeholder";
             }
-            pageData.set("items", items);
-        }else{
-            console.log("put viSible no data confirmation here");
-        }
-    }, function (error) {
-        console.log(JSON.stringify(error));
-    })
-    console.log("exiting room query");
+        }, function (error) {
+            console.log(JSON.stringify(error));
+            loadingBar.visibility = "collapse";
+            loadingBar.stop();
+            alert({ meesage: error, okButtonText: "Okay" });
+        })
+        console.log("exiting room query");
+    }
 };
 exports.onNavBtnTap = function(){
-    dialogs.confirm(options).then((result) => {
+    dialogs.confirm(Dialogoptions).then((result) => {
         if (result == true) {
             console.log(result);
             var topmost = frameModule.topmost();
@@ -110,6 +129,21 @@ exports.onNavBtnTap = function(){
             console.log(result);
         }
     })
+}
+exports.backEvent = function(args){
+    args.cancel = true;
+    console.log("<<<<<<<<<<<<back event pressed>>>>>>>>>>>");
+    var navigationOptions = {
+        moduleName: "Views/AddBooking/AddQuantity/addquantity",
+        context: {
+            check_in_date: pageDataContext.check_in_date,
+            check_out_date: pageDataContext.check_out_date,
+            numAdult: pageDataContext.numAdult,
+            numChild: pageDataContext.numChild
+        }
+    }
+    var topmost = frameModule.topmost();
+    topmost.navigate(navigationOptions);
 }
 exports.inCart = function(){
     console.log("<<<<<<<<in cart pressed>>>>>>>");

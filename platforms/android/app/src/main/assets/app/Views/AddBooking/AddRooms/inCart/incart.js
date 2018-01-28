@@ -32,18 +32,27 @@ exports.onloaded = function (args) {
     items = new ObservableArray([]);
     var limit = global.roomOrdered.length;
 
-    for(var x = 0;x < limit;x++){
-        items.push(
-            {
-                roomTypeName: global.roomOrdered[x].roomTypeName,
-                roomTypePrice: global.roomOrdered[x].roomTypePrice,
-                quantity: global.roomOrdered[x].quantity,
-                itemImage: global.roomOrdered[x].itemImage
-            }
-        )
-        console.log("room Types: " + global.roomOrdered[x].roomTypeName);
+    if(limit >= 1){
+        console.log("loading rooms ordered...");
+        for(var x = 0;x < limit;x++){
+            items.push(
+                {
+                    roomTypeName: global.roomOrdered[x].roomTypeName,
+                    roomTypePrice: global.roomOrdered[x].roomTypePrice,
+                    quantity: global.roomOrdered[x].quantity,
+                    itemImage: global.roomOrdered[x].itemImage
+                }
+            )
+            console.log("room Types: " + global.roomOrdered[x].roomTypeName);
+        }
+        pageData.set("items", items);
+    }else{
+        console.log("No Data");
+        var listview = page.getViewById("listview");
+        listview.visibility = "collapse";
+        var noData = page.getViewById("noData");
+        noData.class = "page-placeholder";
     }
-    pageData.set("items", items);
 }
 exports.onNavBtnTap = function(){
 

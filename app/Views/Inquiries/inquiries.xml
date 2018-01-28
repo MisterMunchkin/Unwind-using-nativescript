@@ -10,7 +10,7 @@
             <Label id="accountEmail" />
             <Label id="accountBirthdate" />
             <Label id="accountContact_no" />-->
-            <Gif:Gif id="loadingBar" src="http://giflat.dceven.fr/wp-content/uploads/2017/04/loader-white.gif" />
+            <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" />
             <lv:RadListView id="listview"  class="list-group" >
                 <lv:RadListView.listViewLayout>
                     <lv:ListViewLinearLayout scrollDirection="vertical" />

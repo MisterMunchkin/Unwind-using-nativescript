@@ -15,7 +15,7 @@ xmlns:al="nativescript-awesome-loaders"
 
         <StackLayout>
             <StackLayout id="loadingBarDiv">
-                <Gif:Gif id="loadingBar" src="http://giflat.dceven.fr/wp-content/uploads/2017/04/loader-white.gif" height="200" />
+                <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" height="200" />
             </StackLayout>
             <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
             <lv:RadListView row="0" id="listview" items="{{ items }}" itemTap="onItemTap" class="list-group"

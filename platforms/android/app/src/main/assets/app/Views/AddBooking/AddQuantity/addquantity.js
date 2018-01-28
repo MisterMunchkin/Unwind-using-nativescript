@@ -22,6 +22,8 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
 
     pageDataContext = page.navigationContext;
 
+    page.getViewById("adultQty").text = pageDataContext.numAdult;
+    page.getViewById("childQty").text = pageDataContext.numChild;
 };
 exports.onNavBtnTap = function(){
     dialogs.confirm(options).then((result) => {
@@ -32,6 +34,22 @@ exports.onNavBtnTap = function(){
             console.log(result);
         }
     })
+}
+
+exports.backEvent = function (args) {
+    args.cancel = true;
+    console.log("<<<<<<<<<<<<back event pressed>>>>>>>>>>>");
+    var navigationOptions = {
+        moduleName: "Views/AddBooking/addbooking",
+        context: {
+            check_in_date: pageDataContext.check_in_date,
+            check_out_date: pageDataContext.check_out_date,
+            numAdult: pageDataContext.numAdult,
+            numChild: pageDataContext.numChild
+        }
+    }
+    var topmost = frameModule.topmost();
+    topmost.navigate(navigationOptions);
 }
 
 exports.nextTap = function(){

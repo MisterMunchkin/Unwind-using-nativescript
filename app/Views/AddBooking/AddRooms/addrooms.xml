@@ -8,6 +8,7 @@ Feel free to customize layouts and components to change how the tab view looks.
 
 <Page class="page-white" xmlns="http://schemas.nativescript.org/tns.xsd" 
  xmlns:lv="nativescript-pro-ui/listview"
+ xmlns:Gif="nativescript-gif"
          loaded="onLoaded">
 
     <Page.actionBar>
@@ -18,6 +19,8 @@ Feel free to customize layouts and components to change how the tab view looks.
 
     <GridLayout rows="*,60">
         <StackLayout orientation="vertical" row="0">
+            <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" height="200" />
+            <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
             <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
             row="1" selectionBehavior="Press" itemSelected="itemSelected" itemDeselected="itemDeselected" > 
 

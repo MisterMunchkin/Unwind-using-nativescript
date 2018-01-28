@@ -8,6 +8,7 @@ var dialogs = require("tns-core-modules/ui/dialogs");
 const picker = new ModalPicker();
 var checkin_date;
 var checkout_date;
+var pageDataContext;
 
 var options = {
     title: "Are you sure you want to do this?",
@@ -20,12 +21,14 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
     page = args.object
     console.log("<<<<< add booking page >>>>>>")
 
+    pageDataContext = page.navigationContext;
+    if(pageDataContext != undefined){
+        page.getViewById("checkinDate").text = pageDataContext.check_in_date;
+        page.getViewById("checkoutDate").text = pageDataContext.check_out_date;
+    }
 };
 
-/*exports.onNavBtnTap = function(){
-    var topmost = frameModule.topmost();
-   topmost.navigate("tabs/tabs-page");//find a way to navigate to a specific tab
-}*/
+
 exports.backEvent = function(){
     console.log("Should have an are you sure? data you input will be lost.");
 }
@@ -53,14 +56,25 @@ exports.nextTap = function(){
 
                 console.log("Check In Date: " + checkin_date);
                 console.log("Check Out Date:" + checkout_date);
-                var navigationOptions = {
-                    moduleName: "Views/AddBooking/AddQuantity/addquantity",
-                    context: {
-                        check_in_date: checkin_date,
-                        check_out_date: checkout_date
+                if(pageDataContext != undefined){
+                    var navigationOptions = {
+                        moduleName: "Views/AddBooking/AddQuantity/addquantity",
+                        context: {
+                            check_in_date: checkin_date,
+                            check_out_date: checkout_date,
+                            numAdult: pageDataContext.numAdult,
+                            numChild: pageDataContext.numChild
+                        }
+                    }
+                }else{
+                    var navigationOptions = {
+                        moduleName: "Views/AddBooking/AddQuantity/addquantity",
+                        context: {
+                            check_in_date: checkin_date,
+                            check_out_date: checkout_date
+                        }
                     }
                 }
-
                 var topmost = frameModule.topmost();
                 topmost.navigate(navigationOptions);
             }else{
