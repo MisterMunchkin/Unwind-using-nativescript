@@ -5,7 +5,7 @@ const ModalPicker = require("nativescript-modal-datetimepicker").ModalDatetimepi
 var view = require("ui/core/view");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
-var dialogs = require("ui/dialogs");
+var dialogs = require("tns-core-modules/ui/dialogs");
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
 var pageDataContext;
@@ -16,6 +16,14 @@ var loader;
 
 var items;
 var pageData = new Observable();
+
+var Dialogoptions = {
+    title: "Are you sure you want to do this?",
+    message: "this will go back to the login page, and clear your progress",
+    cancelButtonText: "Cancel",
+    okButtonText: "Yes, I'm sure"
+};
+
 
 var options = {
     message: 'Loading...',
@@ -93,8 +101,15 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
     console.log("exiting room query");
 };
 exports.onNavBtnTap = function(){
-    var topmost = frameModule.topmost();
-    topmost.navigate("tabs/tabs-page");
+    dialogs.confirm(options).then((result) => {
+        if (result == true) {
+            console.log(result);
+            var topmost = frameModule.topmost();
+            topmost.navigate("tabs/tabs-page");
+        } else {
+            console.log(result);
+        }
+    })
 }
 exports.inCart = function(){
     console.log("<<<<<<<<in cart pressed>>>>>>>");

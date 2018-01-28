@@ -3,6 +3,14 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 const ModalPicker = require("nativescript-modal-datetimepicker").ModalDatetimepicker;
 var view = require("ui/core/view");
+var dialogs = require("tns-core-modules/ui/dialogs");
+
+var options = {
+    title: "Are you sure you want to do this?",
+    message: "this will go back to the login page, and clear your progress",
+    cancelButtonText: "Cancel",
+    okButtonText: "Yes, I'm sure"
+};
 
 var pageDataContext;
 var adultQty;
@@ -16,9 +24,16 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
 
 };
 exports.onNavBtnTap = function(){
-    var topmost = frameModule.topmost();
-    topmost.navigate("tabs/tabs-page");
+    dialogs.confirm(options).then((result) => {
+        if (result == true) {
+            var topmost = frameModule.topmost();
+            topmost.navigate("tabs/tabs-page");
+        } else {
+            console.log(result);
+        }
+    })
 }
+
 exports.nextTap = function(){
     adultQty = view.getViewById(page, "adultQty").text;
     childQty = view.getViewById(page, "childQty").text;
