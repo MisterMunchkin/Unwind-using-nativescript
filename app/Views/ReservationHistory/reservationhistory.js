@@ -43,12 +43,27 @@ exports.onloaded = function(args){
             console.log("object: " + JSON.stringify(obj));
             //console.log("inside then function: " + obj);
             var limit = obj.length;
-        
+
+            var MonthNames = ["January", "February", "March", "April", "May",
+            "June", "July", "August", "September", "October", "November", "December"];
+
+            var checkinMonthIndex;
+            var checkoutMonthIndex;
+            
+            var newCheckin;
+            var newCheckout;
+
             for(var x = 0; x < limit;x++){
+                checkinMonthIndex = new Date(obj[x].checkinDate);
+                checkoutMonthIndex = new Date(obj[x].checkoutDate);
+
+                newCheckin = MonthNames[checkinMonthIndex.getMonth()] + " " + checkinMonthIndex.getDate() + ", " + checkinMonthIndex.getFullYear();
+                newCheckout = MonthNames[checkoutMonthIndex.getMonth()] + " " + checkoutMonthIndex.getDate() + ", " + checkoutMonthIndex.getFullYear(); 
+    
                 items.push(
                     {
-                        check_in_date: obj[x].checkinDate,
-                        check_out_date: obj[x].checkoutDate,
+                        check_in_date: newCheckin,
+                        check_out_date: newCheckout,
                         ResStatus: obj[x].reservationStatus
                     }
 
