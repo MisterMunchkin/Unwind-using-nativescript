@@ -63,9 +63,9 @@ exports.onloaded = function(args) {
     var newCheckin = MonthNames[checkinMonthIndex.getMonth()] + " " + checkinMonthIndex.getDate() + ", " + checkinMonthIndex.getFullYear();
     var newCheckout = MonthNames[checkoutMonthIndex.getMonth()] + " " + checkoutMonthIndex.getDate() + ", " + checkoutMonthIndex.getFullYear(); 
     
-    resStatusUI.text = "Reservation Status " + requestObject.resStatus;
-    checkinDateUI.text = "Check In Date " + newCheckin;
-    checkoutDateUI.text = "Check Out Date " + newCheckout;
+    resStatusUI.text = "Reservation Status: " + requestObject.resStatus;
+    checkinDateUI.text = "Check In Date: " + newCheckin;
+    checkoutDateUI.text = "Check Out Date: " + newCheckout;
 
     var roomDataRequest = {reservation_request_id: requestObject.resID};
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/getRoomDataFromRequest.php", {
