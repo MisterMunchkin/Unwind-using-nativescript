@@ -1,0 +1,19 @@
+.page-blue{
+    background-color: #3ba9e9;
+}
+.label{
+    color:white;
+    font-family:"Lato";
+}
+.hiddenLayout{
+    visibility: collapse
+}
+.fab-button{
+    height:60;
+    width:60;
+    margin:15;
+    background-color:#16a1f1;
+    horizontal-align:right;
+    vertical-align:bottom;
+    padding-bottom: 10cm;
+}

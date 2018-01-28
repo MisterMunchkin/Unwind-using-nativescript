@@ -104,7 +104,7 @@ exports.submit = function(){
 
         if(phpResponse.indexOf("error") <= -1){
             console.log("success");
-            alert({ title: "Success", message: "successfully made an inquiry", okButtonText: "Close" });
+            alert({ title: "Success", message: "successfully made review", okButtonText: "Close" });
             review.text = "";
             loader.hide();
             var topmost = frameModule.topmost();

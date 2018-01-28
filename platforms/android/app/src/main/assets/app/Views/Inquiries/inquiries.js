@@ -3,48 +3,74 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 
 var loadingBar;
-var items;
-var loadSec;
+var items = [];
+
 
 exports.onloaded = function(args){
-    page = args.object
-    console.log("<<<<<<user account page>>>>>>");
+    page = args.object;
+    console.log("<<<<<<inquiries page>>>>>>");
 
     loadingBar = page.getViewById("loadingBar");
 
+    console.log("loading bar: " + loadingBar);
     var requestObject = {user_id: global.loginCred[0]};
-    if(loadSec == undefined){
-
+    
+    if(items.length < 1){
         loadingBar.start();
         loadingBar.visibility = "visible";
-        fetchModule.fetch("https://unwindv2.000webhostapp.com/logout/logout.php", {
+        items = [];
+        console.log("fishing for inquiries...");
+        fetchModule.fetch("https://unwindv2.000webhostapp.com/inquiries/loadInquiries.php", {
             method: "POST",
             body: formEncode(requestObject)
         }).then(function (response) {
             var phpResponse = response._bodyText;
-
+            console.log("load inquiry response: " + phpResponse);
             var obj = JSON.parse(phpResponse);
             var limit = obj.length;
-            for(var x = 0; x < limit;x++){
-                items.push(
-                    {
-                        listName: "",
-                        listMessage: obj.message,
-                        listTimeStamp: obj.timestamp 
-                    }
-                )
-            }   
-            loadingBar.visibility = "collapse";
-            loadingBar.stop();
-            var listview = page.getViewById("listview");
-            listview.items = items;
+            if(limit >= 1){
+                for(var x = 0; x < limit;x++){
+                    var date = obj[x].month + " " + obj[x].day + ", " + obj[x].year;
+                    items.push(
+                        {
+                            inquiryID: obj[x].inquiryID,
+                            message: obj[x].message,
+                            userID: obj[x].user_id,
+                            name: obj[x].name
+                        }
+                    )
+                    console.log("name: " + obj[x].name);
+                }   
+                loadingBar.visibility = "collapse";
+                loadingBar.stop();
+                var listview = page.getViewById("listview");
+                listview.items = items;
+                console.log("done fishing for inquiries...");
+            }else{
+                loadingBar.visibility = "collapse";
+                loadingBar.stop();
+                var listview = page.getViewById("listview");
+                listview.visibility = "collapse";
+                var noData = page.getViewById("noData");
+                noData.class = "page-placeholder";
+            }
         }, function (error) {
             console.log(JSON.stringify(error));
+            loadingBar.visibility = "collapse";
+            loadingBar.stop();
         })
+    }else{
+        console.log("data has been cached...");
     }
 };
 exports.fabTap = function(){
     console.log("fab tap pressed");
+
+    
+}
+
+exports.onNavBtnTap = function(){
+    frameModule.topmost().goBack();
 }
 
 function twoDigits(d){

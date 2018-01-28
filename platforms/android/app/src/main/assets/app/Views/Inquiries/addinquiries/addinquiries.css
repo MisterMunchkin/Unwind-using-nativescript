@@ -1,0 +1,14 @@
+.label{
+    color:white;
+    font-family:"Lato";
+}
+.page-blue{
+    background-color: #3ba9e9;
+}
+.blue-btn{
+    background-color:#00a2ff;
+    color:white;
+    height:60;
+    width:200;
+    font-family:"Lato";
+}
