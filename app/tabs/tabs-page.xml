@@ -42,7 +42,7 @@
           </TabViewItem.view>
         </TabViewItem>
 
-        <TabViewItem title="Settings" ios:iconSource="res://tabIcons/search">
+        <TabViewItem title="Guest" ios:iconSource="res://tabIcons/search">
           <TabViewItem.view>
              <settings:SettingsView/>
           </TabViewItem.view>

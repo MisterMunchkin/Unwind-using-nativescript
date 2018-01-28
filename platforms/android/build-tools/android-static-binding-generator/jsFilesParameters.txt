@@ -15,6 +15,8 @@ C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_mod
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-accordion\src\ios\accordion.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-awesome-loaders\awesome-loaders.common.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-awesome-loaders\awesome-loaders.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-carousel\index-common.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-carousel\index.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-dom\dom.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-drop-down\drop-down-common.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-drop-down\drop-down.js
@@ -25,6 +27,8 @@ C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_mod
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-fontawesome\fontawesome.common.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-fontawesome\fontawesome.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-fonticon\nativescript-fonticon.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-gif\gif.common.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-gif\gif.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-https\https.common.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-https\https.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\tns_modules\nativescript-loading-indicator\loading-indicator.js
@@ -205,6 +209,7 @@ C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\B
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\BookingDetail\bookingdetail.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\BookingDetail\paypal.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\checkout\checkout_menu.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Inquiries\inquiries.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\login\login.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Menu\menu.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Menu\Category\category.js
@@ -219,3 +224,5 @@ C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\R
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Reviews\addReviews\addreviews.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Services\services.js
 C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Services\serviceDetail\servicedetail.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\Services\serviceHistory\servicehistory.js
+C:\Android\Nativescript\Unwind\platforms\android\app\src\main\assets\app\Views\UserAccount\useraccount.js

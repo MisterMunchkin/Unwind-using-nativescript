@@ -19,7 +19,7 @@ var pageDataContext;
 var requestObject;
 var loader = new LoadingIndicator();
 var CurDate;
-
+var roomArray;
 
 var options = {
     message: 'Loading...',
@@ -36,9 +36,11 @@ var options = {
 };
 
 
+
 exports.onloaded = function(args) {
     page = args.object
 
+    console.log("<<<<<<<<<Booking Details>>>>>>>>>>>>>>>");
     var pageDataContext = page.navigationContext;
     requestObject = {
         resDate: pageDataContext.resDate,
@@ -47,6 +49,69 @@ exports.onloaded = function(args) {
         resStatus: pageDataContext.resStatus,
         resID: pageDataContext.resID
     };
+
+    var resStatusUI = page.getViewById("resStatus");
+    var checkinDateUI = page.getViewById("checkinDate");
+    var checkoutDateUI = page.getViewById("checkoutDate");
+
+    var MonthNames = ["January", "February", "March", "April", "May",
+            "June", "July", "August", "September", "October", "November", "December"];
+
+    var checkinMonthIndex = new Date(requestObject.checkinDate);
+    var checkoutMonthIndex = new Date(requestObject.checkoutDate);
+
+    var newCheckin = MonthNames[checkinMonthIndex.getMonth()] + " " + checkinMonthIndex.getDate() + ", " + checkinMonthIndex.getFullYear();
+    var newCheckout = MonthNames[checkoutMonthIndex.getMonth()] + " " + checkoutMonthIndex.getDate() + ", " + checkoutMonthIndex.getFullYear(); 
+    
+    resStatusUI.text = "Reservation Status: " + requestObject.resStatus;
+    checkinDateUI.text = "Check In Date: " + newCheckin;
+    checkoutDateUI.text = "Check Out Date: " + newCheckout;
+
+    var roomDataRequest = {reservation_request_id: requestObject.resID};
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/getRoomDataFromRequest.php", {
+        method: "POST",
+        body: formEncode(roomDataRequest)
+
+    }).then(function (response) {
+        console.log("response: " + response._bodyText);
+        
+        roomArray = JSON.parse(response._bodyText);
+
+        var items = [];
+        var limit = roomArray.length;
+
+        for(var x = 0;x < limit;x++){
+
+
+            items.push(
+                {
+                    roomNumber: roomArray[x].roomNumber,
+                    roomName: roomArray[x].name,
+                    price: roomArray[x].price,
+                    currency: "PHP"
+                }
+            )
+            var carouselArray = [];
+
+            carouselArray.push(
+                {
+                    image: roomArray[x].roomTypePicture
+                }
+            );
+
+            
+        }
+
+        var carousel = page.getViewById("carousel"); //NOT WORKING 
+        carousel.items = carouselArray;
+        var listview = page.getViewById("listview");
+        listview.items = items;
+    }, function (error) {
+        console.log("ERROR");
+        console.log(JSON.stringify(error));
+        loader.hide();
+        alert({message: "please make sure you're connected to the internet and try again", okButtonText: "Okay"});
+    })
 
     CurDate = convertDateNow();
     var cancelBookingButton = page.getViewById("cancelBookingID");
@@ -112,7 +177,7 @@ exports.onloaded = function(args) {
             cancelText: "Cancel Booking",
             checkoutVisible: "collapse",
             cancelVisible: "visible",
-            checkinVisible: checkinSec,
+            checkinVisible: "visible",
             message: "you've made it! now you just have to wait\n for your check in date to check in the hotel!"
         }
         break;
@@ -126,10 +191,11 @@ exports.onloaded = function(args) {
             message: "You have succesfully checked out, hope to see you again soon!"
         }
     }
+    
     /*if(requestObject.checkinDate){
         //also need code that checks if booking is 24 hours before the check in date, if within the 24 hours then user cannot cancel booking
     }*/
-    page.getViewById("resDateLabel").text = requestObject.resDate;
+   // page.getViewById("resDateLabel").text = requestObject.resDate;
 };
 
 function twoDigits(d){
@@ -140,11 +206,41 @@ function twoDigits(d){
 Date.prototype.toMysqlFormat = function(){
     return this.getUTCFullYear() + "-" + twoDigits(1 + this.getUTCMonth()) + "-" + twoDigits(this.getUTCDate()) + " " + twoDigits(this.getUTCHours()) + ":" + twoDigits(this.getUTCMinutes()) + ":" + twoDigits(this.getUTCSeconds());
 }
+exports.CarouselChangeEvent = function(args){
+    var changeEventText = "Page changed to index: " + args.index;
+    console.log(changeEventText);
+}
+exports.CarouselScrollingEvent = function(args){
+   // console.log("Scrolling: " + args.state.offset);
+}
+/*
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
+
+}
+*/
+function checkOutTime(CurDate, checkoutDate){
+    var ret;
+
+    if(CurDate == checkoutDate){
+        ret = 0; //checkout on time
+        console.log("check out on time");
+    }else if(CurDate > checkoutDate){
+        ret = 1; //chekout late
+        console.log("check out late");
+    }else{
+        ret = 2 //checkout early
+        console.log("check out early");//ask neil how check in functionality should work
+    }
+    return ret;
+}
 
 exports.checkoutTap = function(){
     console.log("<<<<<<<<<<<<check out tapped>>>>>>>>>");
     var clientID;
     //loader.show(options);
+    var checkoutOnTime = checkOutTime(CurDate, requestObject.checkoutDate);
+
     fetchModule.fetch("https://unwindv2.000webhostapp.com/PayPal/checkoutSecurity.php", {
            
     }).then(function (response) {
@@ -154,7 +250,7 @@ exports.checkoutTap = function(){
         console.log("<<<<<PayPal Initialization>>>>>>");
         PayPal.init({
             clientId: clientID,
-            environment: 0
+            environment: 1
         });
         console.log("total check out: " + global.checkOutGrandTotal);
 
@@ -168,8 +264,46 @@ exports.checkoutTap = function(){
                 case 0:
                     // SUCCESS
                     // pay key is stored in 'cbResult.key'
-                    
                     console.log("Success");
+                    var checkoutReqObject = {resID: requestObject.resID};
+                    fetchModule.fetch("https://unwindv2.000webhostapp.com/checkout/activateCheckout.php", {
+                        method: "POST",
+                        body: formEncode(checkoutReqObject)
+
+                    }).then(function (response) {
+                        
+                        console.log("response>>>>>" + JSON.stringify(response));
+                        if(response._bodyText == "checkout activated"){
+                            var updateCheckoutObj = {check_in_id: global.loginCred[2]};
+                            fetchModule.fetch("https://unwindv2.000webhostapp.com/checkout/updateCheckInEnd.php", {
+                                method: "POST",
+                                body: formEncode(updateCheckoutObj)
+
+                            }).then(function (response) {
+                                
+                                console.log("response>>>>>" + JSON.stringify(response));
+
+                                if(response._bodyText == "checkInEnd Updated"){
+                                    alert({ message: "successfully checked out!", okButtonText: "Okay"});
+                                    global.checkinSec = 1;
+                                    var topmost = frameModule.topmost();
+                                    topmost.navigate("tabs/tabs-page");
+                                }
+                            }, function (error) {
+                                console.log("ERROR");
+                                console.log(JSON.stringify(error));
+                                loader.hide();
+                                alert({message: "please make sure you're connected to the internet and try again", okButtonText: "Okay"});
+                            })
+                    console.log("Success");
+                        }
+                    }, function (error) {
+                        console.log("ERROR");
+                        console.log(JSON.stringify(error));
+                        loader.hide();
+                        alert({message: "please make sure you're connected to the internet and try again", okButtonText: "Okay"});
+                    })
+                    
                     break;
                     
                 case 1:
@@ -201,13 +335,16 @@ exports.checkoutTap = function(){
     
    
 }
+
+
+
 exports.checkinButton = function(){
     console.log("check in button clicked");//add pricing of room to the grandtotal check out in global
 
     
-    console.log("Current Date: " + CurDate + "Checkin Date: " + requestObject.checkinDate);
+    console.log("Current Date: " + CurDate + " Checkin Date: " + requestObject.checkinDate);
     
-    if(requestObject.checkinDate == CurDate || requestObject.checkinDate < CurDate){
+    if(requestObject.checkinDate <= CurDate){
         console.log("userID: " + global.loginCred[0]);
         console.log("checkin is Active: " + global.loginCred[1]);
         console.log("checkin ID: " + global.loginCred[2]);
@@ -219,7 +356,7 @@ exports.checkinButton = function(){
             console.log("dateTime: " + Obj.check_in_start);
             console.log("resID: " + Obj.resID);
 
-
+            loader.show(options);
             fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/activateCheckin.php", {
                 method: "POST",
                 body: formEncode(Obj)
@@ -239,55 +376,20 @@ exports.checkinButton = function(){
                         var phpResponse = response._bodyText;
                         console.log("response: " + phpResponse);
                         if(phpResponse.indexOf("error") > -1){
+                            loader.hide();
                             alert({ title: "activation error", message: phpResponse, okButtonText: "Close" });
                         }else{
                             phpResponse = JSON.parse(phpResponse);
                             global.loginCred = phpResponse;
                             global.checkOutGrandTotal += global.loginCred[4];
+                            loader.hide();
                             console.log("grand total is now at: " + global.checkOutGrandTotal);
                             alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
+                            global.checkinSec = 2
                             var topmost = frameModule.topmost();
                             topmost.navigate("tabs/tabs-page");
                         }
-                        //then(response);
-                    // console.log(JSON.stringify(response));
-                        /*phpResponse = response._bodyText;
-                        if(phpResponse.indexOf("error") <= -1){
-                            var roomIDArray = JSON.parse(phpResponse);
 
-                            var limit = roomIDArray.length, count = 0;
-
-                            for(var x = 0;x < limit;x++){
-                                console.log("roomID: " + roomIDArray[x]);
-                                var updateOccObj = {room_id: roomIDArray[x]};
-
-                                fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/updateRoomOccupied.php", {
-                                    method: "POST",
-                                    body: formEncode(updateOccObj)
-                                }).then(function (response) {
-                                    phpResponse = response._bodyText;
-                                    if(phpResponse.indexOf("error") > -1){
-                                        
-                                        alert({ title: "update error", message: phpResponse, okButtonText: "Close" });
-                                    }else{
-                                        count++;
-                                    }
-
-                                    
-                                }, function (error) {
-                                    console.log(JSON.stringify(error));
-                                })
-                            }
-                            console.log("x = " + x);
-                            console.log("count = " + count);
-                            if(x == count){
-                                alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
-                                var topmost = frameModule.topmost();
-                                topmost.navigate("tabs/tabs-page");
-                            }
-                        }else{
-                            alert({ title: "activation error", message: phpResponse, okButtonText: "Close" });
-                        }*/
                     }, function (error) {
                         console.log(JSON.stringify(error));
                     })
@@ -307,29 +409,6 @@ exports.checkinButton = function(){
         alert({ title: "Premature ejaculation", message: "You are not at your check in date yet", okButtonText: "Close" });
     }
     
-}
-
-exports.checkoutButton = function(){
-    //payments and database updates that guest has checked out
-    //check out security    
-        
-    checkOutTime(CurDate, requestObject.checkoutDate);
-}
-
-function checkOutTime(CurDate, checkoutDate){
-    var ret;
-
-    if(CurDate == checkoutDate){
-        ret = 0; //checkout on time
-        console.log("check out on time");
-    }else if(CurDate > checkoutDate){
-        ret = 1; //chekout late
-        console.log("check out late");
-    }else{
-        ret = 2 //checkout early
-        console.log("check out early");//ask neil how check in functionality should work
-    }
-    return ret;
 }
 
 exports.cancelUncancelTap = function(){
@@ -361,14 +440,7 @@ function uncancelBooking(){
 }
 
 function convertDateNow() {
-    /*var yyyy = date.getFullYear().toString();
-    var mm = (date.getMonth()+1).toString();
-    var dd  = date.getDate().toString();
   
-    var mmChars = mm.split('');
-    var ddChars = dd.split('');
-  
-    return yyyy + '-' + (mmChars[1]?mm:"0"+mmChars[0]) + '-' + (ddChars[1]?dd:"0"+ddChars[0]);*/
     var d = new Date().toISOString().slice(0,10);
 
     return d;

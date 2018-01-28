@@ -3,12 +3,13 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
-var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
-var items;
+
+var items = new ObservableArray([]);
 var pageData = new Observable();
 
-var loader;
+
+var loadingBar;
 
 var options = {
     message: 'Loading...',
@@ -30,44 +31,55 @@ exports.onloaded = function(args){
     page.bindingContext = pageData;
 
     var obj;
-   
+    loadingBar = page.getViewById("loadingBar");
+
     
     //loader = new LoadingIndicator();
     //loader.show(options);
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/services/loadServiceData.php", {
+    if(items.length == 0){
+        console.log("new data fishing...");
+        loadingBar.start();
+        loadingBar.visibility = "visible";
+        fetchModule.fetch("https://unwindv2.000webhostapp.com/services/loadServiceData.php", {
+            
+        }).then(function (response) {
+            obj = response._bodyText;
         
-    }).then(function (response) {
-        obj = response._bodyText;
-       
 
-        if(obj != "no data" && obj != "query error"){
+            if(obj != "no data" && obj != "query error"){
 
-            items = new ObservableArray([]);
-            obj = JSON.parse(obj);
-            //console.log("inside then function: " + obj);
-            var limit = obj.length;
-           
-            for(var x = 0; x < limit;x++){
-                items.push(
-                    {
-                        service_name: obj[x].service_name,
-                        service_type: obj[x].service_type,
-                        service_id: obj[x].service_id
-                    }
+                items = new ObservableArray([]);
+                obj = JSON.parse(obj);
+                //console.log("inside then function: " + obj);
+                var limit = obj.length;
+            
+                for(var x = 0; x < limit;x++){
+                    items.push(
+                        {
+                            service_name: obj[x].service_name,
+                            service_type: obj[x].service_type,
+                            service_id: obj[x].service_id
+                        }
 
-                );
-      
+                    );
+        
+                }
+                pageData.set("items", items);
+            }else{
+                alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });  
             }
-            pageData.set("items", items);
-        }else{
-            alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });  
-        }
-    }, function (error) {
-        console.log(JSON.stringify(error));
-    })
-
+            loadingBar.visibility = "collapse";
+            loadingBar.stop();
+        }, function (error) {
+            console.log(JSON.stringify(error));
+        })
+    }else{
+        loadingBar.visibility = "collapse";
+        loadingBar.stop();
+    }
    // loader.hide();
 };
+
 exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
    topmost.navigate("tabs/tabs-page");
@@ -100,36 +112,6 @@ exports.itemTap = function(args){
     var topmost = frameModule.topmost();
     topmost.navigate(navigationOptions);
 
-    /*var date = new Date().toMysqlFormat();
-
-    global.servicesOrdered.push(
-        {
-            service_name: tappedItem.service_name,
-            service_type: tappedItem.service_type,
-            service_id: tappedItem.service_id
-        }
-    );
-    var requestedObject = {service_id: tappedItem.service_id, service_request_date: date, 
-                            check_in_id: global.loginCred[2]};
-    
-    loader = new LoadingIndicator();
-
-    loader.show(options);
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/services/insertServiceRequest.php", {
-        method: "POST",
-        body: formEncode(requestedObject)
-    }).then(function (response) {
-        
-        if(response._bodyText == "service requested"){
-            alert({ title: "POST response", message: "service requested!", okButtonText: "Close" }); 
-        }else{
-            alert({ title: "POST response", message: response._bodyText , okButtonText: "Close" }); 
-            console.log("failed: " + JSON.stringify(response));
-        }
-        loader.hide();
-    }, function (error) {
-        console.log(JSON.stringify(error));
-    })*/
 }
 function twoDigits(d){
     if(0 <= d && d < 10) return "0" + d.toString();

@@ -1,6 +1,7 @@
 <Page class="page-content" loaded="onloaded"
         xmlns:lv="nativescript-pro-ui/listview" 
-        xmlns:FAB="nativescript-floatingactionbutton" >
+        xmlns:FAB="nativescript-floatingactionbutton"
+        xmlns:Gif="nativescript-gif" >
 
     <Page.actionBar>
         <ActionBar class="label page-blue" title="Reviews">
@@ -8,8 +9,9 @@
         </ActionBar>
     </Page.actionBar>
 
-    <GridLayout rows="*, 60">
+    <GridLayout rows="*">
         <StackLayout orientation="vertical" >
+            <Gif:Gif id="loadingBar" src="http://giflat.dceven.fr/wp-content/uploads/2017/04/loader-white.gif" />
             <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
             row="0" itemTap="itemTap"> 
 
@@ -23,9 +25,9 @@
                         <StackLayout row="0" col="1" >
                             <StackLayout orientation="horizontal">    
                                 <Label text="{{ username }}" class="list-group-item-heading" />
-                                <Label text="{{' ' + rate }}" class="list-group-item-text" />
+                                <Label text="{{'  Stars: ' + rate }}" class="list-group-item-text" />
                             </StackLayout>
-                            <Label text="{{ review }}" class="list-group-item-text" />
+                            <TextView text="{{ review }}" class="textview list-group-item-text" editable="false"  />
                             
 
                         </StackLayout>
@@ -36,7 +38,7 @@
         </StackLayout>
         
         <FAB:fab tap="fabTap"
-            row="1"
+            
             icon="res://ic_plus_white_48dp"
             class="fab-button" />
 

@@ -9,6 +9,7 @@ var roomItems;
 
 //var foodpageData = new Observable();
 var foodItems;
+var serviceItems;
 
 exports.onloaded = function (args) {
     page = args.object
@@ -24,6 +25,7 @@ exports.onloaded = function (args) {
 
     }).then(function (response) {
        // roomItems = new ObservableArray([]);
+        var grandTotalRooms = 0;
         roomItems = [];
         var phpResponse = response._bodyText;
         console.log("rooms: " + phpResponse);
@@ -40,8 +42,10 @@ exports.onloaded = function (args) {
                     currency: "PHP"
                 }
             )
+            grandTotalRooms += parseInt(phpResponse[x].RoomPrice);
         }
-        //roompageData.set("roomItems", roomItems);
+        page.getViewById("grandTotalRoom").text = " PHP " + grandTotalRooms;
+        
         var roomlistview = page.getViewById("roomlistview");
         roomlistview.items = roomItems;
     }, function (error) {
@@ -56,35 +60,96 @@ exports.onloaded = function (args) {
 
     }).then(function (response) {
         //foodItems = new ObservableArray([]);
+        var grandTotalFood = 0;
         foodItems = [];
 
         var phpResponse = response._bodyText;
         console.log("food orders: " + phpResponse);
         phpResponse = JSON.parse(phpResponse);
         var limit = phpResponse.length;
+       
 
         for(var x = 0;x < limit;x++){
+            var niceDateFoodOrdered = niceDates(phpResponse[x].timestamp_ordered);
+
             foodItems.push(
                 {
                     food_order_id: phpResponse[x].food_order_id,
                     foodTotal: phpResponse[x].price,
-                    dateFoodOrdered: phpResponse[x].timestamp_ordered,
+                    dateFoodOrdered: niceDateFoodOrdered,
                     currency: "PHP"
 
                 }
             )
+            grandTotalFood += parseInt(phpResponse[x].price);
             console.log("food items: " + phpResponse[x].food_order_id);
         }
-        //foodpageData.set("foodItems", foodItems);
+     
+        page.getViewById("grandTotalFood").text = " PHP " + grandTotalFood;
         var foodlistview = page.getViewById("foodlistview");
+        
         foodlistview.items = foodItems;
     }, function (error) {
         console.log("ERROR");
         console.log(JSON.stringify(error));
     })
 
-    
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getServiceRequestFromCheckIn.php", {
+        method: "POST",
+        body: formEncode(requestObject)
+
+    }).then(function (response) {
+        //foodItems = new ObservableArray([]);
+        serviceItems = [];
+
+        var phpResponse = response._bodyText;
+        console.log("service request: " + phpResponse);
+        phpResponse = JSON.parse(phpResponse);
+        var limit = phpResponse.length;
+
+        for(var x = 0;x < limit;x++){
+            var niceDateServiceRequested = niceDates(phpResponse[x].service_request_date);
+
+            serviceItems.push(
+                {
+                    service_request_date: niceDateServiceRequested,
+                    service_name: phpResponse[x].service_name,
+                    service_type: phpResponse[x].service_type,
+                    service_id: phpResponse[x].service_id
+
+                }
+            )
+            
+            console.log("service items: " + phpResponse[x].service_name);
+        }
+        //foodpageData.set("foodItems", foodItems);
+        var servicelistview = page.getViewById("servicelistview");
+       
+        
+        servicelistview.items = serviceItems;
+    }, function (error) {
+        console.log("ERROR");
+        console.log(JSON.stringify(error));
+    })
+
+
+    var GrandTotal = page.getViewById("grandTotal");
+    GrandTotal.text = "PHP " + global.checkOutGrandTotal + ".00";
 };
+function niceDates(date){
+    var MonthNames = ["January", "February", "March", "April", "May",
+            "June", "July", "August", "September", "October", "November", "December"];
+
+    var newDateIndex = new Date(date);
+
+    var newDate = MonthNames[newDateIndex.getMonth()] + " " + newDateIndex.getDate() + ", " + newDateIndex.getFullYear();
+
+    return newDate;
+}
+exports.onNavBtnTap = function(){
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];
     for (var p in obj)

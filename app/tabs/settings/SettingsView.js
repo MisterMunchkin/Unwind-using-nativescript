@@ -4,6 +4,7 @@ var fetchModule = require("fetch");
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
 var loader = new LoadingIndicator();
+var items = [];
 
 var options = {
     message: 'Loading...',
@@ -24,12 +25,76 @@ function onLoaded(args) {
     component.bindingContext = new SearchViewModel();
 
     component.bindingContext = {
-        loginCred: global.loginCred[0]
+        loginCred: global.loginCred[0] //gets user id
     }
+    items = [];
+    items.push(
+        {
+            listName: "User Account"
+        },
+        {
+            listName: "Reservation History"
+        },
+        {
+            listName: "Service History"
+        },
+        {
+            listName: "Inquiries"
+        },
+        {
+            listName: "About Us"
+        }
+    )
+    var listview = component.getViewById("listview");
+    listview.items = items;
 }
 
 exports.onLoaded = onLoaded;
 
+exports.onItemTap = function(args){
+    var tappedView = args.view;
+    var tappedItem = tappedView.bindingContext;
+
+    console.log("tapped item:" + tappedItem.listName);
+    switch(tappedItem.listName){
+        case "User Account":
+        goToUserAccount();
+        break;
+        case "Inquiries":
+        goToInquiries();
+        break;
+        case "About Us":
+        goToAboutUs();
+        break;
+        case "Service History":
+        goToServiceHistory();
+        break;
+        case "Reservation History":
+        goToReservationHistory();
+        break;
+    }
+}
+function goToReservationHistory(){
+   
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/ReservationHistory/reservationhistory");
+}
+function goToServiceHistory(){
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Services/serviceHistory/servicehistory");
+}
+function goToUserAccount(){
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/UserAccount/useraccount");
+}
+function goToInquiries(){
+    console.log("not yet made");
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Inquiries/inquiries");
+}
+function goToAboutUs(){
+    console.log("not yet made");
+}
 exports.logOut = function(){
     loader.show(options);
 
@@ -41,6 +106,7 @@ exports.logOut = function(){
         console.log(JSON.stringify(response));
         if(phpResponse == "logged out"){
             global.checkinSec = 0;
+            global.checkOutGrandTotal = 0;
             var topmost = frameModule.topmost();
             topmost.navigate("Views/login/login");
         }else{

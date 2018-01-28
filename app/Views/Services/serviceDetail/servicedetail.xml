@@ -1,4 +1,5 @@
 <Page class="page-content" loaded="onloaded"
+        xmlns:Gif="nativescript-gif"
          xmlns:lv="nativescript-pro-ui/listview">
     <Page.actionBar>
         <ActionBar id="actionBar" class="label page-blue" title="">
@@ -8,8 +9,9 @@
 
     <GridLayout rows="*, 60">
         <StackLayout orientation="vertical">
+
             <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
-            row="0" multipleSelection="true" selectionBehavior="Press" > 
+            row="0" itemSelected="itemSelected" itemDeselected="itemDeselected" multipleSelection="true" selectionBehavior="Press" > 
 
                 <lv:RadListView.listViewLayout>
                     <lv:ListViewLinearLayout scrollDirection="Vertical"/>
@@ -31,6 +33,6 @@
         </StackLayout>
         
 
-        <Button row="1" class="blue-btn" text="Submit requests" id="addToCart" tap="addToCartTap" />
+        <Button row="1" class="blue-btn" text="Submit requests"  id="addToCart" tap="addToCartTap" />
     </GridLayout>
 </Page>

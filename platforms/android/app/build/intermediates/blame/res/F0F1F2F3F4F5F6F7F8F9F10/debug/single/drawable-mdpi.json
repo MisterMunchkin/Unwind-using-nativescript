@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\drawable-mdpi\\background.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\background.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\drawable-mdpi\\lock_outline_grey.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\lock_outline_grey.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\drawable-mdpi\\logo.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\drawable-mdpi\\ic_plus_white_48dp.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\ic_plus_white_48dp.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\drawable-mdpi\\icon.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\drawable-mdpi\\logo_transparent_background.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\logo_transparent_background.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\drawable-mdpi\\ic_cart_outline_white_48dp.png",
+        "source": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\ic_cart_outline_white_48dp.png"
+    }
+]

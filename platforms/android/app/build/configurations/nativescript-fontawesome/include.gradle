@@ -2,7 +2,7 @@
 
 android {
 	productFlavors {
-		"F8" {
+		"F10" {
 			dimension "nativescriptfontawesome"
 		}
 	}

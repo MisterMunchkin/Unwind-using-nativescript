@@ -2,9 +2,32 @@ var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var view = require("ui/core/view");
-
+var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 var pageDataContext;
+var dialogs = require("tns-core-modules/ui/dialogs");
 
+var loader = new LoadingIndicator();
+
+var options = {
+    title: "Are you sure you want to do this?",
+    message: "this will go back to the login page, and clear your progress",
+    cancelButtonText: "Cancel",
+    okButtonText: "Yes, I'm sure"
+};
+
+var options = {
+    message: 'Loading...',
+    progress: 0.65,
+    android: {
+        indeterminate: true,
+        cancelable: false,
+        max: 100,
+        progressNumberFormat: "%1d/%2d",
+        progressPercentFormat: 0.53,
+        progressStyle: 1,
+        secondaryProgress: 1
+    }
+};
 
 exports.onLoaded = function (args) { //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     page = args.object;
@@ -18,8 +41,14 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
 
 };
 exports.onNavBtnTap = function(){
-    var topmost = frameModule.topmost();
-   topmost.navigate("Views/login/login");
+    dialogs.confirm(options).then((result) =>{
+        if(result == true){
+            var topmost = frameModule.topmost();
+            topmost.navigate("Views/login/login");
+        }else{
+            console.log(result);
+        }
+   })
 }
 
 
@@ -44,15 +73,18 @@ exports.nextTap = function(){
                 gender: pageDataContext.gender, contact_no: pageDataContext.contact_no};   
 
             //loader.show(options); var of Loader.js, find a way to include it in this script
+            loader.show(options);
             fetchModule.fetch("https://unwindv2.000webhostapp.com/register/register.php", {
             method: "POST",
             body: formEncode(requestObject)
             }).then(function(response){
 
-            then(response);
-
+                then(response);
+                loader.hide();
             }, function(error){
-            console.log(JSON.stringify(error));
+                console.log(JSON.stringify(error));
+                alert({message: "please check your internet connectivity", okButtonText: "Okay"});
+                loader.hide();
             })
         }else{
             page.bindingContext = {
@@ -69,7 +101,7 @@ function then(response){
     var phpResponse = response._bodyText;
     alert({ title: "POST response", message: phpResponse, okButtonText: "Close" }); //change this to a snackbar
     if (phpResponse == "user added") {
-          
+       
         var topmost = frameModule.topmost();
         topmost.navigate("Views/login/login");
     }

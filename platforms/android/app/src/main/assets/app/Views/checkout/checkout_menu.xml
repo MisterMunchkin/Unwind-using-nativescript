@@ -40,7 +40,7 @@
             <Label id="grandTotal" class=" label-blue label-big" />
         </StackLayout>
         <StackLayout row="2">
-            <Button class="blue-btn" text="Check Out" tap="checkoutTap" />
+            <Button id="submitButton" class="blue-btn" text="Check Out" tap="checkoutTap" />
         </StackLayout>
     </GridLayout>
     <!-- find a layout for the grand total label -->

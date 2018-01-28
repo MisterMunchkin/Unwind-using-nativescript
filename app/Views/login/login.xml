@@ -5,7 +5,7 @@
         </ActionBar>
     </Page.actionBar>
     <StackLayout class="inputForm" orientation="vertical">
-        <Label text="Image here" />
+        <Image class="logo"  src="res://logo_transparent_background" />
 
         <Label text="Email Address" class="label" />
         <TextField class="input" keyboardType="email" 

@@ -1,21 +1,42 @@
-<Page class="page-content" loaded="onloaded">
+<Page class="page-content" loaded="onloaded"
+            xmlns:ns="nativescript-carousel">
     <Page.actionBar>
         <ActionBar id="actionBar" class="label page-blue" title="Menu">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
-    <StackLayout orientation="vertical">
-        <Label class="page-icon fa" text="&#xf1ea;"></Label>
-        <Label class="page-placeholder" text="image here"></Label>
+    <ScrollView> 
+        <StackLayout orientation="vertical">
+            <!--<Label class="page-icon fa" text="&#xf1ea;"></Label>
+            <Label class="page-placeholder" text="image here"></Label>
+    -->      
+            
+                <ns:Carousel id="carousel"  height="220" pageChanged="CarouselChangeEvent" pageScrolling="CarouselScrollingEvent">
+                    <ns:Carousel.itemTemplate>
+                        <ns:CarouselItem verticalAlignment="center" tap="carouselTap">
+                            <Image src="{{ image }}" height="250" stretch="fill" />
+                        </ns:CarouselItem>
+                    </ns:Carousel.itemTemplate>
+                </ns:Carousel>
+                    
+            
+                <StackLayout>
+                    <TextView  id="foodDesc" text="{{ desc }}" class="foodDesc" editable="false" />
+                    <Label id="foodPrice" text="{{ currency + ' ' + price }}" class="foodPrice" />
+                        
+                        <GridLayout rows="auto, auto, auto, auto, auto, auto, auto">
+                            <TextField class="input" row="1"  autocorrect="false" fontFamily="FontAwesome" 
+                                    hint="food quantity" id="foodQty"
+                                    keyboardType="number" maxLength="2"></TextField>
+                            <TextView class="input" row="2" autocorrect="true" hint="comments for your food" 
+                                        id="remarks" fontFamily="FontAwesome" />
 
-        <Label  id="foodName" text="{{ name }}"></Label>
-
-        <TextField autocorrect="false" fontFamily="FontAwesome" 
-                hint="food quantity" id="foodQty"
-                keyboardType="number" maxLength="2"></TextField>
-        <TextView autocorrect="true" hint="comments for your food" 
-                    id="remarks" fontFamily="FontAwesome" />
-
-        <Button text="ADD TO CART" id="addToCart" tap="addToCartTap" />
-    </StackLayout>
+                            <Button row="3" class="w-outline-btn" text="ADD TO CART" id="addToCart" tap="addToCartTap" />
+                            <Label row="4" height="400px" />
+                        </GridLayout>
+                    
+                </StackLayout>
+            
+        </StackLayout>
+    </ScrollView>
 </Page>

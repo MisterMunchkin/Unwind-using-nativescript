@@ -3,10 +3,17 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var observable = require("data/observable");
 var viewModule = require("ui/core/view");
+var dialogs = require("tns-core-modules/ui/dialogs");
 var wrapLayoutModule = require("tns-core-modules/ui/layouts/wrap-layout");
 //var observableArray = require("data/observable-array");
 //var pageData = new observable.Observable();
 
+var options = {
+    title: "Are you sure you want to do this?",
+    message: "this will go back to the login page, and clear your progress",
+    cancelButtonText: "Cancel",
+    okButtonText: "Yes, I'm sure"
+};
 
 var guest = {
     email: "",
@@ -31,11 +38,25 @@ exports.loaded = function(args){
 }
 exports.onNavBtnTap = function(){
    // frameModule.topmost().goBack();
-   var topmost = frameModule.topmost();
-   topmost.navigate("Views/login/login");
+    
+   dialogs.confirm(options).then((result) =>{
+        if(result == true){
+            var topmost = frameModule.topmost();
+            topmost.navigate("Views/login/login");
+        }else{
+            console.log(result);
+        }
+   })
+}
+
+function validateName(name){
+    var regex = /^[a-zA-Z]{2,30}$/;
+    console.log("value: " + name.text);
+    return regex.test(name.text);
 }
 exports.nextTap = function(){
-    if(page.getViewById("fname").text != "" && page.getViewById("lname").text != ""){
+    
+    if(validateName(page.getViewById("fname")) == true && validateName(page.getViewById("lname")) == true){
         var navigationOptions = {
             moduleName: "Views/register/birthday/birthday",
             context: {
@@ -61,72 +82,7 @@ exports.nextTap = function(){
         }
     }
 }
-exports.AccountCreate = function(){
-    guest.email = page.getViewById("email").text;
-    guest.password = page.getViewById("password").text;
-    guest.fname = page.getViewById("fname").text;
-    guest.lname = page.getViewById("lname").text;
-    guest.MI = page.getViewById("MI").text;
-    guest.birthdate = BirthdateFormat();
-    guest.gender = page.getViewById("gender").text;
-    guest.contact_no = page.getViewById("contact_no").text;
 
-    guest.MI = guest.MI.charAt(0);
-    console.log(guest.email + " " + guest.password + " " + guest.MI + " " + guest.birthdate + " " + 
-    guest.gender + " " + guest.contact_no);
-
-    var requestObject = {email: guest.email, password: guest.password, 
-                        fname: guest.fname, lname: guest.lname, MI: guest.MI, birthdate: guest.birthdate,
-                    gender: guest.gender, contact_no: guest.contact_no};   
-    
-    //loader.show(options); var of Loader.js, find a way to include it in this script
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/register/register.php", {
-        method: "POST",
-        body: formEncode(requestObject)
-    }).then(function(response){
-
-        then(response);
-
-    }, function(error){
-        console.log(JSON.stringify(error));
-    })
-
-}
-
-
-function BirthdateFormat(){
-    return page.getViewById("birthdate").year + "-" + page.getViewById("birthdate").month
-     + "-" + page.getViewById("birthdate").day;
-}
-/*exports.birthdateTap = function(){
-    pageData.set("showPicker", !pageData.get("showPicker"));
-}*/
-
-exports.signin = function(){
-    var topmost = frameModule.topmost();
-    topmost.navigate("Views/login/login");
-}
-
-function then(response){
-    var phpResponse = response._bodyText;
-    alert({ title: "POST response", message: phpResponse, okButtonText: "Close" }); //change this to a snackbar
-    if (phpResponse == "user added") {
-          
-        var topmost = frameModule.topmost();
-        topmost.navigate("Views/login/login");
-    }
-    console.log(JSON.stringify(response));
-    page.getViewById("email").text = "";
-    page.getViewById("password").text = "";
-    page.getViewById("fname").text = "";
-    page.getViewById("lname").text = "";
-    page.getViewById("MI").text = "";
-  
-    page.getViewById("gender").text = "";
-    page.getViewById("contact_no").text = "";
-
-    
-}
 
 
 function formEncode(obj) { //to convert urlencoded form data to JSON
