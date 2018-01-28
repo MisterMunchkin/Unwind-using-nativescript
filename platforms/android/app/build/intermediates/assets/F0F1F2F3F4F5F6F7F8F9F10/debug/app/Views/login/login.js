@@ -61,7 +61,7 @@ exports.signIn = function(){
 
             }).then(function (response) {
                 then(response);
-                loader.hide();
+                
             }, function (error) {
                 console.log("ERROR");
                 console.log(JSON.stringify(error));
@@ -105,22 +105,24 @@ function then(response){
         console.log("checkInID: " + global.loginCred[2]);
         console.log("total food price: " + global.loginCred[3]);
         console.log("total room price: " + global.loginCred[4]);
-        console.log("grandTotalCheckOut: " + global.checkOutGrandTotal);
+    
         console.log("food Array: " + JSON.stringify(global.foodArray));
         console.log("serviceOrdered: " + JSON.stringify(global.servicesOrdered));
         console.log("roomOdered: " + JSON.stringify(global.roomOrdered));
 
         if(global.loginCred[3] == undefined && global.loginCred[4] == undefined){
             global.checkOutGrandTotal = 0;
-
+            loader.hide();
             console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
             var topmost = frameModule.topmost();
             topmost.navigate("tabs/tabs-page");
         }else{
+            console.log("user has active check in...")
             global.checkOutGrandTotal += global.loginCred[3] + global.loginCred[4];
             
             var requestObject = {check_in_id: global.loginCred[2]};
-            fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getRoomsFromCheckin.php", {
+            console.log("fishing for users active rooms...");
+            fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getRoomsFromCheckIn.php", {
                 method: "POST",
                 body: formEncode(requestObject)
             }).then(function (response) {
@@ -129,7 +131,8 @@ function then(response){
 
                 console.log("rooms checked in : " + phpResponse);
                 global.roomsCheckedIn = obj;
-
+                
+                loader.hide();
                 console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
                 var topmost = frameModule.topmost();
                 topmost.navigate("tabs/tabs-page");

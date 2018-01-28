@@ -4,6 +4,7 @@ const TabsViewModel = require("./tabs-view-model");
 * Use the "onNavigatingTo" handler to initialize data for the whole tab
 * navigation layout as a whole.
 *************************************************************/
+
 function onNavigatingTo(args) {
     /* ***********************************************************
     * The "onNavigatingTo" event handler lets you detect if the user navigated with a back button.
@@ -11,6 +12,7 @@ function onNavigatingTo(args) {
     * page in the same data state that he left it in before navigating.
     *************************************************************/
     if (args.isBackNavigation) {
+        
         return;
     }
 

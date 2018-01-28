@@ -27,7 +27,7 @@
                                 <Label text="{{ username }}" class="list-group-item-heading" />
                                 <Label text="{{'  Stars: ' + rate }}" class="list-group-item-text" />
                             </StackLayout>
-                            <TextView text="{{ review }}" class="list-group-item-text" editable="false"  />
+                            <TextView text="{{ review }}" class="textview list-group-item-text" editable="false"  />
                             
 
                         </StackLayout>

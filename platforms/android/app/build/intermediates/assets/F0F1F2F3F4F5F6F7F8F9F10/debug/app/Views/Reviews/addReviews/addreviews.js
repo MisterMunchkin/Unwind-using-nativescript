@@ -129,11 +129,11 @@ function formEncode(obj) { //to convert urlencoded form data to JSON
 
 exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
-   topmost.navigate("Views/Inquiries/inquiries");
+   topmost.navigate("Views/Reviews/reviews");
 }
 exports.backEvent = function (args) {
 
     args.cancel = true;
     var topmost = frameModule.topmost();
-    topmost.navigate("Views/Inquiries/inquiries");
+    topmost.navigate("Views/Reviews/reviews");
 }

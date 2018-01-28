@@ -33,12 +33,6 @@
                 </lv:RadListView.itemTemplate>
             </lv:RadListView>
         </StackLayout>
-
-        <StackLayout class="page-blue" row="1" orientation="horizontal">
-        
-            <Button class="bottomNavButton" text="Services History" id="serviceHistory" tap="serviceHistoryTap" width="35%"  />
-
-        </StackLayout>
     </GridLayout>
 </Page>
 

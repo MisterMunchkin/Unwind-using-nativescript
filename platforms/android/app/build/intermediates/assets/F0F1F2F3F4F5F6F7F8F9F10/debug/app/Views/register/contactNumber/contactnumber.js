@@ -2,9 +2,16 @@ var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var view = require("ui/core/view");
+var dialogs = require("tns-core-modules/ui/dialogs");
 
 var pageDataContext;
 
+var options = {
+    title: "Are you sure you want to do this?",
+    message: "this will go back to the login page, and clear your progress",
+    cancelButtonText: "Cancel",
+    okButtonText: "Yes, I'm sure"
+};
 
 exports.onLoaded = function (args) { //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     page = args.object;
@@ -15,8 +22,15 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
 };
 
 exports.onNavBtnTap = function(){
-    var topmost = frameModule.topmost();
-   topmost.navigate("Views/login/login");
+    dialogs.confirm(options).then((result) => {
+        if(result == true){
+            var topmost = frameModule.topmost();
+            topmost.navigate("Views/login/login");        
+        }else{
+            console.log(result);
+        }
+    })
+    
 }
 exports.nextTap = function(){
    var contact_no = page.getViewById("contact_no");

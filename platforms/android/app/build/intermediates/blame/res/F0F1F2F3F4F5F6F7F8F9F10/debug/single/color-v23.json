@@ -4,6 +4,10 @@
         "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_btn_colored_text_material.xml"
     },
     {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_color_highlight_material.xml",
         "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_color_highlight_material.xml"
     },
@@ -32,8 +36,36 @@
         "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_tint_switch_thumb.xml"
     },
     {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_tint_switch_thumb.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\color-v23\\abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\design_tint_password_toggle.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\de7072d0f474bd31287b314f5db47125461644e7\\output\\res\\color-v23\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_tint_default.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\color-v23\\abc_tint_default.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\color-v23\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\color-v23\\abc_tint_switch_track.xml"
+    },
+    {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_tint_btn_checkable.xml",
         "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\color-v23\\abc_tint_spinner.xml"
     },
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_tint_edittext.xml",
@@ -42,5 +74,17 @@
     {
         "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_tint_seek_thumb.xml",
         "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\color-v23\\abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\color-v23\\abc_color_highlight_material.xml"
     }
 ]

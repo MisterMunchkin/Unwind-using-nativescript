@@ -3,8 +3,14 @@
     font-family:"Lato";
 }
 .label{
-    color:aliceblue;
+    color: black;
+    font-size: 15px;
     font-family:"Lato";
+    padding-bottom: 8px;
+}
+.label-white{
+    color: white;
+    font-family: "Lato";
 }
 
 .pageLabel{
@@ -15,7 +21,7 @@
     background-color: #3ba9e9;
 }
 .w-outline-btn{
-    background-color: antiquewhite;
+    background-color: white;
     color:#00a2ff;
     outline-color:#00a2ff;
     height:60;
@@ -24,7 +30,7 @@
 }
 .blue-btn{
     background-color:#00a2ff;
-    color:antiquewhite;
+    color:white;
     height:60;
     width:200;
     font-family:"Lato";

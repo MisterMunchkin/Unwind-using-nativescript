@@ -1,4 +1,4 @@
-#Fri Jan 26 11:52:44 CST 2018
-base.0=C\:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\folders\\1000\\1f\\main
+#Sun Jan 28 13:41:27 CST 2018
+base.0=D\:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
-file.0=C\:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\folders\\1000\\1f\\main\\classes.dex
+file.0=D\:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\F0F1F2F3F4F5F6F7F8F9F10\\debug\\folders\\1000\\1f\\main\\classes.dex
