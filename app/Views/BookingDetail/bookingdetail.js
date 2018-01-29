@@ -50,6 +50,8 @@ exports.onloaded = function(args) {
         resID: pageDataContext.resID
     };
 
+    var loadingBar = page.getViewById("loadingBar");
+
     var resStatusUI = page.getViewById("resStatus");
     var checkinDateUI = page.getViewById("checkinDate");
     var checkoutDateUI = page.getViewById("checkoutDate");
@@ -68,6 +70,10 @@ exports.onloaded = function(args) {
     checkoutDateUI.text = "Check Out Date: " + newCheckout;
 
     var roomDataRequest = {reservation_request_id: requestObject.resID};
+    
+    loadingBar.start();
+    loadingBar.visibility = "visible";
+
     fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/getRoomDataFromRequest.php", {
         method: "POST",
         body: formEncode(roomDataRequest)
@@ -102,6 +108,8 @@ exports.onloaded = function(args) {
             
         }
 
+        loadingBar.visibility = "collapse";
+        loadingBar.stop();
         var carousel = page.getViewById("carousel"); //NOT WORKING 
         carousel.items = carouselArray;
         var listview = page.getViewById("listview");
@@ -109,7 +117,7 @@ exports.onloaded = function(args) {
     }, function (error) {
         console.log("ERROR");
         console.log(JSON.stringify(error));
-        loader.hide();
+        //loader.hide();
         alert({message: "please make sure you're connected to the internet and try again", okButtonText: "Okay"});
     })
 
@@ -197,6 +205,10 @@ exports.onloaded = function(args) {
     }*/
    // page.getViewById("resDateLabel").text = requestObject.resDate;
 };
+
+exports.onNavBtnTap = function(){
+    frameModule.topmost().goBack();
+}
 
 function twoDigits(d){
     if(0 <= d && d < 10) return "0" + d.toString();
