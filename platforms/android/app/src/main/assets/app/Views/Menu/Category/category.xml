@@ -7,22 +7,24 @@
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
-    <GridLayout rows="*">
+    <GridLayout>
         <StackLayout orientation="vertical">
-            <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
-            row="0" itemTap="itemTap"> 
+
+            <lv:RadListView id="listview" itemTap="itemTap" > 
 
                 <lv:RadListView.listViewLayout>
-                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                    <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="300" spanCount="2" />
                 </lv:RadListView.listViewLayout>
 
                 <lv:RadListView.itemTemplate>
-                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                        <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
-                        <StackLayout row="0" col="1" >
+                    <GridLayout class="list-group-item listStyle" rows="180, auto" >
+                        <StackLayout row="0" > 
+                            <Image  src="{{ itemImage }}" stretch="aspectFill" />
+                        </StackLayout>
+                        <StackLayout row="1"  >
 
-                            <Label text="{{ name }}" class="list-group-item-heading" />
-                            <Label text="{{ description }}" class="list-group-item-text" />
+                            <Label text="{{ name }}" class="page-blue categoryName" />
+                            <!--<Label text="{{ description }}" class="list-group-item-text" /> list-group-item-heading -->
                             
                             
                         </StackLayout>
