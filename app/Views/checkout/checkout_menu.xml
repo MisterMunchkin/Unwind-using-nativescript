@@ -27,7 +27,7 @@
                             <Label text="{{ remarks }}" class="list-group-item-text" />
                         </StackLayout>
                         <StackLayout col="1">
-                                <button text="remove" tap="remove" />
+                                <Image src="res://ic_delete_black_24dp" class="delete" tap="remove" />
                                 <Label text="{{'Qty: ' + qty }}" class="list-group-item-text" />
                         </StackLayout>
                     </GridLayout> 

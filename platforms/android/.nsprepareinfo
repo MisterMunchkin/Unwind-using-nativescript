@@ -1,9 +1,9 @@
 {
-	"time": "Mon Jan 29 2018 14:09:58 GMT+0800 (Taipei Standard Time)",
+	"time": "Mon Jan 29 2018 21:49:02 GMT+0800 (Taipei Standard Time)",
 	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,
 	"changesRequireBuild": false,
 	"projectFileHash": "016ec322ee8ecac3c91f0cf3e161bd26555404087c641be1921a1ff9ee7938a9",
-	"changesRequireBuildTime": "Sun Jan 28 2018 13:39:19 GMT+0800 (China Standard Time)"
+	"changesRequireBuildTime": "Mon Jan 29 2018 21:40:51 GMT+0800 (Taipei Standard Time)"
 }

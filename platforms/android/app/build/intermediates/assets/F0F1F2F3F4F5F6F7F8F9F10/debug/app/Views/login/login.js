@@ -4,19 +4,18 @@ var fetchModule = require("fetch");
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 var application = require('application');
 require("nativescript-master-technology");
-var connectivity = require("tns-core-modules/connectivity");
-var SnackBar = require("nativescript-snackbar").SnackBar;
 
-var snackBar = new SnackBar();
-var connectionType = connectivity.getConnectionType();
+
+var signIn;
 var loader;
+
 
 var options = {
     message: 'Loading...',
     progress: 0.65,
     android: {
         indeterminate: true,
-        cancelable: true,
+        cancelable: false,
         max: 100,
         progressNumberFormat: "%1d/%2d",
         progressPercentFormat: 0.53,
@@ -29,7 +28,7 @@ exports.loaded = function(args){ //exports is standard for both nativescript and
     page = args.object
     console.log("<<<<<login page>>>>>");
   
-        
+    signIn = page.getViewById("signIn");
 };
 
 exports.backEvent = function (args) {
@@ -45,7 +44,7 @@ exports.signIn = function(){
 
     email = page.getViewById("email");
     password = page.getViewById("password");
-
+    signIn.isEnabled = "false";
     if(email.text != "" && password.text != ""){
         if(validateEmail(email.text) == true){    
             console.log("email: " + email.text);
@@ -65,6 +64,7 @@ exports.signIn = function(){
             }, function (error) {
                 console.log("ERROR");
                 console.log(JSON.stringify(error));
+                signIn.isEnabled = "true";
                 loader.hide();
                 alert({message: "please make sure you're connected to the internet and try again", okButtonText: "Okay"});
             })
@@ -74,6 +74,7 @@ exports.signIn = function(){
         }
     }else{
         password.class = email.class = "requiredFields";
+        signIn.isEnabled = "true";
     }
 };
 
@@ -88,6 +89,7 @@ function then(response){
     var phpResponse = response._bodyText;
 
     if(!response.ok){
+        signIn.isEnabled = "true";
         alert({message: "an error has occured, please make sure you're connected to the internet and try again", okButtonText: "Okay"});
     }
    
@@ -114,6 +116,7 @@ function then(response){
             global.checkOutGrandTotal = 0;
             loader.hide();
             console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
+            signIn.isEnabled = "true";
             var topmost = frameModule.topmost();
             topmost.navigate("tabs/tabs-page");
         }else{
@@ -134,6 +137,7 @@ function then(response){
                 
                 loader.hide();
                 console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
+                signIn.isEnabled = "true";
                 var topmost = frameModule.topmost();
                 topmost.navigate("tabs/tabs-page");
             }, function (error) {
@@ -146,8 +150,9 @@ function then(response){
         
     }else{
        // page.getViewById("email").text = "";
+        signIn.isEnabled = "true";
         page.getViewById("password").text = "";
-        alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });     
+        alert({  message: phpResponse, okButtonText: "Close" });     
     }
 
     

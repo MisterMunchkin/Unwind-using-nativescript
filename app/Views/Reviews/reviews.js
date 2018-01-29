@@ -66,9 +66,9 @@ exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
     topmost.navigate("tabs/tabs-page");
 }
-exports.backEvent = function(){
+exports.backEvent = function(args){
     console.log("<<<<<< redirecting to tabs module >>>>>>");
-
+    args.cancel = true;
     var topmost = frameModule.topmost();
     topmost.navigate("tabs/tabs-page");
 }

@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="17"
-        android:targetSdkVersion="25" />
+        android:targetSdkVersion="27" />
 
     <!--
         Describe the permissions, features or other configurations required by your plugin for Android. 
@@ -42,7 +42,7 @@
 
     <meta-data
         android:name="android.support.VERSION"
-        android:value="25.3.1" />
+        android:value="26.0.0-alpha1" />
 
     <application
         android:name="com.tns.NativeScriptApplication"

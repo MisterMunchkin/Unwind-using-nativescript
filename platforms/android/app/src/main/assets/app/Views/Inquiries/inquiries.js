@@ -15,53 +15,51 @@ exports.onloaded = function(args){
     console.log("loading bar: " + loadingBar);
     var requestObject = {user_id: global.loginCred[0]};
     
-    if(items.length < 1){
-        loadingBar.start();
-        loadingBar.visibility = "visible";
-        items = [];
-        console.log("fishing for inquiries...");
-        fetchModule.fetch("https://unwindv2.000webhostapp.com/inquiries/loadInquiries.php", {
-            method: "POST",
-            body: formEncode(requestObject)
-        }).then(function (response) {
-            var phpResponse = response._bodyText;
-            console.log("load inquiry response: " + phpResponse);
-            var obj = JSON.parse(phpResponse);
-            var limit = obj.length;
-            if(limit >= 1){
-                for(var x = 0; x < limit;x++){
-                    var date = obj[x].month + " " + obj[x].day + ", " + obj[x].year;
-                    items.push(
-                        {
-                            inquiryID: obj[x].inquiryID,
-                            message: obj[x].message,
-                            userID: obj[x].user_id,
-                            name: obj[x].name
-                        }
-                    )
-                    console.log("name: " + obj[x].name);
-                }   
-                loadingBar.visibility = "collapse";
-                loadingBar.stop();
-                var listview = page.getViewById("listview");
-                listview.items = items;
-                console.log("done fishing for inquiries...");
-            }else{
-                loadingBar.visibility = "collapse";
-                loadingBar.stop();
-                var listview = page.getViewById("listview");
-                listview.visibility = "collapse";
-                var noData = page.getViewById("noData");
-                noData.class = "page-placeholder";
-            }
-        }, function (error) {
-            console.log(JSON.stringify(error));
+
+    loadingBar.start();
+    loadingBar.visibility = "visible";
+    items = [];
+    console.log("fishing for inquiries...");
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/inquiries/loadInquiries.php", {
+        method: "POST",
+        body: formEncode(requestObject)
+    }).then(function (response) {
+        var phpResponse = response._bodyText;
+        console.log("load inquiry response: " + phpResponse);
+        var obj = JSON.parse(phpResponse);
+        var limit = obj.length;
+        if(limit >= 1){
+            for(var x = 0; x < limit;x++){
+                var date = obj[x].month + " " + obj[x].day + ", " + obj[x].year;
+                items.push(
+                    {
+                        inquiryID: obj[x].inquiryID,
+                        message: obj[x].message,
+                        userID: obj[x].user_id,
+                        name: obj[x].name
+                    }
+                )
+                console.log("name: " + obj[x].name);
+            }   
             loadingBar.visibility = "collapse";
             loadingBar.stop();
-        })
-    }else{
-        console.log("data has been cached...");
-    }
+            var listview = page.getViewById("listview");
+            listview.items = items;
+            console.log("done fishing for inquiries...");
+        }else{
+            loadingBar.visibility = "collapse";
+            loadingBar.stop();
+            var listview = page.getViewById("listview");
+            listview.visibility = "collapse";
+            var noData = page.getViewById("noData");
+            noData.class = "page-placeholder";
+        }
+    }, function (error) {
+        console.log(JSON.stringify(error));
+        loadingBar.visibility = "collapse";
+        loadingBar.stop();
+    })
+    
 };
 exports.fabTap = function(){
     console.log("fab tap pressed");
@@ -71,7 +69,15 @@ exports.fabTap = function(){
 }
 
 exports.onNavBtnTap = function(){
-    frameModule.topmost().goBack();
+    //frameModule.topmost().goBack();
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
+exports.backEvent = function(args){
+    args.cancel = true
+
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
 }
 
 function twoDigits(d){

@@ -11,7 +11,7 @@
 
     <GridLayout rows="*">
         <StackLayout orientation="vertical" >
-            <Gif:Gif id="loadingBar" src="http://giflat.dceven.fr/wp-content/uploads/2017/04/loader-white.gif" />
+            <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" />
             <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
             row="0" itemTap="itemTap"> 
 

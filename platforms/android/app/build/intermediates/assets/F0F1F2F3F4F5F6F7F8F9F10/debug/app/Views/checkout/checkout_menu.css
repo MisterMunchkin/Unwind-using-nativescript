@@ -58,4 +58,7 @@
     padding-bottom: 20;
 }
 .disabled-btn{background-color:#8fbeda;color:aliceblue;height:60;width:200;font-family:"Lato"}
-
+.delete{
+    height: "50%";
+    width: "50%"
+}

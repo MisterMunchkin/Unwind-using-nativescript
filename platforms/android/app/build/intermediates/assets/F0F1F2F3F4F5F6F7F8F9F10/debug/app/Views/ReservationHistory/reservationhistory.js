@@ -79,6 +79,9 @@ exports.onloaded = function(args){
         }
         
     }, function (error) {
+        loadingBar.visibility = "collapse";
+        loadingBar.stop();
+        alert({  message: error, okButtonText: "Close" });  
         console.log(JSON.stringify(error));
     })
 

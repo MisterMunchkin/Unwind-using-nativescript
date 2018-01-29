@@ -24,6 +24,9 @@ function onNavigatingTo(args) {
     
     tabView.selectedIndex = 1;*/
 
+    //tabView = page.getViewById("tabview")
+    //tabView.selectedIndex = global.activeTab;
+
     page.bindingContext = new TabsViewModel();
 }
 
@@ -37,7 +40,7 @@ function onSelectedIndexChanged(args) {
     const bindingContext = tabView.bindingContext;
     const selectedTabViewItem = tabView.items[args.newIndex];
 
-    
+    global.activeTab = args.newIndex;
     //const selectedTabViewItem = tabView.items[2];
     bindingContext.set("title", selectedTabViewItem.title);
    // console.log("TAB INDEX: " + args.newIndex);

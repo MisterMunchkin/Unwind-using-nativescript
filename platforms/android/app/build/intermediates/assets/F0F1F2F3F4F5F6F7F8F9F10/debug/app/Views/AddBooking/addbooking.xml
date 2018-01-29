@@ -11,7 +11,7 @@ Feel free to customize layouts and components to change how the tab view looks.
 
         <Page.actionBar>
             <ActionBar class="label page-blue" title="Add Booking">
-               <!-- <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />-->
+                <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
             </ActionBar>
         </Page.actionBar>
 
