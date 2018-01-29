@@ -1,22 +1,29 @@
 const TabsViewModel = require("./tabs-view-model");
-
+var page;
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize data for the whole tab
 * navigation layout as a whole.
 *************************************************************/
-
+var tabView;
 function onNavigatingTo(args) {
     /* ***********************************************************
     * The "onNavigatingTo" event handler lets you detect if the user navigated with a back button.
     * Skipping the re-initialization on back navigation means the user will see the
     * page in the same data state that he left it in before navigating.
     *************************************************************/
+    
     if (args.isBackNavigation) {
         
         return;
     }
+    
 
     const page = args.object;
+
+  /*  tabView = page.getViewById("tabview");
+    
+    tabView.selectedIndex = 1;*/
+
     page.bindingContext = new TabsViewModel();
 }
 
@@ -29,6 +36,8 @@ function onSelectedIndexChanged(args) {
     const tabView = args.object;
     const bindingContext = tabView.bindingContext;
     const selectedTabViewItem = tabView.items[args.newIndex];
+
+    
     //const selectedTabViewItem = tabView.items[2];
     bindingContext.set("title", selectedTabViewItem.title);
    // console.log("TAB INDEX: " + args.newIndex);

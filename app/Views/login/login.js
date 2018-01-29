@@ -64,6 +64,7 @@ exports.signIn = function(){
             }, function (error) {
                 console.log("ERROR");
                 console.log(JSON.stringify(error));
+                signIn.isEnabled = "true";
                 loader.hide();
                 alert({message: "please make sure you're connected to the internet and try again", okButtonText: "Okay"});
             })
@@ -88,6 +89,7 @@ function then(response){
     var phpResponse = response._bodyText;
 
     if(!response.ok){
+        signIn.isEnabled = "true";
         alert({message: "an error has occured, please make sure you're connected to the internet and try again", okButtonText: "Okay"});
     }
    
@@ -148,8 +150,9 @@ function then(response){
         
     }else{
        // page.getViewById("email").text = "";
+        signIn.isEnabled = "true";
         page.getViewById("password").text = "";
-        alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });     
+        alert({  message: phpResponse, okButtonText: "Close" });     
     }
 
     

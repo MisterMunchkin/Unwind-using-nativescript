@@ -66,11 +66,19 @@ exports.onloaded = function(args){
 exports.fabTap = function(){
     console.log("fab tap pressed");
 
-    
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Inquiries/addinquiries/addinquiries");
 }
 
 exports.onNavBtnTap = function(){
-    frameModule.topmost().goBack();
+    //frameModule.topmost().goBack();
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
+exports.backEvent = function(){
+    
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
 }
 
 function twoDigits(d){

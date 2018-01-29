@@ -66,7 +66,8 @@ exports.onloaded = function(args){
 exports.fabTap = function(){
     console.log("fab tap pressed");
 
-    
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Inquiries/addinquiries/addinquiries");
 }
 
 exports.onNavBtnTap = function(){
