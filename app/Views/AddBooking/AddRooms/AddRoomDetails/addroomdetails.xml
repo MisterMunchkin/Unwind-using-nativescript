@@ -1,20 +1,30 @@
-<Page class="page-content" loaded="onloaded">
+<Page class="page-content" 
+    xmlns:ns="nativescript-carousel"
+    loaded="onloaded">
     <Page.actionBar>
         <ActionBar id="actionBar" class="label page-blue" title="Menu">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
     <StackLayout orientation="vertical">
-        <Label class="page-icon fa" text="&#xf1ea;"></Label>
-        <Label class="page-placeholder" text="image here"></Label>
+        <!--<Label class="page-icon fa" text="&#xf1ea;"></Label>
+        <Label class="page-placeholder" text="image here"></Label>-->
 
-        <Label  id="roomName" text="{{ roomTypeName }}"></Label>
+        <ns:Carousel id="carousel"  height="250" pageChanged="CarouselChangeEvent" pageScrolling="CarouselScrollingEvent">
+                <ns:Carousel.itemTemplate>
+                    <ns:CarouselItem verticalAlignment="center" tap="carouselTap">
+                        <Image src="{{ image }}" height="250" stretch="fill" />
+                    </ns:CarouselItem>
+                </ns:Carousel.itemTemplate>
+        </ns:Carousel>
+
+        <!--<Label  id="roomName" text="{{ roomTypeName }}"></Label> -->
 
         
         <TextField autocorrect="false" 
                 hint="Room Quantity" id="roomQty"
                 keyboardType="number" maxLength="2"></TextField>
 
-        <Button text="ADD TO CART" id="addToCart" tap="addToCartTap" />
+        <Button class="blue-btn" text="ADD TO CART" id="addToCart" tap="addToCartTap" />
     </StackLayout>
 </Page>

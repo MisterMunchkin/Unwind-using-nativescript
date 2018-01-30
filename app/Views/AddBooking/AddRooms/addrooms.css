@@ -56,3 +56,21 @@
 .hiddenLayout{
     visibility: collapse
 }
+.listStyle{
+    border-style: solid;
+    border-width: 2px;
+    border-color: antiquewhite;
+}
+.roomType{
+    font-family:"Lato";
+    font-size: 18px;
+    color: rgb(141, 36, 36)
+}
+.roomContext{
+    font-family:"Lato";
+    font-size: 15px;
+    color: rgb(141, 36, 36)
+}
+.antique-white-layout{
+    background-color: antiquewhite
+}

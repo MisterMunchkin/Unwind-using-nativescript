@@ -137,7 +137,7 @@ exports.onloaded = function(args) {
 
         loadingBar.visibility = "collapse";
         loadingBar.stop();
-        var carousel = page.getViewById("carousel"); //NOT WORKING 
+        var carousel = page.getViewById("carousel"); 
         carousel.items = carouselArray;
         var listview = page.getViewById("listview");
         listview.items = items;

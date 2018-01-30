@@ -85,8 +85,37 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
                 //console.log("inside then function: " + obj);
             // console.log("inside if condition");
                 var limit = obj.length;
-            
+                
+                var itemImage = "~/images/Rooms/";
+
                 for(var x = 0; x < limit;x++){
+                    console.log("room type: " + obj[x].roomTypeName);
+                    switch(obj[x].roomTypeName){
+                        case "Regular":
+                            itemImage += "singlebed.png";
+                            break;
+
+                        case "Suite":
+                            itemImage += "suite.png";
+                            break;
+
+                        case "Twin Queen Bedroom":
+                            itemImage += "twin.png";
+                            break;
+
+                        case "Amazing":
+                            itemImage += "amazing.png";
+                            break;
+
+                        case "Superior Size King":
+                            itemImage += "superiorKing.png";
+                            break;
+
+                        case "Test":
+                            itemImage += "test.png"
+                            break;
+                    }
+
                     items.push(
                         {
                             roomTypeID: obj[x].roomTypeID,
@@ -94,12 +123,13 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
                             roomTypePrice: obj[x].roomTypePrice,
                             roomTypeDescription: obj[x].roomTypeDescription,
                             roomTypeCount: obj[x].roomTypeCount,
-                            itemImage: "",
+                            itemImage: itemImage,
                             currency: "PHP"
                             
                         }
 
                     );
+                    itemImage = "~/images/Rooms/";
                 // console.log(obj[x].roomTypeName);
                 }
                 loadingBar.visibility = "collapse";
@@ -178,7 +208,7 @@ exports.itemSelected = function(args){// turn quantity into an input
             roomTypePrice: tappedItem.roomTypePrice,
             roomTypeDescription: tappedItem.roomTypeDescription,
             roomTypeCount: tappedItem.roomTypeCount,
-            itemImage: "",
+            itemImage: tappedItem.itemImage,
             bookingDetails: requestObject
         }
     }

@@ -18,9 +18,20 @@ exports.onloaded = function (args) {
         roomTypePrice: pageDataContext.roomTypePrice,
         roomTypeDescription: pageDataContext.roomTypeDescription,
         roomTypeCount: pageDataContext.roomTypeCount,
-        itemImage: "",
+        itemImage: pageDataContext.itemImage,
         bookingDetails: pageDataContext.bookingDetails
     };
+
+    var carouselArray = [];
+    //console.log("itemema"roomContext.itemImage
+    carouselArray.push(
+        {
+            image: roomContext.itemImage
+        }
+    )
+
+    var carousel = page.getViewById("carousel");
+    carousel.items = carouselArray;
     console.log(roomContext.roomTypeName);
     page.bindingContext = {
         roomTypeName: roomContext.roomTypeName
@@ -40,7 +51,8 @@ exports.addToCartTap = function(){
             quantity: parseInt(roomQty),
             roomTypeName: roomContext.roomTypeName,
             itemImage: roomContext.itemImage,
-            roomTypePrice: roomContext.roomTypePrice
+            roomTypePrice: roomContext.roomTypePrice,
+            itemImage: roomContext.itemImage
         }
         global.roomOrdered.push(roomItem);
 
