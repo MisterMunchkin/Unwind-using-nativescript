@@ -59,7 +59,8 @@ exports.onloaded = function (args) {
                         username: data[x].username,
                         itemImage: starRate,
                         review: data[x].review,
-                        user_Id: data[x].user_id
+                        user_Id: data[x].user_id,
+                        rate: data[x].rate
                     }
                 )
                 starRate = "res://";

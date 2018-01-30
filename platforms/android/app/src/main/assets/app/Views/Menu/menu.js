@@ -47,7 +47,7 @@ exports.onloaded = function(args){
 
            // items = new ObservableArray([]);
             obj = JSON.parse(obj);
-            //console.log("inside then function: " + obj);
+            console.log("inside then function: " + obj);
             var limit = obj.length;
            
             for(var x = 0; x < limit;x++){
@@ -59,7 +59,8 @@ exports.onloaded = function(args){
                         price: obj[x].price,
                         currency: "PHP",
                         tapped: 0,
-                        category: obj[x].category
+                        category: obj[x].category,
+                        itemImage: "~/images/Menu/Menu_Category/pint.png"
                     
                     }
 

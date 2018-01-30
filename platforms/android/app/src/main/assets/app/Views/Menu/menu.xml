@@ -14,22 +14,22 @@
             <!--<Image id="checkinNotifIcon" class="hiddenLayout page-icon fa" stretch="none" src="res://lock_outline_grey" />-->
             <Label id="noData" class="hiddenLayout page-placeholder" text="no food available here"></Label>
 
-            <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
+            <lv:RadListView id="listview" items="{{ items }}" 
             row="0" itemTap="itemTap"> 
 
                 <lv:RadListView.listViewLayout>
-                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                    <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="250" spanCount="2" />
                 </lv:RadListView.listViewLayout>
 
                 <lv:RadListView.itemTemplate>
-                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                        <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
-                        <StackLayout row="0" col="1" >
+                    <GridLayout class="list-group-item listStyle" rows="130,auto" >
+                        <Image row="0" src="{{ itemImage }}" stretch="aspectFit" />
+                        <StackLayout row="1"  >
 
-                            <Label text="{{ name }}" class="list-group-item-heading" />
-                            <Label text="{{ description }}" class="list-group-item-text" />
+                            <Label text="{{ name }}" class="antique-white-layout foodName" />
+                            <!--<Label text="{{ description }}" class="list-group-item-text" /> -->
                             
-                            <Label text="{{ currency + ' ' + price }}" class="list-group-item-text" />
+                            <Label text="{{ currency + ' ' + price }}" class="antique-white-layout foodPrice" />
                             
                         </StackLayout>
                     </GridLayout> 
