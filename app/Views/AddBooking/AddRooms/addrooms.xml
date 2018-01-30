@@ -34,8 +34,8 @@ Feel free to customize layouts and components to change how the tab view looks.
                         <StackLayout row="0" col="1" orientation="vertical">
 
                             <Label text="{{ roomTypeName }}" class="list-group-item-heading" />
-                            <Label text="{{ roomTypePrice }}" class="list-group-item-text" />
-                            <Label text="{{ roomTypeCount }}" class="list-group-item-text" />
+                            <Label text="{{ currency + ' ' + roomTypePrice }}" class="list-group-item-text" />
+                            <Label text="{{ 'Quantity ' + roomTypeCount }}" class="list-group-item-text" />
                             
                         </StackLayout>
                         </GridLayout> 

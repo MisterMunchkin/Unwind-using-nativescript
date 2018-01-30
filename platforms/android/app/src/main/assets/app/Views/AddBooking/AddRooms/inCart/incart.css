@@ -57,3 +57,8 @@
 .hiddenLayout{
     visibility: collapse
 }
+.page-placeholder{
+    font-size: 25px;
+    font-family: "Lato";
+    text-align: center;
+}

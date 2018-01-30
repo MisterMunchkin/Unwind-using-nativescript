@@ -94,7 +94,9 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
                             roomTypePrice: obj[x].roomTypePrice,
                             roomTypeDescription: obj[x].roomTypeDescription,
                             roomTypeCount: obj[x].roomTypeCount,
-                            itemImage: ""
+                            itemImage: "",
+                            currency: "PHP"
+                            
                         }
 
                     );
