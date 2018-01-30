@@ -152,6 +152,7 @@ function then(response){
        // page.getViewById("email").text = "";
         signIn.isEnabled = "true";
         page.getViewById("password").text = "";
+        loader.hide();
         alert({  message: phpResponse, okButtonText: "Close" });     
     }
 

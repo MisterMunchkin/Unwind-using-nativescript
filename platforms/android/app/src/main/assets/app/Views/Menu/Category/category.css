@@ -31,11 +31,14 @@
 }
 .categoryName{
     font-family:"Lato";
-    font-size: 16px;
-    color: white
+    font-size: 18px;
+    color: rgb(141, 36, 36)
+}
+.antique-white-layout{
+    background-color: antiquewhite
 }
 .listStyle{
     border-style: solid;
     border-width: 2px;
-    border-color: #3ba9e9;
+    border-color: antiquewhite;
 }

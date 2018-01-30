@@ -1,9 +1,10 @@
 <Page class="page-content" loaded="onloaded"
     xmlns:lv="nativescript-pro-ui/listview" 
+    xmlns:Gif="nativescript-gif"
         xmlns:ns="nativescript-carousel">
     <Page.actionBar>
         <ActionBar class="label-white page-blue" title="Booking Detail">
-           
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
     <ScrollView>
@@ -22,6 +23,8 @@
         
             
            <!-- <Label text="Rooms" class="label" /> -->
+            
+            <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" height="100" />
             <lv:RadListView id="listview"  class="list-group" row="0" itemTap="itemTap"> 
 
                 <lv:RadListView.listViewLayout>

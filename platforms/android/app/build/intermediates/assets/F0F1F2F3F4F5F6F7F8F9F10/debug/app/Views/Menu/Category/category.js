@@ -5,8 +5,8 @@ var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
-var items;
-var pageData = new Observable();
+var items = [];
+//var pageData = new Observable();
 
 var loader = new LoadingIndicator();
 
@@ -27,42 +27,51 @@ var options = {
 exports.onloaded = function(args){
     page = args.object
     console.log("<<<<<<menu page>>>>>>")
-    page.bindingContext = pageData;
+    //page.bindingContext = pageData;
 
 
-    items = new ObservableArray([]);
-
+    //items = new ObservableArray([]);
+    items = [];
     items.push(
         {
             name: "Main Course",
-            description: "basta"
+            description: "basta",
+            itemImage: "~/images/Menu/Menu_Category/meat.png"
         },
         {
             name: "Appetizers",
-            description: "basta"
+            description: "basta",
+            itemImage: "~/images/Menu/Menu_Category/appetizer.png"
         },
         {
             name: "Soup",
-            description: "basta"
+            description: "basta",
+            itemImage: "~/images/Menu/Menu_Category/soup.png"
         },
         {
             name: "Salads",
-            description: "basta"
+            description: "basta",
+            itemImage: "~/images/Menu/Menu_Category/salad.png"
         },
         {
             name: "Side Dish",
-            description: "basta"
+            description: "basta",
+            itemImage: "~/images/Menu/Menu_Category/rice.png"
         },
         {
             name: "Beverages",
-            description: "basta"
+            description: "basta",
+            itemImage: "~/images/Menu/Menu_Category/pint.png"
         },
         {
             name: "Desserts",
-            description: "basta"
+            description: "basta",
+            itemImage: "~/images/Menu/Menu_Category/ice-cream.png"
         }
     )
-    pageData.set("items", items);
+    //pageData.set("items", items);
+    var listview = page.getViewById("listview");
+    listview.items = items;
 };
 exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
@@ -79,16 +88,8 @@ function isData(obj){
     return (obj == "no data")? 0: 1;
 }
 
-var foodArray = new Array();
-/*exports.selectedItems = function(args){
-    var tappedView = args.view,
-    tappedItem = tappedView.bindingContext;
-    console.log(tappedItem);
-    foodArray.push(
-        tappedItem
-    );
-}
-*/
+
+
 exports.itemTap = function(args){
     var tappedView = args.view;
     var tappedItem = tappedView.bindingContext;
