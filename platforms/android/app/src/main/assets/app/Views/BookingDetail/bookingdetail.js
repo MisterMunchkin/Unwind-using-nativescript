@@ -47,7 +47,9 @@ exports.onloaded = function(args) {
         checkinDate: pageDataContext.checkinDate,
         checkoutDate: pageDataContext.checkoutDate,
         resStatus: pageDataContext.resStatus,
-        resID: pageDataContext.resID
+        resID: pageDataContext.resID,
+        adult_qty: pageDataContext.adult_qty,
+        child_qty: pageDataContext.child_qty,
     };
 
     var loadingBar = page.getViewById("loadingBar");
@@ -55,19 +57,23 @@ exports.onloaded = function(args) {
     var resStatusUI = page.getViewById("resStatus");
     var checkinDateUI = page.getViewById("checkinDate");
     var checkoutDateUI = page.getViewById("checkoutDate");
+    var adult_qtyUI = page.getViewById("adult_qty");
+    var child_qtyUI = page.getViewById("child_qty");
 
-    var MonthNames = ["January", "February", "March", "April", "May",
-            "June", "July", "August", "September", "October", "November", "December"];
+  //  var MonthNames = ["January", "February", "March", "April", "May",
+          //  "June", "July", "August", "September", "October", "November", "December"];
 
-    var checkinMonthIndex = new Date(requestObject.checkinDate);
-    var checkoutMonthIndex = new Date(requestObject.checkoutDate);
+ //   var checkinMonthIndex = new Date(requestObject.checkinDate);
+ //   var checkoutMonthIndex = new Date(requestObject.checkoutDate);
 
-    var newCheckin = MonthNames[checkinMonthIndex.getMonth()] + " " + checkinMonthIndex.getDate() + ", " + checkinMonthIndex.getFullYear();
-    var newCheckout = MonthNames[checkoutMonthIndex.getMonth()] + " " + checkoutMonthIndex.getDate() + ", " + checkoutMonthIndex.getFullYear(); 
+ //   var newCheckin = MonthNames[checkinMonthIndex.getMonth()] + " " + checkinMonthIndex.getDate() + ", " + checkinMonthIndex.getFullYear();
+ //   var newCheckout = MonthNames[checkoutMonthIndex.getMonth()] + " " + checkoutMonthIndex.getDate() + ", " + checkoutMonthIndex.getFullYear(); 
     
     resStatusUI.text = "Reservation Status: " + requestObject.resStatus;
-    checkinDateUI.text = "Check In Date: " + newCheckin;
-    checkoutDateUI.text = "Check Out Date: " + newCheckout;
+    checkinDateUI.text = "Check In Date: " + requestObject.checkinDate;
+    checkoutDateUI.text = "Check Out Date: " + requestObject.checkoutDate;
+    adult_qtyUI.text = "Adult quantity: " + requestObject.adult_qty;
+    child_qtyUI.text = "Child quantity: " + requestObject.child_qty;
 
     var roomDataRequest = {reservation_request_id: requestObject.resID};
     

@@ -209,11 +209,13 @@ exports.onItemTap = function(args){
 
     var navigationOptions = {
         moduleName: "Views/BookingDetail/bookingdetail",
-        context: {resDate: resDate,
-                  checkinDate: checkinDate,
-                  checkoutDate: checkoutDate,
-                  resStatus: resStatus,
-                  resID: resID}
+        context: {resDate: tappedItem.reservationDate,
+                  checkinDate: tappedItem.checkinDateFormatted,
+                  checkoutDate: tappedItem.checkoutDateFormatted,
+                  resStatus: tappedItem.reservationStatus,
+                  resID: tappedItem.reservationID,
+                  adult_qty: tappedItem.adult_qty,
+                  child_qty: tappedItem.child_qty}
     }
     console.log(resDate);
     console.log(checkinDate);
