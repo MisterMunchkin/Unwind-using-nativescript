@@ -42,15 +42,45 @@ exports.onloaded = function(args){
     }).then(function (response) {
         obj = response._bodyText;
        
-
+        
         if(isData(obj) > 0){
 
            // items = new ObservableArray([]);
             obj = JSON.parse(obj);
-            console.log("inside then function: " + obj);
-            var limit = obj.length;
            
+            var limit = obj.length;
+            
+            var itemImage = "~/images/Menu/FoodMenu/";
+
             for(var x = 0; x < limit;x++){
+
+                switch(obj[x].name){
+                    case "Chicken":
+                    itemImage += "grilledChicken1.jpg";
+                    break;
+
+                    case "Lechon Kawali":
+                    itemImage += "lechonKawali.jpg";
+                    break;
+
+                    case "Bacon":
+                    itemImage += "bacon1.jpg";
+                    break;
+
+                    case "Nachos":
+                    itemImage += "nachos1.jpg";
+                    break;
+
+                    case "Plain Rice":
+                    itemImage += "plainRice1.jpg";
+                    break;
+
+                    case "Chocolate Milk":
+                    itemImage += "chocolateMilk1.jpg";
+                    break;
+
+                }
+
                 items.push(
                     {
                         food_id: obj[x].food_id,
@@ -60,12 +90,13 @@ exports.onloaded = function(args){
                         currency: "PHP",
                         tapped: 0,
                         category: obj[x].category,
-                        itemImage: "~/images/Menu/Menu_Category/pint.png"
+                        itemImage: itemImage
                     
                     }
 
                 );
                 console.log("food in category: " + obj[x].name);
+                itemImage = "~/images/Menu/FoodMenu/";
             }
             pageData.set("items", items);
         }else{
@@ -118,7 +149,8 @@ exports.itemTap = function(args){
             name: tappedItem.name,
             description: tappedItem.description,
             price: tappedItem.price,
-            category: tappedItem.category
+            category: tappedItem.category,
+            itemImage: tappedItem.itemImage
         }
     }
     console.log("Tapped item: " + JSON.stringify(tappedItem));

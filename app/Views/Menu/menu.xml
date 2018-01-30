@@ -23,7 +23,7 @@
 
                 <lv:RadListView.itemTemplate>
                     <GridLayout class="list-group-item listStyle" rows="130,auto" >
-                        <Image row="0" src="{{ itemImage }}" stretch="aspectFit" />
+                        <Image row="0" src="{{ itemImage }}" stretch="aspectFill" />
                         <StackLayout row="1"  >
 
                             <Label text="{{ name }}" class="antique-white-layout foodName" />
