@@ -83,8 +83,36 @@ exports.onloaded = function(args) {
 
         var items = [];
         var limit = roomArray.length;
+        var carouselArray = [];
+        var itemImage = "~/images/Rooms/";
 
         for(var x = 0;x < limit;x++){
+
+            switch (roomArray[x].name) {
+                case "Regular":
+                    itemImage += "singlebed.png";
+                    break;
+
+                case "Suite":
+                    itemImage += "suite.png";
+                    break;
+
+                case "Twin Queen Bedroom":
+                    itemImage += "twin.png";
+                    break;
+
+                case "Amazing":
+                    itemImage += "amazing.png";
+                    break;
+
+                case "Superior Size King":
+                    itemImage += "superiorKing.png";
+                    break;
+
+                case "Test":
+                    itemImage += "test.png"
+                    break;
+            }
 
 
             items.push(
@@ -92,18 +120,19 @@ exports.onloaded = function(args) {
                     roomNumber: roomArray[x].roomNumber,
                     roomName: roomArray[x].name,
                     price: roomArray[x].price,
-                    currency: "PHP"
+                    currency: "PHP",
+                    itemImage: itemImage
                 }
             )
-            var carouselArray = [];
+            
 
             carouselArray.push(
                 {
-                    image: roomArray[x].roomTypePicture
+                    image: itemImage
                 }
             );
 
-            
+            itemImage = "~/images/Rooms/";
         }
 
         loadingBar.visibility = "collapse";
