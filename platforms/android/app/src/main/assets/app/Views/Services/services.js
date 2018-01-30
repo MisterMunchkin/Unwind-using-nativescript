@@ -58,7 +58,8 @@ exports.onloaded = function(args){
                         {
                             service_name: obj[x].service_name,
                             service_type: obj[x].service_type,
-                            service_id: obj[x].service_id
+                            service_id: obj[x].service_id,
+                            itemImage: "~/images/Menu/Menu_Category/pint.png"
                         }
 
                     );
