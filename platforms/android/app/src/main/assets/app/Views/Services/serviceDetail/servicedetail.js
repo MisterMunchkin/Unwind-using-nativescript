@@ -40,14 +40,46 @@ exports.onloaded = function (args) {
     
 
     var limit = global.roomsCheckedIn.length;
+
+    var itemImage = "~/images/Rooms/";
     for(var x = 0;x < limit;x++){
+
+        switch (global.roomsCheckedIn[x].RoomName){
+            case "Regular":
+            itemImage += "singlebed.png";
+            break;
+            
+            case "Suite":
+            itemImage += "suite.png";
+            break;
+
+            case "Twin Queen Bedroom":
+            itemImage += "twin.png";
+            break;
+
+            case "Amazing":
+            itemImage += "amazing.png";
+            break;
+            
+            case "Superior Size King":
+            itemImage += "superiorKing.png";
+            break;
+
+            case "Test":
+            itemImage += "test.png"
+            break;
+        }
+
         items.push(
             {
                 roomNumber: global.roomsCheckedIn[x].roomNumber,
                 roomType: global.roomsCheckedIn[x].RoomName,
-                roomID: global.roomsCheckedIn[x].roomId
+                roomID: global.roomsCheckedIn[x].roomId,
+                itemImage: itemImage
             }
         )
+
+        itemImage = "~/images/Rooms/";
     }
     pageData.set("items", items);
     
