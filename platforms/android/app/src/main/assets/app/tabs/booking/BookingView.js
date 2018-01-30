@@ -153,14 +153,47 @@ function loadData(phpContext){
             "June", "July", "August", "September", "October", "November", "December"];
 
             console.log("num of items: " + limit);
+            var itemImage = "~/images/Booking/status/";
+
             for (var x = 0; x < limit; x++) {
-                
+                console.log("status: " + obj[x].reservationStatus);
+
+                switch(obj[x].reservationStatus){
+                    case "Waiting":
+                    itemImage += "waiting.png";
+                    break;
+                    
+                    case "Checked-in":
+                    itemImage += "check-in.png";
+                    break;
+
+                    case "Cancelled":
+                    itemImage += "cancelled.png";
+                    break;
+
+                    case "Checked-out":
+                    itemImage += "check-out.png";
+                    break;
+
+                    case "Accepted":
+                    itemImage += "accept.png";
+                    break;
+
+                    case "Rejected":
+                    itemImage += "reject.png";
+                    break;
+
+                    case "Pending":
+                    itemImage += "waiting.png";
+                    break;
+                }
+
                 checkinMonthIndex = new Date(obj[x].checkinDate)
                 checkoutMonthIndex = new Date(obj[x].checkoutDate);
 
                 newCheckin = MonthNames[checkinMonthIndex.getMonth()] + " " + checkinMonthIndex.getDate() + ", " + checkinMonthIndex.getFullYear();
                 newCheckout = MonthNames[checkoutMonthIndex.getMonth()] + " " + checkoutMonthIndex.getDate() + ", " + checkoutMonthIndex.getFullYear(); 
-                console.log("newCheckin: " + newCheckin);
+               
                 items.push(
                     {
                         reservationDate: obj[x].reservationDate,
@@ -169,7 +202,7 @@ function loadData(phpContext){
                         checkoutDate: obj[x].checkoutDate,
                         checkinDate: obj[x].checkinDate,
                         reservationStatus: obj[x].reservationStatus,
-                        itemImage: "",
+                        itemImage: itemImage,
                         reservationID:  obj[x].reservationRequestID,
                         adult_qty: obj[x].adult_qty,
                         child_qty: obj[x].child_qty
@@ -177,7 +210,7 @@ function loadData(phpContext){
                     }
 
                 );
-
+                itemImage = "~/images/Booking/status/";
             }
         }else{
             //label no data
