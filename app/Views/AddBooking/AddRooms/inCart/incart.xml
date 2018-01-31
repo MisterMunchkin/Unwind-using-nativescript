@@ -20,28 +20,34 @@ Feel free to customize layouts and components to change how the tab view looks.
         <StackLayout orientation="vertical" row="0">
             <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
          
-            <lv:RadListView id="listview" items="{{ items }}"  
-            row="1" selectionBehavior="Press" itemSelected="itemSelected" itemDeselected="itemDeselected" > 
+            <lv:RadListView id="listview" items="{{ items }}"  class="list-group" height="500"
+             selectionBehavior="Press" itemSelected="itemSelected" itemDeselected="itemDeselected" > 
 
                 <lv:RadListView.listViewLayout>
-                    <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="250" spanCount="2" />
+                    <lv:ListViewLinearLayout scrollDirection="Vertical"  />
                 </lv:RadListView.listViewLayout>
 
                 <lv:RadListView.itemTemplate>
-                    <GridLayout class="list-group-item listStyle" rows="130, auto" >
-                        <Image row="0" src="{{ itemImage }}" stretch="aspectFit" />
-                        <StackLayout row="1" >
+                    <GridLayout class="list-group-item" rows="auto" columns="auto, *, 100">
+                        <Image row="0" col="0"  src="{{ itemImage }}" class="thumb img-rounded" />
+                        <StackLayout row="0" col="1" >
 
-                            <Label text="{{ roomTypeName }}" class="antique-white-layout roomType" />
-                            <Label text="{{ roomTypePrice }}" class="antique-white-layout roomContext" />
-                            <Label text="{{ quantity }}" class="antique-white-layout roomContext" />
-                            
+                            <Label text="{{ roomTypeName }}" class="list-group-item-heading" />
+                            <Label text="{{ currency + ' ' + roomTypePrice }}" class="list-group-item-text" />
+            
                         </StackLayout>
-                        </GridLayout> 
+                        <StackLayout row="0" col="2">
+                                <Image src="res://ic_delete_black_24dp" class="delete" tap="remove" />
+                                <Label text="{{ 'Quantity: ' + quantity }}" class="list-group-item-text" />
+                        </StackLayout>
+                    </GridLayout> 
                 </lv:RadListView.itemTemplate>
             </lv:RadListView>
         </StackLayout>
-
+        <StackLayout row="1" orientation="horizontal">
+            <Label class="label-blue label-big" text="Grand Total: " />
+            <Label id="grandTotal" class="label-blue label-big" />
+        </StackLayout>
     </GridLayout>
     
         

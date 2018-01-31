@@ -77,6 +77,9 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
         }).then(function (response) {
             obj = response._bodyText;
             
+            if(!response.ok){
+                alert({message: "an error has occured, please make sure you're connected to the internet", okButtonText: "Okay"});
+            }
         // console.log("BODY: " + obj);
             if(obj != "no data"){
 
@@ -142,13 +145,15 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
                 var noData = page.getViewById("noData");
                 noData.class = "page-placeholder";
             }
+            console.log("exiting room query");
         }, function (error) {
             console.log(JSON.stringify(error));
             loadingBar.visibility = "collapse";
             loadingBar.stop();
-            alert({ meesage: error, okButtonText: "Okay" });
+            alert({ meesage: JSON.stringify(error), okButtonText: "Okay" });
+            console.log("exiting room query");
         })
-        console.log("exiting room query");
+        
     }
 };
 exports.onNavBtnTap = function(){

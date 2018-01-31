@@ -62,3 +62,8 @@
     font-family: "Lato";
     text-align: center;
 }
+.delete{
+    height:50%;
+    width:50%
+}
+.label-big{font-size:20px;font-family:"Lato"}

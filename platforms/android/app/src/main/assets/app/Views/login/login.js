@@ -15,7 +15,7 @@ var options = {
     progress: 0.65,
     android: {
         indeterminate: true,
-        cancelable: false,
+        cancelable: true,
         max: 100,
         progressNumberFormat: "%1d/%2d",
         progressPercentFormat: 0.53,
