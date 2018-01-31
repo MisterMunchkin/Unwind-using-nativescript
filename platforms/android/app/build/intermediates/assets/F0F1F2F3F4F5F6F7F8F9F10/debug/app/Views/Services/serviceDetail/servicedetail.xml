@@ -10,20 +10,20 @@
     <GridLayout rows="*, 60">
         <StackLayout orientation="vertical">
 
-            <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
+            <lv:RadListView id="listview" items="{{ items }}"  
             row="0" itemSelected="itemSelected" itemDeselected="itemDeselected" multipleSelection="true" selectionBehavior="Press" > 
 
                 <lv:RadListView.listViewLayout>
-                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                    <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="250" spanCount="2" />
                 </lv:RadListView.listViewLayout>
 
                 <lv:RadListView.itemTemplate>
-                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                        <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" /> image of the room should be here i guess-->
-                        <StackLayout row="0" col="1" >
+                    <GridLayout class="list-group-item listStyle" rows="130, auto" >
+                        <Image row="0"  src="{{ itemImage }}" stretch="aspectFit" /> 
+                        <StackLayout row="1"  >
 
-                            <Label text="{{'Room Number: ' + roomNumber }}" class="list-group-item-heading" />
-                            <Label text="{{'Room Type: ' + roomType }}" class="list-group-item-text" />
+                            <Label text="{{'Room Number: ' + roomNumber }}" class="antique-white-layout roomNumber" />
+                            <Label text="{{'Room Type: ' + roomType }}" class="antique-white-layout roomType" />
                             
                             
                         </StackLayout>

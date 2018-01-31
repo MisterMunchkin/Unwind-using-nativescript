@@ -20,7 +20,8 @@ exports.onloaded = function (args) {
         name: pageDataContext.name,
         description: pageDataContext.description,
         price: pageDataContext.price ,
-        category: pageDataContext.category
+        category: pageDataContext.category,
+        itemImage: pageDataContext.itemImage
     };
     console.log(foodContext.name);
     page.bindingContext = {
@@ -33,16 +34,7 @@ exports.onloaded = function (args) {
 
     carouselArray.push(
         {
-            image: "~/images/default-placeholder-300x300.png"
-        },
-        {
-            image: "~/images/default-placeholder-300x300.png"
-        },
-        {
-            image: "~/images/default-placeholder-300x300.png"
-        },
-        {
-            image: "~/images/default-placeholder-300x300.png"
+            image: foodContext.itemImage
         }
     );
     var carousel = page.getViewById("carousel");

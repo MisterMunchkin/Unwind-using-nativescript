@@ -27,15 +27,18 @@ xmlns:al="nativescript-awesome-loaders"
 
                 <lv:RadListView.itemTemplate>
                     <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                    <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
+                    
+                        <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />
+
                         <StackLayout row="0" col="1" >
                            <!-- <Label class="test" text="{{ reservationDate }}" class="list-group-item-heading" /> -->
+                             <Label text="{{'Reservation Status: ' + reservationStatus }}" class="list-group-item-heading" />
                             <Label text="{{'Check-in Date: ' + checkinDateFormatted }}" class="list-group-item-text" />
                             <Label text="{{'Check-out Date: ' + checkoutDateFormatted }}" class="list-group-item-text" />
-                            <Label text="{{'Reservation Status: ' + reservationStatus }}" class="list-group-item-text" />
+                           
                             <Label text="{{'Reservation ID: ' + reservationID }}" class="list-group-item-text" />
-                            <Label text="{{'Adult Qty: ' + adult_qty }}" class="list-group-item-text" />
-                            <Label text="{{'Child Qty: ' + child_qty }}" class="list-group-item-text" />
+                            <!--<Label text="{{'Adult Qty: ' + adult_qty }}" class="list-group-item-text" />
+                            <Label text="{{'Child Qty: ' + child_qty }}" class="list-group-item-text" /> -->
                         </StackLayout>
                     </GridLayout> 
                 </lv:RadListView.itemTemplate>     

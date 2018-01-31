@@ -28,16 +28,42 @@ exports.onloaded = function (args) {
             var data = JSON.parse(phpResponse);
             var limit = data.length;
             console.log("limit: " + limit);
+            var starRate = "res://";
             for(var x = 0;x < limit;x++){
+
+                switch(data[x].rate){
+                    case "1":
+                    starRate += "one_star";
+                    break;
+
+                    case "2":
+                    starRate += "two_star";
+                    break;
+                    
+                    case "3":
+                    starRate += "three_star";
+                    break;
+                    
+                    case "4":
+                    starRate += "four_star";
+                    break;
+                    
+                    case "5":
+                    starRate += "five_star";
+                    break; 
+                }
+
                 items.push(
                     {
                         id: data[x].id,
                         username: data[x].username,
-                        rate: data[x].rate,
+                        itemImage: starRate,
                         review: data[x].review,
-                        user_Id: data[x].user_id
+                        user_Id: data[x].user_id,
+                        rate: data[x].rate
                     }
                 )
+                starRate = "res://";
                 //console.log("id: " + data[x].id);
             }
             loadingBar.visibility = "collapse";

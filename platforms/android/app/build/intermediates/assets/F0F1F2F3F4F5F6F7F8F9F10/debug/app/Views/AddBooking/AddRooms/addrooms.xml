@@ -21,21 +21,22 @@ Feel free to customize layouts and components to change how the tab view looks.
         <StackLayout orientation="vertical" row="0">
             <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" height="200" />
             <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
-            <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
+            
+            <lv:RadListView id="listview" items="{{ items }}" 
             row="1" selectionBehavior="Press" itemSelected="itemSelected" itemDeselected="itemDeselected" > 
 
                 <lv:RadListView.listViewLayout>
-                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                    <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="250" spanCount="2" />
                 </lv:RadListView.listViewLayout>
 
                 <lv:RadListView.itemTemplate>
-                    <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                        <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />
-                        <StackLayout row="0" col="1" orientation="vertical">
+                    <GridLayout class="list-group-item listStyle" rows="130, auto" >
+                        <Image row="0" src="{{ itemImage }}" stretch="aspectFit" />
+                        <StackLayout row="1" >
 
-                            <Label text="{{ roomTypeName }}" class="list-group-item-heading" />
-                            <Label text="{{ roomTypePrice }}" class="list-group-item-text" />
-                            <Label text="{{ roomTypeCount }}" class="list-group-item-text" />
+                            <Label text="{{ roomTypeName }}" class="antique-white-layout roomType" />
+                            <Label text="{{ currency + ' ' + roomTypePrice }}" class="antique-white-layout roomContext" />
+                            <Label text="{{ 'Quantity ' + roomTypeCount }}" class="antique-white-layout roomContext" />
                             
                         </StackLayout>
                         </GridLayout> 

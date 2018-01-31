@@ -47,7 +47,9 @@ exports.onloaded = function(args) {
         checkinDate: pageDataContext.checkinDate,
         checkoutDate: pageDataContext.checkoutDate,
         resStatus: pageDataContext.resStatus,
-        resID: pageDataContext.resID
+        resID: pageDataContext.resID,
+        adult_qty: pageDataContext.adult_qty,
+        child_qty: pageDataContext.child_qty,
     };
 
     var loadingBar = page.getViewById("loadingBar");
@@ -55,19 +57,15 @@ exports.onloaded = function(args) {
     var resStatusUI = page.getViewById("resStatus");
     var checkinDateUI = page.getViewById("checkinDate");
     var checkoutDateUI = page.getViewById("checkoutDate");
+    var adult_qtyUI = page.getViewById("adult_qty");
+    var child_qtyUI = page.getViewById("child_qty");
 
-    var MonthNames = ["January", "February", "March", "April", "May",
-            "June", "July", "August", "September", "October", "November", "December"];
 
-    var checkinMonthIndex = new Date(requestObject.checkinDate);
-    var checkoutMonthIndex = new Date(requestObject.checkoutDate);
-
-    var newCheckin = MonthNames[checkinMonthIndex.getMonth()] + " " + checkinMonthIndex.getDate() + ", " + checkinMonthIndex.getFullYear();
-    var newCheckout = MonthNames[checkoutMonthIndex.getMonth()] + " " + checkoutMonthIndex.getDate() + ", " + checkoutMonthIndex.getFullYear(); 
-    
     resStatusUI.text = "Reservation Status: " + requestObject.resStatus;
-    checkinDateUI.text = "Check In Date: " + newCheckin;
-    checkoutDateUI.text = "Check Out Date: " + newCheckout;
+    checkinDateUI.text = "Check In Date: " + requestObject.checkinDate;
+    checkoutDateUI.text = "Check Out Date: " + requestObject.checkoutDate;
+    adult_qtyUI.text = "Adult quantity: " + requestObject.adult_qty;
+    child_qtyUI.text = "Child quantity: " + requestObject.child_qty;
 
     var roomDataRequest = {reservation_request_id: requestObject.resID};
     
@@ -85,8 +83,36 @@ exports.onloaded = function(args) {
 
         var items = [];
         var limit = roomArray.length;
+        var carouselArray = [];
+        var itemImage = "~/images/Rooms/";
 
         for(var x = 0;x < limit;x++){
+
+            switch (roomArray[x].name) {
+                case "Regular":
+                    itemImage += "singlebed.png";
+                    break;
+
+                case "Suite":
+                    itemImage += "suite.png";
+                    break;
+
+                case "Twin Queen Bedroom":
+                    itemImage += "twin.png";
+                    break;
+
+                case "Amazing":
+                    itemImage += "amazing.png";
+                    break;
+
+                case "Superior Size King":
+                    itemImage += "superiorKing.png";
+                    break;
+
+                case "Test":
+                    itemImage += "test.png"
+                    break;
+            }
 
 
             items.push(
@@ -94,23 +120,24 @@ exports.onloaded = function(args) {
                     roomNumber: roomArray[x].roomNumber,
                     roomName: roomArray[x].name,
                     price: roomArray[x].price,
-                    currency: "PHP"
+                    currency: "PHP",
+                    itemImage: itemImage
                 }
             )
-            var carouselArray = [];
+            
 
             carouselArray.push(
                 {
-                    image: roomArray[x].roomTypePicture
+                    image: itemImage
                 }
             );
 
-            
+            itemImage = "~/images/Rooms/";
         }
 
         loadingBar.visibility = "collapse";
         loadingBar.stop();
-        var carousel = page.getViewById("carousel"); //NOT WORKING 
+        var carousel = page.getViewById("carousel"); 
         carousel.items = carouselArray;
         var listview = page.getViewById("listview");
         listview.items = items;

@@ -19,7 +19,7 @@ var pageData = new Observable();
 
 var Dialogoptions = {
     title: "Are you sure you want to do this?",
-    message: "this will go back to the login page, and clear your progress",
+    message: "this will make the app go back to the home page and clear your progress",
     cancelButtonText: "Cancel",
     okButtonText: "Yes, I'm sure"
 };
@@ -77,6 +77,9 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
         }).then(function (response) {
             obj = response._bodyText;
             
+            if(!response.ok){
+                alert({message: "an error has occured, please make sure you're connected to the internet", okButtonText: "Okay"});
+            }
         // console.log("BODY: " + obj);
             if(obj != "no data"){
 
@@ -85,8 +88,37 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
                 //console.log("inside then function: " + obj);
             // console.log("inside if condition");
                 var limit = obj.length;
-            
+                
+                var itemImage = "~/images/Rooms/";
+
                 for(var x = 0; x < limit;x++){
+                    console.log("room type: " + obj[x].roomTypeName);
+                    switch(obj[x].roomTypeName){
+                        case "Regular":
+                            itemImage += "singlebed.png";
+                            break;
+
+                        case "Suite":
+                            itemImage += "suite.png";
+                            break;
+
+                        case "Twin Queen Bedroom":
+                            itemImage += "twin.png";
+                            break;
+
+                        case "Amazing":
+                            itemImage += "amazing.png";
+                            break;
+
+                        case "Superior Size King":
+                            itemImage += "superiorKing.png";
+                            break;
+
+                        case "Test":
+                            itemImage += "test.png"
+                            break;
+                    }
+
                     items.push(
                         {
                             roomTypeID: obj[x].roomTypeID,
@@ -94,10 +126,13 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
                             roomTypePrice: obj[x].roomTypePrice,
                             roomTypeDescription: obj[x].roomTypeDescription,
                             roomTypeCount: obj[x].roomTypeCount,
-                            itemImage: ""
+                            itemImage: itemImage,
+                            currency: "PHP"
+                            
                         }
 
                     );
+                    itemImage = "~/images/Rooms/";
                 // console.log(obj[x].roomTypeName);
                 }
                 loadingBar.visibility = "collapse";
@@ -110,13 +145,15 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
                 var noData = page.getViewById("noData");
                 noData.class = "page-placeholder";
             }
+            console.log("exiting room query");
         }, function (error) {
             console.log(JSON.stringify(error));
             loadingBar.visibility = "collapse";
             loadingBar.stop();
-            alert({ meesage: error, okButtonText: "Okay" });
+            alert({ meesage: JSON.stringify(error), okButtonText: "Okay" });
+            console.log("exiting room query");
         })
-        console.log("exiting room query");
+        
     }
 };
 exports.onNavBtnTap = function(){
@@ -176,7 +213,7 @@ exports.itemSelected = function(args){// turn quantity into an input
             roomTypePrice: tappedItem.roomTypePrice,
             roomTypeDescription: tappedItem.roomTypeDescription,
             roomTypeCount: tappedItem.roomTypeCount,
-            itemImage: "",
+            itemImage: tappedItem.itemImage,
             bookingDetails: requestObject
         }
     }

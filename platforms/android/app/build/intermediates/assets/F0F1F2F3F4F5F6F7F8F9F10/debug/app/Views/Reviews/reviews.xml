@@ -25,9 +25,11 @@
                         <StackLayout row="0" col="1" >
                             <StackLayout orientation="horizontal">    
                                 <Label text="{{ username }}" class="list-group-item-heading" />
-                                <Label text="{{'  Stars: ' + rate }}" class="list-group-item-text" />
+                                <!--<Label text="{{'  Stars: ' + rate }}" class="list-group-item-text" /> -->
+                                <Label text="   " />
+                                <Image src="{{ itemImage }}" class="starLayout" stretch="aspectFill" />
                             </StackLayout>
-                            <TextView text="{{ review }}" class="textview list-group-item-text" editable="false"  />
+                            <TextView text="{{ review }}" class="textview list-group-item-text" isEnabled="false" editable="false"  />
                             
 
                         </StackLayout>

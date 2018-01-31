@@ -33,7 +33,7 @@ exports.onloaded = function (args) {
 
 exports.submit = function () {
     console.log("submit pressed");
-    var loader = LoadingIndicator();
+    var loader = new LoadingIndicator();
 
     var textInquiry = page.getViewById("textInquiry");
 
