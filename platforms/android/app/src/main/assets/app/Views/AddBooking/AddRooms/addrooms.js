@@ -19,7 +19,7 @@ var pageData = new Observable();
 
 var Dialogoptions = {
     title: "Are you sure you want to do this?",
-    message: "this will go back to the login page, and clear your progress",
+    message: "this will make the app go back to the home page and clear your progress",
     cancelButtonText: "Cancel",
     okButtonText: "Yes, I'm sure"
 };

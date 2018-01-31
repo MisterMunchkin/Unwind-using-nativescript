@@ -4,14 +4,14 @@ var fetchModule = require("fetch");
 
 var loadingBar;
 var items = [];
-
+var listview;
 
 exports.onloaded = function(args){
     page = args.object;
     console.log("<<<<<<inquiries page>>>>>>");
 
     loadingBar = page.getViewById("loadingBar");
-
+    listview = page.getViewById("listview");
     console.log("loading bar: " + loadingBar);
     var requestObject = {user_id: global.loginCred[0]};
     
@@ -19,6 +19,7 @@ exports.onloaded = function(args){
     loadingBar.start();
     loadingBar.visibility = "visible";
     items = [];
+    listview.visibility = "collapse";
     console.log("fishing for inquiries...");
     fetchModule.fetch("https://unwindv2.000webhostapp.com/inquiries/loadInquiries.php", {
         method: "POST",
@@ -28,7 +29,8 @@ exports.onloaded = function(args){
         console.log("load inquiry response: " + phpResponse);
         var obj = JSON.parse(phpResponse);
         var limit = obj.length;
-        if(limit >= 1){
+        console.log("limit: " + limit);
+        if(limit > 0){
             for(var x = 0; x < limit;x++){
                 var date = obj[x].month + " " + obj[x].day + ", " + obj[x].year;
                 items.push(
@@ -43,14 +45,14 @@ exports.onloaded = function(args){
             }   
             loadingBar.visibility = "collapse";
             loadingBar.stop();
-            var listview = page.getViewById("listview");
+          
+            listview.visibility = "visible";
             listview.items = items;
             console.log("done fishing for inquiries...");
         }else{
             loadingBar.visibility = "collapse";
             loadingBar.stop();
-            var listview = page.getViewById("listview");
-            listview.visibility = "collapse";
+         
             var noData = page.getViewById("noData");
             noData.class = "page-placeholder";
         }

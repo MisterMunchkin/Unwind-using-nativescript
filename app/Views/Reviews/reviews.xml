@@ -29,7 +29,7 @@
                                 <Label text="   " />
                                 <Image src="{{ itemImage }}" class="starLayout" stretch="aspectFill" />
                             </StackLayout>
-                            <TextView text="{{ review }}" class="textview list-group-item-text" editable="false"  />
+                            <TextView text="{{ review }}" class="textview list-group-item-text" isEnabled="false" editable="false"  />
                             
 
                         </StackLayout>
