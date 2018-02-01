@@ -112,8 +112,11 @@ function then(response){
         console.log("serviceOrdered: " + JSON.stringify(global.servicesOrdered));
         console.log("roomOdered: " + JSON.stringify(global.roomOrdered));
 
-        if(global.loginCred[3] == undefined && global.loginCred[4] == undefined){
+        if(global.loginCred[2] == undefined){
+            console.log("not checked in");
             global.checkOutGrandTotal = 0;
+            global.checkinSec = 0;
+            
             loader.hide();
             console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
             signIn.isEnabled = "true";
@@ -122,7 +125,8 @@ function then(response){
         }else{
             console.log("user has active check in...")
             global.checkOutGrandTotal += global.loginCred[3] + global.loginCred[4];
-            
+            global.checkinSec = 1;
+
             var requestObject = {check_in_id: global.loginCred[2]};
             console.log("fishing for users active rooms...");
             fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getRoomsFromCheckIn.php", {

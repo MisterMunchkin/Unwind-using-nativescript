@@ -21,21 +21,31 @@ exports.onLoaded = function(args) {
     loadingBar.start();
     loadingBar.visibility = "visible";
     items = [];
-    if(global.checkinSec == 0){
-        console.log("<<<<querying checkin Security>>>>");
+
+    if(global.checkinSec == 1){
+        active();
+    }else{
+        inactive();
+    }
+
+   /* if(global.checkinSec == 0){
+        /*console.log("<<<<querying checkin Security>>>>");
         fetchModule.fetch("https://unwindv2.000webhostapp.com/checkin/checkinSecurity.php", {
         }).then(function (response) {
             then(response);
         }, function (error) {
             console.log(JSON.stringify(error));
         })
+
+
     }else if(global.checkinSec == 1){
         inactive();
     }else{
         active();
-    }
+    }*/
 }
 
+/*
 function then(response){
     var phpResponse = response._bodyText;
 
@@ -54,7 +64,7 @@ function then(response){
     }
     console.log("<<<<ending checkin security>>>>");
     
-}
+}*/
 
 function active(){
     console.log("checked in");

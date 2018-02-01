@@ -11,7 +11,7 @@ var pageData = new Observable();
 
 var loadingBar;
 var noData;
-
+var listview;
 
 exports.onloaded = function(args){
     page = args.object
@@ -20,12 +20,13 @@ exports.onloaded = function(args){
 
     var obj;
     loadingBar = page.getViewById("loadingBar");
-
+    listview = page.getViewById("listview");
     noData = page.getViewById("noData");
     //loader = new LoadingIndicator();
     //loader.show(options);
 
     console.log("new data fishing...");
+    listview.visibility = "collapse";
     loadingBar.start();
     loadingBar.visibility = "visible";
     var requestedObject = {userID: global.loginCred[0]};
@@ -72,6 +73,7 @@ exports.onloaded = function(args){
             loadingBar.visibility = "collapse";
             loadingBar.stop();  
             pageData.set("items", items);
+            listview.visibility = "visible";
         }else{
             loadingBar.visibility = "collapse";
             loadingBar.stop();
