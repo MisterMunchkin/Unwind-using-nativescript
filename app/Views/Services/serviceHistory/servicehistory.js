@@ -40,8 +40,11 @@ exports.onloaded = function(args){
     console.log("new data fishing...");
     loadingBar.start();
     loadingBar.visibility = "visible";
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/services/loadServiceData.php", {
-        
+    var requestObject = {check_in_id: global.loginCred[2]};
+    //NOT WORKING YET
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getServicesHistory.php", {
+        method: "POST",
+        body: formEncode(requestObject)
     }).then(function (response) {
         obj = response._bodyText;
     
