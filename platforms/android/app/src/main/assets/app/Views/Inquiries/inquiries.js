@@ -27,10 +27,12 @@ exports.onloaded = function(args){
     }).then(function (response) {
         var phpResponse = response._bodyText;
         console.log("load inquiry response: " + phpResponse);
-        var obj = JSON.parse(phpResponse);
-        var limit = obj.length;
+        
         console.log("limit: " + limit);
-        if(limit > 0){
+        console.log("index of: " + phpResponse.indexOf("error"));
+        if(phpResponse.indexOf("error") == -1){
+            var obj = JSON.parse(phpResponse);
+            var limit = obj.length;
             for(var x = 0; x < limit;x++){
                 var date = obj[x].month + " " + obj[x].day + ", " + obj[x].year;
                 items.push(
@@ -50,6 +52,7 @@ exports.onloaded = function(args){
             listview.items = items;
             console.log("done fishing for inquiries...");
         }else{
+            console.log("no data");
             loadingBar.visibility = "collapse";
             loadingBar.stop();
          

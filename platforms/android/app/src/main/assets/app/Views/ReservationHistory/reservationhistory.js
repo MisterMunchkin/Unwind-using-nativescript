@@ -10,7 +10,7 @@ var pageData = new Observable();
 
 
 var loadingBar;
-
+var noData;
 
 
 exports.onloaded = function(args){
@@ -21,7 +21,7 @@ exports.onloaded = function(args){
     var obj;
     loadingBar = page.getViewById("loadingBar");
 
-    
+    noData = page.getViewById("noData");
     //loader = new LoadingIndicator();
     //loader.show(options);
 
@@ -36,7 +36,7 @@ exports.onloaded = function(args){
         obj = response._bodyText;
         console.log("done fishing...: " + obj);
 
-        if(obj != "no data error" && obj != "query error"){
+        if(obj.indexOf("error") == -1){
 
             items = new ObservableArray([]);
             obj = JSON.parse(obj);
@@ -75,7 +75,11 @@ exports.onloaded = function(args){
         }else{
             loadingBar.visibility = "collapse";
             loadingBar.stop();
-            alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });  
+            if(obj == "no data error"){
+                noData.class = "page-placeholder";
+            }else{
+                alert({ message: phpResponse + ", please report a bug if it has been found", okButtonText: "Close" });  
+            }       
         }
         
     }, function (error) {
