@@ -18,8 +18,8 @@ exports.onloaded = function (args) {
 
     console.log("fishing for inquiries response");
 
-    loadingBar.start();
-    loadingBar.visibility = "visible";
+   // loadingBar.start();
+  //  loadingBar.visibility = "visible";
 
     var requestObject = { inquiry_id: pageDataContext.inquiryID };
     fetchModule.fetch("https://unwindv2.000webhostapp.com/inquiries/loadResponse.php", {
@@ -35,9 +35,11 @@ exports.onloaded = function (args) {
         if(phpResponse.indexOf("error") == -1){
             if(phpResponse.indexOf("no responses") == -1){
                 //binding here
+                items = [];
                 var obj = JSON.parse(phpResponse);
                 var limit = obj.length;
                 for(var x = 0;x < limit;x++){
+                    console.log("messages: " + obj[x].message);
                     items.push(
                         {
                             inquiryID: obj[x].inquiryID,
@@ -47,17 +49,19 @@ exports.onloaded = function (args) {
                             year: obj[x].year,
                             month: obj[x].month,
                             name: obj[x].name,
-                            employeeName: ojb[x].employeeName
+                            employeeName: obj[x].employeeName
                             
                         }
                     )
                 }
+                listview.items = items;
             }else{
                 noData.class = "page-placeholder";
             }
         }else{
             alert({ message: phpResponse, okButtonText: "Okay" });
         }
+        console.log("collapsing loading bar...");
         loadingBar.visibility = "collapse";
         loadingBar.stop();
     }, function (error) {
