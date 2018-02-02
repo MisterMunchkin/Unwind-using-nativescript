@@ -63,7 +63,7 @@ exports.nextTap = function(){
     console.log("adultQty: " + adultQty);
     console.log("childQty: " + childQty);
     
-    if(adultQty != "" && childQty != ""){
+  //  if(adultQty != "" && childQty != ""){
         if(isNaN(adultQty) == false && isNaN(childQty) == false){
             if(adultQty != "0"){
                 var navigationOptions = {
@@ -88,10 +88,10 @@ exports.nextTap = function(){
             console.log("do not enter non numbers");
             alert({ message: "do not enter non numbers", okButtonText: "Close" });
         }
-    }else{
-        console.log("do not leave any blank");
-        alert({ message: "do not leave any blank", okButtonText: "Close" });
-    }
+    //}else{
+   //     console.log("do not leave any blank");
+    //    alert({ message: "do not leave any blank", okButtonText: "Close" });
+   // }
 }
 /*
 function numberValidation(val){

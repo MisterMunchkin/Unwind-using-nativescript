@@ -1,4 +1,4 @@
-import { LoadingIndicator } from "nativescript-loading-indicator-new";
+
 
 var page;
 var frameModule = require("ui/frame");
@@ -6,6 +6,7 @@ var fetchModule = require("fetch");
 var view = require("ui/core/view");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
+var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
 var serviceContext;
 var actionBar;

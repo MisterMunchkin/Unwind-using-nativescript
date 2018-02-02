@@ -17,7 +17,7 @@ exports.onLoaded = function(args) {
     //use a switch for active and inactive methods
     //component.bindingContext = pageData;
     loadingBar = page.getViewById("loadingBar");
-
+    console.log("check in security: " + global.checkinSec);
     loadingBar.start();
     loadingBar.visibility = "visible";
     items = [];

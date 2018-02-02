@@ -156,7 +156,7 @@ function loadData(phpContext){
             var itemImage = "~/images/Booking/status/";
 
             for (var x = 0; x < limit; x++) {
-                console.log("status: " + obj[x].reservationStatus);
+               // console.log("status: " + obj[x].reservationStatus);
 
                 switch(obj[x].reservationStatus){
                     case "Waiting":

@@ -5,6 +5,7 @@ var fetchModule = require("fetch");
 var loadingBar;
 var items = [];
 var listview;
+//var messageLabel;
 
 exports.onloaded = function(args){
     page = args.object;
@@ -12,9 +13,14 @@ exports.onloaded = function(args){
 
     loadingBar = page.getViewById("loadingBar");
     listview = page.getViewById("listview");
+   // messageLabel = page.getViewById("messageLabel");
     console.log("loading bar: " + loadingBar);
     var requestObject = {user_id: global.loginCred[0]};
     
+
+    console.log("loading bar: " + loadingBar);
+   // console.log("messageLabel: " + messageLabel);
+   // messageLabel.textWrap = true;
 
     loadingBar.start();
     loadingBar.visibility = "visible";

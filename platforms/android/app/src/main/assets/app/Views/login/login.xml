@@ -15,7 +15,7 @@
         <TextField class="input" id="password" secure="true"  />
 
         <Button class="blue-btn" text="Sign in" id="signIn" tap="signIn"/>
-        <Button class="w-outline-btn" text="don't have an account?" tap="register"/>
+        <Button id="signUp" class="w-outline-btn" text="don't have an account?" tap="register"/>
     </StackLayout>
 
 </Page>

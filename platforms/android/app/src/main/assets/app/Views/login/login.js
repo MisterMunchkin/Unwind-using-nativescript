@@ -8,7 +8,7 @@ require("nativescript-master-technology");
 
 var signIn;
 var loader;
-
+var signUp;
 
 var options = {
     message: 'Loading...',
@@ -29,6 +29,7 @@ exports.loaded = function(args){ //exports is standard for both nativescript and
     console.log("<<<<<login page>>>>>");
   
     signIn = page.getViewById("signIn");
+    signUp = page.getViewById("signUp");
 };
 
 exports.backEvent = function (args) {
@@ -45,6 +46,7 @@ exports.signIn = function(){
     email = page.getViewById("email");
     password = page.getViewById("password");
     signIn.isEnabled = "false";
+    signUp.isEnabled = "false";
     if(email.text != "" && password.text != ""){
         if(validateEmail(email.text) == true){    
             console.log("email: " + email.text);
@@ -65,16 +67,21 @@ exports.signIn = function(){
                 console.log("ERROR");
                 console.log(JSON.stringify(error));
                 signIn.isEnabled = "true";
+                signUp.isEnabled = "false";
                 loader.hide();
                 alert({message: "please make sure you're connected to the internet and try again", okButtonText: "Okay"});
             })
             
         }else{
             //email validation notif
+            alert({message: "please enter a valid email address", okButtonText: "Okay"});
+            signIn.isEnabled = "true";
+            signUp.isEnabled = "true";
         }
     }else{
         password.class = email.class = "requiredFields";
         signIn.isEnabled = "true";
+        signUp.isEnabled = "true";
     }
 };
 
@@ -90,6 +97,7 @@ function then(response){
 
     if(!response.ok){
         signIn.isEnabled = "true";
+        signUp.isEnabled = "true";
         alert({message: "an error has occured, please make sure you're connected to the internet and try again", okButtonText: "Okay"});
     }
    
@@ -119,7 +127,7 @@ function then(response){
             
             loader.hide();
             console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
-            signIn.isEnabled = "true";
+            //signIn.isEnabled = "true";
             var topmost = frameModule.topmost();
             topmost.navigate("tabs/tabs-page");
         }else{
@@ -141,7 +149,7 @@ function then(response){
                 
                 loader.hide();
                 console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
-                signIn.isEnabled = "true";
+               // signIn.isEnabled = "true";
                 var topmost = frameModule.topmost();
                 topmost.navigate("tabs/tabs-page");
             }, function (error) {
@@ -155,6 +163,7 @@ function then(response){
     }else{
        // page.getViewById("email").text = "";
         signIn.isEnabled = "true";
+        signUp.isEnabled = "true";
         page.getViewById("password").text = "";
         loader.hide();
         alert({  message: phpResponse, okButtonText: "Close" });     

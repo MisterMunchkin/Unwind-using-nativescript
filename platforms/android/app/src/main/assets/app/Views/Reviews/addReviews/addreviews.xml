@@ -1,7 +1,7 @@
 <Page class="page-content" loaded="onloaded"
     xmlns:lv="nativescript-pro-ui/listview">
     <Page.actionBar>
-        <ActionBar class="label page-blue" title="Add Revuews">
+        <ActionBar class="label page-blue" title="Add Reviews">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
@@ -26,7 +26,7 @@
 
         <Label text="Review" />
         <!--<TextField id="textReview" hint="Write your review for the hotel" /> -->
-        <TextView id="textReview" style="margin-top: 15px" borderColor="#DEDEDE" borderWidth="1"
+        <TextView id="textReview" autocorrect="true" autocapitalization="true" style="margin-top: 15px" borderColor="#DEDEDE" borderWidth="1"
             height="300px" hint="Write your review for the hotel" returnKeyType="send" class="input input-border"></TextView>
 
         <Button text="submit review" tap="submit" class="blue-btn" />

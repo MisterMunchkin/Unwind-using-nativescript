@@ -27,6 +27,9 @@
                             <!--<Image  src="{{ itemImage }}" stretch="fit" />-->
                             <Label text="{{ name }}" class="list-group-item-heading" />
                             <TextView text="{{ message }}" isEnabled="false" editable="false" class="list-group-item-text" />
+              
+                            <!--<Label id="messageLabel" text="{{ message }}" class="list-group-item-text" />-->
+
                         </StackLayout>
                     </GridLayout>
                 </lv:RadListView.itemTemplate>

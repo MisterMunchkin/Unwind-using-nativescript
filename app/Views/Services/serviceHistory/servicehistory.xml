@@ -4,7 +4,7 @@
         loaded="onloaded" xmlns:FAB="nativescript-floatingactionbutton"
     xmlns:lv="nativescript-pro-ui/listview">
     <Page.actionBar>
-        <ActionBar class="label page-blue" title="Services">
+        <ActionBar class="label page-blue" title="Service History">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
