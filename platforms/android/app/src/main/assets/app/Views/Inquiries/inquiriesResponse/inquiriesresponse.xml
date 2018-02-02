@@ -6,7 +6,7 @@
         loaded="onloaded" >
 
     <Page.actionBar>
-        <ActionBar class="label page-blue" title="Inquiries">
+        <ActionBar class="label page-blue" title="Responses">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
@@ -33,10 +33,7 @@
             </lv:RadListView>
 
         </StackLayout>
-        <FAB:fab tap="fabTap"
-            
-                    icon="res://ic_plus_white_48dp"
-                    class="fab-button" />
+
     </GridLayout>
  
 </Page>

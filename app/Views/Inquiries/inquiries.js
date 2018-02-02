@@ -66,6 +66,24 @@ exports.onloaded = function(args){
     })
     
 };
+exports.itemTap = function(args){
+    var tappedView = args.view;
+    var tappedItem = tappedView.bindingContext;
+
+    console.log("message: " + tappedItem.message);
+    var navigationOptions = {
+        moduleName: "Views/Inquiries/inquiriesResponse/inquiriesresponse",
+        context: {
+            inquiryID: tappedItem.inquiryID,
+            message: tappedItem.message,
+            userID: tappedItem.userID,
+            name: tappedItem.name
+        }
+    }
+
+    var topmost = frameModule.topmost();
+    topmost.navigate(navigationOptions);
+}
 exports.fabTap = function(){
     console.log("fab tap pressed");
 

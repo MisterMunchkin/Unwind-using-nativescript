@@ -10,7 +10,8 @@ var pageData = new Observable();
 
 
 var loadingBar;
-
+var noData;
+var listview;
 var options = {
     message: 'Loading...',
     progress: 0.65,
@@ -32,8 +33,8 @@ exports.onloaded = function(args){
 
     var obj;
     loadingBar = page.getViewById("loadingBar");
-
-    
+    noData = page.getViewById("noData");
+    listview = page.getViewById("listview");
     //loader = new LoadingIndicator();
     //loader.show(options);
 
@@ -48,8 +49,9 @@ exports.onloaded = function(args){
     }).then(function (response) {
         obj = response._bodyText;
     
-
-        if(obj != "no data" && obj != "query error"){
+        console.log("finished fishing");
+        console.log("OBJECT: " + obj);
+        if(obj.indexOf("error") == -1){
 
             items = new ObservableArray([]);
             obj = JSON.parse(obj);
@@ -57,11 +59,15 @@ exports.onloaded = function(args){
             var limit = obj.length;
         
             for(var x = 0; x < limit;x++){
+
+                console.log("service_name: " + obj[x].serviceName)
                 items.push(
                     {
-                        service_name: obj[x].service_name,
-                        service_type: obj[x].service_type,
-                        service_id: obj[x].service_id
+                        service_name: obj[x].serviceName,
+                        serviceRequestId: obj[x].serviceRequestId,
+                        serviceRequestStatus: obj[x].serviceRequestStatus,
+                        serviceRequestDate: obj[x].serviceRequestDate,
+                        employeeId: obj[x].employeeId
                     }
 
                 );
@@ -69,7 +75,13 @@ exports.onloaded = function(args){
             }
             pageData.set("items", items);
         }else{
-            alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });  
+            if(obj.indexOf("No services") == -1){
+                alert({  message: obj, okButtonText: "Close" });  
+            }else{
+                listview.visibility = "collapse";
+                noData.class = "page-placeholder";
+            }
+            //alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });  
         }
         loadingBar.visibility = "collapse";
         loadingBar.stop();
