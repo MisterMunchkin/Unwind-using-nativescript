@@ -4,7 +4,7 @@
         loaded="onloaded" 
     xmlns:lv="nativescript-pro-ui/listview">
     <Page.actionBar>
-        <ActionBar class="label page-blue" title="Service History">
+        <ActionBar class="label-white page-blue" title="Service Reject">
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
@@ -12,8 +12,10 @@
 
     <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
         <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" />
-        <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
-        <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
+        <Label text="Reason for rejected" class="label-big label-blue" />
+        <TextView id="rejectMessage" editable="false" isEnabled="false" class="label" />
+       <!-- <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
+        <!--<lv:RadListView id="listview" items="{{ items }}"  class="list-group"
         row="0" itemTap="itemTap"> 
 
             <lv:RadListView.listViewLayout>
@@ -22,7 +24,7 @@
 
             <lv:RadListView.itemTemplate>
                 <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                    <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />
+                    <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />
                     <StackLayout row="0" col="1" >
 
                         <Label text="{{ service_name }}" class="list-group-item-heading" />
@@ -32,7 +34,7 @@
                     </StackLayout>
                     </GridLayout> 
             </lv:RadListView.itemTemplate>
-        </lv:RadListView>
+        </lv:RadListView> -->
     </StackLayout>
 </Page>
 

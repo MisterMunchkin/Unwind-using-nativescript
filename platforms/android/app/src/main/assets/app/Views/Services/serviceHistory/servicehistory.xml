@@ -1,7 +1,7 @@
 
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"   
         xmlns:Gif="nativescript-gif"
-        loaded="onloaded" xmlns:FAB="nativescript-floatingactionbutton"
+        loaded="onloaded" 
     xmlns:lv="nativescript-pro-ui/listview">
     <Page.actionBar>
         <ActionBar class="label page-blue" title="Service History">
@@ -22,7 +22,7 @@
 
             <lv:RadListView.itemTemplate>
                 <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                    <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
+                    <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />
                     <StackLayout row="0" col="1" >
 
                         <Label text="{{ service_name }}" class="list-group-item-heading" />
