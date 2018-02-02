@@ -1,4 +1,8 @@
 <Page class="page-content" loaded="onloaded" 
+<<<<<<< HEAD
+=======
+            xmlns:Gif="nativescript-gif"
+>>>>>>> New-Default-Development
             xmlns:lv="nativescript-pro-ui/listview" >
     <!--<Label class="page-icon fa" text="&#xf1ea;"></Label>
     <Label class="page-placeholder" text="bills"></Label>-->
@@ -9,7 +13,12 @@
         </ActionBar>
     </Page.actionBar>
     <GridLayout rows="*, 45">
+<<<<<<< HEAD
         <ScrollView>
+=======
+        <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" height="200" />
+        <ScrollView id="wholeBill">
+>>>>>>> New-Default-Development
             <StackLayout orientation="vertical">
                 <StackLayout orientation="horizontal" class="page-blue">
                     <Label text="Rooms" class="label label-big" />
@@ -57,9 +66,14 @@
                             <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
                             <StackLayout row="0" col="1" >
 
+<<<<<<< HEAD
                                 <Label text="{{ dateFoodOrdered }}" class="list-group-item-heading" />
 
                                 <Label text="{{currency + ' ' + foodTotal }}" class="list-group-item-text" />
+=======
+                                <Label text="{{currency + ' ' + foodTotal }}" class="list-group-item-heading" />
+                                <Label text="{{ dateFoodOrdered }}" class="list-group-item-text" />
+>>>>>>> New-Default-Development
                         
                                 
                             </StackLayout>
@@ -80,11 +94,18 @@
                             <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
                             <StackLayout row="0" col="1" >
 
+<<<<<<< HEAD
                                 <Label text="{{ service_request_date }}" class="list-group-item-heading" />
 
                                 <Label text="{{ service_name }}" class="list-group-item-text" />
                         
                                 <Label text="{{ service_type }}" class="list-group-item-text" />
+=======
+                                <Label text="{{ service_name }}" class="list-group-item-heading" />
+                        
+                                <Label text="{{ service_type }}" class="list-group-item-text" />
+                                <Label text="{{ service_request_date }}" class="list-group-item-text" />
+>>>>>>> New-Default-Development
                                 
                             </StackLayout>
                         </GridLayout> 

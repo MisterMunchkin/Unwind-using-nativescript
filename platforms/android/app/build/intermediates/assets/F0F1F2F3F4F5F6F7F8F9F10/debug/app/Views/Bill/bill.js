@@ -10,6 +10,10 @@ var roomItems;
 //var foodpageData = new Observable();
 var foodItems;
 var serviceItems;
+<<<<<<< HEAD
+=======
+var loadingBar;
+>>>>>>> New-Default-Development
 
 exports.onloaded = function (args) {
     page = args.object
@@ -17,8 +21,18 @@ exports.onloaded = function (args) {
     //page.bindingContext = new Array();
    // page.bindingContext[0] = roompageData;
 
+<<<<<<< HEAD
 
     var requestObject = {check_in_id: global.loginCred[2]};
+=======
+    loadingBar = page.getViewById("loadingBar");
+    var wholeBill = page.getViewById("wholeBill");
+
+    var requestObject = {check_in_id: global.loginCred[2]};
+    wholeBill.visibility = "collapse";
+    loadingBar.start();
+    loadingBar.visibility = "visible";
+>>>>>>> New-Default-Development
     fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getRoomsFromCheckIn.php", {
         method: "POST",
         body: formEncode(requestObject)
@@ -51,6 +65,10 @@ exports.onloaded = function (args) {
     }, function (error) {
         console.log("ERROR");
         console.log(JSON.stringify(error));
+<<<<<<< HEAD
+=======
+        alert({message: "An error occured while finding your rooms reserved, please try again later", okButtonText: "Okay"});
+>>>>>>> New-Default-Development
     })
 
   //  page.bindingContext[1] = foodpageData;
@@ -92,6 +110,10 @@ exports.onloaded = function (args) {
     }, function (error) {
         console.log("ERROR");
         console.log(JSON.stringify(error));
+<<<<<<< HEAD
+=======
+        alert({message: "An error occured while finding your food orders, please try again later", okButtonText: "Okay"});
+>>>>>>> New-Default-Development
     })
 
     fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getServiceRequestFromCheckIn.php", {
@@ -125,11 +147,24 @@ exports.onloaded = function (args) {
         //foodpageData.set("foodItems", foodItems);
         var servicelistview = page.getViewById("servicelistview");
        
+<<<<<<< HEAD
         
+=======
+        loadingBar.visibility = "collapse";
+        loadingBar.stop();
+        wholeBill.visibility = "visible";
+>>>>>>> New-Default-Development
         servicelistview.items = serviceItems;
     }, function (error) {
         console.log("ERROR");
         console.log(JSON.stringify(error));
+<<<<<<< HEAD
+=======
+        loadingBar.visibility = "collapse";
+        loadingBar.stop();
+        wholeBill.visibility = "visible";
+        alert({message: "An error occured while finding your service request, please try again later", okButtonText: "Okay"});
+>>>>>>> New-Default-Development
     })
 
 

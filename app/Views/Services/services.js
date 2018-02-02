@@ -11,6 +11,8 @@ var pageData = new Observable();
 
 var loadingBar;
 
+var loadingBar;
+
 var options = {
     message: 'Loading...',
     progress: 0.65,
@@ -52,17 +54,54 @@ exports.onloaded = function(args){
                 obj = JSON.parse(obj);
                 //console.log("inside then function: " + obj);
                 var limit = obj.length;
-            
+                var itemImage = "~/images/Services/";
                 for(var x = 0; x < limit;x++){
+
+                    switch(obj[x].service_name){
+                        case "Room Cleaning":
+                        itemImage += "vacuum.png";
+                        break;
+
+                        case "Change blanket":
+                        itemImage += "blanket.png";
+                        break;
+
+                        case "Refill minibar":
+                        itemImage += "minibar.png";
+                        break;
+
+                        case "Towel change":
+                        itemImage += "towel.png";
+                        break;
+
+                        case "Bathroom Cleaning":
+                        itemImage += "bathroomclean.png";
+                        break;
+                        
+                        case "Change pillows":
+                        itemImage += "pillow.png";
+                        break;
+
+                        case "Cupboard Cleaning":
+                        itemImage += "cupboard.png";
+                        break;
+
+                        case "Closet Cleaning":
+                        itemImage += "closet.png";
+                        break;
+                    }
+
                     items.push(
                         {
                             service_name: obj[x].service_name,
                             service_type: obj[x].service_type,
-                            service_id: obj[x].service_id
+                            service_id: obj[x].service_id,
+                            itemImage: itemImage
                         }
 
                     );
-        
+                    itemImage = "~/images/Services/";
+                    console.log("service name: " + obj[x].service_name);
                 }
                 pageData.set("items", items);
             }else{

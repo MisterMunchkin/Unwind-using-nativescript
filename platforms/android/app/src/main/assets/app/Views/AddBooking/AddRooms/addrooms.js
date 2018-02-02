@@ -5,7 +5,7 @@ const ModalPicker = require("nativescript-modal-datetimepicker").ModalDatetimepi
 var view = require("ui/core/view");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
-var dialogs = require("ui/dialogs");
+var dialogs = require("tns-core-modules/ui/dialogs");
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
 var pageDataContext;
@@ -14,8 +14,16 @@ var bookingObject;
 
 var loader;
 
-var items;
+var items = new ObservableArray([]);
 var pageData = new Observable();
+
+var Dialogoptions = {
+    title: "Are you sure you want to do this?",
+    message: "this will make the app go back to the home page and clear your progress",
+    cancelButtonText: "Cancel",
+    okButtonText: "Yes, I'm sure"
+};
+
 
 var options = {
     message: 'Loading...',
@@ -31,6 +39,8 @@ var options = {
     }
 }
 
+var loadingBar;
+
 exports.onLoaded = function (args) { //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     console.log("<<<<<add room page >>>>>>");
     page = args.object;
@@ -44,7 +54,7 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
         numAdult: pageDataContext.numAdult,
         numChild: pageDataContext.numChild
     };
-   
+    loadingBar = page.getViewById("loadingBar");
     console.log("check in date: " + requestObject.check_in_date);
     console.log("check out date: " + requestObject.check_out_date);
     console.log("numAdult: " + requestObject.numAdult);
@@ -52,49 +62,125 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
     page.bindingContext = pageData;
 
     var obj;
-    items = new ObservableArray([]);
-    console.log("entering room query");
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/getCountFilterRoomType.php", {
-        method: "POST",
-        body: formEncode(requestObject)
-    }).then(function (response) {
-        obj = response._bodyText;
-        
-       // console.log("BODY: " + obj);
-        if(obj != "no data"){
+   // items = new ObservableArray([]);
+    loadingBar.stop();
+    loadingBar.visibility = "collapse";
+    if(items.length < 1){
+        console.log("entering room query");
 
-            items = new ObservableArray([]);
-            obj = JSON.parse(obj);
-            //console.log("inside then function: " + obj);
-           // console.log("inside if condition");
-            var limit = obj.length;
-           
-            for(var x = 0; x < limit;x++){
-                items.push(
-                    {
-                        roomTypeID: obj[x].roomTypeID,
-                        roomTypeName: obj[x].roomTypeName,
-                        roomTypePrice: obj[x].roomTypePrice,
-                        roomTypeDescription: obj[x].roomTypeDescription,
-                        roomTypeCount: obj[x].roomTypeCount,
-                        itemImage: ""
+        loadingBar.start();
+        loadingBar.visibility = "visible";
+
+        fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/getCountFilterRoomType.php", {
+            method: "POST",
+            body: formEncode(requestObject)
+        }).then(function (response) {
+            obj = response._bodyText;
+            
+            if(!response.ok){
+                alert({message: "an error has occured, please make sure you're connected to the internet", okButtonText: "Okay"});
+            }
+        // console.log("BODY: " + obj);
+            if(obj != "no data"){
+
+                items = new ObservableArray([]);
+                obj = JSON.parse(obj);
+                //console.log("inside then function: " + obj);
+            // console.log("inside if condition");
+                var limit = obj.length;
+                
+                var itemImage = "~/images/Rooms/";
+
+                for(var x = 0; x < limit;x++){
+                    console.log("room type: " + obj[x].roomTypeName);
+                    switch(obj[x].roomTypeName){
+                        case "Regular":
+                            itemImage += "singlebed.png";
+                            break;
+
+                        case "Suite":
+                            itemImage += "suite.png";
+                            break;
+
+                        case "Twin Queen Bedroom":
+                            itemImage += "twin.png";
+                            break;
+
+                        case "Amazing":
+                            itemImage += "amazing.png";
+                            break;
+
+                        case "Superior Size King":
+                            itemImage += "superiorKing.png";
+                            break;
+
+                        case "Test":
+                            itemImage += "test.png"
+                            break;
                     }
 
-                );
-               // console.log(obj[x].roomTypeName);
+                    items.push(
+                        {
+                            roomTypeID: obj[x].roomTypeID,
+                            roomTypeName: obj[x].roomTypeName,
+                            roomTypePrice: obj[x].roomTypePrice,
+                            roomTypeDescription: obj[x].roomTypeDescription,
+                            roomTypeCount: obj[x].roomTypeCount,
+                            itemImage: itemImage,
+                            currency: "PHP"
+                            
+                        }
+
+                    );
+                    itemImage = "~/images/Rooms/";
+                // console.log(obj[x].roomTypeName);
+                }
+                loadingBar.visibility = "collapse";
+                loadingBar.stop();
+                pageData.set("items", items);
+            }else{
+                console.log("put viSible no data confirmation here");
+                loadingBar.visibility = "collapse";
+                loadingBar.stop();
+                var noData = page.getViewById("noData");
+                noData.class = "page-placeholder";
             }
-            pageData.set("items", items);
-        }else{
-            console.log("put viSible no data confirmation here");
-        }
-    }, function (error) {
-        console.log(JSON.stringify(error));
-    })
-    console.log("exiting room query");
+            console.log("exiting room query");
+        }, function (error) {
+            console.log(JSON.stringify(error));
+            loadingBar.visibility = "collapse";
+            loadingBar.stop();
+            alert({ meesage: JSON.stringify(error), okButtonText: "Okay" });
+            console.log("exiting room query");
+        })
+        
+    }
 };
 exports.onNavBtnTap = function(){
+    dialogs.confirm(Dialogoptions).then((result) => {
+        if (result == true) {
+            console.log(result);
+            var topmost = frameModule.topmost();
+            topmost.navigate("tabs/tabs-page");
+        } else {
+            console.log(result);
+        }
+    })
+}
+exports.backEvent = function(args){
+    args.cancel = true;
+    console.log("<<<<<<<<<<<<back event pressed>>>>>>>>>>>");
+    var navigationOptions = {
+        moduleName: "Views/AddBooking/AddQuantity/addquantity",
+        context: {
+            check_in_date: pageDataContext.check_in_date,
+            check_out_date: pageDataContext.check_out_date,
+            numAdult: pageDataContext.numAdult,
+            numChild: pageDataContext.numChild
+        }
+    }
     var topmost = frameModule.topmost();
-    topmost.navigate("tabs/tabs-page");
+    topmost.navigate(navigationOptions);
 }
 exports.inCart = function(){
     console.log("<<<<<<<<in cart pressed>>>>>>>");
@@ -127,7 +213,7 @@ exports.itemSelected = function(args){// turn quantity into an input
             roomTypePrice: tappedItem.roomTypePrice,
             roomTypeDescription: tappedItem.roomTypeDescription,
             roomTypeCount: tappedItem.roomTypeCount,
-            itemImage: "",
+            itemImage: tappedItem.itemImage,
             bookingDetails: requestObject
         }
     }

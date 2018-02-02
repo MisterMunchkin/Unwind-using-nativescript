@@ -11,7 +11,7 @@
 
     <GridLayout rows="*">
         <StackLayout orientation="vertical" >
-            <Gif:Gif id="loadingBar" src="http://giflat.dceven.fr/wp-content/uploads/2017/04/loader-white.gif" />
+            <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" />
             <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
             row="0" itemTap="itemTap"> 
 
@@ -25,9 +25,11 @@
                         <StackLayout row="0" col="1" >
                             <StackLayout orientation="horizontal">    
                                 <Label text="{{ username }}" class="list-group-item-heading" />
-                                <Label text="{{'  Stars: ' + rate }}" class="list-group-item-text" />
+                                <!--<Label text="{{'  Stars: ' + rate }}" class="list-group-item-text" /> -->
+                                <Label text="   " />
+                                <Image src="{{ itemImage }}" class="starLayout" stretch="aspectFill" />
                             </StackLayout>
-                            <TextView text="{{ review }}" class="textview list-group-item-text" editable="false"  />
+                            <TextView text="{{ review }}" class="textview list-group-item-text" isEnabled="false" editable="false"  />
                             
 
                         </StackLayout>

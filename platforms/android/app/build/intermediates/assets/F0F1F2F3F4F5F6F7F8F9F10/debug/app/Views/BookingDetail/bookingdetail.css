@@ -3,8 +3,19 @@
     font-family:"Lato";
 }
 .label{
+<<<<<<< HEAD
     color:aliceblue;
     font-family:"Lato";
+=======
+    color: black;
+    font-size: 15px;
+    font-family:"Lato";
+    padding-bottom: 8px;
+}
+.label-white{
+    color: white;
+    font-family: "Lato";
+>>>>>>> New-Default-Development
 }
 
 .pageLabel{
@@ -15,7 +26,11 @@
     background-color: #3ba9e9;
 }
 .w-outline-btn{
+<<<<<<< HEAD
     background-color: antiquewhite;
+=======
+    background-color: white;
+>>>>>>> New-Default-Development
     color:#00a2ff;
     outline-color:#00a2ff;
     height:60;
@@ -24,7 +39,11 @@
 }
 .blue-btn{
     background-color:#00a2ff;
+<<<<<<< HEAD
     color:antiquewhite;
+=======
+    color:white;
+>>>>>>> New-Default-Development
     height:60;
     width:200;
     font-family:"Lato";

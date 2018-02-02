@@ -1,9 +1,10 @@
 <Page class="page-content" loaded="onloaded"
     xmlns:lv="nativescript-pro-ui/listview" 
+    xmlns:Gif="nativescript-gif"
         xmlns:ns="nativescript-carousel">
     <Page.actionBar>
         <ActionBar class="label-white page-blue" title="Booking Detail">
-           
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
     <ScrollView>
@@ -11,7 +12,7 @@
             <ns:Carousel id="carousel"  height="250" pageChanged="CarouselChangeEvent" pageScrolling="CarouselScrollingEvent">
                 <ns:Carousel.itemTemplate>
                     <ns:CarouselItem verticalAlignment="center" tap="carouselTap">
-                        <Image src="{{ image }}" height="250" stretch="fill" />
+                        <Image src="{{ image }}" height="250" stretch="aspectFit" />
                     </ns:CarouselItem>
                 </ns:Carousel.itemTemplate>
             </ns:Carousel>
@@ -19,9 +20,12 @@
            
             <Label text="" id="checkinDate" class="label" />
             <Label text="" id="checkoutDate" class="label" />
-        
+            <Label text="" id="adult_qty" class="label" />
+            <Label text="" id="child_qty" class="label" />
             
            <!-- <Label text="Rooms" class="label" /> -->
+            
+            <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" height="100" />
             <lv:RadListView id="listview"  class="list-group" row="0" itemTap="itemTap"> 
 
                 <lv:RadListView.listViewLayout>
@@ -30,7 +34,7 @@
 
                 <lv:RadListView.itemTemplate>
                     <GridLayout class="list-group-item" rows="auto" columns="auto, *">
-                        <!-- <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />-->
+                        <Image row="0" col="0" src="{{ itemImage }}" class="thumb img-rounded" />
                         <StackLayout row="0" col="1" >
                             
                             <Label text="{{'Room Number ' + roomNumber }}" class="list-group-item-heading" />
@@ -46,9 +50,11 @@
             </lv:RadListView>
 
            <!--> <Label  id="resDateLabel"></Label>-->
-            <Button text="{{ cancelText }}" class="blue-btn"  id="cancelBookingID" tap="cancelUncancelTap" visibility="{{ cancelVisible }}" />
-            <Button text="Check In" class="w-outline-btn" tap="checkinButton" id="checkinButtonID" visibility="{{ checkinVisible }}" />
-            <Button class="w-outline-btn" text="Check Out" tap="checkoutTap" visibility="{{ checkoutVisible }}"/>
+            <Button text="Check In" class="blue-btn" tap="checkinButton" id="checkinButtonID" visibility="{{ checkinVisible }}" />
+
+            <Button text="{{ cancelText }}" class="w-outline-btn"  id="cancelBookingID" tap="cancelUncancelTap" visibility="{{ cancelVisible }}" />
+            
+            <Button class="blue-btn" text="Check Out" tap="checkoutTap" visibility="{{ checkoutVisible }}"/>
         </StackLayout>
     </ScrollView>
 </Page>

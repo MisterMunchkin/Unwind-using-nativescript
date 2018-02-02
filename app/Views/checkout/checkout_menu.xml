@@ -21,14 +21,14 @@
                         <StackLayout row="0" col="0" >
                             
                             <Label text="{{ name }}" class="list-group-item-heading" />
-                            <Label text="{{ description }}" class="list-group-item-text" />
                             <Label text="{{currency + ' ' + price }}" class="list-group-item-text" />
                           
                             <Label text="{{ remarks }}" class="list-group-item-text" />
+                            <Label text="{{'Quantity: ' + qty }}" class="list-group-item-text" />
                         </StackLayout>
                         <StackLayout col="1">
-                                <button text="remove" tap="remove" />
-                                <Label text="{{'Qty: ' + qty }}" class="list-group-item-text" />
+                                <Image src="res://ic_delete_black_24dp" class="delete" tap="remove" />
+                                
                         </StackLayout>
                     </GridLayout> 
                 </lv:RadListView.itemTemplate>

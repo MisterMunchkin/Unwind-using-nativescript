@@ -28,16 +28,54 @@ exports.onloaded = function (args) {
             var data = JSON.parse(phpResponse);
             var limit = data.length;
             console.log("limit: " + limit);
+<<<<<<< HEAD
             for(var x = 0;x < limit;x++){
+=======
+            var starRate = "res://";
+            for(var x = 0;x < limit;x++){
+
+                switch(data[x].rate){
+                    case "1":
+                    starRate += "one_star";
+                    break;
+
+                    case "2":
+                    starRate += "two_star";
+                    break;
+                    
+                    case "3":
+                    starRate += "three_star";
+                    break;
+                    
+                    case "4":
+                    starRate += "four_star";
+                    break;
+                    
+                    case "5":
+                    starRate += "five_star";
+                    break; 
+                }
+
+>>>>>>> New-Default-Development
                 items.push(
                     {
                         id: data[x].id,
                         username: data[x].username,
+<<<<<<< HEAD
                         rate: data[x].rate,
                         review: data[x].review,
                         user_Id: data[x].user_id
                     }
                 )
+=======
+                        itemImage: starRate,
+                        review: data[x].review,
+                        user_Id: data[x].user_id,
+                        rate: data[x].rate
+                    }
+                )
+                starRate = "res://";
+>>>>>>> New-Default-Development
                 //console.log("id: " + data[x].id);
             }
             loadingBar.visibility = "collapse";
@@ -66,6 +104,15 @@ exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
     topmost.navigate("tabs/tabs-page");
 }
+<<<<<<< HEAD
+=======
+exports.backEvent = function(args){
+    console.log("<<<<<< redirecting to tabs module >>>>>>");
+    args.cancel = true;
+    var topmost = frameModule.topmost();
+    topmost.navigate("tabs/tabs-page");
+}
+>>>>>>> New-Default-Development
 exports.longpressed = function(){
     alert({ title: "Inquries", message: "long pressed", okButtonText: "Close" });
 }

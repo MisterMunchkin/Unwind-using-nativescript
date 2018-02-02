@@ -4,14 +4,23 @@
         loaded="onloaded" xmlns:FAB="nativescript-floatingactionbutton"
     xmlns:lv="nativescript-pro-ui/listview">
     <Page.actionBar>
+<<<<<<< HEAD
         <ActionBar class="label page-blue" title="Services">
+=======
+        <ActionBar class="label page-blue" title="Service History">
+>>>>>>> New-Default-Development
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
 
 
     <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
+<<<<<<< HEAD
         <Gif:Gif id="loadingBar" src="http://giflat.dceven.fr/wp-content/uploads/2017/04/loader-white.gif" />
+=======
+        <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" />
+        <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
+>>>>>>> New-Default-Development
         <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
         row="0" itemTap="itemTap"> 
 
@@ -25,8 +34,13 @@
                     <StackLayout row="0" col="1" >
 
                         <Label text="{{ service_name }}" class="list-group-item-heading" />
+<<<<<<< HEAD
                         <Label text="{{ service_type }}" class="list-group-item-text" />
                         
+=======
+                        <Label text="{{ serviceRequestDate }}" class="list-group-item-text" />
+                        <Label text="{{ serviceRequestStatus }}" class="list-group-item-text" />
+>>>>>>> New-Default-Development
                         
                     </StackLayout>
                     </GridLayout> 

@@ -52,17 +52,67 @@ exports.onloaded = function(args){
                 obj = JSON.parse(obj);
                 //console.log("inside then function: " + obj);
                 var limit = obj.length;
+<<<<<<< HEAD
             
                 for(var x = 0; x < limit;x++){
+=======
+                var itemImage = "~/images/Services/";
+                for(var x = 0; x < limit;x++){
+
+                    switch(obj[x].service_name){
+                        case "Room Cleaning":
+                        itemImage += "vacuum.png";
+                        break;
+
+                        case "Change blanket":
+                        itemImage += "blanket.png";
+                        break;
+
+                        case "Refill minibar":
+                        itemImage += "minibar.png";
+                        break;
+
+                        case "Towel change":
+                        itemImage += "towel.png";
+                        break;
+
+                        case "Bathroom Cleaning":
+                        itemImage += "bathroomclean.png";
+                        break;
+                        
+                        case "Change pillows":
+                        itemImage += "pillow.png";
+                        break;
+
+                        case "Cupboard Cleaning":
+                        itemImage += "cupboard.png";
+                        break;
+
+                        case "Closet Cleaning":
+                        itemImage += "closet.png";
+                        break;
+                    }
+
+>>>>>>> New-Default-Development
                     items.push(
                         {
                             service_name: obj[x].service_name,
                             service_type: obj[x].service_type,
+<<<<<<< HEAD
                             service_id: obj[x].service_id
                         }
 
                     );
         
+=======
+                            service_id: obj[x].service_id,
+                            itemImage: itemImage
+                        }
+
+                    );
+                    itemImage = "~/images/Services/";
+                    console.log("service name: " + obj[x].service_name);
+>>>>>>> New-Default-Development
                 }
                 pageData.set("items", items);
             }else{
@@ -79,10 +129,14 @@ exports.onloaded = function(args){
     }
    // loader.hide();
 };
+<<<<<<< HEAD
 exports.serviceHistoryTap = function(){
     var topmost = frameModule.topmost();
     topmost.navigate("Views/Services/serviceHistory/servicehistory");
 }
+=======
+
+>>>>>>> New-Default-Development
 exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
    topmost.navigate("tabs/tabs-page");

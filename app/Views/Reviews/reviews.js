@@ -7,6 +7,7 @@ var ObservableArray = require("data/observable-array").ObservableArray;
 var pageData = new Observable();
 var items = new ObservableArray([]);
 var loadingBar;
+var listview;
 
 exports.onloaded = function (args) {
     page = args.object
@@ -14,11 +15,12 @@ exports.onloaded = function (args) {
     page.bindingContext = pageData;
     
     loadingBar = page.getViewById("loadingBar");
-    
-    if(items.length == 0){
+    listview = page.getViewById("listview");
+    //if(items.length == 0){
+        items = new ObservableArray([]);
         loadingBar.start();
         loadingBar.visibility = "visible";
-        
+        listview.visibility = "collapse";
         fetchModule.fetch("https://unwindv2.000webhostapp.com/reviews/loadReviews.php", {
 
         }).then(function (response) {
@@ -28,30 +30,56 @@ exports.onloaded = function (args) {
             var data = JSON.parse(phpResponse);
             var limit = data.length;
             console.log("limit: " + limit);
+            var starRate = "res://";
             for(var x = 0;x < limit;x++){
+
+                switch(data[x].rate){
+                    case "1":
+                    starRate += "one_star";
+                    break;
+
+                    case "2":
+                    starRate += "two_star";
+                    break;
+                    
+                    case "3":
+                    starRate += "three_star";
+                    break;
+                    
+                    case "4":
+                    starRate += "four_star";
+                    break;
+                    
+                    case "5":
+                    starRate += "five_star";
+                    break; 
+                }
+
                 items.push(
                     {
                         id: data[x].id,
                         username: data[x].username,
-                        rate: data[x].rate,
+                        itemImage: starRate,
                         review: data[x].review,
-                        user_Id: data[x].user_id
+                        user_Id: data[x].user_id,
+                        rate: data[x].rate
                     }
                 )
+                starRate = "res://";
                 //console.log("id: " + data[x].id);
             }
             loadingBar.visibility = "collapse";
             loadingBar.stop();
             pageData.set("items", items);
-            
+            listview.visibility = "visible";
 
         }, function (error) {
             console.log(JSON.stringify(error));
         })
-    }else{
-        loadingBar.visibility = "collapse";
-        loadingBar.stop();
-    }
+  //  }else{
+  //      loadingBar.visibility = "collapse";
+ //       loadingBar.stop();
+//    }
 };
 
 exports.fabTap = function(){
@@ -66,9 +94,9 @@ exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
     topmost.navigate("tabs/tabs-page");
 }
-exports.backEvent = function(){
+exports.backEvent = function(args){
     console.log("<<<<<< redirecting to tabs module >>>>>>");
-
+    args.cancel = true;
     var topmost = frameModule.topmost();
     topmost.navigate("tabs/tabs-page");
 }

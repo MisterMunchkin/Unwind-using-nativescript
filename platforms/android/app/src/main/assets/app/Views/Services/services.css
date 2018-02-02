@@ -1,2 +1,23 @@
 .hiddenLayout{visibility:collapse}.page-placeholder{font-size:25px;padding-left:50cm;padding-top:20cm}.page-blue{background-color:#3ba9e9}.label{color:aliceblue;font-family:"Lato"}
 .bottomNavButton{background-color: #00a2ff; color: white}
+<<<<<<< HEAD
+=======
+.listStyle{
+    border-style: solid;
+    border-width: 2px;
+    border-color: antiquewhite;
+}
+.serviceName{
+    font-family:"Lato";
+    font-size: 18px;
+    color: rgb(141, 36, 36)
+}
+.serviceType{
+    font-family:"Lato";
+    font-size: 15px;
+    color: rgb(141, 36, 36)
+}
+.antique-white-layout{
+    background-color: antiquewhite
+}
+>>>>>>> New-Default-Development

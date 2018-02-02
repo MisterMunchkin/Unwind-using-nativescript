@@ -12,10 +12,11 @@ Feel free to customize layouts and components to change how the tab view looks.
 
     <!--<Label class="page-icon fa" text="&#xf1ea;"></Label>-->
     <StackLayout>
-        <Gif:Gif id="loadingBar" src="http://giflat.dceven.fr/wp-content/uploads/2017/04/loader-white.gif" />
+        <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" />
 
         <Image id="checkinNotifIcon" class="hiddenLayout page-icon fa" stretch="none" src="res://lock_outline_grey" />
         <Label id="checkinNotif" class="hiddenLayout page-placeholder" text="Check in Module is locked"></Label>
+        
         <lv:RadListView  id="listview"  itemTap="onItemTap" selectionBehavior="Press" > 
             <lv:RadListView.listViewLayout>
                 <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="300" spanCount="2" />

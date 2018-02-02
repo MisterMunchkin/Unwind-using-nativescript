@@ -3,25 +3,47 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 const ModalPicker = require("nativescript-modal-datetimepicker").ModalDatetimepicker;
 var view = require("ui/core/view");
+var dialogs = require("tns-core-modules/ui/dialogs");
 
 const picker = new ModalPicker();
 var checkin_date;
 var checkout_date;
+var pageDataContext;
+
+var options = {
+    title: "Are you sure you want to do this?",
+    message: "this will make the app go back to the home page, and clear your progress",
+    cancelButtonText: "Cancel",
+    okButtonText: "Yes, I'm sure"
+};
 
 exports.onLoaded = function (args) { //exports is standard for both nativescript and node.js. module can add properties and methods to configure its external API
     page = args.object
     console.log("<<<<< add booking page >>>>>>")
 
+    pageDataContext = page.navigationContext;
+    if(pageDataContext != undefined){
+        page.getViewById("checkinDate").text = pageDataContext.check_in_date;
+        page.getViewById("checkoutDate").text = pageDataContext.check_out_date;
+    }
 };
 
-/*exports.onNavBtnTap = function(){
-    var topmost = frameModule.topmost();
-   topmost.navigate("tabs/tabs-page");//find a way to navigate to a specific tab
-}*/
+
 exports.backEvent = function(){
     console.log("Should have an are you sure? data you input will be lost.");
 }
+exports.onNavBtnTap = function () {
+    // frameModule.topmost().goBack();
 
+    dialogs.confirm(options).then((result) => {
+        if (result == true) {
+            frameModule.topmost().goBack();
+            
+        } else {
+            console.log(result);
+        }
+    })
+}
 exports.nextTap = function(){
 
     var checkinTextView = page.getViewById("checkinDate");
@@ -32,15 +54,27 @@ exports.nextTap = function(){
             if (new Date(checkin_date) < new Date(checkout_date)) {
                 //adding security to check if user has existing booking with the same interval
 
-                
-                var navigationOptions = {
-                    moduleName: "Views/AddBooking/AddQuantity/addquantity",
-                    context: {
-                        check_in_date: checkin_date,
-                        check_out_date: checkout_date
+                console.log("Check In Date: " + checkin_date);
+                console.log("Check Out Date:" + checkout_date);
+                if(pageDataContext != undefined){
+                    var navigationOptions = {
+                        moduleName: "Views/AddBooking/AddQuantity/addquantity",
+                        context: {
+                            check_in_date: checkin_date,
+                            check_out_date: checkout_date,
+                            numAdult: pageDataContext.numAdult,
+                            numChild: pageDataContext.numChild
+                        }
+                    }
+                }else{
+                    var navigationOptions = {
+                        moduleName: "Views/AddBooking/AddQuantity/addquantity",
+                        context: {
+                            check_in_date: checkin_date,
+                            check_out_date: checkout_date
+                        }
                     }
                 }
-
                 var topmost = frameModule.topmost();
                 topmost.navigate(navigationOptions);
             }else{
@@ -93,53 +127,7 @@ exports.checkoutTap = function(){
         console.log("Error: " + error);
     })
 }
-/*
-exports.createBooking = function(){
 
-    var checkIn = page.getViewById("checkin").year + "-" + page.getViewById("checkin").month
-        + "-" + page.getViewById("checkin").day;
-
-    var checkOut = page.getViewById("checkout").year + "-" + page.getViewById("checkout").month
-        + "-" + page.getViewById("checkout").day;
-
-    console.log(checkIn + " " + checkOut);
-    if(new Date(checkIn) >= new Date()){//bug it returns false if check in is same as current date
-        if(new Date(checkIn) < new Date(checkOut)){
-            console.log("valid dates");
-
-            var requestObject = {checkIn: checkIn, checkOut: checkOut};
-            fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/addbooking.php",{
-                method: "POST",
-                body: formEncode(requestObject)
-            }).then(function(response){
-                then(response);
-            }, function(error){
-                console.log(JSON.stringify(error));
-            })
-        }else{
-            console.log("invalid dates");
-            alert({ title: "Invalid dates", message: "make sure dates are valid", okButtonText: "Close" });
-        }
-    }else{
-        console.log("living in the past");
-        alert({ title: "Invalid check in", message: "check in is in the past", okButtonText: "Close" });
-    }
-
-}
-
-function then(response){
-    var phpResponse = response._bodyText;
-
-   // alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
-    if(phpResponse == "booking added"){
-        console.log(JSON.stringify(response));
-        var topmost = frameModule.topmost();
-        topmost.navigate("tabs/tabs-page");
-    }else{
-        console.log("fuck");
-    }
-    
-}*/
 function formEncode(obj) { //to convert urlencoded form data to JSON
     var str = [];
     for (var p in obj)

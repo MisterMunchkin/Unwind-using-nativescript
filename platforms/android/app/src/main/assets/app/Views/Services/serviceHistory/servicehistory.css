@@ -1,2 +1,10 @@
 .page-blue{background-color:#3ba9e9}
+<<<<<<< HEAD
 .label{color:white;font-family:"Lato"}
+=======
+.label{color:white;font-family:"Lato"}
+.page-placeholder{font-size:25px;padding-left:50cm;padding-top:20cm}
+.hiddenLayout{
+    visibility: collapse
+}
+>>>>>>> New-Default-Development

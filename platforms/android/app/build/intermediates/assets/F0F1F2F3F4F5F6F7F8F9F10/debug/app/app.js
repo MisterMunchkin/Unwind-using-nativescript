@@ -10,10 +10,17 @@ var connectionType = connectivity.getConnectionType();
 var snackBarOptions =  SnackBarOptions = {
     actionText: 'Okay',
     actionTextColor: "white",
+<<<<<<< HEAD
     snackText: "You're not connected to the internet alot of the functionalities will not work",
     hideDelay: 5500,
     textColor: "white",
     backgroundColor: "#00a2ff"
+=======
+    snackText: "You're not connected to the internet, alot of the functionalities will not work",
+    hideDelay: 5500,
+    textColor: "white",
+    backgroundColor: "#323232"
+>>>>>>> New-Default-Development
 }
 
 
@@ -33,13 +40,21 @@ connectivity.startMonitoring(function onConnectionTypeChanged(newConnectionType)
         })
         break;
         case connectivity.connectionType.wifi:
+<<<<<<< HEAD
         snackBar.simple('Successfully connected to the internet', 'white', '#00a2ff').then((args) => {
+=======
+        snackBar.simple('Successfully connected to the internet', 'white', '#323232').then((args) => {
+>>>>>>> New-Default-Development
             this.set('jsonResult', JSON.stringify(args));
         });
         console.log("wifi");
         break;
         case connectivity.connectionType.mobile:
+<<<<<<< HEAD
         snackBar.simple('Successfully connected to the internet', 'white', '#00a2ff').then((args) => {
+=======
+        snackBar.simple('Successfully connected to the internet', 'white', '#323232').then((args) => {
+>>>>>>> New-Default-Development
             this.set('jsonResult', JSON.stringify(args));
         });
         console.log("mobile");
@@ -52,6 +67,13 @@ if (application.android) {
     application.android.on(application.AndroidApplication.activityBackPressedEvent, backEvent);
 }
 
+<<<<<<< HEAD
+=======
+function onBackNav(args){
+
+}
+
+>>>>>>> New-Default-Development
 function backEvent(args) {
     var currentPage = frame.topmost().currentPage;
     if (currentPage && currentPage.exports && typeof currentPage.exports.backEvent === "function") {
@@ -64,7 +86,11 @@ global.foodArray = new Array();//used for ordering food from menu
 global.checkOutGrandTotal = 0; //1250 generalizing pricing for the rooms
 global.servicesOrdered = new Array();
 global.roomOrdered = new Array();//used for storing rooms in add booking
+<<<<<<< HEAD
 global.activeTab;
+=======
+global.activeTab = 0;
+>>>>>>> New-Default-Development
 global.activeTabBooking = 0;
 global.checkinSec = 0;
 global.roomsCheckedIn; //USE THIS TO CACHE ROOMS GET ROOMS FROM LOGIN

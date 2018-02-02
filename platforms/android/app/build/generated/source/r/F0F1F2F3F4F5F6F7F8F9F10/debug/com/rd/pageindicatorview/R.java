@@ -8,6 +8,7 @@ package com.rd.pageindicatorview;
 
 public final class R {
     public static final class attr {
+<<<<<<< HEAD
         public static final int piv_animationDuration = 0x7f01015b;
         public static final int piv_animationType = 0x7f01015c;
         public static final int piv_autoVisibility = 0x7f010157;
@@ -43,6 +44,43 @@ public final class R {
     }
     public static final class styleable {
         public static final int[] PageIndicatorView = { 0x7f01014e, 0x7f01014f, 0x7f010150, 0x7f010151, 0x7f010152, 0x7f010153, 0x7f010154, 0x7f010155, 0x7f010156, 0x7f010157, 0x7f010158, 0x7f010159, 0x7f01015a, 0x7f01015b, 0x7f01015c, 0x7f01015d };
+=======
+        public static final int piv_animationDuration = 0x7f010159;
+        public static final int piv_animationType = 0x7f01015a;
+        public static final int piv_autoVisibility = 0x7f010155;
+        public static final int piv_count = 0x7f01014f;
+        public static final int piv_dynamicCount = 0x7f010150;
+        public static final int piv_interactiveAnimation = 0x7f010158;
+        public static final int piv_orientation = 0x7f01014c;
+        public static final int piv_padding = 0x7f010152;
+        public static final int piv_radius = 0x7f010151;
+        public static final int piv_rtl_mode = 0x7f01015b;
+        public static final int piv_scaleFactor = 0x7f010154;
+        public static final int piv_select = 0x7f01014e;
+        public static final int piv_selectedColor = 0x7f010157;
+        public static final int piv_strokeWidth = 0x7f010153;
+        public static final int piv_unselectedColor = 0x7f010156;
+        public static final int piv_viewPager = 0x7f01014d;
+    }
+    public static final class id {
+        public static final int auto = 0x7f0d004a;
+        public static final int color = 0x7f0d007e;
+        public static final int drop = 0x7f0d007f;
+        public static final int fill = 0x7f0d0060;
+        public static final int horizontal = 0x7f0d007c;
+        public static final int none = 0x7f0d0033;
+        public static final int off = 0x7f0d0085;
+        public static final int on = 0x7f0d0086;
+        public static final int scale = 0x7f0d0080;
+        public static final int slide = 0x7f0d0081;
+        public static final int swap = 0x7f0d0082;
+        public static final int thinWorm = 0x7f0d0083;
+        public static final int vertical = 0x7f0d007d;
+        public static final int worm = 0x7f0d0084;
+    }
+    public static final class styleable {
+        public static final int[] PageIndicatorView = { 0x7f01014c, 0x7f01014d, 0x7f01014e, 0x7f01014f, 0x7f010150, 0x7f010151, 0x7f010152, 0x7f010153, 0x7f010154, 0x7f010155, 0x7f010156, 0x7f010157, 0x7f010158, 0x7f010159, 0x7f01015a, 0x7f01015b };
+>>>>>>> New-Default-Development
         public static final int PageIndicatorView_piv_animationDuration = 13;
         public static final int PageIndicatorView_piv_animationType = 14;
         public static final int PageIndicatorView_piv_autoVisibility = 9;

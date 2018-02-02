@@ -9,6 +9,7 @@
         </ActionBar>
     </Page.actionBar>
 
+<<<<<<< HEAD
     <GridLayout rows="*,45">
         <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
             <Gif:Gif id="loadingBar" src="http://giflat.dceven.fr/wp-content/uploads/2017/04/loader-white.gif" />
@@ -30,6 +31,29 @@
                             
                         </StackLayout>
                         </GridLayout> 
+=======
+    <GridLayout rows="*">
+        <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
+            <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" />
+            <lv:RadListView id="listview" items="{{ items }}"  
+            row="0" itemTap="itemTap"> 
+
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="250" spanCount="2" />
+                </lv:RadListView.listViewLayout>
+
+                <lv:RadListView.itemTemplate>
+                    <GridLayout class="list-group-item listStyle" rows="130, auto">
+                        <Image row="0" src="{{ itemImage }}" stretch="aspectFit" />
+                        <StackLayout row="1" >
+
+                            <Label text="{{ service_name }}" class="antique-white-layout serviceName" />
+                            <Label text="{{ service_type }}" class="antique-white-layout serviceType" />
+                            
+                            
+                        </StackLayout>
+                    </GridLayout> 
+>>>>>>> New-Default-Development
                 </lv:RadListView.itemTemplate>
             </lv:RadListView>
         </StackLayout>

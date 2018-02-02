@@ -36,6 +36,7 @@ exports.onloaded = function(args){
     
     //loader = new LoadingIndicator();
     //loader.show(options);
+<<<<<<< HEAD
     if(items.length == 0){
         console.log("new data fishing...");
         loadingBar.start();
@@ -77,17 +78,65 @@ exports.onloaded = function(args){
         loadingBar.visibility = "collapse";
         loadingBar.stop();
     }
+=======
+
+    console.log("new data fishing...");
+    loadingBar.start();
+    loadingBar.visibility = "visible";
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/services/loadServiceData.php", {
+        
+    }).then(function (response) {
+        obj = response._bodyText;
+    
+
+        if(obj != "no data" && obj != "query error"){
+
+            items = new ObservableArray([]);
+            obj = JSON.parse(obj);
+            //console.log("inside then function: " + obj);
+            var limit = obj.length;
+        
+            for(var x = 0; x < limit;x++){
+                items.push(
+                    {
+                        service_name: obj[x].service_name,
+                        service_type: obj[x].service_type,
+                        service_id: obj[x].service_id
+                    }
+
+                );
+    
+            }
+            pageData.set("items", items);
+        }else{
+            alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });  
+        }
+        loadingBar.visibility = "collapse";
+        loadingBar.stop();
+    }, function (error) {
+        console.log(JSON.stringify(error));
+    })
+
+>>>>>>> New-Default-Development
    // loader.hide();
 }; 
 exports.onNavBtnTap = function(){
     var topmost = frameModule.topmost();
+<<<<<<< HEAD
    topmost.navigate("Views/Services/services");
+=======
+   topmost.goBack();
+>>>>>>> New-Default-Development
 }
 exports.backEvent = function (args) {
 
     args.cancel = true;
     var topmost = frameModule.topmost();
+<<<<<<< HEAD
     topmost.navigate("Views/Services/services");
+=======
+    topmost.goBack();
+>>>>>>> New-Default-Development
 }
 
 

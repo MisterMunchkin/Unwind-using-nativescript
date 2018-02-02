@@ -10,7 +10,12 @@ var pageData = new Observable();
 
 
 var loadingBar;
+<<<<<<< HEAD
 
+=======
+var noData;
+var listview;
+>>>>>>> New-Default-Development
 var options = {
     message: 'Loading...',
     progress: 0.65,
@@ -32,14 +37,20 @@ exports.onloaded = function(args){
 
     var obj;
     loadingBar = page.getViewById("loadingBar");
+<<<<<<< HEAD
 
     
+=======
+    noData = page.getViewById("noData");
+    listview = page.getViewById("listview");
+>>>>>>> New-Default-Development
     //loader = new LoadingIndicator();
     //loader.show(options);
 
     console.log("new data fishing...");
     loadingBar.start();
     loadingBar.visibility = "visible";
+<<<<<<< HEAD
     fetchModule.fetch("https://unwindv2.000webhostapp.com/services/loadServiceData.php", {
         
     }).then(function (response) {
@@ -47,6 +58,19 @@ exports.onloaded = function(args){
     
 
         if(obj != "no data" && obj != "query error"){
+=======
+    var requestObject = {check_in_id: global.loginCred[2]};
+    //NOT WORKING YET
+    fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getServicesHistory.php", {
+        method: "POST",
+        body: formEncode(requestObject)
+    }).then(function (response) {
+        obj = response._bodyText;
+    
+        console.log("finished fishing");
+        console.log("OBJECT: " + obj);
+        if(obj.indexOf("error") == -1){
+>>>>>>> New-Default-Development
 
             items = new ObservableArray([]);
             obj = JSON.parse(obj);
@@ -54,11 +78,23 @@ exports.onloaded = function(args){
             var limit = obj.length;
         
             for(var x = 0; x < limit;x++){
+<<<<<<< HEAD
                 items.push(
                     {
                         service_name: obj[x].service_name,
                         service_type: obj[x].service_type,
                         service_id: obj[x].service_id
+=======
+
+                console.log("service_name: " + obj[x].serviceName)
+                items.push(
+                    {
+                        service_name: obj[x].serviceName,
+                        serviceRequestId: obj[x].serviceRequestId,
+                        serviceRequestStatus: obj[x].serviceRequestStatus,
+                        serviceRequestDate: obj[x].serviceRequestDate,
+                        employeeId: obj[x].employeeId
+>>>>>>> New-Default-Development
                     }
 
                 );
@@ -66,7 +102,17 @@ exports.onloaded = function(args){
             }
             pageData.set("items", items);
         }else{
+<<<<<<< HEAD
             alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });  
+=======
+            if(obj.indexOf("No services") == -1){
+                alert({  message: obj, okButtonText: "Close" });  
+            }else{
+                listview.visibility = "collapse";
+                noData.class = "page-placeholder";
+            }
+            //alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });  
+>>>>>>> New-Default-Development
         }
         loadingBar.visibility = "collapse";
         loadingBar.stop();

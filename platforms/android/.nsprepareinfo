@@ -1,9 +1,18 @@
 {
+<<<<<<< HEAD
 	"time": "Sun Jan 28 2018 12:31:08 GMT+0800 (Taipei Standard Time)",
+=======
+	"time": "Fri Feb 02 2018 17:02:07 GMT+0800 (China Standard Time)",
+>>>>>>> New-Default-Development
 	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,
 	"changesRequireBuild": false,
+<<<<<<< HEAD
 	"projectFileHash": "016ec322ee8ecac3c91f0cf3e161bd26555404087c641be1921a1ff9ee7938a9",
 	"changesRequireBuildTime": "Fri Jan 26 2018 11:51:09 GMT+0800 (Taipei Standard Time)"
+=======
+	"projectFileHash": "139e49e81bd7add36cbeaa3ad23ef9438bc47188605b55e5d3455934555fcaf1",
+	"changesRequireBuildTime": "Wed Jan 31 2018 21:49:36 GMT+0800 (China Standard Time)"
+>>>>>>> New-Default-Development
 }

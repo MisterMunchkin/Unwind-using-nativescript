@@ -4,12 +4,11 @@ var fetchModule = require("fetch");
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 var application = require('application');
 require("nativescript-master-technology");
-var connectivity = require("tns-core-modules/connectivity");
-var SnackBar = require("nativescript-snackbar").SnackBar;
 
-var snackBar = new SnackBar();
-var connectionType = connectivity.getConnectionType();
+
+var signIn;
 var loader;
+var signUp;
 
 var options = {
     message: 'Loading...',
@@ -29,7 +28,12 @@ exports.loaded = function(args){ //exports is standard for both nativescript and
     page = args.object
     console.log("<<<<<login page>>>>>");
   
+<<<<<<< HEAD
         
+=======
+    signIn = page.getViewById("signIn");
+    signUp = page.getViewById("signUp");
+>>>>>>> New-Default-Development
 };
 
 exports.backEvent = function (args) {
@@ -45,7 +49,8 @@ exports.signIn = function(){
 
     email = page.getViewById("email");
     password = page.getViewById("password");
-
+    signIn.isEnabled = "false";
+    signUp.isEnabled = "false";
     if(email.text != "" && password.text != ""){
         if(validateEmail(email.text) == true){    
             console.log("email: " + email.text);
@@ -65,15 +70,25 @@ exports.signIn = function(){
             }, function (error) {
                 console.log("ERROR");
                 console.log(JSON.stringify(error));
+<<<<<<< HEAD
+=======
+                signIn.isEnabled = "true";
+                signUp.isEnabled = "false";
+>>>>>>> New-Default-Development
                 loader.hide();
                 alert({message: "please make sure you're connected to the internet and try again", okButtonText: "Okay"});
             })
             
         }else{
             //email validation notif
+            alert({message: "please enter a valid email address", okButtonText: "Okay"});
+            signIn.isEnabled = "true";
+            signUp.isEnabled = "true";
         }
     }else{
         password.class = email.class = "requiredFields";
+        signIn.isEnabled = "true";
+        signUp.isEnabled = "true";
     }
 };
 
@@ -88,6 +103,11 @@ function then(response){
     var phpResponse = response._bodyText;
 
     if(!response.ok){
+<<<<<<< HEAD
+=======
+        signIn.isEnabled = "true";
+        signUp.isEnabled = "true";
+>>>>>>> New-Default-Development
         alert({message: "an error has occured, please make sure you're connected to the internet and try again", okButtonText: "Okay"});
     }
    
@@ -110,16 +130,32 @@ function then(response){
         console.log("serviceOrdered: " + JSON.stringify(global.servicesOrdered));
         console.log("roomOdered: " + JSON.stringify(global.roomOrdered));
 
+<<<<<<< HEAD
         if(global.loginCred[3] == undefined && global.loginCred[4] == undefined){
             global.checkOutGrandTotal = 0;
             loader.hide();
             console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
+=======
+        if(global.loginCred[2] == undefined){
+            console.log("not checked in");
+            global.checkOutGrandTotal = 0;
+            global.checkinSec = 0;
+            
+            loader.hide();
+            console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
+            //signIn.isEnabled = "true";
+>>>>>>> New-Default-Development
             var topmost = frameModule.topmost();
             topmost.navigate("tabs/tabs-page");
         }else{
             console.log("user has active check in...")
             global.checkOutGrandTotal += global.loginCred[3] + global.loginCred[4];
+<<<<<<< HEAD
             
+=======
+            global.checkinSec = 1;
+
+>>>>>>> New-Default-Development
             var requestObject = {check_in_id: global.loginCred[2]};
             console.log("fishing for users active rooms...");
             fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getRoomsFromCheckIn.php", {
@@ -134,6 +170,10 @@ function then(response){
                 
                 loader.hide();
                 console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
+<<<<<<< HEAD
+=======
+               // signIn.isEnabled = "true";
+>>>>>>> New-Default-Development
                 var topmost = frameModule.topmost();
                 topmost.navigate("tabs/tabs-page");
             }, function (error) {
@@ -146,8 +186,11 @@ function then(response){
         
     }else{
        // page.getViewById("email").text = "";
+        signIn.isEnabled = "true";
+        signUp.isEnabled = "true";
         page.getViewById("password").text = "";
-        alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });     
+        loader.hide();
+        alert({  message: phpResponse, okButtonText: "Close" });     
     }
 
     

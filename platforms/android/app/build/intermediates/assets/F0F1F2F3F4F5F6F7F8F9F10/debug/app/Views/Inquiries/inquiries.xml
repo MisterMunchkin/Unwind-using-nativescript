@@ -2,6 +2,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"   
         xmlns:Gif="nativescript-gif" 
         xmlns:FAB="nativescript-floatingactionbutton"
+<<<<<<< HEAD
         loaded="onloaded" >
 
     <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
@@ -31,6 +32,44 @@
          
                 icon="res://ic_plus_white_48dp"
                 class="fab-button" />
+=======
+         xmlns:lv="nativescript-pro-ui/listview"
+        loaded="onloaded" >
+
+    <Page.actionBar>
+        <ActionBar class="label page-blue" title="Inquiries">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
+        </ActionBar>
+    </Page.actionBar>
+
+    <GridLayout>
+        <StackLayout orientation="vertical">
+            <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" /> 
+            <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
+
+            <lv:RadListView id="listview"  class="list-group" >
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewLinearLayout scrollDirection="vertical" />
+                </lv:RadListView.listViewLayout>
+
+                <lv:RadListView.itemTemplate>
+                    <GridLayout   class="list-group-item" rows="auto" columns="auto, *" >
+                        <StackLayout row="0">
+                            <!--<Image  src="{{ itemImage }}" stretch="fit" />-->
+                            <Label text="{{ name }}" class="list-group-item-heading" />
+                            <TextView text="{{ message }}" isEnabled="false" editable="false" class="list-group-item-text" />
+                        </StackLayout>
+                    </GridLayout>
+                </lv:RadListView.itemTemplate>
+            </lv:RadListView>
+
+        </StackLayout>
+        <FAB:fab tap="fabTap"
+            
+                    icon="res://ic_plus_white_48dp"
+                    class="fab-button" />
+    </GridLayout>
+>>>>>>> New-Default-Development
  
 </Page>
 

@@ -10,8 +10,13 @@ var pageData = new Observable();
 
 
 var loadingBar;
+<<<<<<< HEAD
 
 
+=======
+var noData;
+var listview;
+>>>>>>> New-Default-Development
 
 exports.onloaded = function(args){
     page = args.object
@@ -20,12 +25,21 @@ exports.onloaded = function(args){
 
     var obj;
     loadingBar = page.getViewById("loadingBar");
+<<<<<<< HEAD
 
     
+=======
+    listview = page.getViewById("listview");
+    noData = page.getViewById("noData");
+>>>>>>> New-Default-Development
     //loader = new LoadingIndicator();
     //loader.show(options);
 
     console.log("new data fishing...");
+<<<<<<< HEAD
+=======
+    listview.visibility = "collapse";
+>>>>>>> New-Default-Development
     loadingBar.start();
     loadingBar.visibility = "visible";
     var requestedObject = {userID: global.loginCred[0]};
@@ -36,13 +50,18 @@ exports.onloaded = function(args){
         obj = response._bodyText;
         console.log("done fishing...: " + obj);
 
+<<<<<<< HEAD
         if(obj != "no data error" && obj != "query error"){
+=======
+        if(obj.indexOf("error") == -1){
+>>>>>>> New-Default-Development
 
             items = new ObservableArray([]);
             obj = JSON.parse(obj);
             console.log("object: " + JSON.stringify(obj));
             //console.log("inside then function: " + obj);
             var limit = obj.length;
+<<<<<<< HEAD
 
             var MonthNames = ["January", "February", "March", "April", "May",
             "June", "July", "August", "September", "October", "November", "December"];
@@ -53,13 +72,27 @@ exports.onloaded = function(args){
             var newCheckin;
             var newCheckout;
 
+=======
+            var MonthNames = ["January", "February", "March", "April", "May",
+                "June", "July", "August", "September", "October", "November", "December"];
+
+            var checkinMonthIndex;
+            var checkoutMonthIndex;
+
+            var newCheckin;
+            var newCheckout;
+>>>>>>> New-Default-Development
             for(var x = 0; x < limit;x++){
                 checkinMonthIndex = new Date(obj[x].checkinDate);
                 checkoutMonthIndex = new Date(obj[x].checkoutDate);
 
                 newCheckin = MonthNames[checkinMonthIndex.getMonth()] + " " + checkinMonthIndex.getDate() + ", " + checkinMonthIndex.getFullYear();
                 newCheckout = MonthNames[checkoutMonthIndex.getMonth()] + " " + checkoutMonthIndex.getDate() + ", " + checkoutMonthIndex.getFullYear(); 
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> New-Default-Development
                 items.push(
                     {
                         check_in_date: newCheckin,
@@ -74,6 +107,7 @@ exports.onloaded = function(args){
             loadingBar.visibility = "collapse";
             loadingBar.stop();  
             pageData.set("items", items);
+<<<<<<< HEAD
         }else{
             loadingBar.visibility = "collapse";
             loadingBar.stop();
@@ -81,6 +115,23 @@ exports.onloaded = function(args){
         }
         
     }, function (error) {
+=======
+            listview.visibility = "visible";
+        }else{
+            loadingBar.visibility = "collapse";
+            loadingBar.stop();
+            if(obj == "no data error"){
+                noData.class = "page-placeholder";
+            }else{
+                alert({ message: phpResponse + ", please report a bug if it has been found", okButtonText: "Close" });  
+            }       
+        }
+        
+    }, function (error) {
+        loadingBar.visibility = "collapse";
+        loadingBar.stop();
+        alert({  message: error, okButtonText: "Close" });  
+>>>>>>> New-Default-Development
         console.log(JSON.stringify(error));
     })
 

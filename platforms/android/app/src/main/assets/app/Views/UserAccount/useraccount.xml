@@ -10,12 +10,17 @@
     </Page.actionBar>
     <GridLayout rows="*,60" >
         <ScrollView>    
+<<<<<<< HEAD
             <StackLayout row="0" orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
+=======
+            <StackLayout row="0" orientation="vertical" >
+>>>>>>> New-Default-Development
                 
                 <!--<AbsoluteLayout>
                     <Button text="edit account" left="220" top="10" />
                 </AbsoluteLayout>-->
 
+<<<<<<< HEAD
                 <Label text="Last Name" />
                 <TextField id="accountLname"  />
         
@@ -32,6 +37,24 @@
 
                 <Label text="Contact Number" />
                 <TextField id="accountContact_no" class="userInfo sub" />
+=======
+                <Label text="Last Name"  class="accountName" />
+                <TextField id="accountLname"  editable="false" isEnabled="false" class="userInfo" />
+        
+                <Label text="First Name" class="accountName" />
+                <TextField id="accountFname" editable="false" isEnabled="false" class="userInfo" />
+
+
+                <Label text="Middle Initial" class="accountName" />
+                <TextField id="accountMname" editable="false" isEnabled="false" class="userInfo" />
+
+                <Label text="Email Address" class="accountName" />
+                <TextField id="accountEmail" editable="false" isEnabled="false" class="userInfo" />
+
+
+                <Label text="Contact Number" class="accountName" />
+                <TextField id="accountContact_no" editable="false" isEnabled="false" class="userInfo" />
+>>>>>>> New-Default-Development
 
             </StackLayout>
         </ScrollView>

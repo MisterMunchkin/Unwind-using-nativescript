@@ -1,12 +1,31 @@
+
+
 var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var view = require("ui/core/view");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
+var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
 var serviceContext;
 var actionBar;
+
+var loader;
+
+var options = {
+    message: 'Loading...',
+    progress: 0.65,
+    android: {
+        indeterminate: true,
+        cancelable: false,
+        max: 100,
+        progressNumberFormat: "%1d/%2d",
+        progressPercentFormat: 0.53,
+        progressStyle: 1,
+        secondaryProgress: 1
+    }
+};
 
 var pageData = new Observable();
 var items;
@@ -40,14 +59,46 @@ exports.onloaded = function (args) {
     
 
     var limit = global.roomsCheckedIn.length;
+
+    var itemImage = "~/images/Rooms/";
     for(var x = 0;x < limit;x++){
+
+        switch (global.roomsCheckedIn[x].RoomName){
+            case "Regular":
+            itemImage += "singlebed.png";
+            break;
+            
+            case "Suite":
+            itemImage += "suite.png";
+            break;
+
+            case "Twin Queen Bedroom":
+            itemImage += "twin.png";
+            break;
+
+            case "Amazing":
+            itemImage += "amazing.png";
+            break;
+            
+            case "Superior Size King":
+            itemImage += "superiorKing.png";
+            break;
+
+            case "Test":
+            itemImage += "test.png"
+            break;
+        }
+
         items.push(
             {
                 roomNumber: global.roomsCheckedIn[x].roomNumber,
                 roomType: global.roomsCheckedIn[x].RoomName,
-                roomID: global.roomsCheckedIn[x].roomId
+                roomID: global.roomsCheckedIn[x].roomId,
+                itemImage: itemImage
             }
         )
+
+        itemImage = "~/images/Rooms/";
     }
     pageData.set("items", items);
     
@@ -68,13 +119,14 @@ exports.addToCartTap = function(){
     console.log("selected rooms: " + JSON.stringify(listview.getSelectedItems()));
 
     var roomArray = listview.getSelectedItems();
-
+    loader = new LoadingIndicator();
     var limit = roomArray.length;
 
     var date = new Date().toMysqlFormat();
 
     var requestObject = {roomArray: JSON.stringify(roomArray), service_id: serviceContext.service_id,
                         service_request_date: date, check_in_id: global.loginCred[2]};
+    loader.show(options);
     fetchModule.fetch("https://unwindv2.000webhostapp.com/services/insertServiceRequest.php", {
         method: "POST",
         body: formEncode(requestObject)
@@ -84,9 +136,11 @@ exports.addToCartTap = function(){
         console.log("rooms that will be serviced: " + phpResponse);
         if(phpResponse.indexOf("error") <= -1){
             alert({ message: "Service request sent!", okButtonText: "Close" });
+            loader.hide();
             var topmost = frameModule.topmost();
             topmost.navigate("Views/Services/services");
         }else{
+            loader.hide();
             alert({ message: phpResponse , okButtonText: "Close" });
         }
     }, function (error) {

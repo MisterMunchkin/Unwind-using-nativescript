@@ -16,4 +16,12 @@
 .textview{
     border-width:0 0 0 0;
     border-bottom-color: white;
+<<<<<<< HEAD
+=======
+}
+.starLayout{
+    height: 40%;
+    width: 40%;
+    padding-left: 20px;
+>>>>>>> New-Default-Development
 }

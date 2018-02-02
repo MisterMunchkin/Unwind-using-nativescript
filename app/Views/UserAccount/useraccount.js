@@ -9,15 +9,6 @@ exports.onloaded = function(args){
     page = args.object
     console.log("<<<<<<user account page>>>>>>");
 
-    pageUserObject = {
-        accountLName: page.getViewById("accountLName"),
-        accountFName: page.getViewById("accountFName"),
-        accountMName: page.getViewById("accountMName"),
-        accountEmail: page.getViewById("accountEmail"),
-        accountBirthdate: page.getViewById("accountBirthdate"),
-        accountContact_no: page.getViewById("accountContact_no")
-    }
-
 
     var requestObject = {user_id: global.loginCred[0]};
     fetchModule.fetch("https://unwindv2.000webhostapp.com/useraccount/getUserData.php", {
@@ -30,12 +21,11 @@ exports.onloaded = function(args){
         if(phpResponse.indexOf("error") <= -1){
             userObject = JSON.parse(phpResponse);
             
-            pageUserObject.accountLName.text = userObject.last_name;
-            pageUserObject.accountFName.text = userObject.first_name;
-            pageUserObject.accountMName.text = userObject.middle_initial;
-            pageUserObject.accountEmail.text = userObject.email;
-            pageUserObject.accountBirthdate.text = userObject.birthdate;
-            pageUserObject.accountContact_no.text = userObject.contact_no;
+            page.getViewById("accountLname").text = userObject.last_name;
+            page.getViewById("accountFname").text = userObject.first_name;
+            page.getViewById("accountMname").text = userObject.middle_initial;
+            page.getViewById("accountEmail").text = userObject.email;
+            page.getViewById("accountContact_no").text = userObject.contact_no;
 
         }else{
             alert({ message: "could not retrieve user info at this time, try again later", okButtonText: "Okay" });

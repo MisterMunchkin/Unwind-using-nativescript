@@ -12,4 +12,17 @@
     width:80%
 }
 .page-blue{background-color:#3ba9e9}
+<<<<<<< HEAD
 .label{color:aliceblue;font-family:"Lato"}
+=======
+.label{color:aliceblue;font-family:"Lato"}
+.textview{
+    border-width:0 0 0 0;
+    border-bottom-color: white;
+}
+.starLayout{
+    height: 40%;
+    width: 40%;
+    padding-left: 20px;
+}
+>>>>>>> New-Default-Development

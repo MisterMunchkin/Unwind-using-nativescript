@@ -52,6 +52,10 @@ if (application.android) {
     application.android.on(application.AndroidApplication.activityBackPressedEvent, backEvent);
 }
 
+function onBackNav(args){
+
+}
+
 function backEvent(args) {
     var currentPage = frame.topmost().currentPage;
     if (currentPage && currentPage.exports && typeof currentPage.exports.backEvent === "function") {
@@ -64,7 +68,11 @@ global.foodArray = new Array();//used for ordering food from menu
 global.checkOutGrandTotal = 0; //1250 generalizing pricing for the rooms
 global.servicesOrdered = new Array();
 global.roomOrdered = new Array();//used for storing rooms in add booking
+<<<<<<< HEAD
 global.activeTab;
+=======
+global.activeTab = 0;
+>>>>>>> New-Default-Development
 global.activeTabBooking = 0;
 global.checkinSec = 0;
 global.roomsCheckedIn; //USE THIS TO CACHE ROOMS GET ROOMS FROM LOGIN

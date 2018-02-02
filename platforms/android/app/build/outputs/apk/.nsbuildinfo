@@ -1,4 +1,9 @@
 {
+<<<<<<< HEAD
 	"prepareTime": "Fri Jan 26 2018 11:51:09 GMT+0800 (Taipei Standard Time)",
 	"buildTime": "Fri Jan 26 2018 11:52:59 GMT+0800 (Taipei Standard Time)"
+=======
+	"prepareTime": "Wed Jan 31 2018 21:49:36 GMT+0800 (China Standard Time)",
+	"buildTime": "Wed Jan 31 2018 21:50:30 GMT+0800 (China Standard Time)"
+>>>>>>> New-Default-Development
 }
