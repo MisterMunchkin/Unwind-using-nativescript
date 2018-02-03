@@ -59,8 +59,11 @@ exports.onloaded = function(args) {
     var checkoutDateUI = page.getViewById("checkoutDate");
     var adult_qtyUI = page.getViewById("adult_qty");
     var child_qtyUI = page.getViewById("child_qty");
-    
+    var rejectionMessage = page.getViewById("rejectionMessage");
+    var rejectionLabel = page.getViewById("rejectionLabel");
 
+    rejectionMessage.visibility = "collapse";
+    rejectionLabel.visibility = "collapse";
     resStatusUI.text = "Reservation Status: " + requestObject.resStatus;
     checkinDateUI.text = "Check In Date: " + requestObject.checkinDate;
     checkoutDateUI.text = "Check Out Date: " + requestObject.checkoutDate;
@@ -68,7 +71,9 @@ exports.onloaded = function(args) {
     child_qtyUI.text = "Child quantity: " + requestObject.child_qty;
 
     if (requestObject.resStatus == "Rejected"){
-        var rejectionMessage = page.getViewById("rejectionMessage");
+
+        rejectionMessage.visibility = "visible";
+        rejectionLabel.visibility = "visible";
 
         var rejectObject = {reservation_request_id: requestObject.resID};
         fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/getReservationRejectResponse.php", {
