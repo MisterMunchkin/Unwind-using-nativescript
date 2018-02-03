@@ -35,9 +35,7 @@ function onLoaded(args) {
         {
             listName: "Reservation History"
         },
-        {
-            listName: "Reservation Rejects"
-        },
+
         {
             listName: "Service History"
         },
@@ -77,13 +75,7 @@ exports.onItemTap = function(args){
         break;
     }
 }
-function goToServiceRejects(){
-    var topmost = frameModule.topmost();
-    topmost.navigate("Views/Services/serviceReject/servicereject");
-}
-function goToReservationRejects(){
 
-}
 function goToReservationHistory(){
    
     var topmost = frameModule.topmost();

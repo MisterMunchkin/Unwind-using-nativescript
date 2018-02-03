@@ -10,31 +10,38 @@
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
+    <ScrollView>
+        <GridLayout rows="*, auto">
+            <StackLayout orientation="vertical">
+                <!--<Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" /> -->
+                <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
 
-    <GridLayout>
-        <StackLayout orientation="vertical">
-            <!--<Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" /> -->
-            <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
+                <lv:RadListView row="0" id="listview"  class="list-group" itemTap="itemTap" >
+                    <lv:RadListView.listViewLayout>
+                        <lv:ListViewLinearLayout scrollDirection="vertical" />
+                    </lv:RadListView.listViewLayout>
 
-            <lv:RadListView id="listview"  class="list-group" itemTap="itemTap" >
-                <lv:RadListView.listViewLayout>
-                    <lv:ListViewLinearLayout scrollDirection="vertical" />
-                </lv:RadListView.listViewLayout>
+                    <lv:RadListView.itemTemplate>
+                        <GridLayout   class="list-group-item" rows="auto" columns="auto, *" >
+                            <StackLayout row="0">
+                                <!--<Image  src="{{ itemImage }}" stretch="fit" />-->
 
-                <lv:RadListView.itemTemplate>
-                    <GridLayout   class="list-group-item" rows="auto" columns="auto, *" >
-                        <StackLayout row="0">
-                            <!--<Image  src="{{ itemImage }}" stretch="fit" />-->
-                            <Label text="{{ name }}" class="list-group-item-heading" />
-                            <TextView text="{{ message }}" isEnabled="false" editable="false" class="list-group-item-text" />
-                        </StackLayout>
-                    </GridLayout>
-                </lv:RadListView.itemTemplate>
-            </lv:RadListView>
-
-        </StackLayout>
-
-    </GridLayout>
- 
+                                <Label text="{{ Name }}" class="list-group-item-heading" />
+                                <TextView text="{{ message }}" isEnabled="false" editable="false" class="list-group-item-text" />
+                            </StackLayout>
+                        </GridLayout>
+                    </lv:RadListView.itemTemplate>
+                </lv:RadListView>
+            </StackLayout>
+        
+    
+            <StackLayout row="1"  orientation="horizontal" >
+                <GridLayout columns="300, 60" >
+                    <TextField class="chatTextField" col="0"  id="messageResponse" />
+                    <Button class="chatBtn" col="1"  text="send" tap="responseSubmit" />
+                </GridLayout>
+            </StackLayout>
+        </GridLayout>
+    </ScrollView>
 </Page>
 
