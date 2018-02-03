@@ -40,7 +40,7 @@ exports.onloaded = function (args) {
                 //binding here
                 
 
-                items.push(
+                /*items.push(
                     {
                         inquiryID: pageDataContext.inquiryID,
                         message: pageDataContext.message,
@@ -53,16 +53,17 @@ exports.onloaded = function (args) {
                         employeeID: "",
                         Name: pageDataContext.name
                     }
-                )
+                )*/
 
                 var obj = JSON.parse(phpResponse);
                 var limit = obj.length;
+                console.log("response limit: " + limit);
                 for(var x = 0;x < limit;x++){
                     console.log("messages: " + obj[x].message);
                     var titleName;
 
-                    if(obj[x].employee_id != undefined){
-                        titleName = obj[x].employeeName;
+                    if(obj[x].employeeID != null){
+                        titleName = "From Employee";
                     }else{
                         titleName = obj[x].name;
                     }
@@ -99,41 +100,45 @@ exports.onloaded = function (args) {
 exports.responseSubmit = function(){
     var message = page.getViewById("messageResponse");
 
-    console.log("submitting...");
+    if(message.text != ""){
+        console.log("submitting...");
 
-    items.push(
-        {
-            inquiryID: pageDataContext.inquiryID,
-            message: message.text,
-            userID: pageDataContext.userID,
-            day: "",
-            year: "",
-            month: "",
-            Username: pageDataContext.name,
-            employeeName: "",
-            employeeID: "",
-            Name: pageDataContext.name
-        }
-    )
-    listview.items = items;
-    
-    var object = {message: message.text,inquiry_id: pageDataContext.inquiryID};
-    fetchModule.fetch("https://unwindv2.000webhostapp.com/inquiries/insertResponse.php", {
-        method: "POST",
-        body: formEncode(object)
-    }).then(function (response) {
-
+        items.push(
+            {
+                inquiryID: pageDataContext.inquiryID,
+                message: message.text,
+                userID: pageDataContext.userID,
+                day: "",
+                year: "",
+                month: "",
+                Username: pageDataContext.name,
+                employeeName: "",
+                employeeID: "",
+                Name: pageDataContext.name
+            }
+        )
+        listview.items = items;
         
-        var phpResponse = response._bodyText;
-        console.log("response: " + phpResponse);
-        listview.refresh();
-        message.text = "";
+        var object = {message: message.text,inquiry_id: pageDataContext.inquiryID};
+        fetchModule.fetch("https://unwindv2.000webhostapp.com/inquiries/insertResponse.php", {
+            method: "POST",
+            body: formEncode(object)
+        }).then(function (response) {
 
-    }, function (error) {
-        console.log(JSON.stringify(error));
-        alert({ message: "please make sure your internet is stable", okButtonText: "Okay" });
-    })
-    console.log("submitted!");
+            
+            var phpResponse = response._bodyText;
+            console.log("response: " + phpResponse);
+            listview.refresh();
+            message.text = "";
+
+        }, function (error) {
+            console.log(JSON.stringify(error));
+            alert({ message: "please make sure your internet is stable", okButtonText: "Okay" });
+        })
+        console.log("submitted!");
+    }else{
+        alert({message: "Can't leave response blank", okButtonText:"Okay"});
+    }
 }
 exports.onNavBtnTap = function () {
     frameModule.topmost().goBack();
