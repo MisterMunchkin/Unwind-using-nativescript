@@ -38,7 +38,7 @@
             <StackLayout row="1"  orientation="horizontal" >
                 <GridLayout columns="300, 60" >
                     <TextField class="chatTextField" col="0"  id="messageResponse" />
-                    <Button class="chatBtn" col="1"  text="send" tap="responseSubmit" />
+                    <Button class="blue-btn" col="1"  text="send" tap="responseSubmit" />
                 </GridLayout>
             </StackLayout>
         </GridLayout>

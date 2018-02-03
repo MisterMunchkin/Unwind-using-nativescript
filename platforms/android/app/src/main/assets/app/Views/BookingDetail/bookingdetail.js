@@ -59,13 +59,33 @@ exports.onloaded = function(args) {
     var checkoutDateUI = page.getViewById("checkoutDate");
     var adult_qtyUI = page.getViewById("adult_qty");
     var child_qtyUI = page.getViewById("child_qty");
-
+    
 
     resStatusUI.text = "Reservation Status: " + requestObject.resStatus;
     checkinDateUI.text = "Check In Date: " + requestObject.checkinDate;
     checkoutDateUI.text = "Check Out Date: " + requestObject.checkoutDate;
     adult_qtyUI.text = "Adult quantity: " + requestObject.adult_qty;
     child_qtyUI.text = "Child quantity: " + requestObject.child_qty;
+
+    if (requestObject.resStatus == "Rejected"){
+        var rejectionMessage = page.getViewById("rejectionMessage");
+
+        var rejectObject = {reservation_request_id: requestObject.resID};
+        fetchModule.fetch("https://unwindv2.000webhostapp.com/booking/getReservationRejectResponse.php", {
+            method: "POST",
+            body: formEncode(rejectObject)
+
+        }).then(function (response) {
+            console.log("response: " + response._bodyText);
+            var obj = JSON.parse(response._bodyText);
+            rejectionMessage.text = obj[0].message;
+        }, function (error) {
+            console.log("ERROR");
+            console.log(JSON.stringify(error));
+
+            alert({ message: "please make sure you're connected to the internet and try again", okButtonText: "Okay" });
+        })
+    }
 
     var roomDataRequest = {reservation_request_id: requestObject.resID};
     
@@ -134,6 +154,8 @@ exports.onloaded = function(args) {
 
             itemImage = "~/images/Rooms/";
         }
+
+        
 
         loadingBar.visibility = "collapse";
         loadingBar.stop();
