@@ -4784,6 +4784,8 @@ containing a value of this type.
         public static final int ChartSeriesStyle_CategoricalSeriesStyle_TestBarSeriesStyle=0x7f0900ea;
         public static final int LaunchScreenTheme=0x7f0900eb;
         public static final int LaunchScreenThemeBase=0x7f0900ec;
+        /** <item name="android:paddingTop">24dp</item>
+         */
         public static final int NativeScriptToolbarStyle=0x7f090088;
         public static final int NativeScriptToolbarStyleBase=0x7f0900ed;
         public static final int NoActionBar=0x7f0900ee;

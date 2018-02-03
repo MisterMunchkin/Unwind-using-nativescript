@@ -10,8 +10,8 @@
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
-    <ScrollView>
-        <GridLayout rows="*, auto">
+    <!--<ScrollView>-->
+        <GridLayout rows="*, 45">
             <StackLayout orientation="vertical">
                 <!--<Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" /> -->
                 <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
@@ -38,10 +38,10 @@
             <StackLayout row="1"  orientation="horizontal" >
                 <GridLayout columns="300, 60" >
                     <TextField class="chatTextField" col="0"  id="messageResponse" />
-                    <Button class="chatBtn" col="1"  text="send" tap="responseSubmit" />
+                    <Button class="blue-btn" col="1"  text="send" tap="responseSubmit" />
                 </GridLayout>
             </StackLayout>
         </GridLayout>
-    </ScrollView>
+    <!--</ScrollView>-->
 </Page>
 

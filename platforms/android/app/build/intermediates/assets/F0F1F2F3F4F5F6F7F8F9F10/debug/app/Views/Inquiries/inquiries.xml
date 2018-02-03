@@ -16,7 +16,7 @@
             <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" /> 
             <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
 
-            <lv:RadListView id="listview"  class="list-group" >
+            <lv:RadListView id="listview"  class="list-group" itemTap="itemTap" >
                 <lv:RadListView.listViewLayout>
                     <lv:ListViewLinearLayout scrollDirection="vertical" />
                 </lv:RadListView.listViewLayout>
@@ -27,6 +27,9 @@
                             <!--<Image  src="{{ itemImage }}" stretch="fit" />-->
                             <Label text="{{ name }}" class="list-group-item-heading" />
                             <TextView text="{{ message }}" isEnabled="false" editable="false" class="list-group-item-text" />
+              
+                            <!--<Label id="messageLabel" text="{{ message }}" class="list-group-item-text" />-->
+
                         </StackLayout>
                     </GridLayout>
                 </lv:RadListView.itemTemplate>

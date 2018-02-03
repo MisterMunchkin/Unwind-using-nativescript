@@ -7,6 +7,7 @@ var ObservableArray = require("data/observable-array").ObservableArray;
 var pageData = new Observable();
 var items = new ObservableArray([]);
 var loadingBar;
+var listview;
 
 exports.onloaded = function (args) {
     page = args.object
@@ -14,11 +15,12 @@ exports.onloaded = function (args) {
     page.bindingContext = pageData;
     
     loadingBar = page.getViewById("loadingBar");
-    
-    if(items.length == 0){
+    listview = page.getViewById("listview");
+    //if(items.length == 0){
+        items = new ObservableArray([]);
         loadingBar.start();
         loadingBar.visibility = "visible";
-        
+        listview.visibility = "collapse";
         fetchModule.fetch("https://unwindv2.000webhostapp.com/reviews/loadReviews.php", {
 
         }).then(function (response) {
@@ -69,15 +71,15 @@ exports.onloaded = function (args) {
             loadingBar.visibility = "collapse";
             loadingBar.stop();
             pageData.set("items", items);
-            
+            listview.visibility = "visible";
 
         }, function (error) {
             console.log(JSON.stringify(error));
         })
-    }else{
-        loadingBar.visibility = "collapse";
-        loadingBar.stop();
-    }
+  //  }else{
+  //      loadingBar.visibility = "collapse";
+ //       loadingBar.stop();
+//    }
 };
 
 exports.fabTap = function(){

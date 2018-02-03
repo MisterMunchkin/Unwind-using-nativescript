@@ -11,6 +11,8 @@
 
     <StackLayout orientation="vertical" xmlns:lv="nativescript-pro-ui/listview">
         <Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" />
+        <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
+        
         <lv:RadListView id="listview" items="{{ items }}"  class="list-group"
         row="0" itemTap="itemTap"> 
 

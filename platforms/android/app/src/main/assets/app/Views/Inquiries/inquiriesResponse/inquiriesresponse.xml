@@ -10,8 +10,8 @@
             <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="onNavBtnTap" />
         </ActionBar>
     </Page.actionBar>
-    <ScrollView>
-        <GridLayout rows="*, auto">
+    <!--<ScrollView>-->
+        <GridLayout rows="*, 45">
             <StackLayout orientation="vertical">
                 <!--<Gif:Gif id="loadingBar" src="~/images/loader/loader-white.gif" /> -->
                 <Label id="noData" class="hiddenLayout page-placeholder" text="No Data" />
@@ -42,6 +42,6 @@
                 </GridLayout>
             </StackLayout>
         </GridLayout>
-    </ScrollView>
+    <!--</ScrollView>-->
 </Page>
 

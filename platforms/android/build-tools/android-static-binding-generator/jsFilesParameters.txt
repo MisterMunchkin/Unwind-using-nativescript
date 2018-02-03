@@ -211,6 +211,7 @@ D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\Views\checkout\checkout_menu.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\Views\Inquiries\inquiries.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\Views\Inquiries\addinquiries\addinquiries.js
+D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\Views\Inquiries\inquiriesResponse\inquiriesresponse.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\Views\login\login.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\Views\Menu\menu.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\Views\Menu\Category\category.js
@@ -227,4 +228,5 @@ D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\Views\Services\services.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\Views\Services\serviceDetail\servicedetail.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\Views\Services\serviceHistory\servicehistory.js
+D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\Views\Services\serviceReject\servicereject.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\Views\UserAccount\useraccount.js

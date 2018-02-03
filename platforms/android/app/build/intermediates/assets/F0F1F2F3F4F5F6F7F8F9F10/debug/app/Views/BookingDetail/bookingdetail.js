@@ -383,7 +383,7 @@ exports.checkinButton = function(){
     
     console.log("Current Date: " + CurDate + " Checkin Date: " + requestObject.checkinDate);
     
-    if(requestObject.checkinDate <= CurDate){
+    if(Date(requestObject.checkinDate) <= Date(CurDate)){
         console.log("userID: " + global.loginCred[0]);
         console.log("checkin is Active: " + global.loginCred[1]);
         console.log("checkin ID: " + global.loginCred[2]);
@@ -424,7 +424,7 @@ exports.checkinButton = function(){
                             loader.hide();
                             console.log("grand total is now at: " + global.checkOutGrandTotal);
                             alert({ title: "Check in Activated!", message: "Check in module is now unlocked!", okButtonText: "Close" });
-                            global.checkinSec = 2
+                            global.checkinSec = 1;
                             var topmost = frameModule.topmost();
                             topmost.navigate("tabs/tabs-page");
                         }
@@ -445,7 +445,7 @@ exports.checkinButton = function(){
             console.log("cannot check in if you are still currently checked in");
         }
     }else {
-        alert({ title: "Premature ejaculation", message: "You are not at your check in date yet", okButtonText: "Close" });
+        alert({ message: "You are not at your check in date yet, patience is key, young padawan", okButtonText: "Close" });
     }
     
 }
