@@ -124,7 +124,7 @@ exports.checkoutTap = function(){
 
     if(global.foodArray.length > 0){ 
         console.log("Grand Hotel Total: " + global.checkOutGrandTotal);
-
+        //console.log("timestamp_ordered: " + )
         requestObject = {timestamp_ordered: date,
                         grandTotal: grandTotal,
                         check_in_id: global.loginCred[2],
@@ -139,64 +139,22 @@ exports.checkoutTap = function(){
 
         }).then(function (response) {
             var phpResponse = response._bodyText;
-        // console.log("Full response: " + JSON.stringify(response));
+            console.log("Full response: " + JSON.stringify(response));
             
-            if(phpResponse.indexOf("error") <= -1){
+            if(phpResponse.indexOf("error") == -1){
                 console.log("<<<<<<<response: " + phpResponse);
                 alert({ message: "Food Order sent!", okButtonText: "Close" });
                 global.checkOutGrandTotal += grandTotal;//adds to the total hotel check out
                 global.foodArray = new Array();
                 var topmost = frameModule.topmost();
                 topmost.navigate("tabs/tabs-page");
-           /* var limit = global.foodArray.length;
-            var count = 0;
 
-            for(var x = 0;x < limit;x++){
-
-                var requestFoodItem = {qty: global.foodArray[x].qty, 
-                                    food_id: global.foodArray[x].food_id,
-                                    food_order_id: phpResponse,
-                                    check_in_id: global.loginCred[2]};
-                fetchModule.fetch("https://unwindv2.000webhostapp.com/food/insertFoodItem.php",{
-                    method: "POST",
-                    body: formEncode(requestFoodItem)
-                }).then(function(response){
-                    var phpResponse = reponse._bodyText;
-                    console.log("<<<<<<response>>>>>>>>" + JSON.stringify(response));
-                    console.log("reply from insertFoodItem.php: " + phpResponse);
-                    if(phpResponse.indexOf("error") <= -1){
-                        count++;
-                    }
-
-                    if(count == limit){
-                        alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
-                        global.foodArray = new Array();
-                        console.log(phpResponse);
-                        var topmost = frameModule.topmost();
-                        topmost.navigate("Views/Menu/menu");
-                    }else{
-                        alert({ title: "POST response", message: "Fatal Error", okButtonText: "Close" });
-                        global.foodArray = new Array();
-                        console.log(phpResponse);
-                        var topmost = frameModule.topmost();
-                        topmost.navigate("Views/Menu/menu");
-                    }
-                }, function(error){
-                    console.log("ERROR");
-                    console.log(JSON.stringify(error));
-                });
-            }*/
-            /*alert({ title: "POST response", message: "Food Added", okButtonText: "Close" });
-            global.foodArray = new Array();
-            console.log(phpResponse);
-            var topmost = frameModule.topmost();
-            topmost.navigate("Views/Menu/menu");*/
             }else{
                 alert({ title: "POST response", message: "error: please try again", okButtonText: "Close" });
-                //global.foodArray = new Array();
+                global.foodArray = new Array();
                 console.log(phpResponse);
-            // var topmost = frameModule.topmost();
-                //topmost.navigate("Views/Menu/menu");
+                var topmost = frameModule.topmost();
+                topmost.navigate("tabs/tabs-page");
             }
             loader.hide();
         }, function (error) {

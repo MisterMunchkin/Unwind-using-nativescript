@@ -52,16 +52,48 @@ exports.onloaded = function(args){
             obj = JSON.parse(obj);
             //console.log("inside then function: " + obj);
             var limit = obj.length;
-        
+            var itemImage = "~/images/Booking/status/";
             for(var x = 0; x < limit;x++){
+<<<<<<< HEAD
                 items.push(
                     {
                         service_name: obj[x].service_name,
                         service_type: obj[x].service_type,
                         service_id: obj[x].service_id
+=======
+
+                switch(obj[x].serviceRequestStatus){
+                    case "Pending":
+                    itemImage += "waiting.png";
+                    break;
+
+                    case "Waiting":
+                    itemImage += "waiting.png";
+                    break;
+
+                    case "Completed":
+                    itemImage += "accept.png";
+                    break;
+
+                    case "Rejected":
+                    itemImage += "reject.png";
+                    break;
+                }
+                console.log("service_name: " + obj[x].serviceName)
+                console.log("item image path: " + itemImage);
+                items.push(
+                    {
+                        service_name: obj[x].serviceName,
+                        serviceRequestId: obj[x].serviceRequestId,
+                        serviceRequestStatus: obj[x].serviceRequestStatus,
+                        serviceRequestDate: obj[x].serviceRequestDate,
+                        employeeId: obj[x].employeeId,
+                        itemImage: itemImage
+>>>>>>> New-Default-Development
                     }
 
                 );
+                itemImage = "~/images/Booking/status/";
     
             }
             pageData.set("items", items);
@@ -94,7 +126,16 @@ exports.itemTap = function(args){
     var tappedItem = tappedView.bindingContext;
 
     console.log("tapped Item: " + tappedItem.service_name);
+    if(tappedItem.serviceRequestStatus == "Rejected"){
+        var topmost = frameModule.topmost();
+        console.log("service request id: " + tappedItem.serviceRequestId);
+        var navigationOptions = {
+            moduleName: "Views/Services/serviceReject/servicereject",
+            context: { service_request_id: tappedItem.serviceRequestId}
+        }
 
+        topmost.navigate(navigationOptions);
+    }
 }
 function twoDigits(d){
     if(0 <= d && d < 10) return "0" + d.toString();

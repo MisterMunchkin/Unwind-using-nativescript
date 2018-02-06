@@ -51,6 +51,75 @@ exports.onloaded = function(args){
             var limit = obj.length;
            
             for(var x = 0; x < limit;x++){
+<<<<<<< HEAD
+=======
+
+                switch(obj[x].name){
+                    case "Chicken":
+                    itemImage += "grilledChicken1.jpg";
+                    break;
+
+                    case "Lechon Kawali":
+                    itemImage += "lechonKawali.jpg";
+                    break;
+
+                    case "Bacon":
+                    itemImage += "bacon1.jpg";
+                    break;
+
+                    case "Nachos":
+                    itemImage += "nachos1.jpg";
+                    break;
+
+                    case "Plain Rice":
+                    itemImage += "plainRice1.jpg";
+                    break;
+
+                    case "Chocolate Milk":
+                    itemImage += "chocolateMilk1.jpg";
+                    break;
+
+                    case "Calamares":
+                    itemImage += "calamares1.jpg";
+                    break;
+
+                    case "Bruschetta":
+                    itemImage += "bruschetta1.jpg";
+                    break;
+
+                    case "Birds Nest Soup":
+                    itemImage += "birdsnestsoup1.jpg";
+                    break;
+
+                    case "Mushroom Soup":
+                    itemImage += "mushroomsoup1.jpg";
+                    break;
+
+                    case "Caesar Salad":
+                       
+                    itemImage += "caesarsalad1.jpg";
+                    break;
+
+                    case "Fruit Salad":
+                       
+                    itemImage += "fruitsalad1.jpg";
+                    break;
+
+                    case "Iced Tea (Pitcher)":
+                    itemImage += "icedtea1.jpg";
+                    break;
+                    
+                    case "Cheesecake":
+                    itemImage += "cheesecake1.jpg";
+                    break;
+
+                    case "Creme Brulee":
+                    itemImage += "cremebrulee.jpg";
+                    break;
+
+                }
+
+>>>>>>> New-Default-Development
                 items.push(
                     {
                         food_id: obj[x].food_id,

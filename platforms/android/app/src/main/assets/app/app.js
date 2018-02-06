@@ -65,7 +65,7 @@ function backEvent(args) {
 
 
 global.foodArray = new Array();//used for ordering food from menu
-global.checkOutGrandTotal = 0; //1250 generalizing pricing for the rooms
+global.checkOutGrandTotal = 0;
 global.servicesOrdered = new Array();
 global.roomOrdered = new Array();//used for storing rooms in add booking
 <<<<<<< HEAD

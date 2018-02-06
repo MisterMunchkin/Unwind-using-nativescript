@@ -8,7 +8,7 @@ var dialogs = require("tns-core-modules/ui/dialogs");
 
 var loader = new LoadingIndicator();
 
-var options = {
+var optionsModule = {
     title: "Are you sure you want to do this?",
     message: "this will go back to the login page, and clear your progress",
     cancelButtonText: "Cancel",
@@ -41,7 +41,7 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
 
 };
 exports.onNavBtnTap = function(){
-    dialogs.confirm(options).then((result) =>{
+    dialogs.confirm(optionsModule).then((result) =>{
         if(result == true){
             var topmost = frameModule.topmost();
             topmost.navigate("Views/login/login");
@@ -80,7 +80,7 @@ exports.nextTap = function(){
             }).then(function(response){
 
                 then(response);
-                loader.hide();
+                
             }, function(error){
                 console.log(JSON.stringify(error));
                 alert({message: "please check your internet connectivity", okButtonText: "Okay"});
@@ -101,7 +101,7 @@ function then(response){
     var phpResponse = response._bodyText;
     alert({ title: "POST response", message: phpResponse, okButtonText: "Close" }); //change this to a snackbar
     if (phpResponse == "user added") {
-       
+        loader.hide();
         var topmost = frameModule.topmost();
         topmost.navigate("Views/login/login");
     }

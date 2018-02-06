@@ -49,6 +49,7 @@ exports.fabTap = function(){
 =======
 var items = [];
 var listview;
+//var messageLabel;
 
 exports.onloaded = function(args){
     page = args.object;
@@ -56,9 +57,14 @@ exports.onloaded = function(args){
 
     loadingBar = page.getViewById("loadingBar");
     listview = page.getViewById("listview");
+   // messageLabel = page.getViewById("messageLabel");
     console.log("loading bar: " + loadingBar);
     var requestObject = {user_id: global.loginCred[0]};
     
+
+    console.log("loading bar: " + loadingBar);
+   // console.log("messageLabel: " + messageLabel);
+   // messageLabel.textWrap = true;
 
     loadingBar.start();
     loadingBar.visibility = "visible";
@@ -71,10 +77,12 @@ exports.onloaded = function(args){
     }).then(function (response) {
         var phpResponse = response._bodyText;
         console.log("load inquiry response: " + phpResponse);
-        var obj = JSON.parse(phpResponse);
-        var limit = obj.length;
+        
         console.log("limit: " + limit);
-        if(limit > 0){
+        console.log("index of: " + phpResponse.indexOf("error"));
+        if(phpResponse.indexOf("error") == -1){
+            var obj = JSON.parse(phpResponse);
+            var limit = obj.length;
             for(var x = 0; x < limit;x++){
                 var date = obj[x].month + " " + obj[x].day + ", " + obj[x].year;
                 items.push(
@@ -94,6 +102,7 @@ exports.onloaded = function(args){
             listview.items = items;
             console.log("done fishing for inquiries...");
         }else{
+            console.log("no data");
             loadingBar.visibility = "collapse";
             loadingBar.stop();
          
@@ -107,6 +116,24 @@ exports.onloaded = function(args){
     })
     
 };
+exports.itemTap = function(args){
+    var tappedView = args.view;
+    var tappedItem = tappedView.bindingContext;
+
+    console.log("message: " + tappedItem.message);
+    var navigationOptions = {
+        moduleName: "Views/Inquiries/inquiriesResponse/inquiriesresponse",
+        context: {
+            inquiryID: tappedItem.inquiryID,
+            message: tappedItem.message,
+            userID: tappedItem.userID,
+            name: tappedItem.name
+        }
+    }
+
+    var topmost = frameModule.topmost();
+    topmost.navigate(navigationOptions);
+}
 exports.fabTap = function(){
     console.log("fab tap pressed");
 

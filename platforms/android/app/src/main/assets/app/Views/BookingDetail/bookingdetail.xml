@@ -28,7 +28,9 @@
                 </ns:Carousel.itemTemplate>
             </ns:Carousel>
             <Label text="" id="resStatus" class="label" />
-           
+            <Label id="rejectionLabel" text="Reason for rejection:" class="label" />
+            <TextView id="rejectionMessage" class="rejectionMessage" editable="false" isEnabled="false" />
+            
             <Label text="" id="checkinDate" class="label" />
             <Label text="" id="checkoutDate" class="label" />
 <<<<<<< HEAD

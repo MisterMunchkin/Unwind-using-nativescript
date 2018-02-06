@@ -35,7 +35,7 @@
             <ns:Carousel id="carousel"  height="250" pageChanged="CarouselChangeEvent" pageScrolling="CarouselScrollingEvent">
                 <ns:Carousel.itemTemplate>
                     <ns:CarouselItem verticalAlignment="center" tap="carouselTap">
-                        <Image src="{{ image }}" height="250" stretch="fill" />
+                        <Image src="{{ image }}" height="250" stretch="aspectFit" />
                     </ns:CarouselItem>
                 </ns:Carousel.itemTemplate>
             </ns:Carousel>

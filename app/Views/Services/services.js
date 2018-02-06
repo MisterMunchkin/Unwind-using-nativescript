@@ -35,7 +35,7 @@ exports.onloaded = function(args){
     var obj;
     loadingBar = page.getViewById("loadingBar");
 
-    
+    items = new ObservableArray([]);
     //loader = new LoadingIndicator();
     //loader.show(options);
     if(items.length == 0){

@@ -35,6 +35,7 @@ function onLoaded(args) {
         {
             listName: "Reservation History"
         },
+
         {
             listName: "Inquiries"
         },
@@ -66,6 +67,18 @@ exports.onItemTap = function(args){
     }
 }
 
+<<<<<<< HEAD
+=======
+function goToReservationHistory(){
+   
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/ReservationHistory/reservationhistory");
+}
+function goToServiceHistory(){
+    var topmost = frameModule.topmost();
+    topmost.navigate("Views/Services/serviceHistory/servicehistory");
+}
+>>>>>>> New-Default-Development
 function goToUserAccount(){
     var topmost = frameModule.topmost();
     topmost.navigate("Views/UserAccount/useraccount");

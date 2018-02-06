@@ -20,8 +20,9 @@ var loadingBar;
 exports.onloaded = function(args){
     page = args.object
     console.log("<<<<<<menu page>>>>>>");
+    
     pageDataContext = page.navigationContext;
-
+    console.log("category:  " + pageDataContext.category);
     page.bindingContext = pageData;
     listview = page.getViewById("listview");
     actionBar = page.getViewById("actionBar");
@@ -77,6 +78,44 @@ exports.onloaded = function(args){
 
                     case "Chocolate Milk":
                     itemImage += "chocolateMilk1.jpg";
+                    break;
+
+                    case "Calamares":
+                    itemImage += "calamares1.jpg";
+                    break;
+
+                    case "Bruschetta":
+                    itemImage += "bruschetta1.jpg";
+                    break;
+
+                    case "Birds Nest Soup":
+                    itemImage += "birdsnestsoup1.jpg";
+                    break;
+
+                    case "Mushroom Soup":
+                    itemImage += "mushroomsoup1.jpg";
+                    break;
+
+                    case "Caesar Salad":
+                       
+                    itemImage += "caesarsalad1.jpg";
+                    break;
+
+                    case "Fruit Salad":
+                       
+                    itemImage += "fruitsalad1.jpg";
+                    break;
+
+                    case "Iced Tea (Pitcher)":
+                    itemImage += "icedtea1.jpg";
+                    break;
+                    
+                    case "Cheesecake":
+                    itemImage += "cheesecake1.jpg";
+                    break;
+
+                    case "Creme Brulee":
+                    itemImage += "cremebrulee.jpg";
                     break;
 
                 }

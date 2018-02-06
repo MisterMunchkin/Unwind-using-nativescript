@@ -10,6 +10,10 @@ var SnackBar = require("nativescript-snackbar").SnackBar;
 var snackBar = new SnackBar();
 var connectionType = connectivity.getConnectionType();
 var loader;
+<<<<<<< HEAD
+=======
+var signUp;
+>>>>>>> New-Default-Development
 
 var options = {
     message: 'Loading...',
@@ -29,7 +33,12 @@ exports.loaded = function(args){ //exports is standard for both nativescript and
     page = args.object
     console.log("<<<<<login page>>>>>");
   
+<<<<<<< HEAD
         
+=======
+    signIn = page.getViewById("signIn");
+    signUp = page.getViewById("signUp");
+>>>>>>> New-Default-Development
 };
 
 exports.backEvent = function (args) {
@@ -45,7 +54,12 @@ exports.signIn = function(){
 
     email = page.getViewById("email");
     password = page.getViewById("password");
+<<<<<<< HEAD
 
+=======
+    signIn.isEnabled = "false";
+    signUp.isEnabled = "false";
+>>>>>>> New-Default-Development
     if(email.text != "" && password.text != ""){
         if(validateEmail(email.text) == true){    
             console.log("email: " + email.text);
@@ -65,15 +79,28 @@ exports.signIn = function(){
             }, function (error) {
                 console.log("ERROR");
                 console.log(JSON.stringify(error));
+<<<<<<< HEAD
+=======
+                signIn.isEnabled = "true";
+                signUp.isEnabled = "false";
+>>>>>>> New-Default-Development
                 loader.hide();
                 alert({message: "please make sure you're connected to the internet and try again", okButtonText: "Okay"});
             })
             
         }else{
             //email validation notif
+            alert({message: "please enter a valid email address", okButtonText: "Okay"});
+            signIn.isEnabled = "true";
+            signUp.isEnabled = "true";
         }
     }else{
         password.class = email.class = "requiredFields";
+<<<<<<< HEAD
+=======
+        signIn.isEnabled = "true";
+        signUp.isEnabled = "true";
+>>>>>>> New-Default-Development
     }
 };
 
@@ -88,6 +115,11 @@ function then(response){
     var phpResponse = response._bodyText;
 
     if(!response.ok){
+<<<<<<< HEAD
+=======
+        signIn.isEnabled = "true";
+        signUp.isEnabled = "true";
+>>>>>>> New-Default-Development
         alert({message: "an error has occured, please make sure you're connected to the internet and try again", okButtonText: "Okay"});
     }
    
@@ -110,15 +142,25 @@ function then(response){
         console.log("serviceOrdered: " + JSON.stringify(global.servicesOrdered));
         console.log("roomOdered: " + JSON.stringify(global.roomOrdered));
 
-        if(global.loginCred[3] == undefined && global.loginCred[4] == undefined){
+        if(global.loginCred[2] == undefined){
+            console.log("not checked in");
             global.checkOutGrandTotal = 0;
+<<<<<<< HEAD
 
             console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
+=======
+            global.checkinSec = 0;
+            
+            loader.hide();
+            console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
+            //signIn.isEnabled = "true";
+>>>>>>> New-Default-Development
             var topmost = frameModule.topmost();
             topmost.navigate("tabs/tabs-page");
         }else{
             global.checkOutGrandTotal += global.loginCred[3] + global.loginCred[4];
-            
+            global.checkinSec = 1;
+
             var requestObject = {check_in_id: global.loginCred[2]};
             fetchModule.fetch("https://unwindv2.000webhostapp.com/services/getRoomsFromCheckin.php", {
                 method: "POST",
@@ -131,6 +173,10 @@ function then(response){
                 global.roomsCheckedIn = obj;
 
                 console.log("after adding food and room grandTotalCheckOut:" + global.checkOutGrandTotal);
+<<<<<<< HEAD
+=======
+               // signIn.isEnabled = "true";
+>>>>>>> New-Default-Development
                 var topmost = frameModule.topmost();
                 topmost.navigate("tabs/tabs-page");
             }, function (error) {
@@ -143,6 +189,11 @@ function then(response){
         
     }else{
        // page.getViewById("email").text = "";
+<<<<<<< HEAD
+=======
+        signIn.isEnabled = "true";
+        signUp.isEnabled = "true";
+>>>>>>> New-Default-Development
         page.getViewById("password").text = "";
         alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });     
     }

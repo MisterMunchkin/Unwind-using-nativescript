@@ -154,7 +154,42 @@ function loadData(phpContext){
 
             console.log("num of items: " + limit);
             for (var x = 0; x < limit; x++) {
+<<<<<<< HEAD
                 
+=======
+               // console.log("status: " + obj[x].reservationStatus);
+
+                switch(obj[x].reservationStatus){
+                    case "Waiting":
+                    itemImage += "waiting.png";
+                    break;
+                    
+                    case "Checked-in":
+                    itemImage += "check-in.png";
+                    break;
+
+                    case "Cancelled":
+                    itemImage += "cancelled.png";
+                    break;
+
+                    case "Checked-out":
+                    itemImage += "check-out.png";
+                    break;
+
+                    case "Accepted":
+                    itemImage += "accept.png";
+                    break;
+
+                    case "Rejected":
+                    itemImage += "reject.png";
+                    break;
+
+                    case "Pending":
+                    itemImage += "waiting.png";
+                    break;
+                }
+
+>>>>>>> New-Default-Development
                 checkinMonthIndex = new Date(obj[x].checkinDate)
                 checkoutMonthIndex = new Date(obj[x].checkoutDate);
 

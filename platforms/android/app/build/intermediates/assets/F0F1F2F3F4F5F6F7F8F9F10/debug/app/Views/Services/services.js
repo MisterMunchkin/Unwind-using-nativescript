@@ -8,6 +8,7 @@ var ObservableArray = require("data/observable-array").ObservableArray;
 var items = new ObservableArray([]);
 var pageData = new Observable();
 
+var loader;
 
 var loadingBar;
 

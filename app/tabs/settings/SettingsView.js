@@ -35,6 +35,7 @@ function onLoaded(args) {
         {
             listName: "Reservation History"
         },
+
         {
             listName: "Service History"
         },
@@ -74,6 +75,7 @@ exports.onItemTap = function(args){
         break;
     }
 }
+
 function goToReservationHistory(){
    
     var topmost = frameModule.topmost();
