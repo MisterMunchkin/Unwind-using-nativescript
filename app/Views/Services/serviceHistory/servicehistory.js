@@ -54,13 +54,6 @@ exports.onloaded = function(args){
             var limit = obj.length;
             var itemImage = "~/images/Booking/status/";
             for(var x = 0; x < limit;x++){
-<<<<<<< HEAD
-                items.push(
-                    {
-                        service_name: obj[x].service_name,
-                        service_type: obj[x].service_type,
-                        service_id: obj[x].service_id
-=======
 
                 switch(obj[x].serviceRequestStatus){
                     case "Pending":
@@ -89,7 +82,6 @@ exports.onloaded = function(args){
                         serviceRequestDate: obj[x].serviceRequestDate,
                         employeeId: obj[x].employeeId,
                         itemImage: itemImage
->>>>>>> New-Default-Development
                     }
 
                 );
