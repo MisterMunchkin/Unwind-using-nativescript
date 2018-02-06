@@ -205,9 +205,9 @@ exports.onloaded = function(args) {
         case "Cancelled": 
         console.log("Cancelled");
         page.bindingContext = {
-            cancelText: "Uncancel Booking",
+         
             checkoutVisible: "collapse",
-            cancelVisible: "visible",
+            cancelVisible: "collapse",
             checkinVisible: "collapse",
             message: "you have cancelled your reservations"
         }

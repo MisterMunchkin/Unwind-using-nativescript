@@ -20,8 +20,9 @@ var loadingBar;
 exports.onloaded = function(args){
     page = args.object
     console.log("<<<<<<menu page>>>>>>");
+    
     pageDataContext = page.navigationContext;
-
+    console.log("category:  " + pageDataContext.category);
     page.bindingContext = pageData;
     listview = page.getViewById("listview");
     actionBar = page.getViewById("actionBar");
