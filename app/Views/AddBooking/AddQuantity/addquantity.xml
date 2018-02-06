@@ -17,13 +17,13 @@ Feel free to customize layouts and components to change how the tab view looks.
             <!--<Label text="enter check In"/>
             <DatePicker id="checkin" hint="check in" day="15" month="5" year="2015" verticalAlignment="center" 
             horizontalAlignment="center" />-->
-            <Label text="Adult Quantity" class="label-blue" />
+            <Label text="Number of Adults" class="label-blue" />
             <TextField autocorrect="false" class="input-blue" id="adultQty"
                 keyboardType="number" maxLength="2"></TextField>
             <!--<Label text="enter check Out"/>
             <DatePicker id="checkout" hint="check out" day="15" month="5" year="2015" verticalAlignment="center" 
             horizontalAlignment="center" />-->
-            <Label text="Child Quantity" class="label-blue" />
+            <Label text="Number of Children" class="label-blue" />
             <TextField  autocorrect="false" class="input-blue"  id="childQty"
                keyboardType="number" maxLength="2"></TextField>
 
