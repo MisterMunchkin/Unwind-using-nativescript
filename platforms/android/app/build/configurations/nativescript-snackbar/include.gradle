@@ -1,6 +1,6 @@
 android {
   productFlavors {
-    "F9" {
+    "F10" {
       dimension "nativescriptsnackbar"
     }
   }

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\menu\\view_feedback_items_activity_menu.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\a7a5c7eed0a54f1044471236257bfe0e783ac82d\\output\\res\\menu\\view_feedback_items_activity_menu.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\menu\\edit_details.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\a7a5c7eed0a54f1044471236257bfe0e783ac82d\\output\\res\\menu\\edit_details.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\menu\\send_feedback_activity_menu.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\a7a5c7eed0a54f1044471236257bfe0e783ac82d\\output\\res\\menu\\send_feedback_activity_menu.xml"
+    }
+]

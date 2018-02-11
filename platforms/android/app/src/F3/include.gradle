@@ -1,16 +1,27 @@
 //default elements
 android {
     productFlavors {
-        "nativescriptgif" {
-            dimension "nativescriptgif"
+        "nativescriptfloatingactionbutton" {
+            dimension "nativescriptfloatingactionbutton"
         }
     }
 }
 
-repositories {
-    mavenCentral()
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
 }
 
 dependencies {
-    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.17'
+      def supportVer = "26.1.0";
+
+      if(project.hasProperty("supportVersion")) {
+       supportVer = supportVersion
+      }
+
+     compile "com.android.support:design:$supportVer"
 }

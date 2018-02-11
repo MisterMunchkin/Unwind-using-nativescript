@@ -1,32 +1,50 @@
 {
   "_args": [
     [
-      "nativescript-reviews@1.0.4",
-      "C:\\Android\\Nativescript\\Unwind"
+      {
+        "raw": "nativescript-reviews@^1.0.4",
+        "scope": null,
+        "escapedName": "nativescript-reviews",
+        "name": "nativescript-reviews",
+        "rawSpec": "^1.0.4",
+        "spec": ">=1.0.4 <2.0.0",
+        "type": "range"
+      },
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
-  "_from": "nativescript-reviews@1.0.4",
+  "_from": "nativescript-reviews@>=1.0.4 <2.0.0",
   "_id": "nativescript-reviews@1.0.4",
-  "_inBundle": false,
-  "_integrity": "sha1-aZKpa2C82UD59fSepICLVW4nfbM=",
+  "_inCache": true,
   "_location": "/nativescript-reviews",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/nativescript-reviews-1.0.4.tgz_1511862527563_0.43494998873211443"
+  },
+  "_npmUser": {
+    "name": "moayad",
+    "email": "moayad@codeobia.com"
+  },
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "nativescript-reviews@1.0.4",
-    "name": "nativescript-reviews",
+    "raw": "nativescript-reviews@^1.0.4",
+    "scope": null,
     "escapedName": "nativescript-reviews",
-    "rawSpec": "1.0.4",
-    "saveSpec": null,
-    "fetchSpec": "1.0.4"
+    "name": "nativescript-reviews",
+    "rawSpec": "^1.0.4",
+    "spec": ">=1.0.4 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-reviews/-/nativescript-reviews-1.0.4.tgz",
-  "_spec": "1.0.4",
-  "_where": "C:\\Android\\Nativescript\\Unwind",
+  "_shasum": "6992a96b60bcd940f9f5f49ea4808b556e277db3",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-reviews@^1.0.4",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Moayad Najdawi",
     "email": "moayad@codeobia.com"
@@ -47,6 +65,11 @@
     "tslint": "^5.0.0",
     "typescript": "~2.3.0"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "6992a96b60bcd940f9f5f49ea4808b556e277db3",
+    "tarball": "https://registry.npmjs.org/nativescript-reviews/-/nativescript-reviews-1.0.4.tgz"
+  },
   "homepage": "https://github.com/moayadnajd/nativescript-reviews",
   "keywords": [
     "NativeScript",
@@ -60,6 +83,12 @@
   ],
   "license": "Apache-2.0",
   "main": "reviews",
+  "maintainers": [
+    {
+      "name": "moayad",
+      "email": "moayad@codeobia.com"
+    }
+  ],
   "name": "nativescript-reviews",
   "nativescript": {
     "platforms": {
@@ -67,9 +96,11 @@
       "ios": "3.0.0"
     }
   },
+  "optionalDependencies": {},
   "peerDependencies": {
     "tns-core-modules": "^3.0.0"
   },
+  "readme": "ERROR: No README data found!",
   "scripts": {
     "build": "npm i && tsc",
     "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",

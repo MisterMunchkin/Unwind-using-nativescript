@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-v21\\autocomplete_bg_active.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\d0d645ba65a310fc2f2051aa978105e6f7a653d4\\output\\res\\drawable-v21\\autocomplete_bg_active.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-v21\\pressable_item_background.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\c35b6de66572739fcd036e875abb83f457c5e15d\\output\\res\\drawable-v21\\pressable_item_background.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\de7072d0f474bd31287b314f5db47125461644e7\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-v21\\autocomplete_bg_normal.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\d0d645ba65a310fc2f2051aa978105e6f7a653d4\\output\\res\\drawable-v21\\autocomplete_bg_normal.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\de7072d0f474bd31287b314f5db47125461644e7\\output\\res\\drawable-v21\\design_password_eye.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\de7072d0f474bd31287b314f5db47125461644e7\\output\\res\\drawable-v21\\avd_show_password.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-v21\\autocomplete_focusable_bg.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\d0d645ba65a310fc2f2051aa978105e6f7a653d4\\output\\res\\drawable-v21\\autocomplete_focusable_bg.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\6b8fabde772821e315403e786863b161697a876a\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\dalmi\\.android\\build-cache\\de7072d0f474bd31287b314f5db47125461644e7\\output\\res\\drawable-v21\\avd_hide_password.xml"
+    }
+]

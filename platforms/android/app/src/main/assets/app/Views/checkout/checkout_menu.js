@@ -6,6 +6,9 @@ var ObservableArray = require("data/observable-array").ObservableArray;
 var view = require("ui/core/view");
 var fetchModule = require("fetch");
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
+var TNSFancyAlert = require("nativescript-fancyalert").TNSFancyAlert;
+var TNSFancyAlertButton = require("nativescript-fancyalert").TNSFancyAlertButton;
+
 
 var loader;
 
@@ -143,14 +146,16 @@ exports.checkoutTap = function(){
             
             if(phpResponse.indexOf("error") == -1){
                 console.log("<<<<<<<response: " + phpResponse);
-                alert({ message: "Food Order sent!", okButtonText: "Close" });
+                TNSFancyAlert.showSuccess("Food order sent!", "" ,"Okay!");
+                //alert({ message: "Food Order sent!", okButtonText: "Close" });
                 global.checkOutGrandTotal += grandTotal;//adds to the total hotel check out
                 global.foodArray = new Array();
                 var topmost = frameModule.topmost();
                 topmost.navigate("tabs/tabs-page");
 
             }else{
-                alert({ title: "POST response", message: "error: please try again", okButtonText: "Close" });
+                TNSFancyAlert.showError(phpResponse, "Please report this bug", "Okay!");
+                //alert({ title: "POST response", message: "error: please try again", okButtonText: "Close" });
                 global.foodArray = new Array();
                 console.log(phpResponse);
                 var topmost = frameModule.topmost();
@@ -162,7 +167,8 @@ exports.checkoutTap = function(){
             console.log(JSON.stringify(error));
         })
     }else{
-        alert({ message: "Please add atleast one food to the cart", okButtonText: "Okay" });
+        TNSFancyAlert.showWarning("Please add atleast one food to the card", "" ,"Okay!");
+        //alert({ message: "Please add atleast one food to the cart", okButtonText: "Okay" });
     }
 }
 exports.remove = function(args){

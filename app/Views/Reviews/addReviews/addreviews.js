@@ -5,6 +5,9 @@ var view = require("ui/core/view");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
+var TNSFancyAlert = require("nativescript-fancyalert").TNSFancyAlert;
+var TNSFancyAlertButton = require("nativescript-fancyalert").TNSFancyAlertButton;
+
 
 var options = {
     message: 'Loading...',
@@ -104,7 +107,8 @@ exports.submit = function(){
 
         if(phpResponse.indexOf("error") <= -1){
             console.log("success");
-            alert({ title: "Success", message: "successfully made review", okButtonText: "Close" });
+            TNSFancyAlert.showSuccess("Review sent!");
+            //alert({ title: "Success", message: "successfully made review", okButtonText: "Close" });
             review.text = "";
             loader.hide();
             var topmost = frameModule.topmost();
@@ -112,8 +116,9 @@ exports.submit = function(){
         }else{
             
             loader.hide();
+            TNSFancyAlert.showError(phpResponse, "Please report this bug." , "Okay!");
             console.log("failed");
-            alert({ title: "Failed", message: "please try again :(", okButtonText: "Close" });
+            //alert({ title: "Failed", message: "please try again :(", okButtonText: "Close" });
         }
         
     }, function (error) {

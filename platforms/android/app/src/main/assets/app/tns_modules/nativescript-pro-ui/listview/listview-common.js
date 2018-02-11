@@ -389,6 +389,16 @@ var RadListView = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(RadListView.prototype, "isDataOperationsEnabled", {
+        get: function () {
+            var isFilteringEnabled = this.filteringFunction != undefined ? true : false;
+            var isSortingEnabled = this.sortingFunction != undefined ? true : false;
+            var isGroupingEnabled = this.groupingFunction != undefined ? true : false;
+            return isFilteringEnabled || isSortingEnabled || isGroupingEnabled;
+        },
+        enumerable: true,
+        configurable: true
+    });
     RadListView.prototype._reorderItemInSource = function (oldPosition, newPosition) {
         this.suspendUpdates();
         var ownerSource = this.items;
@@ -473,6 +483,18 @@ var RadListView = (function (_super) {
         }
         return templateString === undefined ? undefined : this.resolveTemplateView(templateString);
     };
+    RadListView.prototype.onGroupingFunctionPropertyChanged = function (oldValue, newValue) {
+        this.onGroupingFunctionChanged(oldValue, newValue);
+    };
+    RadListView.prototype.onFilteringFunctionPropertyChanged = function (oldValue, newValue) {
+        this.onFilteringFunctionChanged(oldValue, newValue);
+    };
+    RadListView.prototype.onSortingFunctionPropertyChanged = function (oldValue, newValue) {
+        this.onSortingFunctionChanged(oldValue, newValue);
+    };
+    RadListView.prototype.onEnableCollapsibleGroupsPropertyChanged = function (oldValue, newValue) {
+        this.onEnableCollapsibleGroupsChanged(oldValue, newValue);
+    };
     RadListView.prototype._getDefaultItemContent = function () {
         var lbl = new label_1.Label();
         lbl.bind({
@@ -551,6 +573,14 @@ var RadListView = (function (_super) {
         this.onScrollPositionChanged(oldValue, newValue);
     };
     RadListView.prototype.onItemViewLoaderChanged = function () {
+    };
+    RadListView.prototype.onGroupingFunctionChanged = function (oldValue, newValue) {
+    };
+    RadListView.prototype.onFilteringFunctionChanged = function (oldValue, newValue) {
+    };
+    RadListView.prototype.onSortingFunctionChanged = function (oldValue, newValue) {
+    };
+    RadListView.prototype.onEnableCollapsibleGroupsChanged = function (oldValue, newValue) {
     };
     RadListView.prototype.onPullToRefreshStyleChanged = function (oldValue, newValue) {
     };
@@ -672,6 +702,32 @@ var RadListView = (function (_super) {
     RadListView.pullToRefreshInitiatedEvent = "pullToRefreshInitiated";
     RadListView.itemLoadingEvent = "itemLoading";
     RadListView.dataPopulatedEvent = "dataPopulated";
+    RadListView.groupingFunctionProperty = new view_1.Property({
+        name: "groupingFunction",
+        valueChanged: function (target, oldValue, newValue) {
+            target.onGroupingFunctionPropertyChanged(oldValue, newValue);
+        },
+    });
+    RadListView.filteringFunctionProperty = new view_1.Property({
+        name: "filteringFunction",
+        valueChanged: function (target, oldValue, newValue) {
+            target.onFilteringFunctionPropertyChanged(oldValue, newValue);
+        },
+    });
+    RadListView.sortingFunctionProperty = new view_1.Property({
+        name: "sortingFunction",
+        valueChanged: function (target, oldValue, newValue) {
+            target.onSortingFunctionPropertyChanged(oldValue, newValue);
+        },
+    });
+    RadListView.enableCollapsibleGroupsProperty = new view_1.Property({
+        name: "enableCollapsibleGroups",
+        defaultValue: false,
+        valueConverter: view_1.booleanConverter,
+        valueChanged: function (target, oldValue, newValue) {
+            target.onEnableCollapsibleGroupsPropertyChanged(oldValue, newValue);
+        },
+    });
     RadListView.pullToRefreshStyleProperty = new view_1.Property({
         name: "pullToRefreshStyle",
         defaultValue: undefined,
@@ -827,6 +883,10 @@ var RadListView = (function (_super) {
     return RadListView;
 }(viewModule.View));
 exports.RadListView = RadListView;
+RadListView.enableCollapsibleGroupsProperty.register(RadListView);
+RadListView.groupingFunctionProperty.register(RadListView);
+RadListView.filteringFunctionProperty.register(RadListView);
+RadListView.sortingFunctionProperty.register(RadListView);
 RadListView.pullToRefreshStyleProperty.register(RadListView);
 RadListView.headerItemTemplateProperty.register(RadListView);
 RadListView.footerItemTemplateProperty.register(RadListView);

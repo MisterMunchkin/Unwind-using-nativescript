@@ -22,6 +22,8 @@ D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\tns_modules\nativescript-drop-down\drop-down.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\tns_modules\nativescript-drop-down\uglify-mangle-excludes.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\tns_modules\nativescript-drop-down\angular\index.js
+D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\tns_modules\nativescript-fancyalert\common.js
+D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\tns_modules\nativescript-fancyalert\fancyalert.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\tns_modules\nativescript-floatingactionbutton\fab-common.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\tns_modules\nativescript-floatingactionbutton\fab.js
 D:\Android\Nativescript Apps\Unwindv2\platforms\android\app\src\main\assets\app\tns_modules\nativescript-fontawesome\fontawesome.common.js

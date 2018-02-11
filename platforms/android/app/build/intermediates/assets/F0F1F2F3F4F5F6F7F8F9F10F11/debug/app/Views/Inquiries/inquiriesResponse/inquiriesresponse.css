@@ -1,0 +1,12 @@
+.page-blue{
+    background-color: #3ba9e9;
+}
+.label{
+    color:white;
+    font-family:"Lato";
+}
+.hiddenLayout{
+    visibility: collapse
+}
+.page-placeholder{font-size:25px;padding-left:50cm;padding-top:20cm}
+.blue-btn{background-color:#00a2ff;color:antiquewhite;height:60;width:200;font-family:"Lato"}

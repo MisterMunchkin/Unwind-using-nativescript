@@ -1,32 +1,50 @@
 {
   "_args": [
     [
-      "nativescript-awesome-loaders@1.2.1",
-      "C:\\Android\\Nativescript\\Unwind"
+      {
+        "raw": "nativescript-awesome-loaders@^1.2.1",
+        "scope": null,
+        "escapedName": "nativescript-awesome-loaders",
+        "name": "nativescript-awesome-loaders",
+        "rawSpec": "^1.2.1",
+        "spec": ">=1.2.1 <2.0.0",
+        "type": "range"
+      },
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
-  "_from": "nativescript-awesome-loaders@1.2.1",
+  "_from": "nativescript-awesome-loaders@>=1.2.1 <2.0.0",
   "_id": "nativescript-awesome-loaders@1.2.1",
-  "_inBundle": false,
-  "_integrity": "sha1-dIn+ArPAY9iee0IuuLGR0B4kSQI=",
+  "_inCache": true,
   "_location": "/nativescript-awesome-loaders",
+  "_nodeVersion": "4.4.7",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/nativescript-awesome-loaders-1.2.1.tgz_1468478293517_0.45608886587433517"
+  },
+  "_npmUser": {
+    "name": "triniwiz",
+    "email": "fortune.osei@yahoo.com"
+  },
+  "_npmVersion": "2.15.8",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "nativescript-awesome-loaders@1.2.1",
-    "name": "nativescript-awesome-loaders",
+    "raw": "nativescript-awesome-loaders@^1.2.1",
+    "scope": null,
     "escapedName": "nativescript-awesome-loaders",
-    "rawSpec": "1.2.1",
-    "saveSpec": null,
-    "fetchSpec": "1.2.1"
+    "name": "nativescript-awesome-loaders",
+    "rawSpec": "^1.2.1",
+    "spec": ">=1.2.1 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-awesome-loaders/-/nativescript-awesome-loaders-1.2.1.tgz",
-  "_spec": "1.2.1",
-  "_where": "C:\\Android\\Nativescript\\Unwind",
+  "_shasum": "7489fe02b3c063d89e7b422eb8b191d01e244902",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-awesome-loaders@^1.2.1",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Osei Fortune",
     "email": "fortune.osei@yahoo.com"
@@ -34,10 +52,17 @@
   "bugs": {
     "url": "https://github.com/triniwiz/nativescript-awesome-loaders/issues"
   },
+  "dependencies": {},
   "description": "NativeScript plugin to add custom loading indicators",
   "devDependencies": {
     "typescript": "^1.8.10"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "7489fe02b3c063d89e7b422eb8b191d01e244902",
+    "tarball": "https://registry.npmjs.org/nativescript-awesome-loaders/-/nativescript-awesome-loaders-1.2.1.tgz"
+  },
+  "gitHead": "44454ef9c3a993fdc6480a059edc07f1e92a758c",
   "homepage": "https://github.com/triniwiz/nativescript-awesome-loaders",
   "keywords": [
     "NativeScript",
@@ -46,12 +71,20 @@
   ],
   "license": "MIT",
   "main": "awesome-loaders.js",
+  "maintainers": [
+    {
+      "name": "triniwiz",
+      "email": "fortune.osei@yahoo.com"
+    }
+  ],
   "name": "nativescript-awesome-loaders",
   "nativescript": {
     "platforms": {
       "android": "1.5.0"
     }
   },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/triniwiz/nativescript-awesome-loaders.git"

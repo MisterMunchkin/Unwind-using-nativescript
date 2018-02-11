@@ -4,6 +4,7 @@
     "nativescript-carousel": true,
     "nativescript-dom": true,
     "nativescript-drop-down": true,
+    "nativescript-fancyalert": true,
     "nativescript-floatingactionbutton": true,
     "nativescript-gif": true,
     "nativescript-https": true,

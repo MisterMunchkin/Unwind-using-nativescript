@@ -1,32 +1,50 @@
 {
   "_args": [
     [
-      "nativescript-drop-down@3.2.0",
-      "C:\\Android\\Nativescript\\Unwind"
+      {
+        "raw": "nativescript-drop-down@^3.2.0",
+        "scope": null,
+        "escapedName": "nativescript-drop-down",
+        "name": "nativescript-drop-down",
+        "rawSpec": "^3.2.0",
+        "spec": ">=3.2.0 <4.0.0",
+        "type": "range"
+      },
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
-  "_from": "nativescript-drop-down@3.2.0",
+  "_from": "nativescript-drop-down@>=3.2.0 <4.0.0",
   "_id": "nativescript-drop-down@3.2.0",
-  "_inBundle": false,
-  "_integrity": "sha1-nJy5e/wVl0My6OvonckT6t9FYq0=",
+  "_inCache": true,
   "_location": "/nativescript-drop-down",
+  "_nodeVersion": "6.11.4",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/nativescript-drop-down-3.2.0.tgz_1508753398769_0.08442160463891923"
+  },
+  "_npmUser": {
+    "name": "pstaev",
+    "email": "peter@tangrasoft.com"
+  },
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "nativescript-drop-down@3.2.0",
-    "name": "nativescript-drop-down",
+    "raw": "nativescript-drop-down@^3.2.0",
+    "scope": null,
     "escapedName": "nativescript-drop-down",
-    "rawSpec": "3.2.0",
-    "saveSpec": null,
-    "fetchSpec": "3.2.0"
+    "name": "nativescript-drop-down",
+    "rawSpec": "^3.2.0",
+    "spec": ">=3.2.0 <4.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-drop-down/-/nativescript-drop-down-3.2.0.tgz",
-  "_spec": "3.2.0",
-  "_where": "C:\\Android\\Nativescript\\Unwind",
+  "_shasum": "9c9cb97bfc15974332e8ebe89dc913eadf4562ad",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-drop-down@^3.2.0",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Peter Staev",
     "email": "peter@tangrasoft.com"
@@ -40,7 +58,14 @@
       "url": "https://github.com/DickSmith"
     }
   ],
+  "dependencies": {},
   "description": "A NativeScript DropDown widget.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "9c9cb97bfc15974332e8ebe89dc913eadf4562ad",
+    "tarball": "https://registry.npmjs.org/nativescript-drop-down/-/nativescript-drop-down-3.2.0.tgz"
+  },
   "homepage": "https://github.com/PeterStaev/NativeScript-Drop-Down#readme",
   "keywords": [
     "NativeScript",
@@ -50,6 +75,12 @@
   ],
   "license": "Apache-2.0",
   "main": "drop-down",
+  "maintainers": [
+    {
+      "name": "pstaev",
+      "email": "peter.staev@gmail.com"
+    }
+  ],
   "name": "nativescript-drop-down",
   "nativescript": {
     "platforms": {
@@ -63,13 +94,16 @@
       "category": "Interface"
     }
   },
+  "optionalDependencies": {},
   "peerDependencies": {
     "tns-core-modules": "^3.1.0 || >3.3.0-"
   },
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PeterStaev/NativeScript-Drop-Down.git"
   },
+  "scripts": {},
   "typings": "drop-down.d.ts",
   "version": "3.2.0"
 }

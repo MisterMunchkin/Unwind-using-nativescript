@@ -1,32 +1,50 @@
 {
   "_args": [
     [
-      "nativescript-fontawesome@1.0.0",
-      "C:\\Android\\Nativescript\\Unwind"
+      {
+        "raw": "nativescript-fontawesome@^1.0.0",
+        "scope": null,
+        "escapedName": "nativescript-fontawesome",
+        "name": "nativescript-fontawesome",
+        "rawSpec": "^1.0.0",
+        "spec": ">=1.0.0 <2.0.0",
+        "type": "range"
+      },
+      "D:\\Android\\Nativescript Apps\\Unwindv2\\node_modules\\nativescript-reviews"
     ]
   ],
-  "_from": "nativescript-fontawesome@1.0.0",
+  "_from": "nativescript-fontawesome@>=1.0.0 <2.0.0",
   "_id": "nativescript-fontawesome@1.0.0",
-  "_inBundle": false,
-  "_integrity": "sha1-/pzm8WSQraEjyqKcvdU0m2aBS2Q=",
+  "_inCache": true,
   "_location": "/nativescript-fontawesome",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/nativescript-fontawesome-1.0.0.tgz_1503338712183_0.016991268377751112"
+  },
+  "_npmUser": {
+    "name": "moayad",
+    "email": "moayad@codeobia.com"
+  },
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "nativescript-fontawesome@1.0.0",
-    "name": "nativescript-fontawesome",
+    "raw": "nativescript-fontawesome@^1.0.0",
+    "scope": null,
     "escapedName": "nativescript-fontawesome",
-    "rawSpec": "1.0.0",
-    "saveSpec": null,
-    "fetchSpec": "1.0.0"
+    "name": "nativescript-fontawesome",
+    "rawSpec": "^1.0.0",
+    "spec": ">=1.0.0 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/nativescript-reviews"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-fontawesome/-/nativescript-fontawesome-1.0.0.tgz",
-  "_spec": "1.0.0",
-  "_where": "C:\\Android\\Nativescript\\Unwind",
+  "_shasum": "fe9ce6f16490ada123caa29cbdd5349b66814b64",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-fontawesome@^1.0.0",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2\\node_modules\\nativescript-reviews",
   "author": {
     "name": "Moayad Najdawi",
     "email": "moayad@codeobia.com"
@@ -47,6 +65,11 @@
     "tslint": "^5.0.0",
     "typescript": "~2.3.0"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "fe9ce6f16490ada123caa29cbdd5349b66814b64",
+    "tarball": "https://registry.npmjs.org/nativescript-fontawesome/-/nativescript-fontawesome-1.0.0.tgz"
+  },
   "homepage": "https://github.com/moayadnajd/nativescript-fontawesome",
   "keywords": [
     "NativeScript",
@@ -62,6 +85,12 @@
   ],
   "license": "Apache-2.0",
   "main": "fontawesome",
+  "maintainers": [
+    {
+      "name": "moayad",
+      "email": "moayad@codeobia.com"
+    }
+  ],
   "name": "nativescript-fontawesome",
   "nativescript": {
     "platforms": {
@@ -69,9 +98,11 @@
       "ios": "3.0.0"
     }
   },
+  "optionalDependencies": {},
   "peerDependencies": {
     "tns-core-modules": "^3.0.0"
   },
+  "readme": "ERROR: No README data found!",
   "scripts": {
     "build": "npm i && tsc",
     "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",

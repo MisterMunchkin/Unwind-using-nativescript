@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-hdpi\\one_star.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\one_star.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-hdpi\\five_star.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\five_star.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-hdpi\\icon.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\icon.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-hdpi\\three_star.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\three_star.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-hdpi\\four_star.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\four_star.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-hdpi\\background.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\background.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-hdpi\\logo.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\logo.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-hdpi\\ic_cart_outline_white_48dp.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\ic_cart_outline_white_48dp.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-hdpi\\ic_plus_white_48dp.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\ic_plus_white_48dp.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-hdpi\\logo_transparent_background.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\logo_transparent_background.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-hdpi\\two_star.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\two_star.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-hdpi\\lock_outline_grey.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\lock_outline_grey.png"
+    }
+]

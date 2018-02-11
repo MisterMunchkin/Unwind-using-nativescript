@@ -1,28 +1,50 @@
 {
-  "_from": "nativescript-carousel@^3.1.1",
+  "_args": [
+    [
+      {
+        "raw": "nativescript-carousel@^3.1.1",
+        "scope": null,
+        "escapedName": "nativescript-carousel",
+        "name": "nativescript-carousel",
+        "rawSpec": "^3.1.1",
+        "spec": ">=3.1.1 <4.0.0",
+        "type": "range"
+      },
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
+    ]
+  ],
+  "_from": "nativescript-carousel@>=3.1.1 <4.0.0",
   "_id": "nativescript-carousel@3.1.1",
-  "_inBundle": false,
-  "_integrity": "sha512-+x4DILDn7Apk8bLDy5gYGlfuqeNX3Wy0PXM8qogN0M4feI/Bgve3JAShVGNauEQdGQYhcgRZ3uika1xtQJa7gw==",
+  "_inCache": true,
   "_location": "/nativescript-carousel",
+  "_nodeVersion": "8.5.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/nativescript-carousel-3.1.1.tgz_1506366621290_0.94638890796341"
+  },
+  "_npmUser": {
+    "name": "manijak",
+    "email": "erkocevic@gmail.com"
+  },
+  "_npmVersion": "5.3.0",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
-    "registry": true,
     "raw": "nativescript-carousel@^3.1.1",
-    "name": "nativescript-carousel",
+    "scope": null,
     "escapedName": "nativescript-carousel",
+    "name": "nativescript-carousel",
     "rawSpec": "^3.1.1",
-    "saveSpec": null,
-    "fetchSpec": "^3.1.1"
+    "spec": ">=3.1.1 <4.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-carousel/-/nativescript-carousel-3.1.1.tgz",
   "_shasum": "0dffb8f46a952f34d9e998d865a2c5cbd1be6038",
+  "_shrinkwrap": null,
   "_spec": "nativescript-carousel@^3.1.1",
-  "_where": "C:\\Android\\Nativescript\\Unwind",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Nedim Erkocevic",
     "email": "nedim@fkzeljo.com",
@@ -31,9 +53,16 @@
   "bugs": {
     "url": "https://github.com/manijak/nativescript-carousel/issues"
   },
-  "bundleDependencies": false,
-  "deprecated": false,
+  "dependencies": {},
   "description": "Carousel component for NativeScript (iOS & Android).",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-+x4DILDn7Apk8bLDy5gYGlfuqeNX3Wy0PXM8qogN0M4feI/Bgve3JAShVGNauEQdGQYhcgRZ3uika1xtQJa7gw==",
+    "shasum": "0dffb8f46a952f34d9e998d865a2c5cbd1be6038",
+    "tarball": "https://registry.npmjs.org/nativescript-carousel/-/nativescript-carousel-3.1.1.tgz"
+  },
+  "gitHead": "71c653da0631204c5485f6b57abdb2f8768314fe",
   "homepage": "https://github.com/manijak/nativescript-carousel",
   "keywords": [
     "NativeScript",
@@ -48,6 +77,16 @@
   ],
   "license": "MIT",
   "main": "index",
+  "maintainers": [
+    {
+      "name": "manijak",
+      "email": "erkocevic@gmail.com"
+    },
+    {
+      "name": "sitefinitysteve",
+      "email": "steve@sitefinitysteve.com"
+    }
+  ],
   "name": "nativescript-carousel",
   "nativescript": {
     "platforms": {
@@ -62,6 +101,8 @@
       "category": "Interface"
     }
   },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manijak/nativescript-carousel.git"

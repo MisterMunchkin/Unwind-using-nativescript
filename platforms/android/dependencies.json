@@ -20,6 +20,10 @@
         "directory": "..\\..\\node_modules\\nativescript-drop-down"
     },
     {
+        "name": "nativescript-fancyalert",
+        "directory": "..\\..\\node_modules\\nativescript-fancyalert"
+    },
+    {
         "name": "nativescript-floatingactionbutton",
         "directory": "..\\..\\node_modules\\nativescript-floatingactionbutton"
     },

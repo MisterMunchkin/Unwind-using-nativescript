@@ -1,15 +1,13 @@
+
 android {
-	productFlavors {
-		"nativescript-pro-ui" {
-			dimension "nativescript-pro-ui"
-		}
-	}
+  productFlavors {
+    "nativescript-paypal" {
+      dimension "nativescript-paypal"
+    }
+  }
 }
 
-def supportVersion = project.hasProperty("supportVersion") ? project.supportVersion : "23.1.0"
 
 dependencies {
-	compile "com.android.support:appcompat-v7:$supportVersion"
-	compile "com.android.support:recyclerview-v7:$supportVersion"
-	compile "com.android.support:design:$supportVersion"
+    compile 'com.paypal.sdk:paypal-android-sdk:2.14.2'
 }

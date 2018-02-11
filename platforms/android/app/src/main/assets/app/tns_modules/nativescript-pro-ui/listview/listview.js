@@ -73,7 +73,6 @@ function ensureListViewAdapter() {
         __extends(ListViewAdapter, _super);
         function ListViewAdapter(items, listView) {
             var _this = _super.call(this, items) || this;
-            _this._currentId = 0;
             _this._selectionViewId = applicationModule.android.context.getResources().getIdentifier("selectable_item_background", "drawable", applicationModule.android.context.getPackageName());
             _this.templateTypeNumberString = new Map();
             _this._currentNativeItemType = 0;
@@ -173,10 +172,13 @@ function ensureListViewAdapter() {
         ListViewAdapter.prototype.setItems = function (items) {
             this._viewHolders.splice(0, this._viewHolders.length);
             this._swipeHolders.splice(0, this._swipeHolders.length);
-            this._currentId = 0;
+            this.ownerLv._resetCurrentId();
             _super.prototype.setItems.call(this, items);
         };
         ListViewAdapter.prototype.canSwipe = function (position) {
+            if (!_super.prototype.canSwipe.call(this, position)) {
+                return false;
+            }
             var args = {
                 eventName: listViewCommonModule.RadListView.itemSwipingEvent,
                 object: this.ownerLv,
@@ -227,19 +229,186 @@ function ensureListViewAdapter() {
             }
             return undefined;
         };
-        ListViewAdapter.prototype.getUniqueItemId = function () {
-            return this._currentId++;
-        };
         return ListViewAdapter;
     }(com.telerik.widget.list.ListViewAdapter));
     ListViewAdapterClass = ListViewAdapter;
+}
+var ListViewDataSourceAdapterClass;
+function ensureListViewDataSourceAdapter() {
+    if (ListViewDataSourceAdapterClass) {
+        return;
+    }
+    var ListViewDataSourceAdapter = (function (_super) {
+        __extends(ListViewDataSourceAdapter, _super);
+        function ListViewDataSourceAdapter(items, listView) {
+            var _this = _super.call(this, items) || this;
+            _this._selectionViewId = applicationModule.android.context.getResources().getIdentifier("selectable_item_background", "drawable", applicationModule.android.context.getPackageName());
+            _this.ownerLv = listView;
+            _this._viewHolders = new Array();
+            _this._swipeHolders = new Array();
+            return global.__native(_this);
+        }
+        // TODO: Implement this for support for 'group item' template, current stopper is the expand/collapse button that is part of the native template
+        // public onCreateGroupViewHolder(parent: android.view.ViewGroup, viewType: number): com.telerik.widget.list.ListViewHolder {
+        //     console.log(">>> onCreateGroupViewHolder");
+        //     //var view = builder.parse(this.ownerLv.itemTemplate);
+        //     var view = this.ownerLv.getViewForViewType(listViewCommonModule.ListViewViewTypes.ItemView);
+        //     var parentView = new layoutsModule.StackLayout();
+        //     var layoutParams = this.ownerLv._getViewLayoutParams();
+        //     parentView.orientation = "vertical";
+        //     parentView.addChild(view);
+        //     this.ownerLv._addView(parentView);
+        //     parentView.android.setLayoutParams(layoutParams);
+        //     parentView.android.setBackgroundResource(this._selectionViewId);
+        //     var holder = new com.telerik.widget.list.ListViewHolder(parentView.android);
+        //     holder['nsView'] = parentView;
+        //     this._viewHolders.push(holder);
+        //     return holder;
+        // }
+        // TODO: Implement this for support for 'group item' template, current stopper is the expand/collapse button that is part of the native template
+        // public onCreateGroupViewHolder(parent: android.view.ViewGroup, viewType: number): com.telerik.widget.list.ListViewHolder {
+        //     console.log(">>> onCreateGroupViewHolder");
+        //     //var view = builder.parse(this.ownerLv.itemTemplate);
+        //     var view = this.ownerLv.getViewForViewType(listViewCommonModule.ListViewViewTypes.ItemView);
+        //     var parentView = new layoutsModule.StackLayout();
+        //     var layoutParams = this.ownerLv._getViewLayoutParams();
+        //     parentView.orientation = "vertical";
+        //     parentView.addChild(view);
+        //     this.ownerLv._addView(parentView);
+        //     parentView.android.setLayoutParams(layoutParams);
+        //     parentView.android.setBackgroundResource(this._selectionViewId);
+        //     var holder = new com.telerik.widget.list.ListViewHolder(parentView.android);
+        //     holder['nsView'] = parentView;
+        //     this._viewHolders.push(holder);
+        //     return holder;
+        // }
+        ListViewDataSourceAdapter.prototype.onCreateItemViewHolder = 
+        // TODO: Implement this for support for 'group item' template, current stopper is the expand/collapse button that is part of the native template
+        // public onCreateGroupViewHolder(parent: android.view.ViewGroup, viewType: number): com.telerik.widget.list.ListViewHolder {
+        //     console.log(">>> onCreateGroupViewHolder");
+        //     //var view = builder.parse(this.ownerLv.itemTemplate);
+        //     var view = this.ownerLv.getViewForViewType(listViewCommonModule.ListViewViewTypes.ItemView);
+        //     var parentView = new layoutsModule.StackLayout();
+        //     var layoutParams = this.ownerLv._getViewLayoutParams();
+        //     parentView.orientation = "vertical";
+        //     parentView.addChild(view);
+        //     this.ownerLv._addView(parentView);
+        //     parentView.android.setLayoutParams(layoutParams);
+        //     parentView.android.setBackgroundResource(this._selectionViewId);
+        //     var holder = new com.telerik.widget.list.ListViewHolder(parentView.android);
+        //     holder['nsView'] = parentView;
+        //     this._viewHolders.push(holder);
+        //     return holder;
+        // }
+        function (parent, viewType) {
+            var view = this.ownerLv.getViewForViewType(listViewCommonModule.ListViewViewTypes.ItemView);
+            var parentView = new layoutsModule.StackLayout();
+            var layoutParams = this.ownerLv._getViewLayoutParams();
+            parentView.orientation = "vertical";
+            parentView.addChild(view);
+            this.ownerLv._addView(parentView);
+            parentView.android.setLayoutParams(layoutParams);
+            parentView.android.setBackgroundResource(this._selectionViewId);
+            var holder = new com.telerik.widget.list.ListViewHolder(parentView.android);
+            holder['nsView'] = parentView;
+            this._viewHolders.push(holder);
+            return holder;
+        };
+        ListViewDataSourceAdapter.prototype.onBindItemViewHolder = function (holder, position) {
+            holder['nsView'].bindingContext = this.ownerLv.getItemAtIndex(position);
+            var args = {
+                eventName: listViewCommonModule.RadListView.itemLoadingEvent,
+                index: position,
+                view: holder['nsView']._subViews[0],
+                android: holder
+            };
+            this.ownerLv.notify(args);
+        };
+        ListViewDataSourceAdapter.prototype.onCreateSwipeContentHolder = function (parent) {
+            var swipeView = this.ownerLv.getViewForViewType(listViewCommonModule.ListViewViewTypes.ItemSwipeView);
+            this.ownerLv._addView(swipeView);
+            var holder = new com.telerik.widget.list.ListViewHolder(swipeView.android);
+            holder['nsView'] = swipeView;
+            this._swipeHolders.push(holder);
+            return holder;
+        };
+        ListViewDataSourceAdapter.prototype.onBindSwipeContentHolder = function (holder, position) {
+            holder['nsView'].bindingContext = this.ownerLv.getItemAtIndex(position);
+        };
+        ListViewDataSourceAdapter.prototype.reorderItem = function (oldPosition, newPosition) {
+            var result = _super.prototype.reorderItem.call(this, oldPosition, newPosition);
+            if (result === true) {
+                this.ownerLv._reorderItemInSource(oldPosition, newPosition);
+            }
+            return result;
+        };
+        ListViewDataSourceAdapter.prototype.setItems = function (items) {
+            this._viewHolders.splice(0, this._viewHolders.length);
+            this._swipeHolders.splice(0, this._swipeHolders.length);
+            this.ownerLv._resetCurrentId();
+            _super.prototype.setItems.call(this, items);
+        };
+        ListViewDataSourceAdapter.prototype.canSwipe = function (position) {
+            if (!_super.prototype.canSwipe.call(this, position)) {
+                return false;
+            }
+            var args = {
+                eventName: listViewCommonModule.RadListView.itemSwipingEvent,
+                object: this.ownerLv,
+                index: position,
+                groupIndex: -1,
+                returnValue: true
+            };
+            this.ownerLv.notify(args);
+            return args.returnValue;
+        };
+        ListViewDataSourceAdapter.prototype.canSelect = function (position) {
+            if (this.ownerLv.items) {
+                var isSelected = this.ownerLv.isItemSelected(this.ownerLv.getItemAtIndex(position));
+                var currentEventName = isSelected === true ? listViewCommonModule.RadListView.itemDeselectingEvent : listViewCommonModule.RadListView.itemSelectingEvent;
+                var args = {
+                    eventName: currentEventName,
+                    object: this.ownerLv,
+                    index: position,
+                    groupIndex: -1,
+                    returnValue: true
+                };
+                if ((lastSelectedIndex != position) || (lastSelectedIndex == position && lastFiredEvent != currentEventName)) {
+                    lastSelectedIndex = position;
+                    this.ownerLv.notify(args);
+                    lastFiredEvent = currentEventName;
+                }
+            }
+            return true;
+        };
+        ListViewDataSourceAdapter.prototype.getViewForItem = function (item) {
+            for (var i = 0; i < this._viewHolders.length; i++) {
+                if (this._viewHolders[i]['nsView'] && this._viewHolders[i]['nsView'].bindingContext === item) {
+                    return this._viewHolders[i]['nsView'].getChildAt(0);
+                }
+            }
+            return undefined;
+        };
+        ListViewDataSourceAdapter.prototype.getSwipeViewForItem = function (item) {
+            for (var i = 0; i < this._swipeHolders.length; i++) {
+                if (this._swipeHolders[i]['nsView'] && this._swipeHolders[i]['nsView'].bindingContext === item) {
+                    return this._swipeHolders[i]['nsView'];
+                }
+            }
+            return undefined;
+        };
+        return ListViewDataSourceAdapter;
+    }(com.telerik.widget.list.ListViewDataSourceAdapter));
+    ListViewDataSourceAdapterClass = ListViewDataSourceAdapter;
 }
 var RadListView = (function (_super) {
     __extends(RadListView, _super);
     function RadListView() {
         var _this = _super.call(this) || this;
+        _this._currentId = 0;
         _this._androidViewId = -1;
         ensureListViewAdapter();
+        ensureListViewDataSourceAdapter();
         _this.listViewLayout = new ListViewLinearLayout();
         _this.on("bindingContextChange", _this.bindingContextChanged, _this);
         return _this;
@@ -262,6 +431,7 @@ var RadListView = (function (_super) {
         this.updatePullToRefreshBehavior();
         this.updateSwipeToExecuteBehavior();
         this.updateSwipeActionsBehavior();
+        this.updateCollapsibleGroupsBehavior();
         this._updateHeaderFooter();
         var that = new WeakRef(this);
         this._android.addItemClickListener(new com.telerik.widget.list.RadListView.ItemClickListener({
@@ -333,6 +503,12 @@ var RadListView = (function (_super) {
             this._android.setAdapter(null);
         }
         _super.prototype.disposeNativeView.call(this);
+    };
+    RadListView.prototype._resetCurrentId = function () {
+        this._currentId = 0;
+    };
+    RadListView.prototype._getUniqueItemId = function () {
+        return this._currentId++;
     };
     Object.defineProperty(RadListView.prototype, "androidListView", {
         get: function () {
@@ -570,10 +746,10 @@ var RadListView = (function (_super) {
         else if (data.action === observableArray.ChangeType.Add) {
             for (var i = 0; i < data.addedCount; i++) {
                 if (isNaN(data.index)) {
-                    this._listViewAdapter.add(new java.lang.Integer(this._listViewAdapter.getUniqueItemId()));
+                    this._listViewAdapter.add(new java.lang.Integer(this._getUniqueItemId()));
                 }
                 else {
-                    this._listViewAdapter.add(data.index, new java.lang.Integer(this._listViewAdapter.getUniqueItemId()));
+                    this._listViewAdapter.add(data.index, new java.lang.Integer(this._getUniqueItemId()));
                 }
             }
         }
@@ -585,9 +761,36 @@ var RadListView = (function (_super) {
             }
             else {
                 for (var i = 0; i < data.addedCount; i++) {
-                    this._listViewAdapter.add(data.index + i, new java.lang.Integer(this._listViewAdapter.getUniqueItemId()));
+                    this._listViewAdapter.add(data.index + i, new java.lang.Integer(this._getUniqueItemId()));
                 }
             }
+        }
+    };
+    RadListView.prototype.onEnableCollapsibleGroupsChanged = function (oldValue, newValue) {
+        this.loadData();
+    };
+    RadListView.prototype.onGroupingFunctionChanged = function (oldValue, newValue) {
+        if (newValue) {
+            this.loadData();
+        }
+        else {
+            this.clearGroupDescriptors();
+        }
+    };
+    RadListView.prototype.onFilteringFunctionChanged = function (oldValue, newValue) {
+        if (newValue) {
+            this.loadData();
+        }
+        else {
+            this.clearFilterDescriptors();
+        }
+    };
+    RadListView.prototype.onSortingFunctionChanged = function (oldValue, newValue) {
+        if (newValue) {
+            this.loadData();
+        }
+        else {
+            this.clearSortDescriptors();
         }
     };
     RadListView.prototype.subscribeForNativeScrollEvents = function () {
@@ -954,6 +1157,23 @@ var RadListView = (function (_super) {
             }
         }
     };
+    RadListView.prototype.updateCollapsibleGroupsBehavior = function () {
+        if (!this._android || !this.enableCollapsibleGroups) {
+            return;
+        }
+        if (this.enableCollapsibleGroups) {
+            if (!this._collapsibleGroupsBehavior) {
+                this._collapsibleGroupsBehavior = new com.telerik.widget.list.CollapsibleGroupsBehavior();
+                this._android.addBehavior(this._collapsibleGroupsBehavior);
+            }
+        }
+        else {
+            if (this._collapsibleGroupsBehavior) {
+                this._android.removeBehavior(this._collapsibleGroupsBehavior);
+                this._collapsibleGroupsBehavior = null;
+            }
+        }
+    };
     RadListView.prototype.updateLoadOnDemandBehavior = function () {
         if (!this._android) {
             return;
@@ -1003,14 +1223,15 @@ var RadListView = (function (_super) {
         }
         switch (this.loadOnDemandMode) {
             case listViewCommonModule.ListViewLoadOnDemandMode.Manual:
+                this._loadOnDemandBehavior.setEnabled(true);
                 this._loadOnDemandBehavior.setMode(com.telerik.widget.list.LoadOnDemandBehavior.LoadOnDemandMode.MANUAL);
                 break;
             case listViewCommonModule.ListViewLoadOnDemandMode.Auto:
+                this._loadOnDemandBehavior.setEnabled(true);
                 this._loadOnDemandBehavior.setMode(com.telerik.widget.list.LoadOnDemandBehavior.LoadOnDemandMode.AUTOMATIC);
                 break;
             default: {
-                this._android.removeBehavior(this._loadOnDemandBehavior);
-                this._loadOnDemandBehavior = undefined;
+                this._loadOnDemandBehavior.setEnabled(false);
                 break;
             }
         }
@@ -1126,16 +1347,69 @@ var RadListView = (function (_super) {
             }
         }
     };
+    RadListView.prototype.clearFilterDescriptors = function () {
+        if (!this._listViewAdapter) {
+            return;
+        }
+        this._listViewAdapter.clearFilterDescriptors();
+    };
+    RadListView.prototype.clearGroupDescriptors = function () {
+        if (!this._listViewAdapter) {
+            return;
+        }
+        this._listViewAdapter.clearGroupDescriptors();
+    };
+    RadListView.prototype.clearSortDescriptors = function () {
+        if (!this._listViewAdapter) {
+            return;
+        }
+        this._listViewAdapter.clearSortDescriptors();
+    };
     RadListView.prototype.loadData = function () {
         if (!this.items || !this._android) {
             return;
         }
         var nativeSource = new java.util.ArrayList();
-        this._listViewAdapter = new ListViewAdapterClass(nativeSource, this);
         var dsLength = this.items.length;
+        this._resetCurrentId();
         for (var i = 0; i < dsLength; i++) {
-            var javaObject = new java.lang.Integer(this._listViewAdapter.getUniqueItemId());
+            var javaObject = new java.lang.Integer(this._getUniqueItemId());
             nativeSource.add(javaObject);
+        }
+        if (!this.isDataOperationsEnabled) {
+            this._listViewAdapter = new ListViewAdapterClass(nativeSource, this);
+        }
+        else {
+            this._listViewAdapter = new ListViewDataSourceAdapterClass(nativeSource, this);
+        }
+        if (this.isDataOperationsEnabled) {
+            var that = this;
+            if (that.groupingFunction) {
+                this._listViewAdapter.addGroupDescriptor(new com.telerik.android.common.Function({
+                    apply: function (object) {
+                        var item = that.getItemAtIndex(object);
+                        return that.groupingFunction(item);
+                    }
+                }));
+            }
+            if (that.filteringFunction) {
+                this._listViewAdapter.addFilterDescriptor(new com.telerik.android.common.Function({
+                    apply: function (object) {
+                        var item = that.getItemAtIndex(object);
+                        return (that.filteringFunction(item));
+                    }
+                }));
+            }
+            if (that.sortingFunction) {
+                this._listViewAdapter.addSortDescriptor(new com.telerik.android.common.Function2({
+                    apply: function (object, object2) {
+                        var previousItem = that.getItemAtIndex(object);
+                        var nextItem = that.getItemAtIndex(object2);
+                        var javaRes = that.sortingFunction(nextItem, previousItem);
+                        return new java.lang.Integer(javaRes);
+                    }
+                }));
+            }
         }
         this._android.setAdapter(this._listViewAdapter);
         var args = {

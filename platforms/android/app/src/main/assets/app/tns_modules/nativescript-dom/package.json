@@ -1,32 +1,50 @@
 {
   "_args": [
     [
-      "nativescript-dom@2.0.0",
-      "C:\\Android\\Nativescript\\Unwind"
+      {
+        "raw": "nativescript-dom@^2.0.0",
+        "scope": null,
+        "escapedName": "nativescript-dom",
+        "name": "nativescript-dom",
+        "rawSpec": "^2.0.0",
+        "spec": ">=2.0.0 <3.0.0",
+        "type": "range"
+      },
+      "D:\\Android\\Nativescript Apps\\Unwindv2"
     ]
   ],
-  "_from": "nativescript-dom@2.0.0",
+  "_from": "nativescript-dom@>=2.0.0 <3.0.0",
   "_id": "nativescript-dom@2.0.0",
-  "_inBundle": false,
-  "_integrity": "sha1-LCXDZF2ys6q+ZLqGtR19tlZbjnA=",
+  "_inCache": true,
   "_location": "/nativescript-dom",
+  "_nodeVersion": "6.9.4",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/nativescript-dom-2.0.0.tgz_1492820402401_0.683211041148752"
+  },
+  "_npmUser": {
+    "name": "nathanaela",
+    "email": "nathan@master-technology.com"
+  },
+  "_npmVersion": "4.2.0",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "nativescript-dom@2.0.0",
-    "name": "nativescript-dom",
+    "raw": "nativescript-dom@^2.0.0",
+    "scope": null,
     "escapedName": "nativescript-dom",
-    "rawSpec": "2.0.0",
-    "saveSpec": null,
-    "fetchSpec": "2.0.0"
+    "name": "nativescript-dom",
+    "rawSpec": "^2.0.0",
+    "spec": ">=2.0.0 <3.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-dom/-/nativescript-dom-2.0.0.tgz",
-  "_spec": "2.0.0",
-  "_where": "C:\\Android\\Nativescript\\Unwind",
+  "_shasum": "2c25c3645db2b3aabe64ba86b51d7db6565b8e70",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-dom@^2.0.0",
+  "_where": "D:\\Android\\Nativescript Apps\\Unwindv2",
   "author": {
     "name": "Nathanael Anderson",
     "email": "nathan@master-technology.com"
@@ -46,7 +64,15 @@
       "url": "https://github.com/ludwiktrammer"
     }
   ],
+  "dependencies": {},
   "description": "A NativeScript module for DOM Emulation",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "2c25c3645db2b3aabe64ba86b51d7db6565b8e70",
+    "tarball": "https://registry.npmjs.org/nativescript-dom/-/nativescript-dom-2.0.0.tgz"
+  },
+  "gitHead": "35123a9a84bec6bbb6c035a6e8d90f18b39d24b0",
   "homepage": "https://github.com/nathanaela/nativescript-dom",
   "keywords": [
     "NativeScript",
@@ -62,6 +88,12 @@
     "url": "https://github.com/nathanaela/nativescript-dom/blob/master/LICENSE"
   },
   "main": "dom",
+  "maintainers": [
+    {
+      "name": "nathanaela",
+      "email": "nathan@master-technology.com"
+    }
+  ],
   "name": "nativescript-dom",
   "nativescript": {
     "platforms": {
@@ -75,13 +107,16 @@
       "category": "Processing"
     }
   },
+  "optionalDependencies": {},
   "peerDependencies": {
     "tns-core-modules": "^3.0.0 || ^3.0.0-rc.1"
   },
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nathanaela/nativescript-dom.git"
   },
+  "scripts": {},
   "typings": "index.d.ts",
   "version": "2.0.0"
 }

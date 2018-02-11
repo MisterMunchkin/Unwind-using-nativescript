@@ -2,16 +2,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var element_registry_1 = require("nativescript-angular/element-registry");
 var _1 = require("./../");
+var platform_1 = require("tns-core-modules/platform");
 var observable_array_1 = require("tns-core-modules/data/observable-array");
 var ListItemContext = (function (_super) {
     __extends(ListItemContext, _super);
-    function ListItemContext($implicit, item, index, even, odd) {
+    function ListItemContext($implicit, item, index, even, odd, category) {
         var _this = _super.call(this, item) || this;
         _this.$implicit = $implicit;
         _this.item = item;
         _this.index = index;
         _this.even = even;
         _this.odd = odd;
+        _this.category = category;
         return _this;
     }
     return ListItemContext;
@@ -58,7 +60,11 @@ var RadListViewComponent = (function () {
                     }
                     break;
                 case _1.ListViewViewTypes.HeaderView:
-                    if (component._headerTemplate && _this.loader) {
+                    if (_this._listView.groupingFunction && component._headerTemplate && platform_1.isIOS) {
+                        console.log("Warning: Setting custom 'tkListViewHeader' with 'groupingFunction' enabled is not supported on iOS.");
+                        break;
+                    }
+                    if (component._headerTemplate && _this.loader && !_this._listView.groupingFunction) {
                         var viewRef = _this.loader.createEmbeddedView(component._headerTemplate, new ListItemContext(), 0);
                         _this.detectChangesOnChild(viewRef, -1);
                         var nativeView = getItemViewRoot(viewRef);
@@ -152,7 +158,7 @@ var RadListViewComponent = (function () {
             if (value instanceof observable_array_1.ObservableArray) {
                 needDiffer = false;
             }
-            if (needDiffer && !this._differ && CollectionUtils.isListLikeIterable(value)) {
+            if (needDiffer && !this._differ && core_1.ɵisListLikeIterable(value)) {
                 this._differ = this._iterableDiffers.find(this._items).create(function (index, item) { return item; });
             }
             this._listView.items = this._items;
@@ -170,7 +176,7 @@ var RadListViewComponent = (function () {
     };
     RadListViewComponent.prototype.onItemLoading = function (args) {
         var index = args.index;
-        var currentItem = this.getDataItem(index);
+        var currentItem = args.view.bindingContext;
         var ngView = args.view[NG_VIEW];
         if (ngView) {
             this.setupViewRef(ngView, currentItem, index);
@@ -181,6 +187,7 @@ var RadListViewComponent = (function () {
         var context = viewRef.context;
         context.$implicit = data;
         context.item = data;
+        context.category = data ? data.category : "";
         context.index = index;
         context.even = (index % 2 == 0);
         context.odd = !context.even;
@@ -188,9 +195,6 @@ var RadListViewComponent = (function () {
     };
     RadListViewComponent.prototype.setLayout = function (layout) {
         this._listView.listViewLayout = layout;
-    };
-    RadListViewComponent.prototype.getDataItem = function (index) {
-        return typeof (this._items.getItem) === "function" ? this._items.getItem(index) : this._items[index];
     };
     RadListViewComponent.prototype.detectChangesOnChild = function (viewRef, index) {
         // Manually detect changes in child view ref
@@ -230,7 +234,8 @@ var RadListViewComponent = (function () {
     RadListViewComponent.decorators = [
         { type: core_1.Component, args: [{
                     selector: "RadListView",
-                    template: "\n        <DetachedContainer>\n            <Placeholder #loader></Placeholder>\n        </DetachedContainer>"
+                    template: "\n        <DetachedContainer>\n            <Placeholder #loader></Placeholder>\n        </DetachedContainer>",
+                    changeDetection: core_1.ChangeDetectionStrategy.OnPush
                 },] },
     ];
     /** @nocollapse */
@@ -462,55 +467,6 @@ function getItemViewRoot(viewRef, rootLocator) {
     return rootLocator(viewRef.rootNodes, 0);
 }
 exports.getItemViewRoot = getItemViewRoot;
-////////////////////
-// Copied from angular 2 @angular/common/src/facade/collection
-// Copied from angular 2 @angular/common/src/facade/collection
-var CollectionUtils;
-// Copied from angular 2 @angular/common/src/facade/collection
-(function (CollectionUtils) {
-    function isPresent(obj) {
-        return obj !== undefined && obj !== null;
-    }
-    function isBlank(obj) {
-        return obj === undefined || obj === null;
-    }
-    var _symbolIterator = null;
-    var globalScope;
-    function getSymbolIterator() {
-        if (isBlank(_symbolIterator)) {
-            if (isPresent(globalScope.Symbol) && isPresent(Symbol.iterator)) {
-                _symbolIterator = Symbol.iterator;
-            }
-            else {
-                // es6-shim specific logic
-                var keys = Object.getOwnPropertyNames(Map.prototype);
-                for (var i = 0; i < keys.length; ++i) {
-                    var key = keys[i];
-                    if (key !== 'entries' && key !== 'size' &&
-                        Map.prototype[key] === Map.prototype['entries']) {
-                        _symbolIterator = key;
-                    }
-                }
-            }
-        }
-        return _symbolIterator;
-    }
-    function isJsObject(o) {
-        return o !== null && (typeof o === 'function' || typeof o === 'object');
-    }
-    function isArray(obj) {
-        return Array.isArray(obj);
-    }
-    function isListLikeIterable(obj) {
-        if (!isJsObject(obj))
-            return false;
-        return isArray(obj) ||
-            (!(obj instanceof Map) &&
-                // JS Map are iterables but return entries as [k, v]
-                getSymbolIterator() in obj); // JS Iterable have a Symbol.iterator prop
-    }
-    CollectionUtils.isListLikeIterable = isListLikeIterable;
-})(CollectionUtils || (CollectionUtils = {}));
 exports.LISTVIEW_DIRECTIVES = [RadListViewComponent, TKListViewItemDirective, TKListViewItemSwipeDirective, TKListViewHeaderDirective, TKListViewFooterDirective, TKListViewLoadOnDemandDirective, TKListViewLayoutDirective, ListViewGridLayoutDirective, ListViewStaggeredLayoutDirective, ReorderHandleDirective, ListViewLinearLayoutDirective, TKTemplateKeyDirective];
 element_registry_1.registerElement("RadListView", function () { return _1.RadListView; });
 element_registry_1.registerElement("ListViewLinearLayout", function () { return _1.ListViewLinearLayout; });

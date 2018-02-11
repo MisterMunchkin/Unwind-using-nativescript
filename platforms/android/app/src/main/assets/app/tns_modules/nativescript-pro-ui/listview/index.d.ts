@@ -694,6 +694,32 @@ export class RadListView extends View {
     static itemsProperty: Property<RadListView, any>;
 
     /**
+    * Identifies the {@link groupingFunction} dependency property.
+    */
+    static groupingFunctionProperty: Property<RadListView, (item: any) => any>;
+    
+    /**
+    * Identifies the {@link filteringFunction} dependency property.
+    */
+    static filteringFunctionProperty: Property<RadListView, (item: any) => boolean>;
+
+    /**
+    * Identifies the {@link sortingFunction} dependency property.
+    */
+    static sortingFunctionProperty: Property<RadListView, (item: any, otherItem: any) => number>;
+
+    /**
+    * Identifies the {@link enableCollapsibleGroups} dependency property.
+    * NOTE: This feature is not supported on iOS
+    */
+    static enableCollapsibleGroupsProperty: Property<RadListView, boolean>;
+
+    /**
+    * The native 'android.widget.FrameLayout' object.
+    */
+    android: any;
+
+    /**
     * The native 'com.telerik.widget.list.RadListView' object.
     */
     androidListView: any;
@@ -794,6 +820,29 @@ export class RadListView extends View {
      * or can't be selected at all.
      */
     selectionBehavior: string;
+
+    /**
+     * Gets or sets a value indicating if the collapse/expand grouping functionality of the {@link RadListView} is enabled.
+     */
+    enableCollapsibleGroups: boolean;
+
+    /**
+     * Gets or sets a function that will be called to group the items of the {@link RadListView}
+     * if either {@link enableGroups} or {@link enableCollapsibleGroups} property is set to 'true'.
+     */
+    groupingFunction: (item: any) => any;
+
+    /**
+     * Gets or sets a function that will be called to filter the items of the {@link RadListView}
+     * if either {@link enableGroups} or {@link enableCollapsibleGroups} property is set to 'true'.
+     */
+    filteringFunction: (item: any) => boolean;
+
+    /**
+     * Gets or sets a function that will be called to sort the items of the {@link RadListView}
+     * if either {@link enableGroups} or {@link enableCollapsibleGroups} property is set to 'true'.
+     */
+    sortingFunction: (item: any, otherItem: any) => number;
 
     /**
      * Gets or sets the source collection used to populate the {@link RadListView}.

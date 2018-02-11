@@ -7,6 +7,8 @@ var view = require("ui/core/view");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
+var TNSFancyAlert = require("nativescript-fancyalert").TNSFancyAlert;
+var TNSFancyAlertButton = require("nativescript-fancyalert").TNSFancyAlertButton;
 
 var serviceContext;
 var actionBar;
@@ -135,13 +137,15 @@ exports.addToCartTap = function(){
         var phpResponse = response._bodyText;
         console.log("rooms that will be serviced: " + phpResponse);
         if(phpResponse.indexOf("error") <= -1){
-            alert({ message: "Service request sent!", okButtonText: "Close" });
+            //alert({ message: "Service request sent!", okButtonText: "Close" });
+            TNSFancyAlert.showSuccess("Service request sent!", "You can check the service status in service history.", "Okay!");
             loader.hide();
             var topmost = frameModule.topmost();
             topmost.navigate("Views/Services/services");
         }else{
             loader.hide();
-            alert({ message: phpResponse , okButtonText: "Close" });
+            TNSFancyAlert.showError(phpResponse, "Please report this bug.", "Okay!");
+            //alert({ message: phpResponse , okButtonText: "Close" });
         }
     }, function (error) {
         console.log("ERROR");

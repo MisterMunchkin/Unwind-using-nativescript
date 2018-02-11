@@ -56,10 +56,11 @@ function ensureAutoCompleteAdapter() {
     }
     var AutoCompleteAdapter = (function (_super) {
         __extends(AutoCompleteAdapter, _super);
-        function AutoCompleteAdapter(owner, items) {
+        function AutoCompleteAdapter(owner, items, isRemote) {
             var _this = _super.call(this, utilsModule.ad.getApplicationContext(), items, null) || this;
             _this.suggestionsMap = {};
             _this.owner = owner;
+            _this.isRemote = isRemote;
             return global.__native(_this);
         }
         AutoCompleteAdapter.prototype.onCreateViewHolder = function (parent, viewType) {
@@ -80,7 +81,9 @@ function ensureAutoCompleteAdapter() {
             var nativeItem = this.getFilteredList().get(position);
             var img = nativeItem.getNsImageName();
             var model = new TokenModel(nativeItem.getText(), img);
-            holder.nsView.bindingContext = model;
+            if (holder.nsView != undefined) {
+                holder.nsView.bindingContext = model;
+            }
             var args = {
                 eventName: commonModule.RadAutoCompleteTextView.itemLoadingEvent,
                 index: position,
@@ -90,24 +93,11 @@ function ensureAutoCompleteAdapter() {
             };
             this.owner.notify(args);
         };
-        return AutoCompleteAdapter;
-    }(com.telerik.widget.autocomplete.AutoCompleteAdapter));
-    AutoCompleteAdapterClass = AutoCompleteAdapter;
-}
-var AutoCompleteRemoteFetchAdapterClass;
-function ensureAutoCompleteRemoteFetchAdapter() {
-    if (AutoCompleteRemoteFetchAdapterClass) {
-        return AutoCompleteRemoteFetchAdapterClass;
-    }
-    var AutoCompleteRemoteFetchAdapter = (function (_super) {
-        __extends(AutoCompleteRemoteFetchAdapter, _super);
-        function AutoCompleteRemoteFetchAdapter(owner, items) {
-            var _this = _super.call(this, utilsModule.ad.getApplicationContext(), items, null) || this;
-            _this.suggestionsMap = {};
-            _this.owner = owner;
-            return global.__native(_this);
-        }
-        AutoCompleteRemoteFetchAdapter.prototype.filter = function (charText) {
+        AutoCompleteAdapter.prototype.filter = function (charText) {
+            if (!this.isRemote) {
+                _super.prototype.filter.call(this, charText);
+                return;
+            }
             this.owner.android.getAdapter().getFilteredList().clear();
             charText = charText.toLowerCase();
             var self = this;
@@ -144,39 +134,9 @@ function ensureAutoCompleteRemoteFetchAdapter() {
                 });
             }
         };
-        AutoCompleteRemoteFetchAdapter.prototype.onCreateViewHolder = function (parent, viewType) {
-            var view = this.owner.getViewForViewType(commonModule.AutoCompleteViewTypes.ItemView);
-            var parentView = new layoutsModule.StackLayout();
-            parentView.orientation = "vertical";
-            parentView.addChild(view);
-            this.owner._addView(parentView);
-            var layoutParams = new org.nativescript.widgets.CommonLayoutParams();
-            layoutParams.width = org.nativescript.widgets.CommonLayoutParams.MATCH_PARENT;
-            layoutParams.height = org.nativescript.widgets.CommonLayoutParams.WRAP_CONTENT;
-            var holder = new com.telerik.widget.list.ListViewHolder(parentView.android);
-            parentView.android.setLayoutParams(layoutParams);
-            holder.nsView = parentView;
-            return holder;
-        };
-        AutoCompleteRemoteFetchAdapter.prototype.onBindViewHolder = function (holder, position) {
-            var nativeItem = this.getFilteredList().get(position);
-            var img = nativeItem.getNsImageName();
-            var model = new TokenModel(nativeItem.getText(), img);
-            if (holder.nsView != undefined) {
-                holder.nsView.bindingContext = model;
-            }
-            var args = {
-                eventName: commonModule.RadAutoCompleteTextView.itemLoadingEvent,
-                index: position,
-                view: holder['nsView']._subViews[0],
-                android: holder,
-                data: model
-            };
-            this.owner.notify(args);
-        };
-        return AutoCompleteRemoteFetchAdapter;
+        return AutoCompleteAdapter;
     }(com.telerik.widget.autocomplete.AutoCompleteAdapter));
-    AutoCompleteRemoteFetchAdapterClass = AutoCompleteRemoteFetchAdapter;
+    AutoCompleteAdapterClass = AutoCompleteAdapter;
 }
 var RadAutoCompleteTextView = (function (_super) {
     __extends(RadAutoCompleteTextView, _super);
@@ -432,15 +392,8 @@ var RadAutoCompleteTextView = (function (_super) {
                         nativeSource.add(a.android);
                     }
                 }
-                var adapter;
-                if (isRemote) {
-                    ensureAutoCompleteRemoteFetchAdapter();
-                    adapter = new AutoCompleteRemoteFetchAdapterClass(this, nativeSource);
-                }
-                else {
-                    ensureAutoCompleteAdapter();
-                    adapter = new AutoCompleteAdapterClass(this, nativeSource);
-                }
+                ensureAutoCompleteAdapter();
+                var adapter = new AutoCompleteAdapterClass(this, nativeSource, isRemote);
                 this._android.setAdapter(adapter);
                 this.adjustCompletionMode(this.completionMode);
             }

@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-xxxhdpi\\two_star.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\two_star.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-xxxhdpi\\five_star.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\five_star.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-xxxhdpi\\ic_delete_black_24dp.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_delete_black_24dp.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-xxxhdpi\\lock_outline_grey.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\lock_outline_grey.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-xxxhdpi\\one_star.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\one_star.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-xxxhdpi\\icon.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\icon.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-xxxhdpi\\three_star.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\three_star.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-xxxhdpi\\logo_transparent_background.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\logo_transparent_background.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-xxxhdpi\\ic_cart_outline_white_48dp.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_cart_outline_white_48dp.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-xxxhdpi\\ic_plus_white_48dp.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_plus_white_48dp.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-xxxhdpi\\background.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\background.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-xxxhdpi\\logo.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\logo.png"
+    },
+    {
+        "merged": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\debug\\drawable-xxxhdpi\\four_star.png",
+        "source": "D:\\Android\\Nativescript Apps\\Unwindv2\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\four_star.png"
+    }
+]
