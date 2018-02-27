@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\color-v23\\abc_color_highlight_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\color-v23\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\color-v23\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\color-v23\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\color-v23\\abc_tint_switch_thumb.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\color-v23\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\color-v23\\abc_tint_default.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_tint_default.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\color-v23\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\color-v23\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\color-v23\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\color-v23\\design_tint_password_toggle.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\color-v23\\design_tint_password_toggle.xml"
+    }
+]

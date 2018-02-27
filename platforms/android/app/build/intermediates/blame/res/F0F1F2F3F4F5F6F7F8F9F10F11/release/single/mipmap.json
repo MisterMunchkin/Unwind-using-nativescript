@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\mipmap\\ic_info.png",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\mipmap\\ic_info.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\mipmap\\ic_help.png",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\mipmap\\ic_help.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\mipmap\\ic_wrong.png",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\mipmap\\ic_wrong.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\mipmap\\ic_success.png",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\mipmap\\ic_success.png"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\mipmap\\icon_warning.png",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\mipmap\\icon_warning.png"
+    }
+]

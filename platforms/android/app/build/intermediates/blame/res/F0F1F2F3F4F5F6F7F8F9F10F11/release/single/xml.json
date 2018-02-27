@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\xml\\chart_palettes_default_light.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\f039559b1b544b215c262601e74c913fcb22b491\\output\\res\\xml\\chart_palettes_default_light.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\xml\\chart_palettes_default_dark.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\f039559b1b544b215c262601e74c913fcb22b491\\output\\res\\xml\\chart_palettes_default_dark.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\xml\\chart_palettes_dark_selected.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\f039559b1b544b215c262601e74c913fcb22b491\\output\\res\\xml\\chart_palettes_dark_selected.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\xml\\chart_palettes_light_selected.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\f039559b1b544b215c262601e74c913fcb22b491\\output\\res\\xml\\chart_palettes_light_selected.xml"
+    }
+]

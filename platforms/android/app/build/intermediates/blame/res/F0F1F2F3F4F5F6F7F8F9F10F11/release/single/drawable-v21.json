@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\drawable-v21\\design_password_eye.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\drawable-v21\\avd_show_password.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable-v21\\autocomplete_bg_active.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\891d7cf10391f6efcf23739ac3e708db30b62d6f\\output\\res\\drawable-v21\\autocomplete_bg_active.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable-v21\\pressable_item_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\c3761c3c864c53fd41177425f49293c6c0316303\\output\\res\\drawable-v21\\pressable_item_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable-v21\\autocomplete_bg_normal.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\891d7cf10391f6efcf23739ac3e708db30b62d6f\\output\\res\\drawable-v21\\autocomplete_bg_normal.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\drawable-v21\\avd_hide_password.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable-v21\\autocomplete_focusable_bg.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\891d7cf10391f6efcf23739ac3e708db30b62d6f\\output\\res\\drawable-v21\\autocomplete_focusable_bg.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    }
+]

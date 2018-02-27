@@ -1,0 +1,322 @@
+[
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\dataform_number_picker_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\6d5fd4e2e95e993dfb5d720905ff5f535b743d72\\output\\res\\drawable\\dataform_number_picker_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\shape_left_bottom_normal.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\shape_left_bottom_normal.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\design_password_eye.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\drawable\\design_password_eye.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\pressable_item_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\c3761c3c864c53fd41177425f49293c6c0316303\\output\\res\\drawable\\pressable_item_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\selectable_item_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\c3761c3c864c53fd41177425f49293c6c0316303\\output\\res\\drawable\\selectable_item_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\shape_corners_bottom.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\shape_corners_bottom.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\token_default.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\891d7cf10391f6efcf23739ac3e708db30b62d6f\\output\\res\\drawable\\token_default.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\token_selected.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\891d7cf10391f6efcf23739ac3e708db30b62d6f\\output\\res\\drawable\\token_selected.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\token_bg.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\891d7cf10391f6efcf23739ac3e708db30b62d6f\\output\\res\\drawable\\token_bg.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\hamburger.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\6911b074518b0e95806c34e9442ec04e294bb561\\output\\res\\drawable\\hamburger.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\sel_btn_warning.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\sel_btn_warning.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\data_form_invalid_icon.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\6d5fd4e2e95e993dfb5d720905ff5f535b743d72\\output\\res\\drawable\\data_form_invalid_icon.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\data_form_segment_item.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\6d5fd4e2e95e993dfb5d720905ff5f535b743d72\\output\\res\\drawable\\data_form_segment_item.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\data_form_segment_unchecked.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\6d5fd4e2e95e993dfb5d720905ff5f535b743d72\\output\\res\\drawable\\data_form_segment_unchecked.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\shade_right.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\c3761c3c864c53fd41177425f49293c6c0316303\\output\\res\\drawable\\shade_right.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\data_form_invalid_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\6d5fd4e2e95e993dfb5d720905ff5f535b743d72\\output\\res\\drawable\\data_form_invalid_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\shade_corner.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\c3761c3c864c53fd41177425f49293c6c0316303\\output\\res\\drawable\\shade_corner.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\token_text_color.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\891d7cf10391f6efcf23739ac3e708db30b62d6f\\output\\res\\drawable\\token_text_color.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\shape_top.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\shape_top.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\sel_btn_info.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\sel_btn_info.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\sel_btn_success.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\sel_btn_success.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\shape_left_bottom.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\shape_left_bottom.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\sel_btn.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\sel_btn.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\shade_bottom.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\c3761c3c864c53fd41177425f49293c6c0316303\\output\\res\\drawable\\shade_bottom.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\sel_btn_help.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\sel_btn_help.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\sel_btn_wrong.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\sel_btn_wrong.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\drawable\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\autocomplete_focusable_bg.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\891d7cf10391f6efcf23739ac3e708db30b62d6f\\output\\res\\drawable\\autocomplete_focusable_bg.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\sel_def_gray_right.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\sel_def_gray_right.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\events_popup_bg.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\6481770a666a6795afe818e016cf161c8a13346d\\output\\res\\drawable\\events_popup_bg.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\data_form_segment_checked.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\6d5fd4e2e95e993dfb5d720905ff5f535b743d72\\output\\res\\drawable\\data_form_segment_checked.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\shape_corners_bottom_normal.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\shape_corners_bottom_normal.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\data_form_valid_icon.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\6d5fd4e2e95e993dfb5d720905ff5f535b743d72\\output\\res\\drawable\\data_form_valid_icon.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\sel_def_gray_left.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\sel_def_gray_left.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\shape_right_bottom_normal.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\shape_right_bottom_normal.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\data_form_valid_background.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\6d5fd4e2e95e993dfb5d720905ff5f535b743d72\\output\\res\\drawable\\data_form_valid_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\e7f689fd2e1d8fb1bf4d86a9cb718cb1d2640bbb\\output\\res\\drawable\\navigation_empty_icon.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\sel_def_gray.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\sel_def_gray.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\data_form_list_item_states.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\6d5fd4e2e95e993dfb5d720905ff5f535b743d72\\output\\res\\drawable\\data_form_list_item_states.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\14b5888a2b784ecd72681162e031cb9ac2d5a4a7\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Android\\Nativescript\\Unwind\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7F8F9F10F11\\release\\drawable\\shape_right_bottom.xml",
+        "source": "C:\\Users\\MisterMunchkin\\.android\\build-cache\\4594b0b560c93e78663087f4bd09935d4c8f9bcd\\output\\res\\drawable\\shape_right_bottom.xml"
+    }
+]
