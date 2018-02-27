@@ -2,7 +2,7 @@ var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var view = require("ui/core/view");
-
+var TNSFancyAlert = require("nativescript-fancyalert").TNSFancyAlert;
 var foodContext;
 var foodItem;
 var actionBar;
@@ -93,6 +93,6 @@ exports.addToCartTap = function(){
     }else{
         console.log("please enter item quantity and remarks!");
         //add UI for this soon
-        alert({ message: "Please enter food quantity", okButtonText: "Close" });
+        TNSFancyAlert.showNotice("Please enter food quantity","","Okay" );
     }
 }

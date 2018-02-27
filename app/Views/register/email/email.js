@@ -5,6 +5,7 @@ var view = require("ui/core/view");
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 var pageDataContext;
 var dialogs = require("tns-core-modules/ui/dialogs");
+var TNSFancyAlert = require("nativescript-fancyalert").TNSFancyAlert;
 
 var loader = new LoadingIndicator();
 
@@ -83,7 +84,7 @@ exports.nextTap = function(){
                 
             }, function(error){
                 console.log(JSON.stringify(error));
-                alert({message: "please check your internet connectivity", okButtonText: "Okay"});
+                TNSFancyAlert.showNotice("please check your internet connectivity", "" , "Okay");
                 loader.hide();
             })
         }else{
@@ -99,9 +100,10 @@ exports.nextTap = function(){
 
 function then(response){
     var phpResponse = response._bodyText;
-    alert({ title: "POST response", message: phpResponse, okButtonText: "Close" }); //change this to a snackbar
+    //change this to a snackbar
     if (phpResponse == "user added") {
         loader.hide();
+        TNSFancyAlert.showSuccess("User added","", "Okay" );
         var topmost = frameModule.topmost();
         topmost.navigate("Views/login/login");
     }

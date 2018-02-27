@@ -3,7 +3,7 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
-
+var TNSFancyAlert = require("nativescript-fancyalert").TNSFancyAlert;
 
 var items = new ObservableArray([]);
 var pageData = new Observable();
@@ -96,7 +96,7 @@ exports.onloaded = function(args){
             pageData.set("items", items);
         }else{
             if(obj.indexOf("No services") == -1){
-                alert({  message: obj, okButtonText: "Close" });  
+                TNSFancyAlert.showNotice(obj,"","Close" );  
             }else{
                 listview.visibility = "collapse";
                 noData.class = "page-placeholder";

@@ -3,7 +3,8 @@ var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
-
+var TNSFancyAlert = require("nativescript-fancyalert").TNSFancyAlert;
+var TNSFancyAlertButton = require("nativescript-fancyalert").TNSFancyAlertButton;
 
 var items = new ObservableArray([]);
 var pageData = new Observable();
@@ -52,7 +53,7 @@ exports.onloaded = function (args) {
             rejectMessage.text = obj[0].message;
             //alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });  
         }else{
-            alert({message: "Fatal error: " + obj, okButtonText: "Okay"});
+            TNSFancyAlert.showError("Fatal error",obj, "Okay");
         }
         loadingBar.visibility = "collapse";
         loadingBar.stop();

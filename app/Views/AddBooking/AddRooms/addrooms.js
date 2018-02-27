@@ -7,6 +7,8 @@ var Observable = require("data/observable").Observable;
 var ObservableArray = require("data/observable-array").ObservableArray;
 var dialogs = require("tns-core-modules/ui/dialogs");
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
+var TNSFancyAlert = require("nativescript-fancyalert").TNSFancyAlert;
+var TNSFancyAlertButton = require("nativescript-fancyalert").TNSFancyAlertButton;
 
 var pageDataContext;
 var requestObject;
@@ -78,7 +80,7 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
             obj = response._bodyText;
             
             if(!response.ok){
-                alert({message: "an error has occured, please make sure you're connected to the internet", okButtonText: "Okay"});
+                TNSFancyAlert.showError("an error has occured","please make sure you're connected to the internet", "Okay");
             }
         // console.log("BODY: " + obj);
             if(obj != "no data"){
@@ -150,7 +152,7 @@ exports.onLoaded = function (args) { //exports is standard for both nativescript
             console.log(JSON.stringify(error));
             loadingBar.visibility = "collapse";
             loadingBar.stop();
-            alert({ meesage: JSON.stringify(error), okButtonText: "Okay" });
+            TNSFancyAlert.showError( "An error has occured" ,JSON.stringify(error),"Okay" );
             console.log("exiting room query");
         })
         
@@ -302,14 +304,14 @@ exports.submit = function () {
                                     console.log("x = " + x);
                                     if(count == limit){
                                         loader.hide();
-                                        alert({ title: "Success!", message: "booking request added", okButtonText: "Close" });
+                                        TNSFancyAlert.showSuccess( "Success!", "booking request added",  "Okay" );
                                         var topmost = frameModule.topmost();
                                         topmost.navigate("tabs/tabs-page");
                                         global.roomOrdered = [];
                                     }
                                 }else{
                                     console.log("failed: " + JSON.stringify(response));
-                                    alert({ title: "Failed", message: "query error", okButtonText: "Close" });
+                                    TNSFancyAlert.showError("Failed, query error",response._bodyText,"Okay" );
                                 }
                             }, function (error) {
                                 console.log(JSON.stringify(error));
@@ -322,7 +324,7 @@ exports.submit = function () {
             
                     //console.log(JSON.stringify(response));
                 } else {
-                    alert({ title: "POST response", message: phpResponse, okButtonText: "Close" });
+                    TNSFancyAlert.showError("POST response",phpResponse, "Okay" );
                     console.log(phpResponse);
                 }
             }
@@ -333,7 +335,7 @@ exports.submit = function () {
         
     }else{
         console.log("please select a room");
-        alert({ message: "please select a room", okButtonText: "Close" });
+        TNSFancyAlert.showWarning("please select a room","", "Okay" );
     }
 
 }

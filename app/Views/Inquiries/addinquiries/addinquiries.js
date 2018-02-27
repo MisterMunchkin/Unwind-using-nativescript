@@ -2,6 +2,8 @@ var page;
 var frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 var view = require("ui/core/view");
+var TNSFancyAlert = require("nativescript-fancyalert").TNSFancyAlert;
+var TNSFancyAlertButton = require("nativescript-fancyalert").TNSFancyAlertButton;
 
 var LoadingIndicator = require("nativescript-loading-indicator-new").LoadingIndicator;
 
@@ -50,14 +52,14 @@ exports.submit = function () {
 
         loader.hide();
 
-        alert({message: "Inquiry sent!", okButtonText: "Okay"});
+        TNSFancyAlert.showSuccess("Inquiry sent!","", "Okay");
         var topmost = frameModule.topmost();
         topmost.navigate("Views/Inquiries/inquiries");
 
     }, function (error) {
         console.log(JSON.stringify(error));
         loader.hide();
-        alert({message: "Something went wrong", okButtonText: "Okay"});
+        alert("Something went wrong", JSON.stringify(error) ,"Okay");
     })
 }
 
